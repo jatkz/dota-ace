@@ -1,7 +1,7 @@
 import fs from 'fs';
 import * as cheerio from 'cheerio';
 
-import { optimizeItemGridHtmlForParsing } from './html-parser.js';
+import { optimizeItemGridHtmlForParsing, optimizeItemSingleHtmlForParsing } from './html-parser.js';
 
 // Wrap everything in an async function
 async function main() {
@@ -35,6 +35,34 @@ async function main() {
         console.log('item links successfully extracted', itemLinks)
         
         fs.writeFileSync("./scripts/outputs/itemGridLinks.json", JSON.stringify({itemLinks:itemLinks}, null, 4));
+
+        for (const i of itemLinks) {
+            const url = 'https://liquipedia.net' + i;
+            const itemResponse = await fetch(url);
+            const itemName = i.split('/').pop(); // 'dagon'
+
+            if (!itemResponse.ok) {
+                throw new Error(`HTTP error! status: ${itemResponse.status}`);
+            }
+            
+            // Get the HTML text from the response
+            const html = await itemResponse.text();
+            console.log(`Downloaded ${html.length} characters - ${itemName}`);
+            if (false) {
+                const dir = './scripts/outputs/item/raw';
+                if (!fs.existsSync(dir)) {
+                    fs.mkdirSync(dir, { recursive: true });
+                }
+                fs.writeFileSync(`./scripts/outputs/item/raw/${itemName}.html`, html, 'utf8');
+            }
+            
+            // 2. Clean the HTML
+            const cleanItemHtml = optimizeItemSingleHtmlForParsing(html);
+            
+            // 3. Save to file
+            const outputPath = `./scripts/outputs/item/clean/${itemName}.html`;
+            fs.writeFileSync(outputPath, cleanItemHtml, 'utf8');
+        }
         
     } catch (error) {
         console.error('Error processing HTML:', error.message);

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-
+import * as cheerio from 'cheerio';
 /**
  * Optimizes HTML content by removing styling, scripts, and other non-essential attributes
  * @param {string} html - The HTML content to optimize
@@ -60,6 +60,56 @@ function optimizeItemGridHtmlForParsing(html) {
         .replace(/type="[^"]*"/g, '')
         
         // Optional: Remove whitespace (0.3% additional)
+        .replace(/>\s+</g, '><')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function optimizeItemSingleHtmlForParsing(html) {
+    const $ = cheerio.load(html);
+    
+    // Remove unwanted elements
+    $('script, footer, style, nav').remove();
+
+    // Remove attributes
+    $('*').each(function() {
+        $(this).removeAttr('style class src href srcset width height decoding alt title rel type');
+    });
+
+    // Find Recent Changes and remove everything after
+    $('table').each(function() {
+        if ($(this).text().toLowerCase().includes('items')) {
+            $(this).nextAll().remove();
+            $(this).remove();
+            return false; // break
+        }
+    });
+
+    $('table').each(function() {
+        if ($(this).text().toLowerCase().includes('neutral artifacts')) {
+            $(this).nextAll().remove();
+            $(this).remove();
+            return false; // break
+        }
+    });
+
+    $('table').each(function() {
+        if ($(this).text().toLowerCase().includes('neutral enchantments')) {
+            $(this).nextAll().remove();
+            $(this).remove();
+            return false; // break
+        }
+    });
+
+    $('table').each(function() {
+        if ($(this).text().toLowerCase().includes('neutral items')) {
+            $(this).nextAll().remove();
+            $(this).remove();
+            return false; // break
+        }
+    });
+
+    return $.html()
         .replace(/>\s+</g, '><')
         .replace(/\s+/g, ' ')
         .trim();
@@ -166,5 +216,6 @@ function parseHtmlFile(filename, tagsToRemove = [], outputPath = null) {
 export {
     parseHtmlFile,
     optimizeHtmlForParsing,
-    optimizeItemGridHtmlForParsing
+    optimizeItemGridHtmlForParsing,
+    optimizeItemSingleHtmlForParsing
 };
