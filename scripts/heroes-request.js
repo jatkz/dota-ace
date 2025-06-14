@@ -1,3 +1,5 @@
+import fs from 'fs';
+import { optimizeHtmlForParsing } from './html-parser.js';
 
 const DOTA2_HEROES_WITH_DISPLAY_NAMES = [
   { urlName: "Abaddon", displayName: "Abaddon" },
@@ -127,10 +129,6 @@ const DOTA2_HEROES_WITH_DISPLAY_NAMES = [
 // Simple array for URL generation
 const DOTA2_HERO_URL_NAMES = DOTA2_HEROES_WITH_DISPLAY_NAMES.map(hero => hero.urlName);
 
-const fs = require('fs');
-// Import the functions from the module
-const { optimizeHtmlForParsing } = require('./html-parser');
-
 // Wrap everything in an async function
 async function main() {
     try {
@@ -152,8 +150,13 @@ async function main() {
             const cleanHtml = optimizeHtmlForParsing(html);
             console.log(`Cleaned HTML: ${cleanHtml.length} characters (${Math.round((1 - cleanHtml.length/html.length) * 100)}% reduction)`);
             
+            const dir = './scripts/outputs/hero/clean';
+            if (!fs.existsSync(dir)) {
+                fs.mkdirSync(dir, { recursive: true });
+            }
+            
             // 3. Save to file
-            const outputPath = `./scripts/outputs/multiple_${heroName}_test.html`;
+            const outputPath = `./scripts/outputs/hero/clean/${heroName}.html`;
             fs.writeFileSync(outputPath, cleanHtml, 'utf8');
             
             console.log(`Successfully saved cleaned HTML to ${outputPath}`);
