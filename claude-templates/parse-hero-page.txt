@@ -29,7 +29,6 @@ Structure the parsed data as a comprehensive JSON object with this schema:
 ```json
 {
   "hero_name": "string",
-  "parse_timestamp": "ISO_date",
   "sections": {
     "general": {
         "primary_attribute": "strength|agility|intelligence|universal",

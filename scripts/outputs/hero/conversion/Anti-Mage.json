@@ -1,0 +1,320 @@
+{
+    "converted": {
+        "hero_name": "Anti-Mage",
+        "sections": {
+            "general": {
+                "primary_attribute": "agility",
+                "strength": 21,
+                "strength_gain": 1.6,
+                "agility": 24,
+                "agility_gain": 2.8,
+                "intelligence": 12,
+                "intelligence_gain": 1.8,
+                "health": 582,
+                "mana": 219,
+                "armor": 5,
+                "magic_resist": 26.2,
+                "damage": [
+                    53,
+                    57
+                ],
+                "damage_avg": 55,
+                "projectile_speed": 0,
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.4,
+                "animation": "0.3 + 0.3",
+                "move_speed": 310,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Escape, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Magebane's Mirror",
+                    "effects": "Burns a portion of the reflected ability's mana cost from its caster and deals damage depending of the burned mana."
+                },
+                "facet_2": {
+                    "name": "Mana Thirst",
+                    "effects": "Grants self bonus attack damage when an enemy hero's mana falls below a certain threshold, with the bonuses increasing as their mana falls further. The lower the mana on the enemy unit, the clearer the target, granting the Mana-seeker vision and True Sight over an enemy hero at certain enemy health thresholds."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "The first successful hit after Anti-Mage Blinks additionally deals a bonus max mana as mana burn.",
+                        "The first attack after Blink applies an on-hit undispellable debuff on the first attacked enemy unit that nullifies all mana restore and mana regeneration sources.",
+                        "Upgrades the Counterspell-based reflected spell to its ability upgrade values."
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Counterspell Ally ability.",
+                        "Activates Counterspell on an allied hero that blocks any unit-targeted spells.",
+                        "Creates a blinked fragment of Anti-Mage next to the enemy caster upon reflecting their unit-targeted spell while active.",
+                        "Upgrades the Counterspell-based reflected spell to its ability upgrade values."
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "-50s Mana Void Cooldown",
+                        "+200 Blink Cast Range"
+                    ],
+                    "level_20": [
+                        "+0.8s Mana Void Stun Duration",
+                        "+0.2x Mana Void Damage Factor"
+                    ],
+                    "level_15": [
+                        "+7.5% Persecutor Min Slow / +15% Persecutor Max Slow",
+                        "+1% Mana Break Max Mana Burn"
+                    ],
+                    "level_10": [
+                        "+200 Mana Void Radius",
+                        "+3 Health Regen"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Persecutor",
+                        "type": "passive",
+                        "description": "The anti-arcanist applies a movement speed slow based on the affected enemy unit's current mana missing.",
+                        "values": {
+                            "min_current_mana_threshold": "50%",
+                            "max_current_mana_threshold": "0%",
+                            "min_move_speed_slow": "12.5%/15%/17.5%/20%",
+                            "max_move_speed_slow": "25%/30%/35%/40%",
+                            "duration": "0.75"
+                        },
+                        "details": "Reduces the affected unit's movement speed by 12.5%/15%/17.5%/20% + 0.25%/0.3%/0.35%/0.4% per 1% current mana missing below 50% max mana."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Mana Break",
+                    "key": "Q",
+                    "type": "passive",
+                    "affects": "Enemy Units",
+                    "damage": "Attack Damage / Physical",
+                    "damage_types": [
+                        "Physical"
+                    ],
+                    "cooldown": "",
+                    "mana_cost": "",
+                    "cast_range": "",
+                    "cast_animation": "",
+                    "cast_radius": "",
+                    "details": "Burns an enemy's mana on each attack and deals damage equal to a percentage of the mana burnt.",
+                    "description": "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner.",
+                    "facet_effects": {
+                        "mana_burn_per_hit": "25/30/35/40",
+                        "max_mana_burn_per_hit": "1.6%/2.4%/3.2%/4%",
+                        "mana_burn_to_damage_factor": "0.5"
+                    },
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Stacks additively with other mana break sources",
+                        "Mana Break is a bonus conditional attack damage source",
+                        "The bonus attack damage values are directly added to Anti-Mage's attack damage in the combat log"
+                    ],
+                    "interaction_notes": [
+                        "Does not interact with percentage-based bonus attack damage sources",
+                        "Interacts with lifesteal, critical strike, and cleave sources"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Blink",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Self",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "12/10/8/6",
+                    "mana_cost": 50,
+                    "cast_range": "Global",
+                    "cast_animation": "0.4 + 0.53",
+                    "cast_radius": "",
+                    "details": "Short distance teleportation that allows Anti-Mage to move in and out of combat.",
+                    "description": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive.",
+                    "facet_effects": {
+                        "min_blink_distance": "200",
+                        "max_blink_distance": "750/900/1050/1200"
+                    },
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Disjoints incoming projectiles upon cast",
+                        "Utilizes the teleport mechanic",
+                        "When point-targeted beyond the min or max distance, Blink teleports Anti-Mage toward the min or max distance respectively"
+                    ],
+                    "interaction_notes": []
+                },
+                "ability_3": {
+                    "name": "Counterspell",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Self / Illusions",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "15/11/7/3",
+                    "mana_cost": 50,
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "",
+                    "details": "Counterspell may be activated to create an anti-magic shell around Anti-Mage that blocks any offensive unit-targeted spells.",
+                    "description": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation.",
+                    "facet_effects": {
+                        "targeted_spells_blocked": "1",
+                        "duration": "1.2",
+                        "magic_resist_bonus": "16%/24%/32%/40%"
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Interrupts Anti-Mage's channeling abilities upon cast",
+                        "Stacks multiplicatively with other magic resistance sources",
+                        "Has Spell Reflection functionality"
+                    ],
+                    "interaction_notes": [
+                        "Does not stack with Soulbind",
+                        "Does not reflect Phantom Strike or Blink Strike"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Counterspell Ally",
+                    "key": "F",
+                    "type": "active",
+                    "affects": "Allied Heroes",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "3",
+                    "mana_cost": 45,
+                    "cast_range": "600",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "",
+                    "details": "Activates Counterspell on an allied hero that blocks any unit-targeted spells.",
+                    "description": "The only magic that Anti-Mage will even barely tolerate... is friendship.",
+                    "facet_effects": {
+                        "targeted_spells_blocked": "1",
+                        "duration": "1.2"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Acquiring Aghanim's Shard unlocks this ability in the fifth ability slot",
+                        "Creates a Counterspell-based illusion per unit-targeted ability blocked"
+                    ],
+                    "interaction_notes": [
+                        "Considers clones and creep-heroes as heroes, illusions as creeps"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Mana Void",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "70",
+                    "mana_cost": "100/150/200",
+                    "cast_range": "600",
+                    "cast_animation": "0.3 + 0.63",
+                    "cast_radius": "500",
+                    "details": "Deals damage based on per point of missing mana of the targeted enemy unit within the radius. Stuns the primary target for a short duration.",
+                    "description": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts.",
+                    "facet_effects": {
+                        "radius": "500",
+                        "damage_factor_per_missing_mana": "0.8/0.95/1.1",
+                        "stun_duration": "0.3"
+                    },
+                    "ability_behavior": [
+                        "unit_target",
+                        "area_of_effect"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "strong_dispels_only",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "The targeting reticule must be unit-targeted on an enemy unit",
+                        "Can be cast on enemy units without mana",
+                        "Deals a 0-damage instance and applies the stun debuff on enemy units within the radius if the primary target does not have mana"
+                    ],
+                    "interaction_notes": [
+                        "The magical spell damage applied within the radius is defined as: (TargetMaxMana - TargetCurrentMana) × 0.8/0.95/1.1"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39b",
+                    "date": "2025-05-29",
+                    "changes": [
+                        "Increased Counterspell Magebane's Mirror reflected ability mana cost to mana burn factor from 1.5/1.9/2.3/2.7 to 1.5/2/2.5/3.",
+                        "Aghanim's Shard upgrade: Counterspell Ally Magebane's Mirror now applies a 3 reflected ability mana cost to mana burn factor upon proc."
+                    ]
+                },
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Talents: LVL 15 +5%/+15% Persecutor min/max movement speed slow increased to +7.5%/+15%.",
+                        "LVL 20 +0.7s Mana Void stun duration increased to +0.8s."
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Counterspell now has Spell Reflection by default.",
+                        "Rescaled magic resistance bonus from 15%/25%/35%/45% to 16%/24%/32%/40%.",
+                        "REWORKED Magebane's Mirror: Applies a ReflectedAbility MPCost * 1.5/1.9/2.3/2.7 mana burn per spell reflection proc.",
+                        "Deals ManaBurn * 1, MAX = 400 spell damage per spell reflection proc.",
+                        "Aghanim's Shard upgrade: Counterspell Ally now has Spell Reflection by default."
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 89432,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

@@ -1,0 +1,293 @@
+{
+    "converted": {
+        "hero_name": "Abaddon",
+        "sections": {
+            "general": {
+                "primary_attribute": "universal",
+                "strength": 22,
+                "strength_gain": 2.6,
+                "agility": 23,
+                "agility_gain": 1.5,
+                "intelligence": 18,
+                "intelligence_gain": 2,
+                "health": 604,
+                "mana": 291,
+                "armor": 2.83,
+                "magic_resist": "26.8%",
+                "damage": [
+                    50,
+                    60
+                ],
+                "damage_avg": 55.35,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 95,
+                "bat": 1.5,
+                "animation": "0.56 + 0.41",
+                "move_speed": 325,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Support, Carry, Durable"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "The Quickening",
+                    "effects": "Abaddon's current cooldowns are reduced by a fixed amount per enemy hero death within the radius."
+                },
+                "facet_2": {
+                    "name": "Malignant Mist",
+                    "effects": "Mist Coil also deals 40/60/80/100% attack damage and applies effects from items and abilities. Self Damage increased when targeting enemies."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants an aura that extends the protection for all allied heroes within the radius",
+                        "Mist Coil of its corresponding level is passively cast on allied heroes who takes more than a certain amount of damage within the radius"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "The projectile instant attacks the affected enemy upon impact"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+350 Mist Coil Radius",
+                        "+65 Curse of Avernus Attack Speed Bonus"
+                    ],
+                    "level_20": [
+                        "+100 Borrowed Time Immolation Damage per Second",
+                        "+80 Aphotic Shield Barrier"
+                    ],
+                    "level_15": [
+                        "+35 Mist Coil Heal/Damage",
+                        "+40 Curse of Avernus Damage per Second"
+                    ],
+                    "level_10": [
+                        "+12 Aphotic Shield Health Regen",
+                        "+10% Withering Mist Restoration Reduction"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Withering Mist",
+                        "type": "passive",
+                        "description": "Damage instances applied by Abaddon applies a dormant debuff that activates when the affected enemy unit is below the max health threshold.",
+                        "values": {
+                            "max_health_threshold": "40%",
+                            "debuff_duration": 5,
+                            "health_reduction": "35% (45% with talent)"
+                        },
+                        "details": "The debuff reduces the health restoration value of the affected enemy unit upon proc."
+                    },
+                    {
+                        "name": "The Quickening",
+                        "type": "passive",
+                        "description": "Abaddon's current cooldowns are reduced by a fixed amount per enemy hero death within the radius.",
+                        "values": {
+                            "effect_radius": 900,
+                            "current_cooldown_reduction": 4,
+                            "creep_cooldown_reduction": 0.2
+                        },
+                        "details": "Creeps' deaths contribute to the quickened Font, albeit while being less effective."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Mist Coil",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Self / Allies / Enemies",
+                    "damage": "Spell / Magical / Pure / Instant Attack",
+                    "damage_types": [
+                        "magical",
+                        "pure"
+                    ],
+                    "cooldown": "6.5/6/5.5/5",
+                    "mana_cost": "50/55/60/65",
+                    "cast_range": "625",
+                    "cast_animation": "0.25 + 0.4",
+                    "cast_radius": "350 (with talent)",
+                    "details": "Damages an enemy unit or heals an allied unit, at the cost of some of Abaddon's health.",
+                    "description": "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will.",
+                    "facet_effects": {
+                        "malignant_mist": "Also deals 40/60/80/100% attack damage and applies effects from items and abilities. Self Damage increased when targeting enemies."
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Deals pure spell damage to self per ability cast",
+                        "Cannot self-target",
+                        "Has 1300 projectile speed"
+                    ],
+                    "interaction_notes": [
+                        "Nullifies the ability with Spell Block",
+                        "Self-damage component is independent of the projectile"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Aphotic Shield",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Units",
+                    "damage": "Spell / Magical / Source / No-Reflection",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "12/10/8/6",
+                    "mana_cost": "110/120/130/140",
+                    "cast_range": "550",
+                    "cast_animation": "0.3 + 0.33",
+                    "cast_radius": "675",
+                    "details": "Applies a strong dispel, and creates a barrier to absorbs a set amount of damage before expiring on the affected allied unit.",
+                    "description": "The powers of the black mist rise to absorb attacks like the black mist absorbs light.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Deals damage equals to the barrier amount within the radius when the barrier disappears or is destroyed",
+                        "Doubletap casts the ability on Abaddon"
+                    ],
+                    "interaction_notes": [
+                        "Reapplying the buff on the same unit dispels the buff, applies the radius damage, and applies a new damage barrier"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Curse of Avernus",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Allied Heroes / Enemies",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "",
+                    "mana_cost": "",
+                    "cast_range": "",
+                    "cast_animation": "",
+                    "cast_radius": "",
+                    "details": "Applies a debuff that damages over time and slows the movement speed slow of the affected enemy unit.",
+                    "description": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Grants all allied units bonus attack speed upon attacking the affected enemy unit",
+                        "Deals damage in 0.5-second intervals"
+                    ],
+                    "interaction_notes": [
+                        "Affects buildings",
+                        "Does not affect allied units, invulnerable units, ward-type units, attached-type units"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Borrowed Time",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Self / Allied Heroes",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "90/80/70",
+                    "mana_cost": "",
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "400 (talent immolation)",
+                    "details": "Removes most debuffs when activated, all damage taken will self-heal instead for the entire duration.",
+                    "description": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target",
+                        "passive",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Immediately protects the Lord of Avernus when his health goes below a certain threshold",
+                        "Does not passively activate when Borrowed Time is on cooldown",
+                        "Applies a strong dispel upon activation"
+                    ],
+                    "interaction_notes": [
+                        "Can be cast while being disabled, except when affected by hex or silence sources",
+                        "Cannot shift-queue this ability"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Withering Mist now follows the health restoration mechanic",
+                        "Withering Mist applies a 35% health restoration reduction",
+                        "Mist Coil ADDED new Malignant Mist facet",
+                        "Aphotic Shield REMOVED the Mephitic Shroud facet",
+                        "REWORKED Aghanim's Shard upgrade for Aphotic Shield"
+                    ]
+                },
+                {
+                    "version": "7.38c",
+                    "date": "2025-03-27",
+                    "changes": [
+                        "Reduced base armor from 0 to -1",
+                        "Increased Aphotic Shield Mephitic Shroud cooldown from 14/12/10/8 to 15/13/11/9",
+                        "Reduced Curse of Avernus building damage factor from 0.3 to 0",
+                        "Talents: LVL 15 +50 Curse of Avernus damage per second reduced to +40",
+                        "Talents: LVL 25 +80 Curse of Avernus attack speed bonus reduced to +65"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Reduced base mana regeneration from 0.25 to 0",
+                        "Mist Coil rescaled cast range from 600/625/650/675 to 625 on each level",
+                        "Mist Coil reduced damage from 100/175/250/325 to 80/150/220/290",
+                        "Mist Coil reduced ally heal from 100/175/250/325 to 80/150/220/290",
+                        "Aphotic Shield reduced duration from 15 to 12",
+                        "Aphotic Shield increased mana cost from 95/110/125/140 to 110/120/130/140",
+                        "Aghanim's Scepter upgrade: CHANGED Borrowed Time radius from a flat 900 to MistCoil CastRange * 1"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 45000,
+            "sections_found": 5,
+            "parse_time_ms": 850,
+            "success_rate": "100%"
+        }
+    }
+}

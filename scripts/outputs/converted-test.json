@@ -101,7 +101,7 @@
                     {
                         "name": "Flow",
                         "type": "passive",
-                        "description": "Sets the water elemental's primary attribute to strength. Morphling gains bonus spell amplification based on its current agility.",
+                        "description": "Adaptive Strike stuns based on Morphling's current Strength to Agility ratio. Morphling gains bonus spell amplification based on its current agility.",
                         "values": {
                             "bonus_spell_amplification_per_agility": "0.25%"
                         },
@@ -110,9 +110,9 @@
                     {
                         "name": "Hero Model",
                         "type": "passive",
-                        "description": "The water elemental's hero model has hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+                        "description": "The water elemental's hero model has hidden innate abilities that may only perform or utilize the ability's functions upon a successful channeling.",
                         "values": {},
-                        "details": "Contains hidden innate abilities that require channeling to function."
+                        "details": "Contains hidden innate abilities accessible through channeling"
                     }
                 ]
             },
@@ -123,6 +123,10 @@
                     "type": "active",
                     "affects": "Enemy Units / Self",
                     "damage": "Spell / Magical / Attack Damage / Physical",
+                    "damage_types": [
+                        "magical",
+                        "physical"
+                    ],
                     "cooldown": "21/18/15/12",
                     "mana_cost": 115,
                     "cast_range": "700/800/900/1000",
@@ -160,15 +164,18 @@
                     "type": "active",
                     "affects": "Enemy Units",
                     "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
                     "cooldown": "16/14/12/10",
                     "mana_cost": "40/50/60/70",
                     "cast_range": "600/700/800/900",
                     "cast_animation": "0.25 + 0.67",
                     "cast_radius": "",
-                    "details": "Launches a surge of water at an enemy unit, dealing damage and knocking them back. The damage is based on Morphling's agility. If Morphling's agility is much higher than strength, the max agility damage factor is used. The knockback effect is based on Morphling's strength. If Morphling's strength is much higher than agility, the max knockback distance is used.",
+                    "details": "Launches a surge of water at an enemy unit, dealing damage and knocking them back. The damage is based on Morphling's agility. If Morphling's agility is much higher than strength, the max agility damage factor is used. The knockback effect is based on Morphling's strength.",
                     "description": "The Morphling calls upon his elements to crush his opponents with waves.",
                     "facet_effects": {
-                        "flow": "Adaptive Strike stuns based on Morphling's current Strength to Agility ratio with 0.5 to 2.4 stun duration."
+                        "flow": "Adaptive Strike stuns based on Morphling's current Strength to Agility ratio with 0.5 to 2.4 stun duration"
                     },
                     "ability_behavior": [
                         "unit_target"
@@ -200,8 +207,9 @@
                     "type": "toggle",
                     "affects": "Self",
                     "damage": "",
+                    "damage_types": [],
                     "cooldown": "0",
-                    "mana_cost": "4/8/13/17 per second",
+                    "mana_cost": "4/8/13/17",
                     "cast_range": "",
                     "cast_animation": "0 + 0",
                     "cast_radius": "",
@@ -220,16 +228,16 @@
                     "technical_details": [
                         "Shift Interval: 0.25/0.12/0.08/0.06",
                         "Agi/Str Gain per Second: 4/8/12/16",
-                        "Both abilities toggle each other off",
+                        "Fixed current mana loss per second: 4/8/13/17",
                         "All shifted attributes persist through death",
-                        "Continues to shift while toggled, even during disables"
+                        "Continues to shift while toggled, even while disabled"
                     ],
                     "interaction_notes": [
-                        "Cannot toggle during most disables without Shard",
-                        "With Shard: can toggle during cyclone, forced movement, hidden, sleep, stun, taunt",
-                        "Cannot toggle during hex or silence even with Shard",
-                        "Only converts base attributes and attribute gain from levels",
-                        "Grants bonus health using setting health mechanic"
+                        "Cannot toggle while affected by disable sources (unless Shard acquired)",
+                        "Shard allows toggling during Cyclone, Forced movement, Hidden, Sleep, Stun, Taunt",
+                        "Cannot be toggled while Hexed, Silenced, or cannot act",
+                        "Grants bonus health using setting health mechanic",
+                        "Illusions copy the shifted attributes"
                     ]
                 },
                 "ability_4": {
@@ -238,6 +246,7 @@
                     "type": "active",
                     "affects": "Enemy Heroes",
                     "damage": "",
+                    "damage_types": [],
                     "cooldown": "140/100/60",
                     "mana_cost": 50,
                     "cast_range": "700/850/1000",
@@ -263,10 +272,9 @@
                     "interaction_notes": [
                         "Considers casting on enemy clones and illusions as heroes",
                         "Casting on illusions targets the hero who owns the illusion",
-                        "Cannot Morph into dead heroes",
-                        "Retains current health and mana percentages when toggling forms",
-                        "With Scepter: creates strong illusion that can cast abilities",
-                        "Ability cooldowns shared between Morphling and illusion"
+                        "Cannot Morph into dead heroes or Enchanted Morphling illusions",
+                        "Retains current health and mana percentages on each form",
+                        "Scepter creates strong illusion with independent charges for charge-based abilities"
                     ]
                 }
             },
@@ -304,7 +312,7 @@
                         "ADDED Flow facet effect: Now applies 0.5 to 2.4 stun duration",
                         "Reduced Adaptive Strike base damage from 55/65/75/85 to 25/50/75/100",
                         "Morph now keeps Morphling's current attributes while active",
-                        "Multiple talent changes"
+                        "Multiple talent changes and reworks"
                     ]
                 }
             ]
@@ -312,7 +320,7 @@
         "parsing_stats": {
             "file_size": 89432,
             "sections_found": 5,
-            "parse_time_ms": 245,
+            "parse_time_ms": 847,
             "success_rate": "100%"
         }
     }

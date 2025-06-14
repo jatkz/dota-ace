@@ -1,0 +1,300 @@
+{
+    "converted": {
+        "hero_name": "Axe",
+        "sections": {
+            "general": {
+                "primary_attribute": "strength",
+                "strength": 25,
+                "strength_gain": 2.8,
+                "agility": 20,
+                "agility_gain": 1.7,
+                "intelligence": 18,
+                "intelligence_gain": 1.6,
+                "health": 670,
+                "mana": 291,
+                "armor": 2.33,
+                "magic_resist": 26.8,
+                "damage": [
+                    56,
+                    60
+                ],
+                "damage_avg": 58,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.4 + 0.5",
+                "move_speed": 315,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Initiator, Durable, Disabler, Carry"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "One Man Army",
+                    "effects": "Grants Axe temporary strength based on Axe's current armor. Allied heroes venturing too close to Axe passively disables this effect linearly."
+                },
+                "facet_2": {
+                    "name": "Call Out",
+                    "effects": "Berserker's Call grants affected enemy units bonus attack speed, while granting Axe additional bonus armor for the duration."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "After a set number of attacks, Axe performs a helix counter attack",
+                        "The required attacks and incoming attacks per Counter Helix proc works simultaneously",
+                        "Applies a stacking debuff on affected enemies within the radius that causes them to deal less total attack damage to Axe",
+                        "Removes cooldown"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "All ability components are dispelled upon the caster's death",
+                        "Berserker's Call now applies Battle Hunger to affected units within the radius",
+                        "Reapplying the debuff now creates an independent and stackable debuff instance"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "2x Battle Hunger Armor Factor",
+                        "+100 Berserker's Call Radius"
+                    ],
+                    "level_20": [
+                        "+30 Counter Helix Damage",
+                        "+100 Culling Blade Damage"
+                    ],
+                    "level_15": [
+                        "+10 Berserker's Call Armor",
+                        "+10% Battle Hunger Move Speed Slow"
+                    ],
+                    "level_10": [
+                        "+10% Self Move Speed per Battle Hunger Debuff",
+                        "+3s Culling Blade Speed Duration"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Coat of Blood",
+                        "type": "passive",
+                        "description": "Grants bonus armor retroactively per hero kill credited to Axe",
+                        "values": {
+                            "armor_bonus_per_kill": "0.2/0.3/0.4/0.5",
+                            "culling_blade_armor_bonus": "0.6/0.9/1.2/1.5"
+                        },
+                        "details": "This ability levels up with Culling Blade"
+                    },
+                    {
+                        "name": "One Man Army",
+                        "type": "passive",
+                        "description": "Grants Axe temporary strength based on Axe's current armor. Allied heroes venturing too close to Axe passively disables this effect linearly",
+                        "values": {
+                            "ally_search_radius": 700,
+                            "str_bonus_per_armor": 0.4,
+                            "bonus_linger_duration": 3
+                        },
+                        "details": "Selecting the One Man Army facet unlocks this ability"
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Berserker's Call",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "17/15/13/11",
+                    "mana_cost": "80/90/100/110",
+                    "cast_range": "315",
+                    "cast_animation": "0.3 + 0.5",
+                    "cast_radius": "315 (415 with Call Out facet)",
+                    "details": "Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor for the duration",
+                    "description": "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe",
+                    "facet_effects": {
+                        "call_out": {
+                            "enemy_attack_speed_bonus": 45,
+                            "self_armor_bonus": "18/19/20/21 (28/29/30/31 with Aghanim's Shard)"
+                        }
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Affected units within the radius cannot act and are forced to attack Axe",
+                        "Does not apply silence",
+                        "Active attack modifiers with autocast on are still applied"
+                    ],
+                    "interaction_notes": [
+                        "Affects fogged and invisible units",
+                        "Does not affect buildings, couriers, first wave lane creeps, hidden units, invulnerable units, ward-type units"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Battle Hunger",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Physical",
+                    "damage_types": [
+                        "physical"
+                    ],
+                    "cooldown": "20/15/10/5",
+                    "mana_cost": "50/60/70/80",
+                    "cast_range": "700/775/850/925",
+                    "cast_animation": "0.3 + 0.5",
+                    "cast_radius": "N/A",
+                    "details": "Enrages an enemy unit, causing it to take damage over time until it kills another unit or the duration ends. The damage is increased by a factor of Axe's armor. The enemy is also slowed as long as it is facing away from Axe",
+                    "description": "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied",
+                    "facet_effects": {
+                        "armor_damage_factor": "1 (2 with talent)",
+                        "move_speed_slow": "18%/22%/26%/30% (28%/32%/36%/40% with talent)",
+                        "self_move_speed_bonus": "10% per enemy with talent"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Damage per second: 12/18/24/30",
+                        "Duration: 12 seconds",
+                        "Facing angle: 90°",
+                        "Less effective on creeps (0.5 move speed slow factor)"
+                    ],
+                    "interaction_notes": [
+                        "Can be dispelled by killing any unit except illusions",
+                        "Armor-based damage updates periodically",
+                        "Shard upgrade creates independent stackable debuff instances"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Counter Helix",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Enemy Units",
+                    "damage": "Pure",
+                    "damage_types": [
+                        "spell",
+                        "pure"
+                    ],
+                    "cooldown": "0.3 (0 with Aghanim's Scepter)",
+                    "mana_cost": 0,
+                    "cast_range": "N/A",
+                    "cast_animation": "N/A",
+                    "cast_radius": "275",
+                    "details": "After a set number of incoming attacks, Axe performs a helix counter attack, dealing pure damage to all nearby enemies",
+                    "description": "Axe is the only reinforcement this army needs",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": true,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Required incoming attacks: 7/6/5/4",
+                        "Damage: 100/120/140/160 (130/150/170/190 with talent)",
+                        "Scepter adds outgoing attack requirement and damage reduction debuff"
+                    ],
+                    "interaction_notes": [
+                        "Tally counter persists through death but resets on respawn/reincarnation",
+                        "Does not count attacks from allied units, buildings, or ward-type units",
+                        "Scepter upgrade applies stacking damage reduction debuff (max 5 stacks, 12% per stack, 6s duration)"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Culling Blade",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Units",
+                    "damage": "Pure / Instant Kill",
+                    "damage_types": [
+                        "pure"
+                    ],
+                    "cooldown": "80/75/70",
+                    "mana_cost": "100/125/150",
+                    "cast_range": "175",
+                    "cast_animation": "0.3 + 0.5",
+                    "cast_radius": "N/A",
+                    "details": "Axe spots a weakness and strikes, dealing pure damage",
+                    "description": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": true,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Damage: 275/375/475 (375/475/575 with talent)",
+                        "Instant kills if target's current HP ≤ spell damage",
+                        "Grants nearby allies bonus movement speed (20%/25%/30%) and armor (20/25/30) for 6s (9s with talent) when hero is killed",
+                        "Resets cooldown when enemy hero is killed"
+                    ],
+                    "interaction_notes": [
+                        "Dispels Borrowed Time, Shallow Grave, False Promise, Battle Trance before damage",
+                        "Does not instant kill Tormentor",
+                        "Buff radius: 900",
+                        "Cooldown resets on hero kills including reincarnation sources"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39b",
+                    "date": "2025-05-29",
+                    "changes": [
+                        "Reduced Counter Helix enemy total outgoing attack damage reduction per stack from 15% to 12% (Aghanim's Scepter upgrade)"
+                    ]
+                },
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Increased Berserker's Call Call Out self armor bonus increase from 5 to 6",
+                        "Reduced Battle Hunger movement speed slow from 15%/20%/25%/30% to 18%/22%/26%/30%",
+                        "LVL 20 +25 Counter Helix damage increased to +30 (Talents)"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Increased base attack damage from 30‒34 to 31‒35",
+                        "Increased Battle Hunger damage per second from 10/15/20/25 to 12/18/24/30",
+                        "Rescaled Counter Helix damage from 95/120/145/170 to 100/120/140/160",
+                        "Reduced Culling Blade cooldown from 100/85/70 to 80/75/70",
+                        "Reduced Counter Helix enemy total outgoing attack damage reduction per stack from 20% to 15% (Aghanim's Scepter upgrade)"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 89432,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

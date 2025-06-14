@@ -1,0 +1,612 @@
+[
+    {
+        "urlName": "Abaddon",
+        "displayName": "Abaddon",
+        "runConversion": false
+    },
+    {
+        "urlName": "Alchemist",
+        "displayName": "Alchemist",
+        "runConversion": false
+    },
+    {
+        "urlName": "Ancient_Apparition",
+        "displayName": "Ancient Apparition",
+        "runConversion": false
+    },
+    {
+        "urlName": "Anti-Mage",
+        "displayName": "Anti-Mage",
+        "runConversion": false
+    },
+    {
+        "urlName": "Arc_Warden",
+        "displayName": "Arc Warden",
+        "runConversion": false
+    },
+    {
+        "urlName": "Axe",
+        "displayName": "Axe",
+        "runConversion": false
+    },
+    {
+        "urlName": "Bane",
+        "displayName": "Bane",
+        "runConversion": false
+    },
+    {
+        "urlName": "Batrider",
+        "displayName": "Batrider",
+        "runConversion": false
+    },
+    {
+        "urlName": "Beastmaster",
+        "displayName": "Beastmaster",
+        "runConversion": true
+    },
+    {
+        "urlName": "Bloodseeker",
+        "displayName": "Bloodseeker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Bounty_Hunter",
+        "displayName": "Bounty Hunter",
+        "runConversion": true
+    },
+    {
+        "urlName": "Brewmaster",
+        "displayName": "Brewmaster",
+        "runConversion": true
+    },
+    {
+        "urlName": "Bristleback",
+        "displayName": "Bristleback",
+        "runConversion": true
+    },
+    {
+        "urlName": "Broodmother",
+        "displayName": "Broodmother",
+        "runConversion": true
+    },
+    {
+        "urlName": "Centaur_Warrunner",
+        "displayName": "Centaur Warrunner",
+        "runConversion": true
+    },
+    {
+        "urlName": "Chaos_Knight",
+        "displayName": "Chaos Knight",
+        "runConversion": true
+    },
+    {
+        "urlName": "Chen",
+        "displayName": "Chen",
+        "runConversion": true
+    },
+    {
+        "urlName": "Clinkz",
+        "displayName": "Clinkz",
+        "runConversion": true
+    },
+    {
+        "urlName": "Clockwerk",
+        "displayName": "Clockwerk",
+        "runConversion": true
+    },
+    {
+        "urlName": "Crystal_Maiden",
+        "displayName": "Crystal Maiden",
+        "runConversion": true
+    },
+    {
+        "urlName": "Dark_Seer",
+        "displayName": "Dark Seer",
+        "runConversion": true
+    },
+    {
+        "urlName": "Dark_Willow",
+        "displayName": "Dark Willow",
+        "runConversion": true
+    },
+    {
+        "urlName": "Dawnbreaker",
+        "displayName": "Dawnbreaker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Dazzle",
+        "displayName": "Dazzle",
+        "runConversion": true
+    },
+    {
+        "urlName": "Death_Prophet",
+        "displayName": "Death Prophet",
+        "runConversion": true
+    },
+    {
+        "urlName": "Disruptor",
+        "displayName": "Disruptor",
+        "runConversion": true
+    },
+    {
+        "urlName": "Doom",
+        "displayName": "Doom",
+        "runConversion": true
+    },
+    {
+        "urlName": "Dragon_Knight",
+        "displayName": "Dragon Knight",
+        "runConversion": true
+    },
+    {
+        "urlName": "Drow_Ranger",
+        "displayName": "Drow Ranger",
+        "runConversion": true
+    },
+    {
+        "urlName": "Earth_Spirit",
+        "displayName": "Earth Spirit",
+        "runConversion": true
+    },
+    {
+        "urlName": "Earthshaker",
+        "displayName": "Earthshaker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Elder_Titan",
+        "displayName": "Elder Titan",
+        "runConversion": true
+    },
+    {
+        "urlName": "Ember_Spirit",
+        "displayName": "Ember Spirit",
+        "runConversion": true
+    },
+    {
+        "urlName": "Enchantress",
+        "displayName": "Enchantress",
+        "runConversion": true
+    },
+    {
+        "urlName": "Enigma",
+        "displayName": "Enigma",
+        "runConversion": true
+    },
+    {
+        "urlName": "Faceless_Void",
+        "displayName": "Faceless Void",
+        "runConversion": true
+    },
+    {
+        "urlName": "Grimstroke",
+        "displayName": "Grimstroke",
+        "runConversion": true
+    },
+    {
+        "urlName": "Gyrocopter",
+        "displayName": "Gyrocopter",
+        "runConversion": true
+    },
+    {
+        "urlName": "Hoodwink",
+        "displayName": "Hoodwink",
+        "runConversion": true
+    },
+    {
+        "urlName": "Huskar",
+        "displayName": "Huskar",
+        "runConversion": true
+    },
+    {
+        "urlName": "Invoker",
+        "displayName": "Invoker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Io",
+        "displayName": "Io",
+        "runConversion": true
+    },
+    {
+        "urlName": "Jakiro",
+        "displayName": "Jakiro",
+        "runConversion": true
+    },
+    {
+        "urlName": "Juggernaut",
+        "displayName": "Juggernaut",
+        "runConversion": true
+    },
+    {
+        "urlName": "Keeper_of_the_Light",
+        "displayName": "Keeper of the Light",
+        "runConversion": true
+    },
+    {
+        "urlName": "Kunkka",
+        "displayName": "Kunkka",
+        "runConversion": true
+    },
+    {
+        "urlName": "Legion_Commander",
+        "displayName": "Legion Commander",
+        "runConversion": true
+    },
+    {
+        "urlName": "Leshrac",
+        "displayName": "Leshrac",
+        "runConversion": true
+    },
+    {
+        "urlName": "Lich",
+        "displayName": "Lich",
+        "runConversion": true
+    },
+    {
+        "urlName": "Lifestealer",
+        "displayName": "Lifestealer",
+        "runConversion": true
+    },
+    {
+        "urlName": "Lina",
+        "displayName": "Lina",
+        "runConversion": true
+    },
+    {
+        "urlName": "Lion",
+        "displayName": "Lion",
+        "runConversion": true
+    },
+    {
+        "urlName": "Lone_Druid",
+        "displayName": "Lone Druid",
+        "runConversion": true
+    },
+    {
+        "urlName": "Luna",
+        "displayName": "Luna",
+        "runConversion": true
+    },
+    {
+        "urlName": "Magnus",
+        "displayName": "Magnus",
+        "runConversion": true
+    },
+    {
+        "urlName": "Marci",
+        "displayName": "Marci",
+        "runConversion": true
+    },
+    {
+        "urlName": "Mars",
+        "displayName": "Mars",
+        "runConversion": true
+    },
+    {
+        "urlName": "Medusa",
+        "displayName": "Medusa",
+        "runConversion": true
+    },
+    {
+        "urlName": "Meepo",
+        "displayName": "Meepo",
+        "runConversion": true
+    },
+    {
+        "urlName": "Mirana",
+        "displayName": "Mirana",
+        "runConversion": true
+    },
+    {
+        "urlName": "Monkey_King",
+        "displayName": "Monkey King",
+        "runConversion": true
+    },
+    {
+        "urlName": "Morphling",
+        "displayName": "Morphling",
+        "runConversion": true
+    },
+    {
+        "urlName": "Muerta",
+        "displayName": "Muerta",
+        "runConversion": true
+    },
+    {
+        "urlName": "Naga_Siren",
+        "displayName": "Naga Siren",
+        "runConversion": true
+    },
+    {
+        "urlName": "Nature's_Prophet",
+        "displayName": "Nature's Prophet",
+        "runConversion": true
+    },
+    {
+        "urlName": "Necrophos",
+        "displayName": "Necrophos",
+        "runConversion": true
+    },
+    {
+        "urlName": "Night_Stalker",
+        "displayName": "Night Stalker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Nyx_Assassin",
+        "displayName": "Nyx Assassin",
+        "runConversion": true
+    },
+    {
+        "urlName": "Ogre_Magi",
+        "displayName": "Ogre Magi",
+        "runConversion": true
+    },
+    {
+        "urlName": "Omniknight",
+        "displayName": "Omniknight",
+        "runConversion": true
+    },
+    {
+        "urlName": "Oracle",
+        "displayName": "Oracle",
+        "runConversion": true
+    },
+    {
+        "urlName": "Outworld_Destroyer",
+        "displayName": "Outworld Destroyer",
+        "runConversion": true
+    },
+    {
+        "urlName": "Pangolier",
+        "displayName": "Pangolier",
+        "runConversion": true
+    },
+    {
+        "urlName": "Phantom_Assassin",
+        "displayName": "Phantom Assassin",
+        "runConversion": true
+    },
+    {
+        "urlName": "Phantom_Lancer",
+        "displayName": "Phantom Lancer",
+        "runConversion": true
+    },
+    {
+        "urlName": "Primal_Beast",
+        "displayName": "Primal Beast",
+        "runConversion": true
+    },
+    {
+        "urlName": "Puck",
+        "displayName": "Puck",
+        "runConversion": true
+    },
+    {
+        "urlName": "Pudge",
+        "displayName": "Pudge",
+        "runConversion": true
+    },
+    {
+        "urlName": "Pugna",
+        "displayName": "Pugna",
+        "runConversion": true
+    },
+    {
+        "urlName": "Queen_of_Pain",
+        "displayName": "Queen of Pain",
+        "runConversion": true
+    },
+    {
+        "urlName": "Razor",
+        "displayName": "Razor",
+        "runConversion": true
+    },
+    {
+        "urlName": "Riki",
+        "displayName": "Riki",
+        "runConversion": true
+    },
+    {
+        "urlName": "Ringmaster",
+        "displayName": "Ringmaster",
+        "runConversion": true
+    },
+    {
+        "urlName": "Rubick",
+        "displayName": "Rubick",
+        "runConversion": true
+    },
+    {
+        "urlName": "Sand_King",
+        "displayName": "Sand King",
+        "runConversion": true
+    },
+    {
+        "urlName": "Shadow_Demon",
+        "displayName": "Shadow Demon",
+        "runConversion": true
+    },
+    {
+        "urlName": "Shadow_Fiend",
+        "displayName": "Shadow Fiend",
+        "runConversion": true
+    },
+    {
+        "urlName": "Shadow_Shaman",
+        "displayName": "Shadow Shaman",
+        "runConversion": true
+    },
+    {
+        "urlName": "Silencer",
+        "displayName": "Silencer",
+        "runConversion": true
+    },
+    {
+        "urlName": "Skywrath_Mage",
+        "displayName": "Skywrath Mage",
+        "runConversion": true
+    },
+    {
+        "urlName": "Slardar",
+        "displayName": "Slardar",
+        "runConversion": true
+    },
+    {
+        "urlName": "Slark",
+        "displayName": "Slark",
+        "runConversion": true
+    },
+    {
+        "urlName": "Sniper",
+        "displayName": "Sniper",
+        "runConversion": true
+    },
+    {
+        "urlName": "Spectre",
+        "displayName": "Spectre",
+        "runConversion": true
+    },
+    {
+        "urlName": "Spirit_Breaker",
+        "displayName": "Spirit Breaker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Storm_Spirit",
+        "displayName": "Storm Spirit",
+        "runConversion": true
+    },
+    {
+        "urlName": "Sven",
+        "displayName": "Sven",
+        "runConversion": true
+    },
+    {
+        "urlName": "Techies",
+        "displayName": "Techies",
+        "runConversion": true
+    },
+    {
+        "urlName": "Templar_Assassin",
+        "displayName": "Templar Assassin",
+        "runConversion": true
+    },
+    {
+        "urlName": "Terrorblade",
+        "displayName": "Terrorblade",
+        "runConversion": true
+    },
+    {
+        "urlName": "Tidehunter",
+        "displayName": "Tidehunter",
+        "runConversion": true
+    },
+    {
+        "urlName": "Timbersaw",
+        "displayName": "Timbersaw",
+        "runConversion": true
+    },
+    {
+        "urlName": "Tinker",
+        "displayName": "Tinker",
+        "runConversion": true
+    },
+    {
+        "urlName": "Tiny",
+        "displayName": "Tiny",
+        "runConversion": true
+    },
+    {
+        "urlName": "Treant_Protector",
+        "displayName": "Treant Protector",
+        "runConversion": true
+    },
+    {
+        "urlName": "Troll_Warlord",
+        "displayName": "Troll Warlord",
+        "runConversion": true
+    },
+    {
+        "urlName": "Tusk",
+        "displayName": "Tusk",
+        "runConversion": true
+    },
+    {
+        "urlName": "Underlord",
+        "displayName": "Underlord",
+        "runConversion": true
+    },
+    {
+        "urlName": "Undying",
+        "displayName": "Undying",
+        "runConversion": true
+    },
+    {
+        "urlName": "Ursa",
+        "displayName": "Ursa",
+        "runConversion": true
+    },
+    {
+        "urlName": "Vengeful_Spirit",
+        "displayName": "Vengeful Spirit",
+        "runConversion": true
+    },
+    {
+        "urlName": "Venomancer",
+        "displayName": "Venomancer",
+        "runConversion": true
+    },
+    {
+        "urlName": "Viper",
+        "displayName": "Viper",
+        "runConversion": true
+    },
+    {
+        "urlName": "Visage",
+        "displayName": "Visage",
+        "runConversion": true
+    },
+    {
+        "urlName": "Void_Spirit",
+        "displayName": "Void Spirit",
+        "runConversion": true
+    },
+    {
+        "urlName": "Warlock",
+        "displayName": "Warlock",
+        "runConversion": true
+    },
+    {
+        "urlName": "Weaver",
+        "displayName": "Weaver",
+        "runConversion": true
+    },
+    {
+        "urlName": "Windranger",
+        "displayName": "Windranger",
+        "runConversion": true
+    },
+    {
+        "urlName": "Winter_Wyvern",
+        "displayName": "Winter Wyvern",
+        "runConversion": true
+    },
+    {
+        "urlName": "Witch_Doctor",
+        "displayName": "Witch Doctor",
+        "runConversion": true
+    },
+    {
+        "urlName": "Wraith_King",
+        "displayName": "Wraith King",
+        "runConversion": true
+    },
+    {
+        "urlName": "Zeus",
+        "displayName": "Zeus",
+        "runConversion": true
+    }
+]

@@ -1,0 +1,234 @@
+{
+    "converted": {
+        "hero_name": "Ancient Apparition",
+        "sections": {
+            "general": {
+                "primary_attribute": "intelligence",
+                "strength": 20,
+                "strength_gain": 1.9,
+                "agility": 20,
+                "agility_gain": 2,
+                "intelligence": 23,
+                "intelligence_gain": 3.1,
+                "health": 560,
+                "mana": 351,
+                "armor": 2.33,
+                "magic_resist": 27.3,
+                "damage": [
+                    44,
+                    54
+                ],
+                "damage_avg": 49,
+                "projectile_speed": 1250,
+                "attack_type": "ranged",
+                "attack_range": 675,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.45 + 0.3",
+                "move_speed": 285,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Support, Disabler, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Bone Chill",
+                    "effects": "Additionally reduces the affected enemy unit's strength per Death Rime stack. This ability component levels up with Ice Blast."
+                },
+                "facet_2": {
+                    "name": "Exposure",
+                    "effects": "Cold Feet is now an area-targeted ability and applies Death Rime stacks within the radius centered around the affected enemy unit upon cast. This ability component levels up with Ice Blast."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Removes cooldown and reduces mana cost for Chilling Touch"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Stuns all affected enemy units for a shorter duration corresponding to Cold Feet's level as the Ice Blast projectile implodes at the targeted location"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+4% Ice Blast Health Kill Threshold",
+                        "+50% Death Rime Slow/Damage"
+                    ],
+                    "level_20": [
+                        "+80 Chilling Touch Damage",
+                        "+4s Ice Blast Duration"
+                    ],
+                    "level_15": [
+                        "+300 Cold Feet Break Radius",
+                        "-2s Ice Vortex Cooldown"
+                    ],
+                    "level_10": [
+                        "+2 Cold Feet Death Rime Stacks",
+                        "+300 Chilling Touch Attack Range"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Death Rime",
+                        "type": "passive",
+                        "description": "All of Kaldr's abilities now apply frost stacks. Deal damage per second and applies a movement slow per debuff stack.",
+                        "values": {
+                            "damage_interval": 0.5,
+                            "damage_per_interval_per_stack": 5,
+                            "move_speed_slow_per_stack": "2%"
+                        },
+                        "details": "Applies the following ability effects on the affected enemy unit per debuff: Deals 5 magical spell damage in 0.5-second intervals. Immediately affects the enemy unit upon applying the damage per second debuff."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Cold Feet",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "15/13/11/9",
+                    "mana_cost": 125,
+                    "cast_range": "700/800/900/1000",
+                    "cast_animation": "0.01 + 0",
+                    "cast_radius": "725/750/775/800",
+                    "details": "Break Radius: 725/750/775/800, Stun Duration: 1.8/2.2/2.6/3, Rime Stacks: 2/4/6/8, Debuff Duration: 4",
+                    "description": "Places a frozen hex on an enemy unit that can be dispelled by moving away from the initial cast point. If the enemy unit doesn't move out of the given distance, it will be stunned and frozen in place after a duration.",
+                    "facet_effects": {
+                        "exposure": "Now has ground-targeting functionality by default, and applies Cold Feet to all enemy units within the radius. Effect Radius: 0/200/350/500"
+                    },
+                    "ability_behavior": [
+                        "unit_target",
+                        "area_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false
+                },
+                "ability_2": {
+                    "name": "Ice Vortex",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "10/8/6/4",
+                    "mana_cost": "40/55/70/85",
+                    "cast_range": 1200,
+                    "cast_animation": "0.01 + 0",
+                    "cast_radius": 275,
+                    "details": "Effect Radius: 275, Magic Resist Reduction: 16%/19%/22%/25%, Duration: 6/8/10/12, Aura Linger Duration: 0.5, Vision Radius: 200/220/240/260, Rime Stacks: 1/2/3/4",
+                    "description": "Applies a movement speed slow and magic resistance reduction to enemy units within its radius.",
+                    "ability_behavior": [
+                        "area_target",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false
+                },
+                "ability_3": {
+                    "name": "Chilling Touch",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Self / Enemy Units",
+                    "damage": "Spell",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "12/9/6/3",
+                    "mana_cost": "45/50/55/60",
+                    "cast_range": "735/765/795/825",
+                    "cast_animation": "0.45 + 0.3",
+                    "details": "Damage: 30/60/90/120, Move Speed Slow: 100%, Slow Duration: 0.7/0.8/0.9/1, Rime Stacks: 2, Debuff Duration: 3",
+                    "description": "Enhances Kaldr's attack with increased attack range, heavy magic damage, and movement speed slow.",
+                    "ability_behavior": [
+                        "autocast",
+                        "active_attack_modifier"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false
+                },
+                "ability_4": {
+                    "name": "Ice Blast",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell",
+                    "damage_types": [
+                        "Magical",
+                        "Instant Kill"
+                    ],
+                    "cooldown": "60/50/40",
+                    "mana_cost": 175,
+                    "cast_range": "Global",
+                    "cast_animation": "0.01 + 1.07",
+                    "details": "Ball Radius: 275, Min Explosion Radius: 275, Max Explosion Radius: 1000, Radius Increment per Second: 50, Damage: 250/325/400, Debuff Duration: 10/11/12, Health Kill Threshold: 12%/13%/14%, Freeze Health Duration: 10/11/12, Rime Stacks: 2",
+                    "description": "Launches a tracer toward any location, which must be triggered again to mark the final target point, this area will be blasted by a damaging explosion of hail. The further the tracer travels, the larger the explosion radius.",
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": true,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Ice Vortex: Reduced cast range from 1500 to 1200",
+                        "Ice Vortex: Reduced effect radius from 300 to 275",
+                        "Aghanim's Shard upgrade Ice Blast: Reduced Cold Feet stun duration factor from 0.6 to 0.5",
+                        "Talents: LVL 20 +5s Ice Blast duration reduced to +4s"
+                    ]
+                },
+                {
+                    "version": "7.38c",
+                    "date": "2025-03-27",
+                    "changes": [
+                        "Increased Ice Vortex mana cost from 40/50/60/70 to 40/55/70/85",
+                        "Reduced Chilling Touch attack range bonus from 80/120/160/200 to 60/90/120/150"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Reduced agility gain from 2.2 to 2"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 125000,
+            "sections_found": 5,
+            "parse_time_ms": 850,
+            "success_rate": "100%"
+        }
+    }
+}

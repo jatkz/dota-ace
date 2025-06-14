@@ -1,0 +1,345 @@
+{
+    "converted": {
+        "hero_name": "Arc Warden",
+        "sections": {
+            "general": {
+                "primary_attribute": "universal",
+                "strength": 20,
+                "strength_gain": 2.4,
+                "agility": 20,
+                "agility_gain": 3,
+                "intelligence": 24,
+                "intelligence_gain": 2.6,
+                "health": 560,
+                "mana": 363,
+                "armor": 3.33,
+                "magic_resist": 27.4,
+                "damage": [
+                    51,
+                    57
+                ],
+                "damage_avg": 54.8,
+                "projectile_speed": 900,
+                "attack_type": "ranged",
+                "attack_range": 625,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.3 + 0.7",
+                "move_speed": 285,
+                "turn_rate": 0.7,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Escape, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Runed Replica",
+                    "effects": "Tempest Double gains Power Rune bonuses when created."
+                },
+                "facet_2": {
+                    "name": "Power Capture",
+                    "effects": "Grants Arc Warden permanent all attributes bonus per Power Rune activation. +1.5 All Attributes per Activation. Pulls in all Runes within the radius to the point-targeted location and activates them."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Additionally silences the lone enemy unit",
+                        "Increases damage per second and duration"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Upon activation, the Spark Wraith splits into two, affecting a secondary closest enemy unit",
+                        "Has a lower secondary damage factor",
+                        "Increases search radius"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "-1.1s Spark Wraith Activation Delay",
+                        "Tempest Double No Penalties"
+                    ],
+                    "level_20": [
+                        "-5s Magnetic Field Cooldown",
+                        "+50% Spark Wraith Damage"
+                    ],
+                    "level_15": [
+                        "+25 Magnetic Field Attack Speed",
+                        "+20% Flux Slow"
+                    ],
+                    "level_10": [
+                        "+200 Health",
+                        "+200 Flux Cast Range"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Runic Infusion",
+                        "type": "passive",
+                        "description": "Grants Arc Warden the Regeneration Rune buff briefly upon activating any Power Runes. Activating other runes grants a shorter buff duration.",
+                        "values": {
+                            "max_health_to_health_regen_per_second": "6%",
+                            "max_mana_to_mana_regen_per_second": "6%",
+                            "duration": 4,
+                            "other_rune_duration": 2.64,
+                            "damage_threshold": 0,
+                            "reduced_health_regen": "1%",
+                            "reduced_mana_regen": "1%",
+                            "downtime": 3
+                        },
+                        "details": "Player-based damage reduces the max health and max mana regeneration value for a set duration. Cannot be reset with cooldown reset sources."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Both Arc Warden's hero model and The Double have hidden innate abilities. They may only perform or utilize the ability's functions upon a successful channeling.",
+                        "values": {},
+                        "details": "Hidden Innate Abilities include various channeling-based functions."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Flux",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "16",
+                    "mana_cost": 75,
+                    "cast_range": "500/600/700/800",
+                    "cast_animation": "0.3 + 0.77",
+                    "cast_radius": "225",
+                    "details": "Deals damage over time on the unit-targeted enemy unit. The damage is not applied if another enemy unit is near the affected enemy.",
+                    "description": "An infinitesimal fraction of the power which imprisoned the Ancients.",
+                    "facet_effects": {
+                        "aghanim_scepter": {
+                            "cast_range": "700/800/900/1000",
+                            "damage_per_second": "22.5/45/67.5/90",
+                            "move_speed_slow": "34%/41%/48%/55%",
+                            "duration": 8,
+                            "silence_duration": 8
+                        }
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Checks for enemy units in 0.5-second intervals within search radius",
+                        "Damage immediately activates or disables based on checks",
+                        "Reapplying creates another independent instance"
+                    ],
+                    "interaction_notes": [
+                        "Does not consider buildings, ward-type units, or hidden units as valid allied units",
+                        "Deals damage in 0.5-second intervals over 13 possible instances"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Magnetic Field",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Units",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "20/19/18/17",
+                    "mana_cost": "50/70/90/110",
+                    "cast_range": "900",
+                    "cast_animation": "0.3 + 0",
+                    "cast_radius": "300",
+                    "details": "Generates a circular distortion field of magnetic energy that grants various bonus properties to allied units.",
+                    "description": "Time and space are of little consequence to one as old as Zet.",
+                    "facet_effects": {
+                        "power_capture": {
+                            "rune_pull_radius": "1200/1800/2400/3000",
+                            "acceleration_speed": 150,
+                            "max_speed": 600
+                        },
+                        "talent_bonus": {
+                            "attack_speed_bonus": "55/85/115/145",
+                            "cooldown_reduction": "15/14/13/12"
+                        }
+                    },
+                    "ability_behavior": [
+                        "point_target",
+                        "area_of_effect"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Doubletap creates aura centered around The Self",
+                        "Point target creates aura at targeted location",
+                        "Multiple overlapping fields stack independently"
+                    ],
+                    "interaction_notes": [
+                        "Grants 100% evasion and attack speed bonus to allied units",
+                        "Does not affect buildings, ward-type units, hidden or invulnerable units"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Spark Wraith",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "4",
+                    "mana_cost": 80,
+                    "cast_range": "2000",
+                    "cast_animation": "0.3 + 0.77",
+                    "cast_radius": "375",
+                    "details": "Summons a Spark Wraith that activates after an effect delay. Once an enemy is within its search radius, the wraith fuses itself with the target.",
+                    "description": "Lesser fragments of Zet's original self.",
+                    "facet_effects": {
+                        "aghanim_shard": {
+                            "search_radius": 475,
+                            "secondary_damage_factor": 0.8
+                        },
+                        "talent_bonus": {
+                            "activation_delay": 0.4,
+                            "damage": "150/255/360/465"
+                        }
+                    },
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Wraiths are fully visible to everyone",
+                        "Grants 300-radius vision while idling and traveling",
+                        "Activation delay of 1.5 seconds, checks every 0.2 seconds"
+                    ],
+                    "interaction_notes": [
+                        "Affects invisible and fogged units",
+                        "Does not affect invulnerable or hidden units",
+                        "Projectile speed of 550"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Tempest Double",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "The Self",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "60/55/50",
+                    "mana_cost": 0,
+                    "cast_range": "700",
+                    "cast_animation": "0.15 + 0.5",
+                    "cast_radius": "N/A",
+                    "details": "The Self creates a perfect duplication of itself which is considered a hero by most abilities. The Double can use all of The Self's current items and non-ultimate spells, except most consumables and items that would drop on death.",
+                    "description": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
+                    "facet_effects": {
+                        "runed_replica": {
+                            "runes_duration": 12,
+                            "level_1_runes": [
+                                "Arcane Rune"
+                            ],
+                            "level_2_runes": [
+                                "Arcane Rune",
+                                "Invisibility Rune"
+                            ],
+                            "level_3_runes": [
+                                "Arcane Rune",
+                                "Invisibility Rune",
+                                "Haste Rune"
+                            ]
+                        },
+                        "talent_bonus": {
+                            "no_penalties": true
+                        }
+                    },
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Double is visually distinguishable from The Self",
+                        "Creates clone with current health and mana",
+                        "Double has separate item and ability cooldowns"
+                    ],
+                    "interaction_notes": [
+                        "Double loses sense of self as it nears expiration",
+                        "Max 35% move speed slow and miss chance when expiring",
+                        "Cannot use ultimate abilities"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "CHANGED Tempest Double Runed Replica Power Rune buff correspondingly",
+                        "Level 1: Arcane Rune (was Invisibility Rune)",
+                        "Level 2: Arcane Rune + Invisibility Rune (order changed)",
+                        "Level 3: Arcane Rune + Invisibility Rune + Haste Rune (order changed)",
+                        "Talents: LVL 20 -7s Magnetic Field cooldown reduced to -5s",
+                        "Talents: LVL 20 +40% Spark Wraith damage increased to +50%",
+                        "Talents: LVL 25 -1s Spark Wraith activation delay increased to -1.1s"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Increased Tempest Double Runed Replica rune duration from 10 to 12"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Arc Warden no longer has Agility as primary attribute and is now Universal hero",
+                        "Reduced base attack damage from 33‒39 to 23‒29",
+                        "REMOVED Order and Disorder facets",
+                        "ADDED Runic Infusion Power Capture facet",
+                        "Flux: Reduced movement speed slow from 15%/22%/30%/39% to 14%/21%/28%/35%",
+                        "Magnetic Field: CHANGED ability targeting type from No Target to Target Point",
+                        "Magnetic Field: READDED affects allied creeps",
+                        "Magnetic Field: ADDED doubletap functionality",
+                        "Spark Wraith: Increased projectile speed from 400 to 550",
+                        "Spark Wraith: Reduced activation delay from 2 to 1.5",
+                        "Spark Wraith: Reduced damage from 100/180/260/340 to 100/170/240/310",
+                        "Tempest Double: Reduced duration from 60 to 18/21/24",
+                        "Tempest Double: Reduced cooldown from 100/90/80 to 60/55/50",
+                        "REWORKED Aghanim's Scepter upgrade for Flux",
+                        "REWORKED Aghanim's Shard upgrade for Spark Wraith"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 89432,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

@@ -1,18 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk';
 import fs from 'fs';
-// import fetch from 'node-fetch';
-import dotenv from 'dotenv/config';
-
-// const Anthropic = require('@anthropic-ai/sdk').default;
-// const fs = require('fs');
-// const fetch = require('node-fetch'); // Add this import
-// require('dotenv').config();
 
 const API_KEY = process.env.CLAUDE_API_KEY;
 
 // Basic Claude API Client
 class ClaudeClient {
-    constructor(apiKey = API_KEY) {
+    constructor(apiKey = API_KEY, templatePath = './claude-templates/parse-hero-page.txt') {
         if (!apiKey) {
             throw new Error('API key is required. Set ANTHROPIC_API_KEY in your .env file');
         }
@@ -25,7 +18,7 @@ class ClaudeClient {
         this.defaultModel = 'claude-sonnet-4-20250514';
         this.max_tokens = 4000;
         this.temperature = 0;
-        const systemPrompt = fs.readFileSync('./claude-templates/parse-hero-page.txt', 'utf8');
+        const systemPrompt = fs.readFileSync(templatePath, 'utf8');
         this.system = systemPrompt
     }
 
@@ -203,10 +196,9 @@ async function fileAnalysisExample() {
     fs.unlinkSync('sample_data.json');
 }
 
-// REAL
-async function fileAnalysis(filePath) {
-    const claude = new ClaudeClient();
-        
+async function fileAnalysis(filePath, templatePath, outputPath) {
+    const claude = new ClaudeClient(API_KEY, templatePath);
+
     const result = await claude.analyzeFile(
         filePath
     );
@@ -223,7 +215,7 @@ async function fileAnalysis(filePath) {
         .replace(/\n```$/, '');     // Remove closing ```
     
     const content = {converted: JSON.parse(jsonString)};
-    fs.writeFileSync("./scripts/outputs/converted-test.json", JSON.stringify(content, null, 4));
+    fs.writeFileSync(outputPath, JSON.stringify(content, null, 4));
  }
 
 // Main execution
@@ -231,13 +223,9 @@ async function main() {
     console.log('🤖 Claude API Starter Examples\n');
     
     try {
-        // await basicUsage();
-        // await conversationExample();
-        // await streamingExample();
-        // await fileAnalysisExample();
-        // await dota2ParserExample();
-
-        await fileAnalysis("./scripts/outputs/single_test.html");
+        await fileAnalysis("./scripts/outputs/single_test.html", 
+            './claude-templates/parse-hero-page.txt',
+            "./scripts/outputs/converted-test.json");
         
         console.log('\n✅ All examples completed successfully!');
         console.log('\n📝 Next steps:');

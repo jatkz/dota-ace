@@ -1,0 +1,309 @@
+{
+    "converted": {
+        "hero_name": "Bane",
+        "sections": {
+            "general": {
+                "primary_attribute": "universal",
+                "strength": 23,
+                "strength_gain": 2.7,
+                "agility": 23,
+                "agility_gain": 2.7,
+                "intelligence": 23,
+                "intelligence_gain": 2.7,
+                "health": 626,
+                "mana": 351,
+                "armor": 4.83,
+                "magic_resist": 27.3,
+                "damage": [
+                    55,
+                    61
+                ],
+                "damage_avg": 58.05,
+                "projectile_speed": 900,
+                "attack_type": "ranged",
+                "attack_range": 400,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.3 + 0.7",
+                "move_speed": 305,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 1200",
+                "roles": "Support, Disabler, Nuker, Durable"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Dream Stalker",
+                    "effects": "Grants Bane and his images the ability to attack the Nightmared unit with bonus attack speed."
+                },
+                "facet_2": {
+                    "name": "Sleepwalk",
+                    "effects": "Causes the affected unit to now moves toward Bane's targeted direction uncontrollably over the total Nightmare debuff duration."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Creates illusions of itself alongside that are capable of gripping the affected enemy unit, dealing the same damage instance at the same time instantly.",
+                        "Fiend's Grip now is interrupted when Bane and its illusions are no longer channeling.",
+                        "Reduces cooldown."
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Brain Sap is now an area-targeted ability and applies all ability effects to enemy units within the radius.",
+                        "Secondary targets within the radius heals Bane for a portion of the damage.",
+                        "Reduces cooldown."
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+3s Fiend's Grip Duration",
+                        "+275 Brain Sap Damage/Heal"
+                    ],
+                    "level_20": [
+                        "+30 Move Speed",
+                        "-3s Nightmare Cooldown"
+                    ],
+                    "level_15": [
+                        "+5% Fiend's Grip Max Mana Drain",
+                        "+13 Enfeeble Damage per Second"
+                    ],
+                    "level_10": [
+                        "+20% Enfeeble Cast Range Reduction",
+                        "+125 Brain Sap Cast Range"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Ichor of Nyctasha",
+                        "type": "passive",
+                        "description": "Bane's attributes are always evenly distributed.",
+                        "values": {
+                            "attribute_factor": 0.33
+                        },
+                        "details": "Affects both attribute increasing and reduction sources, item sources. The attribute factor is defined as: Attribute = ⌊Attribute × 0.33⌋"
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Bane is considered a ground unit, despite its hero model showing otherwise. He also has hidden innate abilities and may only perform or utilize the ability's functions upon a successful channeling. The ability to attack Nightmare affected units without transferring Nightmare to itself is innate to Bane's hero model and its illusions.",
+                        "values": {},
+                        "details": "All damage instances applied from Bane and its illusion does not wake up the Nightmare affected unit, except Fiend's Grip."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Enfeeble",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell/Pure",
+                    "damage_types": [
+                        "spell",
+                        "pure"
+                    ],
+                    "cooldown": "22/17/12/7",
+                    "mana_cost": "100/110/120/130",
+                    "cast_range": "800/900/1000/1100",
+                    "cast_animation": "0.2 + 0.57",
+                    "cast_radius": "",
+                    "details": "Deals damage per second while reducing the affected enemy unit's total attack damage and cast range.",
+                    "description": "Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts.",
+                    "facet_effects": {
+                        "damage_per_second": "12/18/24/30 (25/31/37/43 with talent)",
+                        "attack_damage_reduction": "55%/60%/65%/70%",
+                        "cast_range_factor": "0.7 (0.5 with talent)",
+                        "duration": 9
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Reduces both the main and bonus attack damage",
+                        "Stacks additively with other total attack damage manipulation sources",
+                        "Does not reduce bonus conditional attack damage sources"
+                    ],
+                    "interaction_notes": [
+                        "Does not reduce any ability's cast range beyond the 150-min cast range",
+                        "Stacks additively with other percentage-based cast range manipulation sources"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Brain Sap",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units/Self",
+                    "damage": "Spell/Pure",
+                    "damage_types": [
+                        "spell",
+                        "pure"
+                    ],
+                    "cooldown": "17/15/13/11 (14/12/10/8 with shard)",
+                    "mana_cost": "120/130/140/150",
+                    "cast_range": "625 (750 with talent)",
+                    "cast_animation": "0.2 + 0.5",
+                    "cast_radius": "550 (with shard)",
+                    "details": "Feasts on the vital energies of an enemy unit, self-heals and deals pure damage.",
+                    "description": "Atropos finds no greater pleasure than to harvest the fear he creates.",
+                    "facet_effects": {
+                        "damage": "90/160/230/300",
+                        "damage_to_heal_factor": 1,
+                        "secondary_damage_to_heal_factor": "0.3 (with shard)"
+                    },
+                    "ability_behavior": [
+                        "unit_target",
+                        "area_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Heals immediately upon cast regardless of the ability visual effects",
+                        "The heal corresponds to the damage dealt (after reductions)"
+                    ],
+                    "interaction_notes": [
+                        "With shard upgrade, ability must still be unit-targeted",
+                        "Can affect enemy units at max 1175-1300 distance away with cast range and effect radius"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Nightmare",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Units",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "24/21/18/15 (21/18/15/12 with talent)",
+                    "mana_cost": "120/130/140/150",
+                    "cast_range": "550/600/650/700",
+                    "cast_animation": "0.4 + 0.57",
+                    "cast_radius": "",
+                    "details": "Puts the affected unit to sleep. Units affected are awaken when damaged. If the affected unit was directly attacked, the Nightmare is passed to the attacking unit.",
+                    "description": "A stolen prowess from the goddess Nyctasha is to put his prey into forever sleep.",
+                    "facet_effects": {
+                        "set_vision_range": 200,
+                        "sleep_duration": "3.5/4.5/5.5/6.5",
+                        "invulnerability_duration": 1,
+                        "dream_stalker_attack_speed_bonus": "40/60/80/100",
+                        "sleepwalk_push_speed": 110
+                    },
+                    "ability_behavior": [
+                        "unit_target",
+                        "vector_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Grants brief invulnerability moment upon debuff application",
+                        "The affected unit is either affected by Nightmare or Fiend's Grip, not both",
+                        "Dream Stalker grants attack speed bonus to Bane and illusions when attacking nightmared unit",
+                        "Sleepwalk causes forced movement toward targeted direction"
+                    ],
+                    "interaction_notes": [
+                        "Disable Help on Bane prevents Nightmare from affecting allied hero",
+                        "Doubletap casts the ability on Bane",
+                        "Nightmare transfers to attacking unit under certain conditions"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Fiend's Grip",
+                    "key": "R",
+                    "type": "channeling",
+                    "affects": "Enemy Units/Self",
+                    "damage": "Spell/Pure",
+                    "damage_types": [
+                        "spell",
+                        "pure"
+                    ],
+                    "cooldown": "120/110/100 (75/65/55 with scepter)",
+                    "mana_cost": "200/300/400",
+                    "cast_range": "625",
+                    "cast_animation": "0.2 + 0",
+                    "cast_radius": "",
+                    "details": "Grips and disables an enemy unit. Deals damage and steals mana based on the affected unit's max mana per interval.",
+                    "description": "Victims of Atropos are frequently torn apart by vivid conjurations of their own nightmares.",
+                    "facet_effects": {
+                        "max_channel_time": "4.75/5.25/5.75 (7.75/8.25/8.75 with scepter)",
+                        "damage_interval": 0.5,
+                        "damage_per_instance": "35/55/75",
+                        "max_mana_loss_per_instance": "2.5% (5% with talent)",
+                        "damage_to_heal_factor": 1,
+                        "enemy_mana_loss_to_mana_restore_factor": 1,
+                        "scepter_illusions": 2,
+                        "scepter_damage_taken": "200%",
+                        "scepter_duration": 20
+                    },
+                    "ability_behavior": [
+                        "unit_target",
+                        "channeling"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Grants True Sight over the enemy unit while channeling",
+                        "Grants 150 radius caster vision at affected enemy's location",
+                        "Deals damage in 0.5-second intervals starting immediately",
+                        "Channeling is interrupted if enemy becomes Hidden or Invulnerable"
+                    ],
+                    "interaction_notes": [
+                        "With scepter, creates illusions that can also grip the target",
+                        "Illusions are uncontrollable and instant killed upon interruption",
+                        "Can affect Couriers"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Reduced Enfeeble cooldown from 28/21/14/7 to 22/17/12/7."
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Increased base attack damage from (-1)‒5 to 24‒30.",
+                        "Increased Nightmare Dream Stalker self attack speed bonus from 40/50/60/70 to 40/60/80/100.",
+                        "Increased Nightmare Sleepwalk enemy push speed from 85 to 110.",
+                        "Talents: LVL 10 -3s Brain Sap cooldown → +125 Brain Sap cast range."
+                    ]
+                },
+                {
+                    "version": "7.37e",
+                    "date": "2024-11-19",
+                    "changes": [
+                        "Rescaled Enfeeble mana cost from 120 on each level to 100/110/120/130."
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156742,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

@@ -1,0 +1,318 @@
+{
+    "converted": {
+        "hero_name": "Alchemist",
+        "sections": {
+            "general": {
+                "primary_attribute": "strength",
+                "strength": 23,
+                "strength_gain": 2.7,
+                "agility": 22,
+                "agility_gain": 1.5,
+                "intelligence": 25,
+                "intelligence_gain": 1.8,
+                "health": 626,
+                "mana": 375,
+                "armor": 3.67,
+                "magic_resist": "27.5%",
+                "damage": [
+                    50,
+                    56
+                ],
+                "damage_avg": 53,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 110,
+                "bat": 1.7,
+                "animation": "0.35 + 0.65",
+                "move_speed": 295,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Support, Durable, Disabler, Initiator, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Seed Money",
+                    "effects": "Grants Alchemist additional starting gold. +250 Bonus Starting Gold"
+                },
+                "facet_2": {
+                    "name": "Mixologist",
+                    "effects": "Certain abilities have their cooldown reduced when cast while Chemical Rage is active. ×0.65 Unstable Concoction Cooldown, ×0.5 Berserk Potion Cooldown"
+                },
+                "facet_3": {
+                    "name": "Dividends",
+                    "effects": "Grants self additional gold per minute per current Aghanim's Scepter Synth buff stack. +70 Gold per Minute"
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Melts down an Aghanim's Scepter in his inventory, synthesizing a buff that grants an allied hero all of its upgrades",
+                        "Grants self bonus attack damage"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Berserk Potion ability",
+                        "Throws a potion at an allied unit, applying a basic dispel and granting them bonus attack speed, movement speed and health regeneration"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+50 Chemical Rage Health Regen",
+                        "+50 Chemical Rage Move Speed"
+                    ],
+                    "level_20": [
+                        "+400 Unstable Concoction Max Damage",
+                        "-0.1s Chemical Rage Base Attack Time"
+                    ],
+                    "level_15": [
+                        "+2 Attack Damage per Greevil's Greed Stack",
+                        "Acid Spray Grants Allies Armor"
+                    ],
+                    "level_10": [
+                        "+125 Unstable Concoction Radius",
+                        "+1 Acid Spray Armor Reduction"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Greevil's Greed",
+                        "type": "passive",
+                        "description": "Synthesizes additional gold from killed enemy units. Alchemist earns base bonus gold and extra bonus gold per last hit. If Alchemist kills another unit which grants gold within a short duration, an additional instance of bonus gold is added to the total.",
+                        "values": {
+                            "max_stacks": 9,
+                            "base_gold_bonus": 2,
+                            "gold_bonus_per_stack": 2,
+                            "max_gold_bonus": 18,
+                            "buff_duration": 40,
+                            "attack_damage_bonus_per_stack": 4,
+                            "self_gold_bonus_multiplier": 2
+                        },
+                        "details": "Additionally, Greevil's Greed causes Bounty Runes to yield more gold"
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Al and the Chemist's hero model has the following hidden innate abilities. They both may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+                        "values": {
+                            "attack_damage_bonus_per_stack": 25,
+                            "all_attributes_bonus": 10,
+                            "health": 175,
+                            "mana": 175
+                        },
+                        "details": "Aghanim's Scepter Upgrade - Melts down an Aghanim's Scepter in his inventory, synthesizing a buff that grants an allied hero all of its upgrades"
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Acid Spray",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units / Allied Units",
+                    "damage": "Physical",
+                    "damage_types": [
+                        "Physical"
+                    ],
+                    "cooldown": "22/21/20/19",
+                    "mana_cost": "105/110/115/120",
+                    "cast_range": "900",
+                    "cast_animation": "0.1 + 0.8",
+                    "cast_radius": "350/400/450/500",
+                    "details": "Enemy units who step across the contaminated terrain take damage per second and have their armor reduced",
+                    "description": "Enemy units who step across the contaminated terrain take damage per second and have their armor reduced",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "area",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Creates an aura at the area-targeted location upon cast",
+                        "Can affect enemy units at max 1250/1300/1350/1400-distance away with the cast range and effect radius"
+                    ],
+                    "interaction_notes": [
+                        "Does not affect already debuff immune enemy units",
+                        "Fully affects debuff immune allied units"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Unstable Concoction",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Self",
+                    "damage": "Spell / Physical",
+                    "damage_types": [
+                        "Spell",
+                        "Physical"
+                    ],
+                    "cooldown": "17",
+                    "mana_cost": "100",
+                    "cast_range": "0",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "250",
+                    "details": "Brews up an unstable concoction that the Alchemist can throw at an enemy hero, to stun and deal damage within the radius around the explosion",
+                    "description": "Brews up an unstable concoction that the Alchemist can throw at an enemy hero, to stun and deal damage within the radius around the explosion. The longer the brew, the more the damage and the longer the stun. While brewing, Alchemist moves faster. The brew reaches its max power after a period of time, and explodes himself if not thrown before the max brew time.",
+                    "facet_effects": {
+                        "mixologist": "Reduces cooldown while Chemical Rage is active. 11.05 cooldown"
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Can self-deny with the self-damage",
+                        "A countdown timer appears indicating the current Unstable Concoction brew time"
+                    ],
+                    "interaction_notes": [
+                        "The self-explosion component, both defensively or offensively, do not interact with Spell Block sources"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Corrosive Weaponry",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Enemy Units",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "0",
+                    "mana_cost": 0,
+                    "cast_range": "0",
+                    "cast_animation": "0",
+                    "cast_radius": "0",
+                    "details": "Each successful attack applies a stacking slow and base attack damage reduction",
+                    "description": "Each successful attack applies a stacking slow and base attack damage reduction",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "All reduction values of this source stack additively per applied stack",
+                        "Does not affect Buildings"
+                    ],
+                    "interaction_notes": [
+                        "Does not affect Roshan"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Berserk Potion",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Allied Units",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "35",
+                    "mana_cost": "100",
+                    "cast_range": "800",
+                    "cast_animation": "0.2 + 0.63",
+                    "cast_radius": "0",
+                    "details": "Throws a potion at an allied unit, applying a basic dispel and granting them bonus attack speed, movement speed and health regeneration",
+                    "description": "Throws a potion at an allied unit, applying a basic dispel and granting them bonus attack speed, movement speed and health regeneration",
+                    "facet_effects": {
+                        "mixologist": "Reduces cooldown while Chemical Rage is active. 17.5 cooldown"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Acquiring Aghanim's Shard unlocks this ability",
+                        "Applies a basic dispel upon projectile impact"
+                    ],
+                    "interaction_notes": [
+                        "The ability projectile cannot be disjointed under any circumstances"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Chemical Rage",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Self",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "60",
+                    "mana_cost": "50/75/100",
+                    "cast_range": "0",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "0",
+                    "details": "Reduces the ogre's base attack time while granting bonus movement speed and health regeneration",
+                    "description": "Reduces the ogre's base attack time while granting bonus movement speed and health regeneration",
+                    "facet_effects": {
+                        "mixologist": "Reduces Unstable Concoction's cooldown upon cast while this ability is active. Reduces Berserk Potion's cooldown upon cast while this ability is active"
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "The transformation does not persist through death",
+                        "Applies a stun while transforming, and cannot be interrupted"
+                    ],
+                    "interaction_notes": [
+                        "The created illusions have the same buff duration for camouflaging"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Greevil's Greed: Reduced Dividends gold per minute per Aghanim's Scepter Synth granted from 75 to 70",
+                        "Corrosive Weaponry: Reduced max Stacks from 10/12/14/16 to 7/10/13/16",
+                        "Corrosive Weaponry: Increased movement speed slow per stack from 1.5%/2%/2.5%/3% to 2%/2.5%/3%/3.5%",
+                        "Corrosive Weaponry: Increased base attack damage reduction per stack from 1.5%/2%/2.5%/3% to 2%/2.5%/3%/3.5%"
+                    ]
+                },
+                {
+                    "version": "7.38c",
+                    "date": "2025-03-27",
+                    "changes": [
+                        "Unstable Concoction now grants 1 min Corrosive Weaponry stack per brewed second"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Greevil's Greed: Aghanim's Scepter Synth no longer grants self 5% outgoing spell damage amplification per stack"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 150000,
+            "sections_found": 5,
+            "parse_time_ms": 850,
+            "success_rate": "100%"
+        }
+    }
+}

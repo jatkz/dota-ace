@@ -1,0 +1,312 @@
+{
+    "converted": {
+        "hero_name": "Batrider",
+        "sections": {
+            "general": {
+                "primary_attribute": "universal",
+                "strength": 23,
+                "strength_gain": 2.9,
+                "agility": 15,
+                "agility_gain": 1.8,
+                "intelligence": 22,
+                "intelligence_gain": 2.9,
+                "health": 626,
+                "mana": 339,
+                "armor": 4.5,
+                "magic_resist": 27.2,
+                "damage": [
+                    39,
+                    43
+                ],
+                "damage_avg": 41,
+                "projectile_speed": 900,
+                "attack_type": "ranged",
+                "attack_range": 400,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.3 + 0.54",
+                "move_speed": 330,
+                "turn_rate": 0.9,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1600 / 800",
+                "roles": "Initiator, Disabler, Escape"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Stoked",
+                    "effects": "Grants movement speed bonus and spell damage amplification upon applying or being affected by forced movement sources"
+                },
+                "facet_2": {
+                    "name": "Arsonist",
+                    "effects": "Reduces ability max level by 1, enables attacks to apply Sticky Napalm stacks at level 5"
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "The Rider now grabs another enemy hero, tethering it behind of the primary enemy hero"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Sticky Napalm: Increased max stacks from 20 to Indefinite",
+                        "Now deals 0.35 * SpellDmg to buildings"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "Flamebreak Applies 4 Sticky Napalm Stacks",
+                        "+10 Sticky Napalm Proc Damage"
+                    ],
+                    "level_20": [
+                        "-6s Flamebreak Cooldown",
+                        "+4s Smoldering Resin Duration"
+                    ],
+                    "level_15": [
+                        "-7s Flaming Lasso Cooldown",
+                        "+20 Move Speed"
+                    ],
+                    "level_10": [
+                        "+50 Flamebreak Knockback Distance",
+                        "+50 Sticky Napalm Radius"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Smoldering Resin",
+                        "type": "passive",
+                        "description": "Attacks apply a resin that deals a portion of Batrider's attack damage as damage per second",
+                        "values": {
+                            "attack_damage_to_dps": 0.2,
+                            "duration": "2 (6 with Stoked facet)"
+                        },
+                        "details": "Physical spell damage per second component not affected by damage block sources"
+                    },
+                    {
+                        "name": "Stoked",
+                        "type": "passive",
+                        "description": "Grants the Rider a movement speed bonus and spell damage amplification bonus upon applying forced movement sources on self, or being offensively applied",
+                        "values": {
+                            "move_speed_bonus": "4%/6%/8%/10%",
+                            "spell_amp_bonus": "2%/4%/6%/8%",
+                            "duration": 7
+                        },
+                        "details": "This ability levels up with Flaming Lasso. Only available with Stoked facet"
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Sticky Napalm",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "3",
+                    "mana_cost": 22,
+                    "cast_range": "600",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "375 (425 with Arsonist facet)",
+                    "details": "Drenches an area in sticky oil, damaging and slowing the turn rate of enemy units within the radius",
+                    "description": "Drenches an area in sticky oil, damaging and slowing the turn rate of enemy units within the radius",
+                    "facet_effects": {
+                        "arsonist": "Max ability level increased to 5, enables attacks to apply stacks at level 5"
+                    },
+                    "ability_behavior": [
+                        "area_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Max Stacks: 20 (Indefinite with Shard)",
+                        "Proc Damage per Stack: 2.5/5/7.5/10/10 (12.5/15/17.5/20/20 with Arsonist)",
+                        "Move Speed Slow per Stack: 0.75%/1.5%/2.25%/3%/3%",
+                        "Turn Rate Slow: 5%/15%/25%/35%/35%",
+                        "Stack Duration: 6",
+                        "Creep Damage Factor: 0.2"
+                    ],
+                    "interaction_notes": [
+                        "Procs on all damage instances sourced to Batrider",
+                        "Does not proc from player-controlled units or certain item abilities",
+                        "Considers creep-heroes as creeps"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Flamebreak",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "22/19/16/13 (16/13/10/7 with talent)",
+                    "mana_cost": "110/115/120/125",
+                    "cast_range": "1300",
+                    "cast_animation": "0.2 + 0.4",
+                    "cast_radius": "450",
+                    "details": "Hurls an explosive cocktail that explodes when it reaches the target location and deals damage over time to enemy units in the area",
+                    "description": "Hurls an explosive cocktail that explodes when it reaches the target location and deals damage over time to enemy units in the area",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "area_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Effect Radius: 450",
+                        "First Damage: 25/50/75/100",
+                        "Damage per Second: 25/30/35/40",
+                        "Move Speed Slow: 8%/16%/24%/32%",
+                        "Debuff Duration: 2/3/4/5",
+                        "Knockback Distance: 250 (300 with talent)",
+                        "Knockback Duration: 0.35"
+                    ],
+                    "interaction_notes": [
+                        "Applies non-disabling knockback to all affected enemy units",
+                        "Roshan is immune to forced movement sources",
+                        "Talent upgrade applies Sticky Napalm stacks upon impact"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Firefly",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "45/40/35/30",
+                    "mana_cost": 100,
+                    "cast_range": "0",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "250",
+                    "details": "Takes to the skies, laying down a trail of flames from the air. The trail damages any enemy units upon contact and destroys trees below Batrider",
+                    "description": "Takes to the skies, laying down a trail of flames from the air. The trail damages any enemy units upon contact and destroys trees below Batrider",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Damage Radius: 250",
+                        "Damage per Second: 25/50/75/100",
+                        "Duration: 15",
+                        "Grants unobstructed movement",
+                        "Destroys trees within damage radius"
+                    ],
+                    "interaction_notes": [
+                        "Interrupts channeling abilities",
+                        "Roshan is immune to the flames' damage",
+                        "Recasting refreshes duration and creates another independent flame trail"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Flaming Lasso",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Enemies / Self",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "90/75/60 (83/68/53 with talent)",
+                    "mana_cost": "125/150/175",
+                    "cast_range": "200",
+                    "cast_animation": "0.3 + 0.3",
+                    "cast_radius": "0 (650 with Scepter)",
+                    "details": "Lassoes an enemy unit, disables and drags them in Batrider's wake. Teleport sources break the lasso",
+                    "description": "Lassoes an enemy unit, disables and drags them in Batrider's wake. Teleport sources break the lasso",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Break Distance: 425",
+                        "Enemy Drag Distance: 300",
+                        "Damage Interval: 0.5",
+                        "Max Duration: 2.25/2.75/3.25",
+                        "Damage per Instance: 50/70/83",
+                        "Max Disarm Duration: 2.25/2.75/3.25"
+                    ],
+                    "interaction_notes": [
+                        "Disarms Batrider while lasso is active",
+                        "Roshan immune to forced movement but takes damage",
+                        "Scepter upgrade grabs additional enemy hero within 650 radius",
+                        "Various abilities can break the lasso"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Reduced base movement speed from 330 to 320",
+                        "ADDED the Arsonist facet",
+                        "Sticky Napalm: Increased max ability level from 4 to 5",
+                        "Sticky Napalm: Increased applied stack per cast from 1 to 2",
+                        "Sticky Napalm: Increased max stacks from 10 to 20",
+                        "Sticky Napalm: Reduced proc damage per stack from 5/10/15/20 to 2.5/5/7.5/10/10",
+                        "REWORKED Aghanim's Shard upgrade",
+                        "Talents: LVL 25 Flamebreak applies 2 Sticky Napalm stacks increased to 4",
+                        "Talents: LVL 25 +20 Sticky Napalm damage reduced to +10"
+                    ]
+                },
+                {
+                    "version": "7.38c",
+                    "date": "2025-03-27",
+                    "changes": [
+                        "Increased Firefly damage radius from 200 to 250",
+                        "Flaming Lasso: Forced movement applied by Batrider's allies to the lassoed target from certain abilities no longer cancel lasso",
+                        "Talents: LVL 20 2 Flamebreak charges → -6s Flamebreak cooldown",
+                        "Talents: LVL 20 +2s Smoldering Resin duration increased to +4s",
+                        "Talents: LVL 25 +15 Sticky Napalm damage increased to +20"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Rescaled base strength and gain from 25 + 2.6 to 23 + 2.9",
+                        "Increased agility gain from 1.4 to 1.8",
+                        "Increased intelligence gain from 2 to 2.9",
+                        "Increased base attack damage from (-4)‒0 to 12‒16",
+                        "Increased Sticky Napalm Arsonist building damage factor from 0.35 to 0.45",
+                        "Rescaled Flamebreak movement speed slow from 15%/20%/25%/30% to 8%/16%/24%/32%"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156742,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}
