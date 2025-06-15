@@ -1,0 +1,391 @@
+{
+    "converted": {
+        "hero_name": "Clinkz",
+        "sections": {
+            "general": {
+                "primary_attribute": "agility",
+                "strength": 17,
+                "strength_gain": 2,
+                "agility": 25,
+                "agility_gain": 2.7,
+                "intelligence": 21,
+                "intelligence_gain": 2.2,
+                "health": 494,
+                "mana": 327,
+                "armor": 4.17,
+                "magic_resist": "27.1%",
+                "damage": [
+                    44,
+                    50
+                ],
+                "damage_avg": 47,
+                "projectile_speed": 900,
+                "attack_type": "ranged",
+                "attack_range": 600,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.4 + 0.3",
+                "move_speed": 290,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Escape, Pusher"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Suppressive Fire",
+                    "effects": "Strafe attacks apply a stacking blind debuff from Clinkz and his Skeleton Archers. Affects Buildings."
+                },
+                "facet_2": {
+                    "name": "Engulfing Step",
+                    "effects": "Death Pact creates an Archer at Clinkz' current position upon cast, then Clinkz takes the place of the consumed unit. Reduces charge restore time by 10s."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Burning Army ability",
+                        "Summons an array of fiery Skeleton Archers corresponding of Death Pact's level in the target location",
+                        "Burning Army does not break Clinkz' Skeleton Walk upon cast"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Burning Barrage ability",
+                        "Channels and shoots multiple piercing arrows in the target direction that hit all enemy units for a portion of Clinkz' attack damage while applying attack modifiers"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "Tar Bomb Multishot",
+                        "-9s Strafe Cooldown"
+                    ],
+                    "level_20": [
+                        "+40 Strafe Attack Speed",
+                        "+350 Death Pact Health"
+                    ],
+                    "level_15": [
+                        "+1 Death Pact Charges",
+                        "+60 Attack Range"
+                    ],
+                    "level_10": [
+                        "-4s Skeleton Walk Cooldown",
+                        "+0.75s Strafe Duration"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Bone and Arrow",
+                        "type": "passive",
+                        "description": "In certain conditions, Clinkz summons immobile and uncontrollable skeletal compatriots into the battle. Archers can be deadly but die from a few hero attacks.",
+                        "values": {
+                            "hero_hit_count": "2 (3 with Scepter)",
+                            "attack_interval": 1.6,
+                            "duration": "15/20/25/30",
+                            "archer_on_death": 1,
+                            "set_archer_attack_range": "600 (660 with Strafe)",
+                            "attack_damage_to_archer_damage": 0.2,
+                            "building_damage_factor": 0.75,
+                            "creep_hit_count": "8 (12 with Scepter)"
+                        },
+                        "details": "Some of Clinkz' abilities, including Clinkz' death, can summon Skeleton Archers to attack enemy units. Certain Archers' attributes corresponds to Clinkz' current attributes."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive/channeling",
+                        "description": "Clinkz' hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+                        "values": {},
+                        "details": "Hidden innate abilities that can be tapped for more details."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Strafe",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Self / Skeleton Archer",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "30/25/20/15 (21/16/11/6 with talent)",
+                    "mana_cost": "60/70/80/90",
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "1200",
+                    "details": "Applies a bonus attack speed and bonus attack range buff to Clinkz and his Archers within the radius upon cast. Strafe does not break Clinkz' Skeleton Walk upon cast.",
+                    "description": "Applies a bonus attack speed and bonus attack range buff to Clinkz and his Archers within the radius upon cast.",
+                    "facet_effects": {
+                        "suppressive_fire": "Strafe attacks apply a stacking blind debuff from Clinkz and his Skeleton Archers. Max Stacks: 3, Miss Chance per Stack: 30%, Debuff Duration: 2, Affects Buildings."
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Effect Radius: 1200",
+                        "Attack Speed Bonus: 100/140/180/220 (140/180/220/260 with talent)",
+                        "Attack Range Bonus: 200",
+                        "Duration: 3.5 (4.25 with talent)",
+                        "Archer Attack Speed Bonus Factor: 0.6"
+                    ],
+                    "interaction_notes": [
+                        "Interrupts Clinkz' channeling abilities upon cast",
+                        "Does not break Skeleton Walk's invisibility upon cast"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Tar Bomb",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Self / Skeleton Archer",
+                    "damage": "Spell / Magical / Instant Attack",
+                    "damage_types": [
+                        "magical",
+                        "instant_attack"
+                    ],
+                    "cooldown": "7/6/5/4",
+                    "mana_cost": "45/50/55/60",
+                    "cast_range": "1000",
+                    "cast_animation": "0.2 + 0",
+                    "cast_radius": "325",
+                    "details": "Throws a projectile filled with tar at the target enemy, dealing magical spell damage on impact. The tar spills onto the ground and any enemy who dare walk across it gets slowed.",
+                    "description": "Throws a projectile filled with tar at the target enemy, dealing magical spell damage on impact.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "autocast",
+                        "unit_target",
+                        "area_of_effect"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Impact Damage: 40/60/80/100",
+                        "Move Speed Slow: 16%/19%/22%/25%",
+                        "Debuff Duration: 5",
+                        "Debuff Linger Duration: 2.5",
+                        "Max Attack Targets: 1 (2 with talent)",
+                        "Attack Order Radius: 4000",
+                        "Attack Damage Bonus: 15/25/35/45"
+                    ],
+                    "interaction_notes": [
+                        "Impact damage also affects buildings",
+                        "Sears Clinkz' and his Skeleton Archers' arrows",
+                        "All Skeleton Archers within their attack range will attempt to attack the target"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Death Pact",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Units / Self",
+                    "damage": "Instant Kill",
+                    "damage_types": [
+                        "instant_kill"
+                    ],
+                    "cooldown": "40",
+                    "mana_cost": "0",
+                    "cast_range": "700",
+                    "cast_animation": "0.2 + 0.47",
+                    "cast_radius": "",
+                    "details": "Consumes the targeted unit and creates an Skeleton Archer in their place, self-healing and gaining max health. Death Pact does not break Clinkz's Skeleton Walk upon cast.",
+                    "description": "Consumes the targeted unit and creates an Skeleton Archer in their place, self-healing and gaining max health.",
+                    "facet_effects": {
+                        "engulfing_step": "Death Pact creates an Archer at Clinkz' current position upon cast, then Clinkz takes the place of the consumed unit. Reduces charge restore time by 10s."
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Max Creep Level: 4/5/6/6",
+                        "Self Max Health Bonus: 175/250/325/400 (525/600/675/750 with talent)",
+                        "Health Bonus as Self Heal: 100%",
+                        "Max Skeleton Archers per Cast: 1",
+                        "Charges: 1/1/2/2 (2/2/3/3 with talent)",
+                        "Charge Restore Time: 60"
+                    ],
+                    "interaction_notes": [
+                        "Creates an Archer per ability cast",
+                        "There can only be one Death Pact-based Skeleton Archer at any given time",
+                        "Does not break Skeleton Walk's invisibility upon cast"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Skeleton Walk",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Self",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "24/21/18 (20/17/14 with talent)",
+                    "mana_cost": "80/105/130",
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "",
+                    "details": "Clinkz moves nimbly and invisibly through units until the moment he attacks or uses items.",
+                    "description": "Clinkz moves nimbly and invisibly through units until the moment he attacks or uses items.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Fade Time: 0.6",
+                        "Move Speed Bonus: 25%/35%/45%",
+                        "Invisibility Duration: 30/40/45",
+                        "Max Skeleton Archers per Cast: 2/3/4",
+                        "Current Hit Count as Damage: 100%"
+                    ],
+                    "interaction_notes": [
+                        "Summons skeletal compatriots upon leaving Skeleton Walk",
+                        "There can only be one pack of Skeleton Walk-based Skeleton Archers at any given time",
+                        "Grants phase movement while fully invisible"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Burning Army",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Enemy Heroes",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "70",
+                    "mana_cost": "150",
+                    "cast_range": "600",
+                    "cast_animation": "0 + 0.67",
+                    "cast_radius": "",
+                    "details": "Summons an array of fiery Skeleton Archers corresponding of Death Pact's level in the target location. Burning Army does not break Clinkz' Skeleton Walk upon cast.",
+                    "description": "Summons an array of fiery Skeleton Archers corresponding of Death Pact's level in the target location.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "point_target",
+                        "vector_targeting"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Total Distance: 900",
+                        "Number of Archers per Cast: 5",
+                        "Archers Spawn Interval: 0.15",
+                        "Total Spawn Time: 0.6"
+                    ],
+                    "interaction_notes": [
+                        "Requires Aghanim's Scepter",
+                        "These skeletal compatriors are created in the given line one after another",
+                        "Does not break Skeleton Walk's invisibility upon cast"
+                    ]
+                },
+                "ability_6": {
+                    "name": "Burning Barrage",
+                    "key": "F",
+                    "type": "channeling",
+                    "affects": "Enemy Units",
+                    "damage": "Instant Attack / Physical",
+                    "damage_types": [
+                        "instant_attack",
+                        "physical"
+                    ],
+                    "cooldown": "17",
+                    "mana_cost": "40",
+                    "cast_range": "850 (910 with Strafe)",
+                    "cast_animation": "0.2 + 0",
+                    "cast_radius": "200",
+                    "details": "Channels and shoots multiple piercing arrows in the target direction that hit all enemy units for a portion of Clinkz' attack damage while applying attack modifiers.",
+                    "description": "Channels and shoots multiple piercing arrows in the target direction that hit all enemy units for a portion of Clinkz' attack damage while applying attack modifiers.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "point_target",
+                        "channeled"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Arrow Travel Distance: 850 (910 with Strafe)",
+                        "Arrow Collision Radius: 200",
+                        "Max Channel Time: 2",
+                        "Number of Arrows: 6",
+                        "Instant Attack Damage Factor: 0.75",
+                        "Attack Damage Bonus: 15/25/35/45",
+                        "Move Speed Slow: 16%/19%/22%/25%",
+                        "Slow Duration: 5"
+                    ],
+                    "interaction_notes": [
+                        "Requires Aghanim's Shard",
+                        "The barrage of arrows are passively doused with Tar Bomb of the corresponding level",
+                        "Breaks invisibility sources upon cast"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Aghanim's Scepter upgrade: Reduced Burning Army cooldown from 80 to 70",
+                        "Talents: LVL 15 +75 attack range reduced to +60"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Strafe Suppressive Fire: No longer grants 100 attack range bonus",
+                        "Increased miss chance per stack from 5% to 30%",
+                        "Rescaled debuff duration from StrafeCurrentDuration + 1 to 2",
+                        "ADDED Tar Bomb autocast functionality",
+                        "Death Pact Engulfing Step: CHANGED ability interactions with root or leash sources",
+                        "ADDED Alt-Cast functionality that disables the teleport component while active",
+                        "Reduced Skeleton Walk movement speed bonus from 25%/40%/55% to 25%/35%/45%",
+                        "Talents: LVL 10 +15 Tar Bomb damage → +0.75s Strafe duration"
+                    ]
+                },
+                {
+                    "version": "7.36",
+                    "date": "2024-05-22",
+                    "changes": [
+                        "ADDED the Bone and Arrow innate ability for Clinkz",
+                        "MOVED Skeleton Archer unit component from Death Pact to Bone and Arrow",
+                        "Rescaled archer duration from 45 on each level to 15/20/25/30",
+                        "Strafe: Increased archer attack speed factor from 0.5/0.55/0.6/0.65 to 0.6 on each level",
+                        "Reduced mana cost from 75/80/85/90 to 60/70/80/90",
+                        "ADDED the Suppressive Fire facet",
+                        "Death Pact: Reduced cast range from 900 to 700",
+                        "ADDED the Engulfing Step facet"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156847,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

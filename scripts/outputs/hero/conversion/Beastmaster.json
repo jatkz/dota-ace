@@ -1,0 +1,366 @@
+{
+    "converted": {
+        "hero_name": "Beastmaster",
+        "sections": {
+            "general": {
+                "primary_attribute": "universal",
+                "strength": 25,
+                "strength_gain": 2.9,
+                "agility": 19,
+                "agility_gain": 1.9,
+                "intelligence": 16,
+                "intelligence_gain": 1.9,
+                "health": 670,
+                "mana": 267,
+                "armor": 2.17,
+                "magic_resist": 26.6,
+                "damage": [
+                    52,
+                    56
+                ],
+                "damage_avg": 54,
+                "projectile_speed": 0,
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.3 + 0.7",
+                "move_speed": 305,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Initiator, Disabler, Durable, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Wild Hunt",
+                    "effects": "Additionally grants attack speed bonus per Beastmaster's player-controlled unit affected by Inner Beast within the radius."
+                },
+                "facet_2": {
+                    "name": "Beast Mode",
+                    "effects": "Adds an active component to Inner Beast. Awakens the inner beasts within to temporarily grant himself attack speed bonus. Upon tapping into his inner fury, successful attacks now apply Wild Axes debuff of its corresponding level."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Drums of Slom ability",
+                        "Grants an aura that causes successful attacks of Beastmaster and his player-controlled units to strike the drum",
+                        "The drum strike damages and heals all of his units for a portion of damage dealt within the radius",
+                        "Every successful attack grants a stack that reduces the drum strike interval",
+                        "Grants a number of Drum of Slom stacks upon a Primal Roar cast"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Calls forth an additional Hawk within the orbit radius",
+                        "Increases the Hawks' duration"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "-30s Primal Roar Cooldown",
+                        "No Wild Axes Cooldown"
+                    ],
+                    "level_20": [
+                        "+250 Max Health to Beastmaster and His Units",
+                        "+30 Damage to Beastmaster and His Units"
+                    ],
+                    "level_15": [
+                        "+15 Inner Beast Attack Speed",
+                        "+20 Move Speed to Beastmaster and His Units"
+                    ],
+                    "level_10": [
+                        "+2% Wild Axes Damage Amp per Stack",
+                        "-5s Call of the Wild Hawk Cooldown / -5s Call of the Wild Boar Cooldown"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Rugged",
+                        "type": "passive",
+                        "description": "Karroch innately has an ensured damage block chance against creeps. Has a chance to block a flat amount of physical attack damage from other incoming attacks.",
+                        "values": {
+                            "set_proc_chance": "100%",
+                            "damage_blocked_creeps": 16,
+                            "proc_chance_others": "50%",
+                            "damage_blocked_others": 16
+                        },
+                        "details": "Rugged is an ensured damage block source on incoming creeps' attack. Damage block sources with lesser values have no effect if they proc as the higher proc chance value takes precedence."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "The aura granted is innate to Beastmaster's hero model. Grants Beastmaster and all of his player-controlled units various talent bonuses.",
+                        "values": {
+                            "effect_radius": "Global",
+                            "aura_linger_duration": 0.5,
+                            "move_speed_bonus": 20,
+                            "max_health_bonus": 250,
+                            "attack_damage_bonus": 30
+                        },
+                        "details": "All auras are provided by independent talents and affects all summons immediately upon learning. Persist Beastmaster's death."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Wild Axes",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Spell / Magical",
+                    "cooldown": "8 (0 with talent)",
+                    "mana_cost": "50/55/60/65",
+                    "cast_range": "1500",
+                    "cast_animation": "0.3 + 0.47",
+                    "cast_radius": "175",
+                    "details": "Sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can only affect the same enemy units once, and amplifies subsequent damage from Beastmaster and his units.",
+                    "description": "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Both axes spread up to 450-distance away from each other at point target",
+                        "The axes fly in arcs, the axe from Beastmaster's left hand travels back toward his right hand, and vice versa",
+                        "Grants a non-lingering 350-radius flying vision as the projectile travels",
+                        "Trees within the axe radius are destroyed as they travel"
+                    ],
+                    "interaction_notes": [
+                        "Damage per Axe: 35/65/95/125",
+                        "Damage Amp per Stack: 6%/8%/10%/12% (8%/10%/12%/14% with talent)",
+                        "Stack Duration: 12",
+                        "Max Travel Distance: 1500",
+                        "Spread Distance: 450"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Call of the Wild Boar",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Boar",
+                    "damage": "Instant Kill",
+                    "cooldown": "30 (25 with talent)",
+                    "mana_cost": "60",
+                    "cast_range": "0",
+                    "cast_animation": "0.3 + 0.67",
+                    "details": "Calls forth a boar to aid in his battlefield. The Boar's attacks inflict a poison that slows the affected enemy unit's movement speed and attack speed.",
+                    "description": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Number of Boars: 1",
+                        "Spawn Radius: 100",
+                        "Duration: 60",
+                        "Move Speed Slow: 10%/18%/26%/34%",
+                        "Attack Speed Slow: 10/20/30/40",
+                        "Poison Duration: 3"
+                    ],
+                    "interaction_notes": [
+                        "This ability levels up with Call of the Wild Hawk",
+                        "Recasting the ability does not instant kill the previously summoned Boar"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Call of the Wild Hawk",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Enemy Units / Hawk",
+                    "damage": "Spell / Magical / Instant Kill",
+                    "cooldown": "45/40/35/30 (40/35/30/25 with talent)",
+                    "mana_cost": "50",
+                    "cast_range": "0",
+                    "cast_animation": "0.3 + 0.67",
+                    "details": "Summons a hawk that orbits around Beastmaster. The loyal and unassuming flying companion dies alongside upon Beastmaster's death. The Hawk dive towards the enemy unit, prioritizing heroes, dealing damage and rooting it.",
+                    "description": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Number of Hawks: 1 (2 with shard)",
+                        "Orbital Radius: 280",
+                        "Seconds per Revolution: 4",
+                        "Hawk Duration: 25 (30 with shard)",
+                        "Dive Damage: 60/90/120/150 (90/120/150/180 with shard)",
+                        "Root Duration: 0.25/0.5/0.75/1",
+                        "Dive Radius: 500"
+                    ],
+                    "interaction_notes": [
+                        "This ability levels up with Call of the Wild Boar",
+                        "Hawks do not block neutral creep camps",
+                        "The dive interval corresponds to the Hawk's current attack speed and base attack time"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Inner Beast",
+                    "key": "D",
+                    "type": "passive",
+                    "affects": "Self",
+                    "damage": "None",
+                    "cooldown": "0",
+                    "mana_cost": "0",
+                    "cast_range": "1200",
+                    "details": "Untaps the inner fury of himself and grants Beastmaster's player-controlled units within the radius bonus attack speed.",
+                    "description": "Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom.",
+                    "facet_effects": {
+                        "wild_hunt": "Additionally grants attack speed bonus per Beastmaster's player-controlled unit affected by Inner Beast within the radius. Attack Speed Bonus per Unit: 3/4/5/6",
+                        "beast_mode": "Adds an active component to Inner Beast. Self Attack Speed Bonus: 20/30/40/50 (35/45/55/65 with talent), Buff Duration: 6, Cooldown: 20, Mana Cost: 35. Upon tapping into his inner fury, successful attacks now apply Wild Axes debuff of its corresponding level."
+                    },
+                    "ability_behavior": [
+                        "passive",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Radius: 1200",
+                        "Attack Speed Bonus: 15/30/45/60 (30/45/60/75 with talent)",
+                        "Aura Linger Duration: 0.5"
+                    ],
+                    "interaction_notes": [
+                        "Grants flat bonus attack speed",
+                        "Affects Beastmaster and units under his control"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Drums of Slom",
+                    "key": "Scepter",
+                    "type": "passive",
+                    "affects": "Units",
+                    "damage": "Spell / Magical",
+                    "cooldown": "0",
+                    "mana_cost": "0",
+                    "details": "Grants an aura that causes successful attacks of Beastmaster and his player-controlled units to strike the drum. The drum strike damages and heals all of his units for a portion of damage dealt within the radius. Every successful attack grants a stack that reduces the drum strike interval.",
+                    "description": "Nature's rage is timeless, and for those who know the secrets, it's easy to stir the echoes of ire that rejoiced in the downfall of Slom.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "passive",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Effect Radius: 600",
+                        "Max Stacks: 20",
+                        "Stack per Attack: 1",
+                        "Min Interval: 0.5",
+                        "Max Interval: 3",
+                        "Damage per Interval: 80",
+                        "Damage to Heal Factor: 0.2",
+                        "Creep Damage to Heal Factor: 0.05",
+                        "Stack Decay Time: 1",
+                        "Aura Radius: 1200",
+                        "Set Stack Count on Primal Roar: 10"
+                    ],
+                    "interaction_notes": [
+                        "This ability levels up with Primal Roar",
+                        "Acquiring Aghanim's Scepter unlocks this ability",
+                        "Grants stacks upon Primal Roar cast regardless if ability effects are applied"
+                    ]
+                },
+                "ability_6": {
+                    "name": "Primal Roar",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Spell / Magical",
+                    "cooldown": "90/75/60 (60/45/30 with talent)",
+                    "mana_cost": "100/125/150",
+                    "cast_range": "600",
+                    "cast_animation": "0.5 + 0.63",
+                    "details": "Lets loose a deafening roar that stuns, and shoves open a path to the affected enemy unit. All shoved units are damaged, while applying a dynamic movement speed slow and attack speed slow to these affected enemy units. Grants bonus movement speed to all of his player-controlled units within the radius.",
+                    "description": "The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "strong_dispels_only",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Area Width: 300",
+                        "Push Distance: 450",
+                        "Damage: 150/225/300",
+                        "Move Speed Slow: 60%",
+                        "Attack Speed Slow: 60",
+                        "Slow Duration: 3/3.5/4",
+                        "Push Duration: 1",
+                        "Stun Duration: 3/3.5/4",
+                        "Effect Radius: 900",
+                        "Move Speed Bonus: 40%",
+                        "Buff Duration: 3/3.5/4"
+                    ],
+                    "interaction_notes": [
+                        "This ability levels up with Drums of Slom",
+                        "Applies a disabling knockback on affected secondary units on the Primal Roar path",
+                        "The total ability area-of-effect is stadium-shaped",
+                        "Roshan is innately immune to all forced movement sources"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39b",
+                    "date": "2025-05-29",
+                    "changes": [
+                        "Reduced Rugged building damage block chance from 100% to 50%"
+                    ]
+                },
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Reduced base agility from 22 to 19",
+                        "Aghanim's Scepter upgrade: Drums of Slom - Reduced stack gain upon Primal Roar cast from 10/15/20 to 10 on each level",
+                        "Talents: LVL 15 +10 Inner Beast attack speed increased to +15"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Reduced base attack damage from 28‒32 to 25‒29"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156847,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

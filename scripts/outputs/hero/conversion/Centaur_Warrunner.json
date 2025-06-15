@@ -1,0 +1,272 @@
+{
+    "converted": {
+        "hero_name": "Centaur Warrunner",
+        "sections": {
+            "general": {
+                "primary_attribute": "strength",
+                "strength": 27,
+                "strength_gain": 4,
+                "agility": 15,
+                "agility_gain": 1,
+                "intelligence": 15,
+                "intelligence_gain": 1.6,
+                "health": 714,
+                "mana": 255,
+                "armor": 0.5,
+                "magic_resist": "26.5%",
+                "damage": [
+                    63,
+                    65
+                ],
+                "damage_avg": 64,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 90,
+                "bat": 1.7,
+                "animation": "0.3 + 0.3",
+                "move_speed": 305,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Durable, Initiator, Disabler, Nuker, Escape"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Counter-Strike",
+                    "effects": "Double Edge deals additional damage equal to a percentage of the incoming damage taken previously. The damage counter resets upon cast."
+                },
+                "facet_2": {
+                    "name": "Horsepower",
+                    "effects": "Grants flat bonus movement speed per current strength and increases the self max movement speed cap."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Work Horse ability",
+                        "Centaur hitches a cart behind him and can cast Hitch A Ride on an ally"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Deals a non-lethal magical self-damage to Centaur",
+                        "Grants self strength bonus stacks per hero hit for a short time, and the duration refreshes per stack"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+0.8s Hoof Stomp Duration",
+                        "Grants Retaliate Aura"
+                    ],
+                    "level_20": [
+                        "-25s Stampede Cooldown",
+                        "+45 Retaliate Damage"
+                    ],
+                    "level_15": [
+                        "+30% Double Edge Strength as Damage",
+                        "+12 Strength"
+                    ],
+                    "level_10": [
+                        "+15 Move Speed",
+                        "+4 Health Regen"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Rawhide",
+                        "type": "passive",
+                        "description": "Grants a stack of permanent health bonus as the game goes on.",
+                        "values": {
+                            "max_health_bonus_per_stack": 30,
+                            "stack_grant_duration": 120
+                        },
+                        "details": "The stack grant duration starts at 0:00 game-time. Does not affect the current health percentage upon the passive max health increase."
+                    },
+                    {
+                        "name": "Horsepower",
+                        "type": "passive",
+                        "description": "Grants flat bonus movement speed per current strength and increases the self max movement speed cap.",
+                        "values": {
+                            "move_speed_bonus_per_str": 0.3,
+                            "set_max_move_speed_cap": 575
+                        },
+                        "details": "Selecting the Horsepower facet unlocks this ability. Requires having 81 strength to reach the max movement speed."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Hoof Stomp",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Self / Enemy Units",
+                    "damage": "Magical",
+                    "cooldown": "18/16/14/12",
+                    "mana_cost": "100/110/120/130",
+                    "cast_range": "325",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "325",
+                    "details": "After a brief windup, Centaur slams the ground, stunning and damaging nearby enemy units. Centaur can move and is not disarmed during the delay.",
+                    "description": "After a brief windup, Centaur slams the ground, stunning and damaging nearby enemy units.",
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Wind-Up Time: 0.5",
+                        "Damage: 90/160/230/300",
+                        "Enemy Stun Duration: 1.6/1.8/2/2.2 (2.4/2.6/2.8/3 with talent)"
+                    ],
+                    "interaction_notes": [
+                        "During the wind-up, the ability can be canceled under certain conditions"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Double Edge",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Spell / Magical",
+                    "cooldown": "3.5",
+                    "mana_cost": 0,
+                    "cast_range": "175",
+                    "cast_animation": "0.25 + 0.55",
+                    "cast_radius": "220",
+                    "details": "Strikes a mighty blow at melee range, damaging both himself and a small area around the target. Deals extra damage based on Centaur's strength.",
+                    "description": "Strikes a mighty blow at melee range, damaging both himself and a small area around the target. Deals extra damage based on Centaur's strength.",
+                    "facet_effects": {
+                        "counter_strike": {
+                            "min_damage_bonus_factor": 0.35,
+                            "max_damage_bonus_factor": 1,
+                            "damage_timer": 6
+                        }
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Base Damage: 120/180/240/300",
+                        "Current Str to Damage Factor: 0.6/0.9/1.2/1.5",
+                        "Self Damage Factor: 1"
+                    ],
+                    "interaction_notes": [
+                        "Cannot self-deny",
+                        "Shard upgrade grants strength bonus stacks per hero hit"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Retaliate",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Self / Allied Heroes",
+                    "damage": "Spell / Physical",
+                    "cooldown": 0,
+                    "mana_cost": 0,
+                    "cast_range": "0",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "0 (1200 with talent)",
+                    "details": "Counters all attacks, and returns a fixed damage amount plus a percentage based on Centaur's strength.",
+                    "description": "Counters all attacks, and returns a fixed damage amount plus a percentage based on Centaur's strength.",
+                    "ability_behavior": [
+                        "passive",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": true,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Base Damage: 15/25/35/45 (60/70/80/90 with talent)",
+                        "Enemy Str to Bonus Damage Factor: 0.16/0.24/0.32/0.4",
+                        "Damage Factor vs Buildings: 0.5"
+                    ],
+                    "interaction_notes": [
+                        "Talent upgrade grants aura to allied heroes within radius",
+                        "Damage instance applied is still sourced to Centaur"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Stampede",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Units",
+                    "damage": "Spell / Magical",
+                    "cooldown": "90 (65 with talent)",
+                    "mana_cost": "150/200/250",
+                    "cast_range": "Global",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "Global",
+                    "details": "Centaur leads all allied units into a vicious charge, causing them to move through units at max speed while trampling enemy units.",
+                    "description": "Centaur leads all allied units into a vicious charge, causing them to move through units at max speed while trampling enemy units.",
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": true,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Ally Haste Speed: 550",
+                        "Buff Duration: 3.5/4/4.5",
+                        "Str to Damage Factor: 2/2.5/3",
+                        "Move Speed Slow: 100%",
+                        "Debuff Duration: 3"
+                    ],
+                    "interaction_notes": [
+                        "Grants haste movement, phase movement, and unobstructed movement to allied units",
+                        "Trampled enemies take damage based on Centaur's strength"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39b",
+                    "date": "2025-05-29",
+                    "changes": [
+                        "Reduced Horsepower set max movement speed from 600 to 575"
+                    ]
+                },
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Double Edge: Increased cast range from 150 to 175",
+                        "Counter-Strike now considers all incoming damage sources from non-hero units"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Increased Double Edge Counter-Strike min damage bonus factor from 0.25 to 0.35",
+                        "Retaliate strength as bonus damage returned is now considered as reflected damage",
+                        "Talents: LVL 10 +20 movement speed reduced to +15"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 89432,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

@@ -1,0 +1,339 @@
+{
+    "converted": {
+        "hero_name": "Bristleback",
+        "sections": {
+            "general": {
+                "primary_attribute": "strength",
+                "strength": 22,
+                "strength_gain": 2.7,
+                "agility": 17,
+                "agility_gain": 1.8,
+                "intelligence": 14,
+                "intelligence_gain": 2.8,
+                "health": 604,
+                "mana": 243,
+                "armor": 3.83,
+                "magic_resist": 26.4,
+                "damage": [
+                    53,
+                    59
+                ],
+                "damage_avg": 56,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.8,
+                "animation": "0.3 + 0.3",
+                "move_speed": 295,
+                "turn_rate": 0.9,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Durable, Initiator, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Snot Rocket",
+                    "effects": "Viscous Nasal Goo has a higher stack limit, and applies a higher bonus armor reduction per stack. If Bristleback takes up to a certain amount of damage from the rear, he releases a Viscous Nasal Goo of its corresponding level within the radius. +2 Max Stacks, -1 Armor per Stack"
+                },
+                "facet_2": {
+                    "name": "Seeing Red",
+                    "effects": "Adds an active component to Warpath. Reduces self vision to an angled-cone while active, and applies an attack damage factor and movement speed factor to the current stacks."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Bristleback rotates towards the targeted direction. After a short delay, he forcefully release a number of Quill Sprays in a tight conical pattern out of his back between intervals."
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Hairball ability.",
+                        "Coughs a quill-packed hairball toward and erupts at the point-targeted location."
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+18 Warpath Damage Per Stack",
+                        "12% Spell Lifesteal"
+                    ],
+                    "level_20": [
+                        "+20 Quill Stack Damage",
+                        "+25 Health Regen"
+                    ],
+                    "level_15": [
+                        "+8% Bristleback Back Damage Reduction +4% Bristleback Side Damage Reduction",
+                        "+250 Viscous Nasal Goo Cast Range"
+                    ],
+                    "level_10": [
+                        "+1.5 Mana Regen",
+                        "+25 Attack Speed"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Prickly",
+                        "type": "passive",
+                        "description": "Grants both outgoing damage amplification and debuff duration amplification against enemy units behind Bristleback.",
+                        "values": {
+                            "rear_angle": "110°",
+                            "damage_amp": 1.1,
+                            "debuff_duration_factor": 1.1
+                        },
+                        "details": "Grants percentage-based outgoing damage amplification. Applies to offensively-applied debuffs sourced to Rigwarl."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Viscous Nasal Goo",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "1.75",
+                    "mana_cost": "12/16/20/24",
+                    "cast_range": "650 (900 with talent)",
+                    "cast_animation": "0.3 + 0",
+                    "cast_radius": "N/A",
+                    "details": "Covers a target in snot, causing it to have reduced armor and movement speed. Multiple casts stack and refresh the duration.",
+                    "description": "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage.",
+                    "facet_effects": {
+                        "snot_rocket": {
+                            "max_stacks": 6,
+                            "armor_reduction_per_stack": "2.5/3/3.5/4"
+                        }
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Grants 1 Warpath stack upon cast",
+                        "Projectile Speed: 1000"
+                    ],
+                    "interaction_notes": [
+                        "Considers creep-heroes as heroes",
+                        "Grants Warpath stack upon ability cast and does not rely on the projectile impact"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Quill Spray",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell/Physical",
+                    "damage_types": [
+                        "spell",
+                        "physical"
+                    ],
+                    "cooldown": "3",
+                    "mana_cost": 35,
+                    "cast_range": "N/A",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "700",
+                    "details": "Sprays enemy units with quills dealing damage in an area of effect around Bristleback. Deals additional bonus damage per current stack on the debuff-affected enemy unit.",
+                    "description": "An enforcer's honor can be a prickly thing. So can his quills.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "autocast-off",
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Base Damage: 25/45/65/85",
+                        "Stack Damage: 30 (50 with talent)",
+                        "Max Damage: 500",
+                        "Duration: 14",
+                        "Projectile Speed: 2400"
+                    ],
+                    "interaction_notes": [
+                        "Grants 1 Warpath stack upon cast or when autocast",
+                        "Interrupts Rigwarl's channeling abilities upon cast",
+                        "Now automatically spray quills whenever possible when activated"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Bristleback",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Self/Enemy Units",
+                    "damage": "Reflected/Spell/Physical",
+                    "damage_types": [
+                        "reflected",
+                        "spell",
+                        "physical"
+                    ],
+                    "cooldown": "24 (scepter)",
+                    "mana_cost": "125 (scepter)",
+                    "cast_range": "Global (scepter)",
+                    "cast_animation": "0 + 0 (scepter)",
+                    "cast_radius": "N/A",
+                    "details": "Bristleback takes less damage if hit on the sides or rear.",
+                    "description": "Turning his back to a fight might be just the thing.",
+                    "facet_effects": {
+                        "snot_rocket": {
+                            "effect_radius": 900,
+                            "releases_viscous_nasal_goo": true
+                        }
+                    },
+                    "ability_behavior": [
+                        "passive",
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Rear Angle: 70°",
+                        "Side Angle: 110°",
+                        "Rear Damage Reduction: 16%/24%/32%/40% (24%/32%/40%/48% with talent)",
+                        "Side Damage Reduction: 8%/12%/16%/20% (12%/16%/20%/24% with talent)",
+                        "Damage Threshold: 275/250/225/200"
+                    ],
+                    "interaction_notes": [
+                        "If Bristleback takes up to a certain amount of damage from the rear, he releases a Quill Spray",
+                        "Works independently of the passively released ability's cooldown",
+                        "Does not proc on-cast effects"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Hairball",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell/Physical",
+                    "damage_types": [
+                        "spell",
+                        "physical"
+                    ],
+                    "cooldown": "13",
+                    "mana_cost": 60,
+                    "cast_range": "750",
+                    "cast_animation": "0.1 + 0.6",
+                    "cast_radius": "700",
+                    "details": "Coughs a quill-packed hairball toward and erupts at the point-targeted location.",
+                    "description": "Every part of Bristleback's body is a weapon — even the parts he accidentally swallowed.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "area_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Quill Spray Stacks: 1",
+                        "Goo Stacks: 2",
+                        "Projectile Speed: 2400 (Quill), 1000 (Goo)",
+                        "Requires Aghanim's Shard"
+                    ],
+                    "interaction_notes": [
+                        "Acquiring Aghanim's Shard unlocks this ability",
+                        "Quill Spray travels faster than Viscous Nasal Goo",
+                        "Grants 1 Warpath stack upon cast"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Warpath",
+                    "key": "R",
+                    "type": "passive",
+                    "affects": "Self",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "45 (facet active)",
+                    "mana_cost": "55/65/75 (facet active)",
+                    "cast_range": "N/A",
+                    "cast_animation": "N/A",
+                    "cast_radius": "N/A",
+                    "details": "Grants self flat bonus attack damage and bonus movement speed every time Bristleback casts a spell.",
+                    "description": "'Temper, temper,' his mum always chided. But in a fight, a temper can come in handy.",
+                    "facet_effects": {
+                        "seeing_red": {
+                            "set_vision_radius": "110°",
+                            "attack_damage_stack_factor": 1.5,
+                            "move_speed_stack_factor": 1.5,
+                            "duration": "4/5/6"
+                        }
+                    },
+                    "ability_behavior": [
+                        "passive",
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Max Stacks: 8/10/12",
+                        "Stack per Ability Cast: 1",
+                        "Attack Damage Bonus per Stack: 15/20/25 (33/38/43 with talent)",
+                        "Move Speed Bonus per Stack: 2%/2.5%/3%",
+                        "Stack Duration: 16/18/20"
+                    ],
+                    "interaction_notes": [
+                        "Grants flat bonus attack damage",
+                        "Each stack grants a new buff with independent duration",
+                        "Does not proc on item abilities or 0-second cooldown sources"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39b",
+                    "date": "2025-05-29",
+                    "changes": [
+                        "Reduced Bristleback Snot Rocket effect radius from 900 to 700."
+                    ]
+                },
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Reduced Viscous Nasal Goo base armor loss from 2/2/3/3 to 1.5/2/2.5/3.",
+                        "Reduced Viscous Nasal Goo base movement slow from 15% to 10%.",
+                        "ADDED Quill Spray Autocast functionality. Now automatically casts ability whenever possible while activated.",
+                        "Increased Warpath Seeing Red front vision radius from 90° to 110°."
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Bristleback passive Quill Spray casts are considered reflection damage.",
+                        "Reduced Warpath movement speed bonus per stack from 2%/3%/4% to 2%/2.5%/3%.",
+                        "REMOVED the Berserk facet.",
+                        "Seeing Red now shares vision with Bristleback's faction. However, Bristleback himself still does not receive his faction's vision.",
+                        "Increased Aghanim's Scepter Bristleback mana cost from 100 to 125.",
+                        "Increased Aghanim's Shard Hairball mana cost from 40 to 60."
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156742,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

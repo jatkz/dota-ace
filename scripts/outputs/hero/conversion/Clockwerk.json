@@ -1,0 +1,277 @@
+{
+    "converted": {
+        "hero_name": "Clockwerk",
+        "sections": {
+            "general": {
+                "primary_attribute": "strength",
+                "strength": 26,
+                "strength_gain": 3.2,
+                "agility": 13,
+                "agility_gain": 2.3,
+                "intelligence": 18,
+                "intelligence_gain": 1.7,
+                "health": 692,
+                "mana": 291,
+                "armor": 3.17,
+                "magic_resist": 26.8,
+                "damage": [
+                    50,
+                    52
+                ],
+                "damage_avg": 51,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.33 + 0.64",
+                "move_speed": 310,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Initiator, Disabler, Durable, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Hookup",
+                    "effects": "Hookshot has an increased stun radius, a lower cooldown, and refunds a portion of its mana cost if there is an allied hero within proximity distance upon successfully grappling onto the target. Grants both Clockwerk and the allied unit bonus armor upon proc."
+                },
+                "facet_2": {
+                    "name": "Expanded Armature",
+                    "effects": "The Power Cogs formation now covers a larger radius, and applies Mana Shock to all enemy units within, pushing them toward the center."
+                },
+                "facet_3": {
+                    "name": "Chainmeal",
+                    "effects": "Chainmail can now be consumed to grant its bonuses. Grants 3% model size bonus per consumed Chainmail. Has a 150% max model size bonus."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Overclocking ability",
+                        "Allows Clockwerk to self-increase the power of all ability values",
+                        "While Overclocking, Battery Assault applies to all valid enemy units within radius",
+                        "While Overclocking, Power Cogs aura grants Clockwerk bonus attack speed",
+                        "While Overclocking, Rocket Flare launches multiple rockets with lower cooldown",
+                        "While Overclocking, Jetpack grants additional movement speed and turn rate",
+                        "While Overclocking, Hookshot has effect radius and stun duration augmented"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Jetpack ability",
+                        "Grants unobstructed movement, flying vision, and bonus movement speed",
+                        "Self-disarms and severely limits turn rate",
+                        "Clockwerk may cast other abilities instantly without facing the targeted location while Jetpack is active",
+                        "Casting Hookshot dispels Jetpack if it latches on an enemy unit"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "-0.25s Battery Assault Interval",
+                        "Power Cogs Grants Debuff Immune Aura"
+                    ],
+                    "level_20": [
+                        "+70 Power Cogs Mana Shock",
+                        "Rocket Flare Applies True Sight"
+                    ],
+                    "level_15": [
+                        "+24 Battery Assault Damage",
+                        "+2 Power Cogs Hit Count"
+                    ],
+                    "level_10": [
+                        "+75 Hookshot Damage",
+                        "+0.4s Rocket Flare Slow Duration"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Armor Power",
+                        "type": "passive",
+                        "description": "Grants bonus flat-percentage outgoing damage amplification per armor.",
+                        "values": {
+                            "damage_amp_per_armor": "0.25%"
+                        },
+                        "details": "Both main armor and bonus armor are checked periodically and update correspondingly. Grants generic outgoing damage amplification."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Clockwerk's hero model has hidden innate abilities. Only Clockwerk and certain hero models ascends the z-axis upon Jetpack cast.",
+                        "values": {
+                            "z_axis_ascend": 260
+                        },
+                        "details": "He may only perform or utilize the ability's functions upon a successful channeling, except passive innate abilities."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Battery Assault",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "cooldown": "24/22/20/18",
+                    "mana_cost": 90,
+                    "cast_range": "275",
+                    "cast_animation": "0 + 0",
+                    "description": "Discharges high-powered shrapnel toward one random nearby enemy unit at a time, dealing damage and stunning the affected enemy unit.",
+                    "details": "Search Radius: 275, Number of Targets: 1, Shrapnel Interval: 0.7 (0.45 with talent), Damage per Interval: 20/45/70/95 (44/69/94/119 with talent), Stun Duration: 0.1, Active Duration: 10.5",
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false
+                },
+                "ability_2": {
+                    "name": "Power Cogs",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units / Allied Heroes",
+                    "damage": "Spell / Magical",
+                    "cooldown": "21/19/17/15",
+                    "mana_cost": 70,
+                    "cast_animation": "0.2 + 0.5",
+                    "description": "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near. These Power Cogs can be destroyed by hero attacks.",
+                    "details": "Cogs Spawn Distance: 215, Number of Cogs: 8, Hit Count: 2 (4 with talent), Cogs Duration: 5/6/7/8, Aura Radius: 225, Shock Search Radius: 185, First Damage: 50/125/200/275, Mana Burn: 35/70/105/140 (105/140/175/210 with talent), Knock Distance: 300, Knock Duration: 0.8",
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false
+                },
+                "ability_3": {
+                    "name": "Rocket Flare",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "cooldown": "20/18/16/14",
+                    "mana_cost": "35/40/45/50",
+                    "cast_range": "Global",
+                    "cast_animation": "0.3 + 0",
+                    "description": "Fires a flare toward an area globally that explodes within the area-targeted radius.",
+                    "details": "Effect Radius: 600, Damage: 80/120/160/200, Move Speed Slow: 100%, Slow Duration: 0.4 (0.8 with talent), True Sight Duration: 10 (with talent)",
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true
+                },
+                "ability_4": {
+                    "name": "Overclocking",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Self",
+                    "cooldown": 50,
+                    "mana_cost": 90,
+                    "cast_animation": "0 + 0",
+                    "description": "Allows Clockwerk to self-increase the power of all ability values. Applies a movement speed and attack speed slow once the duration runs out.",
+                    "details": "Buff Duration: 13, Move Speed Slow: 100%, Attack Speed Slow: 100, Slow Duration: 3",
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false
+                },
+                "ability_5": {
+                    "name": "Jetpack",
+                    "key": "F",
+                    "type": "active",
+                    "affects": "Self",
+                    "cooldown": 16,
+                    "mana_cost": 75,
+                    "cast_animation": "0 + 0.53",
+                    "description": "Grants unobstructed movement, flying vision, and bonus movement speed. However, this self-disarms and severely limits his turn rate.",
+                    "details": "Set Turn Rate: 75°, Move Speed Bonus: 20%, Disarm Duration: 6, Duration: 6",
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": true,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false
+                },
+                "ability_6": {
+                    "name": "Hookshot",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Units",
+                    "damage": "Spell / Magical",
+                    "cooldown": "60/45/30",
+                    "mana_cost": "100/125/150",
+                    "cast_range": "2000/2500/3000",
+                    "cast_animation": "0.3 + 0",
+                    "description": "Fires a rapid grappling device at the point-targeted location. If it latches on a unit, Clockwerk launches himself toward the unit, stunning and dealing damage.",
+                    "details": "Max Travel Distance: 2000/2500/3000, Hook Speed: 4000/5000/6000, Hook Latch Radius: 125, Stun Radius: 175, Damage Radius: 175, Damage: 75/175/275 (150/250/350 with talent), Stun Duration: 1.2/1.4/1.6, Self Silence Duration: 0.5, Self Disarm Duration: 0.5",
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "ADDED the Chainmeal facet - Chainmail can now be consumed to grant its bonuses",
+                        "Grants 3% model size bonus per consumed Chainmail",
+                        "Has a 150% max model size bonus",
+                        "LVL 20 Talent: +75 Rocket Flare damage → +70 Power Cogs mana shock"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Clockwerk no longer is a Universal hero and now has Strength as the primary attribute",
+                        "Rescaled base strength and gain from 27 + 3.1 to 26 + 3.2",
+                        "Increased agility gain from 2.1 to 2.3",
+                        "Increased base attack damage from 8‒10 to 24‒26",
+                        "Reduced Battery Assault creep damage factor from 1.5 to 1",
+                        "Hookshot Hookup facet: No longer requires the projectile to hit an allied unit, now requires one other allied hero within 350-radius of the target",
+                        "LVL 10 Talent: -2s Rocket Flare cooldown → +0.4s Rocket Flare slow duration"
+                    ]
+                },
+                {
+                    "version": "7.37e",
+                    "date": "2024-11-19",
+                    "changes": [
+                        "Reduced Battery Assault creep damage factor from 2 to 1.5",
+                        "LVL 10 Talent: -2s Power Cogs cooldown → +75 Hookshot damage"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156789,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

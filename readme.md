@@ -7,6 +7,7 @@ next step2
 do each hero now and fit under schema
 {heroes: {axe: {} , bane: {}, clockwer: {} ...}}
 multiple_request.js
+per conversion estimate: 15 cents
 
 next step3
 now do items similar as above

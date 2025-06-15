@@ -1,0 +1,324 @@
+{
+    "converted": {
+        "hero_name": "Chen",
+        "sections": {
+            "general": {
+                "primary_attribute": "intelligence",
+                "strength": 23,
+                "strength_gain": 2,
+                "agility": 15,
+                "agility_gain": 2.1,
+                "intelligence": 19,
+                "intelligence_gain": 3.2,
+                "health": 626,
+                "mana": 303,
+                "armor": 1.5,
+                "magic_resist": 26.9,
+                "damage": [
+                    48,
+                    58
+                ],
+                "damage_avg": 53,
+                "projectile_speed": 1100,
+                "attack_type": "ranged",
+                "attack_range": 650,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.5 + 0.5",
+                "move_speed": 305,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Support, Pusher"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Centaur Convert",
+                    "effects": "Summon Convert calls forth either a Centaur Courser or Centaur Conqueror."
+                },
+                "facet_2": {
+                    "name": "Hellbear Convert",
+                    "effects": "Summon Convert calls forth either a Hellbear or Hellbear Smasher."
+                },
+                "facet_3": {
+                    "name": "Troll Convert",
+                    "effects": "Summon Convert calls forth either a Hill Troll or Dark Troll Summoner."
+                },
+                "facet_4": {
+                    "name": "Satyr Convert",
+                    "effects": "Summon Convert calls forth either a Satyr Mindstealer or Satyr Tormenter."
+                },
+                "facet_5": {
+                    "name": "Marshmage Convert",
+                    "effects": "Summon Convert calls forth either a Marshmage Apprentice or Marshmage."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Martyrdom ability"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Enables persuading ancient creeps per level of Hand of God",
+                        "Increases the level of certain persuaded creeps' abilities"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "Hand of God Full Health Restore for Chen and all Player-controlled Units",
+                        "Hand of God Strong Dispels"
+                    ],
+                    "level_20": [
+                        "+1300 Persuaded Unit Min Health",
+                        "+20% Divine Favor Heal Amp"
+                    ],
+                    "level_15": [
+                        "+14% Penitence Slow",
+                        "+14 Persuaded Unit Attack Damage"
+                    ],
+                    "level_10": [
+                        "+150 Summon Convert Attack Speed",
+                        "Penitence Deals 175 Damage"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Summon Convert",
+                        "type": "active",
+                        "description": "Summons a creep-hero convert to fight alongside Chen corresponding to the selected Facet.",
+                        "values": {
+                            "number_of_converts": 1,
+                            "set_creep_base_health": 220,
+                            "health_bonus_per_hero_level": 80,
+                            "hero_respawn_cooldown_factor": 0,
+                            "attack_speed_bonus": 150,
+                            "current_health_as_damage": "100%",
+                            "cooldown": 30,
+                            "mana_cost": 50
+                        },
+                        "details": "Grants the convert all bonuses of Holy Persuasion's corresponding level, except health values. The Convert is considered one of Chen's Persuaded units, and dies upon Chen's death."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Chen's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+                        "values": {},
+                        "details": "Contains hidden innate abilities that require channeling to activate."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Penitence",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Unit / Self",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "14/13/12/11",
+                    "mana_cost": "70/75/80/85",
+                    "cast_range": "800",
+                    "cast_animation": "0.3 + 0.77",
+                    "cast_radius": "",
+                    "details": "Applies a movement speed slow debuff on the affected enemy unit.",
+                    "description": "Applies a movement speed slow debuff on the affected enemy unit. Grants bonus attack speed to the allied unit attacking the affected enemy unit. Grants Chen and his player-controlled units bonus attack speed and bonus attack range on the affected enemy unit.",
+                    "facet_effects": {
+                        "move_speed_slow": "12%/20%/28%/36% (26%/34%/42%/50%)",
+                        "debuff_duration": "5/6/7/8",
+                        "damage": "175",
+                        "attack_speed_bonus": "20/40/60/80",
+                        "buff_duration": 2,
+                        "attack_range_bonus": "50/150/250/350"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Has a 1400-projectile speed",
+                        "Grants bonus attack range of the same range-type as the caster"
+                    ],
+                    "interaction_notes": [
+                        "Leveling up the ability while the current buff is active does not update any ability values"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Holy Persuasion",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Instant Kill",
+                    "damage_types": [
+                        "Instant Kill"
+                    ],
+                    "cooldown": "15",
+                    "mana_cost": "90/110/130/150",
+                    "cast_range": "600",
+                    "cast_animation": "0.3 + 0.87",
+                    "cast_radius": "",
+                    "details": "Persuades an enemy or neutral creep, excluding ancient creeps, for Chen's purposes. Grants Chen a portion of the gold bounty of the persuaded unit.",
+                    "description": "Persuades an enemy or neutral creep, excluding ancient creeps, for Chen's purposes. Sets the persuaded creep's max health while fully restoring its health and mana. Grants the persuaded creeps various bonuses as well upon joining Chen's fleet.",
+                    "facet_effects": {
+                        "max_units": "1/2/3/4",
+                        "persuade_creep_max_level": "3/4/5/6",
+                        "creep_gold_bounty_factor": "0.25/0.5/0.75/1",
+                        "set_creep_max_health": "400 (1700)",
+                        "health_bonus_per_hero_level": 50,
+                        "set_creep_current_health_mana": "100%",
+                        "move_speed_bonus": "10/20/30/40",
+                        "attack_damage_bonus": "4/8/12/16",
+                        "ability_level_bonus": 1,
+                        "attack_damage_factor": 0.6
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "The Summon Convert is considered as one of Chen's Persuaded Creep",
+                        "Does not affect Ancient creeps, Couriers, Creep-heroes, Necronomicon units, Siege Creep, Roshan, Tormentor"
+                    ],
+                    "interaction_notes": [
+                        "Instant kills the oldest Persuaded Unit if Chen has the max amount of creeps",
+                        "Applies a basic dispel that dispels both buffs and debuffs"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Divine Favor",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Allied Units",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "20/18/16/14",
+                    "mana_cost": "75",
+                    "cast_range": "1200",
+                    "cast_animation": "0.2 + 1",
+                    "cast_radius": "1200",
+                    "details": "Grants a soothing health regeneration aura within the radius. Grants the affected allied hero bonus armor and an incoming heal amplification buff.",
+                    "description": "Grants a soothing health regeneration aura within the radius. Chen may initiate a divine faith on a player-controlled unit he favors, teleporting it next to Chen after a short delay. Alternatively, self-casting the ability teleports all Chen's player-controlled units to himself.",
+                    "facet_effects": {
+                        "aura_radius": 1200,
+                        "health_regen_bonus": "1.5/3/4.5/6",
+                        "aura_linger_duration": 0.5,
+                        "armor_bonus": "5/10/15/20",
+                        "heal_amp": "20% (0.4)",
+                        "health_regen_amp": "5%/10%/15%/20%",
+                        "duration": 6,
+                        "teleport_delay": 6,
+                        "damage_threshold": 0
+                    },
+                    "ability_behavior": [
+                        "passive",
+                        "unit_target",
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "The teleport component has 4 default spots",
+                        "Affects allied heroes and Chen's player-controlled units"
+                    ],
+                    "interaction_notes": [
+                        "Dispels the buff upon receiving a player-based damage instance",
+                        "Does not teleport the unit(s) upon Chen's death"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Hand of God",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Allied Heroes",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "150/130/110 (110/90/70)",
+                    "mana_cost": "200/300/400",
+                    "cast_range": "Global",
+                    "cast_animation": "0.3 + 0.93",
+                    "cast_radius": "Global",
+                    "details": "Heals allied heroes and his player-controlled units globally.",
+                    "description": "Heals allied heroes and his player-controlled units globally. Provides immediate heal and heal over time.",
+                    "facet_effects": {
+                        "radius": "Global",
+                        "first_heal": "200/300/400",
+                        "heal_per_second": "20/30/40",
+                        "duration": 10,
+                        "max_ancient_creeps_count": "1/2/3"
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": true,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Can heal up to 360/540/720 health over the entire duration",
+                        "Affects allied heroes and Chen's player-controlled units"
+                    ],
+                    "interaction_notes": [
+                        "Both the first heal and the heal over time is applied upon cast",
+                        "Successive casts reapply the first heal and refreshes the buff duration"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Increased base attack damage from 27‒37 to 29‒39",
+                        "Holy Persuasion: Leveling up the ability now immediately updates the ability values for all persuaded units, and maintains all current-to-max health percentages",
+                        "Holy Persuasion: Increased creep attack damage bonus from 2/7/11/15 to 4/8/12/16",
+                        "Divine Favor now applies the ability buff to all teleporting player-controlled units when self-cast",
+                        "REWORKED Aghanim's Scepter upgrade: Hand of God reduces cooldown by 40, changed ability functionality from No Target to No Target/Channeled, has a max 6-second channel time after the initial heal",
+                        "Talents: LVL 15 +12 Holy Persuasion creep attack damage reduced to +14",
+                        "Talents: LVL 20 +1200 Holy Persuasion min creep health increased to +1300",
+                        "Talents: LVL 20 -30s Hand of God cooldown → +20% Divine Favor heal amplification"
+                    ]
+                },
+                {
+                    "version": "7.38c",
+                    "date": "2025-03-27",
+                    "changes": [
+                        "CHANGED Summon Convert unit type from creep to creep-hero"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "The Summon Convert creep's abilities now level up with Holy Persuasion"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156742,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

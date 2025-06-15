@@ -1,0 +1,320 @@
+{
+    "converted": {
+        "hero_name": "Broodmother",
+        "sections": {
+            "general": {
+                "primary_attribute": "agility",
+                "strength": 18,
+                "strength_gain": 2.9,
+                "agility": 18,
+                "agility_gain": 3.4,
+                "intelligence": 18,
+                "intelligence_gain": 2,
+                "health": 516,
+                "mana": 291,
+                "armor": 2,
+                "magic_resist": 26.8,
+                "damage": [
+                    45,
+                    51
+                ],
+                "damage_avg": 48,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 175,
+                "attack_speed": 125,
+                "bat": 1.7,
+                "animation": "0.4 + 0.5",
+                "move_speed": 285,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Pusher, Escape, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Necrotic Webs",
+                    "effects": "Reduces the values of health restoration sources of all affected enemy units within the same Spin Web radius as Broodmother."
+                },
+                "facet_2": {
+                    "name": "Feeding Frenzy",
+                    "effects": "Insatiable Hunger now creates an aura that applies the buff of its corresponding level and values to Broodmother and all Spiderlings within the radius."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Spinner's Snare ability",
+                        "Creates invisible web-snares next to any current webs that acts as a trap",
+                        "Arachnia may globally weave a snare-web trap in the area-targeted location centered next an existing Spin Web radius"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants a flat base attack damage increment per second",
+                        "Increases duration"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+30% Incapacitating Bite Slow/Miss Chance",
+                        "-0.25s Insatiable Hunger Base Attack Time"
+                    ],
+                    "level_20": [
+                        "+35 Attack Speed",
+                        "-6s Spin Web Restore Time"
+                    ],
+                    "level_15": [
+                        "+125 Spiderlings Health",
+                        "+12 Incapacitating Bite Attack Damage"
+                    ],
+                    "level_10": [
+                        "+1.5% Spider's Milk Enemy Max Health as Heal",
+                        "+80 Spawn Spiderlings Damage"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Spider's Milk",
+                        "type": "passive",
+                        "description": "Grants a lifesteal-based heal over time buff per enemy hero killed within the radius to Broodmother and her player-controlled units.",
+                        "values": {
+                            "radius": 600,
+                            "enemy_max_health_as_heal": "4% (5.5% with talent)",
+                            "duration": 3,
+                            "creep_lifesteal_factor": 0.6,
+                            "deny_factor": 0.5
+                        },
+                        "details": "The lifesteal-based heal over time is less effective on creeps. The applied lifesteal-based heal is less effective from deny sources. Only denies from Broodmother may proc the heal component."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Insatiable Hunger",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Self",
+                    "damage": "Physical",
+                    "damage_types": [
+                        "Physical"
+                    ],
+                    "cooldown": "45/40/35/30",
+                    "mana_cost": 80,
+                    "cast_range": "Self",
+                    "cast_animation": "0.2 + 0.5",
+                    "description": "Grants base attack damage bonus lifesteal.",
+                    "facet_effects": {
+                        "feeding_frenzy": "Creates an aura that applies the buff to Broodmother and all Spiderlings within 800 radius"
+                    },
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Base Attack Damage Factor: 1.4/1.5/1.6/1.7",
+                        "Lifesteal: 40%/60%/80%/100%",
+                        "Duration: 8/10/12/14 (10/12/14/16 with shard)",
+                        "Lifesteal is less effective when attacking creeps (0.6 factor)"
+                    ],
+                    "interaction_notes": [
+                        "Stacks additively with other lifesteal sources",
+                        "Cannot lifesteal off allied units or ward-type units"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Spin Web",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Self / Spiders",
+                    "damage": "None",
+                    "damage_types": [],
+                    "cooldown": "27 (21 with talent)",
+                    "mana_cost": "4/6/8/10",
+                    "cast_range": "1200",
+                    "cast_animation": "0.4 + 0.4",
+                    "cast_radius": "1200",
+                    "description": "Spins a large web that grants Broodmother a bonus movement speed and bonus health regeneration within its radius. Her webs do not expire until the max amount of webs are reached, destroying the oldest spun web.",
+                    "facet_effects": {
+                        "necrotic_webs": "Reduces health restoration sources of enemy units within web radius by 10%/30%/50%/70%"
+                    },
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Web Radius: 1200",
+                        "Max Webs: 3/5/7/9",
+                        "Health Regen Bonus: 2/5/8/11",
+                        "Move Speed Bonus: 10%/22%/34%/46%",
+                        "Turn Rate Bonus: 0.2"
+                    ],
+                    "interaction_notes": [
+                        "Only affects Broodmother and her Spiderlings",
+                        "Grants phase movement and unobstructed movement",
+                        "Does not affect units in enemy fountain area"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Incapacitating Bite",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Self / Spiders",
+                    "damage": "Attack Damage / Magical",
+                    "damage_types": [
+                        "Physical",
+                        "Magical"
+                    ],
+                    "cooldown": "None",
+                    "mana_cost": 0,
+                    "cast_range": "Attack Range",
+                    "description": "Cripples with her attacks. Applies a movement speed slow and the affected units have a chance to miss their attacks.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Move Speed Slow: 20%/30%/40%/50%",
+                        "Miss Chance: 15%/20%/25%/30%",
+                        "Debuff Duration: 2",
+                        "Attack Damage Bonus: 2/4/6/8 (14/16/18/20 with talent)"
+                    ],
+                    "interaction_notes": [
+                        "Uses pseudo-random distribution for blind",
+                        "Stacks additively with other blind sources",
+                        "Does not interact with allied units or buildings"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Spawn Spiderlings",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "9/8/7",
+                    "mana_cost": 100,
+                    "cast_range": "900",
+                    "cast_animation": "0.2 + 0.5",
+                    "description": "Broodmother injects her young into an enemy unit and dealing damage. Upon the affected unit's death, her babies mature, hatching young Spiderlings to aid her in the battlefield.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Damage: 220/320/420 (300/400/500 with talent)",
+                        "Move Speed Slow: 25%/35%/45%",
+                        "Number of Spiderlings: 4/5/6",
+                        "Spiderling Duration: 40",
+                        "Max Stacks: 7",
+                        "Debuff Duration: 20"
+                    ],
+                    "interaction_notes": [
+                        "Multiple debuff instances work independently",
+                        "Spiderlings are created upon affected unit's death",
+                        "Only affects Broodmother's Spiderlings with web bonuses"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Spinner's Snare",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "30",
+                    "mana_cost": "2",
+                    "cast_range": "600 (Global with scepter)",
+                    "cast_animation": "0.2 + 0.5",
+                    "description": "Creates invisible web-snares next to any current webs that acts as a trap. The snares have an activation delay.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "point_target",
+                        "vector_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Max Snares: 5",
+                        "Line Length: 900",
+                        "Line Width: 50",
+                        "Activation Delay: 2",
+                        "Damage per Second: 100",
+                        "Root Duration: 2.75",
+                        "Effect Delay: 0.25"
+                    ],
+                    "interaction_notes": [
+                        "Requires Aghanim's Scepter to unlock",
+                        "Enemy heroes crossing the web spring the trap",
+                        "Multiple heroes can trip the same snare",
+                        "Provides minimap alert when triggered"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39b",
+                    "date": "2025-05-29",
+                    "changes": [
+                        "Spin Web Necrotic Webs now follows the health restoration mechanic",
+                        "Applies a 10%/15%/20%/25% health restoration reduction"
+                    ]
+                },
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "CHANGED Spider's Milk buff dispel type from Death to None",
+                        "LVL 10 +0.5% Spider's Milk enemy max health as heal increased to +1.5%",
+                        "LVL 15 -5s Spin Web charge restore time → +12 Incapacitating Bite attack damage bonus",
+                        "LVL 20 +12 Incapacitating Bite attack damage bonus → -5s Spin Web charge restore time"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Reduced base attack damage from 29‒35 to 27‒33",
+                        "Spin Web Necrotic Webs no longer affect the enemy's Fountain area"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156742,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

@@ -42,62 +42,62 @@
     {
         "urlName": "Beastmaster",
         "displayName": "Beastmaster",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Bloodseeker",
         "displayName": "Bloodseeker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Bounty_Hunter",
         "displayName": "Bounty Hunter",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Brewmaster",
         "displayName": "Brewmaster",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Bristleback",
         "displayName": "Bristleback",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Broodmother",
         "displayName": "Broodmother",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Centaur_Warrunner",
         "displayName": "Centaur Warrunner",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Chaos_Knight",
         "displayName": "Chaos Knight",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Chen",
         "displayName": "Chen",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Clinkz",
         "displayName": "Clinkz",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Clockwerk",
         "displayName": "Clockwerk",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Crystal_Maiden",
         "displayName": "Crystal Maiden",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Dark_Seer",

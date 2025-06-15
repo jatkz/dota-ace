@@ -1,0 +1,375 @@
+{
+    "converted": {
+        "hero_name": "Brewmaster",
+        "sections": {
+            "general": {
+                "primary_attribute": "universal",
+                "strength": 23,
+                "strength_gain": 3.7,
+                "agility": 19,
+                "agility_gain": 2,
+                "intelligence": 17,
+                "intelligence_gain": 1.6,
+                "health": 626,
+                "mana": 279,
+                "armor": 3.17,
+                "magic_resist": 26.7,
+                "damage": [
+                    52,
+                    59
+                ],
+                "damage_avg": 56.05,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.35 + 0.65",
+                "move_speed": 310,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Initiator, Durable, Disabler, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Roll Out the Barrel",
+                    "effects": "Cinder Brew is now a point-targeted ability, and rolls the whole barrel toward the direction upon cast, damaging and debuffing enemies that it collides with on its way. Upon reaching the impact location, the barrel explodes, drenching enemy units within the radius in brew."
+                },
+                "facet_2": {
+                    "name": "Drunken Master",
+                    "effects": "Moves with a varying amount of movement speed, alternating between moving slower and faster when the Drunken Master is Brewed Up! -15% Move Speed, +50% Move Speed"
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Primal Companion ability",
+                        "Summons a permanent companion corresponding of the current Drunken Brawler element, and of Primal Split's corresponding level"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Primal Split Cancel ability",
+                        "The fragments grants Brewmaster the ability to reunite all spiritual schisms back to one",
+                        "Ends Primal Split immediately, Brewmaster reappears based on the Primal Split Brewlings priority",
+                        "Increases duration"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "Cinder Brew Applies Fear Upon Proc",
+                        "Grants Brewlings Drunken Brawler Passive"
+                    ],
+                    "level_20": [
+                        "+110 Attack Speed",
+                        "+1200 Brewlings Health"
+                    ],
+                    "level_15": [
+                        "+1x Drunken Brawler Brewed Up Factor",
+                        "+30% Cinder Brew Damage/Duration"
+                    ],
+                    "level_10": [
+                        "+1.5s Thunder Clap Duration",
+                        "+10 Brewlings Attack Damage"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Belligerent",
+                        "type": "passive",
+                        "description": "Grants bonus attack damage for a period of time upon respawning.",
+                        "values": {
+                            "attack_damage_bonus": "25%",
+                            "respawn_buff_duration": 45,
+                            "buff_duration": 15
+                        },
+                        "details": "Grants bonus attack damage for a shorter period of time upon reassembling himself from Primal Split."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Brewmaster's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+                        "values": {},
+                        "details": "Contains various hidden innate abilities that can be tapped for more details."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Thunder Clap",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "18/16/14/12",
+                    "mana_cost": "90/100/110/120",
+                    "cast_range": "325/350/375/400",
+                    "cast_animation": "0.35 + 0.45",
+                    "cast_radius": "325/350/375/400",
+                    "details": "Slams the ground, dealing damage and applies a movement speed slow and attack speed slow within the radius.",
+                    "description": "A slam of Mangix' mighty keg starts the festivities.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Reapplying the debuff neither updates the movement speed slow nor attack speed slow values, but refreshes the duration",
+                        "The current instance must expire to update the ability slow values"
+                    ],
+                    "interaction_notes": [
+                        "Effect Radius: 325/350/375/400",
+                        "Damage: 80/160/240/320",
+                        "Move Speed Slow: 15%/30%/45%/60%",
+                        "Attack Speed Slow: 15/30/45/60",
+                        "Duration: 4 (5.5 with talent)"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Cinder Brew",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Spell / Magical / Physical",
+                    "damage_types": [
+                        "magical",
+                        "physical"
+                    ],
+                    "cooldown": "19/17/15/13",
+                    "mana_cost": "50/60/70/80",
+                    "cast_range": "700",
+                    "cast_animation": "0.2 + 0.4",
+                    "cast_radius": "400",
+                    "details": "Drenches himself and an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage.",
+                    "description": "The Order of the Oyo's solution to all problems - another round!",
+                    "facet_effects": {
+                        "roll_out_the_barrel": {
+                            "cast_range": 950,
+                            "barrel_collision_radius": 75,
+                            "travel_distance": 950,
+                            "barrel_debuff_radius": 350,
+                            "final_explosion_radius": 400,
+                            "damage": "40/70/100/130"
+                        },
+                        "drunken_master": {
+                            "self_move_speed_slow": "15%",
+                            "self_move_speed_bonus": "50%"
+                        }
+                    },
+                    "ability_behavior": [
+                        "area_target",
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Effect Radius: 400",
+                        "Move Speed Slow: 24%/28%/32%/36%",
+                        "Total Damage Instances: 8",
+                        "Total Proc Damage: 80/160/240/320 (104/208/312/416 with talent)",
+                        "First Debuff Duration: 5 (6.5 with talent)",
+                        "Fear Duration: 1.5 (with talent)",
+                        "Debuff Duration Increase: 3",
+                        "Buff Duration: 5 (6.5 with talent)"
+                    ],
+                    "interaction_notes": [
+                        "Cinder Brew Factor: 2.5 (3.5 with talent)",
+                        "The Drunken Brawler stances are stronger when the drunken master is Brewed Up!"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Drunken Brawler",
+                    "key": "E",
+                    "type": "toggle",
+                    "affects": "Self / Enemy Units / Brewlings",
+                    "damage": "N/A",
+                    "damage_types": [],
+                    "cooldown": "0",
+                    "mana_cost": 0,
+                    "cast_range": "N/A",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "N/A",
+                    "details": "Switches stance based on the element the Brewmaster controls, granting bonuses and adapting to the battlefield.",
+                    "description": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
+                    "facet_effects": {
+                        "cinder_brew_factor": "2.5 (3.5 with talent)",
+                        "earth_stance": {
+                            "armor_bonus": "2/4/6/8",
+                            "magic_resist_bonus": "5%/10%/15%/20%"
+                        },
+                        "storm_stance": {
+                            "evasion": "15%/20%/25%/30%",
+                            "move_speed_bonus": "4%/6%/8%/10%"
+                        },
+                        "fire_stance": {
+                            "attack_speed_bonus": "10/15/20/25",
+                            "proc_chance": "20%",
+                            "crit_damage": "120%/140%/160%/180%"
+                        },
+                        "void_stance": {
+                            "status_resist_bonus": "5%/10%/15%/20%",
+                            "move_speed_slow": "10%/15%/20%/25%",
+                            "slow_duration": 2
+                        }
+                    },
+                    "ability_behavior": [
+                        "no_target",
+                        "toggle",
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "varies",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "All ability effects are exaggerated two-folds or possibly more while being affected by Cinder Brew",
+                        "This ability levels up with Primal Companion"
+                    ],
+                    "interaction_notes": [
+                        "Interrupts Brewmaster's channeling abilities upon toggling between stances",
+                        "Switch stances: Earth Stance → Storm Stance → Fire Stance → Void Stance → Earth Stance"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Primal Companion",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Self / Brewlings",
+                    "damage": "Instant Kill",
+                    "damage_types": [
+                        "instant_kill"
+                    ],
+                    "cooldown": "20",
+                    "mana_cost": "50",
+                    "cast_range": "N/A",
+                    "cast_animation": "0.3 + 0.33",
+                    "cast_radius": "N/A",
+                    "details": "Summons a permanent companion corresponding of the current Drunken Brawler element, and of Primal Split's corresponding level.",
+                    "description": "Mangix doesn't hold to it by rule, but he vaguely recalls an old master musing that, if one could manage, scaring up a companion was always preferable to drinking alone.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Number of Brewlings: 1",
+                        "Duration: Permanent",
+                        "Companion Death Set Cooldown: 70",
+                        "Downtime: 3",
+                        "This ability cannot be acquired by the Grand Magus by design",
+                        "The primal companion cannot be resummoned if the current summon receive damage from player-controlled units"
+                    ],
+                    "interaction_notes": [
+                        "Sub-ability of Primal Split",
+                        "This ability levels up with Drunken Brawler",
+                        "Acquiring Aghanim's Scepter unlocks this ability"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Primal Split",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Self",
+                    "damage": "Instant Kill",
+                    "damage_types": [
+                        "instant_kill"
+                    ],
+                    "cooldown": "140/130/120",
+                    "mana_cost": "150/200/250",
+                    "cast_range": "N/A",
+                    "cast_animation": "0.55 + 0",
+                    "cast_radius": "N/A",
+                    "details": "Splits Brewmaster into elements of nature, forming various specialized Brewling warriors, each with their own abilities. If any of them survives until the end of its summoned timer, the Brewmaster reborns.",
+                    "description": "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Split Time: 0.6",
+                        "Spawn Distance: 100",
+                        "Duration: 16/18/20 (24/26/28 with shard)",
+                        "The Brewlings are unable to activate runes, but they can attack and destroy them",
+                        "Current Health as Damage: 100%",
+                        "Cast Cooldown: 0 (with scepter)",
+                        "Attack Damage Bonus: 10 (with talent)",
+                        "Health Bonus: 1200 (with talent)"
+                    ],
+                    "interaction_notes": [
+                        "This ability levels up with Primal Companion",
+                        "Aghanim's Scepter Upgrade: Resets Primal Companion's cooldown and instant kills the current Brewling companion",
+                        "Aghanim's Shard Upgrade: Increases duration",
+                        "Talent Upgrade: Grants certain stat bonuses tailored for the elements"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Thunder Clap: Reduced cast point from 0.4 to 0.35",
+                        "Thunder Clap: Increased damage from 75/150/225/300 to 80/160/240/320",
+                        "Thunder Clap: Rescaled cooldown from 16/15/14/13 to 18/16/14/12",
+                        "Reduced Cinder Brew cooldown from 22/19/16/13 to 19/17/15/13",
+                        "Primal Split Earth: Increased attack damage from 15/45/75‒25/55/85 to 20/55/90‒30/65/100",
+                        "Primal Split Earth: Reduced Demolish building attack damage bonus from 80/140/200 to 50/100/150",
+                        "Primal Split Fire: Increased Permanent Immolation radius from 200 to 250",
+                        "Primal Split Storm: Cyclone now deals 75 landing magical spell damage",
+                        "Primal Split Storm: Increased Wind Walk movement speed bonus from 20%/30%/40% to 25%/35%/45%",
+                        "Talents: LVL 20 +100 attack speed increased to +110"
+                    ]
+                },
+                {
+                    "version": "7.38c",
+                    "date": "2025-03-27",
+                    "changes": [
+                        "Earth: Increased Debuff Immunity magic resistance bonus from 50% to 80%",
+                        "Void: Astral Pull increased pull distance from 300/500/700 to 450/575/700",
+                        "Void: Astral Pull increased damage from 50/100/150 to 75/150/225"
+                    ]
+                },
+                {
+                    "version": "7.38b",
+                    "date": "2025-03-05",
+                    "changes": [
+                        "Increased Belligerent respawn buff duration from 30 to 45",
+                        "Talents: LVL 10 +200 Thunder Clap radius → +1.5s Thunder Clap duration"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156789,
+            "sections_found": 5,
+            "parse_time_ms": 847,
+            "success_rate": "100%"
+        }
+    }
+}

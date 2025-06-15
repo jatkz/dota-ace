@@ -1,0 +1,246 @@
+{
+    "converted": {
+        "hero_name": "Bloodseeker",
+        "sections": {
+            "general": {
+                "primary_attribute": "agility",
+                "strength": 24,
+                "strength_gain": 2.7,
+                "agility": 24,
+                "agility_gain": 3.1,
+                "intelligence": 17,
+                "intelligence_gain": 2,
+                "health": 648,
+                "mana": 279,
+                "armor": 6,
+                "magic_resist": 26.7,
+                "damage": [
+                    59,
+                    65
+                ],
+                "damage_avg": 62,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.43 + 0.74",
+                "move_speed": 285,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Disabler, Nuker, Initiator"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Arterial Spray",
+                    "effects": "Attacks on the Rupture-affected unit now applies a non-disabling forced movement toward the direction Bloodseeker is facing."
+                },
+                "facet_2": {
+                    "name": "Old Blood",
+                    "effects": ""
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Bloodseeker heals for a percentage of all pure damage he deals.",
+                        "Causes Bloodseeker attacks to deal a percentage of the target's max health as pure damage."
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Passively converts all of Bloodseeker's overheal from his abilities into a damage barrier."
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+18% Thirst Max Move Speed",
+                        "2 Rupture Charges"
+                    ],
+                    "level_20": [
+                        "-0.7% Bloodrage Max Health Damage Per Second",
+                        "+425 Rupture Cast Range"
+                    ],
+                    "level_15": [
+                        "+100 Blood Rite Damage",
+                        "+8% Rupture Current Health to Damage"
+                    ],
+                    "level_10": [
+                        "+15% Bloodrage Spell Amp",
+                        "+175 Health"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Sanguivore",
+                        "type": "passive",
+                        "description": "The seeker is invigorated by the wounds of his enemies, and self-heals for the max health of the killed unit, or if Bloodseeker's allies kill a nearby enemy hero. Self-heal is less effective from denying his allies.",
+                        "values": {
+                            "enemy_hero_death_heal_radius": 300,
+                            "ally_kill_factor": 0.5,
+                            "deny_factor": 1,
+                            "base_lifesteal": 25,
+                            "hero_max_health_as_lifesteal": "1%",
+                            "self_level_factor": 1,
+                            "creep_lifesteal_factor": 0.6
+                        },
+                        "details": "This ability levels up with Bloodseeker."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Bloodrage",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Allied Heroes / Self / Enemy Units",
+                    "damage": "HP Removal / Pure / Attack / Pure",
+                    "cooldown": "14/12/10/8",
+                    "mana_cost": 0,
+                    "cast_range": "800",
+                    "cast_animation": "0.2 + 0.4",
+                    "description": "Causes the affected unit to attack faster and deal more spell damage at the cost of a percentage of its health per second.",
+                    "details": "Strygwyr shares his animalistic thirst for bloodshed.",
+                    "values": {
+                        "max_health_as_self_damage_per_second": "1.4%",
+                        "attack_speed_bonus": "30/45/60/75",
+                        "spell_damage_amp": "15%/20%/25%/30%",
+                        "duration": 8,
+                        "self_attack_speed_bonus": "60/90/120/150",
+                        "pure_attack_damage_per_hit": 35,
+                        "percentage_per_hit": "3%"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "scepter_upgradable": true,
+                    "shard_upgradable": true
+                },
+                "ability_2": {
+                    "name": "Blood Rite",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "cooldown": "15/14/13/12",
+                    "mana_cost": "90/100/110/120",
+                    "cast_range": "1500",
+                    "cast_animation": "0.3 + 0.57",
+                    "cast_radius": "600",
+                    "description": "The ritual completes after a delay, causing any enemies caught in the area to take damage and become silenced.",
+                    "details": "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle.",
+                    "values": {
+                        "radius": 600,
+                        "effect_delay": 2.6,
+                        "damage": "90/140/190/240",
+                        "silence_duration": "3/4/5/6"
+                    },
+                    "ability_behavior": [
+                        "point_target"
+                    ],
+                    "pierces_spell_immunity": false
+                },
+                "ability_3": {
+                    "name": "Thirst",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Self / Enemy Units",
+                    "description": "Sensing blood of the mortally wounded, Bloodseeker gains bonus movement speed when an enemy hero's health falls below a certain threshold, with the bonuses increasing as their health falls further. These insatiable bonuses stack per hero.",
+                    "details": "Strygwyr becomes frenzied when blood is spilled.",
+                    "values": {
+                        "effect_radius": "Global",
+                        "enemy_max_health_for_min_bonus": "99%",
+                        "enemy_max_health_for_max_bonus": "25%",
+                        "max_move_speed_bonus_per_enemy": "16%/24%/32%/40%",
+                        "speed_linger_duration": 4,
+                        "detection_radius": "Global",
+                        "visibility_health_threshold": "25%",
+                        "deactivation_health_threshold": "99%",
+                        "vision_linger_duration": 4
+                    },
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false
+                },
+                "ability_4": {
+                    "name": "Rupture",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Pure",
+                    "cooldown": "75/70/65",
+                    "mana_cost": "100/150/200",
+                    "cast_range": "800",
+                    "cast_animation": "0.4 + 0.53",
+                    "description": "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved.",
+                    "details": "When the Bloodseeker hunts you, injuries become fatalities.",
+                    "values": {
+                        "current_health_as_first_damage": "10%",
+                        "moved_distance_as_bonus_damage_factor": "0.35/0.45/0.55",
+                        "duration": "9/10/11"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "ADDED Old Blood facet for Bloodrage",
+                        "Reduced Bloodrage cast range from 800 to 400 for Old Blood facet",
+                        "No longer grants 15%/20%/25%/30% outgoing spell amplification for Old Blood facet",
+                        "Now grants 10%/15%/20%/25% base attack damage bonus for Old Blood facet",
+                        "Applies a 8-second silence for Old Blood facet",
+                        "Enables enemy units casting for Old Blood facet",
+                        "Increased mana cost from 0 to 60 for Old Blood facet",
+                        "REMOVED the Bloodrush facet from Thirst",
+                        "LVL 10 talent changed from +15% Bloodrage spell damage amplification to +15% Bloodrage base attack damage bonus",
+                        "LVL 10 talent changed from +25 Bloodrage attack speed to +175 health"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "CHANGED Blood Rite damage type from Magical to Pure",
+                        "Reduced Blood Rite damage from 115/190/265/340 to 90/145/200/255",
+                        "Reduced Thirst Bloodrush self movement speed bonus from 50% on each level to 6%/12%/18%/24%",
+                        "Now grants 0.5 * 6%/12%/18%/24% self movement speed bonus while the active component is on cooldown",
+                        "Increased active lifesteal factor from 1 to 2",
+                        "REWORKED Aghanim's Scepter upgrade",
+                        "REWORKED Aghanim's Shard upgrade",
+                        "LVL 15 talent +135 Blood Rite damage reduced to +100",
+                        "LVL 20 talent 15% spell lifesteal changed to -0.7% Bloodrage max health as self-damage per second"
+                    ]
+                },
+                {
+                    "version": "7.37d",
+                    "date": "2024-10-01",
+                    "changes": [
+                        "Reduced Bloodrage mana cost from 25 to 0"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 150000,
+            "sections_found": 5,
+            "parse_time_ms": 850,
+            "success_rate": "100%"
+        }
+    }
+}

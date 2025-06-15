@@ -18,7 +18,7 @@ class ClaudeClient {
             // fetch: fetch 
         });
         this.defaultModel = 'claude-sonnet-4-20250514';
-        this.max_tokens = 4000;
+        this.max_tokens = 5000;
         this.temperature = 0;
         const systemPrompt = fs.readFileSync(templatePath, 'utf8');
         this.system = systemPrompt

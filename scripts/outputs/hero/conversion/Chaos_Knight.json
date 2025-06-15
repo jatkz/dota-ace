@@ -1,0 +1,293 @@
+{
+    "converted": {
+        "hero_name": "Chaos Knight",
+        "sections": {
+            "general": {
+                "primary_attribute": "strength",
+                "strength": 24,
+                "strength_gain": 3.1,
+                "agility": 18,
+                "agility_gain": 1.8,
+                "intelligence": 18,
+                "intelligence_gain": 1.2,
+                "health": 648,
+                "mana": 291,
+                "armor": 5,
+                "magic_resist": 26.8,
+                "damage": [
+                    48,
+                    78
+                ],
+                "damage_avg": 63,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.5 + 0.5",
+                "move_speed": 325,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Carry, Disabler, Durable, Pusher, Initiator"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Irrationality",
+                    "effects": "Reality Rift has an equal random chance to either apply Break, or Disarm, or Silence on the affected enemy unit. The debuff duration is a portion of the armor reduction duration."
+                },
+                "facet_2": {
+                    "name": "Fundamental Forging",
+                    "effects": "When Chaos Knight crafts a neutral item, 2 of his Artifact choices will be for the current tier and 2 of his choices will be for the next tier (if possible). He is not able to keep his current Artifact between tiers."
+                },
+                "facet_3": {
+                    "name": "Cloven Chaos",
+                    "effects": "Chaos Bolt splits in half on impact, stunning one additional enemy unit and damaging another. Prioritizes heroes."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Globally creates an illusion of each allied heroes, this also creates an additional illusion for Chaos Knight as well."
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Creates a weaker Phantasm-based illusion to attack the affected enemy unit upon the projectile impact."
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+10s Phantasm Duration",
+                        "+10% Chaos Strike Chance"
+                    ],
+                    "level_20": [
+                        "Reality Rift Pierces Spell Immunity",
+                        "+0.6 Min/Max Chaos Bolt Duration"
+                    ],
+                    "level_15": [
+                        "+10 Strength",
+                        "-3s Chaos Bolt Cooldown"
+                    ],
+                    "level_10": [
+                        "+225 Reality Rift Pull Distance",
+                        "+30% Chaos Strike Lifesteal"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Reins of Chaos",
+                        "type": "passive",
+                        "description": "Chaos Knight has a chance to create an additional illusion per illusion-creating source.",
+                        "values": {
+                            "proc_chance": "50%",
+                            "number_of_illusions_per_ability_cast": 1
+                        },
+                        "details": "Both offensive and defensive illusion-creating sources now create 1 additional Chaos Knight-based illusion upon proc, following the illusion source's base illusion stats."
+                    },
+                    {
+                        "name": "Fundamental Forging",
+                        "type": "passive",
+                        "description": "When Chaos Knight crafts a neutral item, 2 of his Artifact choices will be for the current tier and 2 of his choices will be for the next tier (if possible). He is not able to keep his current Artifact between tiers.",
+                        "values": {
+                            "current_level_artifact_options": 2,
+                            "next_level_artifact_options": 2
+                        },
+                        "details": "Selecting the Fundamental Forging facet unlocks this ability."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Chaos Knight's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+                        "values": {},
+                        "details": "Contains various hidden innate abilities that can be tapped for more details."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Chaos Bolt",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "13/12/11/10",
+                    "mana_cost": 110,
+                    "cast_range": "600",
+                    "cast_animation": "0.4 + 0.4",
+                    "cast_radius": "",
+                    "details": "Throws a mysterious bolt of energy at the target unit that stuns for a random duration and deals random damage.",
+                    "description": "Throws a mysterious bolt of energy at the target unit that stuns for a random duration and deals random damage.",
+                    "facet_effects": {
+                        "cloven_chaos": "Chaos Bolt splits in half on impact, stunning one additional enemy unit and damaging another. Prioritizes heroes."
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "The stun and magical spell damage values applied are inversely related — the higher the damage, the shorter the stun, and vice versa.",
+                        "The stun duration applied is a random value between the min and max duration.",
+                        "Has a 700-projectile speed and can travel up to a max 0.86 seconds."
+                    ],
+                    "interaction_notes": [
+                        "All Chaos Knight's illusions casts a fake Chaos Bolt within a certain distance of the affected enemy unit.",
+                        "Creates a Phantasm-based illusion upon projectile impact with Aghanim's Shard."
+                    ]
+                },
+                "ability_2": {
+                    "name": "Reality Rift",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "18/14/10/6",
+                    "mana_cost": 50,
+                    "cast_range": "600/650/700/750",
+                    "cast_animation": "0.2 + 0.6",
+                    "cast_radius": "",
+                    "details": "Teleports Chaos Knight and all illusions he has and the targeted unit to a point along the line between both of them. Applies armor reduction to the affected enemy unit.",
+                    "description": "Teleports Chaos Knight and all illusions he has and the targeted unit to a point along the line between both of them. Applies armor reduction to the affected enemy unit.",
+                    "facet_effects": {
+                        "irrationality": "Reality Rift has an equal random chance to either apply Break, or Disarm, or Silence on the affected enemy unit. The debuff duration is a portion of the armor reduction duration."
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Neither disjoints incoming projectiles for Chaos Knight nor for the affected enemy.",
+                        "The final teleport location for both Chaos Knight and the unit-targeted enemy is determined upon the ability's cast point.",
+                        "All Chaos Knight's illusions are teleported from random angles within the search radius."
+                    ],
+                    "interaction_notes": [
+                        "Roshan is innately immune to the offensive teleport component.",
+                        "Talent upgrade allows piercing spell immunity."
+                    ]
+                },
+                "ability_3": {
+                    "name": "Chaos Strike",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Enemy Units / Self",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "",
+                    "mana_cost": "",
+                    "cast_range": "",
+                    "cast_animation": "",
+                    "cast_radius": "",
+                    "details": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for the percentage of the damage.",
+                    "description": "Chaos Knight and his illusions' attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for the percentage of the damage.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "passive"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "The proc is determined during Chaos Knight's attack point.",
+                        "Chaos Strike uses pseudo-random distribution.",
+                        "Grants the critical strike procs lifesteal as well."
+                    ],
+                    "interaction_notes": [
+                        "Lifesteal is less effective when attacking creeps.",
+                        "Does not proc on allied units, buildings, or ward-type units."
+                    ]
+                },
+                "ability_4": {
+                    "name": "Phantasm",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Self / Allied Heroes",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "75",
+                    "mana_cost": "100/200/300",
+                    "cast_range": "",
+                    "cast_animation": "0.4 + 0",
+                    "cast_radius": "",
+                    "details": "Summons several phantasm copies of the Chaos Knight from alternate dimensions.",
+                    "description": "Summons several phantasm copies of the Chaos Knight from alternate dimensions.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Chaos Knight is hidden upon cast; this disjoints incoming projectiles.",
+                        "The 0.5-second split time.",
+                        "Applies a basic dispel on Chaos Knight."
+                    ],
+                    "interaction_notes": [
+                        "The phantasms are illusions that deals as much damage as Chaos Knight and receives additional incoming damage.",
+                        "Aghanim's Scepter globally creates an illusion of each allied heroes."
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Chaos Bolt: Increased max damage from 150/230/310/390 to 155/240/325/410.",
+                        "Chaos Bolt: Increased Cloven Chaos bounce range factor from 0.6 to 0.7."
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Increased agility gain from 1.4 to 1.8.",
+                        "REMOVED the Phantasmagoria facet.",
+                        "ADDED the Fundamental Forging ability.",
+                        "Chaos Bolt: Increased cast range from 500 to 600.",
+                        "Chaos Bolt: ADDED the Cloven Chaos facet.",
+                        "Chaos Strike: Reduced creep damage factor from 1.9 to 1.",
+                        "Chaos Strike: Reduced min crit damage from 125% to 120%.",
+                        "Chaos Strike: Increased max crit damage from 140%/175%/210%/245% to 140%/180%/220%/260%.",
+                        "Chaos Strike: Now follows the global lifesteal mechanic.",
+                        "Aghanim's Shard upgrade: Cloven Chaos only creates Phantasm-based illusion on the primary unit-targeted enemy."
+                    ]
+                },
+                {
+                    "version": "7.37",
+                    "date": "2024-07-31",
+                    "changes": [
+                        "CHANGED one of the Irrationality Reality Rift ability effects from applying nothing to applying Silence."
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 157000,
+            "sections_found": 5,
+            "parse_time_ms": 850,
+            "success_rate": "100%"
+        }
+    }
+}

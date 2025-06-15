@@ -1,0 +1,329 @@
+{
+    "converted": {
+        "hero_name": "Bounty Hunter",
+        "sections": {
+            "general": {
+                "primary_attribute": "agility",
+                "strength": 19,
+                "strength_gain": 2.5,
+                "agility": 21,
+                "agility_gain": 2.6,
+                "intelligence": 20,
+                "intelligence_gain": 1.9,
+                "health": 538,
+                "mana": 315,
+                "armor": 8.5,
+                "magic_resist": 27,
+                "damage": [
+                    54,
+                    62
+                ],
+                "damage_avg": 58,
+                "projectile_speed": "Instant",
+                "attack_type": "melee",
+                "attack_range": 150,
+                "attack_speed": 100,
+                "bat": 1.5,
+                "animation": "0.59 + 0.59",
+                "move_speed": 325,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 1000",
+                "roles": "Escape, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Through and Through",
+                    "effects": "The Shuriken Toss projectile damages and slows all units it passes through."
+                },
+                "facet_2": {
+                    "name": "Cutpurse",
+                    "effects": "Steals gold per offensive unit-targeted ability cast, including item abilities and from Spell Reflection sources, on enemy heroes. This ability component levels up with Track."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Applies an instance of Jinada and increases cast range"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Friendly Shadow ability",
+                        "Applies an invisibility buff based on Shadow Walk of the corresponding level",
+                        "Has a slightly longer fade time duration for allied heroes",
+                        "Reduces cooldown"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "No Jinada Cooldown",
+                        "+250 Shuriken Toss Damage"
+                    ],
+                    "level_20": [
+                        "+50 Jinada Gold Steal",
+                        "Track Grants Shared Vision"
+                    ],
+                    "level_15": [
+                        "+50 Track Gold",
+                        "-30% Shadow Walk Incoming Damage"
+                    ],
+                    "level_10": [
+                        "+25 Attack Damage",
+                        "+0.65s Shuriken Toss Slow"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Big Game Hunter",
+                        "type": "passive",
+                        "description": "Grants bonus gold to Gondar for kills or assists on an enemy hero with a kill streak.",
+                        "values": {
+                            "streak_gold_factor": 1.2
+                        },
+                        "details": "Hidden Modifier"
+                    },
+                    {
+                        "name": "Cutpurse",
+                        "type": "passive",
+                        "description": "Steals gold per offensive unit-targeted ability cast, including item abilities and from Spell Reflection sources, on enemy heroes.",
+                        "values": {
+                            "gold_change": "4/11/18/25"
+                        },
+                        "details": "This ability levels up with Track. Selecting the Cutpurse facet unlocks this ability."
+                    },
+                    {
+                        "name": "Hero Model",
+                        "type": "passive",
+                        "description": "Gondar's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+                        "values": {},
+                        "details": "Contains various hidden innate abilities"
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Shuriken Toss",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Spell",
+                    "damage_types": [
+                        "Magical"
+                    ],
+                    "cooldown": "5",
+                    "mana_cost": "75/80/85/90",
+                    "cast_range": "375/425/475/525",
+                    "cast_animation": "0.3 + 0.43",
+                    "cast_radius": "1200",
+                    "details": "Hurls a deadly shuriken at an enemy unit, dealing damage and slowing the target.",
+                    "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and slowing the target. Gondar's shuriken has the Tracked units in his sight and bounces to any Tracked units within the radius of each other.",
+                    "facet_effects": {
+                        "through_and_through": "The projectile damages and slows all units it passes through with projectile radius of 175"
+                    },
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Damage: 100/170/240/310",
+                        "Move Speed Slow: 100%",
+                        "Slow Duration: 0.35",
+                        "Bounce Search Radius: 1200",
+                        "Bounce per Target: 1"
+                    ],
+                    "interaction_notes": [
+                        "Can be disjointed by all affected units individually",
+                        "The projectile stop bouncing upon disjointed",
+                        "Does not proc Spell Reflection sources on secondary units"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Jinada",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units / Self",
+                    "damage": "Physical",
+                    "damage_types": [
+                        "Physical"
+                    ],
+                    "cooldown": "9/7/5/3",
+                    "mana_cost": 0,
+                    "cast_range": "150",
+                    "cast_animation": "0.59 + 0.59",
+                    "cast_radius": "",
+                    "details": "Deals bonus damage and stealing some unreliable gold when off-cooldown.",
+                    "description": "Deals bonus damage and stealing some unreliable gold when off-cooldown. Gondar's vast experience ensures he never walks away from a transaction empty-handed.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "autocast",
+                        "active_attack_modifier"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Attack Damage Bonus: 70/105/140/175",
+                        "Gold Change: 12/20/28/36"
+                    ],
+                    "interaction_notes": [
+                        "The unreliable gold change component only affects enemy heroes",
+                        "Considers clones as heroes, illusions and creep-heroes as creeps",
+                        "Does not affect Buildings or Ward-type units"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Shadow Walk",
+                    "key": "E",
+                    "type": "active",
+                    "affects": "Self / Enemy Units",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "18/17/16/15",
+                    "mana_cost": 50,
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "",
+                    "details": "Gondar becomes invisible and gains the ability to move through other units until he attacks or uses an ability. If he breaks the invisibility with an attack, that attack will stun the target for a short duration.",
+                    "description": "Gondar becomes invisible and gains the ability to move through other units until he attacks or uses an ability. If he breaks the invisibility with an attack, that attack will stun the target for a short duration.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Fade Time: 1/0.75/0.5/0.25",
+                        "Invisibility Duration: 20/25/30/35",
+                        "Enemy Stun Duration: 0.8/1/1.2/1.4",
+                        "Damage Reduction: 0%"
+                    ],
+                    "interaction_notes": [
+                        "Does not interrupt Gondar's channeling abilities upon cast",
+                        "Recasting the ability refreshes the buff duration",
+                        "Does not break invisibility on missed attacks or item interactions"
+                    ]
+                },
+                "ability_4": {
+                    "name": "Friendly Shadow",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Allied Heroes / Enemy Units",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "13/12/11/10",
+                    "mana_cost": 50,
+                    "cast_range": "650",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "",
+                    "details": "Applies an invisibility buff based on Shadow Walk of the corresponding level. Has a slightly longer fade time duration for allied heroes.",
+                    "description": "Applies an invisibility buff based on Shadow Walk of the corresponding level. Has a slightly longer fade time duration for allied heroes. Friendly Shadow does not break Gondar's Shadow Walk upon cast.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Fade Time: 0.5",
+                        "Invisibility Duration: 20/25/30/35",
+                        "Enemy Stun Duration: 0.8/1/1.2/1.4",
+                        "Damage Reduction: 0%"
+                    ],
+                    "interaction_notes": [
+                        "Acquiring Aghanim's Shard unlocks this ability",
+                        "This ability levels up with Shadow Walk",
+                        "Does not need to turn to cast this ability within its cast range"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Track",
+                    "key": "R",
+                    "type": "active",
+                    "affects": "Heroes",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "6/5/4",
+                    "mana_cost": 60,
+                    "cast_range": "1000",
+                    "cast_animation": "0.3 + 0.43",
+                    "cast_radius": "1200",
+                    "details": "Grants True Sight, applies an incoming damage amplification debuff, and information on how much gold the affected enemy unit is carrying. If the Tracked enemy unit dies, Gondar collects a bonus gold bounty. Track does not break Gondar's Shadow Walk upon cast.",
+                    "description": "Grants True Sight, applies an incoming damage amplification debuff, and information on how much gold the affected enemy unit is carrying. If the Tracked enemy unit dies, Gondar collects a bonus gold bounty.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Damage Amp: 8%/12%/16%",
+                        "Debuff Duration: 25",
+                        "Gold Bonus: 130/225/320",
+                        "Move Speed Bonus: 12%/16%/20%",
+                        "Ally Bonus Gold: 40/80/120"
+                    ],
+                    "interaction_notes": [
+                        "Does not break Shadow Walk's invisibility upon cast",
+                        "All ability effects are applied immediately on the unit-targeted enemy",
+                        "Grants unreliable gold upon the Tracked enemy hero's death within the radius"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Aghanim's Shard upgrade: Reduced Friendly Shadow ally fade time from 1 to 0.5",
+                        "Talents: LVL 10 +20 attack damage increased to +25"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Increased Cutpurse gold change from 4/8/12/16 to 4/11/18/25",
+                        "Track: Rescaled enemy incoming damage amplification from 6%/12%/18% to 8%/12%/16%",
+                        "Track: Reduced self movement speed bonus from 16%/20%/24% to 12%/16%/20%",
+                        "Talents: LVL 10 +30 Jinada damage → +20 attack damage",
+                        "Talents: LVL 15 +45 Track Gold increased to +50"
+                    ]
+                },
+                {
+                    "version": "7.37e",
+                    "date": "2024-11-19",
+                    "changes": [
+                        "Increased Shuriken Toss mana cost from 65/70/75/80 to 75/80/85/90"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 156000,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}

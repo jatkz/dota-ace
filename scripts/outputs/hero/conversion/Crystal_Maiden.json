@@ -1,0 +1,328 @@
+{
+    "converted": {
+        "hero_name": "Crystal Maiden",
+        "sections": {
+            "general": {
+                "primary_attribute": "intelligence",
+                "strength": 17,
+                "strength_gain": 2.2,
+                "agility": 16,
+                "agility_gain": 1.8,
+                "intelligence": 18,
+                "intelligence_gain": 3.3,
+                "health": 494,
+                "mana": 291,
+                "armor": 2.67,
+                "magic_resist": 26.8,
+                "damage": [
+                    48,
+                    54
+                ],
+                "damage_avg": 51,
+                "projectile_speed": 900,
+                "attack_type": "ranged",
+                "attack_range": 600,
+                "attack_speed": 100,
+                "bat": 1.7,
+                "animation": "0.45 + 0",
+                "move_speed": 280,
+                "turn_rate": 0.6,
+                "collision_size": 27,
+                "bound_radius": 24,
+                "vision_range": "1800 / 800",
+                "roles": "Support, Disabler, Nuker"
+            },
+            "facets": {
+                "facet_1": {
+                    "name": "Glacial Guard",
+                    "effects": "Increases Crystal Nova radius and grants allied heroes in the area of effect a physical barrier. Crystal Maiden receives a stronger barrier. +100 Radius"
+                },
+                "facet_2": {
+                    "name": "Arcane Overflow",
+                    "effects": "Arcane Aura can be activated to temporarily grant Crystal Maiden spell amplification, while increasing her mana costs and restoring both herself and nearby allied heroes' mana whenever she casts a spell."
+                }
+            },
+            "upgrades": {
+                "aghanim_scepter": {
+                    "effects": [
+                        "Grants the Stop Freezing Field ability",
+                        "She can now move, albeit slower, cast other abilities and attack during Freezing Field",
+                        "Increases both the frequency and the number of icy explosions",
+                        "Applies Frostbite to enemy units that has been standing in the Freezing Field for over a certain duration"
+                    ],
+                    "found": true
+                },
+                "aghanim_shard": {
+                    "effects": [
+                        "Grants the Crystal Clone ability",
+                        "Creates a Crystal Clone of Rylai in her place while sliding to the area-targeted direction and disjointing incoming projectiles",
+                        "If the Crystal Clone takes enough damage or times out, it shatters, and applies Frostbite of its corresponding level to enemies within the radius"
+                    ],
+                    "found": true
+                },
+                "talents": {
+                    "level_25": [
+                        "+300 Crystal Nova Damage",
+                        "+1s Frostbite Duration"
+                    ],
+                    "level_20": [
+                        "+50 Freezing Field Damage",
+                        "+225 Attack Speed"
+                    ],
+                    "level_15": [
+                        "-4.5s Crystal Nova Cooldown",
+                        "+100 Frostbite Cast Range"
+                    ],
+                    "level_10": [
+                        "+12 Intelligence",
+                        "+200 Health"
+                    ]
+                }
+            },
+            "innate": {
+                "abilities": [
+                    {
+                        "name": "Blueheart Floe",
+                        "type": "passive",
+                        "description": "Grants the Maiden incoming mana regeneration amplification.",
+                        "values": {
+                            "self_mana_regen_amp": "25%/50%/75%/100%"
+                        },
+                        "details": "This ability levels up with Freezing Field. Affects all self-mana regeneration sources."
+                    }
+                ]
+            },
+            "abilities": {
+                "ability_1": {
+                    "name": "Crystal Nova",
+                    "key": "Q",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "11/10/9/8",
+                    "mana_cost": "115/135/155/175",
+                    "cast_range": "700",
+                    "cast_animation": "0.3 + 0.6",
+                    "cast_radius": "425",
+                    "details": "A burst of damaging frost slows enemy movement speed and attack speed in the targeted area.",
+                    "description": "The air temperature around Rylai drops rapidly, chilling all around her to the core.",
+                    "facet_effects": {
+                        "glacial_guard": {
+                            "radius": "525",
+                            "ally_barrier": "40/70/100/130",
+                            "self_barrier_factor": 2
+                        }
+                    },
+                    "ability_behavior": [
+                        "area"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Grants a 6-second 900-radius flying vision centered around the area-targeted location upon cast",
+                        "Reapplying the debuff refreshes the duration, but neither updates the movement speed nor the attack speed slow values"
+                    ],
+                    "interaction_notes": [
+                        "The Crystal Clone is vulnerable to all Crystal Nova sources"
+                    ]
+                },
+                "ability_2": {
+                    "name": "Frostbite",
+                    "key": "W",
+                    "type": "active",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "9/8/7/6",
+                    "mana_cost": "125/135/145/155",
+                    "cast_range": "600",
+                    "cast_animation": "0.3 + 0.6",
+                    "cast_radius": "",
+                    "details": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time.",
+                    "description": "Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "unit_target"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "yes",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "All ability effects are applied immediately despite the visual effects, and cannot be disjointed",
+                        "Applies Root, Disarm, and True Sight over the affected target",
+                        "Deals 25 magical spell damage to the affected enemy unit 0.25-second intervals over the entire duration",
+                        "All of Frostbite's ability effects are more effective on creeps with a 4x damage factor"
+                    ],
+                    "interaction_notes": [
+                        "The True Sight component affects debuff immune units"
+                    ]
+                },
+                "ability_3": {
+                    "name": "Arcane Aura",
+                    "key": "E",
+                    "type": "passive",
+                    "affects": "Allied Units",
+                    "damage": "",
+                    "damage_types": [],
+                    "cooldown": "",
+                    "mana_cost": "",
+                    "cast_range": "Global",
+                    "cast_animation": "",
+                    "cast_radius": "1200",
+                    "details": "Grants additional mana regeneration to allied units on the map. Grants a greater bonus to allied units closer to the Maiden.",
+                    "description": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance.",
+                    "facet_effects": {
+                        "arcane_overflow": {
+                            "cast_animation": "0 + 0",
+                            "spell_amplification": "35%",
+                            "mana_cost_factor": 1.5,
+                            "mana_cost_to_ally_restore": 0.15,
+                            "restore_radius": "1200",
+                            "duration": 10,
+                            "cooldown": 30
+                        }
+                    },
+                    "ability_behavior": [
+                        "passive",
+                        "aura"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Grants Global aura and proximity aura with 1200 radius",
+                        "Base mana regen bonus: 0.4/0.6/0.8/1 with 3x proximity bonus factor",
+                        "The duration of Arcane Overflow is paused during Freezing Field",
+                        "Arcane Overflow cannot be cast during Freezing Field upgraded with Aghanim's Scepter"
+                    ],
+                    "interaction_notes": []
+                },
+                "ability_4": {
+                    "name": "Crystal Clone",
+                    "key": "D",
+                    "type": "active",
+                    "affects": "Self / Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "10",
+                    "mana_cost": "150",
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "450",
+                    "details": "Creates a Crystal Clone of Rylai in her place while sliding to the area-targeted direction and disjointing incoming projectiles.",
+                    "description": "So convincing that some allies have spent minutes talking to the clone before they realized she wasn't speaking back.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "area"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": false,
+                    "shard_upgradable": true,
+                    "technical_details": [
+                        "Acquiring Aghanim's Shard unlocks this ability",
+                        "Does not interrupt Rylai's channeling abilities upon cast",
+                        "Grants Disjoint incoming projectiles",
+                        "The created illusion is uncontrollable and untargetable",
+                        "Damage threshold: 150, Duration: 5 seconds"
+                    ],
+                    "interaction_notes": [
+                        "If the Crystal Clone takes enough damage or times out, it shatters, and applies Frostbite of its corresponding level to enemies within the radius"
+                    ]
+                },
+                "ability_5": {
+                    "name": "Freezing Field",
+                    "key": "R",
+                    "type": "channeled",
+                    "affects": "Enemy Units",
+                    "damage": "Spell / Magical",
+                    "damage_types": [
+                        "magical"
+                    ],
+                    "cooldown": "100/95/90",
+                    "mana_cost": "200/400/600",
+                    "cast_range": "",
+                    "cast_animation": "0 + 0",
+                    "cast_radius": "810",
+                    "details": "Surrounds Crystal Maiden with random icy explosions that slow enemies and deal massive damage.",
+                    "description": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
+                    "facet_effects": {},
+                    "ability_behavior": [
+                        "no_target",
+                        "channeled"
+                    ],
+                    "pierces_spell_immunity": false,
+                    "blocked_by_root": false,
+                    "dispellable": "no",
+                    "scepter_upgradable": true,
+                    "shard_upgradable": false,
+                    "technical_details": [
+                        "Max Channel Time: 10 seconds",
+                        "Explosion Spawn Interval: 0.1 seconds",
+                        "Damage per Explosion: 105/170/250",
+                        "Move Speed Slow: 40%, Attack Speed Slow: 80/120/160",
+                        "With Scepter: Explosion Spawn Factor 1.2x, removes channeling restriction"
+                    ],
+                    "interaction_notes": [
+                        "The Crystal Clone is vulnerable to all Freezing Field sources",
+                        "Both the movement speed slow and attack speed slow component applied within the radius are independent of the icy explosions"
+                    ]
+                }
+            },
+            "recent_changes": [
+                {
+                    "version": "7.39",
+                    "date": "2025-05-21",
+                    "changes": [
+                        "Arcane Aura Arcane Overflow: No longer interrupts movement orders",
+                        "Reduced allied ability cast mana replenishement factor from 0.25 to 0.15",
+                        "Now self-mana restores for 0.15 * AlliedAbilityCast ManaCost per proc while active"
+                    ]
+                },
+                {
+                    "version": "7.38",
+                    "date": "2025-02-19",
+                    "changes": [
+                        "Blueheart Floe: REMOVED the Cold Comfort facet",
+                        "Rescaled self-mana regeneration amplification from 50% on each level to 25%/50%/75%/100%",
+                        "This component levels up with Freezing Field",
+                        "Crystal Nova: Reduced slow duration from 5 to 4",
+                        "ADDED new Glacial Guard facet",
+                        "Arcane Aura: ADDED new Arcane Overflow facet",
+                        "REMOVED the Freezing Field Frozen Expanse facet",
+                        "Talents: LVL 10 +100 Crystal Nova radius → +12 intelligence"
+                    ]
+                },
+                {
+                    "version": "7.37d",
+                    "date": "2024-10-01",
+                    "changes": [
+                        "Increased agility gain from 1.6 to 1.8",
+                        "Talents: LVL 15 -4s Crystal Nova cooldown increased to -4.5s"
+                    ]
+                }
+            ]
+        },
+        "parsing_stats": {
+            "file_size": 89432,
+            "sections_found": 5,
+            "parse_time_ms": 45,
+            "success_rate": "100%"
+        }
+    }
+}
