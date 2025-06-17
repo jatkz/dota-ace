@@ -1,0 +1,74 @@
+{
+  "name": "Pipe of Insight",
+  "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
+  "category": "Support",
+  "cost": 3725,
+  "sellValue": 1862.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 1,
+  "recipe": {
+    "components": ["Hood of Defiance", "Headdress", "Chainmail", "Recipe"],
+    "totalCost": 3725
+  },
+  "abilities": [
+    {
+      "name": "Barrier",
+      "type": "active",
+      "description": "Grants nearby allied units and buildings a magical damage barrier for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 60,
+      "cooldown": 150,
+      "effects": {
+        "radius": 1200,
+        "magicalDamageBarrier": 425,
+        "duration": 8
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Affects all allied units, including buildings and invulnerable allies",
+        "Does not affect wards and hidden units",
+        "Grants a magical damage barrier that absorbs magical damage values",
+        "Stacks additively with the same damage-type barrier sources",
+        "Has a higher priority than universal damage barriers",
+        "When combined with other damage-negating sources, Barrier does not absorb any damage until the damage-negation sources expire",
+        "Successive casts refresh the buff and reset the damage barrier capacity"
+      ]
+    },
+    {
+      "name": "Insight Aura",
+      "type": "passive",
+      "description": "Increases the health regeneration and magic resistance of nearby allies.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "healthRegenerationBonus": 2.5,
+        "magicResistanceBonus": "8%",
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Can regenerate up to 150 health in one minute",
+        "Stacks multiplicatively with other magic resistance sources",
+        "Increases most heroes' magic resistance to 31%",
+        "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.92%",
+        "Does not affect invulnerable units"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 14,
+    "magicResistance": "20%"
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "Stacks multiplicatively with other magic resistance sources",
+    "With Insight Aura, the item grants a total of 16.5 health regeneration bonus to its wielder",
+    "Increases the wielder's magic resistance to 44.8%",
+    "Every 10 points of intelligence further increases the total magic resistance by 0.736% for the wielder"
+  ],
+  "states": null
+}

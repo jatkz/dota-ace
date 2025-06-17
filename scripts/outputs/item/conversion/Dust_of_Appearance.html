@@ -1,0 +1,76 @@
+{
+  "name": "Dust of Appearance",
+  "description": "One may hide visage, but never volume.",
+  "category": "Consumables",
+  "cost": 80,
+  "sellValue": 40,
+  "maxStacks": null,
+  "shareable": true,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 80
+  },
+  "abilities": [
+    {
+      "name": "Reveal",
+      "type": "active",
+      "description": "Creates an area centered around the wielder that reveals invisible units. Deals damage and applies a movement speed slow to revealed invisible units.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 30,
+      "effects": {
+        "effectRadius": 1050,
+        "damage": 25,
+        "moveSpeedSlow": "20%",
+        "duration": 12,
+        "auraLingerDuration": 8,
+        "damageType": "Magical"
+      },
+      "notes": [
+        "Interrupts the wielder's channeling abilities upon cast",
+        "Creates an aura that applies all ability effects on all enemy units within the radius, including visible ones",
+        "Reapplying the debuff refreshes the duration",
+        "Applies the debuff but does not reveal Shadow Dance-based abilities or Smoke of Deceit-based items",
+        "Affects fogged units and invulnerable units",
+        "Does not affect hidden units or ward-type units",
+        "Multiple overlapping Reveal aura radii do not stack",
+        "Explicitly applies the movement speed slow on already invisible units",
+        "The debuff does not affect the enemy unit during its fade time or fade delay",
+        "The debuff applied on affected enemy units lingers after leaving the effect radius"
+      ]
+    }
+  ],
+  "stats": {
+    "charges": 1
+  },
+  "additionalInfo": [
+    "NO LIMIT / Inventory Slot stacking",
+    "Single use consumable item",
+    "Creates 12-second aura applying all ability effects centered around the caster",
+    "Has an 8-second aura linger duration"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [
+    "This item is based on the Dust of Appearance from Warcraft 3",
+    "Prior to the July 14, 2017 Patch, Dust of Appearance's active ability, Reveal, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "CHANGED Reveal ability operations. Now creates a 12-second aura applying all of its ability effects centered around the caster, instead of applying a debuff. Has an 8-second aura linger duration.",
+        "date": "7.33 (2023-04-20)"
+      },
+      {
+        "description": "Reveal now deals 25 magical damage to invisible enemies upon placing the debuff.",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Reduced gold cost from 90 to 80.",
+        "date": "7.25c (2020-04-06)"
+      }
+    ]
+  }
+}

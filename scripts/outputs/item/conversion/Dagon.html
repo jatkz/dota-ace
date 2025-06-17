@@ -1,0 +1,65 @@
+{
+  "name": "Dagon",
+  "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
+  "category": "Magical",
+  "cost": 2850,
+  "sellValue": 1425,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Diadem", "Voodoo Mask", "Recipe"],
+    "totalCost": 2850
+  },
+  "abilities": [
+    {
+      "name": "Energy Burst",
+      "type": "active",
+      "description": "Emits a powerful burst of magical damage upon a targeted enemy unit, dealing great damage.",
+      "castAnimation": "0 + 0",
+      "castRange": "700/750/800/850/900",
+      "manaCost": "120/140/160/180/200",
+      "cooldown": "27/24/21/18/15",
+      "effects": {
+        "damage": "400/500/600/700/800",
+        "effectDelay": 0,
+        "damageAsHeal": "75%",
+        "instantKillCreeps": true,
+        "instantKillIllusions": true
+      },
+      "notes": [
+        "Casting on a unit that is not a hero, ancient creep, or creep-hero, instantly kills it",
+        "Instantly kills regular illusions regardless of any status effects, except when affected by Shallow Grave",
+        "Does not heal when instant killing illusions",
+        "The healing value is based on the damage dealt, amplifying or reducing the damage affects the healing value",
+        "Places a debuff on the target, which applies the damage upon expiring",
+        "Due to server tick rates, the debuff effectively lasts 0.033 seconds",
+        "Multiple casts during the same server tick do not stack and only refresh the debuff",
+        "Energy Burst first applies the damage, the damage as heal, then the spell lifesteal"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": "7/9/11/13/15",
+    "agility": "7/9/11/13/15", 
+    "intelligence": "7/9/11/13/15",
+    "spellLifestealHero": "15%/16%/17%/18%/19%",
+    "spellLifestealCreep": "3%/3.2%/3.4%/3.6%/3.8%",
+    "health": "154/198/242/286/330",
+    "healthRegeneration": "0.7/0.9/1.1/1.3/1.5",
+    "mana": "84/108/132/156/180",
+    "manaRegeneration": "0.35/0.45/0.55/0.65/0.75",
+    "magicResistance": "0.7/0.9/1.1/1.3/1.5%",
+    "attackSpeed": "7/9/11/13/15",
+    "armor": "1.17/1.5/1.83/2.17/2.5",
+    "attackDamage": "7/9/11/13/15 (Str/Agi), 9.45/12.15/14.85/17.55/20.25 (Int)"
+  },
+  "additionalInfo": [
+    "Dagon can be upgraded by purchasing the recipe again, up to 4 times",
+    "Upgrading the item improves its stats and also Energy Burst",
+    "The total gold cost for each level is 2850/4000/5150/6300/7450",
+    "Not shareable",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

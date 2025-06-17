@@ -1,0 +1,68 @@
+{
+  "name": "Tranquil Boots",
+  "description": "While they increase the longevity of the wearer, this boot is not particularly reliable.",
+  "category": "Support",
+  "cost": 900,
+  "sellValue": 450,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Boots of Speed", "Wind Lace", "Ring of Regen"],
+    "totalCost": 900
+  },
+  "abilities": [
+    {
+      "name": "Break",
+      "type": "passive",
+      "description": "Whenever the wielder attacks a hero or is attacked by a any unit, the boots' passive health regeneration bonus is lost, and the movement speed bonus is reduced for a while.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "moveSpeedLoss": 25,
+        "healthRegenLoss": 14,
+        "duration": 13,
+        "downtime": 13
+      },
+      "notes": [
+        "Reduces Tranquil Boots' bonuses to 40 movement speed and 0 health regeneration",
+        "Only triggers when the wielder's attacks land, or when an attack lands on the wielder",
+        "Missed or disjointed attacks do not trigger Break",
+        "Also reacts on instant attacks that normally do not trigger on-attack effects",
+        "Does not break upon attacking non-hero units. Treats creep-heroes as creeps",
+        "The downtime is affected by cooldown reductions. However, although cooldown resetting effects visually reset the cooldown, they do not reset the broken state",
+        "Tranquil Boots are always in the broken state for illusions, and permanently appear broken on allied illusions. Do not appear broken on enemy illusions, until they attack or are attacked"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 14,
+    "moveSpeed": 65
+  },
+  "additionalInfo": [
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack",
+    "Stacks with all other movement speed bonus",
+    "The health regeneration of multiple Tranquil Boots-based items fully stacks"
+  ],
+  "recommendedHeroes": [],
+  "states": null,
+  "trivia": null,
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced Wind Lace cost from 250 to 225 (total cost decreases from 925 to 900)",
+        "date": "7.38 (2025-02-19)"
+      },
+      {
+        "description": "Now builds into Boots of Bearing",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Reduced movement speed bonus from 70 to 65",
+        "date": "7.29 (2021-04-09)"
+      }
+    ]
+  }
+}

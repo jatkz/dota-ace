@@ -1,0 +1,53 @@
+{
+  "name": "Scythe of Vyse",
+  "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
+  "category": "Magical",
+  "cost": 5200,
+  "sellValue": 2600,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Mystic Staff", "Tiara of Selemene", "Recipe"],
+    "totalCost": 5200
+  },
+  "abilities": [
+    {
+      "name": "Hex",
+      "type": "active",
+      "description": "Applies a hex on the unit-targeted enemy upon cast and turns it into a harmless critter.",
+      "castAnimation": "0 + 0",
+      "castRange": 800,
+      "manaCost": 250,
+      "cooldown": 20,
+      "effects": {
+        "setMoveSpeed": 140,
+        "hexDuration": 2.8,
+        "currentHealthAsDamage": "100%"
+      },
+      "notes": [
+        "Sets base movement speed to 140",
+        "All movement speed sources now calculate using the set base value",
+        "Considers strong illusions as heroes",
+        "Applies Silence, Mute, and Disarm",
+        "Changes the selection box correspondingly to the Hex model",
+        "Neither affects the unit's collision size nor bound radius",
+        "Visually transforms the affected enemy unit into a Pig"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 30,
+    "manaRegeneration": 8.5
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "360 mana, 1.5 mana regeneration and 3% flat base magic resistance",
+    "30 main attack damage to Intelligence heroes",
+    "13.5 main attack damage to Universal heroes",
+    "Item is purchasable at the Base Shop, under Magical",
+    "However, it is assembled entirely with items from the Secret Shop",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

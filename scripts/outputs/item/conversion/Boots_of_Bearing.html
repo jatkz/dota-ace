@@ -1,0 +1,80 @@
+{
+  "name": "Boots of Bearing",
+  "description": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim.",
+  "category": "Support",
+  "cost": 4225,
+  "sellValue": 2112.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Drum of Endurance", "Tranquil Boots", "Recipe"],
+    "totalCost": 4225
+  },
+  "abilities": [
+    {
+      "name": "Endurance",
+      "type": "active",
+      "description": "Grants movement and attack speed to all nearby allies for a short while on cast.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 30,
+      "effects": {
+        "radius": 1200,
+        "moveSpeedBonus": "15%",
+        "attackSpeedBonus": 50,
+        "duration": 6,
+        "slowResistance": "100%",
+        "slowResistanceDuration": 1.5
+      },
+      "notes": [
+        "Briefly turns allies immune to slows as well",
+        "Does not place the buff on units that are already affected by Drum of Endurance, and vice versa",
+        "Cannot be cast by Meepo clones",
+        "Does not interrupt the caster's channeling abilities upon cast",
+        "The buff of successive Endurance casts does not stack but refreshes the duration instead",
+        "Only affects player-controlled units, including invulnerable units, excluding wards",
+        "Does not share cooldowns with Drum of Endurance"
+      ]
+    },
+    {
+      "name": "Swiftness Aura",
+      "type": "passive",
+      "description": "Increases the movement speed of nearby allies by a flat amount.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "moveSpeedBonus": 20,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Multiple identical instances of Swiftness Aura do not stack, regardless of source",
+        "Stacks with all other movement speed bonuses",
+        "Does not affect invulnerable units"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 8,
+    "intelligence": 8,
+    "healthRegeneration": 15,
+    "moveSpeed": 65
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Drum of Endurance was purchased as well, Boots of Bearing's icon takes priority",
+    "The item's attributes grant 176 health and 0.8 health regeneration",
+    "The item's attributes grant 96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance",
+    "The item's attributes grant 8 main attack damage to Strength/Intelligence heroes",
+    "The item's attributes grant 7.2 main attack damage to universal heroes",
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack",
+    "Stacks with all other movement speed bonus",
+    "With the Swiftness Aura, the item grants a total 85 movement speed to the wielder",
+    "The health regeneration of multiple Tranquil Boots-based items fully stacks"
+  ],
+  "states": null
+}

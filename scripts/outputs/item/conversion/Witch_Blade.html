@@ -1,0 +1,57 @@
+{
+  "name": "Witch Blade",
+  "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
+  "category": "Weapons",
+  "cost": 2775,
+  "sellValue": 1387.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Oblivion Staff", "Chainmail", "Recipe"],
+    "totalCost": 2775
+  },
+  "abilities": [
+    {
+      "name": "Witch Blade",
+      "type": "passive",
+      "description": "The next attack poisons the target, slowing their movement speed and dealing damage over time, based on the wielder's intelligence. This attack cannot miss.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 9,
+      "effects": {
+        "intelligenceAsDamagePerSecond": "75%",
+        "moveSpeedSlow": "25%",
+        "duration": 4
+      },
+      "notes": [
+        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not",
+        "For ranged heroes this is upon projectile launch",
+        "The attack has True Strike, so it cannot miss",
+        "Uses a custom projectile when the wielder is ranged",
+        "Reapplying the debuff refreshes the duration",
+        "Does not affect Buildings, Ward-type units, or Ally units",
+        "The attacks first apply the debuff, then their own attack damage",
+        "Checks the wielder's intelligence continuously and updates the damage values immediately",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances",
+        "Can deal up to 300% of the wielder's intelligence as damage (before reductions)"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 12,
+    "manaRegeneration": 1.5,
+    "armor": 6,
+    "attackSpeed": 40,
+    "projectileSpeed": 300
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
+    "12 main attack damage to Intelligence heroes",
+    "5.4 main attack damage to Universal heroes",
+    "The projectile speed bonus only affects attack projectiles"
+  ],
+  "states": null
+}

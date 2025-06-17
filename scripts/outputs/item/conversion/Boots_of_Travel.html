@@ -1,0 +1,83 @@
+{
+  "name": "Boots of Travel",
+  "description": "Winged boots that grant omnipresence.",
+  "category": "Accessories",
+  "cost": 2500,
+  "sellValue": 1250,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Boots of Speed", "Recipe: Boots of Travel"],
+    "totalCost": 2500
+  },
+  "abilities": [
+    {
+      "name": "Upgrade: Town Portal Scroll",
+      "type": "passive",
+      "description": "Passively upgrades Town Portal Scroll. Prevents them from being consumed when used, sets the channel time to a fixed value that does not increase with subsequent teleports, and lowers the cooldown. Additionally, allows targeting and directly teleporting to any allied non-hero unit.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "teleportSetChannelTime": 3,
+        "teleportCooldown": 40,
+        "upgradeChannelTime": 2
+      },
+      "notes": [
+        "Refunds all Town Portal Scrolls the hero currently has equipped, using the regular sellback value",
+        "Grants the hero a new Town Portal Scroll for free",
+        "Further upgrades reduce channel time and allow targeting allied heroes",
+        "The refunding triggers when Boots of Travel enters the hero's main inventory for the first time",
+        "Does not trigger when in the backpack, the stash, or in the Courier's inventory",
+        "Free Town Portal Scroll can be sold but has no sellback value",
+        "While owning Boots of Travel, the hero does not get the free Town Portal Scroll upon dying"
+      ]
+    }
+  ],
+  "stats": {
+    "moveSpeed": "90/110"
+  },
+  "additionalInfo": [
+    "Upgrading the item improves the passive Teleport Upgrade. Can be upgraded only once.",
+    "The total gold cost for each level is 2500/5000.",
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
+    "Stacks with all other movement speed bonuses.",
+    "Alt shows your allied heroes' teleport status and cooldowns under their portraits below the top bar of the HUD."
+  ],
+  "recommendedHeroes": [
+    "Arc Warden",
+    "Alchemist", 
+    "Ember Spirit",
+    "Invoker",
+    "Leshrac",
+    "Meepo",
+    "Morphling",
+    "Naga Siren",
+    "Phantom Lancer",
+    "Timbersaw"
+  ],
+  "states": null,
+  "trivia": [
+    "Boots of Travels is useful on all heroes during the late game, where it is needed to make desperate pushes or defenses",
+    "Consider using Glyph of Fortification to prevent creeps from dying so Boots of Travel can complete channeling of Teleport",
+    "Heroes with high split pushing potential should always consider Boots of Travel"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Increased Upgrade: Town Portal Scroll cooldown from 30 to 40",
+        "date": "7.33b (2023-04-25)"
+      },
+      {
+        "description": "Reduced movement speed bonus from 100/120 to 90/110. Upgrade: Town Portal Scroll now also reduces all channel time by 1",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Reduced movement speed bonus from 110/130 to 100/120",
+        "date": "7.29 (2021-04-09)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Voodoo Mask",
+  "description": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
+  "category": "Miscellaneous",
+  "cost": 700,
+  "sellValue": 350,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 700
+  },
+  "abilities": [
+    {
+      "name": "Magic Lifesteal",
+      "type": "passive",
+      "description": "Restores the wielder's health for a portion of damage dealt by magical and physical spell damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "spellLifesteal": "12%",
+        "creepSpellLifesteal": "2.4%"
+      },
+      "notes": [
+        "Only works with magical and physical spell damage",
+        "Does not work with attack damage or any pure damage",
+        "Does not work with damage with the HP Removal or the no-reflection flags",
+        "Stacks additively with other spell lifesteal sources",
+        "Treats creep-heroes as heroes",
+        "The lifesteal value is reduced by a factor of 0.2 against creeps",
+        "Does not work on allied units, illusions, buildings, ward-type units, or couriers"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Multiple instances of spell lifesteal from the same source do not stack",
+    "Spell lifesteal from different sources stacks additively"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Spell Lifesteal bonus against heroes/creeps increased from +10/2% to +12/2.4%",
+        "date": "2024-02-21"
+      },
+      {
+        "description": "Now builds into Revenant's Brooch",
+        "date": "2023-12-14"
+      },
+      {
+        "description": "Now builds into Dagon. No longer builds into Eternal Shroud",
+        "date": "2023-04-20"
+      }
+    ]
+  }
+}

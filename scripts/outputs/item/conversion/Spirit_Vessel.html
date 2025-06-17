@@ -1,0 +1,68 @@
+{
+  "name": "Spirit Vessel",
+  "description": "Forged by a god to entrap the soul of another.",
+  "category": "Support",
+  "cost": 2725,
+  "sellValue": 1362.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Urn of Shadows", "Diadem", "Recipe"],
+    "totalCost": 2725
+  },
+  "abilities": [
+    {
+      "name": "Soul Release",
+      "type": "active",
+      "description": "When cast on an ally, consumes a charge to grant the target allied hero bonus health regeneration for a while. When cast on an enemy, consumes a charge to deal damage over time to the target, based on their current health, as well as reduce the effectiveness of healing and health restoration the target receives.",
+      "castAnimation": "0 + 0",
+      "castRange": 750,
+      "manaCost": null,
+      "cooldown": 10,
+      "effects": {
+        "healthRegenBonus": 40,
+        "allyDuration": 8,
+        "currentHealthDamagePerSecond": "4%",
+        "healReduction": "70%",
+        "healthRestoreReduction": "70%",
+        "enemyDuration": 8,
+        "chargeRadius": 1400,
+        "initialChargeGainPerEnemyDeath": 2,
+        "followingChargeGainPerEnemyDeath": 1,
+        "initialChargeGainPerOwnDeath": 1
+      },
+      "notes": [
+        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
+        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
+        "Has no recharge time. Cooldown resetting effects do not restore charges",
+        "Gains charges whenever an enemy hero dies within range. Gains more charges when at 0 charges",
+        "Also gains charges when the wielder dies while at 0 charges",
+        "All current charges on Urn of Shadows are carried over when upgraded to a Spirit Vessel",
+        "Double-tapping automatically targets self",
+        "Does not interrupt the wielder's channeling abilities",
+        "Can only be cast on heroes, including illusions and creep-heroes",
+        "Successive casts on the same target do not stack but refresh the duration instead",
+        "Spirit Vessel's modifiers override the modifiers of Urn of Shadows"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 10,
+    "agility": 10,
+    "intelligence": 10,
+    "manaRegeneration": 1.75,
+    "armor": 2
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If an Urn of Shadows was purchased as well, Spirit Vessel's icon takes priority",
+    "The item's attributes grant 220 health and 1 health regeneration",
+    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "The item's attributes grant 10 attack speed and 1.67 main armor",
+    "The item's attributes grant 10 main attack damage to all Strength/Agility/Intelligence heroes",
+    "The item's attributes grant 13.5 main attack damage to universal heroes",
+    "Can regenerate up to 320 health on target allies"
+  ],
+  "states": null
+}

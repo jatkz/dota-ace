@@ -1,0 +1,58 @@
+{
+  "name": "Vladmir's Offering",
+  "description": "An eerie mask that is haunted with the malice of a fallen vampire.",
+  "category": "Support",
+  "cost": 2200,
+  "sellValue": 1100,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Ring of Basilius", "Buckler", "Chainmail", "Recipe"],
+    "totalCost": 2200
+  },
+  "abilities": [
+    {
+      "name": "Vladmir's Aura",
+      "type": "passive",
+      "description": "Increases the attack damage, mana regen, and armor of nearby allies, and grants them lifesteal.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "lifesteal": "20%",
+        "attackDamageBonus": "18%",
+        "manaRegenerationBonus": 1,
+        "armorBonus": 2,
+        "auraLingerDuration": 0.5,
+        "creepLifestealFactor": 0.6
+      },
+      "notes": [
+        "Multiple instances of Vladmir's Aura do not stack",
+        "Fully stacks with other sources of Buckler-based items' armor aura and Ring of Basilius-based items' mana regeneration aura",
+        "Only works with physical attack damage, does not work with magical or pure attack damage",
+        "Does not work with physical or any other spell damage",
+        "Does not work with instant attacks that do not trigger attack modifier",
+        "Stacks additively with other lifesteal sources",
+        "Treats illusions and creep-heroes as heroes",
+        "Does not work on allied units, buildings, couriers, or ward-type units",
+        "Lifesteal is less effective when attacking creeps",
+        "Grants flat bonus attack damage based on the affected unit's main attack damage",
+        "Can regenerate up to 60 mana in one minute",
+        "Affects invulnerable, but not hidden units"
+      ]
+    }
+  ],
+  "stats": {
+    "manaRegeneration": 0.75,
+    "armor": 1
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "All of the bonuses from Vladmir's Offering is provided by Vladmir's Aura",
+    "Can be disassembled"
+  ],
+  "states": null
+}

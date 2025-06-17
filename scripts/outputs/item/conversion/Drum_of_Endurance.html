@@ -1,0 +1,109 @@
+{
+  "name": "Drum of Endurance",
+  "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
+  "category": "Support",
+  "cost": 1625,
+  "sellValue": 812.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Wind Lace", "Bracer", "Recipe"],
+    "totalCost": 1625
+  },
+  "abilities": [
+    {
+      "name": "Endurance",
+      "type": "active",
+      "description": "Grants movement and attack speed to all nearby allies for a short while on cast.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 45,
+      "effects": {
+        "radius": 1200,
+        "moveSpeedBonus": "13%",
+        "attackSpeedBonus": 35,
+        "duration": 6
+      },
+      "notes": [
+        "Does not place the buff on units that are already affected by Boots of Bearing, and vice versa",
+        "Cannot be cast by Meepo clones",
+        "Does not interrupt the caster's channeling abilities upon cast",
+        "The buff of successive Endurance casts does not stack but refreshes the duration instead",
+        "Only affects player-controlled units, including invulnerable units, excluding wards",
+        "Does not share cooldowns with Drum of Endurance"
+      ]
+    },
+    {
+      "name": "Swiftness Aura",
+      "type": "passive",
+      "description": "Increases the movement speed of nearby allies by a flat amount.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "moveSpeedBonus": 15,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Multiple identical instances of Swiftness Aura do not stack, regardless of source",
+        "Stacks with all other movement speed bonuses",
+        "Does not affect invulnerable units"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 7,
+    "intelligence": 7,
+    "health": 154,
+    "healthRegeneration": 0.7,
+    "mana": 84,
+    "manaRegeneration": 0.35,
+    "magicResistance": "0.7%",
+    "mainAttackDamage": "7 (Str/Int heroes), 6.3 (Universal heroes)"
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Boots of Bearing was purchased as well, Boots of Bearing's icon takes priority",
+    "Drum of Endurance is a permanent item, using up all charges does not make it disappear",
+    "The sell value of the item does not depend on the remaining charges"
+  ],
+  "recommendedHeroes": [
+    "Beastmaster",
+    "Broodmother", 
+    "Chen",
+    "Enchantress",
+    "Lycan",
+    "Crystal Maiden",
+    "Invoker",
+    "Pudge",
+    "Techies",
+    "Tinker",
+    "Undying",
+    "Warlock"
+  ],
+  "states": null,
+  "trivia": [
+    "This item is based on the Ancient Janggo of Endurance from Warcraft 3",
+    "In DotA, the item is named Ancient Janggo of Endurance as well"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced Wind Lace cost from 250 to 225 (total cost decreases from 1650 to 1625). Endurance no longer has 8 charges, increased cooldown from 30 to 45, reduced attack speed bonus from 45 to 35. Reduced Swiftness Aura movement speed bonus from 20 to 15.",
+        "date": "7.38 (2025-02-19)"
+      },
+      {
+        "description": "Reduced Recipe cost from 550 to 500 (total cost decreases from 1700 to 1650).",
+        "date": "7.32d (2022-11-29)"
+      },
+      {
+        "description": "Endurance no longer interrupt caster's channeling abilities upon cast. No longer replenish charges upon rebuying the recipe. Now builds into Boots of Bearing.",
+        "date": "7.31 (2022-02-23)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Clarity",
+  "description": "Clear water that enhances the ability to meditate.",
+  "category": "Consumables",
+  "cost": 50,
+  "sellValue": 25,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 50
+  },
+  "abilities": [
+    {
+      "name": "Replenish",
+      "type": "active",
+      "description": "Increases the target's mana regeneration for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": 250,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "damageThreshold": 0,
+        "manaRegenBonus": 6,
+        "duration": 25,
+        "totalManaRestored": 150
+      },
+      "notes": [
+        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
+        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
+        "Requires Ctrl to target an allied hero",
+        "Can be cast on untargetable units indirectly via portrait-casting",
+        "Doubletap casts the ability on the wielder",
+        "Reapplying the buff refreshes the duration",
+        "Does not dispel from self-damage sources or HP Removal sources",
+        "Considers clones, illusions, and creep-heroes as heroes",
+        "Neither requires turning nor facing the targeted unit to cast, as long it is within the cast range"
+      ]
+    }
+  ],
+  "stats": {
+    "charges": 1,
+    "initialStock": 4,
+    "maxStock": 4,
+    "restockTime": 120
+  },
+  "additionalInfo": [
+    "Affects Self / Allied Heroes",
+    "Has no stacking limit per inventory slot",
+    "Item is consumed upon use"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [
+    "This item is based on the Clarity Potion from Warcraft 3",
+    "In DotA, the item is named Clarity Potion as well"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced initial stock from Infinite to 4. Reduced max stock from Infinite to 4. Increased restock time from 0 to 120.",
+        "date": "7.33 (2023-04-20)"
+      },
+      {
+        "description": "Replenish no longer has a 250 cast range buffer.",
+        "date": "7.30 (2021-08-18)"
+      },
+      {
+        "description": "Reduced Replenish duration from 30 to 25.",
+        "date": "7.29 (2021-04-09)"
+      }
+    ]
+  }
+}

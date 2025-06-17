@@ -1,0 +1,85 @@
+{
+  "name": "Guardian Greaves",
+  "description": "One of many holy instruments constructed to honor the Omniscience.",
+  "category": "Support",
+  "cost": 5050,
+  "sellValue": 2525,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 1,
+  "recipe": {
+    "components": ["Arcane Boots", "Mekansm", "Recipe"],
+    "totalCost": 5050
+  },
+  "abilities": [
+    {
+      "name": "Mend",
+      "type": "active",
+      "description": "Applies a basic dispel on the caster and restores health and replenishes mana to nearby allies on cast.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 45,
+      "effects": {
+        "radius": 1200,
+        "heal": 325,
+        "manaReplenished": 200,
+        "stackLimitDuration": 44
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Meepo Clones cannot cast Mend",
+        "Mend first applies the heal within 1200 radius, then applies a basic dispel on the caster",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units",
+        "Does not affect wards and buildings",
+        "Does not heal units that have been healed by Mend in the last 44 seconds, or Restore in the last 49 seconds",
+        "Only the heal is restricted. The mana restore has no stack limit and always works",
+        "Units may only be affected by Restore once in a while, including units affected by Mekansm"
+      ]
+    },
+    {
+      "name": "Guardian Aura",
+      "type": "passive",
+      "description": "Increases the health regeneration, mana regeneration, and armor of nearby allies.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "healthRegenerationBonus": 2.5,
+        "manaRegenerationBonus": 1.5,
+        "armorBonus": 3,
+        "auraLingerDuration": 0.5,
+        "healthThreshold": "25%",
+        "boostedHealthRegeneration": 14.5,
+        "boostedManaRegeneration": 5,
+        "boostedArmorBonus": 8
+      },
+      "notes": [
+        "Multiple instances of Guardian Aura do not stack",
+        "Fully stacks with other sources of Headdress-based items' health regeneration aura",
+        "Fully stacks with other sources of Buckler-based items' armor aura",
+        "The boost is based on the affected units' max health",
+        "Treat illusions and clones as heroes, and creep-heroes as creeps",
+        "Can regenerate up to 150 (or 870 while boosted) health in one minute",
+        "Can regenerate up to 90 (or 300 while boosted) mana in one minute",
+        "Does not affect invulnerable units",
+        "If an ally's health is below a threshold, the bonuses they gain from the aura are greatly increased"
+      ]
+    }
+  ],
+  "stats": {
+    "manaRegeneration": 1.5,
+    "armor": 4,
+    "moveSpeed": 50
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Mekansm was purchased as well, Guardian Greaves' icon takes priority",
+    "With Guardian Aura, the item grants a total of 7 armor to the wielder",
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack",
+    "Stacks with all other movement speed bonus"
+  ],
+  "states": null
+}

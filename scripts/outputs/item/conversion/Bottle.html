@@ -1,0 +1,138 @@
+{
+  "name": "Bottle",
+  "description": "An old bottle that survived the ages, the contents placed inside become enchanted.",
+  "category": "Consumables",
+  "cost": 675,
+  "sellValue": 337.5,
+  "maxStacks": 1,
+  "shareable": "Partially",
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 675
+  },
+  "abilities": [
+    {
+      "name": "Regenerate",
+      "type": "active",
+      "description": "Restores health and replenishes mana for a while, by increasing health and mana regeneration.",
+      "castAnimation": "0 + 0",
+      "castRange": 350,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "totalHeal": 110,
+        "totalManaRestore": 60,
+        "regenDuration": 2.7,
+        "refillInterval": 1,
+        "chargeRestorePerPowerRune": 3,
+        "chargeRestorePerOtherRune": 2,
+        "downtime": 1
+      },
+      "notes": [
+        "Interrupts the wielder's channeling abilities upon cast",
+        "The ability always self-casts upon cast",
+        "Ctrl enables casting Regenerate on an allied hero",
+        "Taking more than 0 damage from any other player dispels the buff",
+        "Taking more than 0 damage from Roshan dispels the buff",
+        "Restores all charges while within the Fountain area",
+        "Restores all charges when respawning on the Ofrenda",
+        "Power Runes fully replenishes the Bottle as well",
+        "Bottles do not restore charges while in the Fountain area when carried by a Courier"
+      ]
+    },
+    {
+      "name": "Store Rune",
+      "type": "passive",
+      "description": "The item can store a Rune to be used later, or can be passively activated after a set duration. Activating the Rune restores all Bottle charges.",
+      "castAnimation": "0 + 0",
+      "castRange": 150,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "maxRuneStored": 1,
+        "maxStoreRuneDuration": 90
+      },
+      "notes": [
+        "Right-click on a Rune now stores it within the Bottle",
+        "Attempting to store another Rune activates the current Rune instead",
+        "When the Bottle has a Rune, Regenerate activates the rune, restores the Bottle's charges",
+        "Passively activated upon reaching its max store rune duration",
+        "Couriers can neither activate nor store runes",
+        "This ability is not affected by mute sources"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Bottle containing a rune cannot be shared, dropped, or moved into the backpack",
+    "Bottle is a permanent item, using up all charges does not make it disappear",
+    "The sell value of the item does not depend on the remaining charges, nor on the stored rune",
+    "The Tempest Double does not copy this item, despite not being a consumable"
+  ],
+  "recommendedHeroes": [
+    "Heroes who play in the mid-lane usually do well with a Bottle, because it allows them to control runes"
+  ],
+  "states": [
+    {
+      "icon": "Fountain Water (3/2/1/0 Charges)",
+      "contains": "Fountain Water with varying charge levels"
+    },
+    {
+      "icon": "Amplify Damage Rune",
+      "contains": "Amplify Damage Rune"
+    },
+    {
+      "icon": "Arcane Rune",
+      "contains": "Arcane Rune"
+    },
+    {
+      "icon": "Bounty Rune",
+      "contains": "Bounty Rune"
+    },
+    {
+      "icon": "Haste Rune",
+      "contains": "Haste Rune"
+    },
+    {
+      "icon": "Illusion Rune",
+      "contains": "Illusion Rune"
+    },
+    {
+      "icon": "Invisibility Rune",
+      "contains": "Invisibility Rune"
+    },
+    {
+      "icon": "Regeneration Rune",
+      "contains": "Regeneration Rune"
+    },
+    {
+      "icon": "Shield Rune",
+      "contains": "Shield Rune"
+    },
+    {
+      "icon": "Water Rune",
+      "contains": "Water Rune"
+    }
+  ],
+  "trivia": [
+    "Prior to the February 01, 2018 Patch, Bottle's passive ability, Store Rune, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2.",
+    "In DotA, this item is called Magical Bottle. The reason for why it was changed to Bottle in Dota 2 is unknown."
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "No longer replenishes its charges from the Rejuvenation Aura buff, the wielder must now be physically within the fountain area to refill their Bottle.",
+        "date": "7.38 (2025-02-19)"
+      },
+      {
+        "description": "Item now removes the Rejuvenation Aura buff upon replenishing its charges.",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Reduced Store Rune max rune store duration from 120 to 90.",
+        "date": "7.30e (2021-10-28)"
+      }
+    ]
+  }
+}

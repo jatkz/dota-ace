@@ -1,0 +1,81 @@
+{
+  "name": "Shadow Amulet",
+  "description": "A small talisman that clouds the senses of one's enemies when held perfectly still.",
+  "category": "Miscellaneous",
+  "cost": 1000,
+  "sellValue": 500,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Shadow Amulet"],
+    "totalCost": 1000
+  },
+  "abilities": [
+    {
+      "name": "Fade",
+      "type": "active",
+      "description": "Turns the target invisible after a fade time. The invisibility is broken upon casting an ability or item, or upon attacking.",
+      "castAnimation": "0 + 0",
+      "castRange": 600,
+      "manaCost": 0,
+      "cooldown": 18,
+      "effects": {
+        "fadeTime": 1.25,
+        "duration": 3.5,
+        "moveSpeedSlow": "35%",
+        "affects": "Allied Heroes"
+      },
+      "notes": [
+        "Double-tapping automatically targets self",
+        "Does not interrupt the wielder's channeling abilities",
+        "The caster does not require to face the target in order to cast it on them",
+        "Can only be cast on heroes, including illusions and creep-heroes",
+        "Recasting the ability refreshes the buff duration",
+        "Does not grant the target phased movement",
+        "Effective duration of the invisibility is 2.25 seconds, due to the fade time",
+        "Picking up, dropping, or selling items does not break the invisibility",
+        "During the fade time, casting abilities or items does not break the invisibility",
+        "After the fade time, upon reaching the cast point of abilities or items breaks invisibility",
+        "After the fade, upon reaching the attack point of an attack breaks invisibility",
+        "Does not share cooldowns with Glimmer Cape",
+        "Can now be dispelled"
+      ]
+    }
+  ],
+  "stats": {
+    "moveSpeedSlowWhileInvisible": "35%"
+  },
+  "additionalInfo": [
+    "Reduces the target's movement speed for the whole duration",
+    "Invisibility is broken upon casting an ability or item, or upon attacking"
+  ],
+  "recommendedHeroes": null,
+  "states": [
+    {
+      "icon": "Fading into invisibility",
+      "contains": "Hero in fade time state"
+    },
+    {
+      "icon": "Fully invisible", 
+      "contains": "Hero in full invisibility state"
+    }
+  ],
+  "trivia": null,
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "No longer resets its cooldown when cast on self. Increased cooldown from 7 to 18. No longer requires the target to remain stationary while invisible. Now slows the target's movement speed by 35% while invisible. Reduced duration from 15 to 3.5. Can now be dispelled.",
+        "date": "7.37 (2024-07-31)"
+      },
+      {
+        "description": "Reduced Fade duration from Indefinite to 15.",
+        "date": "7.32 (2022-08-24)"
+      },
+      {
+        "description": "Fade no longer has a 250 cast range buffer.",
+        "date": "7.30 (2021-08-18)"
+      }
+    ]
+  }
+}

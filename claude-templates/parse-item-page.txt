@@ -43,22 +43,12 @@ Parse the provided HTML content and extract all relevant item information. Creat
   "additionalInfo": [
     "array of additional information points"
   ],
-  "recommendedHeroes": ["array of hero names"],
   "states": [
     {
       "icon": "string description",
       "contains": "string description"
     }
-  ],
-  "trivia": ["array of trivia points"],
-  "changelog": {
-    "recentChanges": [
-        {
-            description: "string",
-            date: "string"
-        }
-    ]
-  }
+  ]
 }
 ```
 
@@ -71,9 +61,7 @@ Parse the provided HTML content and extract all relevant item information. Creat
 5. **Abilities**: Parse all active and passive abilities with their details
 6. **Stats**: Extract any numerical bonuses or effects
 7. **Additional Info**: Include bullet points about item mechanics
-8. **Recommended Heroes**: Extract hero names from the recommendations section
-9. **States**: For items like Bottle, extract different visual/functional states
-10. **Trivia**: Include historical or interesting facts about the item
+8. **States**: For items like Bottle, extract different visual/functional states
 
 ## Special Handling
 

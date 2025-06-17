@@ -1,0 +1,75 @@
+{
+  "name": "Linken's Sphere",
+  "description": "This magical sphere once protected one of the most famous heroes in history.",
+  "category": "Armor",
+  "cost": 4800,
+  "sellValue": 2400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": false,
+  "recipe": {
+    "components": ["Ultimate Orb", "Perseverance", "Recipe"],
+    "totalCost": 4800
+  },
+  "abilities": [
+    {
+      "name": "Spellblock",
+      "type": "passive",
+      "description": "Blocks and completely negates most single-target abilities targeted at the wielder.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 14,
+      "effects": {
+        "affects": "Self",
+        "blockType": "Single-target abilities"
+      },
+      "notes": [
+        "Does not block abilities cast by allies",
+        "If stacked with other spell blocks, triggers in priority order",
+        "For a list of blocked abilities and their interactions, see interactions page"
+      ]
+    },
+    {
+      "name": "Transfer Spellblock",
+      "type": "active",
+      "description": "Temporarily transfers the effects of Spellblock to the targeted allied hero.",
+      "castAnimation": "0 + 0",
+      "castRange": 700,
+      "manaCost": 0,
+      "cooldown": 14,
+      "effects": {
+        "affects": "Allied Heroes",
+        "duration": 14,
+        "transferDuration": "Matches current cooldown of the item"
+      },
+      "notes": [
+        "Can be cast on allied heroes, Clones, and Creep-Heroes",
+        "Can be cast on Illusions, but it does not block abilities for them",
+        "Puts Spellblock on cooldown when transferred to an ally",
+        "If the transferred Spell Block gets triggered, the item goes on cooldown again",
+        "Successive casts on the same target refresh the duration, the buff does not stack",
+        "The duration of the transfer matches the current cooldown of the item",
+        "Cooldown reductions are considered",
+        "Resetting the item cooldown does not prematurely end the transfer"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 16,
+    "agility": 16,
+    "intelligence": 16,
+    "healthRegeneration": 6.5,
+    "manaRegeneration": 4.25
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "The item's attributes grant 352 health and 1.6 health regeneration",
+    "Grants 192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
+    "Provides 16 attack speed and 2.67 main armor",
+    "Adds 16 main attack damage to all Strength/Agility/Intelligence heroes",
+    "Adds 21.6 main attack damage to universal heroes",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

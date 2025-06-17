@@ -1,0 +1,55 @@
+{
+  "name": "Assault Cuirass",
+  "description": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
+  "category": "Armor",
+  "cost": 5125,
+  "sellValue": 2562.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Buckler", "Platemail", "Chainmail", "Recipe"],
+    "totalCost": 5125
+  },
+  "abilities": [
+    {
+      "name": "Assault Aura",
+      "type": "passive",
+      "description": "Increases the armor and attack speed of nearby allied units and buildings. Also reduces the armor of nearby enemy units and buildings.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "armorBonus": 5,
+        "attackSpeedBonus": 30,
+        "armorReduction": 5,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Multiple instances of Assault Aura do not stack",
+        "Fully stacks with other sources of Buckler-based items' armor aura",
+        "A unit can be affected by the positive and the negative aura from different sources at the same time",
+        "Affects invulnerable allies and enemies, but not hidden ones",
+        "The status debuff icon on enemies only shows up when the affected unit has vision over the source",
+        "However, the armor reduction in the HUD is always visible",
+        "Now pierces Debuff Immunity"
+      ]
+    }
+  ],
+  "stats": {
+    "armor": 10,
+    "attackSpeed": 30
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "With the Assault Aura, the item grants a total of 15 armor and 60 attack speed to the wielder",
+    "The Assault Aura is a great tool for pushing enemy towers, as it provides reliable attack speed and armor",
+    "The Attack Speed aura works on illusions, but the armor aura does not",
+    "The aura is also good for controlled units especially with low base attack time and for the bonus armor and armor reduction of the enemy",
+    "Can only be completed with items from the Secret Shop",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

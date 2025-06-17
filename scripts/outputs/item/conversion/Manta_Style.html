@@ -1,0 +1,67 @@
+{
+  "name": "Manta Style",
+  "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
+  "category": "Armaments",
+  "cost": 4650,
+  "sellValue": 2325,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Yasha", "Ultimate Orb", "Recipe"],
+    "totalCost": 4650
+  },
+  "abilities": [
+    {
+      "name": "Mirror Image",
+      "type": "active",
+      "description": "Creates multiple mirrored illusions of the wielder that deals a portion of the wielder's damage and receives additional incoming damage.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 125,
+      "cooldown": 34,
+      "effects": {
+        "splitTime": 0.1,
+        "numberOfIllusions": 2,
+        "duration": 18,
+        "meleeDamageDealt": "33%",
+        "meleeDamageTaken": "300%",
+        "rangedDamageDealt": "28%",
+        "rangedDamageTaken": "300%"
+      },
+      "notes": [
+        "The wielder is hidden upon cast; this disjoints incoming projectiles",
+        "Issues the wielder a stop-command, canceling all queued orders",
+        "Applies a basic dispel on the wielder",
+        "Creates illusions based on the ability's cast position",
+        "Grants 400-radius flying vision centered around caster during split time",
+        "The wielder and illusions reappear in random positions within fixed formations",
+        "Recasting the ability replaces all Mirror Image-based illusions of the current instance"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 10,
+    "agility": 26,
+    "intelligence": 10,
+    "moveSpeed": "10%",
+    "attackSpeed": 15,
+    "health": 220,
+    "healthRegeneration": 1,
+    "mana": 120,
+    "manaRegeneration": 0.5,
+    "magicResistance": "1%",
+    "mainArmor": 4.33
+  },
+  "additionalInfo": [
+    "The item's attributes grant 220 health and 1 health regeneration",
+    "Grants 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "Provides 26 attack speed and 4.33 main armor",
+    "Grants 10, 26 and 10 main attack damage to Strength/Agility/Intelligence heroes respectively",
+    "Grants 20.7 main attack damage to universal heroes",
+    "For Yasha-based items: Multiple sources of movement speed do not stack",
+    "Multiple sources of attack speed fully stack",
+    "Item is not shareable and cannot be disassembled"
+  ],
+  "states": null
+}

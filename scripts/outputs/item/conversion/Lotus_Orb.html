@@ -1,0 +1,54 @@
+{
+  "name": "Lotus Orb",
+  "description": "The jewel at its center still reflects a pale image of its creator.",
+  "category": "Armor",
+  "cost": 3850,
+  "sellValue": 1925,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Perseverance", "Energy Booster", "Recipe"],
+    "totalCost": 3850
+  },
+  "abilities": [
+    {
+      "name": "Echo Shell",
+      "type": "active",
+      "description": "Applies a basic dispel and a shield on the target ally for a while, which re-casts a copy of most single-target abilities targeted at the ally back at their casters. Does not protect the ally from the targeted abilities.",
+      "castAnimation": "0 + 0",
+      "castRange": 900,
+      "manaCost": 175,
+      "cooldown": 15,
+      "effects": {
+        "duration": 5,
+        "affects": "Allied Heroes",
+        "dispelType": "Basic Dispel"
+      },
+      "notes": [
+        "Can be cast on allied heroes, Clones, Illusions, and the Spirit Bear",
+        "Can be cast on Creep-Heroes as well, but it does not reflect abilities for them",
+        "Double-tapping automatically targets self",
+        "Applies a Basic Dispel on the target upon cast",
+        "Spell Reflection triggers before Spell Block, so a blocked ability is still reflected normally",
+        "Does not block abilities cast by allies",
+        "Does not reflect abilities as a result of other sources of Spell Reflection",
+        "Projectile-based abilities are nearly always reflected upon impact",
+        "Successive casts on the same target refresh the duration, the buff does not stack"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 6.5,
+    "mana": 250,
+    "manaRegeneration": 4,
+    "armor": 10
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "Can be disassembled",
+    "Purchasable at the Main Shop, under Armor",
+    "Requires items from the Secret Shop to be assembled, or can be assembled entirely with items from the Secret Shop"
+  ],
+  "states": null
+}

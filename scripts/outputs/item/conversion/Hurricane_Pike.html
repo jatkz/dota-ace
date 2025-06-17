@@ -1,0 +1,79 @@
+{
+  "name": "Hurricane Pike",
+  "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
+  "category": "Armaments",
+  "cost": 4450,
+  "sellValue": 2225,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Force Staff", "Dragon Lance"],
+    "totalCost": 4450
+  },
+  "abilities": [
+    {
+      "name": "Hurricane Thrust",
+      "type": "active",
+      "description": "Pushes the caster and the enemy target away from each other.",
+      "castAnimation": "0 + 0",
+      "castRange": 450,
+      "manaCost": 150,
+      "cooldown": 19,
+      "effects": {
+        "pushDistance": 450,
+        "pushDuration": 0.2,
+        "maxAttacks": 5,
+        "attackSpeedBonus": 100,
+        "buffDuration": 6,
+        "allyPushDistance": 600,
+        "allyPushDuration": 0.4,
+        "allyCastRange": 650
+      },
+      "notes": [
+        "If cast on an enemy, greatly increases the caster's attack speed and — if the caster is ranged — grants them infinite attack range against the target for a few attacks, or until the buff expires",
+        "When cast on an ally or on self, pushes the target in the direction they are facing",
+        "Roshan cannot be moved. However, the caster buff is still applied, since Roshan is an enemy",
+        "Double-tapping automatically targets self",
+        "Can be cast on Homing Missile",
+        "Cannot be cast on other Ward-type units",
+        "Does not disable the target, they can still attack, cast abilities and items, and turn during it",
+        "Does not interrupt channeling abilities of the affected target",
+        "Can move the target over impassable terrain",
+        "Destroys trees within a 100 radius around the target"
+      ]
+    },
+    {
+      "name": "Dragon's Reach",
+      "type": "passive",
+      "description": "Grants flat attack range bonus to ranged wielders.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "attackRangeBonus": 150
+      },
+      "notes": [
+        "The bonus attack range from multiple Dragon Lance-based items do not stack",
+        "Stacks additively with other ranged bonus attack range sources"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 15,
+    "agility": 20,
+    "intelligence": 15,
+    "health": 200,
+    "attackRange": 150
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "330 health and 1.5 health regeneration",
+    "180 mana, 0.75 mana regeneration and 1.5% flat base magic resistance",
+    "20 attack speed and 3.33 main armor",
+    "15, 20 and 15 main attack damage to all Strength/Agility/Intelligence heroes respectively",
+    "22.5 main attack damage to universal heroes"
+  ],
+  "states": null
+}

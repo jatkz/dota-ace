@@ -1,0 +1,69 @@
+{
+  "name": "Javelin",
+  "description": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack.",
+  "category": "Equipment",
+  "cost": 900,
+  "sellValue": 450,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 900
+  },
+  "abilities": [
+    {
+      "name": "Pierce",
+      "type": "passive",
+      "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "25%",
+        "bonusMagicalDamage": 60,
+        "affects": "Enemies",
+        "damageType": "Attack / Magical"
+      },
+      "notes": [
+        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage",
+        "It is not considered by lifesteal, crit or cleave",
+        "It can be reduced only by flat reductions (e.g. magical damage barrier)",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "Self-Illusions can use the accuracy, but do not apply the bonus magical attack damage",
+        "Does not work against buildings, but works against wards and allied units",
+        "Adds an average of 15 magical damage to every attack",
+        "Pierce uses pseudo-random distribution",
+        "Pierce from Javelin-based items fully stack with another and themselves, except for multiple Monkey King Bars",
+        "Multiple sources can proc on the same attack"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Purchasable at the Base Shop under Equipment category",
+    "Pierce ability can proc through evasion",
+    "Bonus damage is magical and conditional"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced Pierce proc chance from 30% to 25%",
+        "date": "2024-03-21"
+      },
+      {
+        "description": "Now builds into Bloodthorn. Reduced gold cost from 1100 to 900. Reduced Pierce damage from 70 to 60",
+        "date": "2023-12-14"
+      },
+      {
+        "description": "Pierce proc damage is no longer considered by lifesteal. Increased proc chance from 25% to 30%. Reduced damage from 80 to 70",
+        "date": "2020-12-17"
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "Ring of Basilius",
+  "description": "Ring given as a reward to the greatest mages.",
+  "category": "Support",
+  "cost": 425,
+  "sellValue": 212.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Sage's Mask", "Ring of Protection"],
+    "totalCost": 425
+  },
+  "abilities": [
+    {
+      "name": "Basilius Aura",
+      "type": "passive",
+      "description": "Increases the mana regeneration of nearby allies.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "manaRegenerationBonus": 1,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Multiple identical instances of Basilius Aura do not stack, regardless of source. Stacks with upgraded versions of the aura.",
+        "Can regenerate up to 60 mana in one minute.",
+        "Does not affect invulnerable units."
+      ]
+    }
+  ],
+  "stats": {
+    "manaRegeneration": 0.5
+  },
+  "additionalInfo": [
+    "With Basilius Aura, the item grants a total of 1.5 mana regeneration to the wielder."
+  ],
+  "recommendedHeroes": [],
+  "states": null,
+  "trivia": [
+    "Basilius is derived from the Greek word Basileus, meaning \"king\" or \"emperor\"."
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Now builds into Arcane Boots. No longer builds into Veil of Discord.",
+        "date": "2023-12-14"
+      },
+      {
+        "description": "Reduced mana regeneration bonus from 0.6 to 0.5.",
+        "date": "2021-04-29"
+      },
+      {
+        "description": "Now grants 0.6 mana regeneration bonus. Reduced Basilius Aura mana regeneration bonus from 1.4 to 1.",
+        "date": "2021-04-09"
+      }
+    ]
+  }
+}

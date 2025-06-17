@@ -1,0 +1,64 @@
+{
+  "name": "Mekansm",
+  "description": "A glowing jewel formed out of assorted parts that somehow fit together perfectly.",
+  "category": "Support",
+  "cost": 1775,
+  "sellValue": 887.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 1,
+  "recipe": {
+    "components": ["Headdress", "Buckler", "Recipe"],
+    "totalCost": 1775
+  },
+  "abilities": [
+    {
+      "name": "Restore",
+      "type": "active",
+      "description": "Restores health to nearby allies on cast.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 100,
+      "cooldown": 50,
+      "effects": {
+        "radius": 1200,
+        "heal": 250,
+        "stackLimitDuration": 49
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units",
+        "Does not heal units that have been healed by Restore in the last 49 seconds, or Mend in the last 44 seconds",
+        "A status buff icon on affected units shows how much time is left for it to be able to get affected by the aforementioned abilities again",
+        "Units may only be affected by Restore once in a while, including units affected by Guardian Greaves"
+      ]
+    },
+    {
+      "name": "Mekansm Aura",
+      "type": "passive",
+      "description": "Grants an aura that increases the health regeneration of nearby ally units.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "healthRegenerationBonus": 2.5,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Can regenerate up to 150 health in one minute",
+        "Does not affect invulnerable units"
+      ]
+    }
+  ],
+  "stats": {
+    "armor": 4
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Guardian Greaves was purchased as well, Guardian Greaves' icon takes priority",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Helm of the Overlord",
+  "description": "The powerful headpiece of an undead necromancer.",
+  "category": "Armor",
+  "cost": 5650,
+  "sellValue": 2825,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Helm of the Dominator"],
+    "totalCost": 5650
+  },
+  "abilities": [
+    {
+      "name": "Dominate",
+      "type": "active",
+      "description": "Takes control of an enemy non-hero unit, elevating its status to a Creep-Hero, and granting it various stat bonuses. Can dominate ancient creeps.",
+      "castAnimation": "0 + 0",
+      "castRange": 700,
+      "manaCost": 0,
+      "cooldown": 45,
+      "effects": {
+        "minBaseHealth": 1800,
+        "baseAttackDamageBonus": 70,
+        "healthRegenBonus": 12,
+        "manaRegenBonus": 4,
+        "setMoveSpeed": 380,
+        "armorBonus": 7,
+        "setUnitGoldBounty": 250,
+        "maxDominatedUnits": 1,
+        "abilityLevelBonus": 1
+      },
+      "notes": [
+        "Cannot dominate Creep-heroes, Siege Creeps, Necronomicon Archer, or Necronomicon Warrior",
+        "Dominating a creep while already having one dominated instantly kills the previously dominated creep",
+        "Applies a basic dispel on the creep upon cast",
+        "Sets the unit's type to Creep-Hero",
+        "If cast on a neutral creep, increases its abilities' level by 1 and unlocks their 4th level",
+        "The number of max dominated units is bound to the wielder, and shared amongst multiple Helms of the Overlord and Helms of the Dominator",
+        "Roshan cannot be dominated",
+        "Reinforced units receive less damage from the dominated creep",
+        "Does not share cooldowns with Helm of the Dominator"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 21,
+    "agility": 21,
+    "intelligence": 21,
+    "healthRegeneration": 7,
+    "armor": 7
+  },
+  "additionalInfo": [
+    "The item's attributes grant 462 health and 2.1 health regeneration",
+    "Grants 252 mana, 1.05 mana regeneration and 2.1% flat base magic resistance",
+    "Provides 21 attack speed and 3.5 main armor",
+    "Adds 21 main attack damage to all Strength/Agility/Intelligence heroes",
+    "Adds 28.35 main attack damage to universal heroes",
+    "Cannot be disassembled",
+    "Not shareable"
+  ],
+  "states": null
+}

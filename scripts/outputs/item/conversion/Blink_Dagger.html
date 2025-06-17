@@ -1,0 +1,70 @@
+{
+  "name": "Blink Dagger",
+  "description": "The fabled dagger used by the fastest assassin ever to walk the lands.",
+  "category": "Miscellaneous",
+  "cost": 2250,
+  "sellValue": 1125,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 2250
+  },
+  "abilities": [
+    {
+      "name": "Blink",
+      "type": "active",
+      "description": "Instantly teleports the wielder towards the targeted point.",
+      "castAnimation": "0 + 0",
+      "castRange": "Global",
+      "manaCost": 0,
+      "cooldown": 15,
+      "effects": {
+        "maxBlinkDistance": 1200,
+        "downtime": 3
+      },
+      "notes": [
+        "Blink utilizes the teleport mechanic",
+        "When targeting a point within 1200 distance, teleports directly onto the targeted point",
+        "When targeting a point beyond 1200 distance, teleports 1200 distance towards the targeted point instead",
+        "Incoming projectiles are disjointed upon teleporting",
+        "Taking more than 0 damage from any other player or Roshan (after reductions and not flagged as HP Removal) puts the item on a fixed cooldown",
+        "Cannot be reset with cooldown reset sources",
+        "Doubletap targets a point in front of the team's Fountain",
+        "Shares cooldown with other blink items"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Taking damage puts the item on a 3-second mute duration",
+    "The item mute component has precedence over all damage manipulation sources"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [
+    "This item is based on Kelen's Dagger of Escape from Warcraft 3",
+    "In DotA, the item was originally named Kelen's Dagger of Escape. Kelen is a rogue from World of Warcraft",
+    "Later on, it was shortened to just Kelen's Dagger, because most plays used it aggressively, rather than to escape",
+    "In Dota 2, it was renamed to Blink Dagger, to avoid copyright issues with Blizzard Entertainment",
+    "Riki and Lion are the only heroes who are missing responses for acquiring a Blink Dagger",
+    "Axe's cosmetic item, Little Blink Dagger, is based on Blink Dagger"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Blink no longer clamps its distance to 4/5 of max distance when targeted beyond the max distance",
+        "date": "7.39 (2025-05-21)"
+      },
+      {
+        "description": "The item mute component now has precedence over all damage manipulation sources",
+        "date": "7.37d (2024-10-01)"
+      },
+      {
+        "description": "CHANGED Blink from applying a 3-second damage downtime to a 3-second item mute duration",
+        "date": "7.33 (2023-04-20)"
+      }
+    ]
+  }
+}

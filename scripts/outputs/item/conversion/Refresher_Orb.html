@@ -1,0 +1,55 @@
+{
+  "name": "Refresher Orb",
+  "description": "A powerful artifact created for wizards.",
+  "category": "Magical",
+  "cost": 5000,
+  "sellValue": 2500,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Cornucopia", "Ring of Tarrasque", "Tiara of Selemene", "Recipe"],
+    "totalCost": 5000
+  },
+  "abilities": [
+    {
+      "name": "Reset Cooldowns",
+      "type": "active",
+      "description": "Resets the cooldowns of all abilities of the wielder, as well as all item cooldowns within their inventory or backpack.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 180,
+      "effects": {
+        "manaCost": 350
+      },
+      "notes": [
+        "Also resets all charges of charge-based abilities and items",
+        "Does not affect charge-based items that do not have a charge replenish timer",
+        "If the item is not in the owner's main inventory, its cooldown freezes completely, only continuing to tick down when entering the main inventory again",
+        "Interrupts the caster's channeling abilities upon cast",
+        "Resets Invoker's abilities that are currently not invoked",
+        "Resets Kez's alternative skill set, even when currently not using that set",
+        "Does not reset Rubick's previously stolen and used abilities that are no longer stolen",
+        "Does not reset cooldowns of abilities acquired via Morphling while currently unmorphed, or his default abilities while currently morphed",
+        "Does not reset Doom's previously acquired and used neutral creep abilities that are no longer there",
+        "Does not reset the cooldown of Aghanim's Shard",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state",
+        "Does not skip the fade delay for Cloak and Dagger",
+        "The 'Channeled abilities require hold/stop to cancel' setting does not stop Refresher Orb from being cast while channeling"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 18,
+    "manaRegeneration": 8,
+    "attackDamage": 10
+  },
+  "additionalInfo": [
+    "Purchasable at the Base Shop, under Magical",
+    "Can only be completed with items from the Secret Shop",
+    "Cannot be disassembled",
+    "Shares cooldown with other refresh-type items"
+  ],
+  "states": null
+}

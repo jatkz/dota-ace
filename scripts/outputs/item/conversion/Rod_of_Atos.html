@@ -1,0 +1,58 @@
+{
+  "name": "Rod of Atos",
+  "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
+  "category": "Magical",
+  "cost": 2250,
+  "sellValue": 1125,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Staff of Wizardry", "Vitality Booster", "Recipe"],
+    "totalCost": 2250
+  },
+  "abilities": [
+    {
+      "name": "Cripple",
+      "type": "active",
+      "description": "Launches a projectile at the target enemy, rooting them in place and revealing them.",
+      "castAnimation": "0 + 0",
+      "castRange": 1100,
+      "manaCost": 100,
+      "cooldown": 18,
+      "effects": {
+        "duration": 2,
+        "affects": "Enemies",
+        "abilityType": "Unit"
+      },
+      "notes": [
+        "Can target invisible units and units inside the Fog of War",
+        "Cannot target invulnerable or hidden units",
+        "Roots the target, preventing them from moving and casting certain mobility abilities",
+        "Provides True Sight over affected target",
+        "The True Sight pierces debuff immunity, the root does not",
+        "Blocked individually on impact by Spell Block",
+        "Reflected individually on impact by Spell Reflect",
+        "Shares cooldown with Gleipnir"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 12,
+    "health": 275,
+    "mana": 144,
+    "manaRegeneration": 0.6,
+    "magicResistance": 1.2,
+    "mainAttackDamageInt": 12,
+    "mainAttackDamageUniversal": 5.4
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Gleipnir was purchased as well, Gleipnir's icon takes priority",
+    "The item's attributes grant 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
+    "Grants 12 main attack damage to Intelligence heroes",
+    "Grants 5.4 main attack damage to Universal heroes",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

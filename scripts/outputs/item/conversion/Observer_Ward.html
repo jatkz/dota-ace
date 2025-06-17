@@ -1,0 +1,76 @@
+{
+  "name": "Observer Ward",
+  "description": "A form of half-sentient plant, often cultivated by apprentice wizards.",
+  "category": "Consumables",
+  "cost": 0,
+  "sellValue": null,
+  "maxStacks": null,
+  "shareable": true,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 0
+  },
+  "abilities": [
+    {
+      "name": "Plant",
+      "type": "active",
+      "description": "Plants an invisible and phased Observer Ward at the target location, which grants ground vision around it.",
+      "castAnimation": "0 + 0",
+      "castRange": 500,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "visionRadius": 1600,
+        "wardDuration": 360,
+        "goldBountyIncreasePerMinute": 4,
+        "experienceBountyIncreasePerMinute": 8,
+        "heroHitCount": 2,
+        "nonHeroHitCount": 10,
+        "attackerAccuracy": "100%",
+        "meleeAttackRangeBonus": 150
+      },
+      "notes": [
+        "Holding CTRL allows Plant to be cast on an allied hero, sharing an Observer Ward with them",
+        "As the match goes on, Observer Wards become more and more valuable. Their gold and experience bounties scale with elapsed game time",
+        "The ward takes a fixed amount of attacks to be destroyed. Creeps take more attacks than heroes",
+        "Attacks against Observer Wards cannot miss. Melee units have an increased attack range when attacking Observer Wards",
+        "The player that placed the ward can always attack it with any of their units, but all their attacks are treated as non-hero attacks until the ward comes within the 50% deny range"
+      ]
+    }
+  ],
+  "stats": {
+    "charges": 1,
+    "stock": "2 INIT / 4 MAX",
+    "stockReplenishTime": 135
+  },
+  "additionalInfo": [
+    "Stacks with itself and with Sentry Wards in a single inventory slot, there is no stack limit",
+    "Observer Wards do not provide True Sight",
+    "Killing an Observer Ward prints out a chat notification to allies",
+    "Observer Ward's vision is considered team vision, and is not bound to the player that placed the ward",
+    "Cannot be placed in Fountain areas, Roshan's pits, within bound radius of buildings and trees, or on impassable terrain",
+    "The Ward's bounty increases by 1 gold every 15 seconds, and the experience by 1 every 7.5 seconds"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [
+    "In DotA, this item's name is pluralized to Observer Wards"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Observer Wards' vision is now considered team vision, and not attributed to the player that placed the ward",
+        "date": "2024-06-05"
+      },
+      {
+        "description": "Increased base experience bounty from 50 to 70. Increased experience bounty per minute from 6 to 8",
+        "date": "2023-05-13"
+      },
+      {
+        "description": "Strength of the Immortal now causes Roshan's attacks to immediately destroy Observer Ward",
+        "date": "2022-06-08"
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "Mask of Madness",
+  "description": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
+  "category": "Accessories",
+  "cost": 1900,
+  "sellValue": 950,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Morbid Mask", "Broadsword"],
+    "totalCost": 1900
+  },
+  "abilities": [
+    {
+      "name": "Berserk",
+      "type": "active",
+      "description": "The caster goes berserk, gaining movement and attack speed, at the cost of armor and losing the ability to cast spells for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 16,
+      "effects": {
+        "moveSpeedBonus": 25,
+        "attackSpeedBonus": 110,
+        "armorReduction": 8,
+        "duration": 6
+      },
+      "notes": [
+        "Does not interrupt the caster's channeling abilities upon cast",
+        "Berserk grants its bonuses as a buff. Therefore, allies are unable to dispel the silence"
+      ]
+    },
+    {
+      "name": "Lifesteal",
+      "type": "passive",
+      "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "lifesteal": "24%",
+        "creepLifestealFactor": 0.6
+      },
+      "notes": [
+        "Only works with physical attack damage, does not work with magical or pure attack damage",
+        "Does not work with physical or any other spell damage",
+        "Does not work with instant attacks that do not trigger attack modifier",
+        "Stacks additively with other lifesteal sources",
+        "Treats illusions and creep-heroes as heroes",
+        "Does not work on allied units, buildings, couriers, or ward-type units",
+        "Non-functional on self-created illusions but effects are visible for camouflaging purposes"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 20
+  },
+  "additionalInfo": [
+    "Can be disassembled",
+    "Mask of Madness is the most cost-effective DPS and attack speed item in the game, costing only 17.27 gold per point of attack speed"
+  ],
+  "recommendedHeroes": null,
+  "states": null,
+  "trivia": null,
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced Berserk movement speed bonus from 30 to 25",
+        "date": "7.38 (2025-02-19)"
+      },
+      {
+        "description": "REWORKED recipe and stats. Recipe changed from Morbid Mask + Quarterstaff to Morbid Mask + Broadsword. Total cost increased from 1775 to 1900. Attack damage bonus increased from 10 to 20. Attack speed bonus removed (was 10)",
+        "date": "7.35 (2023-12-14)"
+      },
+      {
+        "description": "Increased creep Lifesteal factor from 0.5 to 0.6",
+        "date": "7.33c (2023-05-13)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "name": "Hand of Midas",
+  "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
+  "category": "Accessories",
+  "cost": 2200,
+  "sellValue": 1100,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Gloves of Haste", "Recipe: Hand of Midas"],
+    "totalCost": 2200
+  },
+  "abilities": [
+    {
+      "name": "Transmute",
+      "type": "active",
+      "description": "Instantly kills the target non-hero unit, transmuting it into gold and experience. Sets the target's gold bounty to a fixed value, while multiplying the experience bounty.",
+      "castAnimation": "0 + 0",
+      "castRange": 600,
+      "manaCost": 0,
+      "cooldown": 110,
+      "effects": {
+        "setGoldBounty": 160,
+        "experienceBountyMultiplier": 2.1,
+        "casterMadstoneAcquired": 2,
+        "casterMadstoneAcquiredTurbo": 3,
+        "numberOfRandomAllies": 1,
+        "numberOfRandomAlliesTurbo": 2,
+        "initialCharges": 1,
+        "chargeReplenishTime": 110
+      },
+      "notes": [
+        "Cannot be cast on Roshan, Creep-Heroes, Ancient Creeps, and Necronomicon Warriors",
+        "Upon cast, Transmute instantly kills the target unit, dealing 100% × CurrentHP damage to kill the targeted creep",
+        "Grants the caster 160 unreliable gold and 2.1 × XPBounty experience",
+        "The target's default bounties are not granted",
+        "If targeting a Flagbearer Creep, the aura gold bounty is still granted",
+        "A newly acquired Hand of Midas starts with 1 charge",
+        "If cast on a neutral creep, also grants Madstone to the caster and random allies"
+      ]
+    }
+  ],
+  "stats": {
+    "attackSpeed": 35
+  },
+  "additionalInfo": [
+    "View the Transmute Efficiency table for Transmute gold acquired based on the target it is used on",
+    "The earlier Hand of Midas is purchased, the earlier it will pay itself off during the match",
+    "Assuming it is always used whenever a charge is ready, Hand of Midas increases GPM by 87.27",
+    "It takes 23 minutes and 50 seconds to pay its 2200 gold cost off, which is 14 casts",
+    "It takes 18 minutes and 20 seconds to pay its 1750 recipe cost off, which is 11 casts"
+  ],
+  "recommendedHeroes": [
+    "Anti-Mage",
+    "Arc Warden", 
+    "Invoker",
+    "Lone Druid",
+    "Alchemist",
+    "Drow Ranger",
+    "Faceless Void",
+    "Medusa",
+    "Phantom Assassin",
+    "Spectre",
+    "Templar Assassin",
+    "Troll Warlord",
+    "Crystal Maiden",
+    "Pudge"
+  ],
+  "states": null,
+  "trivia": [
+    "Midas is based on Midas, a figure from Greek mythology who turned all he touched to gold",
+    "Alchemist's cosmetic item, Midas Knuckles, is based on Hand of Midas"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Transmute no longer secures a neutral item token from the current tier. Now also grants a full Madstone bundle when cast on a neutral creep. A Madstone bundle contains 2 Madstones for the caster, and one for a random ally.",
+        "date": "7.38 (2025-02-19)"
+      },
+      {
+        "description": "Increased Transmute charge replenish time from 100 to 110.",
+        "date": "7.34e (2023-11-20)"
+      },
+      {
+        "description": "Reduced attack speed bonus from 40 to 35.",
+        "date": "7.34d (2023-10-05)"
+      }
+    ]
+  }
+}

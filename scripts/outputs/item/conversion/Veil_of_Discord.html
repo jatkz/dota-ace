@@ -1,0 +1,55 @@
+{
+  "name": "Veil of Discord",
+  "description": "The headwear of corrupt magi.",
+  "category": "Armor",
+  "cost": 1725,
+  "sellValue": 862.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Null Talisman", "Ring of Health", "Recipe"],
+    "totalCost": 1725
+  },
+  "abilities": [
+    {
+      "name": "Magic Weakness",
+      "type": "active",
+      "description": "Weakens nearby enemies by applying a debuff that amplifies any spell damage they take.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 50,
+      "cooldown": 16,
+      "effects": {
+        "radius": 900,
+        "spellDamageAmp": "10%",
+        "duration": 16
+      },
+      "notes": [
+        "Does not interrupt the caster's channeling abilities upon cast",
+        "Applies generic incoming damage amplification on affected enemy units",
+        "Only affects spell damage of all damage types, does not affect attack damage",
+        "Does not affect damage flagged as HP Removal",
+        "Stacks additively with other sources of generic incoming damage manipulation",
+        "Affects invulnerable units as well",
+        "Shares a debuff with Arctic Blast, the last applied source overrides previous sources"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 4,
+    "agility": 4,
+    "intelligence": 4,
+    "healthRegeneration": 4,
+    "armor": 4
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "88 health and 0.4 health regeneration",
+    "48 mana, 0.2 mana regeneration and 0.4% flat base magic resistance",
+    "4 attack speed and 0.67 main armor",
+    "4 main attack damage to all Strength/Agility/Intelligence heroes",
+    "5.4 main attack damage to universal heroes"
+  ],
+  "states": null
+}

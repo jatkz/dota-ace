@@ -1,0 +1,85 @@
+{
+  "name": "Soul Ring",
+  "description": "A ring that feeds on the souls of those who wear it.",
+  "category": "Accessories",
+  "cost": 805,
+  "sellValue": 402.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Ring of Regen", "Gauntlets of Strength", "Gauntlets of Strength", "Recipe"],
+    "totalCost": 805
+  },
+  "abilities": [
+    {
+      "name": "Sacrifice",
+      "type": "active",
+      "description": "Temporarily grants the wielder mana, at the cost of health.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 25,
+      "effects": {
+        "manaBonus": 170,
+        "duration": 10,
+        "healthCost": 170
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Upon losing the buff, any of the unspent mana is removed again",
+        "If the max mana pool was increased, it gets reverted back as well",
+        "Only counts actual mana used. Other mana modifying abilities (e.g. Mana Burn) do not count",
+        "Recasting Sacrifice fully stacks, with each cast placing a separate, independent buff",
+        "If the mana bonus would exceed the max mana pool, a buffer is created that increases the max mana pool based on the amount that exceeds it. This buffer is as temporary as well"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 6,
+    "armor": 2,
+    "health": 132,
+    "healthRegeneration": 0.6,
+    "mainAttackDamageStrength": 6,
+    "mainAttackDamageUniversal": 2.7
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "132 health and 0.6 health regeneration",
+    "6 main attack damage to strength heroes",
+    "2.7 main attack damage to universal heroes"
+  ],
+  "recommendedHeroes": [
+    "Axe",
+    "Beastmaster", 
+    "Brewmaster",
+    "Centaur Warrunner",
+    "Clockwerk",
+    "Dragon Knight",
+    "Earth Spirit",
+    "Earthshaker",
+    "Elder Titan",
+    "Huskar"
+  ],
+  "states": null,
+  "trivia": [
+    "Soul Ring was the only item not allowed in The International 2013 Solo Championship",
+    "Life Essence's ability sound effect is actually Sacrifice in reverse"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced Recipe cost from 400 to 350 (total cost decreases from 855 to 805). Increased Sacrifice mana bonus from 150 to 170.",
+        "date": "7.34 (2023-08-08)"
+      },
+      {
+        "description": "Increased Recipe cost from 245 to 400 (total cost increases from 700 to 855).",
+        "date": "7.32b (2022-08-30)"
+      },
+      {
+        "description": "Increased Recipe cost from 225 to 245 (total cost increases from 680 to 700).",
+        "date": "7.31 (2022-02-23)"
+      }
+    ]
+  }
+}

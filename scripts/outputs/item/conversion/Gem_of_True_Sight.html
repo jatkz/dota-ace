@@ -1,0 +1,105 @@
+{
+  "name": "Gem of True Sight",
+  "description": "Not one thrall creature of the depths,\nNor spirit bound in drowning's keep,\nNor Maelrawn the Tentacular,\nShall rest till seas, gem comes to sleep.",
+  "category": "Miscellaneous",
+  "cost": 900,
+  "sellValue": 0,
+  "maxStacks": null,
+  "shareable": "Partially",
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 900
+  },
+  "abilities": [
+    {
+      "name": "Reveal",
+      "type": "active",
+      "description": "Reveals and exposes enemy units and wards within the target area for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": 300,
+      "manaCost": 0,
+      "cooldown": 12,
+      "effects": {
+        "radius": 300,
+        "duration": 4,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Exposes enemies within the area, revealing them through the Fog of War, and also provides True Sight over them",
+        "The effects are provided by an aura and lingers for 0.5 seconds",
+        "Cannot detect units under the effect of Shadow Dance, but can detect units affected by other sources of True Sight immunity",
+        "Does not affect invulnerable units",
+        "The visual effect created at the target area is visible to the casting team only. The sound is audible to both teams"
+      ]
+    },
+    {
+      "name": "True Sight",
+      "type": "passive",
+      "description": "Reveals nearby invisible enemy units and wards, rendering them visible to the owner and their team.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "revealRadius": 900,
+        "auraLingerDuration": 0.5
+      },
+      "notes": [
+        "Grants True Sight within its radius by an aura which affects enemies, it is not obstructed by anything",
+        "The debuff lingers for 0.5 seconds",
+        "As True Sight implies, it doesn't affect enemies with True Sight Immunity"
+      ]
+    },
+    {
+      "name": "Everlasting",
+      "type": "passive",
+      "description": "Dropped on death, and cannot be destroyed.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "visionRadius": 300
+      },
+      "notes": [
+        "While on the ground, the gem provides flying vision around itself to the last team that dropped it"
+      ]
+    }
+  ],
+  "stats": {
+    "stock": "1 INIT/1 MAX",
+    "restockTime": 600
+  },
+  "additionalInfo": [
+    "Gem of True Sight drops when the wielder dies, unless they have Reincarnation",
+    "This item cannot be put into the backpack",
+    "This item can also be used by the enemies of the owner",
+    "Gem of True Sight does not count towards the owner's net worth if it is on the ground",
+    "Unlike Divine Rapier, the item does not change owner when picked up by someone else, meaning that it can only affect the buyer's net worth",
+    "Both the Tempest Double and Wukong's Command Soldiers do not copy this item"
+  ],
+  "recommendedHeroes": [],
+  "states": null,
+  "trivia": [
+    "This item is based on the Gem of True Seeing from Warcraft 3",
+    "Windranger response while having the Compass of the Rising Gale equipped upon buying Gem of True Sight suggests that the Gem of True Sight is slippery, possibly explaining its nature of dropping upon death",
+    "In DOTA: Dragon's Blood. The Gem of True sight is used as a bargaining tool for Mirana, Invoker, and Terrorblade"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "No longer provides True Sight around the dropped location for the dropping team. ADDED new Reveal active ability.",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Now provides 300 radius ground vision and True Sight around the location Gem of True Sight is dropped, for the last team that dropped it. Lasts until picked up.",
+        "date": "7.20 (2018-11-19)"
+      },
+      {
+        "description": "True Sight no longer works on illusions.",
+        "date": "7.00 (2016-12-12)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Helm of the Dominator",
+  "description": "The powerful headpiece of a dead necromancer.",
+  "category": "Armor",
+  "cost": 2550,
+  "sellValue": 1275,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Crown"],
+    "totalCost": 2550
+  },
+  "abilities": [
+    {
+      "name": "Dominate",
+      "type": "active",
+      "description": "Takes control of an enemy non-hero unit, elevating its status to a Creep-Hero, and granting it various stat bonuses.",
+      "castAnimation": "0 + 0",
+      "castRange": 700,
+      "manaCost": 0,
+      "cooldown": 45,
+      "effects": {
+        "minBaseHealth": 1000,
+        "baseAttackDamageBonus": 25,
+        "healthRegenBonus": 12,
+        "manaRegenBonus": 4,
+        "setMoveSpeed": 380,
+        "armorBonus": 4,
+        "setUnitGoldBounty": 100,
+        "maxDominatedUnits": 1
+      },
+      "notes": [
+        "Cannot dominate Creep-heroes, Ancient units, Siege Creeps, Necronomicon Archer, or Necronomicon Warrior",
+        "Dominating a creep while already having one dominated instantly kills the previously dominated creep",
+        "Applies a basic dispel on the creep upon cast",
+        "Sets the unit's type to Creep-Hero",
+        "Sets base movement speed to 380, regardless of its default movement speed",
+        "If max health is below the min health threshold, sets current and max health to 1000",
+        "Sets gold bounty to 100, overwriting its default bounty",
+        "The number of max dominated units is bound to the wielder, and shared amongst multiple Helms of the Dominator and Helms of the Overlord",
+        "The Immortal's power cannot be obtained by anyone. Roshan cannot be dominated",
+        "Reinforced units receive less damage from the dominated creep"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 6,
+    "agility": 6,
+    "intelligence": 6,
+    "healthRegeneration": 6,
+    "armor": 6
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "132 health and 0.6 health regeneration",
+    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance",
+    "6 attack speed and 1 main armor",
+    "6 main attack damage to all Strength/Agility/Intelligence heroes",
+    "8.1 main attack damage to universal heroes"
+  ],
+  "recommendedHeroes": [
+    "Beastmaster",
+    "Chen",
+    "Enchantress",
+    "Lycan",
+    "Nature's Prophet",
+    "Visage"
+  ],
+  "states": null,
+  "trivia": null,
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Item cost changes: Now requires Crown (450 gold) to build, instead of Diadem (1000 gold). Increased Recipe cost from 650 gold to 1125 gold. Total gold cost decreases from 2625 gold to 2550 gold. CHANGED shop category from Accessories to Armor.",
+        "date": "7.39 (2025-05-21)"
+      },
+      {
+        "description": "The Dominated creep is now considered a Creep-Hero.",
+        "date": "7.38c (2025-03-27)"
+      },
+      {
+        "description": "Now grants the experience bounty of Dominated creep upon cast.",
+        "date": "7.36b (2024-06-05)"
+      }
+    ]
+  }
+}

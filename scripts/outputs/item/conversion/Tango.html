@@ -1,0 +1,73 @@
+{
+  "name": "Tango",
+  "description": "Forage to survive on the battlefield.",
+  "category": "Consumables",
+  "cost": 90,
+  "sellValue": 15,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 90
+  },
+  "abilities": [
+    {
+      "name": "Devour",
+      "type": "active",
+      "description": "Consumes the target tree to gain health regeneration for some time. The tree is destroyed in the process.",
+      "castAnimation": "0 + 0",
+      "castRange": 165,
+      "manaCost": 0,
+      "cooldown": 0,
+      "effects": {
+        "healthRegenBonus": 7,
+        "duration": 16,
+        "sharedTangoDuration": 40,
+        "increasedDuration": 32,
+        "charges": 3
+      },
+      "notes": [
+        "Can target allied heroes as well. Doing so gives one Tango charge to them, however, this single Tango expires after a while.",
+        "When cast on an Iron Branch tree, or on a tree from Sprout with the Soothing Saplings facet, the health regen duration is greatly increased.",
+        "The buff of successive casts do not stack but refresh the duration instead.",
+        "Can regenerate up to 112 (224) health over its full duration. All 3 charges can regenerate up to 336 (672) health.",
+        "When targeting an allied hero, it grants them a Tango (Shared) in their inventory, instead of granting health regeneration.",
+        "If the targeted ally's inventory is full, the item is dropped on the ground.",
+        "Treats the Spirit Bear as heroes, and illusions as creeps.",
+        "A shared Tango disappears 40 seconds after being created."
+      ]
+    }
+  ],
+  "stats": {
+    "charges": 3,
+    "stock": "8 INIT / 8 MAX",
+    "restockTime": 120
+  },
+  "additionalInfo": [
+    "A full set of Tangos is not shareable. However, it is possible to give allies a charge, Tango (Shared), by casting it on them."
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [
+    "In the original DotA, Tango's full name was \"Ancient Tango of Essifation\".",
+    "Tango's active ability was called \"Eat a Tree or Ward\" before July 19, 2017 Patch.",
+    "Ancient Knowledge Stone may have inspired the creation of Tango."
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Devour now treats the Sprouted tree as a regular tree.",
+        "date": "2023-09-08"
+      },
+      {
+        "description": "Devour now cuts the Sprouted tree down and no longer grants health regeneration duration bonus.",
+        "date": "2023-08-08"
+      },
+      {
+        "description": "Reduced initial stock from Infinite to 4. Reduced max stock from Infinite to 4. Increased restock time from 0 to 120.",
+        "date": "2023-04-20"
+      }
+    ]
+  }
+}

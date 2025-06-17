@@ -1,0 +1,66 @@
+{
+  "name": "Magic Stick",
+  "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
+  "category": "Miscellaneous",
+  "cost": 200,
+  "sellValue": 100,
+  "maxStacks": null,
+  "shareable": "0",
+  "usageAlert": "0",
+  "recipe": {
+    "components": [],
+    "totalCost": 200
+  },
+  "abilities": [
+    {
+      "name": "Energy Charge",
+      "type": "active",
+      "description": "Instantly heals and and replenishes the caster's health and mana per accumulated charge.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 17,
+      "effects": {
+        "maxCharges": 10,
+        "healPerCharge": 15,
+        "manaRestorePerCharge": 15,
+        "radius": 1200,
+        "chargeGainPerAbilityCast": 1
+      },
+      "notes": [
+        "Has no recharge time. Cooldown resetting effects do not restore charges.",
+        "Instead, gains a charge whenever a visible enemy casts an ability nearby.",
+        "When upgraded to Magic Wand, all the current charges are carried over.",
+        "Interrupts the wielder's channeling abilities.",
+        "Gains 1 charge for each ability cast by an enemy.",
+        "Does not gain charges from active attack modifiers, toggle-able abilities, other excluded sources, active abilities that are procced passively, or abilities cast out of invisibility.",
+        "With multiple copies within the inventory, the oldest item gains charges first.",
+        "Can heal and mana restore up to 150 with max charges."
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Shares cooldown with other Magic Stick-based items",
+    "Maximum healing and mana restoration of 150 with full charges"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Energy Charge cooldown increased from 13s to 17s.",
+        "date": "2024-03-21"
+      },
+      {
+        "description": "REMOVED from Side Lane Shops.",
+        "date": "2019-11-26"
+      },
+      {
+        "description": "No longer loses its current charges upon getting upgraded to Magic Wand.",
+        "date": "2012-01-12"
+      }
+    ]
+  }
+}

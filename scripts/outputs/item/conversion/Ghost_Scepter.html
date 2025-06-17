@@ -1,0 +1,97 @@
+{
+  "name": "Ghost Scepter",
+  "description": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage.",
+  "category": "Miscellaneous",
+  "cost": 1500,
+  "sellValue": 750,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 1500
+  },
+  "abilities": [
+    {
+      "name": "Ghost Form",
+      "type": "active",
+      "description": "Turns the wielder ethereal, rendering them immune to physical damage and not attackable, but more vulnerable to magical damage, as well as disarming them.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 22,
+      "effects": {
+        "magicResistanceReduction": "40%",
+        "duration": 4,
+        "downtime": 22
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Turns the caster ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance",
+        "Magic resistance reduction of multiple ethereal sources does not stack, the one with higher value takes priority",
+        "Stacks multiplicatively with other magic resistance sources",
+        "Reduces most heroes' magic resistance to -5%",
+        "Shares cooldowns with Ethereal Blade"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 5,
+    "agility": 5,
+    "intelligence": 5,
+    "health": 110,
+    "healthRegeneration": 0.5,
+    "mana": 60,
+    "manaRegeneration": 0.25,
+    "magicResistance": "0.5%",
+    "attackSpeed": 5,
+    "armor": 0.83,
+    "attackDamage": 5,
+    "attackDamageUniversal": 6.75
+  },
+  "additionalInfo": [
+    "The item's attributes grant 110 health and 0.5 health regeneration",
+    "Grants 60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance",
+    "Provides 5 attack speed and 0.83 main armor",
+    "Adds 5 main attack damage to all Strength/Agility/Intelligence heroes",
+    "Adds 6.75 main attack damage to universal heroes"
+  ],
+  "recommendedHeroes": [
+    "Bane",
+    "Crystal Maiden", 
+    "Chen",
+    "Disruptor",
+    "Earthshaker",
+    "Io",
+    "Keeper of the Light",
+    "Lina",
+    "Lion",
+    "Rubick",
+    "Shadow Demon",
+    "Shadow Shaman",
+    "Skywrath Mage",
+    "Witch Doctor",
+    "Mirana",
+    "Morphling",
+    "Nyx Assassin",
+    "Tinker"
+  ],
+  "states": null,
+  "trivia": null,
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Increased Ghost Form cooldown from 20 to 22",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Reduced Ghost Form cooldown from 25 to 20",
+        "date": "7.04 (2017-03-23)"
+      },
+      {
+        "description": "Reduced Ghost Form cooldown from 30 to 25",
+        "date": "6.87 (2016-04-25)"
+      }
+    ]
+  }
+}

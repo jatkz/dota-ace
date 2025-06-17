@@ -1,0 +1,75 @@
+{
+  "name": "Healing Salve",
+  "description": "A magical salve that can quickly mend even the deepest of wounds.",
+  "category": "Consumables",
+  "cost": 100,
+  "sellValue": 50,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 100
+  },
+  "abilities": [
+    {
+      "name": "Salve",
+      "type": "active",
+      "description": "Increases the target's health regeneration for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": 250,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "damageThreshold": 0,
+        "healthRegenBonus": 30,
+        "duration": 13,
+        "allyDuration": 6.5,
+        "totalHealthRestored": 390,
+        "totalHealthRestoredAlly": 195
+      },
+      "notes": [
+        "Salve is less effective when cast on allied heroes, including the wielder's own player-controlled units",
+        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
+        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
+        "Requires Ctrl to target an allied hero",
+        "Can be cast on untargetable units indirectly via portrait-casting",
+        "Doubletap casts the ability on the wielder",
+        "Reapplying the buff refreshes the duration",
+        "Does not dispel from self-damage sources or HP Removal sources"
+      ]
+    }
+  ],
+  "stats": {
+    "charges": 1,
+    "initialStock": 4,
+    "maxStock": 4,
+    "restockTime": 120
+  },
+  "additionalInfo": [
+    "Healing Salves dug up with Trusty Shovel are fully shareable, but cannot be sold"
+  ],
+  "recommendedHeroes": [],
+  "states": [],
+  "trivia": [
+    "This item is based on the Healing Salve from Warcraft 3",
+    "Prior to version 6.54 in DotA, Healing Salve was known as 'Flask of Sapphire Water'",
+    "The name, along with its icon, was likely changed to help visually differentiate it from Bottle"
+  ],
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced initial stock from Infinite to 4. Reduced max stock from Infinite to 4. Increased restock time from 0 to 120.",
+        "date": "7.33 (2023-04-20)"
+      },
+      {
+        "description": "Reduced Salve ally duration from 13 to 6.5. Reduced gold cost from 110 to 100.",
+        "date": "7.31d (2022-06-08)"
+      },
+      {
+        "description": "Reduced health regeneration bonus from 40 to 30. Increased duration from 10 to 13. Total health restored from 400 to 390.",
+        "date": "7.31 (2022-02-23)"
+      }
+    ]
+  }
+}

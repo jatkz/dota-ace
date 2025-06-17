@@ -1,0 +1,65 @@
+{
+  "name": "Force Staff",
+  "description": "Allows you to manipulate others, for good or evil.",
+  "category": "Magical",
+  "cost": 2200,
+  "sellValue": 1100,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Staff of Wizardry", "Ring of Regen", "Recipe"],
+    "totalCost": 2200
+  },
+  "abilities": [
+    {
+      "name": "Force",
+      "type": "active",
+      "description": "Pushes the target unit in the direction they are facing.",
+      "castAnimation": "0 + 0",
+      "castRange": 550,
+      "manaCost": 150,
+      "cooldown": 19,
+      "effects": {
+        "pushDistance": 600,
+        "pushDuration": 0.5,
+        "enemyCastRange": 850,
+        "moveSpeed": 1200,
+        "treeDestructionRadius": 100
+      },
+      "notes": [
+        "Has a higher cast range when cast on an enemy (850 vs 550)",
+        "Roshan cannot be moved. Attempting to do so wastes the mana and cooldown",
+        "Double-tapping automatically targets self",
+        "Can be cast on Homing Missile",
+        "Cannot be cast on Ward-type units",
+        "Does not disable the target, they can still attack, cast abilities and items, and turn during it",
+        "Does not interrupt channeling abilities of the affected target",
+        "The direction is determined upon cast, it does not adapt if the target should turn while being moved",
+        "Can move the target over impassable terrain",
+        "Destroys trees within a 100 radius around the target",
+        "Cannot be cast on debuff immune enemies, but can be cast on debuff immune allies",
+        "Cannot be cast on leashed units. However, if reflected, ignores leash",
+        "Can be cast on, but does not move units affected by Flaming Lasso, Black Hole, Chronosphere, Duel",
+        "Cannot push units through Kinetic Field or Arena of Blood"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 10,
+    "health": 175,
+    "mana": 120,
+    "manaRegeneration": 0.5,
+    "magicResistance": "1%",
+    "mainAttackDamageIntelligence": 10,
+    "mainAttackDamageUniversal": 4.5
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "Grants 10 main attack damage to Intelligence heroes",
+    "Grants 4.5 main attack damage to Universal heroes",
+    "Shares cooldown with Hurricane Pike"
+  ],
+  "states": null
+}

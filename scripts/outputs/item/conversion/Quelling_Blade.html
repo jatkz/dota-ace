@@ -1,0 +1,90 @@
+{
+  "name": "Quelling Blade",
+  "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
+  "category": "Equipment",
+  "cost": 100,
+  "sellValue": 50,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 100
+  },
+  "abilities": [
+    {
+      "name": "Chop Tree",
+      "type": "active",
+      "description": "Instantly destroys the targeted tree.",
+      "castAnimation": "0 + 0",
+      "castRange": 350,
+      "manaCost": 0,
+      "cooldown": 4,
+      "effects": {
+        "affects": "Trees"
+      },
+      "notes": [
+        "Does not share cooldown with Chop Tree from other items"
+      ]
+    },
+    {
+      "name": "Quell",
+      "type": "passive",
+      "description": "Grants the wielder bonus attack damage against non-hero units.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "meleeAttackDamageBonus": 8,
+        "rangedAttackDamageBonus": 4,
+        "affects": "Enemies",
+        "damageType": "Attack / Physical"
+      },
+      "notes": [
+        "Quell is considered as a conditional attack damage bonus",
+        "Attack damage bonus values are not displayed in the HUD but are still considered",
+        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities",
+        "Can be reduced only by flat reductions (e.g. damage block)",
+        "Not affected by percentage-based attack damage bonuses or reductions",
+        "The attack damage bonus adapts immediately depending on the wielder's range type",
+        "Stacks with the Quell of Battle Fury, but not with additional Quelling Blades",
+        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, or Allied units"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Quell is less effective if its wielder is a ranged hero"
+  ],
+  "recommendedHeroes": [
+    "Anti-Mage",
+    "Phantom Assassin", 
+    "Juggernaut",
+    "Sven",
+    "Wraith King",
+    "Alchemist",
+    "Lifestealer",
+    "Chaos Knight",
+    "Dragon Knight",
+    "Pudge"
+  ],
+  "states": null,
+  "trivia": null,
+  "changelog": {
+    "recentChanges": [
+      {
+        "description": "Reduced gold cost from 130 to 100. Reduced Quell attack damage bonus from melee heroes from 12 to 8. Reduced attack damage bonus from ranged heroes from 6 to 4.",
+        "date": "7.31 (2022-02-23)"
+      },
+      {
+        "description": "Reduced Quell attack damage bonus from melee heroes from 13 to 12.",
+        "date": "7.29 (2021-04-09)"
+      },
+      {
+        "description": "Reduced Quell attack damage bonus from melee heroes from 15 to 13.",
+        "date": "7.28 (2020-12-17)"
+      }
+    ]
+  }
+}

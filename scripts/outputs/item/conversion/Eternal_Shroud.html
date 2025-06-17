@@ -1,0 +1,66 @@
+{
+  "name": "Eternal Shroud",
+  "description": "A pristine hood that feeds upon strife to empower its owner.",
+  "category": "Armor",
+  "cost": 3700,
+  "sellValue": 1850,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Hood of Defiance", "Vitality Booster", "Point Booster", "Recipe"],
+    "totalCost": 3700
+  },
+  "abilities": [
+    {
+      "name": "Shroud",
+      "type": "passive",
+      "description": "Restores mana based on the incoming enemy spell damage value before reductions.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "spellDamageToManaRestore": 0.25,
+        "affects": "Self"
+      },
+      "notes": [
+        "Considers spell damage of all damage types (before reductions), excluding HP Removal sources"
+      ]
+    },
+    {
+      "name": "Eternal Endurance",
+      "type": "passive",
+      "description": "Grants base magic resistance bonus stacks per certain amount of incoming magical damage received.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "magicalDamageThreshold": 300,
+        "maxStacks": 6,
+        "baseMagicResistBonus": "3.5%",
+        "duration": 5,
+        "affects": "Self"
+      },
+      "notes": [
+        "Each stack places a new buff on the wielder, with each buff duration independent of the other"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 10,
+    "health": 250,
+    "magicResistance": "20%"
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats: 220 health and 1 health regeneration",
+    "10 main attack damage to strength heroes",
+    "4.5 main attack damage to universal heroes",
+    "Bonuses from multiple Eternal Shrouds, including Shroud, do not stack",
+    "Stacks multiplicatively with other magic resistance sources",
+    "Increases most heroes' magic resistance to 40%",
+    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%"
+  ],
+  "states": null
+}

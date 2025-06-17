@@ -1,0 +1,86 @@
+{
+  "name": "Holy Locket",
+  "description": "A prized relic long thought lost forever in a failed crusade.",
+  "category": "Support",
+  "cost": 2250,
+  "sellValue": 1125,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Magic Wand", "Recipe"],
+    "totalCost": 2250
+  },
+  "abilities": [
+    {
+      "name": "Energy Charge",
+      "type": "active",
+      "description": "Instantly heals and replenishes the target allied hero's health and mana per accumulated charge.",
+      "castAnimation": "0 + 0",
+      "castRange": 500,
+      "manaCost": 13,
+      "cooldown": 8,
+      "effects": {
+        "maxCharges": 20,
+        "healPerCharge": 17,
+        "manaRestorePerCharge": 17,
+        "chargeRadius": 1200,
+        "chargeGainPerAbilityCast": 1
+      },
+      "notes": [
+        "Has a recharge time of 8 seconds, that is fully affected by cooldown reductions",
+        "Cooldown resetting effects restore all charges immediately",
+        "Gains a charge whenever a visible enemy casts an ability nearby",
+        "All current charges on Magic Wand are carried over when upgraded to a Holy Locket",
+        "Double-tapping automatically targets self",
+        "Does not interrupt the wielder's channeling abilities",
+        "Can only be cast on heroes, including illusions and creep-heroes",
+        "Gains 1 charge for each ability cast by an enemy",
+        "Does not gain charges from active attack modifiers, toggle-able abilities, or abilities cast out of invisibility",
+        "Can heal and mana restore up to 340 with max charges"
+      ]
+    },
+    {
+      "name": "Holy Blessing",
+      "type": "passive",
+      "description": "Grants the wielder outgoing heal amplification, boosting all healing they provide.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "outgoingHealAmplification": "15%"
+      },
+      "notes": [
+        "Grants outgoing heal amplification",
+        "Stacks diminishingly with other sources of heal amplification",
+        "Neither grants health regen amplification, lifesteal amplification, nor spell lifesteal amplification",
+        "All healing provided by the wielder is amplified, regardless of the target",
+        "Multiple instances of Holy Blessing do not stack"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 9,
+    "agility": 9,
+    "intelligence": 9,
+    "health": 198,
+    "healthRegeneration": 0.9,
+    "mana": 108,
+    "manaRegeneration": 0.45,
+    "magicResistance": "0.9%",
+    "attackSpeed": 9,
+    "armor": 1.5,
+    "attackDamage": 9,
+    "attackDamageUniversal": 12.15
+  },
+  "additionalInfo": [
+    "The item's attributes grant 198 health and 0.9 health regeneration",
+    "108 mana, 0.45 mana regeneration and 0.9% flat base magic resistance",
+    "9 attack speed and 1.5 main armor",
+    "9 main attack damage to all Strength/Agility/Intelligence heroes",
+    "12.15 main attack damage to universal heroes",
+    "Holy Locket has very high synergy with heroes with healing abilities"
+  ],
+  "states": null
+}

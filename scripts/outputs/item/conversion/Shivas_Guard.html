@@ -1,0 +1,80 @@
+{
+  "name": "Shiva's Guard",
+  "description": "Said to have belonged to a goddess, today it retains much of its former power.",
+  "category": "Armor",
+  "cost": 5175,
+  "sellValue": 2587.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Mystic Staff", "Platemail", "Recipe"],
+    "totalCost": 5175
+  },
+  "abilities": [
+    {
+      "name": "Arctic Blast",
+      "type": "active",
+      "description": "Emits an expanding freezing wave that follows and covers an area around the caster, dealing damage and slowing movement speed of enemies as it reaches them.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 75,
+      "cooldown": 27,
+      "effects": {
+        "radius": 900,
+        "damage": 200,
+        "moveSpeedSlow": "40%",
+        "slowDuration": 4,
+        "illusionsDamageMultiplier": 1.5,
+        "incomingSpellDamageAmp": "15%",
+        "magicWeaknessDuration": 16
+      },
+      "notes": [
+        "Does not interrupt the caster's channeling abilities upon cast. Exception: Tricks of the Trade.",
+        "Arctic Blast is centered on the caster for the full duration.",
+        "The blast spreads at a speed of 400, taking 2.25 seconds to cover the whole radius.",
+        "Affects the entire area while expanding, the area of effect is not a ring.",
+        "Also weakens enemies hit by the wave, applying a debuff that amplifies any spell damage they take. The debuff is applied before the ability's damage is applied.",
+        "Shares a debuff with Magic Weakness, the last applied source overrides previous sources.",
+        "Provides 800 radius flying vision, following the caster and leaving a trail of vision which lasts for 2 seconds."
+      ]
+    },
+    {
+      "name": "Freezing Aura",
+      "type": "passive",
+      "description": "Reduces the attack speed, as well as the effectiveness of healing and health restoration of nearby enemies.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "radius": 1200,
+        "attackSpeedSlow": 45,
+        "healReduction": "25%",
+        "healthRestoreReduction": "25%"
+      },
+      "notes": [
+        "Multiple instances of Freezing Aura do not stack.",
+        "Does not affects invulnerable or hidden enemies.",
+        "The status debuff icon on enemies only shows up when the affected unit has vision over the source."
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 5,
+    "agility": 5,
+    "intelligence": 5,
+    "healthRegeneration": 5,
+    "armor": 15
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally.",
+    "The item's attributes grant the following additional stats:",
+    "110 health and 0.5 health regeneration.",
+    "60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance.",
+    "5 attack speed and 0.83 main armor.",
+    "5 main attack damage to all Strength/Agility/Intelligence heroes.",
+    "6.75 main attack damage to universal heroes."
+  ],
+  "states": null
+}

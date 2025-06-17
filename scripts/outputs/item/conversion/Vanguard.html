@@ -1,0 +1,52 @@
+{
+  "name": "Vanguard",
+  "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
+  "category": "Armor",
+  "cost": 1700,
+  "sellValue": 850,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Ring of Health", "Vitality Booster", "Stout Shield"],
+    "totalCost": 1700
+  },
+  "abilities": [
+    {
+      "name": "Damage Block",
+      "type": "passive",
+      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "60%",
+        "blockedDamageMelee": 50,
+        "blockedDamageRanged": 25
+      },
+      "notes": [
+        "Uses pseudo-random distribution",
+        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
+        "Multiple sources of the same value stack multiplicatively",
+        "Does not work against damage from wards sources",
+        "Does not reduce physical damage from abilities, except for specific abilities"
+      ]
+    }
+  ],
+  "stats": {
+    "health": 250,
+    "healthRegeneration": 4.5
+  },
+  "additionalInfo": [
+    "The proc chances of all sources of Damage Block work independently from each other",
+    "When multiple sources of Damage Block proc on the same attack, only the one with the highest blocked damage value takes effect",
+    "Can be disassembled",
+    "Effective to block the attack damage from summoned units and illusions",
+    "Especially useful with tanky frontline heroes",
+    "Less useful for heroes with high armor",
+    "Can be purchased over a lifesteal item to jungle with a melee hero",
+    "Often disassembled into Heart of Tarrasque or Lotus Orb in late game"
+  ],
+  "states": null
+}

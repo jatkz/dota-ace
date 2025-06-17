@@ -1,0 +1,62 @@
+{
+  "name": "Gleipnir",
+  "description": "Bindings forged by impossible means to leash an ancient evil.",
+  "category": "Magical",
+  "cost": 4550,
+  "sellValue": 2275,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Point Booster", "Rod of Atos", "Recipe"],
+    "totalCost": 4550
+  },
+  "abilities": [
+    {
+      "name": "Eternal Chains",
+      "type": "active",
+      "description": "Launches shackles at enemies within the area, rooting them in place and revealing them.",
+      "castAnimation": "0 + 0",
+      "castRange": 1100,
+      "manaCost": 150,
+      "cooldown": 18,
+      "effects": {
+        "radius": 275,
+        "duration": 2,
+        "rootEffect": true,
+        "trueSight": true
+      },
+      "notes": [
+        "Launches projectiles onto enemies within the radius",
+        "Can target invisible units and units inside the Fog of War",
+        "Cannot target invulnerable or hidden units",
+        "Roots the targets, preventing them from moving and casting certain mobility abilities",
+        "Provides True Sight over affected targets",
+        "The True Sight pierces debuff immunity, the root does not",
+        "Blocked individually on impact by Spell Block",
+        "Reflected individually on impact by Spell Reflect",
+        "Shares cooldown with Rod of Atos"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 12,
+    "health": 450,
+    "mana": 200,
+    "aoeRadius": 75,
+    "additionalMana": 144,
+    "manaRegeneration": 0.6,
+    "magicResistance": "1.2%",
+    "mainAttackDamageInt": 12,
+    "mainAttackDamageUniversal": 5.4
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Rod of Atos was purchased as well, Gleipnir's icon takes priority",
+    "The item's attributes grant 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
+    "Grants 12 main attack damage to Intelligence heroes",
+    "Grants 5.4 main attack damage to Universal heroes",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

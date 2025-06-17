@@ -1,0 +1,57 @@
+{
+  "name": "Orchid Malevolence",
+  "description": "A garnet rod constructed from the essence of a fire demon.",
+  "category": "Magical",
+  "cost": 3275,
+  "sellValue": 1637.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Oblivion Staff", "Quarterstaff", "Recipe"],
+    "totalCost": 3275
+  },
+  "abilities": [
+    {
+      "name": "Soul Burn",
+      "type": "active",
+      "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage.",
+      "castAnimation": "0 + 0",
+      "castRange": 900,
+      "manaCost": 125,
+      "cooldown": 18,
+      "effects": {
+        "accumulatedDamage": "30%",
+        "duration": 5,
+        "damageType": "Magical"
+      },
+      "notes": [
+        "The damage counter accumulates all damage instances dealt to the Soul Burn target within the last 5 seconds",
+        "The accumulated damage is based on the actual damage taken, after all damage manipulation is applied",
+        "Does not include damage with the HP Removal or the no-reflection flag",
+        "The damage is summed up into and applied as a single instance at the end of the duration, sourced to the caster of Soul Burn",
+        "The accumulated damage is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled",
+        "Re-casting Soul Burn on the same target refreshes the duration, but does not reset the already accumulated damage"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 10,
+    "healthRegeneration": 6,
+    "manaRegeneration": 3,
+    "attackDamage": 10,
+    "attackSpeed": 35,
+    "bonusMana": 120,
+    "bonusManaRegeneration": 0.5,
+    "magicResistance": "1%"
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If a Bloodthorn was purchased as well, Bloodthorn's icon takes priority",
+    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "Grants 10 main attack damage to intelligence heroes",
+    "Grants 4.5 main attack damage to universal heroes",
+    "Shares cooldown with Bloodthorn"
+  ],
+  "states": null
+}

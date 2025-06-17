@@ -34,7 +34,7 @@ async function main() {
         const itemLinks = extractListItemsWithLinks(cleanHtml);
         console.log('item links successfully extracted', itemLinks)
         
-        fs.writeFileSync("./scripts/outputs/itemGridLinks.json", JSON.stringify({itemLinks:itemLinks}, null, 4));
+        fs.writeFileSync("./scripts/outputs/itemGridLinks.json", JSON.stringify(itemLinks, null, 4));
 
         for (const i of itemLinks) {
             const url = 'https://liquipedia.net' + i;
