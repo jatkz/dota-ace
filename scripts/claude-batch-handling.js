@@ -65,7 +65,7 @@ class ClaudeMessageBatchClient {
                         if (result.result.message.content[0].type == 'text') {
                             const content = result.result.message.content[0].text;
                             const customId = result.custom_id;
-                            claudeCleanupAndSave(content, `./scripts/outputs/item/conversion/${customId}.html`);
+                            claudeCleanupAndSave(content, `./scripts/outputs/item/conversion/${customId}.json`);
                         } else {
                             console.error(result.result.message.content)
                             throw "unexpected type!"
