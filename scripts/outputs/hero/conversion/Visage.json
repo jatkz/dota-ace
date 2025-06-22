@@ -85,7 +85,7 @@
             "stun_duration": "0.8/1/1.2",
             "stone_form_duration": 6
           },
-          "details": "This ability levels up with Summon Familiars. Summon Familiars reset this ability's cooldown upon cast."
+          "details": "This sub-ability goes on a downtime equal to the lowest cooldown among all current Familiars. It is neither affected by cooldown reset sources nor affected by percentage-based cooldown reductions."
         },
         {
           "name": "Hero Model",
@@ -107,13 +107,13 @@
         "key": "Q",
         "type": "active",
         "affects": "Self / Familiars / Enemy Units",
-        "damage": "None",
+        "damage": "none",
         "damage_types": [],
         "cooldown": "17/15/13/11",
         "mana_cost": 90,
         "cast_range": "625",
         "cast_animation": "0.2 + 0.57",
-        "cast_radius": "N/A",
+        "cast_radius": "none",
         "details": "Drains both the movement speed and attack speed of the unit-targeted enemy.",
         "description": "Drains both the movement speed and attack speed of the unit-targeted enemy. Grants Visage a movement speed and attack speed buff independently from the debuff applied to the affected enemy unit. All ability bonuses are applied as a buff to each Familiars independently within the radius.",
         "facet_effects": {
@@ -135,12 +135,12 @@
         "type": "active",
         "affects": "Enemy Units",
         "damage": "Spell",
-        "damage_types": ["magical"],
+        "damage_types": ["Magical"],
         "cooldown": "4",
         "mana_cost": 110,
         "cast_range": "1000",
         "cast_animation": "0.2 + 0.57",
-        "cast_radius": "N/A",
+        "cast_radius": "none",
         "details": "Focuses all gathered Soul Assumption charges to a single spell projectile, and deals damage corresponding to the gathered charges.",
         "description": "Gathers Soul Assumption charges each time nearby heroes take a certain amount of damage. The damage counter only grants charges from the damage instances of the following ranges.",
         "facet_effects": {
@@ -161,22 +161,22 @@
         "type": "passive",
         "affects": "Self / Familiars / Enemy Units",
         "damage": "Spell",
-        "damage_types": ["magical"],
-        "cooldown": "65 (125 with shard)",
-        "mana_cost": "N/A",
-        "cast_range": "N/A",
-        "cast_animation": "0 + 0",
-        "cast_radius": "N/A",
+        "damage_types": ["Magical"],
+        "cooldown": "none",
+        "mana_cost": "none",
+        "cast_range": "none",
+        "cast_animation": "none",
+        "cast_radius": "900",
         "details": "Generates a stone-layered buff that manipulates incoming damage. Removes a stack per player-based damage taken above a certain damage threshold.",
         "description": "The aura affects and applies its values corresponding to Visage's on all Summoned Familiars within the radius. However, the min damage threshold proc does not apply to them.",
         "facet_effects": {},
-        "ability_behavior": ["passive", "no_target"],
+        "ability_behavior": ["passive", "aura"],
         "pierces_spell_immunity": false,
         "blocked_by_root": false,
         "dispellable": "no",
         "scepter_upgradable": false,
         "shard_upgradable": true,
-        "technical_details": ["Max Stacks: 4", "Min Damage Threshold Proc: 40", "Damage Reduction per Stack: 8%/12%/16%/20%", "Max Damage Reduction: 80%", "Aura Radius: 900"],
+        "technical_details": ["Max Stacks: 4", "Min Damage Threshold Proc: 40", "Damage Reduction per Stack: 8%/12%/16%/20%", "Max Damage Reduction: 80%", "Downtime: 7/6/5/4"],
         "interaction_notes": ["Disables the buff stack gain with Break Sources", "However, existing stacks are not removed"]
       },
       "ability_4": {
@@ -184,13 +184,13 @@
         "key": "F",
         "type": "active",
         "affects": "Self / Familiars",
-        "damage": "None",
+        "damage": "none",
         "damage_types": [],
         "cooldown": "45",
         "mana_cost": 115,
-        "cast_range": "N/A",
+        "cast_range": "none",
         "cast_animation": "0 + 0",
-        "cast_radius": "N/A",
+        "cast_radius": "none",
         "details": "Grants Visage and its Familiars bonus movement speed and invisiblilty for the duration.",
         "description": "Upon losing the invisibility buff in any way, the ability now grants Visage and its Familiars bonus attack damage. Only affects Visage and his Familiars.",
         "facet_effects": {},
@@ -212,13 +212,13 @@
         "damage_types": [],
         "cooldown": "130/120/110",
         "mana_cost": 150,
-        "cast_range": "N/A",
+        "cast_range": "none",
         "cast_animation": "0 + 0",
-        "cast_radius": "N/A",
+        "cast_radius": "none",
         "details": "Conjures blind and controllable Familiars to fight for Visage. Familiars have flying movement and can turn into Stone Form.",
         "description": "All current Familiars halt their movement and teleport over to Visage's side after an effect delay with Alt-Cast toggled on. Familiars cannot act while preparing for the teleportation.",
         "facet_effects": {
-          "faithful_followers": "Familiars will automatically attack Visage's last-attacked target. They will return if that enemy unit is out of Visage's attack range, or when Visage issues a cancel current action or hold position command. Attack Search Range: 550, Teleport Distance: 3500, Set Move Speed: 440, Set Attack Range: 350, Set Gold Bounty: 50"
+          "faithful_followers": "Familiars will automatically attack Visage's last-attacked target. They will return if that enemy unit is out of Visage's attack range, or when Visage issues a cancel current action or hold position command. Set Move Speed: 440, Set Attack Range: 350, Set Gold Bounty: 50"
         },
         "ability_behavior": ["no_target"],
         "pierces_spell_immunity": false,
@@ -226,30 +226,9 @@
         "dispellable": "no",
         "scepter_upgradable": false,
         "shard_upgradable": false,
-        "technical_details": ["Number of Familiars: 2 (3 with talent)", "Duration: Permanent", "Min Familiars Required: 1", "Effect Delay: 4", "Reappear Radius: ≈300"],
+        "technical_details": ["Number of Familiars: 2 (3 with talent)", "Duration: Permanent", "Effect Delay: 4", "Reappear Radius: ≈300"],
         "interaction_notes": ["Interrupts Visage's channeling abilities upon cast", "Instant kill all current Familiars from a previous cast upon cast"]
       }
-    },
-    "recent_changes": [
-      {
-        "version": "7.39b",
-        "date": "2025-05-29",
-        "changes": ["Reduced Grave Chill Sepulchre ability values factor per secondary target affected from 0.5 to 0.3"]
-      },
-      {
-        "version": "7.39",
-        "date": "2025-05-21",
-        "changes": ["Talents: LVL 25 +10 Gravekeeper's Cloak aura armor increased to +15"]
-      },
-      {
-        "version": "7.38b",
-        "date": "2025-03-05",
-        "changes": ["Grave Chill: Reduced movement speed change from 15%/20%/25%/30% to 12%/16%/20%/24%", "Grave Chill: Reduced duration from 6 to 5"]
-      }
-    ]
-  },
-  "parsing_stats": {
-    "file_size": 156000,
-    "sections_found": 5,
-    "parse_time_ms": 850,
-    "success_rate": "100%"
+    }
+  }
+}

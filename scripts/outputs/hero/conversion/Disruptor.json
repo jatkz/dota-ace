@@ -72,14 +72,14 @@
             "damage_timer": 7,
             "cooldown": 4
           },
-          "details": "Safe harbor found inside the storm."
+          "details": "Triggers after taking 250 damage (after reductions) within 7 seconds"
         },
         {
           "name": "Hero Model",
           "type": "passive",
-          "description": "The Stormcrafter's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "description": "The Stormcrafter's hero model has hidden innate abilities that may only be performed upon successful channeling.",
           "values": {},
-          "details": "Contains hidden innate abilities that require channeling to activate."
+          "details": "Contains hidden innate abilities accessible through channeling"
         }
       ]
     },
@@ -99,7 +99,7 @@
         "details": "Repeatedly strikes the unit with lightning. Exposes the affected enemy target, with each strike damaging nearby enemy units in a small radius, slowing both their movement and attack speeds for its duration.",
         "description": "Repeatedly strikes the unit with lightning. Exposes the affected enemy target, with each strike damaging nearby enemy units in a small radius, slowing both their movement and attack speeds for its duration.",
         "facet_effects": {
-          "thunderstorm": "Also hits all enemies within a fully formed Kinetic Field and increases slow duration"
+          "thunderstorm": "Also hits all enemies within a fully formed Kinetic Field, increases slow duration"
         },
         "ability_behavior": ["unit_target", "area_target"],
         "pierces_spell_immunity": false,
@@ -116,9 +116,9 @@
           "Strike Duration: 6 (11 with Shard)"
         ],
         "interaction_notes": [
-          "The unit-targeted damage and its radius damage component is independent of each other",
-          "Exposes the affected enemy unit, but does not grant True Sight over it",
-          "Grants a 3.34-second 450-radius flying vision at the affected enemy unit's last location"
+          "Unit-targeted damage and radius damage are independent",
+          "Exposes the affected enemy unit but does not grant True Sight",
+          "Debuff persists through death and continues striking the death location"
         ]
       },
       "ability_2": {
@@ -128,12 +128,12 @@
         "affects": "Enemy Heroes",
         "damage": "Spell / Magical / Instant Kill",
         "damage_types": ["magical"],
-        "cooldown": "24/22/20/18 (12/10/8/6 with talent)",
+        "cooldown": "24/22/20/18 (12/10/8/6 with Talent)",
         "mana_cost": "70/85/100/115",
         "cast_range": "600/1000/1400/1800",
         "cast_animation": "0.05 + 0.83",
         "cast_radius": "",
-        "details": "Teleports the target hero back to where it was a few seconds ago. Deals damage to the affected enemy hero corresponding to its teleported distance as soon as it appears at the marked location.",
+        "details": "Teleports the target hero back to where it was a few seconds ago. Deals damage corresponding to teleported distance and instantly disintegrates regular illusions.",
         "description": "Teleports the target hero back to where it was a few seconds ago.",
         "facet_effects": {},
         "ability_behavior": ["unit_target"],
@@ -146,17 +146,14 @@
           "Lapsed Time: 4",
           "Max Teleport Time: 1.8",
           "Max Silence Duration: 1.8",
-          "Min Distance to Damage: 0",
-          "Max Distance to Damage: 1400",
-          "Min Damage: 25",
-          "Max Damage: 100/160/220/280 (400/460/520/580 with talent)",
-          "Distance to Damage Bonus Factor: 0.2/0.25/0.3/0.35 (0.3/0.35/0.4/0.45 with talent)"
+          "Max Damage: 100/160/220/280 (400/460/520/580 with Talent)",
+          "Distance to Damage Bonus Factor: 0.2/0.25/0.3/0.35"
         ],
         "interaction_notes": [
-          "Creates the Glimpse projectile from the affected unit's current position",
           "Does not disjoint incoming projectiles",
-          "Applies Silence and issues a stop command",
-          "The teleportation instantly disintegrates regular illusions"
+          "Applies silence and issues stop command",
+          "Creates projectile indicating landing location",
+          "For newly respawned heroes, teleports to fountain"
         ]
       },
       "ability_3": {
@@ -166,7 +163,7 @@
         "affects": "Enemy Units",
         "damage": "",
         "damage_types": [],
-        "cooldown": "20/18/16/14 (0/-2/-4/-6 with talent)",
+        "cooldown": "20/18/16/14 (0/-2/-4/-6 with Talent)",
         "mana_cost": "70",
         "cast_range": "900",
         "cast_animation": "0.05 + 0",
@@ -187,15 +184,15 @@
           "Aura Width: 70",
           "Aura Radius: 420",
           "Effect Delay: 1",
-          "Duration: 2.6/3.2/3.8/4.4 (4.6/5.2/5.8/6.4 with talent)",
+          "Duration: 2.6/3.2/3.8/4.4 (4.6/5.2/5.8/6.4 with Talent)",
           "Set Base Move Speed: 120",
           "Move Speed Slow per Distance: 4",
           "Min Set Move Speed: 0.1"
         ],
         "interaction_notes": [
-          "1 second after cast, creates a 420-radius negative aura",
-          "Sets the affected units' movement speed accordingly to their proximity to the visible field barrier",
-          "Has to be facing the visible barrier and within the SetMS zones"
+          "Sets movement speed based on proximity to barrier when facing it",
+          "Creates negative aura with specific movement speed zones",
+          "Prevents certain forced movement from entering or exiting"
         ]
       },
       "ability_4": {
@@ -224,11 +221,11 @@
           "Wall Width: 350",
           "Effect Delay: 0.4",
           "Duration: 2.6/3.2/3.8/4.4",
-          "Charges: 2 (3 with talent)"
+          "Charges: 2 (3 with Talent)"
         ],
         "interaction_notes": [
-          "Grants all charges immediately upon learning the ability",
-          "Facing direction-based"
+          "Grants all charges immediately upon learning",
+          "Facing direction-based mechanics"
         ]
       },
       "ability_5": {
@@ -242,7 +239,7 @@
         "mana_cost": "125/175/225",
         "cast_range": "800",
         "cast_animation": "0.05 + 0",
-        "cast_radius": "550 (700 with talent)",
+        "cast_radius": "550 (700 with Talent)",
         "details": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but gradually increases in power over the duration.",
         "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but gradually increases in power over the duration.",
         "facet_effects": {},
@@ -253,49 +250,20 @@
         "scepter_upgradable": true,
         "shard_upgradable": false,
         "technical_details": [
-          "Effect Radius: 550 (700 with talent)",
-          "Number of Intervals: 20 (26 with talent)",
+          "Effect Radius: 550 (700 with Talent)",
+          "Number of Intervals: 20 (26 with Talent)",
           "Max Damage per Second: 200/275/350",
-          "Duration: 6 (7.5 with talent)",
-          "Silence Duration: 6 (7.5 with talent)",
-          "Mute Duration: 6 (7.5 with talent and Scepter)"
+          "Duration: 6 (7.5 with Talent)",
+          "Silence Duration: 6 (7.5 with Talent)",
+          "Mute Duration: 6 (7.5 with Talent) - Scepter only"
         ],
         "interaction_notes": [
-          "Both the silence and mute are provided by an aura",
-          "The damage value per instance is an arithmetic progression over the entire duration",
-          "Increases by 3/4.125/5.25 damage per 0.3-second intervals"
+          "Damage increases arithmetically over duration",
+          "Both silence and mute provided by aura",
+          "Affects invulnerable units but not hidden units",
+          "Damage formula: f(n) × MaxSpellDmg × Duration / Instance²"
         ]
       }
-    },
-    "recent_changes": [
-      {
-        "version": "7.39b",
-        "date": "2025-05-29",
-        "changes": [
-          "Thunder Strike: Reduced slow duration from 0.4 to 0.3",
-          "Reduced Thunderstorm slow duration bonus from 0.4 to 0.3"
-        ]
-      },
-      {
-        "version": "7.39",
-        "date": "2025-05-21",
-        "changes": [
-          "ADDED the Transferrence facet to Electromagnetic Repulsion",
-          "Adds an active component to the ability with allied unit-targeting functionality",
-          "Thunder Strike Thunderstorm now also increases slow duration by 0.4",
-          "Aghanim's Shard upgrade: Reduced Thunder Strike dormant duration from 5 to 4",
-          "Talents: LVL 15 +1.5s Static Storm duration → +60 Static Storm max damage per second",
-          "LVL 20 +0.6s Thunder Strike slow duration → +150 Electromagnetic Repulsion effect radius/knockback distance",
-          "LVL 20 +2s Kinetic Field duration/+1 Kinetic Fence charge reduced to +1.5s Kinetic Field duration/+1 Kinetic Fence charge"
-        ]
-      },
-      {
-        "version": "7.38",
-        "date": "2025-02-19",
-        "changes": [
-          "Thunder Strike: Increased strike radius from 240 to 260",
-          "Thunderstorm now strikes all enemy units within the Kinetic Field even when the unit-targeted enemy is outside of the field radius",
-          "Kinetic Fence: Reduced charge restore time from 20/18/16/14 to 20/17/13/11",
-          "Reduced mana cost from 70 to 50",
-          "Talents: LVL 10 +10 Thunder Strike damage per strike increased to +15",
-          "LVL 10 -3s Kinetic Field cooldown → +20 movement
+    }
+  }
+}

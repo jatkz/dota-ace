@@ -97,15 +97,8 @@
         "dispellable": "no",
         "scepter_upgradable": false,
         "shard_upgradable": true,
-        "technical_details": [
-          "Both Illuminate and Illuminate (Spirit Form) are two separate abilities",
-          "Both abilities share the same cooldown",
-          "Has a 900-projectile speed, reaching the full distance in 1.72 seconds"
-        ],
-        "interaction_notes": [
-          "Affects enemy units up to 1950 range away with the travel distance and end radius",
-          "The magical spell damage increases by 2.06/3.22/4.39/5.56 per server tick while channeling"
-        ]
+        "technical_details": ["Travel Distance: 1550", "Wave Radius: 400", "Vision Radius: 400", "Max Channel Time: 3", "Vision Distance Increment per Second: 150/180/210/240", "Max Damage: 185/290/395/500"],
+        "interaction_notes": ["Both Illuminate and Illuminate (Spirit Form) are two separate abilities", "Both abilities share the same cooldown", "Has a 900-projectile speed, reaching the full distance in 1.72 seconds"]
       },
       "ability_2": {
         "name": "Blinding Light",
@@ -118,8 +111,8 @@
         "cast_range": "400/500/600/700",
         "cast_animation": "0.3 + 1.07",
         "cast_radius": "425/450/475/500",
-        "details": "A blinding light flashes within the radius, pushing back and blinding the units, causing them to miss some attacks.",
-        "description": "A blinding light flashes within the radius, pushing back and blinding the units, causing them to miss some attacks.",
+        "details": "A blinding light flashes within the radius, pushing back and blinding the units, causing them to miss some attacks",
+        "description": "A blinding light flashes within the radius, pushing back and blinding the units, causing them to miss some attacks",
         "facet_effects": {
           "spirit_form": "The Primordial power grants Ezalor's abilities bonus cast range while in Spirit Form. Cast Range Bonus: 100/200/300"
         },
@@ -129,16 +122,8 @@
         "dispellable": "yes",
         "scepter_upgradable": false,
         "shard_upgradable": false,
-        "technical_details": [
-          "Applies a non-disabling knockback that pushes affected enemy units back at 666.67-speed",
-          "Has a fixed knock distance, no matter how far the affected unit is from the center of the radius",
-          "Does not interrupt channeling abilities"
-        ],
-        "interaction_notes": [
-          "Can push units over impassable terrain",
-          "Trees within 150 radius that enemy units come in contact with are destroyed",
-          "Blind uses pseudo-random distribution"
-        ]
+        "technical_details": ["Knock Distance: 400", "Damage: 85/130/175/220", "Miss Chance: 45%", "Push Duration: 0.6", "Miss Duration: 4"],
+        "interaction_notes": ["Applies a non-disabling knockback", "Does not interrupt channeling abilities", "Can push units over impassable terrain", "Blind uses pseudo-random distribution"]
       },
       "ability_3": {
         "name": "Chakra Magic",
@@ -151,8 +136,8 @@
         "cast_range": "900",
         "cast_animation": "0.3 + 1",
         "cast_radius": "0",
-        "details": "Restores mana and reduces all basic abilities' current cooldown by a fixed amount.",
-        "description": "Restores mana and reduces all basic abilities' current cooldown by a fixed amount.",
+        "details": "Restores mana and reduces all basic abilities' current cooldown by a fixed amount",
+        "description": "Restores mana and reduces all basic abilities' current cooldown by a fixed amount",
         "facet_effects": {
           "self_cast": "Chakra Magic is more effective on the Fundemantal himself. Mana Restore: 97/195/292/390",
           "spirit_form": "Ezalor has a further chakra replenish range during Spirit Form. Cast Range: 1000/1100/1200"
@@ -163,17 +148,8 @@
         "dispellable": "no",
         "scepter_upgradable": false,
         "shard_upgradable": false,
-        "technical_details": [
-          "Doubletap casts the ability on Ezalor",
-          "Reduces all basic abilities' current cooldowns",
-          "The replenish time of currently replenishing charge-based abilities",
-          "Previously Invoked abilities"
-        ],
-        "interaction_notes": [
-          "Does not affect ultimate abilities",
-          "Does not affect abilities that are unaffected by cooldown manipulation",
-          "Applies Chakra Magic on both Ezalor and the affected allied hero upon a successful Recall"
-        ]
+        "technical_details": ["Mana Restore: 75/150/225/300", "Current Cooldowns Reduction: 3/4/5/6"],
+        "interaction_notes": ["Doubletap casts the ability on Ezalor", "Reduces all basic abilities' current cooldowns", "Does not affect ultimate abilities"]
       },
       "ability_4": {
         "name": "Solar Bind",
@@ -186,8 +162,8 @@
         "cast_range": "950/1050/1150",
         "cast_animation": "0.2 + 0.5",
         "cast_radius": "0",
-        "details": "Applies a weakening bound that reduces the affected enemy unit's magic resistance, and the movement speed slow intensifies the more the enemy unit moves.",
-        "description": "Applies a weakening bound that reduces the affected enemy unit's magic resistance, and the movement speed slow intensifies the more the enemy unit moves.",
+        "details": "Applies a weakening bound that reduces the affected enemy unit's magic resistance, and the movement speed slow intensifies the more the enemy unit moves",
+        "description": "Applies a weakening bound that reduces the affected enemy unit's magic resistance, and the movement speed slow intensifies the more the enemy unit moves",
         "facet_effects": {
           "spirit_form_only": "This ability is only available during Spirit Form"
         },
@@ -197,16 +173,8 @@
         "dispellable": "yes",
         "scepter_upgradable": false,
         "shard_upgradable": true,
-        "technical_details": [
-          "This is Ezalor's fourth ability with the Solar Bind facet selected",
-          "Stacks multiplicatively with other magic resistance sources",
-          "Applies 2%/3%/4% magic resistance reduction on the affected enemy per threshold distance moved"
-        ],
-        "interaction_notes": [
-          "The movement speed slow applied does not have a cap",
-          "Checks the affected enemy unit's current position upon cast, and subsequently in 0.1-second intervals",
-          "The distance check value considers distance moved from 10-distance to 1200-distance"
-        ]
+        "technical_details": ["Moved Distance Threshold: 100", "Total Magic Resist Reduction: 20%/30%/40%", "Move Speed Slow per Distance Threshold: 10%", "Duration: 6"],
+        "interaction_notes": ["This is Ezalor's fourth ability with the Solar Bind facet selected", "Stacks multiplicatively with other magic resistance sources", "Movement speed slow does not have a cap"]
       },
       "ability_5": {
         "name": "Recall",
@@ -219,8 +187,8 @@
         "cast_range": "Global",
         "cast_animation": "0.3 + 1.17",
         "cast_radius": "0",
-        "details": "Grants the affected allied hero bonus movement speed while teleporting it to Ezalor's location after a short delay. The teleportation is interrupted if the allied hero takes player-based damage during the delay.",
-        "description": "Grants the affected allied hero bonus movement speed while teleporting it to Ezalor's location after a short delay. The teleportation is interrupted if the allied hero takes player-based damage during the delay.",
+        "details": "Grants the affected allied hero bonus movement speed while teleporting it to Ezalor's location after a short delay. The teleportation is interrupted if the allied hero takes player-based damage during the delay",
+        "description": "Grants the affected allied hero bonus movement speed while teleporting it to Ezalor's location after a short delay. The teleportation is interrupted if the allied hero takes player-based damage during the delay",
         "facet_effects": {
           "spirit_form_only": "This ability is only available during Spirit Form",
           "shard_upgrade": "Reapplies the bonus movement speed buff and Chakra Magic of its corresponding level only on the affected allied unit upon a successful teleportation"
@@ -231,16 +199,8 @@
         "dispellable": "yes",
         "scepter_upgradable": false,
         "shard_upgradable": true,
-        "technical_details": [
-          "This is Ezalor's fourth ability with the Recall facet selected",
-          "Recall has two targeting functionalities: unit-targeted and ground-targeted",
-          "Disable Help on Ezalor prevents Recall from unit-targeting the allied hero"
-        ],
-        "interaction_notes": [
-          "The teleport component applies a stop command and disjoint incoming projectiles",
-          "Considers clones and illusions as heroes, creep-heroes as creeps",
-          "Recall is interrupted by Ezalor's death, allied hero's death, or any player-based damage"
-        ]
+        "technical_details": ["Effect Delay: 6/5/4", "Ally Move Speed Bonus: 12%/15%/20%", "Buff Duration: 4"],
+        "interaction_notes": ["This is Ezalor's fourth ability with the Recall facet selected", "Has two targeting functionalities: unit-targeted and ground-targeted", "Classified as teleport source"]
       },
       "ability_6": {
         "name": "Will-O-Wisp",
@@ -253,27 +213,19 @@
         "cast_range": "800",
         "cast_animation": "0.1 + 1.06",
         "cast_radius": "725",
-        "details": "Summons Ignis Fatuus at the targeted area. As it alternates on and off, enemies are drawn closer with its mesmerising flicker.",
-        "description": "Summons Ignis Fatuus at the targeted area. As it alternates on and off, enemies are drawn closer with its mesmerising flicker.",
+        "details": "Summons Ignis Fatuus at the targeted area. As it alternates on and off, enemies are drawn closer with its mesmerising flicker",
+        "description": "Summons Ignis Fatuus at the targeted area. As it alternates on and off, enemies are drawn closer with its mesmerising flicker",
         "facet_effects": {
           "spirit_form": "Ezalor encircles his enemies from afar during Spirit Form. Cast Range: 900/1000/1100"
         },
         "ability_behavior": ["area_target"],
         "pierces_spell_immunity": false,
         "blocked_by_root": false,
-        "dispellable": "no",
+        "dispellable": "yes",
         "scepter_upgradable": true,
         "shard_upgradable": false,
-        "technical_details": [
-          "Acquiring Aghanim's Scepter unlocks this ability in the fifth ability slot",
-          "Multiple Ignis Fatuus work independently of each other",
-          "Starts flickering 1 second upon cast, and then every 2.85 seconds, up to 5 times"
-        ],
-        "interaction_notes": [
-          "The ability effects are applied when it flickers on",
-          "Applies forced movement on affected enemy units, moving them 7-distance towards the Ignis Fatuus",
-          "Trees within 150-radius are destroyed centered around affected enemy units at the end of the pull"
-        ]
+        "technical_details": ["Number of Flickers: 5", "Initial Delay: 1", "Hit Count: 7", "Wisp Duration: 13.4", "Pull Speed: 60", "Damage per Flicker: 75", "On Duration: 1", "Off Duration: 1.85"],
+        "interaction_notes": ["Acquiring Aghanim's Scepter unlocks this ability", "Multiple Ignis Fatuus work independently", "Starts flickering 1 second upon cast, then every 2.85 seconds"]
       },
       "ability_7": {
         "name": "Spirit Form",
@@ -286,7 +238,20 @@
         "cast_range": "0",
         "cast_animation": "0 + 1.43",
         "cast_radius": "0",
-        "details": "The Spirit Form grants Ezalor bonus movement speed and bonus cast range, along with either Solar Bind or Recall ability based on the corresponding facet.",
-        "description": "The Spirit Form grants Ezalor bonus movement speed and bonus cast range, along with either Solar Bind or Recall ability based on the corresponding facet.",
+        "details": "The Spirit Form grants Ezalor bonus movement speed and bonus cast range, along with either Solar Bind or Recall ability based on the corresponding facet",
+        "description": "The Spirit Form grants Ezalor bonus movement speed and bonus cast range, along with either Solar Bind or Recall ability based on the corresponding facet",
         "facet_effects": {
-          "illuminate": "While cast in Spirit Form, an image of Ezalor is projected at his location
+          "illuminate": "While cast in Spirit Form, an image of Ezalor is projected at his location, which channels the Illuminate for him. Ezalor can act freely during this. Illuminate also heals Ezalor's allied units while dealing damage. Damage to Heal Factor: 0.7"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Move Speed Bonus: 10%/15%/20%", "Cast Range Bonus: 100/200/300", "Duration: 40/45/50"],
+        "interaction_notes": ["Interrupts Illuminate (Spirit Form) when Spirit Form expires while channeling", "Does not grant Recall upon acquiring via Spell Steal"]
+      }
+    }
+  }
+}

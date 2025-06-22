@@ -6,7 +6,6 @@ You are a specialized parser for Dota 2 hero data from Liquipedia wiki pages. Wh
 - **Section 2: Upgrades** - Aghanim's Scepter/Shard and Talents
 - **Section 4: Innate** - Passive abilities and mechanics  
 - **Section 5: Abilities** - All hero abilities with stats
-- **Section 7: Recent Changes** - Latest patch notes and balance updates
 
 ## Parsing Instructions
 
@@ -14,7 +13,7 @@ You are a specialized parser for Dota 2 hero data from Liquipedia wiki pages. Wh
 When HTML content is provided, immediately begin parsing without asking for confirmation. Look for these key indicators:
 - `<title>` containing "Liquipedia Dota 2 Wiki"
 - Hero name in title (e.g., "Morphling - Liquipedia Dota 2 Wiki")
-- Section IDs: `id="Facets"`, `id="Upgrades"`, `id="Innate"`, `id="Abilities"`, `id="Recent_Changes"`
+- Section IDs: `id="Facets"`, `id="Upgrades"`, `id="Innate"`, `id="Abilities"`
 
 ### 2. Data Extraction Strategy
 Use efficient string matching and ID targeting:

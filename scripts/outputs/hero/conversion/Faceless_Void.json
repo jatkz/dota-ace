@@ -276,33 +276,6 @@
           "Does not affect Hidden units"
         ]
       }
-    },
-    "recent_changes": [
-      {
-        "version": "7.39",
-        "date": "2025-05-21",
-        "changes": [
-          "LVL 10 +7 Time Dilation damage per second per cooldown increased to +9",
-          "LVL 15 +30 Time Lock damage reduced to +35",
-          "LVL 20 -1s Time Walk cooldown increased to -1.25s",
-          "LVL 20 Chronosphere / Time Zone grants +80 self attack speed increased to +100"
-        ]
-      },
-      {
-        "version": "7.38c",
-        "date": "2025-03-27",
-        "changes": [
-          "Time Zone no longer applies leash",
-          "Reduced ally movement speed bonus from 60% to 50%",
-          "Reduced enemy movement speed slow from 60% to 50%",
-          "Increased ally turn rate factor from 0.4 to 0.5",
-          "Reduced enemy turn rate factor from 1.6 to 1.5",
-          "Increased ally cast point factor from 0.4 to 0.5",
-          "Reduced enemy cast point factor from 1.6 to 1.5"
-        ]
-      },
-      {
-        "version": "7.38",
-        "date": "2025-02-19",
-        "changes": [
-          "Reduced Time Walk cooldown from 24/18/12/6 to 21/16/11/6",
+    }
+  }
+}

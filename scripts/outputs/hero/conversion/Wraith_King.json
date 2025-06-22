@@ -77,6 +77,13 @@
             "creep_lifesteal_factor": "0.6"
           },
           "details": "This ability levels up with Reincarnation. The Reincarnation active component is inactive during Wraith Form."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Wraith King's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {},
+          "details": "Contains various hidden innate abilities that can be tapped for more details."
         }
       ]
     },
@@ -86,17 +93,17 @@
         "key": "Q",
         "type": "active",
         "affects": "Enemy Units",
-        "damage": "Spell",
-        "damage_types": ["Magical"],
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
         "cooldown": "14/12/10/8",
         "mana_cost": "95/110/125/140",
         "cast_range": "525",
         "cast_animation": "0.35 + 0.5",
-        "cast_radius": "",
+        "cast_radius": "900 (with talent)",
         "details": "Sears an enemy unit with a spectral fire projectile that stuns and damages on hit, then slows and damages over time.",
-        "description": "Sears an enemy unit with a spectral fire projectile that stuns and damages on hit, then slows and damages over time.",
+        "description": "Ostarion calls on his damned lineage, laying waste to his opponents.",
         "facet_effects": {
-          "bone_guard": "Orders all of the current Skeleton Guards to attack the unit-targeted enemy upon cast"
+          "bone_guard": "Wraithfire Blast orders all of the current Skeleton Guards to attack the unit-targeted enemy upon cast"
         },
         "ability_behavior": ["unit_target"],
         "pierces_spell_immunity": false,
@@ -112,9 +119,7 @@
           "Stun duration: 1/1.2/1.4/1.6 (2/2.2/2.4/2.6 with talent)"
         ],
         "interaction_notes": [
-          "Nullified by spell block upon projectile impact",
-          "Procs spell reflection upon projectile impact",
-          "Can be disjointed by turning invisible"
+          "Talent upgrade: Wraithfire Blast of the corresponding level fully replaces the Reincarnation ability slow component upon proc, with a slower projectile speed"
         ]
       },
       "ability_2": {
@@ -129,8 +134,8 @@
         "cast_range": "",
         "cast_animation": "0.1 + 0.6",
         "cast_radius": "",
-        "details": "The King can summon skeletons to fight for him. Accrues charges per enemy unit the King or any unit he control kills.",
-        "description": "The King can summon skeletons to fight for him.",
+        "details": "The King can summon skeletons to fight for him. This is Wraith King's second ability with the Bone Guard facet selected.",
+        "description": "Wraith King's blade drains his enemy's essence to feed his aura.",
         "facet_effects": {},
         "ability_behavior": ["no_target"],
         "pierces_spell_immunity": false,
@@ -150,9 +155,9 @@
           "Hero damage factor: 1.25"
         ],
         "interaction_notes": [
-          "Skeletons benefit from Vampiric Spirit's ability effects",
-          "Skeletons are uncontrollable and disposable",
-          "Skeletons respawn once when killed with 3 second delay"
+          "Accrues charges per enemy unit the King or any unit he control kills",
+          "These disposable summoned skeletons' attacks are less effective on buildings, but more effective on heroes",
+          "The skeletons benefit from Vampiric Spirit's ability effects"
         ]
       },
       "ability_3": {
@@ -160,15 +165,15 @@
         "key": "W",
         "type": "passive",
         "affects": "Enemy Units",
-        "damage": "Spell",
-        "damage_types": ["Pure"],
+        "damage": "Spell / Pure",
+        "damage_types": ["pure"],
         "cooldown": "",
         "mana_cost": "",
         "cast_range": "",
         "cast_animation": "",
         "cast_radius": "",
-        "details": "Curses and deals a flat bonus damage and a percentage of the attack damage again within a delay.",
-        "description": "Curses and deals a flat bonus damage and a percentage of the attack damage again within a delay.",
+        "details": "Curses and deals a flat bonus damage and a percentage of the attack damage again within a delay. This is Wraith King's second ability with the Spectral Blade facet selected.",
+        "description": "The eternal spite of every soul stolen by Ostarion bleeds into reality with each strike of his murderous blade.",
         "facet_effects": {},
         "ability_behavior": ["passive"],
         "pierces_spell_immunity": false,
@@ -189,7 +194,8 @@
         "interaction_notes": [
           "The curse damage applies lifesteal based on Vampiric Spirit's ability values",
           "Has a shorter downtime on creeps",
-          "Removes all current Spectral Blade downtime debuffs on affected enemy heroes when Reincarnation procs"
+          "Removes all current Spectral Blade downtime debuffs on affected enemy heroes within the radius when the King's Reincarnation procs",
+          "Once the curse procs, the affected enemy hero cannot be cursed again for a short period of time"
         ]
       },
       "ability_4": {
@@ -205,7 +211,7 @@
         "cast_animation": "",
         "cast_radius": "",
         "details": "Passively deals critical damage on an attack with a cooldown.",
-        "description": "Passively deals critical damage on an attack with a cooldown.",
+        "description": "One blow to crush a foe.",
         "facet_effects": {},
         "ability_behavior": ["passive"],
         "pierces_spell_immunity": false,
@@ -215,12 +221,10 @@
         "shard_upgradable": true,
         "technical_details": [
           "Crit damage: 160%/200%/240%/280%",
-          "Outgoing attack damage amp (with Shard): 150%"
+          "Outgoing attack damage amp: 150% (with Shard)"
         ],
         "interaction_notes": [
-          "Mortal Strike is an ensured critical strike source",
-          "Missed attacks neither proc Mortal Strike nor put it on cooldown",
-          "With Shard: Grants self outgoing attack damage bonus while Wraith Form is active, and while Mortal Strike is off cooldown"
+          "Aghanim's Shard Upgrade: Grants self outgoing attack damage bonus while Wraith Form is active, and while Mortal Strike is off cooldown"
         ]
       },
       "ability_5": {
@@ -228,20 +232,19 @@
         "key": "R",
         "type": "passive",
         "affects": "Self",
-        "damage": "HP Removal",
-        "damage_types": ["Spell", "Magical"],
+        "damage": "HP Removal / Spell / Magical",
+        "damage_types": ["hp_removal", "magical"],
         "cooldown": "180/150/120 (165/135/105 with Scepter)",
         "mana_cost": "200 (0 with Shard)",
         "cast_range": "",
         "cast_animation": "0 + 0",
         "cast_radius": "",
         "details": "The Wraith King reforms after death, allowing him to resurrect when killed in battle. Applies a movement speed slow and an attack speed slow upon death to enemy heroes within the radius when off-cooldown.",
-        "description": "The Wraith King reforms after death, allowing him to resurrect when killed in battle.",
+        "description": "Conspirators against the Wraith King wonder why he never stays dead.",
         "facet_effects": {
-          "bone_guard": "While regrouping through Reincarnation, Skeletons are summoned to attack each nearby enemy hero within the radius",
-          "spectral_blade": "Removes all current Spectral Blade downtime debuffs on affected enemy heroes when Reincarnation procs"
+          "bone_guard": "While regrouping through Reincarnation, Skeletons are summoned to attack each nearby enemy hero within the radius"
         },
-        "ability_behavior": ["passive", "self_target"],
+        "ability_behavior": ["passive", "no_target"],
         "pierces_spell_immunity": false,
         "blocked_by_root": false,
         "dispellable": "no",
@@ -259,43 +262,32 @@
         "interaction_notes": [
           "Self-casting this ability instantly kills the Wraith King",
           "The Reincarnation active component is inactive during Wraith Form",
-          "With talent: Wraithfire Blast of the corresponding level fully replaces the slow component upon proc",
-          "With Scepter: Reduces cooldown",
-          "With Shard: No longer has a mana cost"
+          "Talent Upgrade: Wraithfire Blast of the corresponding level fully replaces the slow component upon a Reincarnation proc, with a slower projectile speed when off-cooldown",
+          "Aghanim's Scepter Upgrade: Reduces cooldown",
+          "Aghanim's Shard Upgrade: No longer has a mana cost"
         ]
       }
     },
-    "recent_changes": [
-      {
-        "version": "7.39",
-        "date": "2025-05-21",
-        "changes": [
-          "Reduced base intelligence from 18 to 16",
-          "Reduced base movement speed from 315 to 310",
-          "Reduced Vampiric Spirit lifesteal from 16%/24%/32%/40% to 10%/20%/30%/40%",
-          "CHANGED Reincarnation ability operations: No longer pauses the ability cooldown while the Wraith Form component is active, Cannot proc while the Wraith Form component is active",
-          "Bone Guard now considers non-Skeleton Warrior denies as valid unit kill count"
-        ]
-      },
-      {
-        "version": "7.38c",
-        "date": "2025-03-27",
-        "changes": [
-          "Reduced Wraithfire Blast cooldown from 17/14/11/8 to 14/12/10/8",
-          "Bone Guard: Reduced cooldown from 50 to 42, Increased Wraith King Skeleton duration from 40 to 46",
-          "Increased Reincarnation mana cost from 200 to 225",
-          "Talents: LVL 10 +25%/-25% Bone Guard duration/cooldown → +2s Wraithfire Blast slow duration"
-        ]
-      },
-      {
-        "version": "7.38",
-        "date": "2025-02-19",
-        "changes": [
-          "Bone Guard now grants 2 Wraith King Skeleton charges per hero kill",
-          "Talents: LVL 10 +25% Wraithfire Blast first damage/damage per second → +25%/-25% Bone Guard duration/cooldown or -25% Spectral Blade curse cooldown",
-          "LVL 20 +60 attack speed → +5 Bone Guard skeletons/+15% Spectral Blade curse damage",
-          "LVL 20 +40% cleave → +60 attack speed"
-        ]
-      }
-    ]
-  },
+    "recent_changes": {
+      "7.39": [
+        "Reduced base intelligence from 18 to 16",
+        "Reduced base movement speed from 315 to 310",
+        "Reduced Vampiric Spirit lifesteal from 16%/24%/32%/40% to 10%/20%/30%/40%",
+        "CHANGED Reincarnation ability operations: No longer pauses the ability cooldown while the Wraith Form component is active, Cannot proc while the Wraith Form component is active",
+        "Bone Guard now considers non-Skeleton Warrior denies as valid unit kill count"
+      ],
+      "7.38c": [
+        "Reduced Wraithfire Blast cooldown from 17/14/11/8 to 14/12/10/8",
+        "Bone Guard: Reduced cooldown from 50 to 42, Increased Wraith King Skeleton duration from 40 to 46",
+        "Increased Reincarnation mana cost from 200 to 225",
+        "Talents: LVL 10 +25%/-25% Bone Guard duration/cooldown → +2s Wraithfire Blast slow duration"
+      ],
+      "7.38": [
+        "Bone Guard now grants 2 Wraith King Skeleton charges per hero kill",
+        "Talents: LVL 10 +25% Wraithfire Blast first damage/damage per second → +25%/-25% Bone Guard duration/cooldown or -25% Spectral Blade curse cooldown",
+        "LVL 20 +60 attack speed → +5 Bone Guard skeletons/+15% Spectral Blade curse damage",
+        "LVL 20 +40% cleave → +60 attack speed"
+      ]
+    }
+  }
+}

@@ -76,10 +76,10 @@
         },
         {
           "name": "Hero Model",
-          "type": "passive",
+          "type": "passive/channeling",
           "description": "The Shredder's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
           "values": {},
-          "details": "Contains multiple hidden innate abilities that can be tapped for more details."
+          "details": "Contains multiple hidden innate abilities that require channeling to activate."
         }
       ]
     },
@@ -113,13 +113,12 @@
         "technical_details": [
           "Interrupts Timbersaw's channeling abilities upon cast",
           "Trees within 325 radius are destroyed",
-          "Attribute reduction cannot reduce below 0",
-          "For Universal heroes, reduces lesser portion of all attributes"
+          "Attribute reduction is truncated on HUD",
+          "Cannot reduce attributes below 0"
         ],
         "interaction_notes": [
-          "Affects illusions, clones, and Spirit Bear",
-          "Different calculations for strength and universal heroes",
-          "Does not affect current mana percentage for intelligence heroes"
+          "For Universal heroes, reduces lesser portion of all attributes",
+          "Reapplying debuff creates independent instance"
         ]
       },
       "ability_2": {
@@ -158,15 +157,14 @@
         "scepter_upgradable": false,
         "shard_upgradable": false,
         "technical_details": [
-          "Has projectile speed of 2200/2400/2600/2800",
-          "Can latch trees on higher elevation",
-          "Grants vision around projectile and end location",
-          "Can pull over impassable terrain"
+          "Chain travels until max distance or connects with tree",
+          "Grants vision around projectile tip while traveling",
+          "Can pull over impassable terrain",
+          "Stops pulling when affected by cyclone or forced movement"
         ],
         "interaction_notes": [
           "Root sources do not interrupt self-forced movement",
-          "Affects invisible and untargetable units",
-          "Stops pulling when affected by cyclone or other forced movement"
+          "Affects invisible and untargetable units"
         ]
       },
       "ability_3": {
@@ -175,11 +173,11 @@
         "type": "passive",
         "affects": "Self / Enemy Units",
         "damage": "Spell / Magical",
-        "cooldown": "45 (Scepter upgrade)",
-        "mana_cost": "200 (Scepter upgrade)",
-        "cast_range": "600 (Scepter upgrade)",
-        "cast_animation": "0 + 0 (Scepter upgrade)",
-        "cast_radius": "600 (Scepter upgrade)",
+        "cooldown": "45 (Scepter active)",
+        "mana_cost": "200 (Scepter active)",
+        "cast_range": "600 (Scepter active)",
+        "cast_animation": "0 + 0 (Scepter active)",
+        "cast_radius": "600 (Scepter active)",
         "details": "Grants bonus armor and bonus health regeneration whenever an enemy hero attacks Timbersaw.",
         "description": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
         "facet_effects": {
@@ -213,12 +211,54 @@
           "Barrier explodes on expiration or death"
         ],
         "interaction_notes": [
-          "Functional for illusions but they cannot use bonus armor",
           "Break sources disable stack gain but don't remove existing stacks",
-          "Hero model visually indicates stack count with dome"
+          "Illusions cannot utilize bonus armor component"
         ]
       },
       "ability_4": {
+        "name": "Chakram",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Pure",
+        "cooldown": "8",
+        "mana_cost": "100/140/180",
+        "cast_range": "1200",
+        "cast_animation": "0.15 + 0",
+        "cast_radius": "200",
+        "details": "Launches a saw-blade that deals damage, applies a movement speed slow, and cuts down trees in its path when launched and retracted.",
+        "description": "The ultimate in anti-flora weaponry.",
+        "facet_effects": {
+          "effect_radius": "200",
+          "max_distance": "2000",
+          "contact_damage": "100/150/200",
+          "contact_slow_duration": "0.5",
+          "aura_linger_duration": "0.5",
+          "damage_per_second": "50/75/100",
+          "min_move_speed_slow_health_threshold": "5%",
+          "min_move_speed_slow": "5% (10% with talent)",
+          "max_move_speed_slow": "100%",
+          "max_disarm_duration": "Indefinite",
+          "mana_loss_per_second": "14/22/30"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Destroys trees in projectile path",
+          "Grants flying vision at target location",
+          "Self-disarms until chakram returns",
+          "Returns when exceeding max distance or manually recalled"
+        ],
+        "interaction_notes": [
+          "Can affect same enemy twice (launch and return)",
+          "Movement speed slow based on current health percentage"
+        ]
+      },
+      "ability_5": {
         "name": "Twisted Chakram",
         "key": "D",
         "type": "active",
@@ -245,22 +285,21 @@
         "ability_behavior": ["area_target", "point_target"],
         "pierces_spell_immunity": false,
         "blocked_by_root": false,
-        "dispellable": "yes",
+        "dispellable": "no",
         "scepter_upgradable": false,
         "shard_upgradable": false,
         "technical_details": [
-          "This is Timbersaw's fourth ability with Twisted Chakram facet",
-          "Travels in fixed parabola path like infinity symbol",
-          "Returns to Timbersaw's current coordinates after cast",
-          "Has 900 projectile speed"
+          "Available only with Twisted Chakram facet",
+          "Travels in fixed parabola path",
+          "Returns to Timbersaw's current coordinates",
+          "Levels up with Chakram ability"
         ],
         "interaction_notes": [
-          "Other Chakram notes apply",
-          "Unavailable in Ability Draft",
-          "Does nothing if Chakram is not learned"
+          "Independent slow debuff from regular Chakram",
+          "Unavailable in Ability Draft"
         ]
       },
-      "ability_5": {
+      "ability_6": {
         "name": "Flamethrower",
         "key": "F",
         "type": "active",
@@ -291,26 +330,16 @@
         "scepter_upgradable": false,
         "shard_upgradable": true,
         "technical_details": [
-          "Acquiring Aghanim's Shard unlocks this ability",
+          "Unlocked by Aghanim's Shard",
           "Interrupts channeling abilities upon cast",
-          "Grants vision in front of facing angle",
-          "Area-of-effect is cone-shaped"
+          "Cone-shaped area of effect",
+          "Trees destroyed after 5 second delay"
         ],
         "interaction_notes": [
-          "Requires drafting Chakram in Ability Draft",
-          "Trees destroyed after 5 seconds of being set ablaze",
-          "Affects buildings with reduced effectiveness"
+          "Affects buildings with reduced damage",
+          "Requires drafting Chakram in Ability Draft"
         ]
-      },
-      "ability_6": {
-        "name": "Chakram",
-        "key": "R",
-        "type": "active",
-        "affects": "Enemy Units / Self",
-        "damage": "Pure",
-        "cooldown": "8",
-        "mana_cost": "100/140/180",
-        "cast_range": "1200",
-        "cast_animation": "0.15 + 0",
-        "cast_radius": "200",
-        
+      }
+    }
+  }
+}

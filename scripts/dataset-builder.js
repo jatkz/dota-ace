@@ -14,14 +14,20 @@ async function main() {
         let dir = heroDir
         let files = fs.readdirSync(dir);
         for (const file of files) {
+            console.log('file', file);
             const filePath = path.join(dir, file);
 
-            const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            let data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+            if ('converted' in data) {
+                data = data['converted'];
+            }
 
-            const name = data['converted']['hero_name'];
-            const content = data['converted']['sections'];
+            const name = data['hero_name'];
+            const content = data['sections'];
 
-            dataset['heroes'][name] = content;
+            const { recent_changes, ...cleanedData } = content;
+
+            dataset['heroes'][name] = cleanedData;
         }
 
 

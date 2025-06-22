@@ -16,7 +16,7 @@ class ClaudeMessageBatchClient {
         });
 
         this.defaultModel = 'claude-sonnet-4-20250514';
-        this.max_tokens = 4000;
+        this.max_tokens = 5000;
         this.temperature = 0;
         if (fs.existsSync(templatePath)) {
             const systemPrompt = fs.readFileSync(templatePath, 'utf8');
