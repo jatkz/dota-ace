@@ -19,13 +19,13 @@ async function main() {
         }
 
         const batchTypes = ['hero', 'item']
-        if (true) {
+        if (false) {
             const res = await claude.retrieveBatchResult('msgbatch_01NfREuStfCXXRTVYQo8QabL', 'hero');
             console.log('Retrieve Batch Result ', res);
         }
 
-        if (false) {
-            const res = await claude.deleteBatch('msgbatch_01Ty3Y9TGqrXbR1gWqagetwm');
+        if (true) {
+            const res = await claude.deleteBatch('msgbatch_01NfREuStfCXXRTVYQo8QabL');
             console.log('Delete Result ', res);
 
         }
