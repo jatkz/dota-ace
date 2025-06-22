@@ -1,0 +1,242 @@
+{
+  "hero_name": "Enigma",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 21,
+      "strength_gain": 2.5,
+      "agility": 14,
+      "agility_gain": 1,
+      "intelligence": 19,
+      "intelligence_gain": 3.6,
+      "health": 582,
+      "mana": 303,
+      "armor": 3.33,
+      "magic_resist": 26.9,
+      "damage": [43, 49],
+      "damage_avg": 46.3,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 500,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.77",
+      "move_speed": 280,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Disabler, Initiator, Pusher"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Event Horizon",
+        "effects": "Applies a movement speed slow to enemy units not facing Enigma within the radius."
+      },
+      "facet_2": {
+        "name": "Splitting Image",
+        "effects": "If Enigma takes up to a certain amount of damage, a Demonic Summoning of its corresponding level will fracture from himself."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Causes the outer radius of the vortex to now pull in enemy units, but does not disable them.",
+          "Black Hole additionally deals the affected enemy's max health as damage per second within the inner radius."
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Creates a Lesser Eidolon of the current Demonic Summoning's level per Malefice stun instance.",
+          "The Eidolons created this way do not multiply further.",
+          "Increases stun duration."
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+4 Demonic Summoning Eidolons", "+4 Malefice Instances"],
+        "level_20": ["+40 Eidolon Damage", "+200 Midnight Pulse Radius"],
+        "level_15": ["+50 Malefice Damage", "+250 Health"],
+        "level_10": ["+50 Black Hole Damage per Second", "+10 Eidolon Attack Speed"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Gravity Well",
+          "type": "passive",
+          "description": "Grants incoming damage reduction bonus to allied units within the radius. The effect lessens with distance from Enigma.",
+          "values": {
+            "min_radius": 500,
+            "max_radius": 200,
+            "min_damage_reduction": "0%",
+            "max_damage_reduction": "9%/11%/13%/15%",
+            "aura_linger_duration": 0.1
+          },
+          "details": "This ability levels up with Black Hole. Does not affect self. Grants 0.3%/0.4%/0.4%/0.5% incoming damage reduction per 10-distance proximity between Enigma and allied units within the radius."
+        },
+        {
+          "name": "Event Horizon",
+          "type": "passive",
+          "description": "Applies a movement speed slow to enemy units not facing Enigma within the radius.",
+          "values": {
+            "radius": 600,
+            "move_speed_slow": "8%/12%/16%/20%",
+            "aura_linger_duration": 0.5
+          },
+          "details": "This ability levels up with Black Hole. Selecting the Event Horizon facet unlocks this ability. The aura does not linger and clears once the affected unit faces away from Enigma."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Malefice",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "20/18/16/14",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "450/500/550/600",
+        "cast_animation": "0.3 + 0.6",
+        "description": "Focus his will on an enemy unit, damaging it and repeatedly stuns it.",
+        "details": "Number of Instances: 3 (7 with Shard), Instance Interval: 2, Damage per Instance: 55/70/85/100 (105/120/135/150 with Shard), Stun Duration per Instance: 0.3/0.5/0.7/0.9 (0.6/0.8/1/1.2 with Shard), Malefice Duration: 4 (12 with Shard)",
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "The first instance procs upon cast, subsequent instances proc per 2 seconds.",
+          "Reapplying the debuff refreshes the duration and continues applying damage in the same intervals as the first cast."
+        ],
+        "interaction_notes": [
+          "Creates a Lesser Eidolon corresponding of Enigma's Demonic Summoning level per stun instance applied with Shard.",
+          "Issues an attack order for the created Eidolons on the unit-targeted enemy."
+        ]
+      },
+      "ability_2": {
+        "name": "Demonic Summoning",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Eidolon",
+        "damage": "Instant Kill",
+        "cooldown": "40/38/36/34",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "400",
+        "cast_animation": "0.3 + 0.7",
+        "description": "Summons fragments of the Enigma himself.",
+        "details": "Number of Eidolons: 3 (7 with Talent), Duration: 40, Current Health as Max Health Bonus: 300%, Nth Attack to Multiply: 7, Set Current Health: 100%, Number of Copies: 1, Duration Increase: 2",
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "facet_effects": {
+          "splitting_image": {
+            "damage_threshold": 375,
+            "damage_timer": 7,
+            "gold_bounty_factor": 0.5,
+            "exp_factor": 0.5
+          }
+        },
+        "technical_details": [
+          "The current health cost utilizes setting health and is non-lethal.",
+          "The created Eidolon has health defined as: Unit Max HP = 180/200/220/240 + ⌊ EnigmaCurrent HP × 0.03 ⌋",
+          "The first batch of Eidolons created via a Demonic Summoning cast multiplies at its 7th attack attempt after accumulating 6 valid attacks."
+        ]
+      },
+      "ability_3": {
+        "name": "Midnight Pulse",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "40/35/30/25",
+        "mana_cost": "65/90/115/140",
+        "cast_range": "700",
+        "cast_animation": "0.1 + 0",
+        "description": "Steeps an area in dark resonance, damaging enemy units based on their current health.",
+        "details": "Effect Radius: 600 (800 with Talent), Damage per Second: 5/10/15/20, Current Health as Damage per Second: 4%/6%/8%/10%, Duration: 9/10/11/12, Aura Linger Duration: 0.5",
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates a negative aura at the area-targeted location and deals 2.5/5/7.5/10 + 2%/3%/4%/5% current health to affected enemy units in 0.5-second intervals.",
+          "Does not affect Ancient creeps and Ward-type units.",
+          "Multiple overlapping Midnight Pulse radius do not stack."
+        ]
+      },
+      "ability_4": {
+        "name": "Black Hole",
+        "key": "R",
+        "type": "channeling",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Pure"],
+        "cooldown": "180/170/160",
+        "mana_cost": "300/400/500",
+        "cast_range": "275",
+        "cast_animation": "0.3 + 0",
+        "description": "Summons a vortex that pulls in and disables enemy units within the radius.",
+        "details": "Max Channel Time: 4, Inner Effect Radius: 420, Inner Pull Speed: 30, Damage per Second: 100/150/200 (150/200/250 with Scepter), Max Silence Duration: 4, Aura Linger Duration: 0.5, Max Health as Damage per Second: 4% (with Scepter)",
+        "ability_behavior": ["area_target", "channeling"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates two negative auras that lasts as long as the channeling duration at the area-targeted location.",
+          "The inner radius applies disabling forced movement that pulls affected units to the center.",
+          "Applies Leash, Silence, and Stun to affected units within inner radius.",
+          "With Scepter: Outer Effect Radius: 1200, Outer Pull Speed: 175"
+        ],
+        "interaction_notes": [
+          "Affected units within inner radius can be pulled out by various sources, except Force Staff-based items, Geomagnetic Grip, Dispose, and Snowball.",
+          "Spirals affected enemy units anticlockwise while channeling at 14.32° per second."
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Demonic Summoning: Increased Splitting Image damage threshold from 350 to 375.",
+          "Eidolon: Multiplied Eidolons now automatically attack the same target prior to multiplying."
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Eidolon: Rescaled attack damage from 14‒20/24‒30/34‒40/44‒50 to 16/27/38/49."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased base attack damage from 7‒13 to 19‒25.",
+          "Rescaled Event Horizon movement speed slow from 9%/11%/13%/15% to 8%/12%/16%/20%.",
+          "Talents: LVL 15 +40 Malefice damage instance increased to +50."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

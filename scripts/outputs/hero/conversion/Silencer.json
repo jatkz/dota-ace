@@ -1,0 +1,244 @@
+{
+  "hero_name": "Silencer",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 19,
+      "strength_gain": 2.2,
+      "agility": 22,
+      "agility_gain": 2.2,
+      "intelligence": 25,
+      "intelligence_gain": 2.9,
+      "health": 538,
+      "mana": 375,
+      "armor": 3.67,
+      "magic_resist": 27.5,
+      "damage": [43, 57],
+      "damage_avg": 50,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 110,
+      "bat": 1.6,
+      "animation": "0.5 + 0.5",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Support, Disabler, Initiator, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Synaptic Split",
+        "effects": "Increases the max level of Glaives of Wisdom. Level 5 Glaives of Wisdom bounce to a random target within range. +1 Ability Level, +450 bounce range"
+      },
+      "facet_2": {
+        "name": "Suffer In Silence",
+        "effects": "Grants Silencer outgoing damage amplification against silenced units."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Applies Arcane Curse of its corresponding level to all silence-affected enemy heroes", "The debuff has the same duration as the applied Global Silence debuff"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Increases both the self intelligence gain and enemy intelligence loss"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["2 Arcane Curse Charges", "+25% Glaives of Wisdom Damage"],
+        "level_20": ["+250 Last Word Radius", "+40 Glaives of Wisdom Buff/Debuff Duration"],
+        "level_15": ["+2s Arcane Curse Base Duration +1s Arcane Curse Penalty Duration", "-20s Global Silence Cooldown"],
+        "level_10": ["+20 Attack Speed", "+0.5x Arcane Curse Penalty Factor"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Brain Drain",
+          "type": "passive",
+          "description": "If an enemy hero dies within the radius, Silencer permanently steals that enemy hero's intelligence for himself.",
+          "values": {
+            "enemy_death_radius": 925,
+            "enemy_int_loss": "1 (3 with Shard)",
+            "self_int_gain": "1 (3 with Shard)"
+          },
+          "details": "Grants base intelligence bonus. Reduces the enemy's base intelligence. Grants a stack when enemy heroes die within radius or when Silencer is credited for the kill."
+        },
+        {
+          "name": "Suffer In Silence",
+          "type": "passive",
+          "description": "Grants Silencer outgoing damage amplification against silenced units. Damage sources from silenced units are less effective on Silencer.",
+          "values": {
+            "damage_amp": "8%/12%/16%/20%",
+            "damage_reduction": "8%/12%/16%/20%"
+          },
+          "details": "This ability levels up with Global Silence. Selecting the Suffer In Silence facet unlocks this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Arcane Curse",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemies",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "22/20/18/16",
+        "mana_cost": "120/130/140/150",
+        "cast_range": "1000",
+        "cast_animation": "0.3 + 0.37",
+        "cast_radius": "350",
+        "details": "Both the damage over time and movement speed slow of Arcane Curse are more effective on silenced enemy units. Anytime an affected enemy unit casts an ability, the curse duration on that unit is increased. The debuff duration is suspended as long as the enemy unit is silenced.",
+        "description": "Applies a curse on affected enemy units within the radius, dealing damage over time and slowing their movement speed.",
+        "facet_effects": {
+          "first_damage": "20/40/60/80",
+          "damage_per_second": "16/24/32/40",
+          "move_speed_slow": "16%/19%/22%/25%",
+          "silenced_factor": "1.5 (2 with talent)",
+          "first_debuff_duration": "6 (8 with talent)",
+          "penalty_duration_increase": "2 (3 with talent)"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Reapplying the debuff applies another independent instance", "The debuff duration is extended when debuff-affected enemy unit casts an ability"],
+        "interaction_notes": ["Does not proc on sources that do not proc on-cast effects"]
+      },
+      "ability_2": {
+        "name": "Glaives of Wisdom",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "0",
+        "mana_cost": "14/16/18/20",
+        "cast_range": "600",
+        "cast_animation": "0.5 + 0.5",
+        "details": "Each attack drains the affected enemy hero's intelligence. Grants self intelligence bonus per attack projectile impact. The attack deals additional damage corresponding to Silencer's current intelligence.",
+        "description": "Active attack modifier that drains enemy intelligence and grants bonus damage based on Silencer's intelligence.",
+        "facet_effects": {
+          "max_ability_level": "4 (5 with Synaptic Split)",
+          "enemy_int_loss_per_attack": "1/2/3/4/4",
+          "duration": "20/25/30/35/35 (60/65/70/75/75 with talent)",
+          "self_int_gain_per_attack": "1/2/3/4/4",
+          "int_damage_factor": "0.35/0.5/0.65/0.8/0.8 (0.6/0.75/0.9/1.05/1.05 with talent)",
+          "bounce_range": "450 (Level 5 only with Synaptic Split)",
+          "number_of_bounces": "1 (Level 5 only with Synaptic Split)"
+        },
+        "ability_behavior": ["autocast", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Active attack modifier with autocast functionality", "Both intelligence reduction and self-gain stack independently"],
+        "interaction_notes": ["Does not apply to allied units, buildings, couriers, or ward-type units"]
+      },
+      "ability_3": {
+        "name": "Last Word",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemies",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "22/18/14/10",
+        "mana_cost": "100/105/110/115",
+        "cast_range": "900",
+        "cast_animation": "0.3 + 0.47",
+        "details": "Enchants an enemy unit while granting vision over it. Deals damage corresponding to the intelligence difference between Silencer and the affected unit. Silences the debuff-affected enemy if it casts an ability during the first debuff duration, or upon the enchantment expires.",
+        "description": "Enchants an enemy unit, dealing damage based on intelligence difference and silencing them if they cast spells or when the effect expires.",
+        "facet_effects": {
+          "base_damage": "120/160/200/240",
+          "int_difference_damage_factor": "1/1.5/2/2.5",
+          "first_debuff_duration": "4",
+          "silence_duration": "3/4/5/6",
+          "radius": "250 (with talent upgrade)"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Grants vision over target", "Damage calculated based on intelligence difference", "Can become area-targeted with talent"],
+        "interaction_notes": ["Does not proc on abilities that do not proc on-cast effects"]
+      },
+      "ability_4": {
+        "name": "Global Silence",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "120 (100 with talent)",
+        "mana_cost": "300/450/600",
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0.37",
+        "details": "Stops all sounds, preventing enemy heroes and units on the map from casting abilities. With Aghanim's Scepter, applies Arcane Curse of its corresponding level to all silence-affected enemy heroes.",
+        "description": "Silences all enemy units globally for a duration.",
+        "facet_effects": {
+          "radius": "Global",
+          "first_duration": "4.5/5.25/6",
+          "curse_duration_factor": "4.5/5.25/6 (with Scepter)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Affects all enemy units globally", "Has highest priority of ability sound effects", "Reapplying refreshes duration"],
+        "interaction_notes": ["Affects debuff immune, fogged, invisible, invulnerable, and spell immune units"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Suffer In Silence: Reduced outgoing damage amplification on silenced units from 10%/15%/20%/25% to 8%/12%/16%/20%",
+          "Suffer In Silence: Reduced incoming damage amplification on Silencer from silenced units from 10%/15%/20%/25% to 8%/12%/16%/20%"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "REMOVED Irrepressible ability",
+          "ADDED the Suffer In Silence ability",
+          "Attribute Bonus: ADDED the Synaptic Split facet",
+          "Glaives of Wisdom: Increased intelligence to damage bonus factor from 0.35/0.5/0.65/0.8 to 0.35/0.5/0.65/0.8/0.8",
+          "Glaives of Wisdom: Increased enemy intelligence loss per attack from 1/2/3/4 to 1/2/3/4/4",
+          "Glaives of Wisdom: Increased self intelligence gain per attack from 1/2/3/4 to 1/2/3/4/4",
+          "Glaives of Wisdom: Increased duration from 20/25/30/35 to 20/25/30/35/35",
+          "Glaives of Wisdom: ADDED the Synaptic Split facet with Level 5 bounce functionality",
+          "REMOVED the Global Silence Reverberating Silence facet",
+          "Aghanim's Shard upgrade changes to Glaives of Wisdom",
+          "Talents: LVL 20 changed from +1 Glaives of Wisdom number of bounces to +40s Glaives of Wisdom intelligence buff/debuff duration"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "CHANGED Brain Drain ability operations",
+          "When out of range, the ability effects procs only if the dying enemy is affected by Silencer-applied debuffs at the moment they die"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

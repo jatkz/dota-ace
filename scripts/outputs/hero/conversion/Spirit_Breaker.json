@@ -1,0 +1,260 @@
+{
+  "hero_name": "Spirit Breaker",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 28,
+      "strength_gain": 3.3,
+      "agility": 17,
+      "agility_gain": 1.7,
+      "intelligence": 14,
+      "intelligence_gain": 1.8,
+      "health": 736,
+      "mana": 243,
+      "armor": 3.83,
+      "magic_resist": 26.4,
+      "damage": [59, 69],
+      "damage_avg": 64,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 170,
+      "attack_speed": 100,
+      "bat": 1.9,
+      "animation": "0.6 + 0.3",
+      "move_speed": 295,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Initiator, Disabler, Durable, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Bull Rush",
+        "effects": "The bonus movement speed buff now lingers based on the Charge of Darkness duration and current charge speed. The longer the charge, the longer the linger."
+      },
+      "facet_2": {
+        "name": "Bull's Hit",
+        "effects": "Increases the proc chance linearly whenever Barathrum offensively applies Greater Bash to more than one enemy hero. Subsequent unique enemy hero affected cumulatively increases the proc chance."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Planar Pocket ability", "Increases self magic resistance and redirecting enemy hero spells in a radius towards him"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Increases the bonus movement speed"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-4s Charge of Darkness Cooldown", "+20% Greater Bash Damage"],
+        "level_20": ["+400 Bulldoze Barrier", "-0.3s Greater Bash Cooldown"],
+        "level_15": ["+45 Attack Damage", "-3s Bulldoze Cooldown"],
+        "level_10": ["+4 Armor", "+500 Night Vision"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Herd Mentality",
+          "type": "passive",
+          "description": "Applies a buff that grants an experience gain factor on the allied hero in Barathrum's team with the least experience.",
+          "values": {
+            "effect_radius": "Global",
+            "max_allied_hero": 1,
+            "xp_factor": 1.5,
+            "buff_duration": 9999,
+            "aura_linger_duration": "0.5"
+          },
+          "details": "Applies spirit_breaker_herd_mentality to all allied heroes that checks for the least experience ally."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The Spirit Breaker's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {},
+          "details": "Other Bash sources are innately disabled on Spirit Breaker."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Charge of Darkness",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "22/19/16/13",
+        "mana_cost": "90/100/110/120",
+        "cast_range": "Global",
+        "cast_animation": "0.1 + 0.5",
+        "cast_radius": "300",
+        "details": "Fixes his sight on an enemy unit and starts charging through all objects. Barathrum starts charging at a lower charge speed, and gradually winds-up to the max charge speed.",
+        "description": "Barathrum erupts from the darkness with unwieldy force.",
+        "facet_effects": {
+          "bull_rush": "The bonus movement speed buff now lingers based on the Charge of Darkness duration and current charge speed."
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Grants flat movement speed bonus and removes movement speed cap",
+          "Applies forced movement utilizing current movement speed as travel speed",
+          "Can auto-attack enemy units within attack range while charging",
+          "Applies Greater Bash on enemy units within 300 radius while charging"
+        ],
+        "interaction_notes": [
+          "Non-targeted ability casts do not interrupt Charge of Darkness",
+          "Cooldown starts once the charge ends or when interrupted",
+          "Can be manually ended with Stop, Hold, or targeted orders"
+        ]
+      },
+      "ability_2": {
+        "name": "Bulldoze",
+        "key": "W",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "22/20/18/16",
+        "mana_cost": "30/40/50/60",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Grants Barathrum bonus movement speed and status resistance to ram through enemy units.",
+        "description": "Barathrum warps the fabric of reality around him, lessening its influence on his physical form.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Does not interrupt an ongoing Charge of Darkness upon cast",
+          "Interrupts channeling abilities upon cast",
+          "Recasting refreshes duration but does not update ability values"
+        ],
+        "interaction_notes": [
+          "Stacks multiplicatively with other status resistance sources",
+          "Grants damage barrier that absorbs damage instances after reductions"
+        ]
+      },
+      "ability_3": {
+        "name": "Greater Bash",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "1.2",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "0",
+        "details": "Has a chance to stun and knockback an enemy unit on an attack that deals a portion of Barathrum's current movement speed as damage.",
+        "description": "The signature strike of Barathrum's ghostly ball and chain.",
+        "facet_effects": {
+          "bulls_hit": "Increases the proc chance linearly whenever Barathrum offensively applies Greater Bash to more than one enemy hero."
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Uses pseudo-random distribution",
+          "17% proc chance",
+          "Move Speed to Damage: 25%/30%/35%/40%",
+          "Stun Duration: 0.9/1.1/1.3/1.5",
+          "Knock Distance: 143/152/158/162"
+        ],
+        "interaction_notes": [
+          "Does not stack with other bash sources",
+          "Cannot proc on allied units, buildings, or ward-type units",
+          "Trees within 100-radius are destroyed on knockback contact"
+        ]
+      },
+      "ability_4": {
+        "name": "Planar Pocket",
+        "key": "D",
+        "type": "active",
+        "affects": "Allied Units / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "25",
+        "mana_cost": "100",
+        "cast_range": "700",
+        "cast_animation": "0 + 0.5",
+        "cast_radius": "900",
+        "details": "Increases self magic resistance and redirecting enemy hero spells in a radius towards him.",
+        "description": "Barathrum's unyielding focus forms a pocket of planar convergence from which not even the most powerful arcane energies can escape.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "death",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Requires Aghanim's Scepter to unlock",
+          "Creates aura affecting allied heroes within radius except Barathrum",
+          "Grants 75% magic resistance bonus to self",
+          "Duration: 6 seconds",
+          "Instant cast time while charging with Charge of Darkness"
+        ],
+        "interaction_notes": [
+          "Only redirects abilities cast by heroes",
+          "Does not redirect unit-targeted abilities targeting Barathrum",
+          "Has same proc precedence as Linken's Sphere-based Spell Block sources"
+        ]
+      },
+      "ability_5": {
+        "name": "Nether Strike",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "75/55/35",
+        "mana_cost": "125/150/175",
+        "cast_range": "700",
+        "cast_animation": "1 + 0",
+        "cast_radius": "0",
+        "details": "Spirit Breaker slips into the nether realm, reappearing next to his hapless victim and striking it.",
+        "description": "Barathrum temporarily returns to the realm from where he came, bringing with him the retribution of both worlds.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage: 150/250/350",
+          "Cast Range Buffer: 500",
+          "Teleports to opposite side of target, 54 range away",
+          "Applies Greater Bash with double knockback distance",
+          "Exposes and grants True Sight over target during cast point"
+        ],
+        "interaction_notes": [
+          "Does not disjoint projectiles upon cast or teleport",
+          "Automatically issues attack order on target after cast",
+          "Requires Greater Bash to be learned for passive component to work"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

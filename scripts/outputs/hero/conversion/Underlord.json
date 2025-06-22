@@ -1,0 +1,276 @@
+{
+  "hero_name": "Underlord",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 25,
+      "strength_gain": 3,
+      "agility": 12,
+      "agility_gain": 1.6,
+      "intelligence": 17,
+      "intelligence_gain": 2.3,
+      "health": 670,
+      "mana": 279,
+      "armor": 5,
+      "magic_resist": 26.7,
+      "damage": [62, 68],
+      "damage_avg": 65,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 200,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.45 + 0.7",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Durable, Nuker, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Demon's Reach",
+        "effects": "Atrophy Aura stacks additionally grant Underlord's attack cleave damage."
+      },
+      "facet_2": {
+        "name": "Abyssal Horde",
+        "effects": "Fiend's Gate additionally summons uncontrollable Abyssal Hordes at the portal that Underlord teleports to."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Increases effect radius",
+          "Pit of Malice of the corresponding level are created under both portals",
+          "Reduces cooldown"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Enables casting Firestorm on allied units, with all ability effects centering and following the targeted ally around",
+          "Increases the number of instances",
+          "Reduces both the instance interval and burn interval"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+100 Fiend's Gate Damage per Second", "+0.4s Pit of Malice Root"],
+        "level_20": ["+10% Atrophy Aura Damage Reduction/Bonus", "+0.6% Firestorm Max Health as Damage"],
+        "level_15": ["-3s Firestorm Cooldown", "+25% Pit of Malice Slow"],
+        "level_10": ["+15s Atrophy Aura Duration", "+5% Invading Force Move Speed/Damage Reduction"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Invading Force",
+          "type": "passive",
+          "description": "Grants his allied heroes movement speed bonus and incoming damage reduction once their teleportation completes.",
+          "values": {
+            "effect_radius": "Global",
+            "move_speed_bonus": "5%/10%/15%/20% (10%/15%/20%/25%)",
+            "damage_reduction": "4%/6%/8%/10% (9%/11%/13%/15%)",
+            "duration": 5,
+            "move_speed_bonus_factor": 2,
+            "damage_reduction_factor": 2
+          },
+          "details": "This ability levels up with Fiend's Gate. Grants allied heroes a greater bonus upon warping through the Fiend's Gate."
+        },
+        {
+          "name": "Abyssal Horde",
+          "type": "passive",
+          "description": "The Fiend's Gate additionally summons uncontrollable demonic minions on the portal that Underlord teleports to.",
+          "values": {
+            "enemy_search_radius": 1200,
+            "spawn_interval": 2,
+            "enemy_per_spawn": 1,
+            "max_duration": 16.5,
+            "damage_factor": 0.5
+          },
+          "details": "This ability levels up with Fiend's Gate. The summoned warriors and archers deal less damage to structures."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Firestorm",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Allied Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "16/15/14/13 (13/12/11/10)",
+        "mana_cost": "110/125/140/155",
+        "cast_range": "600/625/650/675",
+        "cast_animation": "0.5 + 0.6",
+        "cast_radius": "425",
+        "details": "Calls down waves of fire that damage enemy units in the area-targeted location.",
+        "description": "Calls down waves of fire that damage enemy units in the area-targeted location.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Number of Instances: 6 (9)",
+          "Instance Interval: 1 (0.75)",
+          "Damage per Instance: 30/50/70/90",
+          "Burn Interval: 1 (0.75)",
+          "Max Health as Damage per Interval: 1.5%/2%/2.5%/3% (2.1%/2.6%/3.1%/3.6%)",
+          "Burn Duration: 2 (1.5)"
+        ],
+        "interaction_notes": [
+          "Both Roshan and the Tormentor are immune to the max health as damage component",
+          "All ability effects are applied immediately within the radius despite the visual effects"
+        ]
+      },
+      "ability_2": {
+        "name": "Pit of Malice",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "30/25/20/15",
+        "mana_cost": "110/120/130/140",
+        "cast_range": "675",
+        "cast_animation": "0.25 + 0.63",
+        "cast_radius": "400 (500)",
+        "details": "A deadly pit is conjured at the target location; any unit that enters will be damaged and rooted.",
+        "description": "A deadly pit is conjured at the target location; any unit that enters will be damaged and rooted. Each enemy unit within the pit are affected by cadence.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage: 20/30/40/50",
+          "Root Interval: 3.6",
+          "Root Duration: 1.5/1.6/1.7/1.8 (1.9/2/2.1/2.2)",
+          "Pit Duration: 12",
+          "Move Speed Slow: 25%",
+          "Aura Linger Duration: 0.5"
+        ],
+        "interaction_notes": [
+          "Applies Root and True Sight",
+          "Affects Fogged units and Invisible units",
+          "Multiple overlapping Pit of Malice do not stack"
+        ]
+      },
+      "ability_3": {
+        "name": "Atrophy Aura",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Ally Heroes",
+        "damage": "N/A",
+        "damage_types": [],
+        "cooldown": "N/A",
+        "mana_cost": "N/A",
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "900",
+        "details": "Weakens enemy units' attack damage within the radius. If an enemy unit dies while under this gastric atrophy, Underlord gains temporary bonus damage.",
+        "description": "Weakens enemy units' attack damage within the radius. If an enemy unit dies while under this gastric atrophy, Underlord gains temporary bonus damage.",
+        "facet_effects": {
+          "demons_reach": "Atrophy Aura grants Underlord's attack cleave damage with increased range per stack"
+        },
+        "ability_behavior": ["passive", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Radius: 900",
+          "Attack Damage Reduction: 6%/14%/22%/30% (16%/24%/32%/40%)",
+          "Attack Damage Bonus per Enemy Hero: 30/35/40/45",
+          "Buff Duration: 30/40/50/60 (45/55/65/75)",
+          "Aura Linger Duration: 0.5",
+          "Attack Damage Bonus per Enemy Creep: 2/4/6/8"
+        ],
+        "interaction_notes": [
+          "Does not affect neutral creeps",
+          "Considers Meepo Clones as heroes, and creep-heroes as creeps",
+          "Break sources disable both the aura and buff stack gain"
+        ]
+      },
+      "ability_4": {
+        "name": "Fiend's Gate",
+        "key": "R",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "110/105/100 (100/95/90)",
+        "mana_cost": "175",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "cast_radius": "N/A",
+        "details": "Opens one portal next to Underlord another portal in the target location. Both portals have to be at least a certain distance away from each other. Heroes can channel a portal to teleport to the other side.",
+        "description": "Opens one portal next to Underlord another portal in the target location. Both portals have to be at least a certain distance away from each other. Heroes can channel a portal to teleport to the other side.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Portals: 2",
+          "Gate Min Distance: 1500",
+          "Duration: 20",
+          "Fountain to Gate Distance: 1425",
+          "Effect Radius: 700",
+          "Damage per Second: 100",
+          "Aura Linger Duration: 0.05",
+          "Pit Duration: 12"
+        ],
+        "interaction_notes": [
+          "Globally pings on all heroes' minimap upon cast",
+          "Interrupts Underlord's channeling abilities upon cast",
+          "Both portals have Spell Immunity buff",
+          "Cannot be placed in fountain area, Roshan's pit, or on impassable terrain"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Fiend's Gate mana cost from 200 to 175"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "CHANGED Necronomicon Warrior attack damage type from Default to Runty",
+          "CHANGED Necronomicon Archer attack damage type from Default to Piercing",
+          "CHANGED Atrophy Aura Demon's Reach buff dispel type from Death to None"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "LVL 10 +60 Firestorm radius → +15s Atrophy Aura buff duration",
+          "LVL 20 +0.8% Firestorm max health as damage per second reduced to +0.6%",
+          "LVL 25 +0.5s Pit of Malice root duration reduced to +0.4s"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

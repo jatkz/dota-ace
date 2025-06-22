@@ -1,0 +1,244 @@
+{
+  "hero_name": "Nature's Prophet",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 19,
+      "strength_gain": 2.6,
+      "agility": 14,
+      "agility_gain": 3.2,
+      "intelligence": 22,
+      "intelligence_gain": 3.5,
+      "health": 538,
+      "mana": 339,
+      "armor": 2.33,
+      "magic_resist": 27.2,
+      "damage": [40, 50],
+      "damage_avg": 45.75,
+      "projectile_speed": 1125,
+      "attack_type": "ranged",
+      "attack_range": 620,
+      "attack_speed": 100,
+      "bat": 1.5,
+      "animation": "0.4 + 0.6",
+      "move_speed": 295,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Escape, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Soothing Saplings",
+        "effects": "Sprout grants a soothing and healing aura within the ring of trees for its duration. Affects buildings."
+      },
+      "facet_2": {
+        "name": "Nature's Profit",
+        "effects": "Unlocks the Nature's Profit ability"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Applies a debuff that roots and disarms affected enemy units", "The debuff duration increases incrementally per affected enemy unit", "Reduces cooldown"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Curse of the Oldgrowth ability", "Applies an exposing debuff on all enemy heroes within the radius and slowing them", "The debuff also deals damage over time based on the number of trees surrounding the affected enemy hero"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["3x Treant Health/Damage", "No Teleportation Cooldown"],
+        "level_20": ["+170 Sprout Damage", "-15s Wrath of Nature Cooldown"],
+        "level_15": ["+30 Sprout Heal per Second/+1 Nature's Profit Gold Bag per Interval", "+50 Treant Move Speed"],
+        "level_10": ["+25 Wrath of Nature Base Damage", "-10s Nature's Call Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Spirit of the Forest",
+          "type": "passive",
+          "description": "Grants the Prophet bonus base attack damage per tree within the proximity radius.",
+          "values": {
+            "tree_proximity_radius": "300/400/500/600",
+            "base_attack_damage_bonus_per_tree": "3%",
+            "treant_search_radius": "1200"
+          },
+          "details": "This ability levels up with Wrath of Nature. The Prophet's Treants are considered as valid trees."
+        },
+        {
+          "name": "Nature's Profit",
+          "type": "passive",
+          "description": "Facet-specific ability that spawns gold bags when enemy heroes die near Nature's Prophet",
+          "values": {},
+          "details": "Only available with Nature's Profit facet"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Sprout",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "14/12/10/8",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "625/700/775/850",
+        "cast_animation": "0.35 + 0.44",
+        "cast_radius": "150",
+        "details": "Sprouts a ring of trees around a unit, trapping it in place, while providing a vision radius slightly larger than the tree ring radius.",
+        "description": "Sprouts a ring of trees around a unit, trapping it in place, while providing a vision radius slightly larger than the tree ring radius.",
+        "facet_effects": {
+          "soothing_saplings": {
+            "heal_radius": "200",
+            "heal_per_second": "12/20/28/36",
+            "building_heal_factor": "0.5"
+          }
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Creates 8 trees in octagon formation", "Deals damage within 275 radius upon cast", "Provides 250 radius vision"],
+        "interaction_notes": ["Cannot be cast on Ancient creeps, Buildings (except Ancients), Ward-type units, Hidden units, Invulnerable units"]
+      },
+      "ability_2": {
+        "name": "Teleportation",
+        "key": "W",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "65/50/35/20",
+        "mana_cost": "50/60/70/80",
+        "cast_range": "Global",
+        "cast_animation": "3 + 0",
+        "cast_radius": "Global",
+        "details": "The Prophet may globally teleports to any point on the map. Grants the Prophet an all damage barrier upon a successful teleportation.",
+        "description": "The Prophet may globally teleports to any point on the map. Grants the Prophet an all damage barrier upon a successful teleportation.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Grants 100/150/200/250 damage barrier for 15 seconds", "Doubletap casts on fountain"],
+        "interaction_notes": ["Visual and sound effects visible to enemies during cast"]
+      },
+      "ability_3": {
+        "name": "Nature's Call",
+        "key": "E",
+        "type": "active",
+        "affects": "Trees",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "45/40/35/30",
+        "mana_cost": "120",
+        "cast_range": "750",
+        "cast_animation": "0.5 + 1.23",
+        "cast_radius": "150/225/300/375",
+        "details": "Converts an area of trees into Treants under the command of the Prophet.",
+        "description": "Converts an area of trees into Treants under the command of the Prophet.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Max 2/3/4/5 Treants", "Treant duration: 50 seconds", "Requires minimum 1 tree"],
+        "interaction_notes": ["Destroys all trees in radius regardless of number of Treants summoned"]
+      },
+      "ability_4": {
+        "name": "Curse of the Oldgrowth",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "18",
+        "mana_cost": "80",
+        "cast_range": "No Target",
+        "cast_animation": "0.2 + 0.6",
+        "cast_radius": "1200",
+        "details": "Applies an exposing debuff on all enemy heroes within the radius and slowing them. The debuff also deals damage over time based on the number of trees surrounding the affected enemy hero.",
+        "description": "Applies an exposing debuff on all enemy heroes within the radius and slowing them. The debuff also deals damage over time based on the number of trees surrounding the affected enemy hero.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Tree search radius: 250", "Damage per second per tree: 20", "Move speed slow per tree: 7%", "Debuff duration: 7"],
+        "interaction_notes": ["Requires Aghanim's Shard to unlock", "Considers Treants as trees regardless of faction"]
+      },
+      "ability_5": {
+        "name": "Wrath of Nature",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "85",
+        "mana_cost": "130/160/190",
+        "cast_range": "Global",
+        "cast_animation": "0.5 + 0.97",
+        "cast_radius": "Global",
+        "details": "A damaging energy that bounces around globally, striking enemy units close to the point-targeted location within the Prophet's vision radius. The damage increases incrementally per bounce.",
+        "description": "A damaging energy that bounces around globally, striking enemy units close to the point-targeted location within the Prophet's vision radius. The damage increases incrementally per bounce.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Base damage: 90/130/170", "Damage factor per bounce: 1.1", "16th bounce reaches max damage", "Check timer: 0.25 seconds"],
+        "interaction_notes": ["Can only affect same unit once per cast", "Scepter adds root and disarm with increasing duration"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Increased Nature's Profit hero level to gold factor from 1.5 to 2",
+          "Reduced Sprout Soothing Saplings tree enchant radius from 1200 to 900",
+          "Reduced Wrath of Nature base damage from 100/140/180 to 90/130/170"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "ADDED the Nature's Profit ability",
+          "Reduced Sprout damage from 70/140/210/280 to 70/135/200/265",
+          "REWORKED Soothing Saplings heal component",
+          "Reduced Teleportation damage barrier from 100/150/200/250 to 70/130/190/250",
+          "Talents: LVL 15 +100 Teleportation damage barrier → +30% Sprout heal per second/+1 Nature's Profit gold bag per interval"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Spirit of the Forest base attack damage bonus per tree from 4% to 3%",
+          "Reduced Greater Treant health from 800/1050/1300/1550 to 750/950/1150/1350"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

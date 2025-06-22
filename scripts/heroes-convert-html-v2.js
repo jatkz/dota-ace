@@ -12,11 +12,11 @@ async function main() {
     try {
         const claude = new ClaudeMessageBatchClient(API_KEY, './claude-templates/parse-hero-page.txt');
 
-        const heroes = DOTA2_HEROES.filter(x => x.runConversion).slice(0,3);
+        const heroes = DOTA2_HEROES.filter(x => x.runConversion).slice(0,12);
         console.log('heroes to handle....', heroes);
         const batchConfig = heroes.map(x => {
             return {
-                custom_id: x.urlName,
+                custom_id: x.urlName.replace("'", ""),
                 filePath: `./scripts/outputs/hero/clean/${x.urlName}.html`
             }
         })

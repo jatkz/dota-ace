@@ -1,0 +1,342 @@
+{
+  "hero_name": "Enchantress",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 17,
+      "strength_gain": 2,
+      "agility": 19,
+      "agility_gain": 2.1,
+      "intelligence": 22,
+      "intelligence_gain": 4,
+      "health": 494,
+      "mana": 339,
+      "armor": 4.17,
+      "magic_resist": 27.2,
+      "damage": [43, 53],
+      "damage_avg": 48,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.7",
+      "move_speed": 320,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Pusher, Durable, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Overprotective Wisps",
+        "effects": "These overprotective Nature's Attendants of its corresponding level appear and heal Enchantress whenever she takes up to a certain amount of damage."
+      },
+      "facet_2": {
+        "name": "Spellbound",
+        "effects": "Grants Enchantress and her player-controlled units bonus attack range when attacking the Enchanted enemy hero. Increases cast range. +50/100/150/200 Cast Range"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Little Friends ability",
+          "Roots an enemy unit. Enchantress orders creeps of all factions, including neutral creeps, within the radius to attack the affected enemy unit",
+          "Increases the max enchanted creep count"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Sproink ability",
+          "Leaps backward and disjoints incoming projectiles",
+          "Enchantress launches Impetus of its corresponding level on a number of furthest enemy units"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+12 Nature's Attendants Wisps", "+6.5% Impetus Damage"],
+        "level_20": ["+150/+25 Health/Attack Damage to Enchantress and Her Units", "+60 Untouchable Attack Speed Slow"],
+        "level_15": ["+8 Nature's Attendants Heal", "+30 Attack Speed to Enchantress and Her Units"],
+        "level_10": ["+30 Nature's Attendants Self Move Speed", "+10 Enchanted Creep Armor"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Rabble-Rouser",
+          "type": "passive",
+          "description": "All neutral creeps conditionally deals more damage to enemy heroes.",
+          "values": {
+            "effect_radius": "Global",
+            "attack_damage_base_bonus": "10%",
+            "attack_damage_bonus_per_hero_level": "4%",
+            "buff_duration": "Permanent"
+          },
+          "details": "This ability levels up with Enchantress."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Enchantress' talent granted auras are not affected by Break sources.",
+          "values": {
+            "effect_radius": "Global",
+            "aura_linger_duration": "0.5",
+            "attack_speed_bonus": "30",
+            "max_health_bonus": "150",
+            "attack_damage_bonus": "25"
+          },
+          "details": "Grants Enchantress and all of her player-controlled units various talent bonuses."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Impetus",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Pure",
+        "damage_types": ["spell", "pure"],
+        "cooldown": "6/4/2/0",
+        "mana_cost": "40/45/50/55",
+        "cast_range": "575",
+        "cast_animation": "0.3 + 0.7",
+        "cast_radius": "",
+        "details": "Enchants her own attack while activated, causing it to deal additional distance-based damage between Enchantress and the enemy target. The farther the target, the greater the damage.",
+        "description": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her.",
+        "facet_effects": {
+          "spellbound": "Enhanced damage factors: 0.115/0.165/0.215/0.265"
+        },
+        "ability_behavior": ["autocast", "active_attack_modifier"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Distance Cap: 1750",
+          "Distance Damage Factor: 0.05/0.1/0.15/0.2",
+          "Illusion Damage Factor: 2"
+        ],
+        "interaction_notes": [
+          "Impetus is more effective on illusions",
+          "Uses Enchantress's current attack range for both Autocast and active cast"
+        ]
+      },
+      "ability_2": {
+        "name": "Enchant",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical / Instant Kill",
+        "damage_types": ["spell", "magical", "instant_kill"],
+        "cooldown": "30/24/18/12",
+        "mana_cost": "70",
+        "cast_range": "500/550/600/650",
+        "cast_animation": "0.3 + 0.67",
+        "cast_radius": "",
+        "details": "Charms an enemy hero and slowing its movement speed in the process. If the targeted unit is an enemy or a neutral creep, Enchantress brings it under her control and receives a portion of their experience bounty.",
+        "description": "A true steward of the forest, Aiushtha befriends all within it — from lowly trolls to powerful centaurs.",
+        "facet_effects": {
+          "spellbound": {
+            "cast_range": "550/650/750/850",
+            "attack_range_bonus": "100/150/200/250"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Move Speed Slow: 30%/40%/50%/60%",
+          "Debuff Duration: 3.5/4/4.5/5",
+          "Max Enchant Creeps: 1 (2 with Scepter)",
+          "Enchant Creep Max Level: 4/5/6/6",
+          "Max Health Bonus: 150/250/350/450",
+          "Attack Damage Bonus: 0/25/50/75",
+          "XP Factor: 0.35",
+          "Creep Duration: 30/60/90/120",
+          "Armor Bonus: 10 (with talent)"
+        ],
+        "interaction_notes": [
+          "Enchanted creeps are summoned units, their attacks are less effective on Reinforced units",
+          "Damage Factor: 0.6"
+        ]
+      },
+      "ability_3": {
+        "name": "Nature's Attendants",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Units / Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "35",
+        "mana_cost": "140",
+        "cast_range": "",
+        "cast_animation": "0.3 + 0.93",
+        "cast_radius": "275",
+        "details": "A cloud of wisps heals Enchantress and allied units nearby.",
+        "description": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
+        "facet_effects": {
+          "overprotective_wisps": {
+            "max_wisps_per_proc": "4",
+            "damage_threshold": "275",
+            "passive_wisps_duration": "4"
+          }
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 275",
+          "Number of Wisps: 9 (21 with talent)",
+          "Heal per Second per Wisp: 4/8/12/16 (12/16/20/24 with talent)",
+          "Duration: 7/9/11/13",
+          "Move Speed Bonus: 30 (with talent)"
+        ],
+        "interaction_notes": [
+          "Each wisp chooses a random allied unit in 0.5-second intervals",
+          "Multiple wisps can affect the same unit at the same time"
+        ]
+      },
+      "ability_4": {
+        "name": "Sproink",
+        "key": "D",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Pure / Instant Attack / Physical",
+        "damage_types": ["spell", "pure", "instant_attack", "physical"],
+        "cooldown": "10",
+        "mana_cost": "60",
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "675",
+        "details": "Leaps backward and disjoints incoming projectiles. Enchantress launches Impetus of its corresponding level on a number of furthest enemy units.",
+        "description": "Sproink is as Sproink does.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Leap Distance: 500",
+          "Leap Duration: 0.4",
+          "Number of Impetus Attacks: 2",
+          "Impetus Search Radius: 675",
+          "Instant Attack Factor: 1"
+        ],
+        "interaction_notes": [
+          "Requires Aghanim's Shard to unlock",
+          "Interrupts channeling abilities upon cast",
+          "Disjoints projectiles upon cast"
+        ]
+      },
+      "ability_5": {
+        "name": "Little Friends",
+        "key": "F",
+        "type": "active",
+        "affects": "Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "20",
+        "mana_cost": "75",
+        "cast_range": "750",
+        "cast_animation": "0 + 0",
+        "cast_radius": "1200",
+        "details": "Roots an enemy unit. Enchantress orders creeps of all factions, including neutral creeps, within the radius to attack the affected enemy unit.",
+        "description": "The laws of the forest may be oblique, but punishment for breaking them is swift and smiling.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 1200",
+          "Base Root Duration: 2",
+          "Root Duration Increase per Creep: 0.5",
+          "Max Root Duration: 5",
+          "Move Speed Bonus: 100%",
+          "Attack Speed Bonus: 100",
+          "Taunt Duration: 6"
+        ],
+        "interaction_notes": [
+          "Requires Aghanim's Scepter to unlock",
+          "Creeps are taunted by the affected enemy unit",
+          "Grants True Sight over the affected enemy unit"
+        ]
+      },
+      "ability_6": {
+        "name": "Untouchable",
+        "key": "R",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "Global",
+        "details": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
+        "description": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: Global",
+          "Attack Speed Slow: 100/150/200 (160/210/260 with talent)",
+          "Backswing as Slow Duration Factor: 1"
+        ],
+        "interaction_notes": [
+          "Procs on the enemy unit's attack point when attacking Enchantress",
+          "The slow duration is defined as the unit's attack backswing"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Increased Nature's Attendants number of wisp from 8 to 9"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Rescaled Impetus mana cost from 50 on each level to 40/45/50/55",
+          "Increased Enchant Spellbound attack range bonus from 60/120/180/240 to 100/150/200/250"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased intelligence gain from 3.8 to 4"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

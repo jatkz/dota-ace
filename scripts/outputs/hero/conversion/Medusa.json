@@ -1,0 +1,289 @@
+{
+  "hero_name": "Medusa",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 22,
+      "strength_gain": 3.6,
+      "agility": 22,
+      "agility_gain": 3.6,
+      "intelligence": 25,
+      "intelligence_gain": 3.6,
+      "health": 120,
+      "mana": 375,
+      "armor": 2.67,
+      "magic_resist": 27.5,
+      "damage": [48, 54],
+      "damage_avg": 51,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 0.6",
+      "move_speed": 275,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Disabler, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Engorged",
+        "effects": "Grants a buff upon the Mystic Snake return. Medusa deals attack damage bonus for a number of subsequent attacks."
+      },
+      "facet_2": {
+        "name": "Venomous Volley",
+        "effects": "After a number of attacks on the same enemy unit, the Gorgon's attack applies a movement speed slow, attack speed slow, and a cast point slow."
+      },
+      "facet_3": {
+        "name": "Undulation",
+        "effects": "The Gorgon's has a greater base movement speed but can no longer be affected by most movement speed manipulation sources. +35 Base Movement Speed"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Enables Split Shot to utilize attack modifiers",
+          "Increases the bonus attack targets"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Cold Blooded ability",
+          "When Medusa is offensively unit-targeted by a spell, a single-target Mystic Snake is sent back towards the enemy"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+40 Intelligence", "+1 Gorgon's Grasp Arrows"],
+        "level_20": ["+1.5s Stone Gaze Duration", "+3 Mystic Snake Bounces"],
+        "level_15": ["-3s Mystic Snake Cooldown", "-8% Split Shot Attack Damage Reduction"],
+        "level_10": ["+8% Stone Gaze Damage Amp", "×1.2 Gorgon's Grasp Radius"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Mana Shield",
+          "type": "passive",
+          "description": "Creates a shield that absorbs incoming damage in exchange for Medusa's mana.",
+          "values": {
+            "damage_reduction": "98%",
+            "damage_taken_to_mana_base_factor": 2.2,
+            "damage_taken_to_mana_factor_bonus_per_hero_level": 0.1
+          },
+          "details": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers."
+        },
+        {
+          "name": "Venomous Volley",
+          "type": "passive",
+          "description": "After a number of attacks on the same enemy unit, the Gorgon's attack applies a movement speed slow, attack speed slow, and a cast point slow.",
+          "values": {
+            "required_hits": 6,
+            "move_speed_slow": "20%/25%/30%/35%",
+            "attack_speed_slow": "35/50/65/80",
+            "duration": 1.5
+          },
+          "details": "This ability levels up with Split Shot."
+        },
+        {
+          "name": "Undulation",
+          "type": "passive",
+          "description": "The Gorgon's has a greater base movement speed but can no longer be affected by most movement speed manipulation sources.",
+          "values": {
+            "set_min_move_speed": 310,
+            "set_max_move_speed": 310
+          },
+          "details": "Selecting the Undulation facet unlocks this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Split Shot",
+        "key": "Q",
+        "type": "toggle",
+        "affects": "Self / Enemy Units",
+        "damage": "Instant Attack / Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "750",
+        "cast_animation": "0 + 0",
+        "cast_radius": "750",
+        "details": "Magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.",
+        "description": "All who encounter the cursed Gorgon will feel her rage.",
+        "facet_effects": {},
+        "ability_behavior": ["toggle"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 750",
+          "Bonus Attack Targets: 4 (5 with Scepter)",
+          "Self Attack Damage Factor: 0.5/0.6/0.7/0.8 (0.58/0.68/0.78/0.88 with talent)"
+        ],
+        "interaction_notes": [
+          "Does not interrupt Medusa's channeling abilities",
+          "The toggle status persists death",
+          "Reduces both Medusa's main and bonus attack damage"
+        ]
+      },
+      "ability_2": {
+        "name": "Mystic Snake",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "15/14/13/12",
+        "mana_cost": "80/100/120/140",
+        "cast_range": "750",
+        "cast_animation": "0.2 + 0.67",
+        "cast_radius": "450",
+        "details": "Fires an energy bolt that jumps from target to target dealing damage. After it reaches its last target, it returns and to replenishes her mana.",
+        "description": "The Gorgon's curse is her greatest strength.",
+        "facet_effects": {
+          "engorged": {
+            "max_attack_charges": 3,
+            "mana_restore_to_attack_damage_bonus": 0.17,
+            "buff_duration": 5
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Bounce Radius: 450",
+          "Number of Bounces: 3/4/5/6 (6/7/8/9 with talent)",
+          "Projectile Speed: 800",
+          "First Damage: 90/140/190/240",
+          "Enemy Max Mana as Mana Restore: 15%"
+        ],
+        "interaction_notes": [
+          "Has a 800-base projectile speed",
+          "Subsequent projectile impacts per valid enemy unit increases projectile speed and damage",
+          "Grants a non-lingering 100-radius flying vision centered around the projectile"
+        ]
+      },
+      "ability_3": {
+        "name": "Gorgon's Grasp",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "30/27/24/21",
+        "mana_cost": "65/85/105/125",
+        "cast_range": "625",
+        "cast_animation": "0.4 + 0.3",
+        "cast_radius": "150-250",
+        "details": "Fires a volley of damaging arrows in a straight line, with each grouping covering a larger radius than the previous.",
+        "description": "The best predators don't even need to pounce.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Delay: 1",
+          "Max Effect Radii: 3 (4 with talent)",
+          "Arrow Impact Delay: 0.25",
+          "First Radius: 150 (180 with talent)",
+          "Radius Increase per Volley: 50 (60 with talent)",
+          "Distance Factor per Volley: 1.7",
+          "Impact Damage: 30/70/110/150",
+          "Turn Rate Slow: 100%",
+          "Total Damage Per Second: 100",
+          "Root Duration: 0.8/1.2/1.6/2"
+        ],
+        "interaction_notes": [
+          "Applies root, True Sight, turn rate slow, and damage per second debuff",
+          "Creates incrementing effect radii in front of Medusa's facing direction",
+          "Reapplying the debuff refreshes the duration and updates ability values"
+        ]
+      },
+      "ability_4": {
+        "name": "Stone Gaze",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "90",
+        "mana_cost": "250",
+        "cast_range": "1200",
+        "cast_animation": "0.4 + 0.5",
+        "cast_radius": "1200",
+        "details": "Any enemy units looking at Medusa will have both their movement speed and attack speed slowed.",
+        "description": "The beauty of Medusa is legendary.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: 1200",
+          "Facing Angle: ≈85°",
+          "Move Speed Slow: 35%",
+          "Attack Speed Slow: 35",
+          "Turn Rate Slow: 35%",
+          "Gaze Duration: 5/5.5/6 (6.5/7/7.5 with talent)",
+          "Facing Timer: 2",
+          "Physical Damage Amp: 35%/45%/55% (43%/53%/63% with talent)",
+          "Stone Duration: 2/2.2/2.4",
+          "Move Speed Bonus: 50%"
+        ],
+        "interaction_notes": [
+          "Enemy team must have vision over Medusa for minimum 1 server tick",
+          "Creates a negative aura affecting all enemy units within effect radius",
+          "Units facing Medusa within 170° are considered facing regardless of their facing angle"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Mystic Snake: Reduced first damage from 90/150/210/270 to 90/140/190/240",
+          "Mystic Snake: Rescaled enemy max mana as mana restore from 14%/15%/16%/17% to 15% on each level",
+          "Increased Gorgon's Grasp mana cost from 40/60/80/100 to 65/85/105/125",
+          "Increased Stone Gaze mana cost from 200 to 250"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Venomous Volley enemy cast point factor from 1.5 to 1"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Increased Venomous Volley required hits from 5 to 6"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

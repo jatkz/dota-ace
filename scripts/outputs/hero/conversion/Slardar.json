@@ -1,0 +1,277 @@
+{
+  "hero_name": "Slardar",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 21,
+      "strength_gain": 3.6,
+      "agility": 17,
+      "agility_gain": 2.1,
+      "intelligence": 15,
+      "intelligence_gain": 1.5,
+      "health": 582,
+      "mana": 255,
+      "armor": 4.83,
+      "magic_resist": 26.5,
+      "damage": [51, 59],
+      "damage_avg": 55,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.36 + 0.64",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Initiator, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Leg Day",
+        "effects": "Guardian Sprint grants an additional short bonus movement speed and bonus slow resistance upon cast."
+      },
+      "facet_2": {
+        "name": "Brineguard",
+        "effects": "Corrosive Haze grants a self armor bonus depending on the total armor reduction applied to all enemy units. Each debuff applied on enemy units grants an independent buff stack."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Increases both the bonus health regeneration and the bonus armor granted",
+          "Slardar additionally has bonus status resistance in certain water-based terrains",
+          "Increases the water-based terrain radius and its duration",
+          "Increases both the puddle radius and the puddle duration"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Applies Corrosive Haze of its corresponding level to enemy units within the effect radius"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Corrosive Haze Cannot Be Dispelled", "-3s Slithereen Crush Cooldown"],
+        "level_20": ["-4 Corrosive Haze Armor", "+125 Slithereen Crush Damage"],
+        "level_15": ["+40 Bash of the Deep Damage", "+300 Health"],
+        "level_10": ["+12 Seaborn Sentinel Attack Damage", "+2s Guardian Sprint Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Seaborn Sentinel",
+          "type": "passive",
+          "description": "Grants Slardar bonus health regeneration, bonus armor, bonus attack damage, and bonus movement speed in certain water-based terrains.",
+          "values": {
+            "health_regen_bonus": "2.5/5/7.5/10",
+            "armor_bonus": "3/4/5/6",
+            "attack_damage_bonus": "8/16/24/32",
+            "move_speed_bonus": "18%",
+            "bonus_linger_duration": "0.033",
+            "status_resist_bonus": "40%"
+          },
+          "details": "This ability levels up with Corrosive Haze. Water-based terrain sources include Slithereen Crush Puddle, Corrosive Haze Puddle, and the River pathways."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Slardar's hero model has hidden innate abilities. Bash sources are passively disabled on the Slithereen Guard.",
+          "values": {},
+          "details": "He may only perform or utilize the ability's functions upon a successful channeling."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Guardian Sprint",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "29/25/21/17",
+        "mana_cost": 25,
+        "cast_range": "Self",
+        "cast_animation": "0 + 0",
+        "cast_radius": "Self",
+        "details": "Slardar slithers ahead, moving significantly faster with phase movement.",
+        "description": "Slardar slithers ahead, moving significantly faster with phase movement.",
+        "facet_effects": {
+          "leg_day": {
+            "move_speed_bonus": "8%",
+            "slow_resist_bonus": "100%",
+            "move_speed_bonus_duration": "2.5",
+            "slow_resist_bonus_duration": "5"
+          }
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Grants phase movement",
+          "Move speed bonus: 10%/18%/26%/34%",
+          "Duration: 10 (12 with talent)"
+        ],
+        "interaction_notes": [
+          "With Seaborn Sentinel: Has a base 28%/36%/44%/52% bonus movement speed while active",
+          "With Leg Day facet: Has up to 36%/44%/52%/60% bonus movement speed while the buff is active"
+        ]
+      },
+      "ability_2": {
+        "name": "Slithereen Crush",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical",
+        "damage_types": ["spell", "physical"],
+        "cooldown": "7 (4 with talent)",
+        "mana_cost": 100,
+        "cast_range": "Self",
+        "cast_animation": "0.25 + 0.7",
+        "cast_radius": "325",
+        "details": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed.",
+        "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Effect Radius: 325",
+          "Damage: 75/150/225/300 (200/275/350/425 with talent)",
+          "Move Speed Slow: 20%/25%/30%/35%",
+          "Attack Speed Slow: 20/25/30/35",
+          "Slow Duration: 3/4/5/6",
+          "Stun Duration: 0.8",
+          "Puddle Radius: 250 (450 with scepter)",
+          "Duration: 7 (12 with scepter)"
+        ],
+        "interaction_notes": [
+          "Creates a water-based terrain that grants bonuses to certain abilities of Slardar's",
+          "Scepter upgrade increases the water-based terrain radius and its duration",
+          "Shard upgrade applies Corrosive Haze of its corresponding level to enemy units within the effect radius"
+        ]
+      },
+      "ability_3": {
+        "name": "Bash of the Deep",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Attack Damage / Physical",
+        "damage_types": ["physical"],
+        "cooldown": "None",
+        "mana_cost": "None",
+        "cast_range": "Melee",
+        "cast_animation": "None",
+        "cast_radius": "None",
+        "details": "After a number of attacks, Slardar bashes its attacking target.",
+        "description": "After a number of attacks, Slardar bashes its attacking target.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Required Attacks: 4",
+          "Damage: 50/100/150/200 (90/140/190/240 with talent)",
+          "Duration: 1.1"
+        ],
+        "interaction_notes": [
+          "Does not stack with other bash sources",
+          "The required attacks tally increases by 1 per successful attack on an enemy unit",
+          "Does not interact with critical strike sources or cleave sources"
+        ]
+      },
+      "ability_4": {
+        "name": "Corrosive Haze",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "5",
+        "mana_cost": 25,
+        "cast_range": "900",
+        "cast_animation": "0.3 + 0.67",
+        "cast_radius": "None",
+        "details": "Reduces the affected enemy target's armor, provides True Sight and vision over it, revealing invisibility.",
+        "description": "Reduces the affected enemy target's armor, provides True Sight and vision over it, revealing invisibility.",
+        "facet_effects": {
+          "brineguard": {
+            "armor_reduction_to_self_armor_bonus_factor": "0.5"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Armor Reduction: 10/15/20 (14/19/24 with talent)",
+          "Duration: 18",
+          "Puddle Radius: 100 (180 with scepter)",
+          "Puddle per Interval: 1",
+          "Puddle Duration: 7 (12 with scepter)",
+          "Aura Linger Duration: 0.5"
+        ],
+        "interaction_notes": [
+          "The affected enemy unit leaves a trail of puddles behind it",
+          "Certain abilities of Slardar's considers this as a water-based terrain",
+          "Talent upgrade: The ability debuff can now only be dispelled upon the debuff-affected unit's death",
+          "Scepter upgrade increases both the puddle radius and the puddle duration"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced base armor from 3 to 2",
+          "Increased Seaborn Sentinel armor bonus from 1/2/3/4 to 3/4/5/6",
+          "Aghanim's Scepter upgrade: Reduced Seaborn Sentinel armor bonus increase from 11 to 10"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Seaborn Sentinel health regeneration bonus from 2/4/6/8 to 2.5/5/7.5/10",
+          "Guardian Sprint: Reduced movement speed from 10%/20%/30%/40% to 10%/18%/26%/34%",
+          "Leg Day facet: Increased movement speed bonus duration from 2 to 2.5",
+          "Reduced Bash of the Deep creep damage factor from 2 to 1",
+          "Increased Corrosive Haze Brineguard total armor reduction to self bonus armor factor from 0.4 to 0.5",
+          "Aghanim's Scepter upgrade: Increased Seaborn Sentinel health regeneration bonus from 24/26/28/30 to 24.5/27/29.5/32",
+          "Talents: LVL 10 +0.2s Slithereen Crush stun duration → +12 Seaborn Sentinel attack damage",
+          "Talents: LVL 10 -2s Guardian Sprint cooldown → +2s Guardian Sprint duration"
+        ]
+      },
+      {
+        "version": "7.37b",
+        "date": "2024-08-14",
+        "changes": [
+          "Talents: LVL 15 +275 health increased to +300"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

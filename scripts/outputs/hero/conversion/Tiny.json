@@ -1,0 +1,235 @@
+{
+  "hero_name": "Tiny",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 30,
+      "strength_gain": 4,
+      "agility": 0,
+      "agility_gain": 0,
+      "intelligence": 17,
+      "intelligence_gain": 2.2,
+      "health": 780,
+      "mana": 279,
+      "armor": 0,
+      "magic_resist": 26.7,
+      "damage": [61, 67],
+      "damage_avg": 64,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 90,
+      "bat": 1.7,
+      "animation": "0.4 + 0.7",
+      "move_speed": 275,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Pusher, Initiator, Durable, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Crash Landing",
+        "effects": "Tossed units slow and deal bonus damage to other targets at the Toss landing location in a larger radius. +125 Effect Radius, ×1.2 Landing Damage Factor"
+      },
+      "facet_2": {
+        "name": "Insurmountable",
+        "effects": "Grants bonus status resistance and bonus slow resistance per current strength"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Tree Volley ability", "Tiny channels to throw random trees within the radius towards the area-targeted location", "Deals damage correspondingly to Tiny's attack damage upon per tree impact while applying various attack effects"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Attacks on buildings are more effective when Tiny is wielding a tree", "Increases the damage of the thrown tree projectile", "Removes the number of attacks limit for Tree Grab - all Tree Grab effects are permanent on Tiny until he throws the tree out"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["2 Toss Charges", "-8s Avalanche Cooldown"],
+        "level_20": ["No Target Toss", "+60 Tree Grab Unit Attack Damage Bonus"],
+        "level_15": ["+100 Avalanche Damage", "-8% Grow Attack Speed Reduction"],
+        "level_10": ["+8 Strength", "+200 Avalanche Cast Range"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Craggy Exterior",
+          "type": "passive",
+          "description": "Applies an attack damage reduction debuff stack per attack taken to enemy units attacking Tiny",
+          "values": {
+            "max_stacks": 10,
+            "attack_damage_reduction_per_stack": "2%/3%/4%/5%",
+            "debuff_duration": 5
+          },
+          "details": "This ability levels up with Grow"
+        },
+        {
+          "name": "Insurmountable",
+          "type": "passive",
+          "description": "Grants bonus status resistance and bonus slow resistance per current strength",
+          "values": {
+            "total_str_to_status_resist_factor": 0.1,
+            "total_str_to_slow_resist_factor": 0.2
+          },
+          "details": "Selecting the Insurmountable facet unlocks this ability"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Avalanche",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "23/20/17/14",
+        "mana_cost": "95/110/125/140",
+        "cast_range": "600",
+        "cast_animation": "0 + 0.53",
+        "cast_radius": "325/340/355/370",
+        "details": "Bombards an area with rocks, continuously doing small intervals of stun and damage to enemy units within the effect radius",
+        "description": "Inanimate rock becomes animate when called by the Stone Giant",
+        "ability_behavior": ["area"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "values": {
+          "effect_radius": "325/340/355/370",
+          "number_of_instances": 5,
+          "instances_interval": 0.3,
+          "total_damage": "100/190/280/370",
+          "stun_duration": 0.3,
+          "avalanche_duration": 1.5
+        }
+      },
+      "ability_2": {
+        "name": "Toss",
+        "key": "W",
+        "type": "active",
+        "affects": "Units / Rune",
+        "damage": "Spell / Magical",
+        "cooldown": "20/17/14/11",
+        "mana_cost": "110/125/140/155",
+        "cast_range": "800/900/1000/1100",
+        "cast_animation": "0 + 0.53",
+        "details": "Grabs the nearest unit, regardless of its faction, within the radius around Tiny. The launched unit becomes a projectile, and homes into the targeted unit, dealing damage within the landing radius upon impact",
+        "description": "Tiny's gargantuan stature allows him to catapult even the sturdiest of warriors",
+        "ability_behavior": ["unit_target", "area", "ground"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "values": {
+          "grab_radius": 300,
+          "damage_radius": 275,
+          "damage": "90/180/270/360",
+          "toss_duration": 1.4,
+          "damage_factor_buildings": 0.33
+        },
+        "facet_effects": {
+          "crash_landing": {
+            "effect_radius": 400,
+            "landing_damage": "198/396/594/792",
+            "move_speed_slow": "20%/25%/30%/35%",
+            "attack_speed_slow": "15/25/35/45",
+            "debuff_duration": 2.5
+          }
+        }
+      },
+      "ability_3": {
+        "name": "Tree Grab",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Tree",
+        "damage": "Spell / Physical",
+        "cooldown": "22/19/16/13",
+        "mana_cost": 40,
+        "cast_range": "165",
+        "cast_animation": "0.2 + 1.24",
+        "details": "Wields a tree as a weapon for a limited number of attacks. Grants Tiny bonus attack range, and a psuedo-cleave attack effect until the tree is thrown",
+        "description": "Sticks and stones break all the bones, with structures sure to follow",
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "values": {
+          "area_damage_length": 400,
+          "area_damage_radius": 200,
+          "number_of_attacks": 5,
+          "set_base_attack_range": 300,
+          "attack_damage_to_area_damage_factor": "0.55/0.7/0.85/1",
+          "unit_attack_damage_bonus": "10/20/30/50",
+          "attack_damage_factor_buildings": "1.3/1.4/1.5/1.6"
+        }
+      },
+      "ability_4": {
+        "name": "Tree Volley",
+        "key": "D",
+        "type": "channeled",
+        "affects": "Enemy Units / Trees",
+        "damage": "Physical / Instant Attack",
+        "cooldown": 17,
+        "mana_cost": 200,
+        "cast_range": "1200",
+        "cast_animation": "0.2 + 0",
+        "details": "Tiny channels to throw random trees within the radius towards the area-targeted location. Deals damage correspondingly to Tiny's attack damage upon per tree impact while applying various attack effects",
+        "description": "Sticks thrown from stones are like to shatter many bones",
+        "ability_behavior": ["area", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "values": {
+          "tree_search_radius": 700,
+          "damage_radius": 400,
+          "max_channel_time": 2.5,
+          "instant_attack_factor": 1,
+          "move_speed_slow": "25%",
+          "slow_duration": 2.5
+        }
+      },
+      "ability_5": {
+        "name": "Grow",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "",
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "details": "Gains craggy mass, increasing his attack damage, and armor while slowing his total attack speed",
+        "description": "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries",
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "values": {
+          "base_attack_damage_bonus": "55/110/165",
+          "armor_bonus": "5/10/15",
+          "move_speed_bonus": 15,
+          "total_attack_speed_factor": 0.65,
+          "toss_damage_bonus": "50/175/300"
+        }
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

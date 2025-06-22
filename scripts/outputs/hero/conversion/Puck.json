@@ -1,0 +1,224 @@
+{
+  "hero_name": "Puck",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 17,
+      "strength_gain": 2.4,
+      "agility": 14,
+      "agility_gain": 2.5,
+      "intelligence": 23,
+      "intelligence_gain": 3.8,
+      "health": 494,
+      "mana": 351,
+      "armor": 2.33,
+      "magic_resist": 27.3,
+      "damage": [45, 53],
+      "damage_avg": 49,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 0.8",
+      "move_speed": 290,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Disabler, Escape, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Jostling Rift",
+        "effects": "Waning Rift additionally applies a knockback on enemy units within the radius, centered around Puck. Waning Rift pulls enemy units within the radius with Alt-Cast toggled on."
+      },
+      "facet_2": {
+        "name": "Curveball",
+        "effects": "Adds a vector-targeting functionality to Illusory Orb that causes the launched projectile to curve. Has a faster projectile speed and a longer travel distance. +200 Projectile Speed, x2 Duration Factor"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Instant attacks all enemy heroes within the radius based on Puck's attack rate", "The attacks continue even while the affected enemy is stunned if they break the Dream Coil"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Imbues Puck's attacks with magical attack damage bonus", "Attacks all enemy units within Puck's attack range every time it Phase Shifts"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+350 Waning Rift Radius/Max Distance", "Dream Coil Pierces Debuff Immunity"],
+        "level_20": ["+200 Dream Coil Initial/Break Damage", "-3s Waning Rift Cooldown"],
+        "level_15": ["+60 Waning Rift Damage", "-15s Dream Coil Cooldown"],
+        "level_10": ["+1.25s Waning Rift Silence Duration", "+40 Illusory Orb Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Puckish",
+          "type": "passive",
+          "description": "Restores a portion of both its max health and max mana per incoming attack projectile disjointed. The restoration is more effective when disjointing incoming spell-based projectiles.",
+          "values": {
+            "base_heal": 10,
+            "max_health_as_heal": "2%",
+            "base_mana_restore": 10,
+            "max_mana_as_mana_restore": "2%",
+            "spell_projectile_restore_factor": 3.5
+          },
+          "details": "Heals and mana restores per disjointed incoming projectile. Does not apply to missed attacks."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Puck's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden Innate Abilities with various functions"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Illusory Orb",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "11/10/9/8",
+        "mana_cost": "90/100/110/120",
+        "cast_range": "3000",
+        "cast_animation": "0.1 + 0.27",
+        "cast_radius": "225",
+        "details": "Sends out an illusory orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the current location of the orb using Ethereal Jaunt.",
+        "description": "The playful Faerie Dragon delights in confusing others, vanishing and reappearing where unexpected.",
+        "facet_effects": {
+          "curveball": {
+            "projectile_speed": 750,
+            "travel_distance": 3900
+          }
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Takes 3.55 seconds to reach max distance, or 5.2 seconds with the Curveball facet", "Grants a 2.5-second 450-radius flying vision centered around the projectile as it travels"],
+        "interaction_notes": ["Affects enemy units up to 2175 range away with the travel distance and end radius", "Leveling the ability immediately updates the magical spell damage value of the current active instance"]
+      },
+      "ability_2": {
+        "name": "Waning Rift",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "16/15/14/13",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "Global",
+        "cast_animation": "0.1 + 0.27",
+        "cast_radius": "400",
+        "details": "Teleports to the area-targeted location and releases a burst of faerie dust that deals damage and silences enemy units within the radius.",
+        "description": "With a mischievous grin, Puck spreads its enchanted powder which disrupts magical flow.",
+        "facet_effects": {
+          "jostling_rift": {
+            "knockback_distance": "75/100/125/150",
+            "knockback_duration": 0.3,
+            "pull_distance": "75/100/125/150",
+            "pull_duration": 0.3
+          }
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Does not disjoint incoming projectiles upon cast", "Applies all ability effects immediately regardless of its ability visual effects"],
+        "interaction_notes": ["Root sources prevent Puck's teleport", "The ability effects are applied as follows: The magical spell damage, The silence debuff, Either the knockback or the pull debuff"]
+      },
+      "ability_3": {
+        "name": "Phase Shift",
+        "key": "E",
+        "type": "channeled/passive",
+        "affects": "Self/Enemy Units",
+        "damage": "Instant Attack/Magical",
+        "damage_types": ["instant_attack", "magical"],
+        "cooldown": "8/7.5/7/6.5",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0.01 + 0",
+        "cast_radius": "550",
+        "details": "Puck briefly shifts and hides into another dimension where it is immune from harm.",
+        "description": "With a quip and flash, Puck returns to the alien dimension from whence it came.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Disjoints incoming projectiles upon cast", "Grants Puck Hidden and Invulnerable while channeling", "The buff lingers for one server tick upon the ability ending"],
+        "interaction_notes": ["Adds two passive components to Phase Shift upon cast with Shard", "Instant attacks all visible and attackable enemy units within the radius upon cast", "Applies a flat magical bonus attack damage per successful attack"]
+      },
+      "ability_4": {
+        "name": "Dream Coil",
+        "key": "R",
+        "type": "active/passive",
+        "affects": "Enemy Heroes/Self",
+        "damage": "Instant Attack/Physical/Magical",
+        "damage_types": ["instant_attack", "physical", "magical"],
+        "cooldown": "75",
+        "mana_cost": "125/175/225",
+        "cast_range": "750",
+        "cast_animation": "0.1 + 0.27",
+        "cast_radius": "375",
+        "details": "Creates a coil of volatile magic that latches, damages and leashes onto enemy heroes. The coil snaps if any of the affected enemy heroes stretch the link by moving too far away, stunning and dealing additional damage.",
+        "description": "The Faerie Dragon sows confusion by forcing its enemies to vividly dream about their own mortality.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Applies a leash debuff on all affected enemy heroes within the latch radius upon cast", "The coil duration is not affected by status resistance sources", "Multiple overlapping Dream Coil instance fully stack"],
+        "interaction_notes": ["Instant attacks enemy heroes with coiled debuffs regardless of distance with Scepter", "The instant attack interval is defined by attack speed calculations", "Affects debuff immune units"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": ["Illusory Orb Curveball now deals 0.05 * Total SpellDmg in 0.5-seconds within its damage radius"]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Puckish: Reduced base heal from 15 to 10",
+          "Puckish: Reduced base mana restore from 15 to 10",
+          "Increased Dream Coil mana cost from 100/150/200 to 125/175/225",
+          "Talents: LVL 15 -10s Dream Coil cooldown increased to -15s",
+          "Talents: LVL 25 +300 Waning Rift radius/max distance increased to +350"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Reduced Puckish spell projectile restore factor from 4 to 3.5",
+          "Talents: LVL 10 +50 Illusory Orb damage reduced to +40"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -120,21 +120,7 @@ Structure the parsed data as a comprehensive JSON object with this schema:
       "ability_2": { /* same structure */ },
       "ability_3": { /* same structure */ },
       "ability_4": { /* same structure */ }
-    },
-    "recent_changes": [
-      {
-        "version": "string",
-        "date": "string",
-        "changes": ["change1", "change2", "change3"]
-      }
-    ]
-  },
-  "parsing_stats": {
-    "file_size": "number",
-    "sections_found": "number",
-    "parse_time_ms": "number",
-    "success_rate": "percentage"
-  }
+    }
 }
 ```
 
@@ -166,12 +152,6 @@ Structure the parsed data as a comprehensive JSON object with this schema:
 - Capture mana costs, cast ranges, cast radius, cast animations, descriptions
 - Note facet-specific modifications
 - Technical details and interaction notes
-
-**Recent Changes (Section 7):**
-- Look for `id="Recent_Changes"`
-- Extract version numbers (e.g., "7.39", "7.39b")
-- Parse dates in format recognition
-- Capture bullet-pointed changes and balance updates
 
 ### 5. Error Handling
 - If a section is missing, mark `found: false` and continue

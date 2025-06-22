@@ -1,0 +1,220 @@
+{
+  "hero_name": "Spectre",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 21,
+      "strength_gain": 2.5,
+      "agility": 25,
+      "agility_gain": 2.1,
+      "intelligence": 16,
+      "intelligence_gain": 1.7,
+      "health": 582,
+      "mana": 267,
+      "armor": 4.17,
+      "magic_resist": 26.6,
+      "damage": [48, 52],
+      "damage_avg": 50.9,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 90,
+      "bat": 1.7,
+      "animation": "0.3 + 0.7",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Forsaken",
+        "effects": "Desolate deals more damage (x2 Damage Factor). However, this ability is now non-functional for Spectre's created illusions."
+      },
+      "facet_2": {
+        "name": "Twist the Knife",
+        "effects": "Cast Spectral Dagger of the corresponding level on the affected enemy unit. The created Shadow Step-based illusion persists and last for its full duration upon the unit-targeted enemy's death."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Haunt ability", "Creates a number of Shadow Step-based illusions to attack each enemy hero", "At any moment during the duration, Spectre may exchanges place with the haunted image in reality"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Increase both the current damage reflected and current damage reduction"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+5% Dispersion Reflection/Reduction", "+25% All Illusions Damage Dealt"],
+        "level_20": ["+12% Spectral Dagger Slow/Bonus", "+350 Health"],
+        "level_15": ["+80 Spectral Dagger Damage", "+15 Desolate Damage"],
+        "level_10": ["+5 Health Regen", "-4s Spectral Dagger Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Spectral",
+          "type": "passive",
+          "description": "Spectre and her illusions have permanent phase movement, and ignores collision size. Other units may pass through her.",
+          "values": {},
+          "details": "Grants phased movement"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Mercurial's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {
+            "damage_dealt_bonus": "25%"
+          },
+          "details": "Contains hidden innate abilities that can be activated through channeling"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Spectral Dagger",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical / Pure",
+        "cooldown": "22/20/18/16",
+        "mana_cost": "110/120/130/140",
+        "cast_range": "1800",
+        "cast_animation": "0.3 + 0.37",
+        "cast_radius": "125",
+        "details": "Flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of all enemy units along the trail.",
+        "description": "Flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of all enemy units along the trail. Grants Spectre unobstructed movement while on the Spectral Path.",
+        "facet_effects": {
+          "forsaken": "150/200/250/300 damage, 22%/26%/30%/34% slow/bonus, 18/16/14/12 cooldown",
+          "twist_the_knife": "Casts Spectral Dagger on affected enemy unit"
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The projectile has 2.25-second travel time to max distance",
+          "Creates Shadow Path with 12-second duration",
+          "Path grants flying vision and unobstructed movement"
+        ],
+        "interaction_notes": [
+          "Enemy units hit by dagger trail Shadow Path when diverging",
+          "Path radius: 175, duration: 12 seconds",
+          "Move speed bonus: 10%/14%/18%/22%"
+        ]
+      },
+      "ability_2": {
+        "name": "Desolate",
+        "key": "W",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Spell / Pure",
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "350",
+        "details": "Spectre's attacks deal bonus damage to lone enemy units that does not have any allied units within a certain radius around them.",
+        "description": "Spectre's attacks deal bonus damage to lone enemy units that does not have any allied units within a certain radius around them.",
+        "facet_effects": {
+          "forsaken": "50/80/110/140 damage, illusions cannot proc this ability",
+          "twist_the_knife": "25/40/55/70 damage"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search radius: 350",
+          "Does not consider buildings, couriers, hidden, invulnerable, neutral creeps, or ward-type units"
+        ],
+        "interaction_notes": [
+          "Considers fogged, invisible, and untargetable units as valid allies",
+          "Damage is applied before attack instance"
+        ]
+      },
+      "ability_3": {
+        "name": "Dispersion",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Source / HP Removal",
+        "cooldown": "25",
+        "mana_cost": "50",
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "300-800",
+        "details": "Damage done to Spectre is reflected as the same damage-type on enemy units within the radius. The effect lessens with distance.",
+        "description": "Damage done to Spectre is reflected as the same damage-type on enemy units within the radius. The effect lessens with distance.",
+        "facet_effects": {
+          "base": "7%/11%/15%/19% damage reflected and reduced",
+          "shard": "12%/16%/20%/24% damage reflected and reduced with 1.5x factor"
+        },
+        "ability_behavior": ["passive", "no_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Min radius: 300, Max radius: 800",
+          "Reflects damage before reductions",
+          "Closer proximity increases reflected damage"
+        ],
+        "interaction_notes": [
+          "Does not reflect HP Removal sources",
+          "Reflected damage has HP Removal flag",
+          "Increases survivability significantly"
+        ]
+      },
+      "ability_4": {
+        "name": "Shadow Step",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Instant Kill",
+        "cooldown": "60/55/50",
+        "mana_cost": "150",
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0.5",
+        "cast_radius": "Global",
+        "details": "Creates a single-target haunt illusion at a single visible enemy hero. At any moment during the duration, she can exchange place with the haunted image in reality.",
+        "description": "Creates a single-target haunt illusion at a single visible enemy hero. At any moment during the duration, she can exchange place with the haunted image in reality.",
+        "facet_effects": {
+          "base": "40%/60%/80% damage dealt, 200% damage taken",
+          "twist_the_knife": "65%/85%/105% damage dealt"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates Shadow Step-based illusions",
+          "Illusions have unobstructed movement",
+          "Duration: 6 seconds"
+        ],
+        "interaction_notes": [
+          "Illusions spawn at random spot around target",
+          "Uncontrollable but attack corresponding targets",
+          "Grants Reality sub-ability"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "hero_name": "Tidehunter",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 27,
+      "strength_gain": 3.5,
+      "agility": 15,
+      "agility_gain": 1.5,
+      "intelligence": 20,
+      "intelligence_gain": 1.7,
+      "health": 714,
+      "mana": 315,
+      "armor": 2.5,
+      "magic_resist": "27%",
+      "damage": [52, 58],
+      "damage_avg": 55,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.6 + 0.56",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Durable, Disabler, Nuker, Carry"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Kraken Swell",
+        "effects": "Kraken Shell grants Tidehunter permanent flat bonus damage block per enemy hero kill with the Anchor Smash debuff applied."
+      },
+      "facet_2": {
+        "name": "Krill Eater",
+        "effects": "The Krill Eater innately has lesser base attack range, but higher strength gain. +0.5 Str Gain, -60 Attack Range, -60 Anchor Smash Radius. This ability component levels up with Tidehunter."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Gush becomes a ground-targeted wave ability that affects enemy units in a line",
+          "Reduces cooldown"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Dead in the Water ability",
+          "Attaches and leashes a heavy anchor to an enemy hero",
+          "Attempting to move a certain distance from the anchor sets its movement speed value and forces the affected unit to drag the Anchor behind them"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["50% Anchor Smash Proc Chance", "+0.8s Ravage Stun Duration"],
+        "level_20": ["-4 Gush Armor Reduction", "Anchor Smash Affects Buildings"],
+        "level_15": ["+30% Anchor Smash Damage Reduction", "+100 Gush Damage"],
+        "level_10": ["+15% Gush Slow", "+40 Anchor Smash Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Blubber",
+          "type": "passive",
+          "description": "Tidehunter's hide also removes negative status effects if the player-based damage taken crosses a threshold.",
+          "values": {
+            "damage_threshold_per_dispel": 450,
+            "threshold_reset_timer": 7
+          },
+          "details": "Applies a strong dispel per damage threshold accumulated (after all reductions). The damage threshold counter resets when Tidehunter does not take player-based damage for the last 7 seconds."
+        },
+        {
+          "name": "Krill Eater",
+          "type": "passive",
+          "description": "The Krill Eater innately has lesser base attack range, but higher strength gain.",
+          "values": {
+            "set_base_gain_per_level": 4,
+            "set_attack_range": 90,
+            "base_attack_range_bonus_per_level": 5
+          },
+          "details": "Additionally grants base attack range per hero level. This ability levels up with Tidehunter."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Gush",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "12 (7 with Scepter)",
+        "mana_cost": 100,
+        "cast_range": "700 (2200 with Scepter)",
+        "cast_animation": "0.3 + 0.6",
+        "cast_radius": "260 (with Scepter)",
+        "details": "Wave Travel Distance: 2200 (with Scepter), Wave Radius: 260 (with Scepter)",
+        "description": "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor.",
+        "facet_effects": {
+          "damage": "110/160/210/260 (210/260/310/360 with talent)",
+          "armor_reduction": "3/4/5/6 (7/8/9/10 with talent)",
+          "move_speed_slow": "40% (55% with talent)",
+          "duration": 4.5
+        },
+        "ability_behavior": ["unit_target", "point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has unit and point targeting functionality",
+          "With Scepter upgrade changes to wave ability",
+          "Wave grants 2-second 200 radius ground vision per affected enemy"
+        ],
+        "interaction_notes": [
+          "No longer procs Spell Block sources with Scepter",
+          "No longer can be disjointed with Scepter"
+        ]
+      },
+      "ability_2": {
+        "name": "Kraken Shell",
+        "key": "W",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "30 (active component)",
+        "mana_cost": "45 (active component)",
+        "cast_animation": "0 + 0",
+        "description": "Passively damage block a portion of any incoming physical attack damage.",
+        "facet_effects": {
+          "proc_chance": "100%",
+          "blocked_damage": "15/35/55/75",
+          "blocked_damage_factor": 2,
+          "self_move_speed_slow": "40%",
+          "duration": 4,
+          "creep_blocked_damage_factor": 0.5
+        },
+        "ability_behavior": ["passive", "no_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Kraken Shell is an ensured damage block source",
+          "Does not interact with Set attack damage sources",
+          "Kraken Swell facet grants permanent flat bonus damage block per enemy hero kill"
+        ],
+        "interaction_notes": [
+          "Sources with lesser damage block values have no effect",
+          "Active component doubles blocked damage with movement speed penalty"
+        ]
+      },
+      "ability_3": {
+        "name": "Anchor Smash",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["Physical", "Instant Attack"],
+        "cooldown": "7/6/5/4",
+        "mana_cost": "40/45/50/55",
+        "cast_animation": "0.4 + 0.3",
+        "cast_radius": "375",
+        "description": "Swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their main attack damage.",
+        "facet_effects": {
+          "radius": "375 (315 base with Krill Eater)",
+          "instant_attack_factor": 1,
+          "damage_bonus": "45/90/135/180 (85/130/175/220 with talent)",
+          "attack_damage_reduction": "25%/30%/35%/40% (55%/60%/65%/70% with talent)",
+          "duration": 6,
+          "building_damage_factor": "0 (1 with talent)",
+          "proc_chance": "50% (with talent)"
+        },
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Roshan is innately immune to all Anchor Smash ability effects",
+          "Krill Eater facet reduces base radius and grants radius increase per hero level",
+          "Talent grants passive proc chance and building damage"
+        ],
+        "interaction_notes": [
+          "Instant attack has True Strike",
+          "Not affected by disarm sources",
+          "Affects Ancient creeps, Fogged units, Invisible units"
+        ]
+      },
+      "ability_4": {
+        "name": "Dead in the Water",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "25",
+        "mana_cost": "110",
+        "cast_range": "350",
+        "cast_animation": "0.3 + 1",
+        "description": "Attaches and leashes a heavy anchor to an enemy hero. Attempting to move a certain distance from the anchor sets its movement speed value and forces the affected unit to drag the Anchor behind them.",
+        "facet_effects": {
+          "damage": 100,
+          "chain_length": 350,
+          "set_max_move_speed": 100,
+          "hit_count": "4 (16 vs creeps)",
+          "debuff_duration": 10
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Requires Aghanim's Shard to unlock",
+          "Creates Anchor unit that leashes target",
+          "Anchor is not affected by Chronosphere"
+        ],
+        "interaction_notes": [
+          "Anchor teleports along with targeted enemy",
+          "Spell Block nullifies ability and instant kills Anchor",
+          "Disjoint sources instant kill the Anchor"
+        ]
+      },
+      "ability_5": {
+        "name": "Ravage",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "150/145/140",
+        "mana_cost": "125/225/325",
+        "cast_animation": "0.3 + 0.57",
+        "cast_radius": "1250",
+        "description": "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units.",
+        "facet_effects": {
+          "max_effect_radius": 1250,
+          "effect_width": 250,
+          "damage": "275/375/475",
+          "stun_duration": "2/2.2/2.4 (2.8/3/3.2 with talent)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Applies effects with 250-wide ring centered around Tidehunter",
+          "Has 1.38-second expand time toward max effect radius",
+          "Applies 350-distance upward movement over first 0.5 seconds"
+        ],
+        "interaction_notes": [
+          "Effects do not move with Tidehunter after cast",
+          "Teleport sources heading toward Tidehunter may avoid tentacles",
+          "Forced movement no longer affects debuff immune targets"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

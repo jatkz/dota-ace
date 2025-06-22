@@ -1,0 +1,320 @@
+{
+  "hero_name": "Meepo",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 24,
+      "strength_gain": 2.2,
+      "agility": 17,
+      "agility_gain": 2.1,
+      "intelligence": 18,
+      "intelligence_gain": 1.9,
+      "health": 648,
+      "mana": 291,
+      "armor": 5.83,
+      "magic_resist": 26.8,
+      "damage": [46, 52],
+      "damage_avg": 49,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.38 + 0.6",
+      "move_speed": 320,
+      "turn_rate": 0.9,
+      "collision_size": 18,
+      "bound_radius": 8,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Nuker, Disabler, Initiator, Pusher"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "More Meepo",
+        "effects": "Grants all Meepo Clones a portion of the Prime's attributes. Increases max ability level and number of clones. Rescales ability level requirement. +1 Max Ability Level"
+      },
+      "facet_2": {
+        "name": "Codependent",
+        "effects": "Grants all Meepos a stackable aura that provides bonus attack speed and bonus armor."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the MegaMeepo ability",
+          "The Prime mounts all other lesser Meepos within the radius around him on top of his shoulders",
+          "While in this form, the other lesser Meepos share their attributes with the Prime",
+          "MegaMeepo flings the topmost Meepo towards a target, dealing damage and slowing their movement speed",
+          "MegaMeepo throws out multiple nets at the same time",
+          "Poof deals bonus damage corresponding to the amount of Meepo stacked"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Dig ability",
+          "Dispels Meepo, becomes invulnerable and hidden shortly, while restoring its health"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-1s Poof Cast Point", "+350 Health"],
+        "level_20": ["+8 Ransack Health Steal", "Earthbind True Strike"],
+        "level_15": ["-2.5s Earthbind Cooldown", "+15% Evasion"],
+        "level_10": ["+50 Poof Damage", "+7 Strength"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Sticky Fingers",
+          "type": "passive",
+          "description": "Grants Meepo an additional Artifact and Enchantment choice when crafting neutral items.",
+          "values": {
+            "artifact_choices": 5,
+            "enchantment_choices": 5
+          },
+          "details": "At tier 2 and above, Meepo is still offered the previously crafted artifact among the 5 choices."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Meepo's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "The Clones also have the same innate abilities."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Earthbind",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "16/14/12/10",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "750/900/1050/1200",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "220",
+        "details": "Tosses a net at the target point, rooting down all enemy units within the radius.",
+        "description": "Catching dinner in the Riftshadow Ruins can be quite the task.",
+        "facet_effects": {
+          "scepter_upgrade": "MegaMeepo throws out multiple nets at the same time"
+        },
+        "ability_behavior": ["area"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Grants a non-lingering 300-radius flying vision while the projectile is traveling",
+          "Applies Root, True Sight, and Shared vision on affected enemy units",
+          "Has a 1200 projectile speed"
+        ],
+        "interaction_notes": [
+          "Affects Fogged units and Invisible units",
+          "Affect units up to 970/1120/1270/1420 range away with the cast range and effect radius"
+        ]
+      },
+      "ability_2": {
+        "name": "Poof",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "spell",
+        "damage_types": ["magical"],
+        "cooldown": "12/10/8/6",
+        "mana_cost": 80,
+        "cast_range": "Global",
+        "cast_animation": "1.5 + 0",
+        "cast_radius": "400",
+        "details": "A Meepo can teleport to another Meepo or itself after its cast point, dealing damage in both the departure and arrival locations.",
+        "description": "Sometimes breaking one of the Riftshadow Crystals can be just the trick for getting yourself out of a bind. Or your other self.",
+        "facet_effects": {
+          "scepter_upgrade": "Poof deals bonus damage corresponding to the amount of Meepo stacked",
+          "talent_upgrade": "-1s Cast Point at level 25"
+        },
+        "ability_behavior": ["point", "unit"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Can only be cast on self-casting Meepo, Prime, own and allied clones, own and allied illusions",
+          "The magical spell damage fully stack, enemy units within both start and end location can be affected twice",
+          "All ability targeting functionalities do not disjoint incoming projectiles"
+        ],
+        "interaction_notes": [
+          "Has three targeting functionalities: Doubletap self-cast, unit-targeted, ground-targeted",
+          "Alt-Cast activated modifies targeting functionalities for all Meepos"
+        ]
+      },
+      "ability_3": {
+        "name": "Ransack",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units / Self",
+        "damage": "spell",
+        "damage_types": ["pure"],
+        "cooldown": "none",
+        "mana_cost": "none",
+        "cast_range": "none",
+        "cast_animation": "none",
+        "cast_radius": "none",
+        "details": "Steals health from the enemy with each strike and heals all other Meepos for that amount.",
+        "description": "So you gonna need that, or...?",
+        "facet_effects": {
+          "creep_reduction": "Ransack is less effective on creeps",
+          "roshan_immunity": "Roshan is innately immune to this ability"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Considers clones, illusions, Couriers as heroes, creep-heroes as creeps",
+          "Lifesteal for the full value regardless of the damage instance value",
+          "Does not lifesteal from Buildings or Ward-type units"
+        ],
+        "interaction_notes": [
+          "Restores the health of a single Meepo up to 9/24/45/72 per attack per Divided We Stand level",
+          "The ability effects are applied in specific order: pure spell damage, restore attacking Meepo's health, restore all Meepo Clones' health, attack instance"
+        ]
+      },
+      "ability_4": {
+        "name": "Dig",
+        "key": "D",
+        "type": "active",
+        "affects": "Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": 50,
+        "mana_cost": 125,
+        "cast_range": "none",
+        "cast_animation": "0 + 0",
+        "cast_radius": "none",
+        "details": "Dispels Meepo, becomes invulnerable and hidden shortly, while restoring its health.",
+        "description": "I'm diggin' here!",
+        "facet_effects": {},
+        "ability_behavior": ["no", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Acquiring Aghanim's Shard unlocks this ability in the fourth ability slot",
+          "Applies basic dispel upon cast, Hidden, Invulnerable, max health as health regeneration, Stun"
+        ],
+        "interaction_notes": [
+          "Cannot be cast while being affected by root sources",
+          "Grants 8.33% max health as health regeneration per second over the entire duration"
+        ]
+      },
+      "ability_5": {
+        "name": "MegaMeepo",
+        "key": "F",
+        "type": "active",
+        "affects": "Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": 60,
+        "mana_cost": "none",
+        "cast_range": "none",
+        "cast_animation": "0 + 0",
+        "cast_radius": "600",
+        "details": "The Prime mounts all other lesser Meepos within the radius around him on top of his shoulders. While in this form, the other lesser Meepos share their attributes with the Prime.",
+        "description": "Hi, Meepos!",
+        "facet_effects": {
+          "earthbind_bonus": "MegaMeepo throws out multiple nets at the same time",
+          "poof_bonus": "Poof deals bonus damage corresponding to the amount of Meepo stacked"
+        },
+        "ability_behavior": ["no"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Acquiring Aghanim's Scepter unlocks this ability in the fifth ability slot",
+          "Does nothing and puts the ability on cooldown when there are no Meepo Clones within the search radius",
+          "Grants the Prime attribute bonus corresponding to the highest attribute value"
+        ],
+        "interaction_notes": [
+          "All Meepo Clones within the radius has a 900 projectile speed traveling to the Prime",
+          "The Prime still wields its weapon and is always placed at the bottom of the stack"
+        ]
+      },
+      "ability_6": {
+        "name": "Divided We Stand",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "instant kill",
+        "damage_types": [],
+        "cooldown": "none",
+        "mana_cost": "none",
+        "cast_range": "none",
+        "cast_animation": "none",
+        "cast_radius": "none",
+        "details": "Summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does and shares his experience, attributes and abilities. The Clones additionally has bonus magic resistance.",
+        "description": "Do I know you?",
+        "facet_effects": {
+          "more_meepo": "Increases max ability level and number of clones. Rescales ability level requirement. Grants all Meepo Clones a portion of the Prime's attributes.",
+          "codependent": "Grants all Meepos a stackable aura that provides bonus attack speed and bonus armor."
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "If any of the clones die, all Meepos die",
+          "The copies cannot wield any items but the Boots of Speed-based item that Meepo Prime himself wears",
+          "The Clones always spawn with 100% current health and current mana next to the Prime"
+        ],
+        "interaction_notes": [
+          "All Clones only gain 0.3 × ΣXP within the experience share radius",
+          "Benefits from all talent bonuses and from all attributes increasing sources with certain exceptions"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced base armor from 4 to 3",
+          "Increased Divided We Stand More Meepo Prime attributes to Clones factor from 0.85 to 0.9"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Divided We Stand Codependent armor bonus from 2 to 1"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Reduced Divided We Stand Codependent attack speed bonus from 7% to 5%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 245678,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

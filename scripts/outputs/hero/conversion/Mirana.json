@@ -1,0 +1,217 @@
+{
+  "hero_name": "Mirana",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 20,
+      "strength_gain": 2.2,
+      "agility": 26,
+      "agility_gain": 3.1,
+      "intelligence": 22,
+      "intelligence_gain": 1.9,
+      "health": 560,
+      "mana": 339,
+      "armor": 2.33,
+      "magic_resist": 27.2,
+      "damage": [48, 54],
+      "damage_avg": 51,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 630,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.7",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Support, Escape, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Starstruck",
+        "effects": "Starstorm's second meteor deals more damage and blinds the target. +0.4 Secondary Meteor Damage Factor"
+      },
+      "facet_2": {
+        "name": "Leaps and Bounds",
+        "effects": "Leap applies a root to all enemy units around Mirana's landing location."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["The launched primary Sacred Arrow calls forth a Starstorm meteor projectiles of its corresponding level on all enemy units along the travel path.", "Upon impact, it calls a secondary meteor that deals a portion of its damage to the impacted enemy unit."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Mirana's attacks are ensured critical strikes for the Leap buff duration.", "Increases charges."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+250 Starstorm Damage", "Sacred Arrow Multishot"],
+        "level_20": ["+35 Base Attack Damage", "-20s Moonlight Shadow Cooldown"],
+        "level_15": ["+90 Leap Attack Speed", "+20% Moonlight Shadow Evasion"],
+        "level_10": ["+150 Leap Distance", "-2s Starstorm Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Selemene's Faithful",
+          "type": "passive",
+          "description": "As Selemene's faithful servant, the Healing Lotuses are more effective on Mirana and her allied heroes.",
+          "values": {
+            "heal_factor": 1.5,
+            "mana_restore_factor": 1.5
+          },
+          "details": "Affects Healing Lotus, Great Healing Lotus, Greater Healing Lotus"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Mirana's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden innate abilities available upon channeling"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Starstorm",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "12",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "675",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "675",
+        "details": "Calls down a meteor wave to damage all enemy units within the radius. The nearest enemy unit to Mirana within the secondary radius will be stuck a second time for a portion of the damage.",
+        "description": "Calls down a meteor wave to damage all enemy units within the radius.",
+        "facet_effects": {
+          "starstruck": "Secondary Meteor Damage Factor: 1, Blind Miss Rate: 0.6, Blind Duration: 3.5/4/4.5/5"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Effect Radius: 675", "Meteor Delay: 0.57", "Damage: 75/150/225/300", "Search Radius: 675", "Secondary Effect Delay: 0.8", "Damage Factor: 0.6"],
+        "interaction_notes": ["Does not affect fogged units", "Secondary meteor homes in on target even if it moves"]
+      },
+      "ability_2": {
+        "name": "Sacred Arrow",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical/Instant Kill",
+        "damage_types": ["Magical", "Instant Kill"],
+        "cooldown": "19/18/17/16",
+        "mana_cost": "90",
+        "cast_range": "3000",
+        "cast_animation": "0.5 + 0",
+        "cast_radius": "96",
+        "details": "Fires a long-range arrow that stuns and damages the first enemy unit it strikes. The damage bonus and stun duration increase with the arrow travel distance to its target. The Sacred Arrow instant kills the first non-ancient creep unit it hits.",
+        "description": "Fires a long-range arrow that stuns and damages the first enemy unit it strikes.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Max Travel Distance: 3067", "Max Value Distance: 1500", "Arrow Collision Radius: 96", "Number of Arrows: 1", "Damage: 60/150/240/330", "Max Damage Bonus: 150/160/170/180", "Min Stun Duration: 0.01", "Max Stun Duration: 2.6/3.4/4.2/5"],
+        "interaction_notes": ["Provides flying vision while traveling", "Values increase per 30-distance traveled", "Considers clones and strong illusions as heroes"]
+      },
+      "ability_3": {
+        "name": "Leap",
+        "key": "E",
+        "type": "active",
+        "affects": "Self/Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "45/35/25/15",
+        "mana_cost": "0",
+        "cast_range": "650",
+        "cast_animation": "0 + 0",
+        "cast_radius": "250",
+        "details": "Leaps forward while Sagan empowers her with both movement speed bonus and attack speed bonus. Cannot recast the ability while the Leap modifier is active.",
+        "description": "Leaps forward while Sagan empowers her with both movement speed bonus and attack speed bonus.",
+        "facet_effects": {
+          "leaps_and_bounds": "Effect Radius: 250, Root Duration: 1.5/1.75/2/2.25"
+        },
+        "ability_behavior": ["no_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Leap Distance: 650", "Move Speed Bonus: 6%/12%/18%/24%", "Attack Speed Bonus: 25/50/75/100", "Duration: 5", "Downtime: 0.5", "Charges: 2"],
+        "interaction_notes": ["Grants charges immediately upon learning", "Can leap over units and impassable terrain", "Root sources do not interrupt if already leaping"]
+      },
+      "ability_4": {
+        "name": "Moonlight Shadow",
+        "key": "R",
+        "type": "active",
+        "affects": "Allied Heroes",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "140/120/100",
+        "mana_cost": "125",
+        "cast_range": "Global",
+        "cast_animation": "0.5 + 0",
+        "cast_radius": "Global",
+        "details": "Turn allied heroes invisible and grants movement speed bonus. The invisibility applied restores itself after the fade delay as long as the buff duration is active.",
+        "description": "Turn allied heroes invisible and grants movement speed bonus.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Radius: Global", "Fade Delay: 2.5/2/1.5", "Damage Amp: 9%/12%/15%", "Move Speed Bonus: 9%/12%/15%", "Duration: 18", "Evasion Bonus: 20% (with talent)"],
+        "interaction_notes": ["Considers clones as heroes", "Invisibility breaks upon attack point or cast point", "Can pick up/drop items without breaking invisibility"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": ["Increased Leap Leaps and Bounds root duration from 1.1/1.4/1.7/2 to 1.5/1.75/2/2.25."]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": ["Reduced Starstorm Starstruck blind duration from 3.5/4/4.5/5 to 3 on each level."]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Mirana no longer is a Universal hero and has Agility as the primary attribute.",
+          "Increased base strength and gain from 18 + 1.9 to 20 + 2.2.",
+          "Increased agility gain from 2.5 to 3.1.",
+          "Increased intelligence gain from 1.4 to 1.9.",
+          "Increased base attack damage from (-2)‒2 to 22‒28.",
+          "REMOVED the following facets: Moonlight Shadow, Solar Flare and its related talents.",
+          "Selemene's Faithful: Increased heal factor from 1.2 to 1.5. Increased mana restore factor from 1.2 to 1.5.",
+          "Starstorm: Reduced secondary damage factor from 0.8 to 0.6. ADDED the Starstruck facet.",
+          "Leap: Reduced movement speed bonus from 8%/16%/24%/32% to 6%/12%/18%/24%. ADDED the Leaps and Bounds facet.",
+          "Moonlight Shadow: Now grants 9%/12%/15% self-outgoing damage amplification for the entire duration.",
+          "REWORKED Aghanim's Shard upgrade for Leap.",
+          "Talents: LVL 10 -2s Sacred Arrow cooldown → -2s Starstorm cooldown. LVL 20 20% proc chance for 200% critical strike damage → +35 base attack damage."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

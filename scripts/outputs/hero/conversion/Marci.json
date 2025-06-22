@@ -1,0 +1,254 @@
+{
+  "hero_name": "Marci",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 23,
+      "strength_gain": 3,
+      "agility": 20,
+      "agility_gain": 2.2,
+      "intelligence": 19,
+      "intelligence_gain": 1.9,
+      "health": 626,
+      "mana": 303,
+      "armor": 3.33,
+      "magic_resist": 26.9,
+      "damage": [56, 60],
+      "damage_avg": 58.9,
+      "projectile_speed": 0,
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.5",
+      "move_speed": 315,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Carry, Initiator, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Buddy System",
+        "effects": "While Bodyguard is active, Marci's lifesteal heals her ally and the ally's lifesteal heals Marci. +1s Duration"
+      },
+      "facet_2": {
+        "name": "Pick-Me-Up",
+        "effects": "Enables Rebound Alt-Cast functionality. Marci carries the unit-targeted ally with her to the landing radius after the leap component. Increases landing damage when carrying an ally. +35% Ally Landing Damage"
+      },
+      "facet_3": {
+        "name": "Fleeting Fury",
+        "effects": "Upon landing with Rebound, Marci gains a short Unleashed Fury combo."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Applies a basic dispel on Marci upon cast",
+          "While Unleash is Active, all of Marci's abilities unleash pulses when cast",
+          "Unleash pulses now also silence units within the radius",
+          "Reduces cooldown"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Adds enemy targeting functionality for Rebound",
+          "Marci applies the movement speed boost on herself upon cast",
+          "Increases damage"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+20% Bodyguard Damage", "+6s Unleash Duration per Hero Kill"],
+        "level_20": ["+10% Unleash Move Speed", "+0.75s Rebound Stun Duration"],
+        "level_15": ["+10% Rebound Move Speed", "+100 Dispose Damage"],
+        "level_10": ["+75 Rebound Landing Radius", "+1.5s Dispose Slow Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Special Delivery",
+          "type": "active",
+          "description": "Marci whistles and instantly teleports her Courier to her. Her faction starts the game with more robust Flying Couriers.",
+          "values": {
+            "cast_animation": "1 + 0.4",
+            "effect_radius": "Global",
+            "teleport_delay": 1,
+            "courier_level_bonus": 3,
+            "courier_max_level": 30,
+            "hit_count_bonus": 1,
+            "creeps_hit_count_bonus": 2,
+            "cooldown": 240
+          },
+          "details": "Professional courtesy, from one courier to another."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Dispose",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "16/14/12/10",
+        "mana_cost": 80,
+        "cast_range": "175",
+        "cast_animation": "0.2 + 1.04",
+        "cast_radius": "300",
+        "details": "Grabs the unit-targeted ally or enemy unit and throws it effortlessly behind her, damaging and slowing the unit if it's an enemy. Additionally damages and applies a movement speed slow to all enemy units within the landing radius.",
+        "description": "Marci excels at removing obstacles from Princess Mirana's path.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Can Dispose units up to 230° of a circular segment in front of Marci's facing angle without turning",
+          "Landing distance varies correspondingly to the unit's previous location upon cast",
+          "Can land at max 250-distance from point behind Marci"
+        ],
+        "interaction_notes": [
+          "Both Roshan and the Tormentor are immune to forced movement sources",
+          "All ability effects are applied immediately at their current position"
+        ]
+      },
+      "ability_2": {
+        "name": "Rebound",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Unit",
+        "damage": "Spell / Magical",
+        "cooldown": "24/20/16/12",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "450/550/650/750",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "275",
+        "details": "Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Grants the targeted ally a short duration movement speed bonus. Upon reaching the unit, Marci leaps to her final destination, damaging and stunning enemies in the area.",
+        "description": "With a friendly or brazen boost, Marci can find her way into the midst of any fight.",
+        "facet_effects": {
+          "fleeting_fury": "Upon landing with Rebound, Marci gains a short Unleashed Fury combo",
+          "pick_me_up": "Enables Rebound Alt-Cast functionality. Marci carries the unit-targeted ally with her to the landing radius after the leap component"
+        },
+        "ability_behavior": ["unit_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Launches a 1700-speed projectile upon cast",
+          "Can move over impassable terrain and over trees",
+          "Max dash distance is CastRange + 700"
+        ],
+        "interaction_notes": [
+          "Cannot be cast on Buildings, Couriers, Invulnerable units, or Ward-type units",
+          "Nullifies the ability cast on unit-targeted enemy upon being disjointed"
+        ]
+      },
+      "ability_3": {
+        "name": "Bodyguard",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Heroes / Self",
+        "damage": "Spell / Physical / Magical",
+        "cooldown": "20",
+        "mana_cost": 50,
+        "cast_range": "1000",
+        "cast_animation": "0 + 0.54",
+        "cast_radius": "275",
+        "details": "Grants a target ally hero a portion of Marci's lifesteal and attack damage bonuses. Whenever the ally attacks or is attacked by an enemy, Marci counter-attacks that target within a certain distance. Passively grants Marci lifesteal and bonus attack damage.",
+        "description": "Marci learned at a young age that the best asset in a scrap is a steady companion.",
+        "facet_effects": {
+          "buddy_system": "While Bodyguard is active, Marci's lifesteal heals her ally and the ally's lifesteal heals Marci. Increases duration."
+        },
+        "ability_behavior": ["unit_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Grants flat unique bonus attack damage",
+          "Cannot self-target",
+          "Counter-attack component has a fixed duration downtime"
+        ],
+        "interaction_notes": [
+          "Cannot be cast on Hidden or Invulnerable units",
+          "Lifesteal is less effective when attacking creeps"
+        ]
+      },
+      "ability_4": {
+        "name": "Unleash",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "90/75/60",
+        "mana_cost": "100/125/150",
+        "cast_range": "0",
+        "cast_animation": "0.2 + 0.34",
+        "cast_radius": "800",
+        "details": "Taps a hidden power, increasing movement speed while gaining flurry charges that allow Marci to deliver a rapid sequence of strikes. Unlocks max attack speed upon cast. All Flurry attacks must be executed within the combo time window, otherwise, the combo fails and dispels the Flurry buff.",
+        "description": "Though some have sought to understand its origins, Marci rebuffs all attempts to divine the source of her power.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max Attack Charges per Flurry: 5",
+          "Self Attack Speed Bonus: 700/975/1325",
+          "Combo Time Window: 1",
+          "Downtime: 1.5",
+          "The last strike in every flurry combo unleashes a damaging pulse around the target"
+        ],
+        "interaction_notes": [
+          "Unlocks max attack speed and removes the 700 attack speed cap",
+          "Applies a basic dispel on Marci with Scepter upgrade"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased agility gain from 1.8 to 2.2",
+          "Rescaled Dispose damage from 75/150/225/300 to 60/150/240/330",
+          "Reduced Rebound mana cost from 75/90/105/120 to 70/80/90/100"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased Rebound Pick-Me-Up landing damage bonus factor with ally from 0.25 to 0.35",
+          "Bodyguard Buddy System now increases buff duration by 1"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Reduced Rebound landing damage from 80/160/240/320 to 75/150/225/300",
+          "Reduced Pick-Me-Up landing damage bonus factor with ally from 0.5 to 0.25",
+          "Reduced Aghanim's Shard Rebound landing damage bonus from a 1.2 factor to a flat 15/30/45/60"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

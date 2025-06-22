@@ -1,0 +1,291 @@
+{
+  "hero_name": "Morphling",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 23,
+      "strength_gain": 2.6,
+      "agility": 24,
+      "agility_gain": 3.9,
+      "intelligence": 19,
+      "intelligence_gain": 1.8,
+      "health": 626,
+      "mana": 303,
+      "armor": 2,
+      "magic_resist": 26.9,
+      "damage": [33, 42],
+      "damage_avg": 37.5,
+      "projectile_speed": 1300,
+      "attack_type": "ranged",
+      "attack_range": 350,
+      "attack_speed": 100,
+      "bat": 1.5,
+      "animation": "0.5 + 0.5",
+      "move_speed": 285,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Durable, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Ebb",
+        "effects": "Sets the water elemental's primary attribute to agility. Waveform attacks enemies in its path. Neither applies on-hit effects nor attack modifiers."
+      },
+      "facet_2": {
+        "name": "Flow",
+        "effects": "Sets the water elemental's primary attribute to strength. Adaptive Strike stuns based on Morphling's current Strength to Agility ratio."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Creates a strong illusion of the targeted enemy hero that can cast all of the affected enemy's basic abilities with Alt-Cast toggled on",
+          "Upon the Morph Replicate sub-ability cast, Morphling takes the place of the illusion, instantly destroying it with Alt-Cast toggled on",
+          "Grants the corresponding abilites acquired via Morph its ability upgrades"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Morphling can shift attributes while being affected by most disables. Reduces mana cost",
+          "Grants the corresponding abilites acquired via Morph its ability upgrades"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+35 Strength", "-40% Waveform Cooldown"],
+        "level_20": ["+15 Agility", "-3s Adaptive Strike Cooldown"],
+        "level_15": ["+75 Attack Range", "+250 Waveform Cast Range/Distance"],
+        "level_10": ["+12s Morph Duration", "+15% Magic Resist"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Accumulation",
+          "type": "passive",
+          "description": "Morphling gains half of his attribute bonuses halfway through each level, and the second half upon level up, instead of gaining it all upon level up.",
+          "values": {
+            "level_experience_threshold": "50%",
+            "attribute_gain_factor": 0.5,
+            "primary_attribute_bonus": "3/6/9/12/15/18"
+          },
+          "details": "Checks Morphling's current experience per server tick and grants an attribute gain buff when Current EXP ≥ 0.5 × NextLevelEXP"
+        },
+        {
+          "name": "Ebb",
+          "type": "passive",
+          "description": "Sets the water elemental's primary attribute to agility.",
+          "values": {},
+          "details": "Selecting the Ebb facet unlocks this ability."
+        },
+        {
+          "name": "Flow",
+          "type": "passive",
+          "description": "Adaptive Strike stuns based on Morphling's current Strength to Agility ratio. Morphling gains bonus spell amplification based on its current agility.",
+          "values": {
+            "bonus_spell_amplification_per_agility": "0.25%"
+          },
+          "details": "Selecting the Flow facet unlocks this ability. Bonus spell amplification is granted as 1% bonus per 4 Agility increments."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The water elemental's hero model has hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to function."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Waveform",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical / Attack Damage / Physical",
+        "damage_types": ["magical", "physical"],
+        "cooldown": "21/18/15/12",
+        "mana_cost": 115,
+        "cast_range": "700/800/900/1000",
+        "cast_animation": "0.25 + 0",
+        "cast_radius": "200",
+        "details": "Surges forward, damaging enemy units in Morphling's path. Morphling is invulnerable during Waveform.",
+        "description": "A torrential flood takes enemies by force.",
+        "facet_effects": {
+          "ebb": "Waveform attacks enemies in its path with 0.5 instant attack damage factor. Neither applies on-hit effects nor attack modifiers."
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Disjoints incoming projectiles upon cast",
+          "Applies non-disabling forced movement",
+          "Morphling is invulnerable and untargetable while traveling",
+          "Can move over impassable terrain and trees",
+          "Can turn, attack, cast abilities, and use items during Waveform"
+        ],
+        "interaction_notes": [
+          "Does not affect enemy Couriers",
+          "Affects fogged and invisible units",
+          "Talent stacks multiplicatively with other cooldown reduction sources"
+        ]
+      },
+      "ability_2": {
+        "name": "Adaptive Strike",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "16/14/12/10",
+        "mana_cost": "40/50/60/70",
+        "cast_range": "600/700/800/900",
+        "cast_animation": "0.25 + 0.67",
+        "cast_radius": "",
+        "details": "Launches a surge of water at an enemy unit, dealing damage and knocking them back. The damage is based on Morphling's agility. If Morphling's agility is much higher than strength, the max agility damage factor is used. The knockback effect is based on Morphling's strength. If Morphling's strength is much higher than agility, the max knockback distance is used.",
+        "description": "The Morphling calls upon his elements to crush his opponents with waves.",
+        "facet_effects": {
+          "flow": "Adaptive Strike stuns based on Morphling's current Strength to Agility ratio with 0.5 to 2.4 stun duration."
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has 1150 projectile speed",
+          "Checks Morphling's current attributes upon projectile impact",
+          "Damage formula: 25/50/75/100 + ΣAgi × f(x)",
+          "Knockback distance varies from 50 to 350 based on Str to Agi ratio"
+        ],
+        "interaction_notes": [
+          "Procs Spell Block sources upon projectile impact",
+          "Procs Spell Reflection sources upon projectile impact",
+          "Both Adaptive Strikes are independent in Ability Draft"
+        ]
+      },
+      "ability_3": {
+        "name": "Attribute Shift",
+        "key": "D/F",
+        "type": "toggle",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "0",
+        "mana_cost": "4/8/13/17 per second",
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Morphling pulls strength points and pours them into agility, and vice versa. The process is reversible.",
+        "description": "Shifting water makes it difficult to discern the nature of Morphling.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "toggle"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Shift interval: 0.25/0.12/0.08/0.06",
+          "Agi/Str gain per second: 4/8/12/16",
+          "Both abilities toggle each other off",
+          "All shifted attributes persist through death",
+          "Continues to shift while toggled, even during disables"
+        ],
+        "interaction_notes": [
+          "Cannot toggle while affected by disable sources (except with Shard)",
+          "With Shard: can be toggled during cyclone, forced movement, hidden, sleep, stun, taunt",
+          "Cannot be toggled during hex or silence",
+          "Grants bonus health using setting health mechanic",
+          "Illusions copy the shifted attributes"
+        ]
+      },
+      "ability_4": {
+        "name": "Morph",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "140/100/60",
+        "mana_cost": 50,
+        "cast_range": "700/850/1000",
+        "cast_animation": "0.25 + 0.1",
+        "cast_radius": "",
+        "details": "Changes Morphling's form to match the targeted enemy, gaining their basic abilities. Morph can be toggled between the Morph Replicate sub-ability for its duration.",
+        "description": "Staring into Morphling produces a reflection that mimics the beholder.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Duration: 24 seconds (36 with talent)",
+          "Base attributes conversion factor: 1",
+          "Copies primary attribute, base attributes, facet, hero model traits, attack range-type",
+          "Copies innate abilities except Stone Remnant, Mana Shield, Stone Form",
+          "Visually distinguishable from enemy hero",
+          "Does not copy transformation states or inventory"
+        ],
+        "interaction_notes": [
+          "Considers casting on enemy clones and illusions as heroes",
+          "Cannot Morph into dead heroes",
+          "Procs Spell Block on primary hero when cast on illusions",
+          "Does not proc Spell Reflection",
+          "Not acquirable by Spell Steal",
+          "Morphs into primary target with Soulbind"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Attribute Shift (Strength Gain) is now affected by health restoration sources"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced strength gain from 3.2 to 2.6",
+          "Reduced base mana regeneration from 0.5 to 0",
+          "Reduced Attribute Shift stat shift per second from 5/10/15/20 to 4/8/12/16",
+          "Increased Morph Replicate cooldown from 1 to 2",
+          "LVL 20 talent: +20 agility reduced to +15"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Accumulation: Reduced all attributes bonus per level from 4 to 2",
+          "Added Flow facet: Increased strength bonus per level from 2 to 5",
+          "Added Ebb facet: Increased agility bonus per level from 2 to 5",
+          "Reworked Flow facet: Now grants 0.25% spell damage amplification per agility",
+          "Waveform: No longer applies instant attack by default, moved to Ebb facet",
+          "Merged Adaptive Strike abilities into one",
+          "Adaptive Strike: Reduced base damage, added knockback mechanics",
+          "Morph now keeps Morphling's current attributes while active",
+          "Multiple talent changes"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "hero_name": "Rubick",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2,
+      "agility": 23,
+      "agility_gain": 2.5,
+      "intelligence": 24,
+      "intelligence_gain": 3.7,
+      "health": 582,
+      "mana": 363,
+      "armor": 4.83,
+      "magic_resist": 27.4,
+      "damage": [49, 55],
+      "damage_avg": 52,
+      "projectile_speed": 1125,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.77",
+      "move_speed": 290,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Disabler, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Frugal Filch",
+        "effects": "Reduces the Acquired Spell's mana cost."
+      },
+      "facet_2": {
+        "name": "Arcane Accumulation",
+        "effects": "Arcane Supremacy grants a flat area-of-effect stack bonus per ability cast."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Increases cast range and the number of acquirable abilities"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Enables casting Telekinesis on allied units, with applying all ability effects centered around the targeted ally",
+          "Upon an allied unit cast, increases the Telekinesis throw range and reduces the landing delay"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+40% Stolen Spells Spell Damage Amp", "+400 Telekinesis Land Distance"],
+        "level_20": ["-5s Telekinesis Cooldown", "-5s Fade Bolt Cooldown"],
+        "level_15": ["+0.5s Telekinesis Lift/Stun Duration", "-25% Stolen Spells Cooldown"],
+        "level_10": ["+0.25% Might and Magus Ability Values", "+150 Telekinesis Land Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Might and Magus",
+          "type": "passive",
+          "description": "Craftily converts bonus outgoing spell amplification on himself to both bonus attack damage and bonus magic resistance.",
+          "values": {
+            "spell_amp_to_attack_damage_bonus": "0.75% (1% with facet)",
+            "spell_amp_to_magic_resist_bonus": "0.75% (1% with facet)"
+          },
+          "details": "Grants bonus per percentage-based outgoing spell damage amplification sourced to Rubick"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Rubick's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Rubick is innately immune to Telekinesis and Spell Steal being cast on him offensively"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Telekinesis",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Allied Units",
+        "damage": "magical",
+        "damage_types": ["spell"],
+        "cooldown": "23/20/17/14",
+        "mana_cost": 110,
+        "cast_range": "550/575/600/625",
+        "cast_animation": "0.1 + 0.97",
+        "cast_radius": "300/325/350/375",
+        "details": "Utilizes his telekinetic powers to lift the enemy unit into the air briefly, then hurls them back at the ground. The affected unit lands on the ground with such force that it stuns other enemy units within the radius.",
+        "description": "Lifts enemy unit into air, then hurls them back to ground, stunning nearby enemies on landing",
+        "facet_effects": {
+          "shard_upgrade": "Enables casting on allied units with increased throw range and reduced landing delay"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Lift duration includes landing time",
+          "Both Roshan and Tormentor cannot be lifted but ability applies stun during lift duration"
+        ],
+        "interaction_notes": [
+          "Does nothing when cast on units affected by Black Hole, Chronosphere, or Duel",
+          "When interrupted, Telekinesis Land prematurely applies all landing effects"
+        ]
+      },
+      "ability_2": {
+        "name": "Fade Bolt",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemies",
+        "damage": "magical",
+        "damage_types": ["spell"],
+        "cooldown": "16/14/12/10",
+        "mana_cost": "110/125/140/155",
+        "cast_range": "800",
+        "cast_animation": "0.1 + 0.93",
+        "cast_radius": "440",
+        "details": "A powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack damage. Each bolt bounce instance deal lesser damage.",
+        "description": "Bouncing magical damage that reduces enemy attack damage",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Base damage: 100/175/250/325",
+          "Bounce damage factor: 0.94",
+          "Attack damage reduction: 5%/15%/25%/35%",
+          "Debuff duration: 10 seconds"
+        ],
+        "interaction_notes": [
+          "Bounces in 0.25-intervals",
+          "Cannot affect same enemy units more than once per cast",
+          "Does not bounce on fogged or invisible units"
+        ]
+      },
+      "ability_3": {
+        "name": "Arcane Supremacy",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "none",
+        "mana_cost": "none",
+        "cast_range": "none",
+        "cast_animation": "none",
+        "cast_radius": "none",
+        "details": "Rubick's mastery of the arcane allows him to have a larger cast range and increased potency.",
+        "description": "Increases cast range and spell damage amplification",
+        "facet_effects": {
+          "arcane_accumulation": "Grants flat area-of-effect stack bonus per ability cast (25 AoE bonus, 20 second duration)"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Cast range bonus: 60/120/180/240",
+          "Spell damage amp: 11%/16%/21%/26%"
+        ],
+        "interaction_notes": [
+          "Applies generic outgoing spell damage amplification",
+          "Stacks additively with other sources of generic outgoing damage manipulation"
+        ]
+      },
+      "ability_4": {
+        "name": "Spell Steal",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes / Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "20/12/4",
+        "mana_cost": 25,
+        "cast_range": "1000",
+        "cast_animation": "0.1 + 0.93",
+        "cast_radius": "none",
+        "details": "Rubick studies the trace magical essence of the affected enemy hero, learning the secrets of the last ability that it casts.",
+        "description": "Steals the last spell cast by target enemy hero",
+        "facet_effects": {
+          "frugal_filch": "Reduces acquired spell's mana cost by factor of 0.5/0.35/0.2",
+          "scepter_upgrade": "Increases cast range to 1400 and max stolen spells to 2"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max stolen spells: 1 (2 with scepter)",
+          "Steal duration: 180/240/300",
+          "Debuff duration factor: 1.1/1.2/1.3",
+          "Acquired ability is more potent when evoked by Grand Magus"
+        ],
+        "interaction_notes": [
+          "Cannot acquire innate abilities, items, or passive abilities without active components",
+          "Cannot steal Morph, Dispersion, Rearm, or Primal Companion",
+          "Acquired abilities have enhanced debuff duration and can have cooldown reduction/spell damage amp with talents"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Telekinesis cooldown from 24/21/18/15 to 23/20/17/14",
+          "Spell Steal can no longer acquire toggle-based abilities that do not have a health cost or mana cost"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Frugal Filch abilities mana cost factor from 0.6/0.5/0.4 to 0.5/0.35/0.2",
+          "Talents updated: LVL 10 changed from +12% Fade Bolt attack damage reduction to +0.25% Might and Magus ability bonuses",
+          "LVL 15 Telekinesis lift/stun duration increased from +0.4s to +0.5s",
+          "LVL 20 Telekinesis cooldown increased from -4s to -5s"
+        ]
+      },
+      {
+        "version": "7.37c",
+        "date": "2024-08-28",
+        "changes": [
+          "Reduced base attack damage from 27‒33 to 25‒31"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

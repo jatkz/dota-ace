@@ -1,0 +1,212 @@
+{
+  "hero_name": "Riki",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 18,
+      "strength_gain": 2,
+      "agility": 30,
+      "agility_gain": 2.4,
+      "intelligence": 14,
+      "intelligence_gain": 1.3,
+      "health": 516,
+      "mana": 243,
+      "armor": 5,
+      "magic_resist": 26.4,
+      "damage": [52, 56],
+      "damage_avg": 54,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 90,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 315,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Contract Killer",
+        "effects": "Backstab grants Riki flat bonus experience for hero kills and assists. Additionally grants Riki flat bonus experience from Courier kills and from killing certain ward-type units."
+      },
+      "facet_2": {
+        "name": "Exterminator",
+        "effects": "Tricks of the Trade is more effective on creeps, applies a greater flat bonus attack damage per current agility. Each creep kill while channeling the ability reduces the ability cooldown."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Enables Riki to hide within a pocket dimension while moving along with the targeted ally", "Increases cast range, max attack targets and number of instant attacks for its duration"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Causes enemy units to be untargetable by their allies", "Reduces armor of all enemy units caught within the Smoke Screen"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Tricks of the Trade Applies Basic Dispel", "-1.25s Cloak and Dagger Fade Delay"],
+        "level_20": ["-4s Blink Strike Restore Time", "+0.3 Backstab Agility Factor"],
+        "level_15": ["-3s Smoke Screen Cooldown", "+50 Tricks of the Trade Agility"],
+        "level_10": ["+10% Cloak and Dagger Move Speed", "+50 Smoke Screen Radius"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Backstab",
+          "type": "passive",
+          "description": "Every time Riki strikes his enemy from behind, he deals an agility-based bonus damage.",
+          "values": {
+            "back_angle": "105°",
+            "hero_attack_damage_bonus_per_agi": "0.55/0.9/1.25/1.6",
+            "creep_damage_factor": 2
+          },
+          "details": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Smoke Screen",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "17/15/13/11",
+        "mana_cost": "65/70/75/80",
+        "cast_range": "550",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "425",
+        "details": "Throws down a smoke bomb that blinds and silences enemy units.",
+        "description": "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents.",
+        "facet_effects": {
+          "shard": "Armor Reduction: 5"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Creates a non-lingering negative aura", "Miss chance uses pseudo-random distribution"],
+        "interaction_notes": ["Can affect enemy units at max 975-distance away", "Multiple overlapping Smoke Screen radius do not stack"]
+      },
+      "ability_2": {
+        "name": "Blink Strike",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical / Instant Attack / Physical",
+        "damage_types": ["magical", "physical"],
+        "cooldown": "25/21/17/13",
+        "mana_cost": 2,
+        "cast_range": "600/700/800/900",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "N/A",
+        "details": "Teleports behind the target unit, momentarily slowing them and striking for bonus damage if it is an enemy.",
+        "description": "The Stealth Assassin's agile movement makes him impossible to escape.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Grants 2 charges immediately upon learning", "Instant attacks and backstabs regardless of facing angle"],
+        "interaction_notes": ["Cannot be cast on buildings, couriers, hidden or invulnerable units"]
+      },
+      "ability_3": {
+        "name": "Tricks of the Trade",
+        "key": "E",
+        "type": "channeling",
+        "affects": "Self / Enemy Units",
+        "damage": "Instant Attack / Physical",
+        "damage_types": ["physical"],
+        "cooldown": "18/16/14/12",
+        "mana_cost": "45/55/65/75",
+        "cast_range": "400",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "450",
+        "details": "Phases out of the world while striking random enemy units from behind in an area around him.",
+        "description": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
+        "facet_effects": {
+          "exterminator": "Agi to Attack Damage Bonus Factor: 4.5, Cooldown Reduction per Creep Kill: 0.75",
+          "scepter": "Cast Range: 700, Max Attack Targets: 2, Max Instant Attacks: 5"
+        },
+        "ability_behavior": ["area_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Grants hidden, invulnerability, phase movement, untargetable while channeling", "Instant attacks in 0.667-second intervals"],
+        "interaction_notes": ["Root and leash sources prevent ability cast", "Applies ensured Backstab bonus damage regardless of facing angle"]
+      },
+      "ability_4": {
+        "name": "Cloak and Dagger",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "N/A",
+        "mana_cost": "N/A",
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "Riki fades into the shadows, becoming invisible. When Riki attacks, he becomes visible again.",
+        "description": "Riki comes for you.",
+        "facet_effects": {
+          "talent": "Move Speed Bonus: 10%"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Fade Delay: 4/3/2", "Invisibility breaks upon attack point or cast point"],
+        "interaction_notes": ["Can pick up, drop, or toggle items without breaking invisibility", "Immediately turns invisible upon reincarnation or respawn"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Talents: LVL 10 +8% movement speed bonus Cloak and Dagger during invisibility increased to +10%",
+          "Talents: LVL 25 -1s Cloak and Dagger fade delay increased to -1.25s"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Backstab Contract Killer: Rescaled assist experience bonus from 25/100/100/100 to 25/75/125/175",
+          "Backstab Contract Killer: Now grants 25/75/125/175 bonus experience for Courier and Ward kills",
+          "Smoke Screen no longer grants 30%/45%/60%/75% evasion to allied units within the radius",
+          "Tricks of the Trade Exterminator now additionally reduces cooldown by 0.75 per non-hero unit kill",
+          "Talents: LVL 25 -3s Tricks of the Trade cooldown → -1s Cloak and Dagger fade delay"
+        ]
+      },
+      {
+        "version": "7.37d",
+        "date": "2024-10-01",
+        "changes": [
+          "Toggling items no longer breaks Cloak and Dagger invisibility"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

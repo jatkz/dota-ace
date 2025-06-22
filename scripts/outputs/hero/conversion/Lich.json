@@ -1,0 +1,302 @@
+{
+  "hero_name": "Lich",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.1,
+      "agility": 17,
+      "agility_gain": 2,
+      "intelligence": 26,
+      "intelligence_gain": 3.8,
+      "health": 560,
+      "mana": 387,
+      "armor": 1.83,
+      "magic_resist": 27.6,
+      "damage": [50, 59],
+      "damage_avg": 54.5,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.46 + 0.54",
+      "move_speed": 290,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Growing Cold",
+        "effects": "Increases the current Frost Shield duration per enemy kill. Increases the current number of Chain Frost bounce per enemy kill."
+      },
+      "facet_2": {
+        "name": "Evil Eye",
+        "effects": "Applies additional debuff effects during Sinister Gaze including extra magical damage and movement speed slow amplification."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Sinister Gaze becomes area-targeted affecting multiple enemies",
+          "Allows casting other abilities while channeling Sinister Gaze",
+          "All abilities have instant cast time during Sinister Gaze"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Ice Spire ability",
+          "Conjures an Ice Spire that slows enemies around it",
+          "Applies Frost Shield effects around Ice Spire"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+100 Chain Frost Increment Damage", "+50 Frost Shield Health Regen"],
+        "level_20": ["+4s Frost Shield Duration", "Chain Frost Upon Death"],
+        "level_15": ["-3.5s Frost Blast Cooldown", "+0.3s Sinister Gaze Duration"],
+        "level_10": ["+125 Frost Blast Radius/Damage", "+10% Frost Shield Damage Reduction"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Death Charge",
+          "type": "passive",
+          "description": "Lich cannot regenerate mana except from Fountain's Rejuvenation Aura. However, it feasts on arcane energy upon ally and enemy heroes' death within radius.",
+          "values": {
+            "radius": 1500,
+            "self_max_mana_restore_heroes": "25%",
+            "self_max_mana_restore_creeps": "2.5%"
+          },
+          "details": "Nullifies all mana regeneration sources except Rejuvenation Aura. Mana restore sources still work normally."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Lich's hero model has hidden innate abilities and is considered a ground unit despite appearing to float.",
+          "values": {},
+          "details": "May only perform ability functions upon successful channeling. Has various hidden innate abilities."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Frost Blast",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "7",
+        "mana_cost": "110/120/130/140",
+        "cast_range": "575/600/625/650",
+        "cast_animation": "0.3 + 0.4",
+        "cast_radius": "200",
+        "details": "Blasts target enemy with damaging frost, dealing area damage and slowing movement and attack speed. Primary target receives both base and area damage.",
+        "description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack speed for a duration.",
+        "facet_effects": {
+          "talent_upgrade": "With talent: +125 radius/damage, -3.5s cooldown"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Primary target takes both base and area damage",
+          "Can affect enemies up to 775/800/825/850 distance away"
+        ],
+        "interaction_notes": [
+          "Spell Block nullifies the ability but doesn't proc on secondary targets"
+        ]
+      },
+      "ability_2": {
+        "name": "Frost Shield",
+        "key": "W",
+        "type": "active",
+        "affects": "Units/Ice Spire",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "30/25/20/15",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "800",
+        "cast_animation": "0.2 + 0.4",
+        "cast_radius": "600",
+        "details": "Applies shield around ally target. Deals damage per second and slows enemies within radius. Reduces hero-based attack damage.",
+        "description": "Applies a shield around the ally target. Deals damage per second and slowing enemy's movement speed within the radius.",
+        "facet_effects": {
+          "growing_cold": "Duration increases by 4 per hero kill, 1 per creep kill",
+          "talent_upgrade": "+4s duration, +50 health regen, +10% damage reduction"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Pulses every 1 second starting 0.1 seconds after application",
+          "Affects only hero-based attack damage regardless of damage type"
+        ],
+        "interaction_notes": [
+          "Can be cast on buildings, couriers, and ward-type units",
+          "Doubletap casts on Lich"
+        ]
+      },
+      "ability_3": {
+        "name": "Sinister Gaze",
+        "key": "E",
+        "type": "channeled",
+        "affects": "Enemy Units/Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "24/22/20/18",
+        "mana_cost": "25",
+        "cast_range": "600",
+        "cast_animation": "0 + 0",
+        "cast_radius": "400",
+        "details": "Hypnotizes enemy unit, causing it to move towards Lich while draining percentage of current mana. Lich restores mana based on mana drained.",
+        "description": "Hypnotizes an enemy unit, causing it to move towards a point between the Lich and the enemy unit while draining a percentage of its current mana.",
+        "facet_effects": {
+          "evil_eye": "Applies additional debuff with extra magical damage and movement speed slow amplification"
+        },
+        "ability_behavior": ["unit_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Channel time: 1.1/1.4/1.7/2 seconds",
+          "Current mana loss: 15% per second",
+          "Distance moved: 32%/38%/44%/50%"
+        ],
+        "interaction_notes": [
+          "Grants True Sight and unobstructed movement",
+          "Cannot be interrupted by dispel, invisibility, or invulnerability on target"
+        ]
+      },
+      "ability_4": {
+        "name": "Ice Spire",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "25",
+        "mana_cost": "150",
+        "cast_range": "750",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "550",
+        "details": "Conjures Ice Spire that slows enemies around it. Destroyed when hit enough times. Applies Frost Blast damage when destroyed.",
+        "description": "Conjures an Ice Spire for his rituals, slowing enemy units around it.",
+        "facet_effects": {
+          "shard_requirement": "Requires Aghanim's Shard to unlock"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Hit count: 4 (8 for creeps)",
+          "Duration: 15 seconds",
+          "Chain Frost can bounce to spire"
+        ],
+        "interaction_notes": [
+          "Levels up with Frost Blast",
+          "Frost Shield applies effects around Ice Spire"
+        ]
+      },
+      "ability_5": {
+        "name": "Chain Frost",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units/Ice Spire",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "100/80/60",
+        "mana_cost": "180/300/420",
+        "cast_range": "750",
+        "cast_animation": "0.3 + 1.03",
+        "cast_radius": "550",
+        "details": "Releases orb of frost that bounces between enemies, slowing and increasing damage each bounce. Can bounce up to 10 times.",
+        "description": "Releases an orb of frost that bounces between nearby enemy units, slowing and subsequently increasing its damage each time it bounces.",
+        "facet_effects": {
+          "growing_cold": "Bounce count increases by 3 per hero kill, 1 per creep kill",
+          "frostbound": "Stays dormant on target until another valid target appears",
+          "talent_upgrade": "Casts Chain Frost on death, +100 increment damage"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "First damage: 250/400/550",
+          "Damage increment: 15/20/25 per bounce",
+          "Number of bounces: 10",
+          "Bounce radius: 550"
+        ],
+        "interaction_notes": [
+          "Cannot be disjointed",
+          "Can bounce to Ice Spires if no other targets available"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Increased Death Charge self max mana restore per enemy hero death from 15% to 25%"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Sinister Gaze: Increased current mana loss per second from 15% to 20%",
+          "Sinister Gaze: Reduced creep duration factor from 2 to 1",
+          "Added new Evil Eye facet",
+          "Chain Frost: Merged Frostbound component with base ability",
+          "Chain Frost: Reduced dormant duration to 2 on each level",
+          "Chain Frost: Now affects Roshan",
+          "Ice Spire: Reduced hit count from 5 to 4",
+          "Ice Spire: Reduced creep hit count from 10 to 8"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Frost Shield: Reduced cast range from 1000 to 800",
+          "Frost Shield: Reduced duration from 5/6/7/8 to 4/5/6/7",
+          "Sinister Gaze: Can no longer cast other abilities while channeling",
+          "Sinister Gaze: No longer deals 250 damage per second to creeps",
+          "Sinister Gaze: Increased enemy current mana loss from 12% to 15%",
+          "Sinister Gaze: Reduced mana cost from 50/60/70/80 to 25",
+          "Chain Frost: Reduced bounce radius from 600 to 550",
+          "Aghanim's Scepter: Now allows casting other abilities without interrupting channeling",
+          "Ice Spire: Now reduces hit count by 1 per Chain Frost bounce",
+          "Ice Spire: Reduced effect radius from 750 to 550",
+          "Talent: LVL 25 changed from Unlimited Chain Frost bounces to +100 Chain Frost damage increment"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

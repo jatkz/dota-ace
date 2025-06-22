@@ -19,13 +19,13 @@ async function main() {
         }
 
         const batchTypes = ['hero', 'item']
-        if (true) {
-            const res = await claude.retrieveBatchResult('msgbatch_01E6HPNgvYa8RnwyLWAPghRu', 'hero');
+        if (false) {
+            const res = await claude.retrieveBatchResult('msgbatch_013yA7NayG3zsCaSUGPzgkZN', 'hero');
             console.log('Retrieve Batch Result ', res);
         }
 
-        if (false) {
-            const res = await claude.deleteBatch('msgbatch_01HkHmFwJaqnBaLBghvvMxBR');
+        if (true) {
+            const res = await claude.deleteBatch('msgbatch_013yA7NayG3zsCaSUGPzgkZN');
             console.log('Delete Result ', res);
 
         }

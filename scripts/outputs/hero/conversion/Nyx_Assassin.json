@@ -1,0 +1,290 @@
+{
+  "hero_name": "Nyx Assassin",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 17,
+      "strength_gain": 2.7,
+      "agility": 18,
+      "agility_gain": 2.9,
+      "intelligence": 21,
+      "intelligence_gain": 2.6,
+      "health": 494,
+      "mana": 327,
+      "armor": 4,
+      "magic_resist": 27.1,
+      "damage": [51, 55],
+      "damage_avg": 53.2,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.46 + 0.54",
+      "move_speed": 310,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Disabler, Nuker, Initiator, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Mana Burn",
+        "effects": "Mind Flare removes unit-targeted enemy's mana based on its max mana."
+      },
+      "facet_2": {
+        "name": "Scuttle",
+        "effects": "Vendetta grants unobstructed pathing and unlocks max movement speed upon cast."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Burrow ability",
+          "While burrowed, grants cast range bonus, health and mana regeneration bonus, incoming damage reduction, and cooldown reduction bonus",
+          "While burrowed, Nyx is stationary, unable to attack, and invisible",
+          "While burrowed, Impale does not require facing the point-targeted location to cast",
+          "While burrowed, Mind Flare does not require facing the point-targeted location to cast",
+          "While burrowed, Spiked Carapace immediately stuns all enemy units within the radius"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "A successful Vendetta attack now applies Break"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+80 Agility", "+600 Mind Flare Radius"],
+        "level_20": ["+100 Impale Damage", "+0.5s Spiked Carapace Buff Duration"],
+        "level_15": ["-3s Mind Flare Cooldown", "+40 Vendetta Damage"],
+        "level_10": ["+0.2s Impale Stun Duration", "+0.25× Spiked Carapace Reflect Damage Factor"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Nyxth Sense",
+          "type": "passive",
+          "description": "The Nyx Assassin senses invisible enemy heroes within the radius, including enemy heroes within the Fog of War.",
+          "values": {
+            "radius": 400,
+            "aura_linger_duration": 0.5
+          },
+          "details": "Creates a negative aura centered around Nyx that applies True Sight within the radius. Considers clones, illusions, and creep-heroes as heroes."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Impale",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "17/15/13/11",
+        "mana_cost": "90/100/110/120",
+        "cast_range": "750",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "140",
+        "details": "Rock spike burst from the earth along a straight path. Immediately damages and stuns enemy units while being hurled into the air.",
+        "description": "Rock spike burst from the earth along a straight path. Immediately damages and stuns enemy units while being hurled into the air.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Affects units up to 890 range with the travel distance and spike radius",
+          "Applies 350-distance upward movement over the first 0.5 seconds",
+          "Has a 1600 projectile speed"
+        ],
+        "interaction_notes": [
+          "When interrupted, Impale prematurely applies the landing effects at the affected enemy unit's current location"
+        ]
+      },
+      "ability_2": {
+        "name": "Mind Flare",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "11/9.5/8/6.5",
+        "mana_cost": "100/105/110/115",
+        "cast_range": "800",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "600",
+        "details": "Deals a base damage based on the affected enemy unit's max mana, and additional damage equal to a percentage of the damage taken from Nyx previously.",
+        "description": "Deals a base damage based on the affected enemy unit's max mana, and additional damage equal to a percentage of the damage taken from Nyx previously.",
+        "facet_effects": {
+          "mana_burn": "Mind Flare removes unit-targeted enemy's mana based on its max mana with factor 0.16/0.19/0.22/0.25"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Places a jolt_damage_tracker that accumulates all damage instances",
+          "Enemy max mana to damage factor: 0.25/0.3/0.35/0.4",
+          "Accumulated damage factor: 0.2",
+          "Damage timer: 15"
+        ],
+        "interaction_notes": [
+          "Talent upgrade changes ability to area-targeted with 600 radius",
+          "Does not accumulate damage from HP Removal sources"
+        ]
+      },
+      "ability_3": {
+        "name": "Spiked Carapace",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Source",
+        "damage_types": ["reflected"],
+        "cooldown": "20/16/12/8",
+        "mana_cost": "40",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "cast_radius": "Global",
+        "details": "While above ground, Spiked Carapace reflects, negates one damage instance per damage source, and stuns the damage source as well.",
+        "description": "While above ground, Spiked Carapace reflects, negates one damage instance per damage source, and stuns the damage source as well.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Reflect damage factor: 1.25",
+          "Carapace duration: 2",
+          "Stun duration: 0.4/0.8/1.2/1.6",
+          "Can only affect the same enemy units once per cast"
+        ],
+        "interaction_notes": [
+          "Does not break Vendetta's invisibility upon cast",
+          "Has precedence over damage barrier sources"
+        ]
+      },
+      "ability_4": {
+        "name": "Burrow",
+        "key": "D",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "0",
+        "mana_cost": "0",
+        "cast_range": "0",
+        "cast_animation": "1.5 + 0",
+        "cast_radius": "0",
+        "details": "The scarab buries himself beneath the battlefield over a short duration. Grants self cast range bonus, health and mana regeneration bonus, incoming damage reduction, and cooldown reduction bonus. While burrowed, Nyx is stationary, unable to attack, and invisible.",
+        "description": "The scarab buries himself beneath the battlefield over a short duration. Grants self cast range bonus, health and mana regeneration bonus, incoming damage reduction, and cooldown reduction bonus. While burrowed, Nyx is stationary, unable to attack, and invisible.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Cast range bonus: 500",
+          "Max health as health regen bonus: 1%",
+          "Max mana as mana regen bonus: 1%",
+          "Damage reduction: 40%",
+          "Cooldown reduction: 25%"
+        ],
+        "interaction_notes": [
+          "Acquiring Aghanim's Scepter unlocks this ability",
+          "Applies disarm, invisibility, mute, phase movement, and root while burrowed"
+        ]
+      },
+      "ability_5": {
+        "name": "Vendetta",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemies",
+        "damage": "Spell / Pure",
+        "damage_types": ["pure"],
+        "cooldown": "80/70/60",
+        "mana_cost": "180/240/300",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Nyx becomes invisible and gains a movement speed bonus. Grants the next attack a faster attack animation with attack range bonus.",
+        "description": "Nyx becomes invisible and gains a movement speed bonus. Grants the next attack a faster attack animation with attack range bonus.",
+        "facet_effects": {
+          "scuttle": "Vendetta grants unobstructed pathing and unlocks max movement speed (200%) for 15 seconds"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Fade time: 0",
+          "Move speed bonus: 16%/18%/20%",
+          "Attack range bonus: 75",
+          "Duration: 60",
+          "Spell damage bonus: 300/400/500"
+        ],
+        "interaction_notes": [
+          "Does not interrupt channeling abilities upon cast",
+          "Attack breaking invisibility has true strike",
+          "Shard upgrade applies Break for 4 seconds"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Nyxth Sense radius from 350 to 400",
+          "Reduced Spiked Carapace cooldown from 23/18/13/8 to 20/16/12/8"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Mind Flare cooldown from 13/11/9/7 to 11/9.5/8/6.5"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased strength gain from 2.5 to 2.7",
+          "Increased agility gain from 2.3 to 2.9",
+          "Increased intelligence gain from 2.5 to 2.6",
+          "Increased base attack damage from 12‒16 to 26‒30",
+          "REMOVED Mana Burn ability",
+          "Impale: Reduced cooldown from 18/16/14/12 to 17/15/13/11",
+          "Impale: Reduced mana cost from 100/110/120/130 to 90/100/110/120",
+          "Mind Flare: No longer instant kills non-ancient creeps",
+          "Mind Flare: Reduced enemy max mana to damage factor from 0.2/0.25/0.3/0.35 to 0.25/0.3/0.35/0.4",
+          "Mind Flare: Reduced accumulated damage factor from 0.25 to 0.2",
+          "Mind Flare: ADDED Mana Burn facet",
+          "Talents: LVL 10 +40 Vendetta damage → +25% Spiked Carapace reflected damage",
+          "Talents: LVL 15 +0.5s Spiked Carapace carapace duration → +40 Vendetta damage"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

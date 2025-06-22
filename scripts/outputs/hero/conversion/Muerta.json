@@ -1,0 +1,250 @@
+{
+  "hero_name": "Muerta",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 19,
+      "strength_gain": 2,
+      "agility": 20,
+      "agility_gain": 2.7,
+      "intelligence": 23,
+      "intelligence_gain": 3.4,
+      "health": 538,
+      "mana": 351,
+      "armor": 3.33,
+      "magic_resist": 27.3,
+      "damage": [47, 55],
+      "damage_avg": 51,
+      "projectile_speed": 3000,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 115,
+      "bat": 1.7,
+      "animation": "0.35 + 1.1",
+      "move_speed": 295,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Dance of the Dead",
+        "effects": "Enemy heroes killed within the proximity of a Revenant refresh The Calling's duration and summons another revenant."
+      },
+      "facet_2": {
+        "name": "Quickdraw",
+        "effects": "Whenever an enemy is feared, Gunslinger proc chance increases to 1.5x base chance for 5s. Each time Gunslinger procs, the remaining Dead Shot cooldown is reduced by 1s"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["The Dead Shot projectile expands after it ricochets, and pierces through enemy heroes upon applying the fear", "Increases both the initial and ricochet damage"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants permanent bonus spell damage amplification retroactively each time Muerta kills an enemy hero or within the death radius while in Corporeal Form", "Grants bonus spell lifesteal while active"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["2 Dead Shot Charges", "+20% Gunslinger Proc Chance"],
+        "level_20": ["+2 The Calling Revenants", "+2 Pierce the Veil Duration"],
+        "level_15": ["+55 Gunslinger Damage", "+3% The Calling Self Max Health Regen"],
+        "level_10": ["+150 Health", "+300 Dead Shot Cast Range"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Supernatural",
+          "type": "passive",
+          "description": "Innately can attack Ethereal targets, and can attack when Muerta herself is Ethereal. Deals magical attack damage to Ethereal units when attacking them.",
+          "values": {
+            "physical_to_magical_attack_damage_factor": 1
+          },
+          "details": "Can attack units with attack immunity normally, but not untargetable units. Gunslinger notes apply."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Muerta's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden Innate Abilities with various functions"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Dead Shot",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Trees",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "16/14/12/10",
+        "mana_cost": "100/120/140/160",
+        "cast_range": "1000",
+        "cast_animation": "0.15 + 0.9",
+        "cast_radius": "150",
+        "details": "Fires a ghostly trickshot at an enemy unit or tree. When the bullet strikes, it damages and briefly slows, then ricochets in the targeted direction.",
+        "description": "A steady gunhand and an eternity of practice produce trickshots that defy the mortal mind.",
+        "facet_effects": {
+          "quickdraw": "Reduces cooldown by 1s per Gunslinger proc"
+        },
+        "ability_behavior": ["unit_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Initial Bullet Damage: 100/175/250/325",
+          "Ricochet Damage: 100/175/250/325",
+          "Move Speed Slow: 100%",
+          "Slow Duration: 1",
+          "Fear Duration: 0.8/0.95/1.1/1.25"
+        ],
+        "interaction_notes": [
+          "Procs Spell Block sources on the initial target only",
+          "Destroying the target tree disjoints the first projectile"
+        ]
+      },
+      "ability_2": {
+        "name": "The Calling",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "30",
+        "mana_cost": "140/155/170/185",
+        "cast_range": "580",
+        "cast_animation": "0.1 + 1.23",
+        "cast_radius": "340",
+        "details": "Summons a group of revenants that slowly circle the area-targeted location. Applies a movement speed slow to affected enemies within the radius.",
+        "description": "Muerta's family are forever beyond the spirit veil, but her deal with Death allows her to briefly call on them in times of want or need.",
+        "facet_effects": {
+          "dance_of_the_dead": "Enemy heroes killed within the proximity of a Revenant refresh duration and summons another revenant"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Revenants: 4",
+          "Revenant Damage: 45/90/135/180",
+          "Move Speed Slow: 20%",
+          "Silence Duration: 1.5/2/2.5/3",
+          "Aura Duration: 5/6/7/8"
+        ],
+        "interaction_notes": [
+          "Revenants deal damage and silence enemies as they pass through them",
+          "Creates a negative aura applying movement speed slow"
+        ]
+      },
+      "ability_3": {
+        "name": "Gunslinger",
+        "key": "E",
+        "type": "toggle/passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Instant Attack",
+        "damage_types": ["Physical"],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "750",
+        "cast_animation": "0 + 0",
+        "cast_radius": "750",
+        "details": "When activated, Muerta's attacks have a chance to fire a second shot at another target.",
+        "description": "Muerta offers all of her victims Mercy. Some are fortunate enough to also earn Grace.",
+        "facet_effects": {
+          "quickdraw": "Proc chance increases to 1.5x base chance for 5s whenever an enemy is feared"
+        },
+        "ability_behavior": ["toggle", "passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Proc Chance: 18%/27%/36%/45%",
+          "Instant Attack Radius: 750",
+          "Bonus Attack Targets: 1"
+        ],
+        "interaction_notes": [
+          "Buildings are not considered as valid secondary targets while in Corporeal Form",
+          "Uses pseudo-random distribution",
+          "Prioritizes heroes, then non-hero units, then buildings"
+        ]
+      },
+      "ability_4": {
+        "name": "Pierce the Veil",
+        "key": "R",
+        "type": "active/passive",
+        "affects": "Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "75/60/45",
+        "mana_cost": "150/250/350",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Muerta transforms and is immune to all physical damage instances. Her attack damage is now dealt as magical damage. Grants flat bonus attack damage and phase movement.",
+        "description": "Muerta sheds her corporeal form, crossing the spirit veil and striking her enemies with the fury of the damned.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Transform Time: 0.35",
+          "Attack Damage Bonus: 70/100/130",
+          "Duration: 8",
+          "Spell Lifesteal Bonus (Shard): 30%"
+        ],
+        "interaction_notes": [
+          "Grants attack immunity and ethereal status",
+          "Cannot attack buildings while active",
+          "Changes all outgoing attack damage to magical spell damage"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "REMOVED Ofrenda facet",
+          "ADDED Quickdraw facet to Dead Shot - Applies a 5-second 1.5 proc chance factor to Gunslinger whenever an enemy is feared",
+          "ADDED Quickdraw facet to Gunslinger - Reduces Dead Shot cooldown by 1 per Gunslinger proc",
+          "Talents: LVL 20 2 Dead Shot charges → +2s Pierce the Veil duration",
+          "Talents: LVL 25 +25% magic resistance → 2 Dead Shot charges"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased Ofrenda attack speed bonus from 15/25/35/45 to 20/30/40/50"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "The Calling no longer applies 30/40/50/60 attack speed slow within the radius"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

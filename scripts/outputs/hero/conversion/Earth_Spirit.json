@@ -1,0 +1,294 @@
+{
+  "hero_name": "Earth Spirit",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 22,
+      "strength_gain": 3.8,
+      "agility": 17,
+      "agility_gain": 2.4,
+      "intelligence": 18,
+      "intelligence_gain": 2.1,
+      "health": 604,
+      "mana": 291,
+      "armor": 2.83,
+      "magic_resist": "26.8%",
+      "damage": [47, 57],
+      "damage_avg": 52,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.65",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Nuker, Escape, Disabler, Initiator, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Resonance",
+        "effects": "Magnetize now grants self bonus attack damage whenever an enemy unit is affected by the debuff."
+      },
+      "facet_2": {
+        "name": "Stepping Stone",
+        "effects": "Stone Remnant is no longer a charge-based ability, and has a shorter duration with a cooldown. -40 Remnant Duration. Rolling Boulder no longer destroys the Stone Remnant it collided with, and refreshes Stone Remnant's cooldown when the roll ends."
+      },
+      "facet_3": {
+        "name": "Ready to Roll",
+        "effects": "Rolling Boulder over an allied hero causes Earth Spirit to travel even further and faster, while granting the allied hero bonus movement speed. Applies a stun duration bonus akin to rolling over a Stone Remnant toward enemy units as well. +2.5× Ally Roll Distance Factor"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Enchant Remnant ability", "Temporarily enchants a hero, granting them the properties of a Stone Remnant", "After a short duration the remnant shatters, releasing the hero and damaging nearby enemies"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Geomagnetic Grip can now target other allied units"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-3s Boulder Smash Cooldown", "Magnetize Cannot Be Dispelled"],
+        "level_20": ["+180 Rolling Boulder Damage", "+30% Magnetize Damage/Duration"],
+        "level_15": ["+80 Boulder Smash Damage", "+0.3s Rolling Boulder Stun Duration"],
+        "level_10": ["+150 Rolling Boulder Distance", "-3s Geomagnetic Grip Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Stone Remnant",
+          "type": "active",
+          "description": "Call a Stone Remnant to the target location. Stone Remnants have no vision and are invulnerable, and interacts with all Earth Spirit's abilities. Gains additional charges whenever Earth Spirit levels up to certain levels.",
+          "values": {
+            "cast_range": 1100,
+            "level_per_charge_increase": 5,
+            "remnant_duration": 60,
+            "stone_distance": 100,
+            "cooldown": 18,
+            "charges": "7/8/9/10/11/12/13",
+            "mana_cost": 0
+          },
+          "details": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Boulder Smash",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "22/18/14/10",
+        "mana_cost": 100,
+        "cast_range": 150,
+        "cast_animation": "0 + 0",
+        "cast_radius": "180",
+        "details": "Smashes the target enemy or allied unit, sending them in the direction he is facing. The traveling unit damages all enemy units it hits.",
+        "description": "It is with the power of a mountain that Earth Spirit strikes his enemies.",
+        "facet_effects": {
+          "scepter": "When Earth Spirit is an Enchanted Remnant, Boulder Smash is a non-targeted ability and automatically casts on himself. The ability now considers Earth Spirit as a Stone Remnant."
+        },
+        "ability_behavior": ["point_target", "unit_target", "no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: 180",
+          "Damage: 110/180/250/320",
+          "Push Distance: 500/600/700/800",
+          "Stone Push Distance: 2000",
+          "Enemy Move Speed Slow: 50%",
+          "Enemy Slow Duration: 1.25/2.5/3.25/4"
+        ],
+        "interaction_notes": [
+          "If Earth Spirit targets an area, he will smash the nearest unit within the radius, prioritizing Stone Remnants",
+          "The traveling Stone Remnant damages all enemy units it hits",
+          "If an enemy is hit by a Stone Remnant, they are also slowed",
+          "Stone Remnants travel further than other units"
+        ]
+      },
+      "ability_2": {
+        "name": "Rolling Boulder",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "16/12/8/4",
+        "mana_cost": 50,
+        "cast_range": 3000,
+        "cast_animation": "0 + 0",
+        "cast_radius": "160",
+        "details": "Gathers himself into a boulder and rolls toward the target location after a slight delay, deals damage and stuns enemy units. Earth Spirit will stop if he collides with an enemy hero or when being disabled.",
+        "description": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
+        "facet_effects": {
+          "stepping_stone": "Rolling Boulder no longer destroys the Stone Remnant it collided with, and refreshes Stone Remnant's cooldown when the roll ends.",
+          "ready_to_roll": "Rolling Boulder over an allied hero causes Earth Spirit to travel even further and faster, while granting the allied hero bonus movement speed."
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Collision Radius: 160",
+          "Effect Radius: 160",
+          "Effect Delay: 0.6",
+          "Roll Distance: 750",
+          "Base Damage: 60/70/80/90",
+          "Str as Damage Factor: 1",
+          "Stun Duration: 0.3/0.5/0.7/0.9",
+          "Stone Roll Distance Factor: 2",
+          "Stone Speed Bonus: 600",
+          "Stun Duration Bonus: 0.3/0.5/0.7/0.9"
+        ],
+        "interaction_notes": [
+          "Rolling over a Stone Remnant causes Earth Spirit to travel further, faster, and stun enemy units for a longer duration",
+          "Cannot recast the ability while the Rolling Boulder modifier is active"
+        ]
+      },
+      "ability_3": {
+        "name": "Geomagnetic Grip",
+        "key": "E",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "13",
+        "mana_cost": 75,
+        "cast_range": "1000/1100/1200/1300",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "180",
+        "details": "Pulls the targeted allied or enemy unit. Enemy units struck by the pulled target will be silenced.",
+        "description": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
+        "facet_effects": {
+          "shard": "Geomagnetic Grip can now target other allied units."
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Effect Radius: 180",
+          "Pull Speed: 600",
+          "Silence Duration: 2/2.5/3/3.5",
+          "Stone Pull Speed: 900",
+          "Damage: 70/140/210/280",
+          "Radius: 350"
+        ],
+        "interaction_notes": [
+          "Enemy units struck by the gripped Stone Remnant will be silenced and damaged",
+          "The silence debuff of Geomagnetic Grip refreshes and spreads within the Magnetize radius"
+        ]
+      },
+      "ability_4": {
+        "name": "Enchant Remnant",
+        "key": "F",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "45",
+        "mana_cost": 150,
+        "cast_range": 175,
+        "cast_animation": "0.2 + 0.57",
+        "cast_radius": "450",
+        "details": "Temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies.",
+        "description": "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage Radius: 450",
+          "Damage: 450",
+          "Enchant Duration: 2.4",
+          "Ally Cast Range: 500",
+          "Stone Cast Cooldown: 5"
+        ],
+        "interaction_notes": [
+          "Has an extended cast range when cast on allied units",
+          "Can be cast on Stone Remnants, and has a lower cooldown when used that way",
+          "The Stone Remnant cannot expire while being Enchanted"
+        ]
+      },
+      "ability_5": {
+        "name": "Magnetize",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "100/90/80",
+        "mana_cost": 100,
+        "cast_range": "350",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "350",
+        "details": "Magnetizes enemy units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times.",
+        "description": "At the Earth Spirit's call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in.",
+        "facet_effects": {
+          "resonance": "Magnetize now grants self bonus attack damage whenever an enemy unit is affected by the debuff. Attack Damage Bonus: 40/80/120, Duration: 8"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: 350",
+          "Stone Search Radius: 600",
+          "Stone Refresh Radius: 600",
+          "Damage per Second: 45/85/125",
+          "Magnetize Duration: 6",
+          "Stone Duration Delay: 8",
+          "Move Speed Slow Duration Refresh: varies",
+          "Silence Duration Refresh: 2/2.5/3/3.5"
+        ],
+        "interaction_notes": [
+          "Stone Remnants that spread Magnetize has expires after a set duration",
+          "Earth Spirit can utilize the Magnetized Stone Remnants within the duration before it is destroyed",
+          "Heroes affected by the Magnetize debuff refreshes the Boulder Smash movement speed slow duration",
+          "Heroes affected by the Magnetize debuff refreshes the Geomagnetic Grip silence duration",
+          "The ability buff can now only be dispelled by death, rather than any dispel"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Rescaled Boulder Smash damage from 120/180/240/300 to 110/180/250/320",
+          "Talents: LVL 10 -2s Geomagnetic Grip cooldown increased to -3s",
+          "Talents: LVL 20 +160 Rolling Boulder damage increased to +180"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Boulder Smash creep damage factor from 1.25 to 1",
+          "Rolling Boulder Ready to Roll now grants self the movement speed bonus upon rolling over an allied hero",
+          "Increased Geomagnetic Grip damage from 50/125/200/275 to 70/140/210/280",
+          "Talents: LVL 10 +8% spell amplification → +150 Rolling Boulder distance",
+          "Talents: LVL 15 +110 Rolling Boulder damage → +80 Boulder Smash damage",
+          "Talents: LVL 15 +25% Magnetize damage/duration → +0.3s Rolling Boulder stun duration",
+          "Talents: LVL 20 +250 Rolling Boulder distance → +160 Rolling Boulder damage",
+          "Talents: LVL 20 +100 Boulder Smash damage → +30% Magnetize damage/duration",
+          "Talents: LVL 25 +0.5s Rolling Boulder stun duration → -3s Boulder Smash cooldown"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date":

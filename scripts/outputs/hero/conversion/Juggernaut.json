@@ -1,0 +1,247 @@
+{
+  "hero_name": "Juggernaut",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 20,
+      "strength_gain": 2,
+      "agility": 34,
+      "agility_gain": 2.8,
+      "intelligence": 14,
+      "intelligence_gain": 1.4,
+      "health": 560,
+      "mana": 243,
+      "armor": 5.67,
+      "magic_resist": 26.4,
+      "damage": [56, 58],
+      "damage_avg": 57,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 110,
+      "bat": 1.4,
+      "animation": "0.33 + 0.84",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Bladestorm",
+        "effects": "Blade Fury has a chance to deal additional magical spell damage per damage interval based on Blade Dance's critical strike values. This ability component levels up with Blade Dance."
+      },
+      "facet_2": {
+        "name": "Bladeform",
+        "effects": "Grants self bonus base agility and bonus movement speed when Juggernaut is not taking damage. Dispels the Bladeform buff upon taking a damage instance greater than or equal to the damage threshold."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Swiftslash ability", "Performs a short Omnislash of the corresponding level"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Increases Blade Fury radius", "Applies a movement speed slow to enemy units within the radius"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+50% Blade Dance Lifesteal", "+1s Omnislash Duration"],
+        "level_20": ["+90s Blade Fury Damage per Instance", "+2 Healing Ward Hit Count"],
+        "level_15": ["+40 Blade Fury Move Speed", "+1% Healing Ward Max Health as Health Regen"],
+        "level_10": ["+4% Duelist Damage Amp", "-12s Healing Ward Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Duelist",
+          "type": "passive",
+          "description": "Outgoing damage instances sourced to Juggernaut are amplified on enemy units facing the Juggernaut.",
+          "values": {
+            "effect_radius": "Global",
+            "enemy_facing_angle": "55°",
+            "damage_amp": "12% (16% with facet)"
+          },
+          "details": "The damage amplification is always applied during Omnislash-based abilities."
+        },
+        {
+          "name": "Bladeform",
+          "type": "passive",
+          "description": "Grants self bonus base agility and bonus movement speed when Juggernaut is not taking damage.",
+          "values": {
+            "stack_timer": 2,
+            "max_stacks": 10,
+            "base_agi_bonus_per_stack": "2%",
+            "move_speed_bonus_per_stack": "1%",
+            "damage_timer": 2,
+            "damage_threshold": 0,
+            "buff_linger_duration": 2
+          },
+          "details": "Dispels the Bladeform buff upon taking a damage instance greater than or equal to the damage threshold."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Blade Fury",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "36/30/24/18",
+        "mana_cost": "105/110/115/120",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "260 (360 with shard)",
+        "details": "Becomes debuff immune and deals damage to nearby enemy units in an interval corresponding to his attack speed. Applies a strong dispel at the end of the spin.",
+        "description": "Becomes debuff immune and deals damage to nearby enemy units in an interval corresponding to his attack speed. Applies a strong dispel at the end of the spin.",
+        "facet_effects": {
+          "bladestorm": "Has a chance to deal additional magical spell damage per damage interval based on Blade Dance's critical strike values"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Damage per instance: 40/45/50/55", "Attack speed to damage instance ratio: 2", "Duration: 5", "Attack damage reduction: 100%", "Magic resist bonus: 80%"],
+        "interaction_notes": ["Cannot be cast while Omnislash-based abilities are active", "Does not interrupt channeling abilities upon cast"]
+      },
+      "ability_2": {
+        "name": "Healing Ward",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "60 (48 with talent)",
+        "mana_cost": 120,
+        "cast_range": "350",
+        "cast_animation": "0.3 + 0.47",
+        "cast_radius": "400",
+        "details": "Summons a Healing Ward which heals nearby allied units a portion of their max health.",
+        "description": "Summons a Healing Ward which heals nearby allied units a portion of their max health.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Aura radius: 400", "Hit count: 1 (3 with talent)", "Max health as health regen bonus: 2%/3%/4%/5%", "Ward duration: 25", "Aura linger duration: 2.5"],
+        "interaction_notes": ["Multiple overlapping Healing Ward radius do not stack", "Attacks from all unit-types deal 1 damage to the Healing Ward"]
+      },
+      "ability_3": {
+        "name": "Blade Dance",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units / Self",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "0",
+        "details": "Grants Juggernaut a chance to deal critical damage on each attack. Grants Juggernaut's attacks lifesteal.",
+        "description": "Grants Juggernaut a chance to deal critical damage on each attack.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Proc chance: 35%", "Crit damage: 130%/150%/170%/190%", "Lifesteal: 50%", "Creep lifesteal factor: 0.6"],
+        "interaction_notes": ["Uses pseudo-random distribution", "Break does not disable the lifesteal component"]
+      },
+      "ability_4": {
+        "name": "Swiftslash",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Physical",
+        "damage_types": ["Physical", "Instant Attack"],
+        "cooldown": "25",
+        "mana_cost": 150,
+        "cast_range": "450",
+        "cast_animation": "0.3 + 0.5",
+        "cast_radius": "0",
+        "details": "Performs a short Omnislash of the corresponding level.",
+        "description": "Performs a short Omnislash of the corresponding level.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Duration: 1", "Blade Fury is inactive during Omnislash"],
+        "interaction_notes": ["Acquiring Aghanim's Scepter unlocks this ability", "Deals up 1 slash per 100 attack speed over the entire duration"]
+      },
+      "ability_5": {
+        "name": "Omnislash",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Physical",
+        "damage_types": ["Physical", "Instant Attack"],
+        "cooldown": "120",
+        "mana_cost": "200/275/350",
+        "cast_range": "450",
+        "cast_animation": "0.3 + 0.5",
+        "cast_radius": "425",
+        "details": "Leaps toward the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration.",
+        "description": "Leaps toward the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Search radius: 425", "Attack rate divisor: 1.5", "Instant attack factor: 1", "Attack damage bonus: 25/30/35", "Attack speed bonus: 40", "Duration: 3/3.25/3.5 (4/4.25/4.5 with talent)", "Check timer: 0.15"],
+        "interaction_notes": ["Applies basic dispel upon cast", "Grants invulnerable, root, spell immune, untargetable", "Cannot cast Blade Fury during Omnislash"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Blade Fury: CHANGED damage interval from (100 × CurrentBAT) / (ΣAS × 2) to flat 5 damage intervals per second",
+          "Blade Fury: Rescaled damage per interval from 40/45/50/55 per tick to 80/110/140/170 per second",
+          "Talents: LVL 20 -3s Blade Fury cooldown → +90 Blade Fury damage per second"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Omnislash search radius is no longer affected by area-of-effect sources"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Omnislash cast range from 350 to 450",
+          "Aghanim's Scepter upgrade: Increased Swiftslash cooldown from 20 to 25",
+          "Talents: LVL 10 -10s Healing Ward cooldown increased to -12s",
+          "Talents: LVL 20 +50% Blade Dance lifesteal on proc → +2 Healing Ward hit count",
+          "Talents: LVL 25 +2 Healing Ward hit count → +50% Blade Dance lifesteal on proc"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "hero_name": "Lion",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 18,
+      "strength_gain": 2.4,
+      "agility": 15,
+      "agility_gain": 1.7,
+      "intelligence": 19,
+      "intelligence_gain": 3.5,
+      "health": 516,
+      "mana": 303,
+      "armor": 2.5,
+      "magic_resist": 26.9,
+      "damage": [48, 54],
+      "damage_avg": 51,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 115,
+      "bat": 1.7,
+      "animation": "0.43 + 0.74",
+      "move_speed": 290,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Disabler, Nuker, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Essence Eater",
+        "effects": "Deals damage as the Demon Witch Mana Drain through arcane essence of the affected enemy units."
+      },
+      "facet_2": {
+        "name": "Fist of Death",
+        "effects": "The Finger of Death's infernal energy turns Lion into a melee unit upon cast, with attacks having melee behavior and cleaves briefly. Enemy heroes killed within the kill grace duration still grant permanent stacks."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["The Finger of Death now hits all enemy units within the radius", "Increases damage and reduces cooldown"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Mana Drain now affects additional enemies as Lion becomes debuff immune while channeling"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+250 Hex Radius", "+600 Earth Spike Cast Range/Travel Distance"],
+        "level_20": ["+2 Earth Spike Multishot", "+20 Finger of Death Damage per Kill"],
+        "level_15": ["+15% To Hell and Back Spell Damage Amp", "-2.5s Hex Cooldown"],
+        "level_10": ["+20 Move Speed", "+10% Mana Drain Slow"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "To Hell and Back",
+          "type": "passive",
+          "description": "Grants self bonus spell amplification and debuff duration amplification upon respawn.",
+          "values": {
+            "spell_damage_amp": "20% (35% with talent)",
+            "debuff_duration_factor": 1.2,
+            "duration": 90
+          },
+          "details": "Considers reincarnation sources as respawning. Lion's left arm has visible particles while the innate ability is active."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Earth Spike",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "14/13/12/11",
+        "mana_cost": "90/110/130/150",
+        "cast_range": "650 (1250 with talent)",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "140",
+        "details": "Travel Distance: 925 (1525 with talent), Number of Spikes: 1 (3 with talent), Damage: 105/170/235/300, Stun Duration: 1.3/1.6/1.9/2.2",
+        "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Has unit and point targeting functionalities", "When interrupted, applies landing effects at current location", "Spikes travel at 2000 speed"],
+        "interaction_notes": ["Forced movement no longer affects debuff immune targets", "Each spike can only affect same enemy units once"]
+      },
+      "ability_2": {
+        "name": "Hex",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Instant Kill",
+        "cooldown": "24/20/16/12 (21.5/17.5/13.5/9.5 with talent)",
+        "mana_cost": "125/150/175/200",
+        "cast_range": "575/600/625/650",
+        "cast_animation": "0 + 0.53",
+        "cast_radius": "250 (with talent)",
+        "details": "Set Move Speed: 120, Duration: 2/2.4/2.8/3.2, Current Health as Damage: 100%",
+        "description": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Sets base movement speed to 120", "Applies silence, mute, and disarm", "Changes selection box to hex model"],
+        "interaction_notes": ["Talent upgrade changes to area-targeted ability", "Procs spell block sources upon cast"]
+      },
+      "ability_3": {
+        "name": "Mana Drain",
+        "key": "E",
+        "type": "channeled",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "15/12/9/6",
+        "mana_cost": 0,
+        "cast_range": "850",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "1000 (1500 with shard)",
+        "details": "Max Channel Time: 5, Mana Transfer: 20/40/60/120, Move Speed Slow: 15%/20%/25%/30% (25%/30%/35%/40% with talent)",
+        "description": "Channels magical energy, drawing mana for himself and slowing the affected enemy unit.",
+        "facet_effects": {
+          "essence_eater": "Deals damage correspondingly to mana loss value"
+        },
+        "ability_behavior": ["unit_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Can target allied units to transfer mana", "Link breaks on death, fog, or distance", "Applies effects in 0.1-second intervals"],
+        "interaction_notes": ["Shard upgrade affects 2 additional enemies", "Grants debuff immunity while channeling with shard"]
+      },
+      "ability_4": {
+        "name": "Finger of Death",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "130/85/40 (90/60/30 with scepter)",
+        "mana_cost": "200/400/600",
+        "cast_range": "900",
+        "cast_animation": "0.3 + 0.5",
+        "cast_radius": "325 (with scepter)",
+        "details": "Effect Delay: 0.25, Damage: 600/725/850 (700/825/950 with scepter), Kill Grace Duration: 3, Damage Bonus per Kill: 40 (60 with talent)",
+        "description": "Rips at an enemy unit, trying to turn it inside-out with its massive infernal energy.",
+        "facet_effects": {
+          "fist_of_death": "Turns Lion into melee unit with cleave attacks after cast"
+        },
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Grows stronger with each kill", "Scepter upgrade hits all units in radius", "Grants permanent damage stacks"],
+        "interaction_notes": ["Fist of Death facet provides melee cleave", "Kill grace duration allows stack accumulation"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Finger of Death cooldown from 140/90/40 to 130/85/40",
+          "Aghanim's Scepter upgrade: Increased Finger of Death cooldown from 80/50/20 to 90/60/30"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Mana Drain no longer deals 100% illusion current health as damage upon cast",
+          "Talents: LVL 10 +65 Earth Spike damage → +20 movement speed",
+          "Talents: LVL 15 +70 max health per Finger of Death stack → +15% To Hell and Back spell damage amplification"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Reduced base intelligence from 20 to 19"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

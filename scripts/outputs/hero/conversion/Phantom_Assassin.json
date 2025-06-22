@@ -1,0 +1,227 @@
+{
+  "hero_name": "Phantom Assassin",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 19,
+      "strength_gain": 2,
+      "agility": 21,
+      "agility_gain": 3.4,
+      "intelligence": 15,
+      "intelligence_gain": 1.7,
+      "health": 538,
+      "mana": 255,
+      "armor": 4.5,
+      "magic_resist": 26.5,
+      "damage": [56, 58],
+      "damage_avg": 57,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 110,
+      "bat": 1.7,
+      "animation": "0.3 + 0.7",
+      "move_speed": 310,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Methodical",
+        "effects": "After a numbers of attacks on the same enemy hero, Coup de Grace grants the Deadly Focus buff with a higher critical strike factor. +100% Critical Damage Bonus"
+      },
+      "facet_2": {
+        "name": "Sweet Release",
+        "effects": "Stifling Dagger applies a stackable debuff on enemy units. When a debuffed unit dies, they release one weaker Stifling Dagger per stack at random enemy units around them."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Applies a basic dispel with an instant cast time",
+          "Any time Phantom Assassin gets a hero kill, all her basic abilities, except Blur, are refreshed",
+          "Reduces Blur's cooldown"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Fan of Knives ability"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Triple Stifling Dagger Strikes", "+10% Coup de Grace Chance / -1 Methodical Required Attacks"],
+        "level_20": ["+60 Phantom Strike Attack Speed", "+200 Phantom Strike Cast Range"],
+        "level_15": ["+15% Stifling Dagger Instant Attack Damage", "+15% Immaterial Evasion"],
+        "level_10": ["-1.5s Stifling Dagger Cooldown", "+0.5s Phantom Strike Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Blur",
+          "type": "passive",
+          "description": "When activated, Mortred is untargetable, invisible, and enemy units only see the assassin's sihoulette within their vision radius. Casting Mortred's own abilities do not break the invisibility.",
+          "values": {
+            "dispel_radius": "625/550/475/400",
+            "effect_delay": 0,
+            "dispel_delay": "0.4/0.6/0.8/1",
+            "move_speed_bonus": "3%/6%/9%/12%",
+            "untargetable_duration": 30,
+            "cooldown": "60/55/50/45",
+            "mana_cost": 50
+          },
+          "details": "This ability levels up with Coup de Grace. Meditation allows a Veiled Sister to carefully anticipate her opponents in combat."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Stifling Dagger",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Instant Attack / Physical",
+        "cooldown": "6",
+        "mana_cost": 30,
+        "cast_range": "700/850/1000/1150",
+        "cast_animation": "0.3 + 0.47",
+        "description": "Throws a dagger slowing the enemy unit's movement speed, dealing a portion of Mortred's attack damage as instant attack and applying attack modifiers.",
+        "values": {
+          "number_of_targets": 1,
+          "instant_attack_factor": "0.3/0.45/0.6/0.75",
+          "attack_damage_bonus": "65/70/75/80",
+          "move_speed_slow": "50%",
+          "slow_duration": "2.1/2.4/2.7/3"
+        },
+        "facet_effects": {
+          "methodical": "Stifling Dagger applies a number of Deadly Focus required attacks per hit unit. Deadly Focus Stacks: 2",
+          "sweet_release": "Stifling Dagger applies a stackable debuff on enemy units. When a debuffed unit dies, they release one weaker Stifling Dagger per stack at random enemy units around them. Debuff Duration: 6, Damage Factor: 50%, Slow Duration: 12.6/14.4/16.2/18"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "details": "The first skill learned by the Sisters of the Veil often signals an incoming hit."
+      },
+      "ability_2": {
+        "name": "Phantom Strike",
+        "key": "W",
+        "type": "active",
+        "affects": "Self",
+        "cooldown": "11/9/7/5",
+        "mana_cost": "35/40/45/50",
+        "cast_range": "650/750/850/950",
+        "cast_animation": "0.25 + 0.8",
+        "description": "Teleports to a unit, friendly or enemy, and grants bonus attack speed while attacking if it's an enemy unit.",
+        "values": {
+          "attack_speed_bonus": "100/130/160/190",
+          "duration": "2.5"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "details": "Mortred's silken veil is the last thing her unfortunate target sees."
+      },
+      "ability_3": {
+        "name": "Immaterial",
+        "key": "F",
+        "type": "passive",
+        "affects": "Self",
+        "description": "Grants Mortred evasion bonus.",
+        "values": {
+          "evasion": "20%/30%/40%/50%"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      },
+      "ability_4": {
+        "name": "Fan of Knives",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical",
+        "cooldown": 20,
+        "mana_cost": 80,
+        "cast_animation": "0.15 + 0.9",
+        "description": "Releases a fan of sharp blades around her. Breaks while dealing a percentage of the victim's max health on impact.",
+        "values": {
+          "radius": 550,
+          "max_health_as_damage": "28%",
+          "break_duration": 3
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "details": "A sister is generally given a single name, but powerful names often have plentiful allies."
+      },
+      "ability_5": {
+        "name": "Coup de Grace",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "description": "Mortred's attacks have a chance to proc the Deadly Focus buff, causing her next attack to be an ensured critical strike.",
+        "values": {
+          "proc_chance": "17%",
+          "crit_damage": "200%/300%/400%",
+          "buff_duration": "6/8/10",
+          "stifling_dagger_proc_chance": "34%"
+        },
+        "facet_effects": {
+          "methodical": "After a numbers of attacks on the same enemy hero, Coup de Grace grants the Deadly Focus buff with a higher critical strike factor. Required Attacks: 6, Crit Damage: 300%/400%/500%"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "details": "A divine strike, Mortred honors her opponent by choosing them for death."
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Phantom Strike cast range from 1000 on each level to 650/750/850/950"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Immaterial evasion per hero level from 1.5% to 1%",
+          "Stifling Dagger: Reduced slow duration from 2.2/2.8/3.4/4 to 2.1/2.4/2.7/3",
+          "ADDED the Sweet Release facet",
+          "Blur: The vanish component is no longer dispelled on attack by default",
+          "REMOVED the Veiled One facet",
+          "Coup de Grace: Reduced critical damage from 200%/325%/450% to 200%/300%/400%",
+          "Methodical: Reduced critical damage from 325%/450%/575% to 300%/400%/500%",
+          "Fan of Knives: Increased cooldown from 15 to 20, Increased mana cost from 50 to 80",
+          "Talents: LVL 10 -2s Stifling Dagger cooldown reduced to -1.5s, LVL 15 +200 Phantom Strike cast range → +15% Stifling Dagger instant attack damage, LVL 20 +20% Stifling Dagger instant attack damage → +200 Phantom Strike cast range"
+        ]
+      },
+      {
+        "version": "7.37",
+        "date": "2024-07-31",
+        "changes": [
+          "Blur: Now disjoint projectiles upon cast",
+          "Reduced cast point from 0.4 to 0.3"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

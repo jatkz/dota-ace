@@ -1,0 +1,238 @@
+{
+  "hero_name": "Lifestealer",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 23,
+      "strength_gain": 2.4,
+      "agility": 15,
+      "agility_gain": 1.9,
+      "intelligence": 15,
+      "intelligence_gain": 1.8,
+      "health": 626,
+      "mana": 255,
+      "armor": 3.5,
+      "magic_resist": 26.5,
+      "damage": [39, 45],
+      "damage_avg": 42,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.39 + 0.44",
+      "move_speed": 315,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Escape, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Fleshfeast",
+        "effects": "Increases Feast's max health gain per hero kill. +5/10/15/20 Max Health Bonus per Hero Kill. Resets Open Wounds' cooldown whenever a debuff-affected unit dies."
+      },
+      "facet_2": {
+        "name": "Gorestorm",
+        "effects": "Enables Infest casting on Ancient Creeps. Applies a damage per second debuff within the radius corresponding to the unit's remaining health upon a Consume cast. Additionally applies a damage per second debuff within the radius corresponding to the damage dealt to the enemy hero."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Enables casting Infest on enemy heroes. However, the affected enemy is not granted any of the ability bonuses.",
+          "Increases cast range, the health regeneration rate, and reduces cooldown."
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "If the infested unit is an enemy creep or a neutral creep, Lifestealer takes control of the unit's ability to move and attack.",
+          "The infested creep now loses a portion of their max health per second while being consumed from the inside.",
+          "Lifestealer consumes the affected enemy hero for a short duration, attacking them from the inside."
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1s Rage Duration", "+1% Feast Lifesteal/Damage"],
+        "level_20": ["+25% Open Wounds Lifesteal", "+15% Infest Ally Move Speed/Health"],
+        "level_15": ["+15% Open Wounds Slow", "+50 Ghoul Frenzy Attack Speed"],
+        "level_10": ["+3% Ghoul Frenzy Move Speed", "+4 All Stats"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Feast",
+          "type": "passive",
+          "description": "Deals damage and lifesteals for a percentage of the target's max health.",
+          "values": {
+            "max_health_as_lifesteal": "2%/2.25%/2.5%/2.75%",
+            "max_health_as_damage": "2%/2.25%/2.5%/2.75%",
+            "max_health_bonus_per_hero_kill": 10,
+            "max_health_bonus_per_creep_kill": 1,
+            "creep_max_health_deny_factor": 0.75
+          },
+          "details": "Feasts and grants itself a max health bonus stack per enemy hero killed. N'aix may deny allied creeps at a higher max health percentage than normal. Grants a lesser max health bonus stack per enemy creep killed. Cannot Feast on Roshan."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Rage",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "20/19/18/17",
+        "mana_cost": "80/100/120/140",
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Grants bonus magic resistance and debuff immunity for the entire duration.",
+        "description": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Interrupts Lifestealer's channeling abilities upon cast",
+          "Stacks multiplicatively with other magic resistance sources",
+          "Grants debuff immunity for the entire duration"
+        ],
+        "interaction_notes": []
+      },
+      "ability_2": {
+        "name": "Open Wounds",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "30/25/20/15",
+        "mana_cost": 100,
+        "cast_range": "300/400/500/600",
+        "cast_animation": "0.2 + 0.4",
+        "cast_radius": "",
+        "details": "Rends an enemy unit, slowing the affected target's movement speed and allowing all allied units to regain health for a percentage of the damage dealt to the target. Lifesteals from all damage instances dealt, including spell damage.",
+        "description": "Fresh wounds and the scent of blood often draw out the scavengers to finish the job.",
+        "facet_effects": {
+          "fleshfeast": "Resets Open Wounds' cooldown whenever a debuff-affected unit dies"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The affected enemy unit recovers its movement speed in a fixed number of intervals over the duration",
+          "Number of Instances: 8",
+          "Max Move Speed Slow: 35%/40%/45%/50%",
+          "Min Move Speed Slow: 7%/8%/9%/10%"
+        ],
+        "interaction_notes": []
+      },
+      "ability_3": {
+        "name": "Ghoul Frenzy",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "",
+        "details": "Grants self bonus movement speed and bonus attack speed.",
+        "description": "Distant memories of the Vile Council fuel one mind to plotting and the other to more immediate dark ends.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Move Speed Bonus: 2%/4%/6%/8%",
+          "Attack Speed Bonus: 30/50/70/90"
+        ],
+        "interaction_notes": []
+      },
+      "ability_4": {
+        "name": "Infest",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemy Heroes",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "80/65/50",
+        "mana_cost": "100/125/150",
+        "cast_range": "150",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "",
+        "details": "Infests the body of a target unit, becoming undetectable, and healing for a portion of his max health every second while inside. Does not work on enemy heroes.",
+        "description": "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power.",
+        "facet_effects": {
+          "gorestorm": "Enables Infest casting on Ancient Creeps"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Max Health as Health Regen Bonus: 3%/4%/5%",
+          "Target Max Health Bonus: 400/800/1200",
+          "Target Move Speed Bonus: 15%/20%/25%",
+          "Both Roshan and the Tormentor cannot be Infested"
+        ],
+        "interaction_notes": [
+          "Scepter: Enables casting Infest on enemy heroes, increases cast range to 500, health regeneration rate, and reduces cooldown to 20",
+          "Shard: Lifestealer consumes the affected enemy hero for a short duration, attacking them from the inside"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Increased Infest Gorestorm consumed unit remaining health to damage per second factor from 0.25 to 0.3"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced base strength from 25 to 23",
+          "Feast: Rescaled enemy max health as lifesteal from 1.5%/2%/2.5%/3% to 2%/2.25%/2.5%/2.75%",
+          "Feast: Rescaled enemy max health as damage from 1.5%/2%/2.5%/3% to 2%/2.25%/2.5%/2.75%",
+          "Infest: Reduced creep max health loss per second from 2%/1%/0% to 1.5%/0.75%/0%",
+          "Infest: The Gorestorm damage over time component can now be dispelled"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Feast Fleshfeast max health per hero kill from 10/15/20/25 to 5/10/15/20",
+          "Increased Open Wounds mana cost from 75 to 100"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

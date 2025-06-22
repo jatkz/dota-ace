@@ -1,0 +1,285 @@
+{
+  "hero_name": "Windranger",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 18,
+      "strength_gain": 2.6,
+      "agility": 17,
+      "agility_gain": 1.9,
+      "intelligence": 18,
+      "intelligence_gain": 3.2,
+      "health": 516,
+      "mana": 291,
+      "armor": 2.83,
+      "magic_resist": 26.8,
+      "damage": [47, 59],
+      "damage_avg": 53,
+      "projectile_speed": 1250,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 90,
+      "bat": 1.5,
+      "animation": "0.4 + 0.3",
+      "move_speed": 290,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Support, Disabler, Escape, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Tangled",
+        "effects": "Shackleshot now applies to all enemy units and trees behind the unit-targeted enemy within the search range. Each secondary enemy hero that Lyralei successfully shackels temporarily grants her bonus attack damage."
+      },
+      "facet_2": {
+        "name": "Killshot",
+        "effects": "The Powershot arrow instant kills enemy heroes below a certain max health threshold corresponding to its channel time."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants Lyralei an invisibility that does not break by attacking or casting any abilities, and reduces incoming physical attack damage taken while active."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Gale Force ability.", "Summons a strong wind that pulls all enemies in the area-targeted location toward the vector-targeted direction."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-18s Focus Fire Cooldown per Kill", "Windrun Cannot Be Dispelled"],
+        "level_20": ["-10% Focus Fire Damage Reduction", "+0.75s Shackleshot Duration"],
+        "level_15": ["-15% Powershot Damage Reduction", "-2s Windrun Cooldown"],
+        "level_10": ["+25 Easy Breezy Min Move Speed", "+1s Powershot Slow Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Easy Breezy",
+          "type": "passive",
+          "description": "Increases the max movement speed cap, and Lyralei cannot be slowed below a minimum movement speed.",
+          "values": {
+            "set_min_move_speed": "240 (265 with talent)",
+            "max_move_speed": "600 (625 with talent)"
+          },
+          "details": "Leash sources have precedence over min movement speed sources."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Shackleshot",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "16/14/12/10",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "800",
+        "cast_animation": "0.15 + 0.45",
+        "cast_radius": "575",
+        "details": "Shackles the targeted-unit to another enemy unit or tree in a line directly behind it.",
+        "description": "Windranger's variety of bow skills includes an arrow with thick ropes attached to encumber any escaping target.",
+        "facet_effects": {
+          "tangled": {
+            "max_shackle_targets": "unlimited",
+            "attack_damage_bonus_per_hero": 40,
+            "buff_duration": "3/4/5/6",
+            "creep_damage_bonus_factor": 0.5
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The projectile searches for a valid and furthest enemy unit or furthest tree within 46° at the unit-targeted enemy's opposite side",
+          "The search area-of-effect is triangle-shaped, with line having a 575-height",
+          "Has 1650 projectile speed"
+        ],
+        "interaction_notes": [
+          "Nullifies the ability with Spell Block",
+          "Does not proc Spell Block sources on secondary affected targets"
+        ]
+      },
+      "ability_2": {
+        "name": "Powershot",
+        "key": "W",
+        "type": "channeled",
+        "affects": "Enemy Units",
+        "damage": "spell",
+        "damage_types": ["magical"],
+        "cooldown": "12/11/10/9",
+        "mana_cost": 100,
+        "cast_range": "3000",
+        "cast_animation": "0 + 0",
+        "cast_radius": "125",
+        "details": "Charges her bow up briefly for a single powerful shot. The longer the charge, the potent the arrow fired. The arrow damages and slows all enemy units along its path. Reduces damage by a factor per enemy unit hit.",
+        "description": "During her early years of training, Lyralei learned to fire powerful arrows that cleaved even trees to reach their targets on the other side.",
+        "facet_effects": {
+          "killshot": {
+            "min_kill_threshold": "5%",
+            "max_kill_threshold": "9%/10%/11%/12%"
+          }
+        },
+        "ability_behavior": ["point_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max Channel Time: 1",
+          "Max Damage: 170/270/370/470",
+          "Damage Factor per Hit: 0.85 (1 with talent)",
+          "Max Move Speed Slow: 20%/25%/30%/35%",
+          "Slow Duration: 4 (5 with talent)"
+        ],
+        "interaction_notes": [
+          "Affects units up to 3125 range away",
+          "Grants flying vision as projectile travels",
+          "Destroys trees within 50-radius of projectile"
+        ]
+      },
+      "ability_3": {
+        "name": "Windrun",
+        "key": "E",
+        "type": "active",
+        "affects": "Self",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "15/14/13/12 (13/12/11/10 with talent)",
+        "mana_cost": 50,
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Grants self movement speed bonus and absolute evasion, evading all incoming physical attacks.",
+        "description": "Lyralei enchants gusts of winds to flight incoming attacks.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Evasion: 100%",
+          "Move Speed Bonus: 60%",
+          "Duration: 3/4/5/6",
+          "Scepter: Fade Time: 0.2, Damage Reduction: 45%, Invisibility Duration: 3/4/5/6"
+        ],
+        "interaction_notes": [
+          "Interrupts channeling abilities upon cast",
+          "With Scepter: invisibility does not break by attacking or casting abilities"
+        ]
+      },
+      "ability_4": {
+        "name": "Gale Force",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "30",
+        "mana_cost": 100,
+        "cast_range": "1200",
+        "cast_animation": "0.2 + 0.47",
+        "cast_radius": "900",
+        "details": "Summons a strong wind that pulls all enemies in the area-targeted location toward the vector-targeted direction.",
+        "description": "At last Lyralei has learned to call upon the might of her true birthright.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Push Speed: 240",
+          "Duration: 3.5",
+          "Aura Linger Duration: 0.5",
+          "Requires Aghanim's Shard to unlock"
+        ],
+        "interaction_notes": [
+          "Creates a negative aura that applies non-disabling pull",
+          "Does not grant unobstructed movement",
+          "Roshan and Tormentor are immune to forced movement"
+        ]
+      },
+      "ability_5": {
+        "name": "Focus Fire",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemy Unit",
+        "damage": "none",
+        "damage_types": [],
+        "cooldown": "70/50/30",
+        "mana_cost": "75/100/125",
+        "cast_range": "600",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Grants self a massive attack speed bonus against a single enemy unit or enemy building, while sacrificing a portion of her own attack damage. Does not reduce the potency of attack modifier sources or on-hit effects.",
+        "description": "Lyralei's ability to bombard opponents with a flurry of arrows is unparalleled - even at the expense of accuracy.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Attack Speed Bonus: 350/425/500",
+          "Self Attack Damage: 0.75 (0.85 with talent)",
+          "Duration: 20",
+          "Cooldown Skip on Target Death: 18 seconds (with talent)"
+        ],
+        "interaction_notes": [
+          "Cast range equals hero attack range",
+          "Cannot be cast on hidden, invulnerable, or ward-type units",
+          "Allows movement while auto-attacking target"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Shackleshot Tangled: Increased attack damage bonus per hero from 12/20/28/36 to 40 on each level",
+          "Shackleshot Tangled: Reduced buff duration from 6 on each level to 3/4/5/6",
+          "Increased Powershot cast range from 2600 to 3000",
+          "Increased Focus Fire self attack damage factor 0.7 to 0.75",
+          "Gale Force: Reduced cast range from 1500 to 1200",
+          "Gale Force: Reduced radius from 1000 to 900"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased base attack damage from 21–33 to 24–36",
+          "Powershot Killshot instant kill ability component no longer interacts with damage negation sources and min health sources"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Increased agility gain from 1.7 to 1.9",
+          "Increased Shackleshot stun duration from 1.6/2.1/2.6/3.1 to 1.75/2.25/2.75/3.25"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 500000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

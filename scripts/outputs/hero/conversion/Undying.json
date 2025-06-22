@@ -1,0 +1,249 @@
+{
+  "hero_name": "Undying",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 22,
+      "strength_gain": 2.4,
+      "agility": 10,
+      "agility_gain": 1.2,
+      "intelligence": 27,
+      "intelligence_gain": 2.8,
+      "health": 604,
+      "mana": 399,
+      "armor": 2.67,
+      "magic_resist": 27.7,
+      "damage": [55, 63],
+      "damage_avg": 59,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Durable, Disabler, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Rotting Mitts",
+        "effects": "The Flesh Golem additionally summons a short-lived Undying Zombie of its corresponding level per successful attack."
+      },
+      "facet_2": {
+        "name": "Ripped",
+        "effects": "Casting Soul Rip on allied heroes temporarily grants them bonus strength based on Undying's current strength."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Increases the strength steal"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Tombstone can now be cast on allied heroes, entombing them temporarily in the process",
+          "An empty Tombstone can be right-clicked by Undying or his allies to enter it manually",
+          "Stuns the allied hero if the Tombstone is destroyed with the ally inside"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+6 Tombstone Hit Count", "+50% Flesh Golem Strength Bonus"],
+        "level_20": ["-2s Decay Cooldown", "Tombstone On Death"],
+        "level_15": ["+10 Soul Rip Damage/Heal", "+20 Zombie Base Attack Damage"],
+        "level_10": ["-15s Tombstone Cooldown", "+40 Decay Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Ceaseless Dirge",
+          "type": "passive",
+          "description": "Instantly respawns in the fountain upon Undying's death after the effect delay.",
+          "values": {
+            "effect_delay": 2,
+            "init_cooldown": 479
+          },
+          "details": "Undying respawns at the Fountain after the effect delay. Reincarnation sources have precedence over this innate ability."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The Dirge's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Transforming back from the Flesh Golem to the Dirge upon death is innate for the Dirge."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Decay",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "13/10/7/4",
+        "mana_cost": 100,
+        "cast_range": "650",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "325",
+        "details": "Reduces strength from all enemy heroes and deals damage within the radius.",
+        "description": "The strength of the living is simply borrowed from the strength of the dead.",
+        "facet_effects": {
+          "scepter_upgrade": "Increases the strength steal"
+        },
+        "ability_behavior": ["area"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "All ability effects are applied immediately despite the ability visual effects",
+          "Can affect enemy units at max 975-distance away with the cast range and effect radius",
+          "Both the buff and debuff stacks are applied independently"
+        ],
+        "interaction_notes": [
+          "Cannot reduce the debuff-affected unit's strength below 0",
+          "Considers clones and the Spirit Bear as heroes, illusions as creeps"
+        ]
+      },
+      "ability_2": {
+        "name": "Soul Rip",
+        "key": "W",
+        "type": "active",
+        "affects": "Units / Tombstone",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "18/14/10/6",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "750",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "1300",
+        "details": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy.",
+        "description": "Even allies feel despair in Undying's presence.",
+        "facet_effects": {
+          "ripped": "Casting Soul Rip on allied heroes temporarily grants them bonus strength based on Undying's current strength"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The search radius is centered on Undying while targeting other units within its cast range",
+          "Restores a set hit count on the allied Tombstone regardless of the amount of affected units"
+        ],
+        "interaction_notes": [
+          "Doubletap casts the ability on Undying",
+          "Cannot be cast on Undying Zombie or other ward-type units"
+        ]
+      },
+      "ability_3": {
+        "name": "Tombstone",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Allied Heroes",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "80",
+        "mana_cost": "120/140/160/180",
+        "cast_range": "500",
+        "cast_animation": "0.6 + 0",
+        "cast_radius": "1200",
+        "details": "Summons a Tombstone at the targeted point. Zombies will frequently spawn next to every enemy unit in the area around the Tombstone, and attack them.",
+        "description": "Dirge calls on his fallen brothers to fight for the Dead God.",
+        "facet_effects": {
+          "shard_upgrade": "Tombstone can now be cast on allied heroes, entombing them temporarily in the process"
+        },
+        "ability_behavior": ["point_target", "unit_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Creates Undying Zombies immediately within the radius, over 8/9/10/11 summon instances",
+          "Trees within 300-radius are destroyed centered around the Tombstone upon cast"
+        ],
+        "interaction_notes": [
+          "When point-targeted, summons a Tombstone at the targeted location",
+          "Talent upgrade passively erects an independent Tombstone upon Undying's death"
+        ]
+      },
+      "ability_4": {
+        "name": "Flesh Golem",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "125",
+        "mana_cost": "100/125/150",
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Undying transforms into a horrifying flesh golem that grants a percentage strength increase with flat bonus movement speed.",
+        "description": "The flesh of the recently dead add to the power of Dirge's plague.",
+        "facet_effects": {
+          "rotting_mitts": "The Flesh Golem additionally summons a short-lived Undying Zombie of its corresponding level per successful attack"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The transformation is instant and does not persist through death",
+          "Does not disjoint incoming projectiles",
+          "Checks and increases Undying's total strength per server tick"
+        ],
+        "interaction_notes": [
+          "Recasting Flesh Golem refreshes the duration and adapts the ability values correspondingly",
+          "Each successful attack applies a generic incoming damage amplification on the debuff-affected enemy"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased base attack damage from 31‒39 to 33‒41",
+          "Soul Rip: Rescaled damage per unit from 15/25/35/45 to 14/26/38/50",
+          "Soul Rip: Rescaled heal per unit from 15/25/35/45 to 14/26/38/50"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Decay damage from 10/50/90/130 to 20/60/100/140",
+          "Rescaled Soul Rip mana cost from 100 on each level to 80/90/100/110",
+          "Reduced Flesh Golem enemy movement speed slow from 35%/40%/45% to 30%/35%/40%",
+          "Talents: LVL 10 +50 Decay damage reduced to +40"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Increased Decay damage from 0/40/80/120 to 10/50/90/130"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 250000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

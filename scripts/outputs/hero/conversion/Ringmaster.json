@@ -1,0 +1,266 @@
+{
+  "hero_name": "Ringmaster",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2.1,
+      "agility": 13,
+      "agility_gain": 1.4,
+      "intelligence": 25,
+      "intelligence_gain": 3,
+      "health": 582,
+      "mana": 375,
+      "armor": 3.17,
+      "magic_resist": 27.5,
+      "damage": [48, 58],
+      "damage_avg": 53,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 0.93",
+      "move_speed": 310,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Escape, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Carny Classics",
+        "effects": "Sets Dark Carnival Souvenirs to Funhouse Mirror, Strongman Tonic and Whoopee Cushion."
+      },
+      "facet_2": {
+        "name": "Sideshow Secrets",
+        "effects": "Sets Dark Carnival Souvenirs to Crystal Ball, Unicycle and Weighted Pie."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Deals damage and releases Impalement Art daggers of its corresponding level with reduced range in all directions, centered around the affected allied unit."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants Ringmaster the Spotlight ability."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Escape Act Applies Strong Dispel / Escape Act Grants Unobstructed Movement", "+100 Wheel of Wonder Radius/Distance"],
+        "level_20": ["+75 Tame the Beasts Min Damage / +300 Tame the Beasts Max Damage", "+1s Impalement Arts Debuff/Slow Duration"],
+        "level_15": ["Tame the Beasts Grants Debuff Immunity", "+1 Impalement Arts Penetrate Target"],
+        "level_10": ["+75 Impalement Arts First Damage", "+75 Tame the Beasts Radius"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Dark Carnival Barker",
+          "type": "passive",
+          "description": "The Ringmaster receives a random single-use souvenir ability whenever an enemy hero dies within certain proximity of him. Additional souvenirs are held as charges.",
+          "values": {
+            "enemy_death_radius": 925,
+            "charge_per_respawn": 1
+          },
+          "details": "Grants a charge whenever Ringmaster respawns, including Reincarnation sources, if he does not have a Souvenir."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Tame the Beasts",
+        "key": "Q",
+        "type": "channeling",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "16/14/12/10",
+        "mana_cost": "90/105/120/135",
+        "cast_range": "700",
+        "cast_animation": "0 + 0",
+        "details": "Twirls his whip up to a certain duration then cracks it. The longer the channel time, the lesser the radius.",
+        "description": "Deals damage and applies a caster-fear on affected enemy units. The longer the channel time, the greater the damage and the fear duration.",
+        "values": {
+          "max_channel_time": 1,
+          "effect_delay": 0.2,
+          "start_radius": "450 (525)",
+          "end_radius": "200 (275)",
+          "min_damage": "45/70/95/120",
+          "max_damage": "180/280/380/480",
+          "min_fear_duration": "0.1/0.2/0.3/0.4",
+          "max_fear_duration": "0.6/0.8/1/1.2"
+        },
+        "ability_behavior": ["channeling", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      },
+      "ability_2": {
+        "name": "Escape Act",
+        "key": "W",
+        "type": "active",
+        "affects": "Allied Heroes",
+        "damage": "Spell / Magical",
+        "cooldown": "38/32/26/20",
+        "mana_cost": 80,
+        "cast_range": 600,
+        "cast_animation": "0.4 + 0",
+        "details": "Packs and transforms himself or an allied hero into a mobile, extradimensional box.",
+        "description": "Boxed units gain phased movement, slow resistance, bonus magic resistance, and bonus movement speed. They are also untargetable, muted, silenced, and disarmed. The untargetable box pops open after the effect expires or whenever the affected allied hero moves out of the radius.",
+        "values": {
+          "transformation_time": 0.5,
+          "ring_radius": 500,
+          "move_speed_bonus": "5%/10%/15%/20%",
+          "magic_resist_bonus": "50%/60%/70%/80%",
+          "slow_resist_bonus": "100%",
+          "duration": "2/2.4/2.8/3.2"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false
+      },
+      "ability_3": {
+        "name": "Impalement Arts",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": 17,
+        "mana_cost": "1/2/3/4",
+        "cast_range": 2400,
+        "cast_animation": "0.3 + 1.07",
+        "details": "Fires one of his daggers to a point-targeted location.",
+        "description": "Applies a brief movement speed slow and deals max health as damage if he strikes an enemy hero.",
+        "values": {
+          "projectile_width": 130,
+          "max_targets": "1 (2)",
+          "first_damage": "75 (150)",
+          "max_health_damage_per_second": "3.5%/4%/4.5%/5%",
+          "move_speed_slow": "100%",
+          "debuff_duration": "4 (5)",
+          "slow_duration": "0.8 (1.8)",
+          "damage_per_second_creeps": 100
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      },
+      "ability_4": {
+        "name": "Spotlight",
+        "key": "F",
+        "type": "active",
+        "affects": "Enemy Units / Illusions",
+        "damage": "Pure / HP Removal",
+        "cooldown": 50,
+        "mana_cost": 30,
+        "cast_range": 1500,
+        "cast_animation": "0.5 + 0.67",
+        "details": "Shines a few spotlights that sweep over an area.",
+        "description": "Enemy units within the spotlight have a chance to miss their attacks and are revealed if invisible.",
+        "values": {
+          "effect_radius": 275,
+          "miss_chance": "30%",
+          "duration": 8,
+          "aura_linger_duration": 0.3,
+          "number_of_spotlights": 3,
+          "damage_interval": 0.1,
+          "max_health_damage_per_interval": "5%",
+          "centerpoint_to_edge_distance": 450,
+          "peak_to_peak_amplitude": 450
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true
+      },
+      "ability_5": {
+        "name": "Wheel of Wonder",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "90/80/70",
+        "mana_cost": "175/275/375",
+        "cast_range": "1400 (1500)",
+        "cast_animation": "0.2 + 0.83",
+        "details": "Rolls the Wheel of Wonder to the point-targeted location, knocking aside enemy units along the way.",
+        "description": "The wheel sets up as it reaches its target, dealing damage over time and applies a movement speed slow within its radius.",
+        "values": {
+          "min_travel_distance": 700,
+          "knock_radius": 100,
+          "knock_distance": 100,
+          "knock_duration": 0.35,
+          "effect_radius": "500 (600)",
+          "damage_per_second": "50/75/100",
+          "move_speed_slow": "50%",
+          "aura_linger_duration": 0.5,
+          "enemy_facing_timer": 0.5,
+          "turn_rate_check": 0.25,
+          "enemy_facing_angle": "≈85°",
+          "pull_duration": "2.5/2.75/3",
+          "explosion_damage": "300/450/600",
+          "explosion_countdown": 3,
+          "stun_distance": 185,
+          "max_setup_duration": 4
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Sideshow Secrets: Increased Crystal Ball scan duration from 4 to 5",
+          "Sideshow Secrets: Increased Weighted Pie full vision regain duration from 2 to 3"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Dark Carnival Barker: CHANGED from granting a souvenir upon respawn to upon death if Ringmaster does not have a souvenir",
+          "Dark Carnival Barker: No longer grants souvenir upon death to Neutral creep and Roshan sources",
+          "Escape Act: Rescaled movement speed bonus from 5%/10%/15%/20% to 0%/8%/16%/24%",
+          "Escape Act: Increased mana cost from 80 to 120",
+          "Reduced Impalement Arts first damage from 75 to 50",
+          "Aghanim's Shard upgrade: Reduced Spotlight illusion max health as damage per interval from 5% to 3%",
+          "Talents: LVL 10 +200 Escape Act cast range → +75 Impalement Arts first damage"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Sideshow Secrets: Crystal Ball now indicates the exact position of each enemy hero within the radius without revealing their identity",
+          "Sideshow Secrets: Unicycle now has a 20-min damage threshold",
+          "Sideshow Secrets: Unicycle now has a 1.5-second min duration, and no longer gets knocked off from any damage for the duration after mounting the unicycle",
+          "Sideshow Secrets: Unicycle now can cast non-channeling abilities and Activate Runes without dismounting the unicycle",
+          "Sideshow Secrets: Weighted Pie now applies a 45% movement speed slow that gradually decreases over the debuff duration"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 250000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

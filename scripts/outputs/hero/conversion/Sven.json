@@ -1,0 +1,220 @@
+{
+  "hero_name": "Sven",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 23,
+      "strength_gain": 3.5,
+      "agility": 18,
+      "agility_gain": 2.2,
+      "intelligence": 16,
+      "intelligence_gain": 1.5,
+      "health": 626,
+      "mana": 267,
+      "armor": 3,
+      "magic_resist": 26.6,
+      "damage": [60, 62],
+      "damage_avg": 61,
+      "projectile_speed": 0,
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 110,
+      "bat": 1.9,
+      "animation": "0.4 + 0.3",
+      "move_speed": 325,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Disabler, Initiator, Durable, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Heavy Plate",
+        "effects": "Warcry additionally grants a physical damage barrier to all affected allied units upon cast."
+      },
+      "facet_2": {
+        "name": "Wrath of God",
+        "effects": "Grants Sven additional base attack damage per strength."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Increases cast range, the spell damage, enables casting on invulnerable targets, and transports Sven along the Storm Hammer",
+          "Applies a basic dispel on all enemy units within the radius upon projectile impact"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Warcry now passively grants armor to allied units within the radius",
+          "The ability's active buff can now only be dispelled upon Sven's death, rather than any dispel"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1s Storm Hammer Stun Duration", "+50% God's Strength Damage"],
+        "level_20": ["+8 Warcry Active Armor", "+20% God's Strength Slow Resist"],
+        "level_15": ["+25% Great Cleave Damage", "-12s God's Strength Cooldown"],
+        "level_10": ["+10% Vanquisher Damage", "+5s Warcry Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Vanquisher",
+          "type": "passive",
+          "description": "Applies an outgoing damage amplification to stunned enemy units.",
+          "values": {
+            "damage_amp": "20% (30% with Wrath of God facet)"
+          },
+          "details": "Applies a generic outgoing damage amplification on all damage types sourced to Sven on the stun-affected enemy unit."
+        },
+        {
+          "name": "Wrath of God",
+          "type": "passive",
+          "description": "Grants Sven additional base attack damage per strength.",
+          "values": {
+            "str_to_base_attack_damage_bonus": "0/0.3/0.4/0.5"
+          },
+          "details": "This ability levels up with God's Strength. Selecting the Wrath of God facet unlocks this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Storm Hammer",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "21/18/15/12",
+        "mana_cost": "110/115/120/125",
+        "cast_range": "600 (950 with Scepter)",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "250/270/290/310",
+        "details": "Effect Radius: 250/270/290/310, Damage: 80/160/240/320 (260/340/420/500 with Scepter), Stun Duration: 1/1.2/1.4/1.6 (2/2.2/2.4/2.6 with Scepter)",
+        "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Storm Hammer is a unit-targeted area-of-effect ability",
+          "Launches a 1000-speed projectile to the unit's area-targeted location",
+          "With Scepter: transports Sven along the Storm Hammer with Alt-Cast enabled"
+        ],
+        "interaction_notes": [
+          "Can affect enemy units at max 850/870/890/910 distance away",
+          "Grants non-lingering 225-radius flying vision as projectile travels"
+        ]
+      },
+      "ability_2": {
+        "name": "Great Cleave",
+        "key": "W",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical",
+        "damage_types": ["physical"],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "0",
+        "details": "First Width: 150, Distance: 200/500/600/700, End Width: 270/300/330/360, Cleave Damage: 50%/65%/80%/95% (75%/90%/105%/120% with talent)",
+        "description": "Sven cleaves all nearby enemy units with his attack.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Deals physical spell damage correspondingly to Sven's attack damage value",
+          "The total ability area-of-effect is an isosceles trapezoid in front of Sven",
+          "Stack independently with other cleave sources"
+        ],
+        "interaction_notes": [
+          "Does not proc cleave when attacking allied units",
+          "Does not damage Couriers",
+          "Neither proc nor damage Buildings or Ward-type units"
+        ]
+      },
+      "ability_3": {
+        "name": "Warcry",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Heroes / Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "40/35/30/25",
+        "mana_cost": "30/35/40/45",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "700",
+        "details": "Effect Radius: 700, Move Speed Bonus: 6%/9%/12%/15% (9%/12%/15%/18% with talent), Armor Bonus: 5/8/11/14 (13/16/19/22 with talent), Duration: 8 (13 with talent)",
+        "description": "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed.",
+        "facet_effects": {
+          "heavy_plate": "Additionally grants a physical damage barrier of 70/140/210/280 to all affected allied units upon cast"
+        },
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Interrupts Sven's channeling abilities upon cast",
+          "Grants flat bonus armor",
+          "With Shard: adds passive aura component with 1200 radius and 6 armor bonus"
+        ],
+        "interaction_notes": [
+          "Considers clones, illusions, and creep-heroes as heroes",
+          "With Shard: active buff can only be dispelled upon Sven's death"
+        ]
+      },
+      "ability_4": {
+        "name": "God's Strength",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "110/105/100 (98/93/88 with talent)",
+        "mana_cost": "100/125/150",
+        "cast_range": "0",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "0",
+        "details": "Attack Damage Bonus: 110%/150%/190% (160%/200%/240% with talent), Slow Resist Bonus: 30% (50% with talent), Duration: 35",
+        "description": "The rough strength grants bonus attack damage and slow resistance for the duration.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Grants flat bonus attack damage based on Sven's current main attack damage",
+          "Values are periodically checked and bonus values are updated immediately",
+          "Stacks multiplicatively with other slow resistance sources"
+        ],
+        "interaction_notes": [
+          "Has 422.5 (487.5 with talent) min movement speed while active"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

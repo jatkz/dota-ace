@@ -1,0 +1,301 @@
+{
+  "hero_name": "Disruptor",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2.4,
+      "agility": 15,
+      "agility_gain": 1.4,
+      "intelligence": 20,
+      "intelligence_gain": 2.9,
+      "health": 582,
+      "mana": 315,
+      "armor": 2.5,
+      "magic_resist": 27,
+      "damage": [47, 51],
+      "damage_avg": 49,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 625,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.5",
+      "move_speed": 295,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Disabler, Nuker, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Thunderstorm",
+        "effects": "Thunder Strike also hits all enemies within a fully formed Kinetic Field. Kinetic Field is Disruptor's third ability with the selected facet."
+      },
+      "facet_2": {
+        "name": "Kinetic Fence",
+        "effects": "Kinetic Fence is Disruptor's third ability with the selected facet. After a short formation time, creates a wall-barrier of kinetic energy that slows enemy units down to the point where they cannot pass through it."
+      },
+      "facet_3": {
+        "name": "Transferrence",
+        "effects": "Adds an active component to Electromagnetic Repulsion ability with allied unit-targeting functionality."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Mutes all affected enemy units' items for its duration"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Adds ground-targeting functionality, Thunder Strike lies dormant for short duration and attaches itself to first enemy unit that comes within the radius", "Increases cast range, the number of strikes, and the total duration"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+150 Static Storm Radius", "-12s Glimpse Cooldown"],
+        "level_20": ["+0.6s Thunder Strike Slow Duration", "+2s Kinetic Field Duration / +1 Kinetic Fence Charge"],
+        "level_15": ["+1.5s Static Storm Duration / +6 Static Storm Damage Instances", "+10% Glimpse Distance to Damage / +300 Glimpse Max Damage"],
+        "level_10": ["+15 Thunder Strike Damage per Strike", "+20 Move Speed"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Electromagnetic Repulsion",
+          "type": "passive",
+          "description": "Repulses and knocks all enemy units back within the radius, whenever the Stormcrafter accumulates a certain amount of damage taken.",
+          "values": {
+            "effect_radius": 400,
+            "damage_threshold": 250,
+            "knock_distance": 400,
+            "knock_duration": 0.2,
+            "damage_timer": 7,
+            "cooldown": 4
+          },
+          "details": "Safe harbor found inside the storm."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The Stormcrafter's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to activate."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Thunder Strike",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "18/15/12/9",
+        "mana_cost": "125/130/135/140",
+        "cast_range": "800 (1600 with Shard)",
+        "cast_animation": "0.05 + 0",
+        "cast_radius": "260",
+        "details": "Repeatedly strikes the unit with lightning. Exposes the affected enemy target, with each strike damaging nearby enemy units in a small radius, slowing both their movement and attack speeds for its duration.",
+        "description": "Repeatedly strikes the unit with lightning. Exposes the affected enemy target, with each strike damaging nearby enemy units in a small radius, slowing both their movement and attack speeds for its duration.",
+        "facet_effects": {
+          "thunderstorm": "Also hits all enemies within a fully formed Kinetic Field and increases slow duration"
+        },
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Number of Strikes: 4 (6 with Shard)",
+          "Damage per Strike: 25/55/85/115",
+          "Move Speed Slow: 100%",
+          "Attack Speed Slow: 100",
+          "Slow Duration: 0.4 (1 with Shard)",
+          "Strike Duration: 6 (11 with Shard)"
+        ],
+        "interaction_notes": [
+          "The unit-targeted damage and its radius damage component is independent of each other",
+          "Exposes the affected enemy unit, but does not grant True Sight over it",
+          "Grants a 3.34-second 450-radius flying vision at the affected enemy unit's last location"
+        ]
+      },
+      "ability_2": {
+        "name": "Glimpse",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell / Magical / Instant Kill",
+        "damage_types": ["magical"],
+        "cooldown": "24/22/20/18 (12/10/8/6 with talent)",
+        "mana_cost": "70/85/100/115",
+        "cast_range": "600/1000/1400/1800",
+        "cast_animation": "0.05 + 0.83",
+        "cast_radius": "",
+        "details": "Teleports the target hero back to where it was a few seconds ago. Deals damage to the affected enemy hero corresponding to its teleported distance as soon as it appears at the marked location.",
+        "description": "Teleports the target hero back to where it was a few seconds ago.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Lapsed Time: 4",
+          "Max Teleport Time: 1.8",
+          "Max Silence Duration: 1.8",
+          "Min Distance to Damage: 0",
+          "Max Distance to Damage: 1400",
+          "Min Damage: 25",
+          "Max Damage: 100/160/220/280 (400/460/520/580 with talent)",
+          "Distance to Damage Bonus Factor: 0.2/0.25/0.3/0.35 (0.3/0.35/0.4/0.45 with talent)"
+        ],
+        "interaction_notes": [
+          "Creates the Glimpse projectile from the affected unit's current position",
+          "Does not disjoint incoming projectiles",
+          "Applies Silence and issues a stop command",
+          "The teleportation instantly disintegrates regular illusions"
+        ]
+      },
+      "ability_3": {
+        "name": "Kinetic Field",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "20/18/16/14 (0/-2/-4/-6 with talent)",
+        "mana_cost": "70",
+        "cast_range": "900",
+        "cast_animation": "0.05 + 0",
+        "cast_radius": "350",
+        "details": "After a short formation time, creates a circular barrier of kinetic energy that manipulates affected enemy's movement speed to point where they cannot pass.",
+        "description": "After a short formation time, creates a circular barrier of kinetic energy that manipulates affected enemy's movement speed to point where they cannot pass.",
+        "facet_effects": {
+          "thunderstorm": "Thunder Strike also hits all enemies within a fully formed Kinetic Field"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Barrier Radius: 350",
+          "Aura Width: 70",
+          "Aura Radius: 420",
+          "Effect Delay: 1",
+          "Duration: 2.6/3.2/3.8/4.4 (4.6/5.2/5.8/6.4 with talent)",
+          "Set Base Move Speed: 120",
+          "Move Speed Slow per Distance: 4",
+          "Min Set Move Speed: 0.1"
+        ],
+        "interaction_notes": [
+          "1 second after cast, creates a 420-radius negative aura",
+          "Sets the affected units' movement speed accordingly to their proximity to the visible field barrier",
+          "Has to be facing the visible barrier and within the SetMS zones"
+        ]
+      },
+      "ability_4": {
+        "name": "Kinetic Fence",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "20/17/13/11",
+        "mana_cost": "50",
+        "cast_range": "1050",
+        "cast_animation": "0.05 + 0",
+        "cast_radius": "",
+        "details": "After a short formation time, creates a wall-barrier of kinetic energy that slows enemy units down to the point where they cannot pass through it.",
+        "description": "After a short formation time, creates a wall-barrier of kinetic energy that slows enemy units down to the point where they cannot pass through it.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Wall Length: 1200",
+          "Wall Width: 350",
+          "Effect Delay: 0.4",
+          "Duration: 2.6/3.2/3.8/4.4",
+          "Charges: 2 (3 with talent)"
+        ],
+        "interaction_notes": [
+          "Grants all charges immediately upon learning the ability",
+          "Facing direction-based"
+        ]
+      },
+      "ability_5": {
+        "name": "Static Storm",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "90/80/70",
+        "mana_cost": "125/175/225",
+        "cast_range": "800",
+        "cast_animation": "0.05 + 0",
+        "cast_radius": "550 (700 with talent)",
+        "details": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but gradually increases in power over the duration.",
+        "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but gradually increases in power over the duration.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: 550 (700 with talent)",
+          "Number of Intervals: 20 (26 with talent)",
+          "Max Damage per Second: 200/275/350",
+          "Duration: 6 (7.5 with talent)",
+          "Silence Duration: 6 (7.5 with talent)",
+          "Mute Duration: 6 (7.5 with talent and Scepter)"
+        ],
+        "interaction_notes": [
+          "Both the silence and mute are provided by an aura",
+          "The damage value per instance is an arithmetic progression over the entire duration",
+          "Increases by 3/4.125/5.25 damage per 0.3-second intervals"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Thunder Strike: Reduced slow duration from 0.4 to 0.3",
+          "Reduced Thunderstorm slow duration bonus from 0.4 to 0.3"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "ADDED the Transferrence facet to Electromagnetic Repulsion",
+          "Adds an active component to the ability with allied unit-targeting functionality",
+          "Thunder Strike Thunderstorm now also increases slow duration by 0.4",
+          "Aghanim's Shard upgrade: Reduced Thunder Strike dormant duration from 5 to 4",
+          "Talents: LVL 15 +1.5s Static Storm duration → +60 Static Storm max damage per second",
+          "LVL 20 +0.6s Thunder Strike slow duration → +150 Electromagnetic Repulsion effect radius/knockback distance",
+          "LVL 20 +2s Kinetic Field duration/+1 Kinetic Fence charge reduced to +1.5s Kinetic Field duration/+1 Kinetic Fence charge"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Thunder Strike: Increased strike radius from 240 to 260",
+          "Thunderstorm now strikes all enemy units within the Kinetic Field even when the unit-targeted enemy is outside of the field radius",
+          "Kinetic Fence: Reduced charge restore time from 20/18/16/14 to 20/17/13/11",
+          "Reduced mana cost from 70 to 50",
+          "Talents: LVL 10 +10 Thunder Strike damage per strike increased to +15",
+          "LVL 10 -3s Kinetic Field cooldown → +20 movement

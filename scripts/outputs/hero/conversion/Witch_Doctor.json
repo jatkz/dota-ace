@@ -1,0 +1,313 @@
+{
+  "hero_name": "Witch Doctor",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.1,
+      "agility": 13,
+      "agility_gain": 1.4,
+      "intelligence": 22,
+      "intelligence_gain": 3.1,
+      "health": 560,
+      "mana": 339,
+      "armor": 2.17,
+      "magic_resist": 27.2,
+      "damage": [48, 58],
+      "damage_avg": 53,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.5",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Cleft Death",
+        "effects": "Death Ward attacks multiple targets simultaneously with reduced damage. Deals lesser damage to the secondary target. +1 Max Attack Target Bonus, -5 Ward Attack Damage Reduction"
+      },
+      "facet_2": {
+        "name": "Malpractice",
+        "effects": "Applies a portion of the next Maledict current health loss as damage within the radius, upon the debuff-affected enemy unit's death. ×0.75 Next Current Health Loss to Damage Factor"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["The Death Ward's attacks now bounce between nearby enemy units"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Voodoo Switcheroo ability", "The Doctor turns into the Death Ward of its corresponding level while being hidden"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+45 Death Ward Damage", "+8s Maledict Duration +2 Maledict Intervals"],
+        "level_20": ["+1% Voodoo Restoration Max Health as Heal", "+75 Death Ward Attack Range"],
+        "level_15": ["+125 Maledict Radius", "+2 Paralyzing Cask Bounces"],
+        "level_10": ["+200 Health", "-25% Voodoo Restoration Mana per Second"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Gris-Gris",
+          "type": "passive",
+          "description": "Starts the game with a neutral consumable item — Gris-Gris. This can be consumed anytime to grant the stored gold to the Doctor.",
+          "values": {
+            "stored_gold_factor": 1,
+            "gold_increase_interval": 3,
+            "gold_increase_per_instance": 1,
+            "death_gold_loss_factor": 1
+          },
+          "details": "The stored gold passively increases per in-game interval. Gris-Gris also increases its selling cost based on the Doctor's gold lost value upon death."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The Doctor's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to activate"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Paralyzing Cask",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "20/18/16/14",
+        "mana_cost": "80/100/120/140",
+        "cast_range": "600",
+        "cast_animation": "0.2 + 0.52",
+        "cast_radius": "575",
+        "details": "Launches a cask that ricochets between enemy units, stunning and damaging those it hits",
+        "description": "Launches a cask that ricochets between enemy units, stunning and damaging those it hits",
+        "facet_effects": {
+          "bounce_distance": 575,
+          "number_of_bounces": "4/5/6/7 (6/7/8/9 with talent)",
+          "first_damage": "55/70/85/100",
+          "damage_increment_per_bounce": 20,
+          "stun_duration": 0.8
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "All projectiles bounce in 0.1-second intervals",
+          "First projectile has 1200-speed, subsequent bounces have 1000-speed",
+          "Can bounce on the same enemy unit after another enemy was hit between bounces",
+          "Cannot be disjointed"
+        ],
+        "interaction_notes": [
+          "Deals total 420/650/930/1260 magical spell damage before reductions",
+          "Considers clones, illusions and creep-heroes as heroes"
+        ]
+      },
+      "ability_2": {
+        "name": "Voodoo Restoration",
+        "key": "W",
+        "type": "toggle",
+        "affects": "Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "0",
+        "mana_cost": "35/40/45/50 per second",
+        "cast_range": "N/A",
+        "cast_animation": "0 + 0",
+        "cast_radius": "500/550/600/650",
+        "details": "Focuses his magic to heal nearby allied units, costing mana every second to keep the aura active",
+        "description": "Focuses his magic to heal nearby allied units, costing mana every second to keep the aura active",
+        "facet_effects": {
+          "radius": "500/550/600/650",
+          "heal_per_second": "20/30/40/50",
+          "aura_linger_duration": 0.5,
+          "max_health_as_heal": "1% with talent",
+          "mana_loss_per_second": "8/12/16/20 (6/9/12/15 with talent)"
+        },
+        "ability_behavior": ["toggle", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates aura centered around the Doctor",
+          "Loses mana in 0.33-second intervals",
+          "Automatically toggles off if not enough mana",
+          "Does not toggle off when disabled, hidden, or silenced"
+        ],
+        "interaction_notes": [
+          "Does not affect hidden or invulnerable units",
+          "Affects allied couriers"
+        ]
+      },
+      "ability_3": {
+        "name": "Maledict",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "105/110/115/120",
+        "mana_cost": "30/26/22/18",
+        "cast_range": "600",
+        "cast_animation": "0.35 + 0",
+        "cast_radius": "200 (325 with talent)",
+        "details": "Curses all enemy heroes within the radius, causing them to take a set amount of damage each second",
+        "description": "Curses all enemy heroes within the radius, causing them to take a set amount of damage each second",
+        "facet_effects": {
+          "radius": "200 (325 with talent)",
+          "damage_per_second": "15/20/25/30",
+          "duration": "12 (20 with talent)",
+          "proc_interval": 4,
+          "curse_instance": "3 (5 with talent)",
+          "current_health_loss_to_damage": "16%/24%/32%/40%",
+          "malpractice_effect_radius": 800,
+          "malpractice_damage": "12%/18%/24%/30%"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Checks affected heroes' current health 4 times for entire duration",
+          "Health loss to damage happens 0.1 seconds before proc interval",
+          "Malpractice facet releases projectile on debuff-affected enemy death"
+        ],
+        "interaction_notes": [
+          "Deals maximum 28 damage instances over entire duration",
+          "Curse damage procs on debuff immune targets",
+          "Only Malpractice component can be disjointed"
+        ]
+      },
+      "ability_4": {
+        "name": "Voodoo Switcheroo",
+        "key": "D",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "50",
+        "mana_cost": "200",
+        "cast_range": "N/A",
+        "cast_animation": "0.1 + 0.73",
+        "cast_radius": "N/A",
+        "details": "The Doctor turns into the Death Ward of its corresponding level while being hidden",
+        "description": "The Doctor turns into the Death Ward of its corresponding level while being hidden",
+        "facet_effects": {
+          "duration": 2.5,
+          "attack_speed_slow": 45
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Requires Aghanim's Shard to unlock",
+          "Levels up with Death Ward",
+          "Grants invulnerability and hidden status",
+          "Creates Death Ward at cast location"
+        ],
+        "interaction_notes": [
+          "Requires drafting Death Ward in Ability Draft",
+          "Uses Death Ward's ability values directly"
+        ]
+      },
+      "ability_5": {
+        "name": "Death Ward",
+        "key": "R",
+        "type": "channeled",
+        "affects": "Enemy Units",
+        "damage": "Attack/Pure/Spell/Pure",
+        "damage_types": ["Pure"],
+        "cooldown": "100/90/80",
+        "mana_cost": "200",
+        "cast_range": "500",
+        "cast_animation": "0.35 + 0",
+        "cast_radius": "N/A",
+        "details": "Summons a deadly ward to attack enemy heroes within its attack range",
+        "description": "Summons a deadly ward to attack enemy heroes within its attack range",
+        "facet_effects": {
+          "max_channel_time": 8,
+          "max_attack_targets": "1 (2 with Cleft Death facet)",
+          "accuracy": "50%",
+          "pure_attack_damage": "60/95/130 (105/140/175 with talent)",
+          "cleft_death_attack_damage_reduction": 5,
+          "cleft_death_secondary_damage_factor": 0.65,
+          "scepter_bounce_distance": 650,
+          "scepter_bounces": "unlimited"
+        },
+        "ability_behavior": ["point_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Ward has 135 health, 4.55 attacks per second",
+          "Cannot directly attack Roshan or Tormentor",
+          "Ward expires 5 seconds after channeling ends",
+          "Has phased movement and grants vision during grace period"
+        ],
+        "interaction_notes": [
+          "First target takes pure attack damage, bounces deal pure spell damage",
+          "Scepter allows bouncing between nearby enemies",
+          "Ward prioritizes nearest enemy heroes within attack range"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Paralyzing Cask now deals 20 magical spell damage per bounce",
+          "Paralyzing Cask bounces rescaled from 2/4/6/8 to 3/4/5/6",
+          "Paralyzing Cask creep damage factor reduced from 1.5 to 1",
+          "Paralyzing Cask first damage increased from 50 to 55/70/85/100",
+          "Removed Headhunter facet",
+          "Added Malpractice facet for Maledict"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Removed Voodoo Festeration facet",
+          "Talent changes: LVL 20 changed from +30% Maledict lost health as burst damage to +1% Voodoo Restoration max health as heal",
+          "Talent changes: LVL 25 changed from +2% Voodoo Restoration max health as heal to +8s Maledict duration"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Aghanim's Shard upgrade: Reduced Voodoo Switcheroo duration from 3 to 2.5"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

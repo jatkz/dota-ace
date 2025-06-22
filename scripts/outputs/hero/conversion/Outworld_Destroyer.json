@@ -1,0 +1,250 @@
+{
+  "hero_name": "Outworld Destroyer",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2.9,
+      "agility": 22,
+      "agility_gain": 1.6,
+      "intelligence": 30,
+      "intelligence_gain": 4.2,
+      "health": 582,
+      "mana": 435,
+      "armor": 4.67,
+      "magic_resist": 28,
+      "damage": [49, 61],
+      "damage_avg": 55,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 450,
+      "attack_speed": 100,
+      "bat": 1.9,
+      "animation": "0.46 + 0.54",
+      "move_speed": 315,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Obsidian Decimator",
+        "effects": "Grants the Harbinger a bonus max mana buff per Essence Flux proc."
+      },
+      "facet_2": {
+        "name": "Overwhelming Devourer",
+        "effects": "Applies a lesser duration Mana Allergy debuff on surviving enemy units affected by Astral Imprisonment that heals the Harbinger proportionally to the mana cost per enemy ability cast. Applies a Mana Allergy debuff on surviving enemy units affected by Sanity's Eclipse that heals the Harbinger proportionally to the mana cost per enemy ability cast."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Applies a strong dispel if the damage instance brings the Harbinger below a certain health threshold", "The Harbinger then constructs an Arcane Fortitude by consuming all of its current mana and granting itself an all damage barrier"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["The imprisoned allied unit is now visible, but untargetable instead. The affected allied unit cannot perform other actions except moving", "Deals damage to enemy units within the radius and increases max mana steal"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-60s Sanity's Eclipse Cooldown", "+1.5% Arcane Orb Damage"],
+        "level_20": ["+0.15 Sanity's Eclipse Mana Difference Multiplier", "+450 Health"],
+        "level_15": ["+0.8% of Current Mana as Movement Speed", "+8% Astral Imprisonment Enemy Max Mana Loss"],
+        "level_10": ["+200 Mana", "+100 Astral Imprisonment Cast Range"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Ominous Discernment",
+          "type": "passive",
+          "description": "Obsequious Deliberator grants the Harbinger flat bonus mana per intelligence.",
+          "values": {
+            "set_mana_bonus_per_int": 14.5
+          },
+          "details": "The innate ability has other alternative names on hover: Obnoxious Determinator, Obnubilated Delineator, Obstreperous Dissimilator, Obsequious Deliberator, Omniscient Desiderator, Ornery Deconstructor"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "The Harbinger's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {
+            "current_mana_to_move_speed_bonus": "0.8%"
+          },
+          "details": "The Harbinger is considered a ground unit, despite its hero model showing otherwise. Talent Upgrade grants the Harbinger bonus movement speed corresponding to its current mana."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Arcane Orb",
+        "key": "Q",
+        "type": "autocast/active attack modifier",
+        "affects": "Enemy Units",
+        "damage": "Spell/Pure",
+        "cooldown": "6/4/2/0",
+        "mana_cost": "20% × Current MP",
+        "cast_range": "400",
+        "cast_animation": "0.3 + 0.5",
+        "description": "Adds pure damage to attacks based on the current mana pool.",
+        "values": {
+          "current_mana_to_damage_factor": "0.1/0.11/0.12/0.13"
+        },
+        "facet_effects": {
+          "obsidian_decimator": "0.115/0.125/0.135/0.145"
+        },
+        "ability_behavior": ["autocast", "active_attack_modifier"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Checks the Harbinger's current mana values upon projectile impact", "Cannot be cast on Allied units, Buildings, Ward-type units"],
+        "interaction_notes": ["Non-functional nor is toggled on illusions", "Cannot acquire active attack modifiers via Spell Steal"]
+      },
+      "ability_2": {
+        "name": "Astral Imprisonment",
+        "key": "W",
+        "type": "unit target",
+        "affects": "Units",
+        "damage": "Spell/Magical",
+        "cooldown": "18/16/14/12",
+        "mana_cost": 150,
+        "cast_range": "650",
+        "cast_animation": "0.3 + 0.4",
+        "description": "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and steals a percentage of their max mana.",
+        "values": {
+          "damage": "90/180/270/360",
+          "max_mana_loss": "16%/18%/20%/22%",
+          "imprison_duration": "1.75/2.5/3.25/4",
+          "mana_steal_duration": "30/40/50/60",
+          "self_max_mana_bonus_factor": 1,
+          "ally_duration": "1.75/2.5/3.25/4"
+        },
+        "facet_effects": {
+          "overwhelming_devourer": {
+            "enemy_used_mana_to_heal_factor": 1,
+            "debuff_duration": 5
+          }
+        },
+        "shard_effects": {
+          "ally_move_speed_slow": "30%",
+          "cast_range_bonus": 100,
+          "max_mana_loss_bonus": "24%/26%/28%/30%"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["For the entire imprison duration, the affected hero is Disabled, Invulnerable, Hidden", "Reduces the affected enemy unit's max mana while retaining its current mana values"],
+        "interaction_notes": ["Disable Help on Harbinger prevents the ability from imprisoning the allied hero", "Doubletap casts the ability on Harbinger"]
+      },
+      "ability_3": {
+        "name": "Essence Flux",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self",
+        "description": "The Harbinger has a chance to restore a percentage of its max mana per ability cast.",
+        "values": {
+          "proc_chance": "30%",
+          "max_mana_restore": "25%/35%/45%/55%"
+        },
+        "facet_effects": {
+          "obsidian_decimator": {
+            "max_mana_bonus_per_stack": "5%",
+            "buff_duration": 10
+          }
+        },
+        "scepter_effects": {
+          "max_health_threshold": "20%",
+          "max_mana_to_barrier_factor": 0.65,
+          "duration": 15,
+          "downtime": 79
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Essence Flux uses pseudo-random distribution", "Restores mana from all active abilities, except item ability casts"],
+        "interaction_notes": ["Applies a strong dispel if the damage instance brings the Harbinger below a certain health threshold", "The Harbinger then constructs an Arcane Fortitude by consuming all of its current mana"]
+      },
+      "ability_4": {
+        "name": "Sanity's Eclipse",
+        "key": "R",
+        "type": "area target",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Magical",
+        "cooldown": "150/135/120",
+        "mana_cost": "200/300/400",
+        "cast_range": "700",
+        "cast_animation": "0.25 + 0.4",
+        "description": "Unleashes a psychic blast that deals damage to enemies based on the difference between the Harbinger's mana and the affected enemy's mana.",
+        "values": {
+          "effect_radius": "450/525/600",
+          "base_damage": "200/300/400",
+          "max_mana_difference_damage_factor": 0.4,
+          "illusion_damage_factor": 2
+        },
+        "facet_effects": {
+          "overwhelming_devourer": {
+            "enemy_used_mana_to_heal_factor": 1,
+            "debuff_duration": 7
+          }
+        },
+        "talent_effects": {
+          "level_25": "-60s cooldown",
+          "level_20": "+0.15 mana difference multiplier"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["The magical spell damage is defined as: SpellDmg = (BaseDmg + (SelfMaxMP Value - EnemyMaxMP Value) × 0.4) × IllusDmgFactor", "Affects Astral Imprisonment-affected units, regardless of factions"],
+        "interaction_notes": ["Fully affects enemy units under Astral Imprisonment", "The psychic blast is more effective while decimating these lesser images"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Talents: LVL 10 +250 mana reduced to +200",
+          "LVL 15 +1% of current mana to movement speed reduced to +0.8%",
+          "LVL 20 +0.2 Sanity's Eclipse max mana difference factor reduced to +0.15"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Essence Flux Obsidian Decimator max mana bonus per stack from 4% to 5%",
+          "Aghanim's Shard upgrade: No longer increases Astral Imprisonment max mana steal by 5%",
+          "Talents: LVL 10 +200 health → +100 Astral Imprisonment cast range",
+          "LVL 15 +1.5% of current mana to movement speed reduced to +1%",
+          "LVL 15 +125 Astral Imprisonment cast range → +8% Astral Imprisonment max mana steal",
+          "LVL 20 +15% spell lifesteal → +450 health"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Increased Ominous Discernment intelligence to flat bonus mana from 2 to 2.5"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 500000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

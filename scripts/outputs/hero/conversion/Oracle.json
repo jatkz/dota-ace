@@ -1,0 +1,297 @@
+{
+  "hero_name": "Oracle",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.2,
+      "agility": 15,
+      "agility_gain": 1.7,
+      "intelligence": 26,
+      "intelligence_gain": 3.6,
+      "health": 560,
+      "mana": 387,
+      "armor": 3.5,
+      "magic_resist": 27.6,
+      "damage": [39, 45],
+      "damage_avg": 42,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 625,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.7",
+      "move_speed": 295,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Clairvoyant Curse",
+        "effects": "Grants Nerif the Oracle bonus outgoing spell damage amplification per hero level (1% per level)"
+      },
+      "facet_2": {
+        "name": "Clairvoyant Cure",
+        "effects": "Grants Nerif the Oracle bonus outgoing heal amplification per hero level (0.75% per level)"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants invisibility with a fade delay (0.15s)", "Base attack time reduction (0.25)", "Bonus outgoing spell amplification (30%) for the duration"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Rain of Destiny ability", "Brings forth rain that damages and applies incoming heal reduction for enemies", "Heals and increases incoming heal amplification for allies"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1.5s False Promise Duration", "Fortune's End Constantly Basic Dispels"],
+        "level_20": ["-1s Purifying Flames Cooldown", "-20s False Promise Cooldown"],
+        "level_15": ["+25% Purifying Flames Enemy Damage", "+80 Fortune's End Heal/Damage per Debuff Dispelled"],
+        "level_10": ["+8 False Promise Armor", "+0.5s Fortune's End Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Prognosticate",
+          "type": "passive",
+          "description": "Accurately predicts where the next Power Rune will spawn",
+          "values": {},
+          "details": "Allied units can ping the buff on top of Oracle's HUD to print where the Power Rune will spawn"
+        },
+        {
+          "name": "Clairvoyant Curse",
+          "type": "passive",
+          "description": "Grants Nerif the Oracle bonus outgoing spell damage amplification per hero level",
+          "values": {
+            "spell_damage_amp_per_level": "1%"
+          },
+          "details": "Selecting the Clairvoyant Curse facet unlocks this ability"
+        },
+        {
+          "name": "Clairvoyant Cure",
+          "type": "passive",
+          "description": "Grants Nerif the Oracle bonus outgoing heal amplification per hero level",
+          "values": {
+            "heal_amp_per_level": "0.75%"
+          },
+          "details": "Selecting the Clairvoyant Cure facet unlocks this ability"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Fortune's End",
+        "key": "Q",
+        "type": "channeled",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "18/14/10/6",
+        "mana_cost": 100,
+        "cast_range": "850",
+        "cast_animation": "0 + 0",
+        "cast_radius": "350",
+        "details": "Gathers his power into a bolt of scouring energy. When released, it damages, roots, and dispel enemy units of buff within the radius. The potency of the root duration corresponds to the channel time.",
+        "description": "Gathers his power into a bolt of scouring energy. When released, it damages, roots, and dispel enemy units of buff within the radius.",
+        "facet_effects": {
+          "clairvoyant_curse": "Increased damage: 180/240/300/360",
+          "clairvoyant_cure": "Ally heal per debuff: 80"
+        },
+        "ability_behavior": ["unit_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max Channel Time: 2.5",
+          "Damage: 100/160/220/280",
+          "Min Root Duration: 0.75",
+          "Max Root Duration: 2.75"
+        ],
+        "interaction_notes": [
+          "The channeling can only be interrupted when Oracle is disabled",
+          "Applies basic dispel within radius on both enemy and allied units",
+          "Grants True Sight over affected enemy units"
+        ]
+      },
+      "ability_2": {
+        "name": "Fate's Edict",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "20/17/14/11",
+        "mana_cost": "95/100/105/110",
+        "cast_range": "700",
+        "cast_animation": "0.3 + 1.1",
+        "cast_radius": "N/A",
+        "details": "Enraptures an enemy unit and disarms them. When cast on allies, enraptures an allied unit and sets its magic resistance to the max value.",
+        "description": "Enraptures an enemy unit and disarms them.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Disarm Duration: 3.5/4/4.5/5",
+          "Set Magic Resist (allies): 100%",
+          "Duration (allies): 3.5/4/4.5/5"
+        ],
+        "interaction_notes": [
+          "Always applies oracle_fates_edict on targeted unit regardless of faction",
+          "Fortune's End always dispels the modifier"
+        ]
+      },
+      "ability_3": {
+        "name": "Purifying Flames",
+        "key": "E",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "2.5",
+        "mana_cost": 75,
+        "cast_range": "850",
+        "cast_animation": "0.1 + 1.15",
+        "cast_radius": "N/A",
+        "details": "Deals damage to the affected unit before causing them to heal over time.",
+        "description": "Deals damage to the affected unit before causing them to heal over time.",
+        "facet_effects": {
+          "clairvoyant_curse": "Damage: 112.5/225/337.5/450"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage: 90/180/270/360",
+          "Heal per Second: 15/25/35/45",
+          "Duration: 10",
+          "Ally Damage: 90/180/270/360"
+        ],
+        "interaction_notes": [
+          "Each stack places a new buff on the affected unit",
+          "Heals in 0.1-second intervals",
+          "Magical spell damage on allied units is non-lethal"
+        ]
+      },
+      "ability_4": {
+        "name": "Rain of Destiny",
+        "key": "D",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "40",
+        "mana_cost": 150,
+        "cast_range": "650",
+        "cast_animation": "0.2 + 1.07",
+        "cast_radius": "650",
+        "details": "Bring forth rain that damage and applies an incoming heal reduction for all affected enemy units within an area-targeted location. The rain heals and increases the grants incoming heal amplification for all affected allied units within the same radius.",
+        "description": "Bring forth rain that damage and applies an incoming heal reduction for all affected enemy units within an area-targeted location.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Radius: 650",
+          "Damage per Second: 30",
+          "Heal Reduction: 15%",
+          "Heal per Second: 30",
+          "Heal Amp: 15%",
+          "Duration: 10"
+        ],
+        "interaction_notes": [
+          "Acquiring Aghanim's Shard unlocks this ability",
+          "Creates two independent auras upon cast",
+          "Multiple overlapping Rain of Destiny damage and heal stack"
+        ]
+      },
+      "ability_5": {
+        "name": "False Promise",
+        "key": "R",
+        "type": "active",
+        "affects": "Allied Units / Self",
+        "damage": "Spell / Pure / HP Removal",
+        "damage_types": ["pure", "hp_removal"],
+        "cooldown": "110/85/60",
+        "mana_cost": "100/150/200",
+        "cast_range": "700/850/1000",
+        "cast_animation": "0.3 + 0.97",
+        "cast_radius": "N/A",
+        "details": "Applies a strong dispel on the affected allied hero upon cast. Delays certain health restoration sources and all incoming damage sources until the ability duration ends. Any healing that is delayed is doubled at the end of the duration.",
+        "description": "Applies a strong dispel on the affected allied hero upon cast. Delays certain health restoration sources and all incoming damage sources until the ability duration ends.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Health Regen Counter Factor: 2",
+          "Heal Counter Factor: 2",
+          "Damage Counter Factor: 1",
+          "Duration: 7/8.5/10",
+          "Scepter Fade Delay: 0.15",
+          "Scepter BAT Reduction: 0.25",
+          "Scepter Spell Damage Amp: 30%"
+        ],
+        "interaction_notes": [
+          "Grants strong dispel upon cast",
+          "Damage negation after most reductions",
+          "Does not negate instant kill sources",
+          "Considers clones, illusions, and creep-heroes as heroes"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced strength gain from 2.4 to 2.2",
+          "Rain of Destiny: Reduced heal reduction from 20% to 15%",
+          "Rain of Destiny: Reduced heal amplification from 20% to 15%"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Prognosticate: Now also prints the Power Rune type before spawning"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Rain of Destiny: Reduced damage per second from 35 to 30",
+          "Rain of Destiny: Reduced heal per second from 35 to 30",
+          "Talents: LVL 15 -1s Purifying Flames cooldown → +25% Purifying Flames damage against enemies",
+          "Talents: LVL 20 +30% Purifying Flames damage against enemies → -1s Purifying Flames cooldown"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

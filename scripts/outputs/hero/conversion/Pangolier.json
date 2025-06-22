@@ -1,0 +1,263 @@
+{
+  "hero_name": "Pangolier",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 19,
+      "strength_gain": 2.7,
+      "agility": 18,
+      "agility_gain": 3.2,
+      "intelligence": 16,
+      "intelligence_gain": 2.2,
+      "health": 538,
+      "mana": 267,
+      "armor": 5,
+      "magic_resist": 26.6,
+      "damage": [51, 57],
+      "damage_avg": 54.85,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.33 + 0.77",
+      "move_speed": 295,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Disabler, Durable, Escape, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Double Jump",
+        "effects": "Allows double jumping by activating Shield Crash again while airborne. Increases damage and the damage barrier value based on the total airborne time."
+      },
+      "facet_2": {
+        "name": "Thunderbolt",
+        "effects": "Rolling Thunder has increased speed and turn rate, but reduced duration. +115 Roll Speed, ×1.4 Set Turn Rate Factor, +115° Turn Rate Bonus, -1s Duration"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Donté Swashbuckles and quickly slashes 90° around himself upon a Shield Crash cast."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Roll Up ability.", "Curls into Donté's Gyroshell form. Grants debuff immunity and the ability to turn."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-15s Rolling Thunder Cooldown", "-4s Swashbuckle Cooldown"],
+        "level_20": ["+125 Shield Crash Radius/Damage", "+2s Rolling Thunder Duration"],
+        "level_15": ["+90 Shield Crash Barrier per Enemy", "+15% Attack Damage to Swashbuckle Damage"],
+        "level_10": ["+200 Swashbuckle Slash Range", "+4 Lucky Shot Armor Reduction"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Fortune Favors the Bold",
+          "type": "passive",
+          "description": "Offensive proc chance-based on-attack effects have a chance to do nothing on Pangolier within the radius.",
+          "values": {
+            "radius": 1200,
+            "proc_chance": "40%",
+            "aura_linger_duration": 0.5
+          },
+          "details": "If a percentage-based proc chance component is offensively applied on Pangolier, the proc chance may fail. Uses pseudo-random distribution."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Donté's hero model has hidden innate abilities. Besides attacking, Pangolier can perform any and all actions without requiring to be facing toward his targets.",
+          "values": {},
+          "details": "However, Pangolier still turns and uses his turn rate for all actions that require facing, except for unit-targeted items."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Swashbuckle",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Instant Attack / Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "21/18/15/12",
+        "mana_cost": "75/80/85/90",
+        "cast_range": "400/500/600/700",
+        "cast_animation": "0.15 + 0",
+        "cast_radius": "700 (900 with talent)",
+        "details": "Dashes along the point-targeted line, then slashes all enemy units in the vector-targeted direction.",
+        "description": "The Pangolier's blade is even nimbler than his tongue.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Immediately cancels Rolling Thunder upon cast",
+          "Does not disjoint incoming projectiles",
+          "During the dash and the 0.2-second slash duration, Pangolier cannot act",
+          "Sets Pangolier's main and bonus attack damage to the given values while active"
+        ],
+        "interaction_notes": [
+          "The instant attack component procs attack modifiers and on-cast effects as per normal",
+          "Has True Strike",
+          "Not affected by disarm sources",
+          "Does not proc damage block sources"
+        ]
+      },
+      "ability_2": {
+        "name": "Shield Crash",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical / Instant Attack",
+        "damage_types": ["Physical", "Spell"],
+        "cooldown": "18/16/14/12",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "225",
+        "cast_animation": "0 + 0",
+        "cast_radius": "500",
+        "details": "Jumps in the air and slams back to the ground in front of his current position, damaging and applying a movement speed slow within the radius.",
+        "description": "Only in the midst of his enemies does the Pangolier truly thrive.",
+        "facet_effects": {
+          "double_jump": "Allows double jumping by activating Shield Crash again while airborne. Increases damage and the damage barrier value based on the total airborne time."
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Interrupts Pangolier's channeling abilities upon cast",
+          "Moves Pangolier over other units and impassable terrain",
+          "Forward with a disabling 225-distance forced movement",
+          "Upward with a non-disabling 250-height upward movement"
+        ],
+        "interaction_notes": [
+          "While in Gyroshell forms, Pangolier is moved vertically and not horizontally",
+          "Both the vertical and horizontal movement stack with each other"
+        ]
+      },
+      "ability_3": {
+        "name": "Lucky Shot",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "0",
+        "mana_cost": "0",
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "0",
+        "details": "Donté's attacks have a chance to applies a movement speed slow while reducing the affected enemy units' armor.",
+        "description": "The Pangolier's blade is guided more often by whim than reason.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Attack Proc Chance: 17%",
+          "Armor Reduction: 3/5/7/9",
+          "Attack Speed Slow: 40/80/120/160",
+          "Duration: 3.5/4/4.5/5",
+          "His abilities has an ensured chance to apply Lucky Shot per spell damage instance"
+        ],
+        "interaction_notes": [
+          "Lucky Strike uses pseudo-random distribution",
+          "Reapplying the debuff refreshes its duration",
+          "The proc is determined during Pangolier's attack point"
+        ]
+      },
+      "ability_4": {
+        "name": "Rolling Thunder",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Physical",
+        "damage_types": ["Physical", "Spell"],
+        "cooldown": "90/85/80",
+        "mana_cost": "100/125/150",
+        "cast_range": "0",
+        "cast_animation": "1.2 + 0",
+        "cast_radius": "150",
+        "details": "Curls into a ball and rolls out. Donté has increased magic resistance and is debuff immune. While rolling, he moves at an increased speed and can move through trees. Applies a knockback, stuns enemy units within the collision radius, and deals bonus spell damage based on his current total attack damage.",
+        "description": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
+        "facet_effects": {
+          "thunderbolt": "Rolling Thunder has increased speed and turn rate, but reduced duration. Set Turn Rate: 168°, Turn Rate Bonus: 280°, Roll Speed: 665, Roll Duration: 9"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Collision Radius: 150",
+          "Magic Resist Bonus: 60%",
+          "Base Damage: 75/150/225",
+          "Total Attack Damage to Spell Damage Bonus Factor: 1",
+          "Knock Distance: 150",
+          "Knock Duration: 0.6",
+          "Stun Duration: 0.8/1/1.2",
+          "Set Turn Rate: 120°",
+          "Turn Rate Bonus: 165°",
+          "Roll Speed: 550",
+          "Roll Duration: 10"
+        ],
+        "interaction_notes": [
+          "Applies a basic dispel on Pangolier upon cast",
+          "Grants debuff immunity while active",
+          "Stacks multiplicatively with other magic resistance sources",
+          "Trees are destroyed upon collision while Pangolier continues rolling forward"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Double Jump: Reduced min damage factor from 1.25 to 1.3",
+          "Double Jump: Reduced min damage barrier factor from 1.25 to 1.3",
+          "Talents: LVL 15 +80 Shield Crash damage barrier per affected enemy hero increased to +90"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased agility gain from 2.8 to 3.2",
+          "Increased base attack damage from 8‒14 to 28‒34",
+          "Talents: LVL 15 +2s Rolling Thunder duration ➜ +15% attack damage as Swashbuckle damage",
+          "Talents: LVL 20 +15% attack damage as Swashbuckle damage ➜ +2s Rolling Thunder duration",
+          "Talents: LVL 25 -16s Rolling Thunder cooldown reduced to -15s",
+          "Talents: LVL 25 -3s Swashbuckle cooldown increased to -4s"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "CHANGED Rolling Thunder Thunderbolt turn rate bonus from a flat 110 to 1.4"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

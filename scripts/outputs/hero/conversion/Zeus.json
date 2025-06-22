@@ -1,0 +1,318 @@
+{
+  "hero_name": "Zeus",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 19,
+      "strength_gain": 2.1,
+      "agility": 11,
+      "agility_gain": 1.2,
+      "intelligence": 22,
+      "intelligence_gain": 3.3,
+      "health": 538,
+      "mana": 339,
+      "armor": 3.83,
+      "magic_resist": 27.2,
+      "damage": [51, 59],
+      "damage_avg": 55,
+      "projectile_speed": 1100,
+      "attack_type": "ranged",
+      "attack_range": 380,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.55",
+      "move_speed": 315,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Nuker, Carry"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Livewire",
+        "effects": "The current health as damage bonus now depends on the distance between the affected units and the Thundergod. Applies the max current health as damage bonus at proximity radius. Does not apply the damage bonus component beyond the min bonus radius. Min Current Health as Damage: 2.5%/3%/3.5%/4%, Max Current Health as Damage: 5%/6%/7%/8%"
+      },
+      "facet_2": {
+        "name": "Divine Rampage",
+        "effects": "Strikes all enemy heroes globally, sequentially from the lowest to the highest current health. Increases damage per hero kills credited to Zeus sourced to this ability's damage."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Nimbus ability", "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemy units"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Lightning Hands ability", "Attacks now create Arc Lightning that deal a percentage of its damage", "Can be toggled off to stop this effect", "Grants bonus attack speed"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1.5% Static Field Damage", "+325 Lightning Bolt Radius"],
+        "level_20": ["+0.5s Lightning Bolt Mini-Stun", "+60 Arc Lightning Damage"],
+        "level_15": ["-0.4s Arc Lightning Cooldown", "+75 Thundergod's Wrath Damage"],
+        "level_10": ["+200 Health", "+1 Heavenly Jump Target"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Static Field",
+          "type": "passive",
+          "description": "All of the Zeus' abilities, and his attacks, excluding item abilities, deals damage equal to a percentage of the affected enemy units' current health.",
+          "values": {
+            "effect_radius": "Global",
+            "current_health_as_damage": "2.5%/3%/3.5%/4%"
+          },
+          "details": "This ability levels up with Thundergod's Wrath. Roshan is innately immune to this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Arc Lightning",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "1.6",
+        "mana_cost": "75/85/95/105",
+        "cast_range": "800",
+        "cast_animation": "0.2 + 0.63",
+        "cast_radius": "450",
+        "details": "Hurls a bolt of lightning that bounce through nearby enemy units that deals damage.",
+        "description": "Hurls a bolt of lightning that bounce through nearby enemy units that deals damage.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Bounce Radius: 450",
+          "Number of Bounces: 5/7/9/15",
+          "Bounce Interval: 0.25",
+          "Damage: 90/120/150/180"
+        ],
+        "interaction_notes": [
+          "Hits all valid enemy units over 1/1.5/2/3.5 seconds",
+          "Searches for any random valid units, centered around the affected enemy unit, within the bounce radius",
+          "The magical spell damage can only affect an enemy unit once per cast"
+        ]
+      },
+      "ability_2": {
+        "name": "Lightning Bolt",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "6",
+        "mana_cost": "120/125/130/135",
+        "cast_range": "700/750/800/850",
+        "cast_animation": "0.25 + 0.72",
+        "cast_radius": "325",
+        "details": "Calls down a bolt of lightning to strike an enemy unit, causing damage and applies a stun. Can be cast on the ground, affecting the closest enemy hero within the search radius.",
+        "description": "Calls down a bolt of lightning to strike an enemy unit, causing damage and applies a stun. Can be cast on the ground, affecting the closest enemy hero within the search radius.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "point_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 325",
+          "Damage: 140/220/300/380",
+          "Stun Duration: 0.35",
+          "Vision Radius: 500",
+          "True Sight Radius: 500"
+        ],
+        "interaction_notes": [
+          "Briefly provides flying vision when cast centered around the target within the radius",
+          "Briefly provides True Sight when cast, centered around the target within the radius"
+        ]
+      },
+      "ability_3": {
+        "name": "Heavenly Jump",
+        "key": "E",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "26/22/18/14",
+        "mana_cost": "50/60/70/80",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "700/800/900/1000",
+        "details": "Leaps forward and shocks the closest visible nearby enemy unit, prioritizing heroes, dealing damage as well as reducing their movement and attack speed.",
+        "description": "Leaps forward and shocks the closest visible nearby enemy unit, prioritizing heroes, dealing damage as well as reducing their movement and attack speed.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 700/800/900/1000",
+          "Number of Targets: 1",
+          "Damage: 25/50/75/100",
+          "Move Speed Slow: 80%",
+          "Attack Speed Slow: 100",
+          "Debuff Duration: 1.4",
+          "Leap Distance: 300/400/500/600",
+          "Leap Duration: 0.5"
+        ],
+        "interaction_notes": [
+          "Zeus leaps in the direction he is facing",
+          "Can leap over other units and impassable terrain",
+          "Grants non-lingering 3-second 900-radius stationary flying vision"
+        ]
+      },
+      "ability_4": {
+        "name": "Nimbus",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "45",
+        "mana_cost": "275",
+        "cast_range": "Global",
+        "cast_animation": "0.2 + 0.64",
+        "cast_radius": "450",
+        "details": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemy units.",
+        "description": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemy units.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Radius: 450",
+          "Bolts per Strike: 1",
+          "Hit Count: 4 (Heroes), 8 (Creeps), 16 (Creeps attacking)",
+          "Duration: 30",
+          "Downtime: 2.5"
+        ],
+        "interaction_notes": [
+          "The Nimbus starts striking valid a random valid unit within the radius",
+          "Unaffected by cooldown reset sources, or by percentage-based cooldown reductions",
+          "Acquiring Aghanim's Scepter unlocks this ability"
+        ]
+      },
+      "ability_5": {
+        "name": "Lightning Hands",
+        "key": "F",
+        "type": "toggle",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "0",
+        "mana_cost": "0",
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "380",
+        "details": "Attacks now create Arc Lightning that deal a percentage of its damage. Can be toggled off to stop this effect.",
+        "description": "Attacks now create Arc Lightning that deal a percentage of its damage. Can be toggled off to stop this effect.",
+        "facet_effects": {},
+        "ability_behavior": ["toggle"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Proc Radius: 380",
+          "Damage: 45/60/75/90",
+          "Attack Speed Bonus: 30"
+        ],
+        "interaction_notes": [
+          "Grants bonus attack speed",
+          "This ability levels up with Arc Lightning",
+          "Acquiring Aghanim's Shard unlocks this ability"
+        ]
+      },
+      "ability_6": {
+        "name": "Thundergod's Wrath",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "130",
+        "mana_cost": "250/375/500",
+        "cast_range": "Global",
+        "cast_animation": "0.4 + 0.43",
+        "cast_radius": "Global",
+        "details": "Strikes all enemy heroes globally with a bolt of lightning and damaging them.",
+        "description": "Strikes all enemy heroes globally with a bolt of lightning and damaging them.",
+        "facet_effects": {
+          "Divine Rampage": "Strikes all enemy heroes globally, sequentially from the lowest to the highest current health. Increases damage per hero kills credited to Zeus sourced to this ability's damage."
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: Global",
+          "Damage: 300/475/650",
+          "Vision Radius: 500",
+          "True Sight Radius: 550",
+          "Duration: 3"
+        ],
+        "interaction_notes": [
+          "Briefly provides flying vision when cast, centered around the target within the radius",
+          "Briefly provides True Sight when cast, centered around the target within the radius"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Talents: LVL 10 +1.75 mana regeneration bonus → +1 Heavenly Jump target",
+          "LVL 15 +1 Heavenly Jump target → -0.4s Arc Lightning cooldown",
+          "LVL 25 +1% Static Field current health as damage increased to +1.5%"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Increased base attack damage from 33‒41 to 29‒37",
+          "Lightning Bolt: Reduced vision radius from 750 to 500",
+          "Lightning Bolt: Reduced True Sight radius from 750 to 500"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Static Field Livewire: Increased minimum damage from 2% on each level to 2.5%/3%/3.5%/4%",
+          "Static Field Livewire: Increased maximum damage from 4%/5%/6%/7% to 5%/6%/7%/8%",
+          "Arc Lightning: Reduced bounce radius from 500 to 450",
+          "Arc Lightning: Increased mana cost from 75/80/85/90 to 75/85/95/105",
+          "Heavenly Jump: Area-of-effect sources no longer affects the search radius component",
+          "Heavenly Jump: Rescaled leap distance from 500 on each level to 300/400/500/600",
+          "Heavenly Jump: Reduced slow duration from 1.6 to 1.4",
+          "Thundergod's Wrath Divine Rampage: kill damage factor bonus from 1.15 to 1.25"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 85432,
+    "sections_found": 5,
+    "parse_time_ms": 245,
+    "success_rate": "100%"
+  }
+}

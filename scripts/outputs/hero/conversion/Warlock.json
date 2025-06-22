@@ -1,0 +1,269 @@
+{
+  "hero_name": "Warlock",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 22,
+      "strength_gain": 2.4,
+      "agility": 10,
+      "agility_gain": 1,
+      "intelligence": 25,
+      "intelligence_gain": 3.1,
+      "health": 604,
+      "mana": 375,
+      "armor": 2.67,
+      "magic_resist": 27.5,
+      "damage": [52, 62],
+      "damage_avg": 57,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 90,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Initiator, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Champion of Gorroth",
+        "effects": "Warlock Permanent Immolation deal damage per second bonus based on the sum of Warlock's current health and mana regeneration values. +0.9× Hero Health Regen to Damage Factor, +0.9× Hero Mana Regen to Damage Factor"
+      },
+      "facet_2": {
+        "name": "Black Grimoire",
+        "effects": "Grants Warlock the item Black Grimoire, which can be consumed to gain experience for each kill Warlock participated in."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Now summons an additional Golem with reduced base attack damage"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Creates uncontrollable Minor Imps of the current Eldritch Summoning ability level per certain Upheaval channeling interval",
+          "Increases both Eldritch Summoning's current and max ability level",
+          "Increases the summoned Minor Imps' level",
+          "Increases Eldritch Explosion's current and max ability level"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+80% Warlock Golem Magic Resist", "+20 Warlock Golem Armor"],
+        "level_20": ["+40 Upheaval Damage Increment, +40 Upheaval Max Damage", "Chaotic Offering on Death"],
+        "level_15": ["+150 Shadow Word Radius", "+10 Upheaval Attack Speed per Second, +70 Upheaval Max Attack Speed"],
+        "level_10": ["+50 Upheaval Radius", "+4% Fatal Bonds Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Eldritch Summoning",
+          "type": "passive",
+          "description": "Whenever a unit dies under effect of any of Warlock's abilities, an uncontrollable Minor Imp is spawned in their place, and chases after nearby units.",
+          "values": {
+            "max_ability_level": "4 (5 with shard)",
+            "attack_search_radius": 1200,
+            "health_bonus": "0/80/160/240/320",
+            "attack_damage_bonus": "0/4/8/12/16",
+            "move_speed_bonus": "0/15/30/45/60",
+            "duration": 15
+          },
+          "details": "This ability levels up with Chaotic Offering. The summoned Minor Imps chases after Fatal Bonds-affected enemy units, prioritizing enemy heroes. When there are no nearby valid enemy units, the Minor Imps start attacking buildings."
+        },
+        {
+          "name": "Black Grimoire",
+          "type": "active",
+          "description": "Starts the game with a neutral consumable item — the Black Grimoire. This can be consumed anytime to grant Warlock experience per accumulated charge.",
+          "values": {
+            "init_charges": 0,
+            "experience_per_charge": 200,
+            "base_charge_count": 1,
+            "charge_gain_per_kill_participation": 1
+          },
+          "details": "Gains a charge for each hero kill that Warlock participates in. Requires facet selection to obtain."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Fatal Bonds",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Source",
+        "damage_types": ["Source"],
+        "cooldown": "42/34/26/18",
+        "mana_cost": "120/130/140/150",
+        "cast_range": "1000",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "700",
+        "details": "Binds several enemy units together, causing a portion of the damage taken to one of them to be felt by the others.",
+        "description": "An ancient incantation that links the vital energies of multiple lifeforms into one collective body.",
+        "facet_effects": {
+          "damage_shared": "15%/18%/21%/24% (19%/22%/25%/28% with talent)"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Bounce Distance: 700",
+          "Number of Bounces: 6",
+          "Duration: 18",
+          "Roshan is innately immune to this ability"
+        ],
+        "interaction_notes": [
+          "The summoned Minor Imps chases after Fatal Bonds-affected enemy units, prioritizing enemy heroes"
+        ]
+      },
+      "ability_2": {
+        "name": "Shadow Word",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "15/14/13/12",
+        "mana_cost": "110/120/130/140",
+        "cast_range": "650/700/750/800",
+        "cast_animation": "0.2 + 0.4",
+        "cast_radius": "225 (375 with talent)",
+        "details": "Either heals allied units or damages enemy units within the radius over time.",
+        "description": "Warlock arcane arts have a myriad of uses, allowing them to be powerful friendly enchantments or damaging curses.",
+        "facet_effects": {
+          "damage_per_second": "15/25/35/45",
+          "heal_per_second": "15/25/35/45",
+          "duration": 10
+        },
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Applies effects in 0.5-second intervals over 20 instances",
+          "Can affect units of all factions"
+        ],
+        "interaction_notes": [
+          "Doubletap or portrait-casting casts the ability on Warlock"
+        ]
+      },
+      "ability_3": {
+        "name": "Upheaval",
+        "key": "E",
+        "type": "channeling",
+        "affects": "Enemy Units/Ally Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "60/50/40/30",
+        "mana_cost": "100",
+        "cast_range": "800",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "575/600/625/650 (625/650/675/700 with talent)",
+        "details": "A powerful current that grows stronger per channeled second. All ability effects lingers for a short duration after exiting the effect radius.",
+        "description": "Demnok manipulates space-time, impairing entire armies.",
+        "facet_effects": {
+          "max_channel_time": "10/12/14/16",
+          "damage_increment_per_second": "10 (50 with talent)",
+          "move_speed_slow_increment_per_second": "11%/14%/17%/20%",
+          "max_damage_per_second": "35/60/85/110 (75/100/125/150 with talent)",
+          "max_move_speed_slow": "55%/70%/85%/100%",
+          "linger_duration": 1,
+          "ally_attack_speed_increment_per_second": "10 (with talent)",
+          "ally_max_attack_speed_bonus": "70 (with talent)"
+        },
+        "ability_behavior": ["area_target", "channeling"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Creates negative aura at targeted location",
+          "Ability values increment per server tick",
+          "Max values achieved at different seconds per level"
+        ],
+        "interaction_notes": [
+          "With Shard: Creates uncontrollable Minor Imps per 2-second channel interval"
+        ]
+      },
+      "ability_4": {
+        "name": "Chaotic Offering",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "160",
+        "mana_cost": "200/400/600",
+        "cast_range": "900",
+        "cast_animation": "0.5 + 0.7",
+        "cast_radius": "600",
+        "details": "Summons a Golem and stuns enemy units within the radius.",
+        "description": "Demnok unleashes the captive spirit in his Dreadwood staff, causing destruction in enemy ranks.",
+        "facet_effects": {
+          "stun_duration": 0.8,
+          "effect_delay": 0.5,
+          "number_of_golems": "1 (2 with scepter)",
+          "golem_duration": 60,
+          "slow_resistance": "60%",
+          "golem_spawn_interval": "0.5 (with scepter)",
+          "set_attack_damage": "80/120/160 (with scepter)"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The conjured Golem is partially immune to movement speed slow sources",
+          "Golem has Flaming Fists and Permanent Immolation abilities",
+          "Trees within effect radius are destroyed"
+        ],
+        "interaction_notes": [
+          "With talent: Passively summons a Golem on Warlock's death location",
+          "Champion of Gorroth facet affects Permanent Immolation damage"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Warlock Golem Permanent Immolation is now affected by area-of-effect manipulation sources on Warlock"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "All Fatal Bonds ability effects no longer bounces to fogged units. However, debuff-affected enemy units are still affected within the Fog of War",
+          "Reduced Shadow Word radius from 300 to 225"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Minor Imp: Increased Eldritch Explosion effect delay from 0.2 to 0.3"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

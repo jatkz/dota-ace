@@ -1,0 +1,267 @@
+{
+  "hero_name": "Naga Siren",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 21,
+      "strength_gain": 2.4,
+      "agility": 22,
+      "agility_gain": 3.3,
+      "intelligence": 21,
+      "intelligence_gain": 2,
+      "health": 582,
+      "mana": 327,
+      "armor": 4.67,
+      "magic_resist": 27.1,
+      "damage": [45, 47],
+      "damage_avg": 46,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 110,
+      "bat": 1.7,
+      "animation": "0.5 + 0.5",
+      "move_speed": 330,
+      "turn_rate": 0.6,
+      "collision_size": 18,
+      "bound_radius": 8,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Support, Pusher, Disabler, Initiator, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Rip Tide",
+        "effects": "Rip Tide is Naga Siren's third ability with the selected facet. After a number of attacks of the Siren and her images, they all collectively and simultaneously hit all nearby enemy units with a damaging wave of water that lowers armor for a duration."
+      },
+      "facet_2": {
+        "name": "Deluge",
+        "effects": "Deluge is Naga Siren's third ability with the selected facet. The Siren and her images deals damage and set the affected enemy units' max movement speed to a certain value within the radius."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Reel In ability",
+          "The Siren channels and reels in all ensnared units to her within the radius without disabling them",
+          "Increases cast range and net projectile speed",
+          "Applies Break upon projectile impact, and enables unit-targeting and affecting debuff immune units"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants max mana as bonus mana regeneration bonus to allied units within the radius",
+          "Increases max health as bonus health regeneration"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+25 Agility", "-10s Mirror Image Cooldown"],
+        "level_20": ["+1 Mirror Image Illusion", "-20s Song of the Siren Cooldown"],
+        "level_15": ["-50% Mirror Image Illusion Damage Taken", "+10% Mirror Image Damage"],
+        "level_10": ["+30% Rip Tide Damage / +30% Deluge Damage", "+100 Reel In Move Speed"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Eelskin",
+          "type": "passive",
+          "description": "Grants bonus evasion per allied Naga Siren-based illusion within the radius.",
+          "values": {
+            "radius": 900,
+            "evasion_bonus_per_illusion": "8%"
+          },
+          "details": "Grants a bonus evasion stack per Naga-based illusion within the radius. Evasion granted by this source stacks additively per stack."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Mirror Image",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self",
+        "damage": "Instant Kill",
+        "damage_types": [],
+        "cooldown": "40/35/30/25",
+        "mana_cost": "75/90/105/120",
+        "cast_range": "",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "",
+        "details": "Creates multiple images of herself under Slithice's control.",
+        "description": "Creates multiple images of herself under Slithice's control. These illusions deals a portion of Naga Siren's damage and receives additional incoming damage.",
+        "facet_effects": {
+          "number_of_illusions": "3 (4 with talent)",
+          "damage_dealt": "25%/30%/35%/40%",
+          "damage_taken": "350%",
+          "duration": 26,
+          "split_time": 0.5
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Applies Hidden and disjoints incoming projectiles upon cast",
+          "Creates Mirror Image-based illusions",
+          "Given a stop-command, canceling all queued orders",
+          "Applies a basic dispel"
+        ],
+        "interaction_notes": [
+          "Recasting the ability instant kills and replaces all Mirror Image-based illusions"
+        ]
+      },
+      "ability_2": {
+        "name": "Ensnare",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "21/18/15/12",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "500/525/550/575",
+        "cast_animation": "0.3 + 0.47",
+        "cast_radius": "",
+        "details": "Interrupts the target and traps them in place, preventing movement or blinking. Can target invulnerable and sleeping units.",
+        "description": "Interrupts the target and traps them in place, preventing movement or blinking. Can target invulnerable and sleeping units.",
+        "facet_effects": {
+          "projectile_speed": 1500,
+          "duration": "2.75/3.5/4.25/5",
+          "enemy_distance": 900
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Applies Root and grants True Sight over the target",
+          "All illusions within 900 range cast visual-only Ensnare"
+        ],
+        "interaction_notes": [
+          "Scepter upgrade increases cast range and projectile speed",
+          "Applies Break upon projectile impact with Scepter"
+        ]
+      },
+      "ability_3": {
+        "name": "Rip Tide / Deluge",
+        "key": "E",
+        "type": "passive / active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "0 / 10/9/8/7",
+        "mana_cost": "0 / 80",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "300",
+        "details": "Facet-dependent third ability. Rip Tide: After 6 attacks, deals damage and reduces armor. Deluge: Active ability that deals damage and sets max movement speed.",
+        "description": "Facet-dependent ability that either provides passive armor reduction after attacks or active movement speed reduction.",
+        "facet_effects": {
+          "rip_tide": {
+            "required_attacks": 6,
+            "damage": "25/35/45/55",
+            "armor_reduction": "2/4/6/8",
+            "duration": 4
+          },
+          "deluge": {
+            "damage": "80/150/220/290",
+            "set_max_move_speed": 230,
+            "duration": 3.5
+          }
+        },
+        "ability_behavior": ["passive", "no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Rip Tide: Attack counter increases by 1 per successful attack",
+          "Deluge: Sets affected units' max movement speed"
+        ],
+        "interaction_notes": [
+          "Multiple overlapping radius do not stack"
+        ]
+      },
+      "ability_4": {
+        "name": "Song of the Siren",
+        "key": "R",
+        "type": "active",
+        "affects": "Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "160/130/100",
+        "mana_cost": "150/250/350",
+        "cast_range": "",
+        "cast_animation": "1 + 0.3",
+        "cast_radius": "1000/1200/1400",
+        "details": "All enemy units in range are put into magical stasis where they cannot act or be attacked, while allied units recover health per second.",
+        "description": "All enemy units in range of the Naga Siren are put into a magical stasis where they cannot act or be attacked, while allied units recover a percentage of their health per second.",
+        "facet_effects": {
+          "duration": 7,
+          "aura_linger_duration": 0.4,
+          "max_health_as_health_regen_bonus": "2%/3%/4%"
+        },
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Creates an aura centered around Naga Siren",
+          "Sleep applies Disarm, Invulnerability, Root, and Stun to enemies",
+          "Grants health regeneration to allied units"
+        ],
+        "interaction_notes": [
+          "Can only be interrupted by Song of the Siren End or Naga's death",
+          "Shard upgrade adds mana regeneration bonus"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased base agility from 21 to 22",
+          "Deluge: No longer applies 35% status resistance reduction",
+          "Deluge: Increases damage from 80/140/200/260 to 80/150/220/290",
+          "Deluge: Reduced set max movement speed from 240 to 230",
+          "Reduced Song of the Siren cooldown from 180/140/100 to 160/130/100",
+          "Aghanim's Scepter upgrade: Ensnare now applies Break",
+          "Talents: LVL 25 Ensnare applies Break → +25 agility"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Eelskin evasion bonus per Naga Siren-based illusion from 6% to 8%",
+          "Talents: LVL 10 -2s Ensnare cooldown → +100 Reel In pull speed"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Deluge: Reduced duration from 4 to 3.5",
+          "Deluge: Increased mana cost from 50/60/70/80 to 80 on each level",
+          "Aghanim's Shard upgrade: Reduced Song of the Siren max health as health regeneration bonus from 4% to 3%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

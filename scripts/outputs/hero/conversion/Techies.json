@@ -1,0 +1,239 @@
+{
+  "hero_name": "Techies",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 19,
+      "strength_gain": 2.6,
+      "agility": 14,
+      "agility_gain": 1.8,
+      "intelligence": 25,
+      "intelligence_gain": 2.8,
+      "health": 538,
+      "mana": 375,
+      "armor": 4.33,
+      "magic_resist": 27.5,
+      "damage": [46, 48],
+      "damage_avg": 47.1,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 90,
+      "bat": 1.7,
+      "animation": "0.5 + 0.5",
+      "move_speed": 310,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Squee's Scope",
+        "effects": "Grants Techies both attack range bonus and attack projectile speed bonus per point of current attack speed."
+      },
+      "facet_2": {
+        "name": "Spleen's Secret Sauce",
+        "effects": "The recipe for Spleen's Secret Sauce is sacrificing more health for more Blast Off! damage."
+      },
+      "facet_3": {
+        "name": "Spoon's Stash",
+        "effects": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Creates a minefield in the area-targeted location upon cast", "Deals damage to enemy units that moves within the minefield", "The Minefield Sign is destroyed when the duration ends"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Enables casting Reactive Tazer on allied units", "All ability effects centering and following the targeted ally around", "The ability now also deals damage to enemies it disarms"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-0.8s Proximity Mines Activation Delay", "+252 Attack Damage"],
+        "level_20": ["-15s Blast Off! Cooldown", "+125 Sticky Bomb Latch/Explosion Radius"],
+        "level_15": ["+3 Mana Regen", "+200 Blast Off! Damage"],
+        "level_10": ["-3s Proximity Mines Cooldown", "+20% Magic Resist"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Minefield Sign",
+          "type": "active",
+          "description": "Places a warning sign! All Proximity Mines within the radius are now invulnerable.",
+          "values": {
+            "cast_animation": "1.25 + 0.4",
+            "cast_range": 150,
+            "effect_radius": 500,
+            "max_signs": 1,
+            "duration": 60,
+            "damage_factor": 1.15
+          },
+          "details": "Increases all Proximity Mines' and Sticky Bombs' damage within the radius by 15%"
+        },
+        {
+          "name": "Squee's Scope",
+          "type": "passive",
+          "description": "Grants Techies both attack range bonus and attack projectile speed bonus per point of current attack speed.",
+          "values": {
+            "attack_speed_to_range_bonus": 1,
+            "attack_speed_to_projectile_speed_bonus": 1
+          },
+          "details": "Facet ability - unlocked by selecting Squee's Scope facet"
+        },
+        {
+          "name": "Spoon's Stash",
+          "type": "passive",
+          "description": "Techies stack all previously selected Enchantments onto newly crafted Neutral Items.",
+          "values": {},
+          "details": "Facet ability - allows having two Tier 5 Enchantments by recrafting a tier 5 item"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Sticky Bomb",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "16/13/10/7",
+        "mana_cost": "100/115/130/145",
+        "cast_range": "1000",
+        "cast_animation": "0.1 + 0.7",
+        "cast_radius": "300",
+        "details": "Lobs a Sticky Bomb toward the area-targeted location. Once the bomb latches itself to an enemy hero within proximity, it applies a movement speed slow.",
+        "description": "After an effect delay, the latched bomb explodes and deals damage within the radius, applying a secondary movement speed slow.",
+        "facet_effects": {
+          "talent_bonus": "+125 Latch/Explosion Radius at level 20"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Fixed 1.2-second travel time regardless of distance",
+          "Destroys trees within ~100-radius upon landing",
+          "Cannot be disjointed once latched"
+        ],
+        "interaction_notes": [
+          "Multiple Sticky Bombs may latch onto the same enemy unit",
+          "Chronosphere nullifies the ability cast"
+        ]
+      },
+      "ability_2": {
+        "name": "Reactive Tazer",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Allied Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "30/25/20/15",
+        "mana_cost": 60,
+        "cast_range": "Global",
+        "cast_animation": "0.1 + 0.5",
+        "details": "Triggers an electric charge, granting the Techies team bonus movement speed for a short time.",
+        "description": "Applies an offensive basic dispel and disarms enemy units attacking the Techies team. After the buff duration ends, the charge explodes, applying all negative effects onto enemy units within the radius.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Move Speed Bonus: 18%/22%/26%/30%",
+          "Buff Duration: 6",
+          "Effect Radius: 400",
+          "Disarm Duration: 2.4/2.7/3/3.3"
+        ],
+        "interaction_notes": [
+          "Shard enables casting on allied units",
+          "Shard adds 300 damage to disarmed enemies"
+        ]
+      },
+      "ability_3": {
+        "name": "Blast Off!",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "40/35/30/25",
+        "mana_cost": "100/125/150/175",
+        "cast_range": "1000",
+        "cast_animation": "1 + 0.9",
+        "details": "Hurtle themselves into the enemy's midst, deals massive area damage and stuns enemy units within the radius upon landing.",
+        "description": "The detonation upon landing also applies a non-lethal self-damage on Techies corresponding to a portion of their current health.",
+        "facet_effects": {
+          "spleens_secret_sauce": "Sacrifices more health for more damage - Max Health as Self Damage Factor: 0.15, Self Max Health to Damage Bonus Factor: 0.15"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Landing Radius: 400",
+          "Damage: 200/300/400/500",
+          "Leap Duration: 0.75",
+          "Stun Duration: 0.8/1/1.2/1.4",
+          "Current Health as Self Damage Factor: 0.2"
+        ],
+        "interaction_notes": [
+          "Fixed 0.75-second leap duration",
+          "Can be interrupted by forced movement sources and Chronosphere"
+        ]
+      },
+      "ability_4": {
+        "name": "Proximity Mines",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "15",
+        "mana_cost": "110/140/170",
+        "cast_range": "400",
+        "cast_animation": "0 + 0.47",
+        "details": "Plants an invisible mine that cannot be detected by certain True Sight sources. The mine is visible to enemy units within the mine proc radius, and detonates if an enemy unit is standing within the proc radius for a period of time.",
+        "description": "The mines reduces the affected enemy unit's magic resistance while dealing damage. The explosions deals more damage the closer the affected unit to the proximity radius.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Min Plant Distance: 350",
+          "Proc Radius: 500",
+          "Activation Delay: 1",
+          "Detonation Delay: 1",
+          "Min Damage: 200/287.5/375",
+          "Max Damage: 400/575/750",
+          "Magic Resist Reduction: 15%/20%/25%",
+          "Debuff Duration: 5"
+        ],
+        "interaction_notes": [
+          "Permanently invisible after activation delay",
+          "Cannot be detected by most True Sight sources",
+          "Less effective on buildings (30% damage factor)"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

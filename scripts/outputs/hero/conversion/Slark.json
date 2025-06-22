@@ -1,0 +1,284 @@
+{
+  "hero_name": "Slark",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 20,
+      "strength_gain": 2.1,
+      "agility": 21,
+      "agility_gain": 1.5,
+      "intelligence": 16,
+      "intelligence_gain": 1.9,
+      "health": 560,
+      "mana": 267,
+      "armor": 3.5,
+      "magic_resist": 26.6,
+      "damage": [58, 64],
+      "damage_avg": 61,
+      "projectile_speed": 0,
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 120,
+      "bat": 1.7,
+      "animation": "0.5 + 0.3",
+      "move_speed": 300,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800/1800",
+      "roles": "Carry, Escape, Disabler, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Leeching Leash",
+        "effects": "Pounce applies Essence Shift stacks when striking enemy heroes."
+      },
+      "facet_2": {
+        "name": "Dark Reef Renegade",
+        "effects": "Barracuda lingers after being revealed to the enemy if Slark is not nearby allied heroes."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Increases leap distance", "Replaces cooldown with charge restore time"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Depth Shroud ability", "Creates a dark cloud at area-targeted location", "All allied units within radius are affected by Shadow Dance of corresponding level"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+35s Essence Shift Duration", "+1.25s Shadow Dance Duration"],
+        "level_20": ["+100 Shadow Dance Attack Speed", "+1 Agility Change per Essence Shift Stack"],
+        "level_15": ["+50 Barracuda Health Regen", "+70 Dark Pact Damage"],
+        "level_10": ["+0.5s Pounce Leash", "-0.5s Dark Pact Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Barracuda",
+          "type": "passive",
+          "description": "When not visible to the enemy team, Slark gains bonus movement speed and bonus health regeneration.",
+          "values": {
+            "effect_delay": 0.5,
+            "move_speed_bonus": "6%/24%/36%/48%",
+            "health_regen_bonus": "5/70/100/130",
+            "downtime": 2
+          },
+          "details": "This ability has a fixed downtime and does not grant its bonuses when Slark is damaged by neutral creeps. This ability levels up with Shadow Dance."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Dark Pact",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "9/8/7/6",
+        "mana_cost": 65,
+        "cast_range": "325",
+        "cast_animation": "0 + 0",
+        "cast_radius": "325",
+        "details": "After a short delay, Slark dispels most negative debuffs while dealing damage to enemy units around him and to himself.",
+        "description": "After a short delay, Slark dispels most negative debuffs while dealing damage to enemy units around him and to himself.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Delay: 1.5",
+          "Damage Intervals: 0.1",
+          "Total Damage: 75/150/225/300",
+          "Duration: 1",
+          "Self Damage Factor: 0.3"
+        ],
+        "interaction_notes": [
+          "Interrupts Slark's channeling abilities upon cast",
+          "Applies strong dispel",
+          "Deals non-lethal magical spell damage to self"
+        ]
+      },
+      "ability_2": {
+        "name": "Pounce",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Heroes / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "22/18/14/10",
+        "mana_cost": 75,
+        "cast_range": "700",
+        "cast_animation": "0 + 0.53",
+        "cast_radius": "120",
+        "details": "Leaps forward and leashes the first enemy hero he connects with.",
+        "description": "Leaps forward and leashes the first enemy hero he connects with.",
+        "facet_effects": {
+          "leeching_leash": "Applies Essence Shift stacks when striking enemy heroes (1/2/3/4 stacks)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Leap Distance: 700 (900 with Scepter)",
+          "Latch Radius: 120",
+          "Duration: 2.5/2.75/3/3.25",
+          "Leash Radius: 400",
+          "Max Downtime: 0.75"
+        ],
+        "interaction_notes": [
+          "Cannot recast while Pounce buff is active",
+          "Cooldown cannot be reset or affected by percentage-based cooldown reductions",
+          "Can leap over units and impassable terrain"
+        ]
+      },
+      "ability_3": {
+        "name": "Essence Shift",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Heroes / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "0",
+        "details": "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus agility.",
+        "description": "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus agility.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Enemy Str Loss per Attack: 1",
+          "Enemy Agi Loss per Attack: 1", 
+          "Enemy Int Loss per Attack: 1",
+          "Self Agi Gain per Attack: 3",
+          "Duration: 15/35/55/75",
+          "Enemy Death Radius: 300",
+          "Permanent Agi Gain on Kill: 1"
+        ],
+        "interaction_notes": [
+          "If affected enemy hero dies with debuff, Slark permanently steals agility",
+          "Both buff and debuff stacks are independent with own durations",
+          "No stack limit"
+        ]
+      },
+      "ability_4": {
+        "name": "Depth Shroud",
+        "key": "D",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "75",
+        "mana_cost": 75,
+        "cast_range": "400",
+        "cast_animation": "0.1 + 0.8",
+        "cast_radius": "225",
+        "details": "Creates a dark cloud at the area-targeted location. All allied units within the radius are affected by Shadow Dance of its corresponding level.",
+        "description": "Creates a dark cloud at the area-targeted location. All allied units within the radius are affected by Shadow Dance of its corresponding level.",
+        "facet_effects": {
+          "dark_reef_renegade": "All Barracuda-affected units apply non-stacking armor reduction debuff per attack (1/2/3/4 armor reduction, 2s duration)"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Aura Radius: 225",
+          "Effect Delay: 0.7",
+          "Duration: 3",
+          "Move Speed Bonus: 6%/24%/36%/48%",
+          "Health Regen Bonus: 5/70/100/130"
+        ],
+        "interaction_notes": [
+          "Requires Aghanim's Shard to unlock",
+          "Requires Shadow Dance to be learned to function",
+          "Only invisibility component affects allied illusions"
+        ]
+      },
+      "ability_5": {
+        "name": "Shadow Dance",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "50/40/30",
+        "mana_cost": 100,
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "When activated, Slark hides himself in a cloud of shadows, becoming immune to both vision and True Sight. Attacking, casting abilities, and using items will not reveal Slark within the duration.",
+        "description": "When activated, Slark hides himself in a cloud of shadows, becoming immune to both vision and True Sight. Attacking, casting abilities, and using items will not reveal Slark within the duration.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Fade Time: 0",
+          "Duration: 4/4.25/4.5",
+          "Attack Speed Bonus: 100 (with talent)"
+        ],
+        "interaction_notes": [
+          "Grants invisibility with True Sight immunity",
+          "Does not grant phase movement",
+          "Can be revealed by Snowball"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Barracuda health regeneration bonus from 10/70/100/130 to 5/70/100/130"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21", 
+        "changes": [
+          "Reduced Essence Shift duration from 20/40/60/80 to 15/35/55/75",
+          "Aghanim's Shard upgrade: Reduced Depth Shroud cast range from 600 to 400"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Barracuda Dark Reef Renegade: A successful attack now applies a non-stacking 2-second 1/2/3/4 armor reduction debuff",
+          "Barracuda Dark Reef Renegade: Rescaled bonus linger duration from 1.5/2/2.5/3 to 2 on each level",
+          "Aghanim's Shard upgrade: Reduced Depth Shroud aura radius from 250 to 225",
+          "Talents: LVL 20 +90 attack speed bonus during Shadow Dance increased to +100",
+          "Talents: LVL 25 +40s Essence Shift steal duration reduced to +35s"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "hero_name": "Pudge",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 25,
+      "strength_gain": 3,
+      "agility": 11,
+      "agility_gain": 1.4,
+      "intelligence": 16,
+      "intelligence_gain": 1.8,
+      "health": 670,
+      "mana": 267,
+      "armor": 1.83,
+      "magic_resist": 26.6,
+      "damage": [70, 76],
+      "damage_avg": 73,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 175,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 1.17",
+      "move_speed": 280,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Disabler, Initiator, Durable, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Fresh Meat",
+        "effects": "Dismember grants self bonus strength per damage instance applied to enemy heroes."
+      },
+      "facet_2": {
+        "name": "Rotten Core",
+        "effects": "While Rot is active, Pudge gains bonus attack damage every second until it reaches the maximum bonus. Once Rot is deactivated, damage bonus rapidly decays."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Increases the effect radius and damage per second",
+          "When activated, Rot reduces the values of health restoration sources of all affected enemy units within the radius"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Deals additional damage to enemies depending on the distance of the target",
+          "Has a shorter cooldown when pulling allies"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": [
+          "+1.5x Flesh Heap Strength Bonus, +1.5x Meat Shield Damage Negation",
+          "1.5x Dismember Damage/Heal"
+        ],
+        "level_20": [
+          "-4s Meat Hook Cooldown",
+          "+0.75s Dismember Duration"
+        ],
+        "level_15": [
+          "+150 Meat Hook Damage",
+          "8% Spell Lifesteal"
+        ],
+        "level_10": [
+          "+10% Rot Slow",
+          "+5 Armor"
+        ]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Flesh Heap",
+          "type": "passive",
+          "description": "Grants bonus strength whenever Pudge kills an enemy Hero or when an enemy hero dies within his vicinity.",
+          "values": {
+            "enemy_death_radius": 450,
+            "kill_radius": 450,
+            "stack_gain_per_enemy_death": 1,
+            "str_bonus_per_stack": "1.1/1.4/1.7/2 (1.65/2.1/2.55/3)"
+          },
+          "details": "This ability levels up with Dismember. Grants a stack if the enemy hero kill is credited to him, regardless of distance."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Pudge's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to activate."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Meat Hook",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units / Self / Runes",
+        "damage": "Spell / Pure / Instant Kill",
+        "damage_types": ["spell", "pure", "instant_kill"],
+        "cooldown": "18/16/14/12 (14/12/10/8)",
+        "mana_cost": 110,
+        "cast_range": "1300",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "100",
+        "details": "Max Travel Distance: 1300, Damage: 150/220/290/360 (300/370/440/510), Followthrough Duration: 0.53, Hook Search Radius: 100",
+        "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "The hook instantly kills non-ancient creeps it snags",
+          "The hook refunds the ability mana cost when it snags a rune",
+          "Aghanim's Shard: Deals additional damage to enemies depending on distance, shorter cooldown when pulling allies"
+        ],
+        "interaction_notes": [
+          "Can travel through impassable terrain and trees",
+          "Affects invisible and fogged units",
+          "Does not affect ancient creeps, invulnerable units, or hidden units"
+        ]
+      },
+      "ability_2": {
+        "name": "Rot",
+        "key": "W",
+        "type": "toggle",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["spell", "magical"],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "250 (450)",
+        "details": "Radius: 250 (450), Damage per Second: 30/60/90/120 (120/150/180/210), Move Speed Slow: 14%/20%/26%/32% (24%/30%/36%/42%), Aura Linger Duration: 0.5",
+        "description": "A toxic cloud that deals intense damage and slows movement — harming not only enemy units but Pudge himself.",
+        "facet_effects": {
+          "rotten_core": "Attack Damage Bonus Growth per Second: 4%/8%/12%/16%, Max Attack Damage Bonus: 20%/40%/60%/80%, Decay Duration: 1"
+        },
+        "ability_behavior": ["toggle", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates a negative aura that deals damage in 0.2-second intervals",
+          "Self-damage is not lethal",
+          "Does not interrupt channeling abilities when toggled"
+        ],
+        "interaction_notes": [
+          "Continues to apply effects when disabled",
+          "Aghanim's Scepter increases radius and adds health restoration reduction"
+        ]
+      },
+      "ability_3": {
+        "name": "Meat Shield",
+        "key": "E",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "20/19/18/17",
+        "mana_cost": "50/60/70/80",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Damage Negated: 8/14/20/26 (12/21/30/39), Duration: 4/5/6/7",
+        "description": "Negates all damage types from all sources while active.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage negation procs after all reductions",
+          "Does not interrupt channeling abilities upon cast"
+        ],
+        "interaction_notes": [
+          "Does not negate damage on units affected by damage barrier sources"
+        ]
+      },
+      "ability_4": {
+        "name": "Dismember",
+        "key": "R",
+        "type": "channeled",
+        "affects": "Enemy Units / Self / Allied Heroes",
+        "damage": "Spell / Magical",
+        "damage_types": ["spell", "magical"],
+        "cooldown": "30/25/20",
+        "mana_cost": "100/130/170",
+        "cast_range": "200",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "0",
+        "details": "Pull Distance per Second: 75, Pull Distance Threshold: 125, Max Channel Time: 2.75 (3.5), Number of Intervals: 6 (8), Base Damage per Second: 80/100/120 (120/150/180), Str as Damage Factor: 0.3/0.6/0.9 (0.45/0.9/1.35), Damage to Self-Heal Factor: 1",
+        "description": "Chows down on an enemy unit. Pudge pulls the unit at a rate up to a certain minimum distance.",
+        "facet_effects": {
+          "fresh_meat": "Str Bonus per Damage Instance: 2/4/6, Duration: 12"
+        },
+        "ability_behavior": ["unit_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Disables and pulls the target toward Pudge",
+          "Grants True Sight over the affected unit",
+          "Self-heals based on damage dealt",
+          "Fresh Meat facet grants temporary strength bonus per damage instance"
+        ],
+        "interaction_notes": [
+          "Channeling interrupted by hidden or invulnerable sources on target",
+          "Invisible sources on target do not interrupt channeling"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Aghanim's Scepter upgrade: Rot now follows the health restoration mechanic",
+          "Applies a 20% health restoration reduction"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "REMOVED the Meat Hook Flayer's Hook facet",
+          "ADDED the Rotten Core facet for Rot",
+          "Grants 4%/8%/12%/16% attack damage bonus per stack per second when toggled, up to 20%/40%/60%/80% max bonus attack damage after 5 seconds",
+          "The attack damage bonus has a 1-second decay duration upon toggling off",
+          "Increased Dismember Fresh Meat self strength bonus per damage instance from 1/3/5 to 2/4/6",
+          "REWORKED Aghanim's Shard upgrade for Meat Hook",
+          "Deals 0.2 * PullDistance as enemy spell damage bonus",
+          "Applies a 0.5 * CurrentCD when the projectile hits an allied unit"
+        ]
+      },
+      {
+        "version": "7.36c",
+        "date": "2024-06-24",
+        "changes": [
+          "Reduced Flesh Heap strength bonus per stack from 1.4/1.6/1.8/2 to 1.1/1.4/1.7/2",
+          "Reduced Meat Hook Flayer's Hook projectile speed factor from 1.15 to 1",
+          "Reduced Meat Shield duration from 5/6/7/8 to 4/5/6/7",
+          "Talents: LVL 10 +15% Rot movement speed slow reduced to +10%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

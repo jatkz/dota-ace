@@ -1,0 +1,251 @@
+{
+  "hero_name": "Night Stalker",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 23,
+      "strength_gain": 3,
+      "agility": 18,
+      "agility_gain": 2.2,
+      "intelligence": 15,
+      "intelligence_gain": 1.6,
+      "health": 626,
+      "mana": 255,
+      "armor": 5,
+      "magic_resist": 26.5,
+      "damage": [63, 67],
+      "damage_avg": 65,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.55 + 0.55",
+      "move_speed": 295,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "800 / 1800",
+      "roles": "Carry, Initiator, Durable, Disabler, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Night Reign",
+        "effects": "Starts the game at nighttime, with nighttime having a longer duration than daytime. +15s Nighttime Duration, -15s Daytime Duration. Starts the game with a free Hunter in the Night level and increases its max ability level. +1 Ability Level"
+      },
+      "facet_2": {
+        "name": "Voidbringer",
+        "effects": "Increases the max ability level. Void is now an area-targeted ability and applies all ability effects to enemy units within the radius at max level. +1 Ability Level"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Adds a toggle functionality to Crippling Fear that drains max mana per second beyond its debuff duration while active", "Reduces cooldown"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["The hunter consumes a creep while restoring some of its max health and mana"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-40s Dark Ascension Cooldown", "+100 Hunter in the Night Attack Speed"],
+        "level_20": ["+15 Strength", "+20 Crippling Fear Damage per Second"],
+        "level_15": ["+20% Hunter in the Night Status Resist", "+25 Dark Ascension Attack Damage"],
+        "level_10": ["+5s Dark Ascension Duration", "-1s Void Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Heart of Darkness",
+          "type": "passive",
+          "description": "Grants Night Stalker health regeneration amplification during nighttime, but applies a self health regeneration reduction during daytime",
+          "values": {
+            "health_regen_amp": "20%",
+            "health_regen_reduction": "20%"
+          },
+          "details": "Affects only health regeneration sources"
+        },
+        {
+          "name": "Night Reign",
+          "type": "passive",
+          "description": "Starts the game at nighttime, with nighttime having a longer duration than daytime",
+          "values": {
+            "nighttime_duration": 315,
+            "daytime_duration": 285
+          },
+          "details": "Selecting the Night Reign facet unlocks this ability"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Balanar's hero model has hidden innate abilities including z-axis ascension and attribute bonuses",
+          "values": {
+            "z_axis_ascend": 150,
+            "max_ability_level": 7
+          },
+          "details": "Only Balanar and certain hero models ascends the z-axis upon Dark Ascension cast"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Void",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "11/10/9/8/8",
+        "mana_cost": "90/95/100/105/105",
+        "cast_range": "525",
+        "cast_animation": "0.3 + 0.47",
+        "cast_radius": "0/0/0/0/300",
+        "details": "Creates a damaging void that slows an enemy unit and deals damage",
+        "description": "Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was",
+        "facet_effects": {
+          "voidbringer": "Max Ability Level: 5, Effect Radius: 300 at level 5"
+        },
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "During nighttime, Void also mini-stuns with a longer slow duration",
+          "More potent during nighttime and from Dark Ascension/Eclipse sources"
+        ],
+        "interaction_notes": [
+          "Has 0.73-cast backswing when Hunter in the Night passive is active during nighttime"
+        ]
+      },
+      "ability_2": {
+        "name": "Crippling Fear",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "30/25/20/15",
+        "mana_cost": "50",
+        "cast_range": "375",
+        "cast_animation": "0 + 0",
+        "cast_radius": "375",
+        "details": "Silences and applies damage over time while near the Night Stalker for the duration",
+        "description": "A vision of the twisted maw of Balanar etches itself into the minds of the poor souls unlucky enough to cross his path",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates a negative aura centered around Night Stalker",
+          "More effective during nighttime with longer duration",
+          "Scepter adds toggle functionality with mana drain"
+        ],
+        "interaction_notes": [
+          "Affects Hidden and Invulnerable units",
+          "Time of Day changes don't update ability values"
+        ]
+      },
+      "ability_3": {
+        "name": "Hunter in the Night",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Units",
+        "damage": "Instant Kill",
+        "damage_types": ["instant_kill"],
+        "cooldown": "35",
+        "mana_cost": "50",
+        "cast_range": "125",
+        "cast_animation": "0 + 1.07",
+        "cast_radius": "",
+        "details": "Night Stalker is in his element at night, attacking and moving with great swiftness",
+        "description": "The hunting prowess of Balanar improves as the night beckons",
+        "facet_effects": {
+          "night_reign": "Max Ability Level: 5, starts with free level"
+        },
+        "ability_behavior": ["passive", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Grants bonuses only during nighttime and from Dark Ascension/Eclipse",
+          "Shard adds active component to consume creeps"
+        ],
+        "interaction_notes": [
+          "Cannot target heroes, ancient creeps during daytime, buildings, wards, Roshan, or Tormentor",
+          "Rubick gets passive version unless he has Shard"
+        ]
+      },
+      "ability_4": {
+        "name": "Dark Ascension",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "140/135/130",
+        "mana_cost": "125/175/225",
+        "cast_range": "",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "",
+        "details": "Grants Night Stalker flying movement, unobstructed vision and bonus attack damage during his ascension",
+        "description": "It is a humbling sight to see when the mightiest of warriors become afraid of the dark",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Sets Time of Day to nighttime for entire duration",
+          "Grants flying vision and movement",
+          "Destroys trees within 150 radius when duration ends"
+        ],
+        "interaction_notes": [
+          "Rubick neither ascends z-axis nor becomes flying unit",
+          "Persists through Night Stalker's death"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Void nighttime slow duration from 2/2.5/3/3.5/4 to 1.6/2.2/2.8/3.4/4"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Void: Increased movement speed slow from 50% on each level to 50%/50%/50%/50%/60%",
+          "Void: Increased attack speed slow from 50 on each level to 50/50/50/50/60",
+          "Talents: LVL 20 +20 strength reduced to +15"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Heart of Darkness nighttime health regeneration amplification from 40% to 20%",
+          "Talents: LVL 15 +30% Hunter in the Night status resistance bonus reduced to +20%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

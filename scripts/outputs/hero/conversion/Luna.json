@@ -1,0 +1,276 @@
+{
+  "hero_name": "Luna",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 21,
+      "strength_gain": 2.2,
+      "agility": 24,
+      "agility_gain": 3.4,
+      "intelligence": 23,
+      "intelligence_gain": 1.9,
+      "health": 582,
+      "mana": 351,
+      "armor": 6,
+      "magic_resist": 27.3,
+      "damage": [50, 56],
+      "damage_avg": 53,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 330,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.54",
+      "move_speed": 325,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Pusher"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Moonshield",
+        "effects": "Grants Luna incoming damage reduction while active."
+      },
+      "facet_2": {
+        "name": "Moonstorm",
+        "effects": "Lucent Beam grants flat bonus attack damage when the unit-targeted enemy is an enemy hero. Eclipse's beams grants a lesser bonus attack damage per enemy hero affected."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Increases total beams and the Eclipse duration",
+          "Removes the limit on beams per unit, with the beams appearing twice as fast",
+          "Luna may now cast Eclipse on an area, an allied unit, or herself, and have the ability effects follow them"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Increases number of active glaives and the instant attack factor"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Lucent Beam Hits an Additional Target", "+1 Lunar Blessing Damage per Luna Level"],
+        "level_20": ["-2s Lucent Beam Cooldown", "+110 Lucent Beam Damage"],
+        "level_15": ["-40s Eclipse Cooldown", "+1 Lunar Orbit glaive"],
+        "level_10": ["+0.4s Lucent Beam Stun Duration", "-5% Moon Glaives Damage Reduction"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Lunar Blessing",
+          "type": "passive",
+          "description": "Increases the attack damage for Luna and nearby allied heroes. At nighttime, the Lunar Blessing is Global.",
+          "values": {
+            "radius": 1200,
+            "global_radius": "Global",
+            "attack_damage_bonus_per_hero_level": 1,
+            "facet_bonus": 2,
+            "aura_linger_duration": 0.5,
+            "self_night_vision_bonus": 250,
+            "self_night_vision_bonus_per_hero_level": 25,
+            "self_attack_damage_bonus_factor": 2
+          },
+          "details": "The Goddess of the Moon smiles upon her kin."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Luna's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden Innate Abilities with channeling requirements"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Lucent Beam",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical / Instant Attack / Physical",
+        "damage_types": ["magical", "physical"],
+        "cooldown": "9/8/7/6",
+        "mana_cost": "90/100/110/120",
+        "cast_range": "800",
+        "cast_animation": "0.4 + 0.47",
+        "cast_radius": "",
+        "details": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them.",
+        "description": "Selemene smites those who encroach upon the Nightsilver Woods.",
+        "facet_effects": {
+          "moonstorm": {
+            "attack_damage_bonus": "4/7/10/13",
+            "buff_duration": 15,
+            "eclipse_bonus": "2/3.5/5/6.5"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Targets: 1 (2 with talent)",
+          "Damage: 75/150/225/300 (185/260/335/410 with talent)",
+          "Stun Duration: 0.6 (1 with talent)",
+          "Secondary Target Search Radius when talented"
+        ],
+        "interaction_notes": [
+          "Grants a 3-second 200-radius vision centered around the affected unit upon cast",
+          "Nullifies the ability when spell blocked",
+          "Does not proc Spell Block sources on secondary affected targets"
+        ]
+      },
+      "ability_2": {
+        "name": "Lunar Orbit",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Attack Damage / Instant Attack",
+        "damage_types": ["physical"],
+        "cooldown": "40/35/30/25",
+        "mana_cost": "65/70/75/80",
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "The Moon Rider's glaive spirals out, rotates around her, and instantly attacks collided enemy units for a portion of her attack damage.",
+        "description": "None may approach Selemene's chosen without favor from the goddess herself.",
+        "facet_effects": {
+          "moonshield": {
+            "damage_reduction": "15%/20%/25%/30%"
+          }
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Orbit Radius: 250",
+          "Number of Glaives: 4 (5 with shard)",
+          "Orbital Speed: 160 (240 with shard)",
+          "Collision Radius: 175",
+          "Instant Attack Factor: 0.22/0.28/0.34/0.4 (0.42/0.48/0.54/0.6 with shard)",
+          "Duration: 5/6/7/8"
+        ],
+        "interaction_notes": [
+          "Creates glaives logarithmically spiraling from the center of Luna",
+          "Neither procs attack modifiers nor on-hit effects",
+          "Have True Strike and ignores disarm sources"
+        ]
+      },
+      "ability_3": {
+        "name": "Moon Glaives",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical / Instant Attack / Physical",
+        "damage_types": ["physical"],
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "",
+        "details": "Luna's attacks bounce between enemy units, and deals lesser damage per bounce.",
+        "description": "Carefully sharpened, Luna's boomerang-like weapon cuts a wide swath through enemy numbers.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 500",
+          "Number of Bounces: 3/4/5/6",
+          "Damage Factor per Bounce: 0.5/0.55/0.6/0.65 (0.55/0.6/0.65/0.7 with talent)"
+        ],
+        "interaction_notes": [
+          "Bounce toward a random enemy unit within search radius",
+          "Can bounce to the same enemy unit(s) after all other valid units were hit",
+          "Does not bounce to attack immune, fogged, or invisible units"
+        ]
+      },
+      "ability_4": {
+        "name": "Eclipse",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "110",
+        "mana_cost": "150/200/250",
+        "cast_range": "2500 with scepter",
+        "cast_animation": "0.5 + 0.37",
+        "cast_radius": "675",
+        "details": "Temporary obscures the sun, turning the day into night, while showering enemies with lucent strikes in a radius around Luna. There is a max number of times that a single target can be struck.",
+        "description": "In times of great need, Selemene herself descends into the world, blocking out the light and hope of the opposed.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "unit_target", "point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 675",
+          "Number of Beams: 6/9/12 (6/12/18 with scepter)",
+          "Max Beams per Unit: 5 (6/12/18 with scepter)",
+          "Beam Interval: 0.6 (0.3 with scepter)",
+          "Eclipse Duration: 2.4/4.2/6 (1.8/3.6/5.4 with scepter)",
+          "Set Nighttime Duration: 10",
+          "Damage Factor: 1"
+        ],
+        "interaction_notes": [
+          "Turns the Time of Day into nighttime for 10 seconds",
+          "Has the same Lucent Beam properties but does not apply stun duration",
+          "Does not affect invisible or fogged units"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Moon Glaives no longer searches for attack immune units"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Lunar Orbit: Updated projectile collision operations",
+          "Lunar Orbit: Increased instant attack factor from 0.2/0.25/0.3/0.35 to 0.22/0.28/0.34/0.4",
+          "Lunar Orbit: Increased collision radius from 150 to 175",
+          "Lunar Orbit: Increased Moonshield damage reduction from 10%/15%/20%/25% to 15%/20%/25%/30%",
+          "Aghanim's Shard upgrade: Increased Lunar Orbit damage reduction from 15% to 20%"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Lunar Blessing: Reduced base nighttime vision bonus from 400 to 250",
+          "Lunar Blessing: Increased nighttime vision bonus per hero level from 20 to 25",
+          "Talents: LVL 10 -8% Moon Glaives damage reduction per bounce reduced to -5%",
+          "Talents: LVL 15 +80 Lucent Beam damage → +1 Lunar Orbit glaive",
+          "Talents: LVL 20 2 Moon Glaives fired on Lucent Beam → +110 Lucent Beam damage"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

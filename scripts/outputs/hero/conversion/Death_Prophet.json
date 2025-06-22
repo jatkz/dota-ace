@@ -1,0 +1,279 @@
+{
+  "hero_name": "Death Prophet",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 21,
+      "strength_gain": 2.9,
+      "agility": 17,
+      "agility_gain": 2,
+      "intelligence": 24,
+      "intelligence_gain": 3,
+      "health": 582,
+      "mana": 363,
+      "armor": 3.83,
+      "magic_resist": 27.4,
+      "damage": [49, 59],
+      "damage_avg": 54.9,
+      "projectile_speed": 1000,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 0.51",
+      "move_speed": 290,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Spirit Collector",
+        "effects": "Heroes' death empower the Exorcism spirits. Grants a charge per enemy hero death, including Death Prophet herself, and replaces regular Exorcism spirits with the current collected dead souls. If an enemy hero is killed while Exorcism is active, Spirit Collector will immediately replace a regular Exorcism spirit whenever possible. The enemy hero killed is granted as a charge for the next Exorcism cast as well."
+      },
+      "facet_2": {
+        "name": "Mourning Ritual",
+        "effects": "Grants damage reduction over incoming damage instance taken for a period of time. Krobelus has a delayed reaction to the previous incoming damage."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "The Death Prophet commands an Exorcism spirit to haunt the enemy unit she attacks",
+          "Unleashes evil spirit of Exorcism's corresponding level per enemy unit affected by Crypt Swarm",
+          "Summons an exorcised banshee of its corresponding level per affected enemy unit by Silence",
+          "Creates an Exorcism spirit of its corresponding level, haunting the affected siphoned enemy by Spirit Siphon"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Applies a caster-fear if the affected enemy target is siphoned for a certain amount of time consecutively",
+          "Increases max charges for Spirit Siphon"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+8 Exorcism Spirits", "-22s Spirit Siphon Restore Time"],
+        "level_20": ["+25 Spirit Siphon Damage/Heal", "+400 Health"],
+        "level_15": ["-2.5s Crypt Swarm Cooldown", "+100 Silence Radius"],
+        "level_10": ["+12% Magic Resist", "+40 Attack Speed"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Witchcraft",
+          "type": "passive",
+          "description": "Grants self bonus movement speed and cooldown reduction per hero level.",
+          "values": {
+            "move_speed_bonus_per_level": "0.5%",
+            "cooldown_reduction_per_level": "0.75%"
+          },
+          "details": "This ability levels up with Death Prophet. All bonus values stack additively per level."
+        },
+        {
+          "name": "Mourning Ritual",
+          "type": "passive",
+          "description": "Grants damage reduction over incoming damage instance taken for a period of time.",
+          "values": {
+            "damage_reduction": "15%/25%/35%/45%",
+            "damage_timer": 5,
+            "damage_as_current_health_loss_per_second": "3%/5%/7%/9%",
+            "damage_delay_duration": 5
+          },
+          "details": "This ability levels up with Exorcism. Selecting the Mourning Ritual facet unlocks this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Crypt Swarm",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical/Spell/Physical",
+        "damage_types": ["magical", "physical"],
+        "cooldown": "9/8/7/6",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "900",
+        "cast_animation": "0.2 + 0.5",
+        "cast_radius": "110 first radius, 300 end radius",
+        "details": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
+        "description": "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has cone-shaped area of effect",
+          "Wave travels at 1100 speed, reaching max distance in 1.22 seconds",
+          "Can affect enemy units up to 1200 distance away"
+        ],
+        "interaction_notes": [
+          "Does not proc Spell Block or Spell Reflection",
+          "Spawns Exorcism spirit per affected enemy unit with Scepter"
+        ]
+      },
+      "ability_2": {
+        "name": "Silence",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Physical",
+        "damage_types": ["physical"],
+        "cooldown": "15/14/13/12",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "900",
+        "cast_animation": "0.2 + 0.9",
+        "cast_radius": "450",
+        "details": "Fires a projectile that silences enemy units within a radius, preventing them from casting spells.",
+        "description": "Fires a projectile that silences enemy units within a radius, preventing them from casting spells.",
+        "facet_effects": {
+          "radius_with_talent": "550"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Projectile has 1400 projectile speed",
+          "Can affect enemy units at max 1350 distance away",
+          "Silence applies 0-damage instance per server tick"
+        ],
+        "interaction_notes": [
+          "Spawns Exorcism spirit per affected enemy unit with Scepter"
+        ]
+      },
+      "ability_3": {
+        "name": "Spirit Siphon",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Magical/Spell/Physical",
+        "damage_types": ["magical", "physical"],
+        "cooldown": "40",
+        "mana_cost": 0,
+        "cast_range": "500",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "750 link break distance",
+        "details": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+        "description": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+        "facet_effects": {
+          "damage_per_second_with_talent": "50/75/100/125",
+          "self_heal_per_second_with_talent": "50/75/100/125",
+          "fear_duration_with_shard": 1,
+          "nth_second_to_fear_with_shard": 3,
+          "cooldown_with_talent": 18,
+          "max_charges_with_shard": "2/3/4/5"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Deals damage in 0.25-second intervals",
+          "Link does not break in Fog of War or when target is invisible",
+          "Affects Roshan and Tormentor",
+          "Self-heals for full value regardless of damage reduction"
+        ],
+        "interaction_notes": [
+          "Cannot be cast on already affected enemy units",
+          "Spawns Exorcism spirit per cast with Scepter",
+          "Shard adds fear component after 3 seconds of siphoning"
+        ]
+      },
+      "ability_4": {
+        "name": "Exorcism",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Physical",
+        "damage_types": ["physical"],
+        "cooldown": "150",
+        "mana_cost": "200/300/400",
+        "cast_range": "700 acquisition radius",
+        "cast_animation": "0.5 + 0.77",
+        "cast_radius": "1200 max radius",
+        "details": "Unleashes spirits to drain the life of nearby enemy units and buildings. Grants bonus movement speed while active. At the end of the exorcism, all spirits return and heals Death Prophet for a portion of the damage dealt.",
+        "description": "Unleashes spirits to drain the life of nearby enemy units and buildings. Grants bonus movement speed while active. At the end of the exorcism, all spirits return and heals Death Prophet for a portion of the damage dealt.",
+        "facet_effects": {
+          "number_of_spirits_with_talent": "18/25/32",
+          "spirit_collector_min_damage": "88/96/104",
+          "spirit_collector_max_damage": "94/102/110",
+          "scepter_damage_factor": 1.5,
+          "scepter_move_speed_slow": "100%",
+          "scepter_slow_duration": 0.3,
+          "scepter_max_duration": 20
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Spawns spirits in 0.35-second intervals",
+          "Spirits have 525 move speed",
+          "Min damage 62, Max damage 67",
+          "Damage to heal factor 0.25",
+          "Building damage factor 0.5",
+          "Spirits disappear if exceeding 2000 radius from Death Prophet"
+        ],
+        "interaction_notes": [
+          "Does not affect invisible units or ward-type units",
+          "Spirit Collector facet replaces regular spirits with hero spirits",
+          "Scepter spirits from abilities have enhanced damage and slow effect"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Crypt Swarm damage from 85/165/245/325 to 100/175/250/325",
+          "Increased Silence projectile speed from 1200 to 1400",
+          "Talents: LVL 15 +75 Silence radius increased to +100"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Death Prophet no longer has Intelligence as primary attribute and is now a Universal hero",
+          "Decreased base attack damage from 25‒35 to 22‒32",
+          "Increased base agility from 16 to 17",
+          "Witchcraft: Reduced movement speed bonus per level from 0.75% to 0.5%",
+          "Witchcraft: Increased cooldown reduction per level from 0.5% to 0.75%",
+          "REMOVED the Silence Suppress facet",
+          "Exorcism Spirit Collector: Increased hero spirit damage from 84‒90/92‒98/101‒106 to 88‒94/106‒112/124‒130",
+          "Spirit Collector: If any hero is killed while Exorcism is active, will immediately replace a regular spirit and grant charge for next cast"
+        ]
+      },
+      {
+        "version": "7.37d",
+        "date": "2024-10-01",
+        "changes": [
+          "Increased base attack damage from 23‒33 to 25‒35",
+          "Increased Exorcism number of spirits from 8/16/24 to 10/17/24"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

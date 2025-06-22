@@ -1,0 +1,304 @@
+{
+  "hero_name": "Kunkka",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 24,
+      "strength_gain": 3.6,
+      "agility": 14,
+      "agility_gain": 1.6,
+      "intelligence": 18,
+      "intelligence_gain": 1.8,
+      "health": 648,
+      "mana": 291,
+      "armor": 4.33,
+      "magic_resist": 26.8,
+      "damage": [54, 60],
+      "damage_avg": 57,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.3",
+      "move_speed": 315,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Support, Disabler, Initiator, Durable, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "High Tide",
+        "effects": "Reduces Tidebringer cooldown per enemy hero hit."
+      },
+      "facet_2": {
+        "name": "Grog Blossom",
+        "effects": "Grants the Admiral's Rum buff to allied units within the radius centered around the Return unit. The buff applied corresponds to Ghostship's current level."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Launches a fleet of 2 ships on a 2.5 second interval", "Each ship now also fires 3 waves of cannonballs from the port and starboard side that deal 40% of Ghostship's damage as they pass through enemies"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Tidal Wave ability", "Calls upon a tidal wave from behind Kunkka that deals damage, disarms, and drags enemy units along it"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+120% Tidebringer Cleave", "+100 Area-of-Effect Bonus"],
+        "level_20": ["+15% Admiral's Rum / Ghostship Damage Reduction", "-4s Torrent Cooldown"],
+        "level_15": ["+70 Tidebringer Damage", "+25% Torrent Damage/Stun Duration"],
+        "level_10": ["-15s Admiral's Rum Cooldown", "+1s Tidebringer 60% Slow"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Admiral's Rum",
+          "type": "passive",
+          "description": "Douses himself with the Admiral's signature rum upon taking additional player-based damage instances when reaching a certain health threshold. The Rum buff grants bonus movement speed and damage reduction for a period of time.",
+          "values": {
+            "health_threshold": "65%",
+            "move_speed_bonus": "10%",
+            "damage_reduction": "20% (35% with facet)",
+            "damage_timer": 6,
+            "rum_buff_duration": 6,
+            "cooldown": "60 (45 with facet)"
+          },
+          "details": "Deleterious to landlubbers, no one holds their rum like a sailor."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Torrent",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "16/14/12/10",
+        "mana_cost": 90,
+        "cast_range": "1300",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "250 (350 with talent)",
+        "details": "Summons a rising torrent that, after a short delay, stuns and hurls enemy units into the sky.",
+        "description": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral.",
+        "facet_effects": {
+          "radius_bonus": "350 with talent",
+          "damage_bonus": "100/200/300/400 with talent",
+          "stun_duration_bonus": "1.75 with talent"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Delay: 1.6",
+          "Stun Duration: 1.4 (1.75 with talent)",
+          "Knock-Up Duration: 1.33 (1.66 with talent)",
+          "Total Damage: 80/160/240/320 (100/200/300/400 with talent)",
+          "Move Speed Slow: 40%",
+          "Slow Duration per Instance: 1/2/3/4"
+        ],
+        "interaction_notes": [
+          "Displays an ally-only visual radius indicator upon cast",
+          "Plays an ally-only sound effect upon cast",
+          "Grants 3.13-second 350-radius vision centered on effect radius upon cast"
+        ]
+      },
+      "ability_2": {
+        "name": "Tidebringer",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "13/10/7/4",
+        "mana_cost": 0,
+        "cast_range": "150",
+        "cast_animation": "0.4 + 0.3",
+        "cast_radius": "Variable",
+        "details": "Grants increased damage and cleaves a large area of effect in front of him for a single strike.",
+        "description": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract.",
+        "facet_effects": {
+          "high_tide": "Reduces Tidebringer cooldown per enemy hero hit by 0.8 seconds",
+          "cleave_bonus": "270% with talent",
+          "damage_bonus": "105/140/175/210 with talent",
+          "slow_effect": "60% movement speed slow for 1 second with talent"
+        },
+        "ability_behavior": ["autocast", "active_attack_modifier"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "First Width: 150 (250 with talent)",
+          "Distance: 650/800/950/1100 (750/900/1050/1200 with talent)",
+          "End Width: 500/550/600/650 (600/650/700/750 with talent)",
+          "Cleave Damage: 150% (270% with talent)",
+          "Attack Damage Bonus: 35/70/105/140 (105/140/175/210 with talent)"
+        ],
+        "interaction_notes": [
+          "Active attack modifier with autocast on by default",
+          "Affected by attack range sources",
+          "Deals physical spell damage corresponding to attack damage value"
+        ]
+      },
+      "ability_3": {
+        "name": "X Marks the Spot",
+        "key": "E",
+        "type": "active",
+        "affects": "Heroes",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "30/24/18/12",
+        "mana_cost": 50,
+        "cast_range": "550/700/850/1000",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "N/A",
+        "details": "Targets a hero, marks its position with an X, and returns it to the X after several seconds.",
+        "description": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment.",
+        "facet_effects": {
+          "grog_blossom": "Grants Admiral's Rum buff to allied units within 400 radius (500 with talent) centered around the returned unit for 3 seconds with damage reduction corresponding to Ghostship's current level"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Enemy Duration: 3",
+          "Ally Duration: 6",
+          "Doubletap casts on Kunkka",
+          "Grants 5.94-second 400-radius vision centered around target upon cast"
+        ],
+        "interaction_notes": [
+          "More effective while targeting an ally",
+          "Considers clones, illusions and creep-heroes as heroes",
+          "Disable Help on Kunkka prevents ability being cast on allied hero"
+        ]
+      },
+      "ability_4": {
+        "name": "Tidal Wave",
+        "key": "F",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "12",
+        "mana_cost": 75,
+        "cast_range": "1400",
+        "cast_animation": "0.2 + 1",
+        "cast_radius": "750",
+        "details": "Calls upon a tidal wave from behind Kunkka that deals damage, disarms, and drags enemy units along it.",
+        "description": "A good sailor knows the timing of the tides like the back of his hand.",
+        "facet_effects": {
+          "radius_bonus": "850 with talent"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Travel Distance: 2300",
+          "Radius: 750 (850 with talent)",
+          "Damage: 180",
+          "Knock Distance: 600",
+          "Knock Duration: 1",
+          "Disarm Duration: 1",
+          "Requires Aghanim's Shard to unlock"
+        ],
+        "interaction_notes": [
+          "Tidal Wave starts from behind where Kunkka is facing",
+          "Affects units up to 2150-2250 distance away",
+          "Grants 2-second 200-radius vision around affected enemy units"
+        ]
+      },
+      "ability_5": {
+        "name": "Ghostship",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Allied Heroes",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "90/80/70",
+        "mana_cost": "125/175/225",
+        "cast_range": "1000",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "450",
+        "details": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage.",
+        "description": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
+        "facet_effects": {
+          "damage_reduction_bonus": "50% with talent",
+          "ship_radius_bonus": "550 with scepter"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Ships: 1 (2 with scepter)",
+          "Ship Radius: 450 (550 with talent)",
+          "Travel Distance: 2000",
+          "Ship Spawn Interval: 3.5",
+          "Impact Damage: 350/475/600",
+          "Stun Duration: 1.2",
+          "Move Speed Bonus: 15%",
+          "Damage Reduction: 35% (50% with talent)",
+          "Damage Timer: 10",
+          "Rum Buff Duration: 10"
+        ],
+        "interaction_notes": [
+          "Allied heroes touched by Ghostship receive Admiral's Rum buff",
+          "Spawns 2000-distance away opposite of targeted direction",
+          "Has 650 projectile speed and reaches crash location in 3.08 seconds",
+          "With Scepter: launches fleet of 2 ships with cannonball volleys dealing 40% damage"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "X Marks the Spot Grog Blossom: Kunkka always applies Admiral's Rum buff on self when X Marks the Spot expires or upon Return sub-ability cast"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased Tidebringer damage bonus from 30/60/90/120 to 35/70/105/140"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Talents: LVL 10 +25% X Marks the Spot movement speed change → -15s Admiral's Rum cooldown",
+          "LVL 15 +60 Tidebringer attack damage bonus increased to +70",
+          "LVL 15 +20% Torrent damage/knock up duration increased to +25%",
+          "LVL 25 +100% Tidebringer cleave damage increased to +200%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

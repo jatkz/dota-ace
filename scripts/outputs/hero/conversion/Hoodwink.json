@@ -1,0 +1,270 @@
+{
+  "hero_name": "Hoodwink",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 17,
+      "strength_gain": 2,
+      "agility": 25,
+      "agility_gain": 3.6,
+      "intelligence": 21,
+      "intelligence_gain": 2.9,
+      "health": 494,
+      "mana": 327,
+      "armor": 4.17,
+      "magic_resist": 27.1,
+      "damage": [47, 54],
+      "damage_avg": 50.5,
+      "projectile_speed": 1800,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 100,
+      "bat": 2,
+      "animation": "0.4 + 1.5",
+      "move_speed": 310,
+      "turn_rate": 0.9,
+      "collision_size": 18,
+      "bound_radius": 8,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Escape, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Go Nuts",
+        "effects": "Scurry grants both bonus cast range and bonus attack range upon cast. Increases buff duration."
+      },
+      "facet_2": {
+        "name": "Hipshot",
+        "effects": "Sharpshooter has a greatly reduced cooldown. Damage, debuff duration, turn rate penalty, and wind-up times are also reduced."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Decoy ability",
+          "Turns invisible instantaneously while increasing her movement speed",
+          "Creates a Decoy-based illusion that starts winding up Sharpshooter at the nearest enemy hero",
+          "If the Decoy-based illusion is attacked or hit by a unit-targeted ability, it is destroyed and throws a lesser Bushwhack toward the enemy"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Hunter's Boomerang ability",
+          "Tosses a boomerang in an arc that deals damage as it pass through enemy units"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+400 Sharpshooter Damage", "2 Acorn Shot Charges"],
+        "level_20": ["-3 Armor Corruption", "Sharpshooter Grants Vision and True Sight During Wind-up"],
+        "level_15": ["+1 Acorn Shot Bounces", "+60 Bushwhack Damage"],
+        "level_10": ["+1.5 Mana Regen", "+1 Scurry Charge"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Mistwoods Wayfarer",
+          "type": "passive",
+          "description": "Has a chance to redirect incoming attacks to a nearby tree, destroying it in the process. The tree search radius is centered around Hoodwink.",
+          "values": {
+            "tree_search_radius": 275,
+            "proc_chance": "14%/21%/28%/35%"
+          },
+          "details": "This ability levels up with Sharpshooter. Uses pseudo-random distribution."
+        },
+        {
+          "name": "Armor Corruption",
+          "type": "passive",
+          "description": "Granted by learning a talent. Hoodwink's attacks now reduce the affected target's armor by a certain amount.",
+          "values": {
+            "armor_reduction": 3,
+            "duration": 10
+          },
+          "details": "Applies the debuff per successful attack on the affected unit. Stacks independently with other Armor Corruption or armor reduction sources."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Acorn Shot",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Instant Attack / Physical",
+        "cooldown": "16/14/12/10",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "675",
+        "cast_animation": "0.2 + 1.37",
+        "cast_radius": "525",
+        "details": "Fires an acorn attack on the target enemy. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.",
+        "description": "Fires an acorn attack on the target enemy. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.",
+        "facet_effects": {
+          "go_nuts": "Affected by Scurry's active bonus attack range, but not the bonus cast range"
+        },
+        "ability_behavior": ["unit_target", "point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Bounces: 3/4/5/6",
+          "Instant Attack Factor: 0.8",
+          "Instant Attack Damage Bonus: 45/90/135/180",
+          "Move Speed Slow: 100%",
+          "Slow Duration: 0.3"
+        ],
+        "interaction_notes": [
+          "Alt-Cast creates a planted tree at the targeted location",
+          "Acorn Shot will bounce to nearby target within the planted tree radius",
+          "Can bounce on the same enemy unit, after another enemy unit was hit between bounces"
+        ]
+      },
+      "ability_2": {
+        "name": "Bushwhack",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Trees",
+        "damage": "Spell / Magical",
+        "cooldown": "15/14/13/12",
+        "mana_cost": "90/100/110/120",
+        "cast_range": "1000",
+        "cast_animation": "0.2 + 1.07",
+        "cast_radius": "265",
+        "details": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area. Affected enemies take damage over time.",
+        "description": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area. Affected enemies take damage over time.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Total Damage: 90/180/270/360",
+          "Stun Duration: 1.4/1.6/1.8/2",
+          "Enemy Pull Speed: 1000",
+          "Set Vision Range: 0",
+          "Tree Extend Duration: 1.4/1.6/1.8/2"
+        ],
+        "interaction_notes": [
+          "Units trapped within the radius are pulled towards the tree nearest to them",
+          "Have their vision reduced to nil for its duration",
+          "Grants flying vision centered around the affected tree"
+        ]
+      },
+      "ability_3": {
+        "name": "Scurry",
+        "key": "E",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "cooldown": "30/24/18/12",
+        "mana_cost": "35",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "275",
+        "details": "When activated, Hoodwink gains bonus movement speed, evasion, attack and cast range, phased movement, and tree-walking for a brief time.",
+        "description": "When activated, Hoodwink gains bonus movement speed, evasion, attack and cast range, phased movement, and tree-walking for a brief time.",
+        "facet_effects": {
+          "go_nuts": "Grants both bonus cast range and bonus attack range upon cast. Cast Range Bonus: 75/150/225/300, Attack Range Bonus: 75/150/225/300"
+        },
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Move Speed Bonus: 20%/25%/30%/35%",
+          "Duration: 3/3.5/4/4.5",
+          "Self Evasion Factor: 2",
+          "Mistwoods Wayfarer Proc Chance Factor: 2",
+          "Charges: 2"
+        ],
+        "interaction_notes": [
+          "When Hoodwink is near trees, she can move through trees",
+          "Grants 2 charges immediately upon learning the ability",
+          "Cannot recast the ability until the current Scurry cast finishes"
+        ]
+      },
+      "ability_4": {
+        "name": "Sharpshooter",
+        "key": "R",
+        "type": "channeling",
+        "affects": "Enemy Heroes / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "45",
+        "mana_cost": "100/150/200",
+        "cast_range": "3000",
+        "cast_animation": "0 + 9.5",
+        "cast_radius": "125",
+        "details": "Charges up and fires a deadly bolt from her crossbow. After winding up for a while, the bolt is fired automatically and Hoodwink is knocked back for a distance from the force of the shot.",
+        "description": "Charges up and fires a deadly bolt from her crossbow. After winding up for a while, the bolt is fired automatically and Hoodwink is knocked back for a distance from the force of the shot.",
+        "facet_effects": {
+          "hipshot": "Max Wind-Up Time: 2.25, Max Damage: 450/731.25/1012.5, Max Debuff Duration: 3.75, Set Turn Rate during Wind-Up: 90°, Cooldown: 22.5"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Min Damage: 120/195/270",
+          "Max Damage: 600/975/1350",
+          "Move Speed Slow: 30%/40%/50%",
+          "Min Slow Duration: 1",
+          "Max Slow Duration: 5",
+          "Min Break Duration: 1",
+          "Max Break Duration: 5",
+          "Max Wind-up Time: 3",
+          "Max Aim Time: 5",
+          "Self Knock Distance: 350",
+          "Self Knock Duration: 0.4"
+        ],
+        "interaction_notes": [
+          "Disarms and limits Hoodwink's turn rate while winding-up",
+          "The damage, movement speed slow, and break duration applied on the affected enemy hero scale up to the max values based on the wind-up time",
+          "The bolt flies through creeps and damages them, albeit the damage being less effective"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Acorn Shot mana cost from 85/90/95/100 to 70/80/90/100",
+          "Scurry: Increased buff duration from 2/2.5/3/3.5 to 3.5/4/4.5/5",
+          "Go Nuts no longer increases buff duration by 1.5"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased Acorn Shot instant attack damage bonus from 40/80/120/160 to 45/90/135/180",
+          "Increased Sharpshooter max damage from 550/900/1250 to 600/975/1350",
+          "Hunter's Boomerang: Increased movement speed slow from 20% to 25%",
+          "Hunter's Boomerang: Increased spell damage amplification from 20% to 25%"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Rescaled Bushwhack cooldown from 14 on each level to 15/14/13/12"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 250000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

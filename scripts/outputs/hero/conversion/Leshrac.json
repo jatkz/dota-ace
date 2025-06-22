@@ -1,0 +1,277 @@
+{
+  "hero_name": "Leshrac",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.8,
+      "agility": 17,
+      "agility_gain": 2.5,
+      "intelligence": 22,
+      "intelligence_gain": 3.5,
+      "health": 560,
+      "mana": 339,
+      "armor": 3.83,
+      "magic_resist": 27.2,
+      "damage": [49, 53],
+      "damage_avg": 51,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.6",
+      "move_speed": 325,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Support, Nuker, Pusher, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Chronoptic Nourishment",
+        "effects": "The nihilist's attacks restore his mana corresponding to the attack damage dealt."
+      },
+      "facet_2": {
+        "name": "Misanthropy",
+        "effects": "Diabolic Edict has a shorter explosion interval, but no longer affects buildings. ×0 Building Damage Factor, -4s Duration"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Nihilism ability", "Leshrac and all enemy units within the radius turns ethereal. They cannot attack, have their movement speed slowed, and reduces all affected enemy units' magic resistance"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Causes Split Earth to echo in the same location with a delay duration, increasing its effect radius per instance", "The echo location is visible to everyone"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+20 Diabolic Edict Explosions", "Pulse Nova Procs Lightning Storm"],
+        "level_20": ["+30 Pulse Nova Damage", "+1 Diabolic Edict Max Affected Units"],
+        "level_15": ["+10% Pulse Nova Active Damage Reduction", "+80 Lightning Storm Damage"],
+        "level_10": ["+4 Armor", "+1.5 Mana Regen"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Defilement",
+          "type": "passive",
+          "description": "Grants self flat bonus area-of-effect per current intelligence.",
+          "values": {
+            "radius_bonus_per_int": 0.7
+          },
+          "details": "Has 15.4 area-of-effect bonus at hero level 1. Additionally grants 2.45 base area-of-effect bonus per hero level."
+        },
+        {
+          "name": "Chronoptic Nourishment",
+          "type": "passive",
+          "description": "The nihilist's attacks restore his mana corresponding to the attack damage dealt.",
+          "values": {
+            "attack_damage_to_mana_restore_factor": 0.25,
+            "creep_mana_restore_factor": 0.5
+          },
+          "details": "Selecting the Chronoptic Nourishment facet unlocks this ability. Self mana restores corresponding to the total attack damage applied (after reductions) on the attacked unit."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Split Earth",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "9",
+        "mana_cost": "80/100/120/140",
+        "cast_range": "650",
+        "cast_animation": "0.7 + 0.67",
+        "cast_radius": "135/160/185/210",
+        "details": "Deals damage and stuns enemy units for a short duration within the radius.",
+        "description": "Twisting nature to his vile will, the shifting earth consumes those unlucky enough to cross Leshrac's path.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Can affect enemy units at max 785/810/835/860-distance away with the cast range and effect radius",
+          "Trees within effect radius are destroyed",
+          "The ability has neither a visual nor an audio indicator during its effect delay"
+        ],
+        "interaction_notes": [
+          "With Shard: Now applies its effect 3 times at the area-targeted location",
+          "All Split Earth instances have intervals at 0.35s, 5.35s, 10.35s"
+        ]
+      },
+      "ability_2": {
+        "name": "Diabolic Edict",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Pure"],
+        "cooldown": "22/21/20/19",
+        "mana_cost": "90/120/150/180",
+        "cast_animation": "0.5 + 0.87",
+        "cast_radius": "450",
+        "details": "Saturates the area around Leshrac with magical explosions that deal pure damage to enemy units. The fewer units available to attack, the more damage those units will take.",
+        "description": "Chronoptic energy bursts from one plane to the other, evaporating anything it touches.",
+        "facet_effects": {
+          "misanthropy": "Building Damage Factor: 0, Damage Interval: 0.15, Duration: 6"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Centered on Leshrac upon cast for the entire duration",
+          "Creates a negative aura that deals pure spell damage immediately to valid enemy units within the radius",
+          "Randomly selects nearby valid enemy units, without priorities, and applies a damage instance per explosion"
+        ],
+        "interaction_notes": [
+          "Affects Fogged units and Invisible units",
+          "Does not affect Hidden units or Invulnerable units",
+          "Deals a max 400/720/1040/1360 damage to a lone target within the radius"
+        ]
+      },
+      "ability_3": {
+        "name": "Lightning Storm",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "4",
+        "mana_cost": "80/100/120/140",
+        "cast_range": "600",
+        "cast_animation": "0.3 + 1.04",
+        "cast_radius": "450",
+        "details": "Summons a lightning storm that blasts the target enemy unit, then jumps to nearby enemy units. Struck units have their movement speed slowed.",
+        "description": "The Tormented Soul's mastery of the elements is evident in the massive storms that strike down armies before him.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The magical spell damage can only affect the same enemy units once per cast",
+          "The lightning hits the primary target after the effect delay",
+          "Jumps to other enemy units within the radius in 0.25-second intervals"
+        ],
+        "interaction_notes": [
+          "Lightning Storm takes 1.25/1.75/2.25/2.75 seconds to hit all valid targets",
+          "All jumps deals up to 450/980/1710/2640 damage per storm instance",
+          "With Talent: Pulse Nova procs a Lightning Storm strike on a random enemy unit within 700 radius"
+        ]
+      },
+      "ability_4": {
+        "name": "Nihilism",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "25",
+        "mana_cost": "75",
+        "cast_animation": "0 + 0",
+        "cast_radius": "500",
+        "details": "Leshrac and all enemy units within the radius turns ethereal. They cannot attack, have their movement speed slowed, and reduces all affected enemy units' magic resistance.",
+        "description": "When it serves his purpose, Leshrac briefly reduces his presence in the Terrene Plane.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Acquiring Aghanim's Scepter unlocks this ability in the fourth ability slot",
+          "Creates a negative aura upon cast centered around Leshrac for the entire duration",
+          "Grants 100% physical damage resistance as a secondary effect"
+        ],
+        "interaction_notes": [
+          "Multiple ethereal-based magic resistance reduction sources do not stack",
+          "Dispelling the buff on Leshrac ends the ability prematurely",
+          "Affected enemy heroes now has 2.5% magic resistance"
+        ]
+      },
+      "ability_5": {
+        "name": "Pulse Nova",
+        "key": "R",
+        "type": "toggle",
+        "affects": "Enemies / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "1",
+        "mana_cost": "70",
+        "cast_animation": "0 + 0",
+        "cast_radius": "500",
+        "details": "Creates pulse of damaging energy that affects enemy units around Leshrac once per second. Drains Leshrac's mana per pulse.",
+        "description": "If necessary, the Tormented Soul can manipulate space time itself, ravaging lesser beings.",
+        "facet_effects": {},
+        "ability_behavior": ["toggle"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Toggle does not interrupt Leshrac's channeling abilities",
+          "The ability effects are applied as follows: The magical spell damage and the activation mana cost, then loses 25/45/65 current mana in 1-second intervals",
+          "Affects Fogged units and Invisible units"
+        ],
+        "interaction_notes": [
+          "Automatically toggles off if Leshrac does not have enough mana for the next instance",
+          "Does not automatically toggle off when affected by Disable, Hidden, or Silence sources",
+          "With Talent: Applies generic incoming damage reduction on Leshrac while active"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Chronoptic Nourishment: Rescaled attack damage to mana restore factor from 0.14/0.21/0.28/0.35 to 0.25 on each level",
+          "Chronoptic Nourishment: This component no longer levels up with Pulse Nova",
+          "Aghanim's Shard upgrade: Reduced Split Earth number of instance bonus from 3 to 2"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Increased Chronoptic Nourishment attack damage to mana restore factor from 0.1/0.18/0.26/0.34 to 0.14/0.21/0.28/0.35",
+          "Increased Diabolic Edict mana cost from 90/110/130/150 to 90/120/150/180",
+          "Lightning Storm no longer applies a 50-attack speed slow"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Defilement flat area-of-effect bonus per intelligence from 0.4 to 0.7",
+          "Increased Chronoptic Nourishment attack damage to mana restore factor from 0.1/0.14/0.18/0.22 to 0.1/0.18/0.26/0.34",
+          "Talents: LVL 15 +10% movement speed during Pulse Nova → +10% damage reduction during Pulse Nova",
+          "Talents: LVL 20 +20% damage reduction during Pulse Nova → +1 Diabolic Edict max targets"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

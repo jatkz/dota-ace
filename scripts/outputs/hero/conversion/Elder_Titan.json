@@ -1,0 +1,226 @@
+{
+  "hero_name": "Elder Titan",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 26,
+      "strength_gain": 3,
+      "agility": 16,
+      "agility_gain": 1.8,
+      "intelligence": 23,
+      "intelligence_gain": 1.6,
+      "health": 692,
+      "mana": 351,
+      "armor": 2.67,
+      "magic_resist": 27.3,
+      "damage": [49, 59],
+      "damage_avg": 54,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.97",
+      "move_speed": 315,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Disabler, Nuker, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Deconstruction",
+        "effects": "The Natural Order aura additionally applies a stacking armor reduction and a magic resistance reduction per second to enemy units within the radius."
+      },
+      "facet_2": {
+        "name": "Momentum",
+        "effects": "The Worldsmith has lower base attack speed but gets an attack speed bonus proportional to his movement speed. -85 Attack Speed Slow, +0.25x Move Speed as Attack Speed"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants Elder Titan magic resistance, and debuff immunity per affected enemy hero when the Spirit rejoins the Titan."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Reduces cooldown.", "If the Spirit is summoned, the Titan takes the place of the Spirit and reunites as it completes Echo Stomp with Alt-Cast toggled on."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+100% Cleave", "-60s Earth Splitter Cooldown"],
+        "level_20": ["+100 Natural Order Radius", "+350 Echo Stomp Wake-up Damage"],
+        "level_15": ["+25 Astral Spirit Attack Damage per Hero", "+75 Echo Stomp Damage"],
+        "level_10": ["+25 Attack Speed", "+2% Astral Spirit Move Speed per Hero"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Tip the Scales",
+          "type": "passive",
+          "description": "Grants bonus attack damage to both allied lane creeps and allied buildings in certain conditions.",
+          "values": {
+            "attack_damage_bonus": "100%",
+            "building_bonus_factor": 1,
+            "effect_radius": 650
+          },
+          "details": "Grants bonuses to allied units affected by Glyph of Fortification and Roshan's Banner."
+        },
+        {
+          "name": "Momentum",
+          "type": "passive",
+          "description": "The Worldsmith has lower base attack speed but gets an attack speed bonus proportional to his movement speed.",
+          "values": {
+            "attack_speed_slow": 85,
+            "move_speed_to_attack_speed_bonus_factor": 0.25
+          },
+          "details": "Selecting the Momentum facet unlocks this ability. Checks Elder Titan's movement speed periodically and adapts the bonus values."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The Titan's hero model has hidden innate abilities. May only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {
+            "first_width": 150,
+            "distance": 650,
+            "end_width": 360,
+            "cleave_damage": "100%"
+          },
+          "details": "Talent Upgrade grants the Titan's attack cleave properties, dealing damage within a distance in front of them whenever he attacks."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Echo Stomp",
+        "key": "Q",
+        "type": "channeled",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical / Magical",
+        "cooldown": "14/13/12/11",
+        "mana_cost": 100,
+        "cast_range": "475",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "475",
+        "details": "The Titan and its Spirit within both stomp the ground, dealing physical and magical damage while knocking nearby enemy units unconscious around their locations.",
+        "description": "Channel Time: 1.3, Physical Damage: 60/100/140/180, Magical Damage: 60/100/140/180, Wake-up Damage Threshold: 55/120/185/250, Stun Duration: 0.2, Sleep Duration: 2/2.8/3.6/4.4",
+        "facet_effects": {
+          "shard_upgrade": "Reduces cooldown and allows teleport to Spirit location"
+        },
+        "ability_behavior": ["channeled", "no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Interrupting the channeling causes the ability to do nothing, consumes mana and goes into cooldown", "Multiple overlapping Echo Stomp radius do not stack"],
+        "interaction_notes": ["Sleep causes affected enemy units to be invulnerable and cannot act, until woken up", "Affected units are never automatically attacked"]
+      },
+      "ability_2": {
+        "name": "Astral Spirit",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "23/21/19/17",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "1200",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "275",
+        "details": "The Titan sends forth the Spirit, damaging any units it passes through.",
+        "description": "Contact Damage: 50, Spirit Duration: 10, Move Speed Bonus per Enemy: 5%/6%/7%/8%, Attack Damage Bonus per Enemy: 17/38/59/80, Armor Bonus per Enemy: 1.5/3/4.5/6, Buff Duration: 10",
+        "facet_effects": {
+          "scepter_upgrade": "Grants Elder Titan magic resistance, and debuff immunity per affected enemy hero when the Spirit rejoins the Titan"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["The Spirit has unobstructed movement, ignores collision size and may pass through other units", "Spirit expires and teleports to the Fountain upon the Titan's death"],
+        "interaction_notes": ["When the Spirit rejoins the Titan, it grants various bonuses per enemy hero it passed through", "The Spirit passing through creeps grants less effective bonuses"]
+      },
+      "ability_3": {
+        "name": "Natural Order",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "N/A",
+        "cooldown": "N/A",
+        "mana_cost": "N/A",
+        "cast_range": "350",
+        "cast_animation": "N/A",
+        "cast_radius": "350",
+        "details": "Reduces all elements to their basic levels, removing base armor and base magic resistance from nearby enemy units.",
+        "description": "Base Armor Reduction: 40%/60%/80%/100%, Base Magic Resistance Reduction: 40%/60%/80%/100%, Aura Linger Duration: 1",
+        "facet_effects": {
+          "deconstruction": "Additionally applies a stacking armor reduction and magic resistance reduction per second to enemy units within the radius. Max Stacks: 20, Armor Reduction per Second: 0.8, Magic Resist Reduction per Second: 0.8%"
+        },
+        "ability_behavior": ["passive", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["The base armor reduction is centered around the Titan, while the base magic resistance reduction is centered around the Spirit", "Does not affect bonus armor sources nor bonus magic resistance sources"],
+        "interaction_notes": ["The magic resistance reduction is centered around the Titan when the Spirit is not summoned", "Does not affect Ancient creeps, Hidden units, or Invulnerable units"]
+      },
+      "ability_4": {
+        "name": "Earth Splitter",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical / Magical",
+        "cooldown": "100",
+        "mana_cost": "125/175/225",
+        "cast_range": "2400",
+        "cast_animation": "0.4 + 0.73",
+        "cast_radius": "315",
+        "details": "Sends forth a jagged crack in front of the Titan that implodes after a slight delay.",
+        "description": "Effect Delay: 2.7182, Crack Width: 315, Crack Distance: 2100, Max Health as Magical Damage: 15%/20%/25%, Max Health as Physical Damage: 15%/20%/25%, Move Speed Slow: 30%/40%/50%, Slow Duration: 3/4/5",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Creates flying vision cells in 0.22-second intervals, starting 0.22 seconds upon cast, for a total of 12 cells", "Teleports all affected units to the crack's centerpoint upon implosion"],
+        "interaction_notes": ["The implosion applies movement speed slow, deals half magical and half physical damage corresponding to the affected enemy units' max health", "Does not affect ancient creeps"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": ["Increased base movement speed from 310 to 315."]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Astral Spirit: The Astral Spirit now no longer automatically returns when within 100-distance from Elder Titan.",
+          "Natural Order Deconstruction: Reduced armor reduction per second from 1 to 0.8.",
+          "Natural Order Deconstruction: Reduced magic resistance reduction per second from 1% to 0.8%."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Astral Spirit move speed bonus per enemy hero from 5%/6%/7%/8% to 4%/5%/6%/7%.",
+          "Talents: LVL 20 +100% cleave → +350 Echo Stomp wake-up damage threshold.",
+          "Talents: LVL 25 +450 Echo Stomp wake-up damage threshold → +100% cleave."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

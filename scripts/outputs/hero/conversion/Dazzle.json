@@ -1,0 +1,224 @@
+{
+  "hero_name": "Dazzle",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 18,
+      "strength_gain": 2.3,
+      "agility": 20,
+      "agility_gain": 1.7,
+      "intelligence": 25,
+      "intelligence_gain": 3.7,
+      "health": 516,
+      "mana": 375,
+      "armor": 3.33,
+      "magic_resist": 27.5,
+      "damage": [47, 53],
+      "damage_avg": 50.35,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 305,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Nothl Boon",
+        "effects": "Converts over-heal values from overflown magic into a barrier that absorbs physical damage instances. Weave applies more stacks to allies and amplifies heals from Dazzle to affected allies."
+      },
+      "facet_2": {
+        "name": "Poison Bloom",
+        "effects": "After a number of attacks on the affected enemy unit, Poison Touch deals additional damage then spreads from the affected unit to nearby enemy units. Weave applies more stacks to enemies."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Shadow Wave can now target and bounce between enemies", "Upon the bolt making contact with an enemy unit, Dazzle instant attacks all affected enemy units"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Can be cast while disabled and increases Shadow Projection healing"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1 Weave Armor Reduction/Bonus", "+40% Poison Touch Slow"],
+        "level_20": ["+75 Poison Touch Damage per Second, +60 Poison Touch Split Damage", "-4s Shallow Grave Cooldown"],
+        "level_15": ["+5s Nothl Projection Duration", "+45 Shadow Wave Heal/Damage"],
+        "level_10": ["+1.75 Mana Regen", "+200 Poison Touch Attack Range"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Weave",
+          "type": "passive",
+          "description": "The Shadow Priest reduces the armor of enemy units affected by his abilities and increases the armor of allied units affected by his abilities.",
+          "values": {
+            "armor_reduction_per_stack": "0.5/0.75/1/1.25",
+            "armor_bonus_per_stack": "0.5/0.75/1/1.25",
+            "stack_duration": 10
+          },
+          "details": "This ability levels up with Nothl Projection. Roshan is innately immune to this ability."
+        },
+        {
+          "name": "Nothl Boon",
+          "type": "passive",
+          "description": "Converts over-heal values from overflown magic into a barrier that absorbs physical damage instances.",
+          "values": {
+            "max_health_threshold": "100%",
+            "over_heal_as_barrier": "100%",
+            "duration": 12
+          },
+          "details": "Only available with Nothl Boon facet. Reapplying the barrier increases capacity or refreshes duration."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Poison Touch",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical / Instant Kill",
+        "damage_types": ["spell", "physical", "instant_kill"],
+        "cooldown": "27/23/19/15",
+        "mana_cost": "125/130/135/140",
+        "cast_range": "500/600/700/800",
+        "cast_animation": "0.3 + 0.57",
+        "cast_radius": "200 first radius, 300 end radius",
+        "details": "Releases a cone of poison that strike multiple enemy units. The poisonous rite deals damage over time and applies a movement speed slow.",
+        "description": "Releases a cone of poison that strike multiple enemy units.",
+        "facet_effects": {
+          "poison_bloom": {
+            "required_attacks": 4,
+            "split_damage": "30/60/90/120",
+            "bloom_radius": 450,
+            "bloom_targets": "2/4/6/8"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Damage per second: 16/28/40/52", "First move speed slow: 16%/18%/20%/22%", "Move speed slow increase per refresh: 2%/2.5%/3%/3.5%", "Debuff duration: 5/6/7/8"],
+        "interaction_notes": ["Can affect enemy units up to 1100/1200/1300/1400 distance away", "Units closest to primary enemy unit have priority", "Applies hex during Nothl Projection"]
+      },
+      "ability_2": {
+        "name": "Shallow Grave",
+        "key": "W",
+        "type": "active",
+        "affects": "Allied Heroes",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "36/30/24/18",
+        "mana_cost": "90/100/110/120",
+        "cast_range": "900",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "Single target",
+        "details": "Blesses an allied hero with Shallow Grave. The allied hero cannot die while under its protection, no matter how close to death.",
+        "description": "Blesses an allied hero with Shallow Grave. The allied hero cannot die while under its protection, no matter how close to death.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Set min health: 1", "Health threshold: 10%", "Heal amp per max health threshold: 3%/5%/7%/9%", "Duration: 4/4.5/5/5.5"],
+        "interaction_notes": ["Grants bonus heal amplification corresponding to health percentage", "Heals upon expiration during Nothl Projection", "Does not protect against Culling Blade kill threshold"]
+      },
+      "ability_3": {
+        "name": "Shadow Wave",
+        "key": "E",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Physical / Instant Attack",
+        "damage_types": ["spell", "physical", "instant_attack"],
+        "cooldown": "12/11/10/9",
+        "mana_cost": "75",
+        "cast_range": "800",
+        "cast_animation": "0.3 + 0.57",
+        "cast_radius": "475 bounce distance, 185 damage radius",
+        "details": "Sends a bolt of power that arcs between allied units, healing them while damaging other enemy units within its radius.",
+        "description": "Sends a bolt of power that arcs between allied units, healing them while damaging other enemy units within its radius.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Number of bounces: 3/4/5/6", "Heal: 85/105/125/145", "Damage: 85/105/125/145", "Always heals Dazzle without counting toward bounces"],
+        "interaction_notes": ["Has reduced cooldown during Nothl Projection: 30%/40%/50%", "With Aghanim's Scepter can target enemies and provides instant attacks", "Priority based on current health: Low HP Heroes > Low HP Creeps/Full HP Heroes > Full HP Creeps"]
+      },
+      "ability_4": {
+        "name": "Nothl Projection",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "70/60/50",
+        "mana_cost": "100/150/200",
+        "cast_range": "450",
+        "cast_animation": "0.2 + 0.76",
+        "cast_radius": "Point target",
+        "details": "Projects his Shadow in a short distance away, and stuns the Priest's physical body for the duration.",
+        "description": "Projects his Shadow in a short distance away, and stuns the Priest's physical body for the duration. After the effect ends, the Shadow forcefully returns and applies a Strong Dispel onto the Priest.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Max clones: 1", "Min duration: 5", "Max duration: 12", "Heal amp: 0% (20% with shard)", "Shadow applies hex on projectile impact", "Shadow has reduced Shadow Wave cooldown"],
+        "interaction_notes": ["Shadow is untargetable and invulnerable clone", "Can cast all of Dazzle's abilities except Transmute", "Shadow projectiles apply hex and destroy illusions", "With Aghanim's Shard can be cast while disabled"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": ["Increased Weave Nothl Boon ally incoming heal amp per stack from 5% to 7.5%"]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Shallow Grave: Rescaled cast range from 700/800/900/1000 to 900 on each level",
+          "Shallow Grave: Increased incoming heal amplification per 10% health missing from 2%/4%/6%/8% to 3%/5%/7%/9%",
+          "Shallow Grave: Increased duration from 3.5/4/4.5/5 to 4/4.5/5/5.5"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Nothl Projection: Reduced cast range from 600 to 450",
+          "Nothl Projection: Increased leash pull rate from 0.5 to 1.5",
+          "Nothl Projection: Reduced max duration from 15 to 12",
+          "Aghanim's Scepter Shadow Wave: Reduced enemy cast damage multiplier from 1.5 to 1",
+          "Aghanim's Scepter Shadow Wave: Reduced enemy cast heal multiplier from 1.5 to 1",
+          "Talents: LVL 10 +300 Poison Touch attack range reduced to +200",
+          "Talents: LVL 15 +90 attack speed changed to +5s Nothl Projection duration"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

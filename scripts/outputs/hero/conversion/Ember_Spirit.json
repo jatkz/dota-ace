@@ -1,0 +1,205 @@
+{
+  "hero_name": "Ember Spirit",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 22,
+      "strength_gain": 2.3,
+      "agility": 22,
+      "agility_gain": 3.2,
+      "intelligence": 20,
+      "intelligence_gain": 2.2,
+      "health": 604,
+      "mana": 315,
+      "armor": 3.67,
+      "magic_resist": 27,
+      "damage": [55, 59],
+      "damage_avg": 57,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.3",
+      "move_speed": 300,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Nuker, Disabler, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Double Impact",
+        "effects": "If Xin attacks more than a certain amount of enemy units with Sleight of Fist, the nearest enemy will be attacked once again."
+      },
+      "facet_2": {
+        "name": "Chain Gang",
+        "effects": "Increases Searing Chains max target count. +2 Max Targets. Searing Chains are also additionally applied around all current Fire Remnants upon cast, utilizing the same search radius."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Increases cast range, remnant travel speed, and max charges"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Increases radius and damage per second",
+          "If an enemy hero dies near Ember Spirit, a Fire Remnant charge is restored",
+          "Ember Spirit now leaves behind a Remnant upon death",
+          "The Ember Spirit's Remnants apply Immolation of its corresponding level within the radius"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-12s Fire Remnant Restore Time", "+2 Sleight of Fist Charges"],
+        "level_20": ["+50 Sleight of Fist Hero Damage", "+60 Searing Chains Damage"],
+        "level_15": ["+1s Searing Chains Duration", "2x Flame Guard Damage per Second"],
+        "level_10": ["+165 Flame Guard Barrier", "+12 Attack Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Immolation",
+          "type": "passive",
+          "description": "The Ember Spirit immolates and deals damage per second within the radius centered around itself.",
+          "values": {
+            "radius": "175 (350 with Shard)",
+            "damage_per_second": "10/18/26/34 (20/28/36/44 with Shard)",
+            "aura_linger_duration": 0
+          },
+          "details": "This ability levels up with Fire Remnant. Deals magical spell damage in 0.2-second intervals."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Searing Chains",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "13/12/11/10",
+        "mana_cost": "95/100/105/110",
+        "cast_range": "400",
+        "cast_animation": "0 + 0.5",
+        "cast_radius": "400",
+        "details": "Search Radius: 400, Max Targets: 2, Damage per Second: 50/70/90/110, Duration: 1.5/2/2.5/3",
+        "description": "Unleashes fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage each second.",
+        "facet_effects": {
+          "chain_gang": "Max Targets: 4, Searing Chains are also additionally applied around all current Fire Remnants upon cast"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Affects random units within radius", "Applies Root and True Sight", "Deals damage in 0.5-second intervals"],
+        "interaction_notes": ["True Sight component affects debuff immune units"]
+      },
+      "ability_2": {
+        "name": "Sleight of Fist",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Instant Attack",
+        "damage_types": ["Physical"],
+        "cooldown": "13/11/9/7 (0 with charges)",
+        "mana_cost": "60/65/70/75",
+        "cast_range": "650",
+        "cast_animation": "0 + 0.7",
+        "cast_radius": "250/350/450/550",
+        "details": "Mark Radius: 250/350/450/550, Jump Interval: 0.25, Hero Attack Damage Bonus: 25/70/115/160",
+        "description": "Dashes around with blazing speed, attacking all enemy units within the area-targeted radius, then returning to his start location.",
+        "facet_effects": {
+          "double_impact": "Min Targets to Proc: 2, Damage Factor: 0.5, If Xin attacks more than 2 enemy units, the nearest enemy will be attacked once again"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Grants invulnerability and unselectable during dash", "Self-disarms until all targets are attacked", "Positions 50 distance away from marked units"],
+        "interaction_notes": ["Can be interrupted by Activate Fire Remnant or death", "Procs attack modifiers and on-cast effects"]
+      },
+      "ability_3": {
+        "name": "Flame Guard",
+        "key": "E",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "35",
+        "mana_cost": "65/80/95/110",
+        "cast_range": "Self",
+        "cast_animation": "0 + 0.6",
+        "cast_radius": "500",
+        "details": "Damage to Barrier Factor: 0.7, Barrier: 60/140/220/300, Duration: 12/14/16/18, Damage per Second: 20/30/40/50",
+        "description": "Surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Absorbs 70% of magical damage", "Applies damage per second in 0.2-second intervals", "Barrier depletes after taking specific amount of magical damage"],
+        "interaction_notes": ["Recasting refreshes duration and barrier value", "Does not proc on-damage effects until barrier is depleted"]
+      },
+      "ability_4": {
+        "name": "Fire Remnant",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "35 (23 with Scepter)",
+        "mana_cost": "100/125/150",
+        "cast_range": "1400 (3000 with Scepter)",
+        "cast_animation": "0 + 0.6",
+        "cast_radius": "Global",
+        "details": "Move Speed to Remnant Speed Factor: 2.5 (5 with Scepter), Remnant Duration: 45, Max Charges: 3 (5 with Scepter), Charge Restore Time: 0.5",
+        "description": "Sends a Fire Remnant that dashes to the target location.",
+        "facet_effects": {
+          "chain_gang": "Searing Chains are also additionally applied around all current Fire Remnants upon cast"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": ["Remnants are invulnerable and unselectable", "Travel speed based on hero movement speed", "Can cast instantly while traveling with Activate Fire Remnant"],
+        "interaction_notes": ["Shard: Restores charge on enemy hero death within radius", "Shard: Leaves remnant on death", "Shard: Remnants apply Immolation"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": ["Increased Searing Chains Chain Gang max bonus targets from 1 to 2"]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": ["Reduced Sleight of Fist hero attack damage bonus from 40/80/120/160 to 25/70/115/160"]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": ["Reduced strength gain from 2.6 to 2.3"]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

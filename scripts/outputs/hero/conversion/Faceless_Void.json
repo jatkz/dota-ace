@@ -1,0 +1,308 @@
+{
+  "hero_name": "Faceless Void",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 20,
+      "strength_gain": 2.6,
+      "agility": 19,
+      "agility_gain": 3.3,
+      "intelligence": 15,
+      "intelligence_gain": 1.5,
+      "health": 560,
+      "mana": 255,
+      "armor": 3.17,
+      "magic_resist": 26.5,
+      "damage": [56, 62],
+      "damage_avg": 59,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 0.56",
+      "move_speed": 300,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Initiator, Disabler, Escape, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Chronosphere",
+        "effects": "Chronosphere is Faceless Void's ultimate ability with the selected facet. Trap all units caught within the radius and causes Faceless Void to move very quickly inside it. Reveals invisible enemies within the sphere."
+      },
+      "facet_2": {
+        "name": "Time Zone",
+        "effects": "Time Zone is Faceless Void's ultimate ability with the selected facet. Alters the speed of various properties for both allied and enemy units within the square zone."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Applies Time Lock of the corresponding level onto all units at the landing destination"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Reverse Time Walk ability", "Available for a short time after landing Time Walk. If used in a certain time period, Faceless Void will reverses time walk back to the previous cast location", "Increases max travel distance"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+140 Chronosphere Radius / +200 Time Zone Radius", "+20% Backtrack"],
+        "level_20": ["-1.25s Time Walk Cooldown", "+100 Chronosphere / Time Zone Self Attack Speed"],
+        "level_15": ["+12% Time Dilation Move Speed Slow / +12 Time Dilation Attack Speed Slow", "+35 Time Lock Damage"],
+        "level_10": ["+0.5s Time Walk Damage Timer", "+9 Time Dilation Damage per Second"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Distortion Field",
+          "type": "passive",
+          "description": "Applies an attack projectile speed factor on offensive and incoming enemy attack projectiles within the radius, centered around the time master. Affects projectiles even if Faceless Void isn't the attacked target.",
+          "values": {
+            "aura_radius": 1800,
+            "projectile_slow_radius": 600,
+            "projectile_speed_factor": "0.65/0.6/0.55/0.5",
+            "aura_linger_duration": 0.1
+          },
+          "details": "This ability levels up with Chronosphere. Does not affect spell damage-based projectiles. Stacks additively with other attack projectile speed factor sources."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Other Bash sources are passively disabled on Faceless Void. Darkterror brings all but himself and his likeness to a complete standstill within the Chronosphere. Darkterror reigns within spacetime. Him and his likeness are immune to the Time Zone effects.",
+          "values": {},
+          "details": "Bash sources are innately disabled for Faceless Void, even when Time Lock is not learned. Faceless Void and all illusions based on him are innately immune to Chronosphere's disable and Time Zone's negative ability effects."
+        },
+        {
+          "name": "Backtrack",
+          "type": "passive",
+          "description": "The time manipulator has a chance to avoid damage entirely.",
+          "values": {
+            "proc_chance": "20%"
+          },
+          "details": "Learning the Level 25 talent unlocks this ability. Fully negates damage after all reductions, causing on-damage effects to not trigger. Uses pseudo-random distribution. Increases Faceless Void's effective health on an average of 25% against all damage types."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Time Walk",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "21/16/11/6",
+        "mana_cost": 40,
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "",
+        "details": "Rushes to a target location while healing up from any damage taken in the last few seconds.",
+        "description": "Rushes to a target location while healing up from any damage taken in the last few seconds.",
+        "facet_effects": {
+          "scepter": "Applies Time Lock of the corresponding level onto all units at the landing destination",
+          "shard": "Increases max travel distance"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Grants Faceless Void a 2-second damage counter that accumulates all damage type Faceless Void receives",
+          "Turns invulnerable while traveling",
+          "Heals Faceless Void based on the accumulated damage counter value",
+          "Does not disjoint projectiles upon cast",
+          "Time Walk utilizes the forced movement mechanic"
+        ],
+        "interaction_notes": [
+          "Does not accumulate HP Removal sources",
+          "Time Lock applied via Scepter cannot proc more than once",
+          "Affects Ethereal units, Fogged units, Hidden units",
+          "Does not affect enemy Couriers, Invisible units"
+        ]
+      },
+      "ability_2": {
+        "name": "Time Dilation",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "28/24/20/16",
+        "mana_cost": 90,
+        "cast_range": "",
+        "cast_animation": "0.1 + 0.4",
+        "cast_radius": "775",
+        "details": "Traps all nearby enemies in a time dilation field, decelerating their cooldowns and slowing their movement and attack speed per cooldown extended. Deals damage per second per ability currently on cooldown.",
+        "description": "Traps all nearby enemies in a time dilation field, decelerating their cooldowns and slowing their movement and attack speed per cooldown extended. Deals damage per second per ability currently on cooldown.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Cooldown Rate Factor: 0.3/0.4/0.5/0.6",
+          "Move Speed Slow per Stack: 7%/8%/9%/10%",
+          "Attack Speed Slow per Stack: 10",
+          "Damage per Second per Stack: 7/9/11/13",
+          "Duration: 8/9/10/11"
+        ],
+        "interaction_notes": [
+          "Affects Fogged units, Invisible units",
+          "Does not affect Hidden units, Invulnerable units",
+          "Does not affect item abilities' cooldown",
+          "Reapplying the debuff applies a new independent stack debuff"
+        ]
+      },
+      "ability_3": {
+        "name": "Time Lock",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical / Instant Attack / Physical",
+        "damage_types": ["Magical", "Physical"],
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "",
+        "details": "Adds a chance for an attack to lock an enemy unit in time while attacking it a second time.",
+        "description": "Adds a chance for an attack to lock an enemy unit in time while attacking it a second time.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Proc Chance: 12%/16%/20%/24%",
+          "Damage: 12/18/24/30",
+          "Second Attack Delay: 0.4",
+          "Instant Attack Factor: 1",
+          "Bash Duration: 0.5"
+        ],
+        "interaction_notes": [
+          "0.4 seconds upon proc, the magical spell damage is applied and Faceless Void instant attacks the affected enemy unit",
+          "Does not affect Buildings, Ward-type units",
+          "Time Lock uses pseudo-random distribution",
+          "Death does not prevent the proccing attack from applying Time Lock"
+        ]
+      },
+      "ability_4": {
+        "name": "Chronosphere",
+        "key": "R",
+        "type": "active",
+        "affects": "Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "160/150/140",
+        "mana_cost": "125/200/275",
+        "cast_range": "500",
+        "cast_animation": "0.35 + 0.35",
+        "cast_radius": "500",
+        "details": "Trap all units caught within the radius and causes Faceless Void to move very quickly inside it. Reveals invisible enemies within the sphere.",
+        "description": "Trap all units caught within the radius and causes Faceless Void to move very quickly inside it. Reveals invisible enemies within the sphere.",
+        "facet_effects": {
+          "chronosphere_facet": "Available with Chronosphere facet selected"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Radius: 500",
+          "Set Haste Speed: 1000",
+          "Duration: 3.75/4.25/4.75",
+          "Aura Linger Duration: 0.033"
+        ],
+        "interaction_notes": [
+          "Freezes all units which are not owned by Faceless Void",
+          "Applies Leash and Stun effects",
+          "Grants Phase movement and Haste movement to self and player-controlled units",
+          "Affects Invulnerable units except certain units",
+          "Does not affect Hidden units, Invulnerable heroes"
+        ]
+      },
+      "ability_5": {
+        "name": "Time Zone",
+        "key": "R",
+        "type": "active",
+        "affects": "Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "130/125/120",
+        "mana_cost": "125/200/275",
+        "cast_range": "500",
+        "cast_animation": "0.35 + 0.35",
+        "cast_radius": "700",
+        "details": "Alters the speed of various properties for both allied and enemy units within the square zone.",
+        "description": "Alters the speed of various properties for both allied and enemy units within the square zone.",
+        "facet_effects": {
+          "time_zone_facet": "Available with Time Zone facet selected"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Area: 700",
+          "Duration: 3.75/4.25/4.75",
+          "Move Speed Bonus (Allies): 50%",
+          "Move Speed Slow (Enemies): 50%",
+          "Cast Animation Factor (Allies): 0.5",
+          "Cast Animation Factor (Enemies): 1.5",
+          "Turn Rate Factor (Allies): 1.5",
+          "Turn Rate Factor (Enemies): 0.5",
+          "Projectile Speed Factor (Allies): 1.4",
+          "Projectile Speed Factor (Enemies): 0.6",
+          "Enemy Cooldown Freeze Duration: 3.75/4.25/4.75",
+          "Ally Cooldown Acceleration Factor: 4"
+        ],
+        "interaction_notes": [
+          "The area-of-effect is a square which ability radius describes the half diagonal",
+          "Affects current traveling attack-based and spell-based projectiles",
+          "Does not affect Channeling time, Ward-type units' traveling speed",
+          "Does not affect Hidden units"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "LVL 10 +7 Time Dilation damage per second per cooldown increased to +9",
+          "LVL 15 +30 Time Lock damage reduced to +35",
+          "LVL 20 -1s Time Walk cooldown increased to -1.25s",
+          "LVL 20 Chronosphere / Time Zone grants +80 self attack speed increased to +100"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Time Zone no longer applies leash",
+          "Reduced ally movement speed bonus from 60% to 50%",
+          "Reduced enemy movement speed slow from 60% to 50%",
+          "Increased ally turn rate factor from 0.4 to 0.5",
+          "Reduced enemy turn rate factor from 1.6 to 1.5",
+          "Increased ally cast point factor from 0.4 to 0.5",
+          "Reduced enemy cast point factor from 1.6 to 1.5"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Time Walk cooldown from 24/18/12/6 to 21/16/11/6",

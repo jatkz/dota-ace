@@ -1,0 +1,242 @@
+{
+  "hero_name": "Drow Ranger",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 16,
+      "strength_gain": 1.9,
+      "agility": 22,
+      "agility_gain": 2.9,
+      "intelligence": 15,
+      "intelligence_gain": 1.4,
+      "health": 472,
+      "mana": 255,
+      "armor": 3.67,
+      "magic_resist": 26.5,
+      "damage": [51, 58],
+      "damage_avg": 54.5,
+      "projectile_speed": 1250,
+      "attack_type": "ranged",
+      "attack_range": 625,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.5 + 0.3",
+      "move_speed": 310,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Disabler, Pusher"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Vantage Point",
+        "effects": "The Drow conditionally deals bonus total attack damage when attacking from high ground."
+      },
+      "facet_2": {
+        "name": "Sidestep",
+        "effects": "The Drow now sidesteps while launching Multishot arrows, casting item abilities and moving no longer interrupts the ability with a trade-off — Applies a self movement speed slow while active."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Applies an additional stackable hypothermia debuff that increases damage per stack and reduces the values of health restoration sources of the debuff-affected enemy unit.",
+          "When the enemy dies with the hypothermia debuff, they burst, dealing damage per stack and slowing other enemy units within the radius."
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Glacier ability.",
+          "Forms a hill of ice mass beneath her. While standing on the hill, the glacier grants allied heroes bonus attack range and high ground advantage — attacks cannot miss and has flying vision.",
+          "The front of the hill obscures vision and cannot be moved through except Drow.",
+          "Grants an extra Multishot arrow with increased travel distance while on the Glacier."
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1 Multishot Waves", "+10% Marksmanship Chance"],
+        "level_20": ["+50% Gust Self Move Speed", "+25% Multishot Damage"],
+        "level_15": ["-6s Multishot Cooldown", "+75 Attack Range"],
+        "level_10": ["+1 Multishot Arrow per Wave", "No Gust Mana Cost"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Precision Aura",
+          "type": "passive",
+          "description": "The higher the Drow's level, the greater the self-agility bonus. Grants nearby ranged allied heroes a lesser bonus agility.",
+          "values": {
+            "base_self_agi_bonus": "4%/8%/12%/16%",
+            "self_agi_bonus_per_hero_level": "1%",
+            "aura_radius": 1200,
+            "ally_agi_bonus_factor": 0.5,
+            "aura_linger_duration": 0.5
+          },
+          "details": "This ability levels up with Drow Ranger and Marksmanship."
+        },
+        {
+          "name": "Vantage Point",
+          "type": "passive",
+          "description": "The Drow conditionally deals bonus total attack damage when attacking from high ground.",
+          "values": {
+            "total_attack_damage_bonus": "30%"
+          },
+          "details": "While being atop the Glacier, the Drow has high ground advantage and benefits from the Vantage Point bonus."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Frost Arrows",
+        "key": "Q",
+        "type": "autocast",
+        "affects": "Enemy Units",
+        "damage": "Physical / Spell / Magical",
+        "cooldown": "0",
+        "mana_cost": "9/10/11/12",
+        "cast_range": "625",
+        "cast_animation": "0.5 + 0.3",
+        "description": "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage.",
+        "values": {
+          "attack_damage_bonus": "10/15/20/25",
+          "move_speed_slow": "10%/25%/40%/55%",
+          "slow_duration": 1.5
+        },
+        "scepter_upgradable": true,
+        "ability_behavior": ["autocast", "active_attack_modifier"],
+        "pierces_spell_immunity": false,
+        "dispellable": "yes",
+        "details": "Ice-encased arrows pierce the silence, chilling their victims to the core."
+      },
+      "ability_2": {
+        "name": "Gust",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "cooldown": "19/17/15/13",
+        "mana_cost": "70",
+        "cast_range": "900",
+        "cast_animation": "0.25 + 0.6",
+        "description": "Releases a wave that applies True Sight, silences, and knocks enemy units back relatively to how close they are to the Drow.",
+        "values": {
+          "travel_distance": 900,
+          "effect_radius": 250,
+          "min_knock_distance": 1,
+          "max_knock_distance": 450,
+          "knock_duration": "0.6/0.7/0.8/0.9",
+          "silence_duration": "3/4/5/6"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "dispellable": "yes",
+        "details": "Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi."
+      },
+      "ability_3": {
+        "name": "Multishot",
+        "key": "E",
+        "type": "channeled",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical / Magical",
+        "cooldown": "24/21/18/15",
+        "mana_cost": "50/70/90/110",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "description": "Releases a flurry of arrows in continuous salvos within an area in front of her.",
+        "values": {
+          "arrow_collision_radius": 90,
+          "max_channel_time": 1.75,
+          "number_of_waves": 3,
+          "waves_interval": 0.55,
+          "arrows_per_wave": 4,
+          "total_multishot_duration": 1.3,
+          "travel_distance": 1094,
+          "arrows_cone_angle": "25°",
+          "main_attack_damage_as_spell_damage_factor": "1/1.2/1.4/1.6"
+        },
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "ability_behavior": ["point_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "details": "In the ranger's youth, learning to fire multiple arrows at once was considered a distracting frivolity. In the war of the Ancients, such technique has become strange necessity."
+      },
+      "ability_4": {
+        "name": "Glacier",
+        "key": "D",
+        "type": "active",
+        "affects": "Heroes",
+        "cooldown": "20",
+        "mana_cost": "50",
+        "cast_range": "400",
+        "cast_animation": "0.1 + 0.7",
+        "description": "Forms a hill of ice mass beneath her. While standing on the hill, the glacier grants allied heroes bonus attack range and high ground advantage — attacks cannot miss and has flying vision. The front of the hill obscures vision and cannot be moved through except Drow.",
+        "values": {
+          "glacier_radius": 180,
+          "shards_spawn_angle": "40°",
+          "number_of_shards": 5,
+          "ramp_radius": 150,
+          "shard_spawn_radius": 125,
+          "ally_attack_range_bonus": 200,
+          "glacier_duration": 8,
+          "aura_linger_duration": 0,
+          "knock_distance": 225,
+          "knock_duration": 0.1
+        },
+        "ability_behavior": ["no_target"],
+        "shard_upgradable": true,
+        "details": "Traxex wasn't just adopted by the Drow, she was adopted by the lands they lived in."
+      },
+      "ability_5": {
+        "name": "Marksmanship",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self / Allied Heroes",
+        "damage": "Physical",
+        "description": "Drow's attacks has a chance to ignore the enemy's base armor. Enemy heroes venturing too close to Drow passively disables this effect.",
+        "values": {
+          "enemy_search_radius": 400,
+          "proc_chance": "20%/30%/40%",
+          "attack_damage_bonus": "50/70/90"
+        },
+        "shard_upgradable": true,
+        "ability_behavior": ["passive", "aura"],
+        "pierces_spell_immunity": false,
+        "details": "The Drow Ranger is the epitome of archery prowess."
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Aghanim's Scepter upgrade: Frost Arrows now follows the health restoration mechanic. Applies a 10% health restoration reduction per stack.",
+          "Aghanim's Shard upgrade: Increased Glacier knockback distance from 175 to 225."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Precision Aura: Rescaled self-agility bonus factor from 1 + (0.01 * DrowRangerLVL * 2) to 1.04/1.08/1.12/1.16 + 0.01 * DrowRangerLVL. This component now levels up with Marksmanship.",
+          "Increased Vantage Point total attack damage bonus from 20% to 30%.",
+          "Talents: LVL 10 +15 Frost Arrows base damage → +1 Multishot arrow per wave. LVL 10 -3.5s Gust cooldown → No Gust mana cost."
+        ]
+      },
+      {
+        "version": "7.37d",
+        "date": "2024-10-01",
+        "changes": [
+          "Increased base agility from 20 to 22."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 250000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

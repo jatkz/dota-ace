@@ -1,0 +1,269 @@
+{
+  "hero_name": "Primal Beast",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 26,
+      "strength_gain": 4.3,
+      "agility": 15,
+      "agility_gain": 1,
+      "intelligence": 16,
+      "intelligence_gain": 1.4,
+      "health": 692,
+      "mana": 267,
+      "armor": 4.5,
+      "magic_resist": 26.6,
+      "damage": [62, 64],
+      "damage_avg": 63,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.8,
+      "animation": "0.6 + 0.7",
+      "move_speed": 305,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Durable, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Provoke the Beast",
+        "effects": "Primal Beast gains additional Uproar stacks upon receiving several debuff types."
+      },
+      "facet_2": {
+        "name": "Ferocity",
+        "effects": "Each successful Pulverize slam instantly grants Primal Beast a stackable general area-of-effect bonus for a short duration."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["After a short delay, each ray further splinters in two new rays. Reapplying the ability effects if the enemy units within are hit again!"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Rock Throw ability.", "The Beast throws a rock at the target location that stuns and damages enemies."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+67% Pulverize Duration", "Trample Ignores Root Sources, 100% Trample Set Move Speed"],
+        "level_20": ["+7 Armor per Uproar Stack", "+20% Trample Attack Factor"],
+        "level_15": ["Active Uproar Dispels", "-5s Trample Cooldown"],
+        "level_10": ["+25% Trample Self Magic Resistance", "+20 attack damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Colossal",
+          "type": "passive",
+          "description": "The Beast deals conditional bonus attack damage on buildings and illusions.",
+          "values": {
+            "attack_damage_bonus": "40%"
+          },
+          "details": "Affects Buildings and Illusions"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Onslaught",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical",
+        "cooldown": "25/22/19/16",
+        "mana_cost": 120,
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "details": "The Beast charges! Enemy units are damaged and stunned on impact. The longer the charge, the farther the onslaught.",
+        "description": "The Beast charges through in chosen the direction with a limited turn rate. Knocking both allies and enemies alike.",
+        "values": {
+          "max_charge_duration": 1.7,
+          "min_charge_distance": 100,
+          "max_charge_distance": 2000,
+          "effect_radius": 190,
+          "damage": "75/170/265/360",
+          "stun_duration": "0.8/1/1.2/1.4",
+          "knock_radius": 200,
+          "knock_duration": 0.2,
+          "turn_rate": "50°",
+          "max_disarm_duration": 1.7
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      },
+      "ability_2": {
+        "name": "Trample",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "30/27/24/21",
+        "mana_cost": 100,
+        "cast_animation": "0 + 0",
+        "details": "The Beast stomps over everything, all enemy units around it are damaged per distance traveled.",
+        "description": "The Beast is disarmed while stomping.",
+        "values": {
+          "radius": 230,
+          "distance_threshold_per_stomp": 140,
+          "distance_cap": 500,
+          "base_damage": "15/30/45/60",
+          "attack_damage_to_spell_damage_factor": 0.35,
+          "duration": 5.5,
+          "self_disarm_duration": 5.5
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "facet_effects": {
+          "talent_upgrade": "The Beast cannot be slowed and ignores root sources applied to him while trampling!"
+        }
+      },
+      "ability_3": {
+        "name": "Uproar",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": 0,
+        "mana_cost": 0,
+        "cast_animation": "0 + 0",
+        "details": "The Beast accumulate Uproar stacks for every offensive damage instance it takes.",
+        "description": "When activated, the Beast releases a roar that slows enemy units within the radius, while granting self additional bonus attack damage and bonus armor based on the current stack amount.",
+        "values": {
+          "max_stacks": 6,
+          "damage_threshold_per_stack": 50,
+          "min_damage_instance": 20,
+          "max_damage_instance": 2000,
+          "damage_timer": 20,
+          "effect_radius": 900,
+          "attack_damage_bonus_per_stack": "10/20/30/40",
+          "armor_bonus_per_stack": "2/3/4/5",
+          "enemy_move_speed_slow_per_stack": "4%/6%/8%/10%",
+          "enemy_slow_duration": 3,
+          "uproar_duration": 7,
+          "downtime": 7
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "facet_effects": {
+          "provoke_the_beast": "Grants 3 additional buff stacks upon receiving Fear, Stun, Hex, Root, Taunt, or Silence sources"
+        }
+      },
+      "ability_4": {
+        "name": "Rock Throw",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Physical",
+        "cooldown": 25,
+        "mana_cost": 85,
+        "cast_range": 1800,
+        "cast_animation": "0.25 + 0.75",
+        "details": "The Beast throws a rock at the target location that stuns and damages enemies.",
+        "description": "Upon impact, the rock splits into additional fragments that lands behind the first targeted location.",
+        "values": {
+          "min_distance": 550,
+          "first_impact_radius": 225,
+          "damage": 325,
+          "stun_duration": 1.4,
+          "number_of_fragments": 3,
+          "fragments_min_distance": 525,
+          "impact_radius": 185,
+          "fragment_effect_delay": 0.5,
+          "stack_per_enemy_hit": 1
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true
+      },
+      "ability_5": {
+        "name": "Pulverize",
+        "key": "R",
+        "type": "channeled",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "40/36/32",
+        "mana_cost": 100,
+        "cast_range": 200,
+        "cast_animation": "0.2 + 0",
+        "details": "The Beast grabs the target enemy and slams them into the ground repeatedly. Damages and stuns other enemy units within the radius.",
+        "description": "Each consecutive slam increases the damage dealt.",
+        "values": {
+          "slam_radius": 600,
+          "max_channel_time": 2.3,
+          "slam_interval": 0.75,
+          "max_slam_instances": 3,
+          "base_damage": "100/175/250",
+          "damage_increment_per_slam": "20/40/60",
+          "stun_duration": 0.2
+        },
+        "ability_behavior": ["unit_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "facet_effects": {
+          "ferocity": "Each successful Pulverize slam instantly grants Primal Beast a stackable general area-of-effect bonus for a short duration. Radius Bonus per Slam: 25%, Buff Duration: 15"
+        }
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Uproar: Increased max stacks from 5 to 6",
+          "Provoke the Beast now also provides stacks when affected by silence sources"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Increased Uproar Provoke the Beast stack gain per debuff from 2 to 3",
+          "Reduced Pulverize Ferocity stack duration from 20 to 15"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Onslaught knockback radius and distance no longer affected by area-of-effect manipulation sources",
+          "Trample: REMOVED Romp n' Stomp facet",
+          "Uproar: No longer passively grants 5/10/15/20 attack damage bonus",
+          "Uproar: Rescaled movement speed slow per stack from 5%/6%/7%/8% to 4%/6%/8%/10%",
+          "ADDED Provoke the Beast facet",
+          "Pulverize Ferocity: CHANGED granting radius bonus values from End of Slam to Start of Slam",
+          "Pulverize Ferocity: Increased radius bonus per slam from 20% to 25%",
+          "Pulverize Ferocity: Increased duration from 10 to 20",
+          "Talents: LVL 10 +80 Onslaught damage → +20 attack damage"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

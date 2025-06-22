@@ -117,496 +117,496 @@
     {
         "urlName": "Dazzle",
         "displayName": "Dazzle",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Death_Prophet",
         "displayName": "Death Prophet",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Disruptor",
         "displayName": "Disruptor",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Doom",
         "displayName": "Doom",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Dragon_Knight",
         "displayName": "Dragon Knight",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Drow_Ranger",
         "displayName": "Drow Ranger",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Earth_Spirit",
         "displayName": "Earth Spirit",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Earthshaker",
         "displayName": "Earthshaker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Elder_Titan",
         "displayName": "Elder Titan",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Ember_Spirit",
         "displayName": "Ember Spirit",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Enchantress",
         "displayName": "Enchantress",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Enigma",
         "displayName": "Enigma",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Faceless_Void",
         "displayName": "Faceless Void",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Grimstroke",
         "displayName": "Grimstroke",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Gyrocopter",
         "displayName": "Gyrocopter",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Hoodwink",
         "displayName": "Hoodwink",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Huskar",
         "displayName": "Huskar",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Invoker",
         "displayName": "Invoker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Io",
         "displayName": "Io",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Jakiro",
         "displayName": "Jakiro",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Juggernaut",
         "displayName": "Juggernaut",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Keeper_of_the_Light",
         "displayName": "Keeper of the Light",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Kunkka",
         "displayName": "Kunkka",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Legion_Commander",
         "displayName": "Legion Commander",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Leshrac",
         "displayName": "Leshrac",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Lich",
         "displayName": "Lich",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Lifestealer",
         "displayName": "Lifestealer",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Lina",
         "displayName": "Lina",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Lion",
         "displayName": "Lion",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Lone_Druid",
         "displayName": "Lone Druid",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Luna",
         "displayName": "Luna",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Magnus",
         "displayName": "Magnus",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Marci",
         "displayName": "Marci",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Mars",
         "displayName": "Mars",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Medusa",
         "displayName": "Medusa",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Meepo",
         "displayName": "Meepo",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Mirana",
         "displayName": "Mirana",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Monkey_King",
         "displayName": "Monkey King",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Morphling",
         "displayName": "Morphling",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Muerta",
         "displayName": "Muerta",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Naga_Siren",
         "displayName": "Naga Siren",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Nature's_Prophet",
         "displayName": "Nature's Prophet",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Necrophos",
         "displayName": "Necrophos",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Night_Stalker",
         "displayName": "Night Stalker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Nyx_Assassin",
         "displayName": "Nyx Assassin",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Ogre_Magi",
         "displayName": "Ogre Magi",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Omniknight",
         "displayName": "Omniknight",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Oracle",
         "displayName": "Oracle",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Outworld_Destroyer",
         "displayName": "Outworld Destroyer",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Pangolier",
         "displayName": "Pangolier",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Phantom_Assassin",
         "displayName": "Phantom Assassin",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Phantom_Lancer",
         "displayName": "Phantom Lancer",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Primal_Beast",
         "displayName": "Primal Beast",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Puck",
         "displayName": "Puck",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Pudge",
         "displayName": "Pudge",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Pugna",
         "displayName": "Pugna",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Queen_of_Pain",
         "displayName": "Queen of Pain",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Razor",
         "displayName": "Razor",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Riki",
         "displayName": "Riki",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Ringmaster",
         "displayName": "Ringmaster",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Rubick",
         "displayName": "Rubick",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Sand_King",
         "displayName": "Sand King",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Shadow_Demon",
         "displayName": "Shadow Demon",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Shadow_Fiend",
         "displayName": "Shadow Fiend",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Shadow_Shaman",
         "displayName": "Shadow Shaman",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Silencer",
         "displayName": "Silencer",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Skywrath_Mage",
         "displayName": "Skywrath Mage",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Slardar",
         "displayName": "Slardar",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Slark",
         "displayName": "Slark",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Sniper",
         "displayName": "Sniper",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Spectre",
         "displayName": "Spectre",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Spirit_Breaker",
         "displayName": "Spirit Breaker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Storm_Spirit",
         "displayName": "Storm Spirit",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Sven",
         "displayName": "Sven",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Techies",
         "displayName": "Techies",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Templar_Assassin",
         "displayName": "Templar Assassin",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Terrorblade",
         "displayName": "Terrorblade",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Tidehunter",
         "displayName": "Tidehunter",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Timbersaw",
         "displayName": "Timbersaw",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Tinker",
         "displayName": "Tinker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Tiny",
         "displayName": "Tiny",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Treant_Protector",
         "displayName": "Treant Protector",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Troll_Warlord",
         "displayName": "Troll Warlord",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Tusk",
         "displayName": "Tusk",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Underlord",
         "displayName": "Underlord",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Undying",
         "displayName": "Undying",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Ursa",
         "displayName": "Ursa",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Vengeful_Spirit",
         "displayName": "Vengeful Spirit",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Venomancer",
         "displayName": "Venomancer",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Viper",
         "displayName": "Viper",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Visage",
         "displayName": "Visage",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Void_Spirit",
         "displayName": "Void Spirit",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Warlock",
         "displayName": "Warlock",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Weaver",
         "displayName": "Weaver",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Windranger",
         "displayName": "Windranger",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Winter_Wyvern",
         "displayName": "Winter Wyvern",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Witch_Doctor",
         "displayName": "Witch Doctor",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Wraith_King",
         "displayName": "Wraith King",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Zeus",
         "displayName": "Zeus",
-        "runConversion": true
+        "runConversion": false
     }
 ]

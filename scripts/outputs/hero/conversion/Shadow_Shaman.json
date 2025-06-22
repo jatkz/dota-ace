@@ -1,0 +1,266 @@
+{
+  "hero_name": "Shadow Shaman",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 23,
+      "strength_gain": 2.3,
+      "agility": 16,
+      "agility_gain": 1.6,
+      "intelligence": 25,
+      "intelligence_gain": 3.5,
+      "health": 626,
+      "mana": 375,
+      "armor": 5.67,
+      "magic_resist": 27.5,
+      "damage": [65, 72],
+      "damage_avg": 68.5,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 400,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.5",
+      "move_speed": 285,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Pusher, Disabler, Nuker, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Chicken Fingers",
+        "effects": "Applies Hex on the attacked enemy unit upon the Shaman's successful attack."
+      },
+      "facet_2": {
+        "name": "Massive Serpent Ward",
+        "effects": "Summons a single, massive Serpent Ward with various increased traits to attack enemy units and enemy buildings. x10 Ward Trait Factor, x12 Damage Factor"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Increases cast range for Shackles",
+          "Enable cast on allies but doesn't disable them",
+          "Periodically releases Ether Shock of the corresponding level centered on the target unit that deals damage to other enemy units"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Additionally spawns a flock of uncontrollable chicken images with pseudo-random behavior",
+          "Makes Shadow Shaman invulnerable during the illusion spawn"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1 Serpent Ward Attack Target", "+250 Ether Shock Damage"],
+        "level_20": ["+50% Serpent Ward Hit Count", "+1.5s Shackles Duration"],
+        "level_15": ["Hex Applies Break", "+160 Serpent Ward Attack Range"],
+        "level_10": ["+1.75 Mana Regen", "+170 Shackles Total Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Fowl Play",
+          "type": "passive",
+          "description": "Applies Hex on himself, without the set movement speed component, whenever Shadow Shaman takes lethal damage.",
+          "values": {
+            "set_current_health": 1,
+            "hex_duration": 3,
+            "damage_reduction": "100%",
+            "duration": 1,
+            "death_cooldown_factor": 0,
+            "cooldown": 120
+          },
+          "details": "Has precedence over reincarnation sources. Prevents all incoming damage utilizing damage manipulation. Resets the ability's cooldown upon Rhasta's death, including Reincarnation sources."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Rhasta's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to activate."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Ether Shock",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "14/12/10/8",
+        "mana_cost": "90/105/120/135",
+        "cast_range": "600",
+        "cast_animation": "0.3 + 1.23",
+        "cast_radius": "First Radius: 200, Max Distance: 600, End Radius: 300",
+        "details": "Creates a cone of ethereal energy that strikes multiple enemy units.",
+        "description": "Creates a cone of ethereal energy that strikes multiple enemy units.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Affects units up to 1100-distance away in front of Rhasta's facing angle",
+          "Affects enemy units closest to the primary enemy unit within the area-of-effect",
+          "Number of Targets: 3/5/7/9",
+          "Damage: 125/190/255/320"
+        ],
+        "interaction_notes": [
+          "All ability effects are nullified upon a Spell Block proc on the primary target"
+        ]
+      },
+      "ability_2": {
+        "name": "Hex",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Instant Kill",
+        "damage_types": ["instant_kill"],
+        "cooldown": "24/20/16/12",
+        "mana_cost": "130/150/170/190",
+        "cast_range": "550",
+        "cast_animation": "0 + 1.13",
+        "cast_radius": "",
+        "details": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
+        "description": "Transforms an enemy unit into a harmless beast, with all special abilities disabled.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Set Enemy Move Speed: 100",
+          "Duration: 2/2.3/2.6/2.9",
+          "Current Health as Damage: 100%",
+          "Instantly destroy imperfect, impaired, and inferior copies of heroes"
+        ],
+        "interaction_notes": [
+          "Sets base movement speed to 100",
+          "Applies Silence, Mute, Disarm, and Break",
+          "Changes selection box depending on Hex model"
+        ]
+      },
+      "ability_3": {
+        "name": "Shackles",
+        "key": "E",
+        "type": "channeling",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "14/13/12/11",
+        "mana_cost": "125/140/155/170",
+        "cast_range": "450",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "",
+        "details": "Magically binds an enemy unit so that it cannot move or attack, dealing damage over time.",
+        "description": "Magically binds an enemy unit so that it cannot move or attack, dealing damage over time.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "channeling"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max Channel Time: 2.4/3/3.6/4.2",
+          "Damage Interval: 0.1",
+          "Base Damage per Instance: 2.92/4.67/5.83/6.67",
+          "Damage Bonus per Interval: 7.08/5.67/4.72/4.05",
+          "Damage to Heal Factor: 1",
+          "Heals Rhasta over time during channeling"
+        ],
+        "interaction_notes": [
+          "Applies Stun and grants True Sight over target",
+          "Deals magical spell damage at 0.1-second intervals",
+          "Channeling interrupted by Hidden or Invulnerable sources on target"
+        ]
+      },
+      "ability_4": {
+        "name": "Mass Serpent Ward",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical / Instant Attack",
+        "damage_types": ["physical", "spell"],
+        "cooldown": "110",
+        "mana_cost": "200/350/550",
+        "cast_range": "550",
+        "cast_animation": "0.3 + 0.97",
+        "cast_radius": "150",
+        "details": "Summons a number of Serpent Wards to attack enemy units and enemy buildings.",
+        "description": "Summons a number of Serpent Wards to attack enemy units and enemy buildings.",
+        "facet_effects": {
+          "massive_serpent_ward": "Summons a single, massive Serpent Ward with 10x Ward Trait Factor and 12x Damage Factor"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Spawn Radius: 150",
+          "Number of Serpent Wards: 10",
+          "Hit Count: 2",
+          "Duration: 45",
+          "Creeps Hit Count: 4",
+          "Serpent Ward Damage: 50/85/120",
+          "Attack Speed: 0.67 attacks per second",
+          "Attack Range: 650"
+        ],
+        "interaction_notes": [
+          "Creates ward-type units in ring formation",
+          "Wards have lower auto-attack priority than heroes",
+          "Deals physical spell damage per attack",
+          "Talent upgrade adds instant attack on additional target"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Ether Shock damage from 140/200/260/320 to 125/190/255/320",
+          "Increased Shackles cooldown from 13/12/11/10 to 14/13/12/11"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Massive Serpent Ward damage factor from 10 to 12",
+          "Serpent Ward now prioritize the closest enemy hero within its attack range"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "ADDED the Chicken Fingers facet",
+          "REWORKED Aghanim's Scepter upgrade for Shackles",
+          "REWORKED Aghanim's Shard upgrade for Fowl Play",
+          "Updated talents: LVL 25 +20% Serpent Ward attack damage → +1 Serpent Ward attack target",
+          "LVL 25 +400 Ether Shock damage reduced to +250"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

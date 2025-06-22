@@ -1,0 +1,261 @@
+{
+  "hero_name": "Sniper",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 19,
+      "strength_gain": 2,
+      "agility": 27,
+      "agility_gain": 3.2,
+      "intelligence": 15,
+      "intelligence_gain": 2.6,
+      "health": 538,
+      "mana": 255,
+      "armor": 4.5,
+      "magic_resist": 26.5,
+      "damage": [40, 46],
+      "damage_avg": 43,
+      "projectile_speed": 3000,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.17 + 0.7",
+      "move_speed": 285,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 1400",
+      "roles": "Carry, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Ghillie Suit",
+        "effects": "While Take Aim is active, Sniper's attacks do not reveal him within the Fog of War."
+      },
+      "facet_2": {
+        "name": "Scattershot",
+        "effects": "Shrapnel has a shorter effect delay, deals more damage and applies a stronger movement speed over a shorter duration. ×0.66 Effect Delay Factor, +60/115/170/225 Damage per Second, ×2.5 Move Speed Slow Factor, ×0.1 Duration Factor"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Assassinate now fires quicker and stuns the enemy target", "Reduces cast point"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Concussive Grenade ability", "Launches a grenade at the area-targeted location that damages enemy units, and applies knockback to both Sniper and all affected enemy units within the radius", "Disarms, and applies a movement speed slow to affected enemy units after the knockback"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+50 Max Headshot Knock Distance", "-30s Shrapnel Restore Time"],
+        "level_20": ["+30% Shrapnel Damage", "+2s Take Aim Duration"],
+        "level_15": ["+150 Assassinate Damage", "+45 Take Aim Attack Speed"],
+        "level_10": ["+30 Headshot Damage", "+55 Take Aim Attack Range"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Keen Scope",
+          "type": "passive",
+          "description": "Grants Sniper flat attack range bonus.",
+          "values": {
+            "attack_range_bonus": "160/260/360/460"
+          },
+          "details": "This ability levels up with Assassinate. Has 710/810/910/1010 attack range."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Shrapnel",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "35",
+        "mana_cost": 0,
+        "cast_range": "1800",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "400/425/450/475",
+        "details": "Consumes a charge to launch a ball of shrapnel that showers and revealing the target area in explosive pellets.",
+        "description": "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations.",
+        "facet_effects": {
+          "scattershot": {
+            "effect_delay": "0.8",
+            "damage_per_second": "60.12/115.18/170.24/225.3",
+            "move_speed_slow": "2500%",
+            "shrapnel_duration": "1"
+          }
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Learning the ability grants all charges immediately",
+          "Can affect enemy units at max 2200/2225/2250/2275-distance away",
+          "Creates a negative aura that applies all ability effects",
+          "Multiple overlapping Shrapnel radius do not stack"
+        ],
+        "interaction_notes": [
+          "Does not affect Buildings or Ward-type units",
+          "Grants 450-radius flying vision for entire duration"
+        ]
+      },
+      "ability_2": {
+        "name": "Headshot",
+        "key": "W",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "N/A",
+        "mana_cost": 0,
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "Grants Sniper a chance to deal extra damage and briefly knocks back the attacked enemy unit.",
+        "description": "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Uses pseudo-random distribution",
+          "Proc chance: 40%",
+          "Damage: 20/50/80/110",
+          "Max Knock Distance: 50",
+          "Knock Duration: 0.033"
+        ],
+        "interaction_notes": [
+          "Does not proc on Buildings or Ward-type units",
+          "Procs on Allied units",
+          "Does not interact with Critical strike or Cleave sources"
+        ]
+      },
+      "ability_3": {
+        "name": "Take Aim",
+        "key": "E",
+        "type": "active",
+        "affects": "Self",
+        "damage": "N/A",
+        "damage_types": [],
+        "cooldown": "20/18/16/14",
+        "mana_cost": 50,
+        "cast_range": "N/A",
+        "cast_animation": "0 + 0",
+        "cast_radius": "N/A",
+        "details": "Sniper takes aim with additional attack range, he is slowed for the duration.",
+        "description": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role — taking perfect aim.",
+        "facet_effects": {
+          "ghillie_suit": "While Take Aim is active, Sniper's attacks do not reveal him within the Fog of War"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Attack Range Bonus: 100/150/200/250",
+          "Move Speed Slow: 45%/40%/35%/30%",
+          "Set Vision Radius: 110°",
+          "Vision Bonus: 500/750/1000/1250",
+          "Duration: 3",
+          "Set Proc Chance: 100%"
+        ],
+        "interaction_notes": [
+          "Interrupts channeling abilities upon cast",
+          "Has ensured Headshot chance",
+          "Grants flat bonus attack range and attack speed"
+        ]
+      },
+      "ability_4": {
+        "name": "Concussive Grenade",
+        "key": "D",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "10",
+        "mana_cost": 50,
+        "cast_range": "600",
+        "cast_animation": "0.1 + 0.8",
+        "cast_radius": "375",
+        "details": "Launches a grenade at the area-targeted location that damages enemy units, and applies knockback to both Sniper and all affected enemy units within the radius. Disarms, and applies a movement speed slow to affected enemy units after the knockback.",
+        "description": "ATTN: IN CASE OF DANGER PULL PIN",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Effect Radius: 375",
+          "Damage: 200",
+          "Knock Distance: 475",
+          "Knock Duration: 0.4",
+          "Move Speed Slow: 50%",
+          "Disarm Duration: 3",
+          "Debuff Duration: 3"
+        ],
+        "interaction_notes": [
+          "Acquiring Aghanim's Shard unlocks this ability",
+          "Applies non-disabling knockback on Sniper",
+          "Roshan is innately immune to forced movement"
+        ]
+      },
+      "ability_5": {
+        "name": "Assassinate",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical / Instant Attack / Physical",
+        "damage_types": ["Magical", "Physical"],
+        "cooldown": "20/15/10",
+        "mana_cost": 175,
+        "cast_range": "3000",
+        "cast_animation": "2 + 1.6",
+        "cast_radius": "N/A",
+        "details": "Locks onto a unit-targeted enemy. After a short aiming duration, Sniper fires a devastating shot at long range and mini-stuns the target.",
+        "description": "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Cast Range Buffer: 600",
+          "Spell Damage: 300/400/500",
+          "Instant Attack Factor: 1",
+          "Stun Duration: 0.033",
+          "Vision Max Duration: 4",
+          "Cooldown on Kill: 0"
+        ],
+        "interaction_notes": [
+          "Resets cooldown when enemy hero is killed",
+          "Has True Strike component",
+          "Not affected by disarm sources",
+          "Grants True Sight and shared vision over target"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

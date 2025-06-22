@@ -1,0 +1,268 @@
+{
+  "hero_name": "Ogre Magi",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 25,
+      "strength_gain": 4.2,
+      "agility": 14,
+      "agility_gain": 1.5,
+      "intelligence": 0,
+      "intelligence_gain": 0,
+      "health": 670,
+      "mana": 75,
+      "armor": 6.33,
+      "magic_resist": 25,
+      "damage": [69, 75],
+      "damage_avg": 72,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler, Durable, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Fat Chance",
+        "effects": "Increases Multicast chance incrementally per strength"
+      },
+      "facet_2": {
+        "name": "Learning Curve",
+        "effects": "The Ogre Magi are a bit slow and start the game with no ability points to spend, but gain extra ability points on the next level. Reduces level requirement for all abilities and talents."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Unrefined Fireblast ability", "Blasts an enemy unit with a wave of fire, dealing damage and bonus damage corresponding to the Ogre's strength and stunning the target"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Fire Shield ability", "Creates a fire shield around the targeted ally, absorbing a percentage of the damage of next few attacks from enemy heroes", "When an attack damage instance is absorbed, a fireball is launched at the enemy attacker"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+220 Fireblast Damage", "17% Fireblast Proc Chance"],
+        "level_20": ["+30 Bloodlust Attack Speed", "+30 Strength"],
+        "level_15": ["+2/+0.01 Dumb Luck Max Mana/Regen per Strength", "+80 Attack Damage"],
+        "level_10": ["-1s Fireblast Cooldown / -1s Unrefined Fireblast Cooldown", "+12 Ignite Damage per Second"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Dumb Luck",
+          "type": "passive",
+          "description": "Ogre Magi's max intelligence is always 0. Strength grants him mana and mana regeneration instead.",
+          "values": {
+            "set_max_int": 0,
+            "max_mana_per_str": "6 (8 with Learning Curve)",
+            "mana_regen_per_str": "0.02 (0.03 with Learning Curve)"
+          },
+          "details": "Checks Ogre's current intelligence and sets its value to 0 immediately. However, this neither affects mana nor mana regeneration sources."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "The Ogre's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden innate abilities that require channeling to utilize"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Fireblast",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "11/10/9/8 (10/9/8/7 with Learning Curve)",
+        "mana_cost": "70/85/100/115",
+        "cast_range": "525",
+        "cast_animation": "0.45 + 0.53",
+        "cast_radius": "",
+        "details": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
+        "description": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
+        "facet_effects": {
+          "learning_curve": "Hero Level Requirement: 0/2/4/6"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Upon a Multicast proc, Fireblast is cast on the same unit-targeted enemy multiple times in 0.6-second intervals"],
+        "interaction_notes": ["Ends Multicast upon Spell Block source proc", "The passive proc chance is non-functional on illusions", "Does not disable the passive proc chance when broken"]
+      },
+      "ability_2": {
+        "name": "Ignite",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "17",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "700/800/900/1000",
+        "cast_animation": "0.35 + 0.6",
+        "cast_radius": "",
+        "details": "Applies damage per second and movement speed slow on the target and another random unit within the radius.",
+        "description": "Applies damage per second and movement speed slow on the target and another random unit within the radius.",
+        "facet_effects": {
+          "learning_curve": "Hero Level Requirement: 0/2/4/6"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Searches for the nearest enemy unit without the debuff within the secondary target search radius", "With Multicast proc: Launches another 1/3/5/7 projectiles in 0.6-second interval at random enemy units"],
+        "interaction_notes": ["Proc Spell Block source per Multicast target independently upon projectile impact", "Does not proc Spell Reflection sources on secondary affected targets"]
+      },
+      "ability_3": {
+        "name": "Bloodlust",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "20/18/16/14",
+        "mana_cost": "40/50/60/70",
+        "cast_range": "600",
+        "cast_animation": "0.45 + 0.67",
+        "cast_radius": "",
+        "details": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Can be cast on buildings.",
+        "description": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Can be cast on buildings.",
+        "facet_effects": {
+          "learning_curve": "Hero Level Requirement: 0/2/4/6"
+        },
+        "ability_behavior": ["unit_target", "autocast"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Doubletap casts the ability on Ogre", "Can be cast and Multicast on all allied units", "Has Multicast proc properties with specific targeting priorities"],
+        "interaction_notes": ["Automatically applies on a random allied hero within the radius", "Always prioritizes Ogre Magi himself, even if he already has the buff"]
+      },
+      "ability_4": {
+        "name": "Multicast",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "",
+        "details": "Enables Ogre Magi to cast his abilities and items multiple times per cast, disregarding its cooldown. Each of Ogre Magi's abilities has its own Multicast buffer range.",
+        "description": "Enables Ogre Magi to cast his abilities and items multiple times per cast, disregarding its cooldown.",
+        "facet_effects": {
+          "fat_chance": "Increases Multicast chance incrementally per strength (0.05% per strength)",
+          "learning_curve": "Hero Level Requirement: 5/11/17"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Multicast is resolved in a single roll per ability cast", "2x Multicast Chance: 75%/75%/75%", "3x Multicast Chance: 0%/30%/30%", "4x Multicast Chance: 0%/0%/15%"],
+        "interaction_notes": ["Procs on offensive unit-targeted active item ability casts", "Does not proc Spell Block sources when reflected via Spell Reflection", "Available for Ogre Magi in Ability Draft but non-functional"]
+      },
+      "ability_5": {
+        "name": "Unrefined Fireblast",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "6 (5 with Learning Curve)",
+        "mana_cost": "35% × Current MP",
+        "cast_range": "525",
+        "cast_animation": "0.45 + 0.53",
+        "cast_radius": "",
+        "details": "Blasts an enemy unit with a wave of fire, dealing damage and bonus damage corresponding to the Ogre's strength and stunning the target.",
+        "description": "Blasts an enemy unit with a wave of fire, dealing damage and bonus damage corresponding to the Ogre's strength and stunning the target.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Acquiring Aghanim's Scepter unlocks this ability", "Upon Multicast proc, cast on the same target multiple times in 0.6-second intervals", "The current mana as mana cost is defined as: MPCost = ⌊CurrentMana × 0.35⌋"],
+        "interaction_notes": ["Ends Multicast upon Spell Block source proc", "Unavailable in Ability Draft"]
+      },
+      "ability_6": {
+        "name": "Fire Shield",
+        "key": "F",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "15",
+        "mana_cost": "50",
+        "cast_range": "600",
+        "cast_animation": "0.2 + 0.6",
+        "cast_radius": "",
+        "details": "Creates a fire shield around the targeted ally, absorbing a percentage of the damage of next few attacks from enemy heroes.",
+        "description": "Creates a fire shield around the targeted ally, absorbing a percentage of the damage of next few attacks from enemy heroes. When an attack damage instance is absorbed, a fireball is launched at the enemy attacker.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Acquiring Aghanim's Shard unlocks this ability", "Cannot be cast on Invulnerable units or Ward-type units", "Doubletap casts the ability on Ogre"],
+        "interaction_notes": ["Applies a generic incoming damage reduction on the affected allied unit", "Procs a magical spell damage fireball projectile to the damage source", "Unavailable in Ability Draft"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased base strength from 23 to 25",
+          "Rescaled Ignite movement speed slow from 20%/23%/26%/29% to 25% on each level"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Bloodlust movement speed bonus from 7%/9%/11%/13% to 6%/8%/10%/12%",
+          "LVL 10 +15 Ignite damage per second reduced to +12",
+          "LVL 25 +240 Fireblast damage reduced to +220"
+        ]
+      },
+      {
+        "version": "7.37c",
+        "date": "2024-08-28",
+        "changes": [
+          "Increased Bloodlust attack speed bonus from 30/45/60/75 to 35/50/65/80",
+          "CHANGED Fire Shield Multicast priority from no priorities to the following units without the buff: Ogre Magi → Allied heroes → Allied buildings → Allied creeps"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

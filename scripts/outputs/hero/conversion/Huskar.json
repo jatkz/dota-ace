@@ -1,0 +1,264 @@
+{
+  "hero_name": "Huskar",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 23,
+      "strength_gain": 3.3,
+      "agility": 10,
+      "agility_gain": 1.5,
+      "intelligence": 18,
+      "intelligence_gain": 1.5,
+      "health": 626,
+      "mana": 0,
+      "armor": 1.67,
+      "magic_resist": 26.8,
+      "damage": [44, 49],
+      "damage_avg": 46.5,
+      "projectile_speed": 1400,
+      "attack_type": "ranged",
+      "attack_range": 400,
+      "attack_speed": 100,
+      "bat": 1.6,
+      "animation": "0.3 + 0.5",
+      "move_speed": 295,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Cauterize",
+        "effects": "Add an activated ability to Berserker's Blood that applies a Basic Dispel on Huskar. After a short delay, the ability health cost is healed, along with a bonus for each debuff dispelled this way."
+      },
+      "facet_2": {
+        "name": "Incendiary",
+        "effects": "Sacrificing more blood to amplify the already aflamed Burning Spear with bonus max health as damage per second on the affected enemy unit."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Taunts the affected enemy unit to attack Huskar", "Increases cast range"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Applies a movement speed slow and heals Huskar for a percentage of the damage dealt to enemies", "Reduces cooldown"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+6s Burning Spear Duration", "+25% Life Break Damage"],
+        "level_20": ["-5s Life Break Cooldown", "+30% Berserker's Blood Health Regen Factor"],
+        "level_15": ["15% Lifesteal", "+5 Burning Spear Damage per Second"],
+        "level_10": ["+2s Life Break Slow Duration", "+0.75s Inner Fire Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Blood Magic",
+          "type": "passive",
+          "description": "Mana cost of all sources are converted to current health costs for the Sacred Warrior. Huskar does not have mana.",
+          "values": {
+            "set_max_mana": 0,
+            "mana_cost_to_self_spell_damage_factor": 1
+          },
+          "details": "Checks Huskar current mana and sets its value to 0 immediately. Mana cost of all sources are converted into damage instance of self-damage, magical spell damage, and HP Removal."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Huskar's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {
+            "lifesteal": 15,
+            "creep_lifesteal_factor": 0.6
+          },
+          "details": "Grants Huskar's attacks lifesteal. Lifesteal is less effective when attacking creeps."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Inner Fire",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "17/15/13/11",
+        "mana_cost": "75/100/125/150",
+        "cast_range": "500",
+        "cast_animation": "0.35 + 1.09",
+        "cast_radius": "500",
+        "description": "In a fiery rage, Huskar pushes all nearby enemies away to a fixed distance, silences and damages them.",
+        "values": {
+          "radius": 500,
+          "damage": "105/170/235/300",
+          "max_knockback_distance": 400,
+          "knockback_duration": 1,
+          "silence_duration": "1.5/2/2.5/3",
+          "move_speed_slow": "50%"
+        },
+        "facet_effects": {
+          "shard_upgrade": {
+            "self_heal_per_hero": "52.5/85/117.5/150",
+            "self_heal_per_creep": "10.5/17/23.5/30",
+            "cooldown_reduction": "14/12/10/8"
+          }
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Applies knockback to fixed 400-distance from cast location", "Can push units over impassable terrain", "Trees within 200-radius are destroyed"],
+        "interaction_notes": ["Roshan is immune to forced movement but other components still apply", "Displays disarm icon despite not applying it"]
+      },
+      "ability_2": {
+        "name": "Burning Spear",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical / Pure",
+        "cooldown": "0",
+        "mana_cost": "0",
+        "cast_range": "400",
+        "cast_animation": "0.3 + 0.5",
+        "description": "Ignites his spears aflame with his health, dealing damage over time with his regular attack. Multiple attacks will stack additional damage.",
+        "values": {
+          "damage_per_second": "5/10/15/20",
+          "duration": 9,
+          "active_cast_range": 450,
+          "health_cost": "4% × Current HP"
+        },
+        "facet_effects": {
+          "incendiary": {
+            "max_health_damage_bonus": "0.75%",
+            "health_cost": "4% × Max HP"
+          },
+          "talent_upgrade": {
+            "damage_per_second": "10/15/20/25",
+            "duration": 15
+          }
+        },
+        "ability_behavior": ["autocast", "active_attack_modifier"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Autocast uses hero's current attack range", "Manual cast uses 450 range", "Cannot be cast on allied units, buildings, or ward-type units"],
+        "interaction_notes": ["Health cost is non-lethal", "Stacks refresh duration", "Pure damage affects debuff immune units"]
+      },
+      "ability_3": {
+        "name": "Berserker's Blood",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self",
+        "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's strength.",
+        "values": {
+          "max_bonus_health_threshold": "12%",
+          "max_attack_speed_bonus": "170/220/270/320",
+          "max_magic_resistance_bonus": "15%/20%/25%/30%",
+          "strength_health_regen_factor": "0.25/0.4/0.55/0.7",
+          "linger_duration": 0.5
+        },
+        "facet_effects": {
+          "cauterize": {
+            "health_cost_heal_delay": 3,
+            "bonus_heal_per_debuff": "5% Max HP",
+            "cooldown": "50/40/30/20",
+            "health_cost": "30% × Current HP"
+          },
+          "talent_upgrade": {
+            "strength_health_regen_factor": "0.55/0.7/0.85/1"
+          }
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Bonuses scale exponentially with missing health", "Polynomial factor of 1.85", "Model size increases with missing health"],
+        "interaction_notes": ["Illusions cannot use magic resistance component", "Effects linger 0.5s after death"]
+      },
+      "ability_4": {
+        "name": "Life Break",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "16/14/12",
+        "mana_cost": "0",
+        "cast_range": "550",
+        "cast_animation": "0.3 + 0.5",
+        "description": "Leaps at an enemy target, shattering a percentage of its current health, and slowing both its movement speed and attack speed.",
+        "values": {
+          "current_health_damage": "32%/38%/44%",
+          "move_speed_slow": "60%",
+          "attack_speed_slow": "60/100/140",
+          "slow_duration": "3/4/5",
+          "self_current_health_damage": "32%/38%/44%",
+          "magic_resist_bonus": "60%",
+          "max_debuff_immune_duration": 5
+        },
+        "facet_effects": {
+          "scepter_upgrade": {
+            "cast_range": 800,
+            "current_health_damage": "57%/63%/69%",
+            "taunt_duration": 3,
+            "slow_duration": "5/6/7"
+          },
+          "talent_upgrade": {
+            "cooldown": "11/9/7",
+            "damage_bonus": "+25%",
+            "slow_duration_bonus": "+2s"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Grants debuff immunity and magic resistance while leaping", "Can move over impassable terrain", "Applies basic dispel on cast"],
+        "interaction_notes": ["Roshan takes no damage but other effects apply", "Leap can be interrupted by disables or forced movement"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Aghanim's Shard upgrade: Increased Inner Fire movement speed slow from 40% to 50%"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Reduced Inner Fire damage from 120/180/240/300 to 105/170/235/300"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Inner Fire cast point from 0.5 to 0.35",
+          "Berserker's Blood: ADDED the Cauterize facet with active component",
+          "Life Break: REMOVED the Nothl Transfusion and Bloodbath facets",
+          "Talents: LVL 15 +4 Burning Spear damage per second increased to +5",
+          "Talents: LVL 25 +20% Life Break target current health as damage increased to +25%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

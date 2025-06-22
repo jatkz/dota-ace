@@ -1,0 +1,316 @@
+{
+  "hero_name": "Timbersaw",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 26,
+      "strength_gain": 3.5,
+      "agility": 16,
+      "agility_gain": 1.6,
+      "intelligence": 23,
+      "intelligence_gain": 2.7,
+      "health": 692,
+      "mana": 351,
+      "armor": 2.67,
+      "magic_resist": 27.3,
+      "damage": [49, 53],
+      "damage_avg": 51,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.36 + 0.64",
+      "move_speed": 285,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Nuker, Durable, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Shredder",
+        "effects": "Shatters the tree it latched to with Timber Chain upon reaching it. The tree splinters in all directions, damaging and applying a movement speed slow to affected enemy units."
+      },
+      "facet_2": {
+        "name": "Twisted Chakram",
+        "effects": "Twisted Chakram is Timbersaw's fourth ability with the selected facet. Launches a secondary saw-blade that deals damage and applies movement speed slow on affected enemy units based on their current health it passes through, then returns to Timbersaw."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Now has an active component that grants Timbersaw a replenishing all damage barrier that gets stronger the more enemy heroes are close",
+          "The damage barrier explodes when it expires, damaging nearby enemy units correspondingly to its current barrier value",
+          "Grants max Reactive Armor stacks upon cast"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Flamethrower ability",
+          "Releases a destructive flame in the direction Timbersaw is facing",
+          "Deals damage per second, applies a movement speed slow and destroys trees"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["×1.75% Timber Chain Range/Projectile Speed", "+75 Whirling Death Tree Bonus Damage"],
+        "level_20": ["+5% Chakram Slow / +5% Twisted Chakram Slow", "+10 Exposure Therapy Heal per Tree Destroyed"],
+        "level_15": ["+6 Reactive Armor Max Stacks / +1 Reactive Armor Stack per Hero Attack", "+3% Whirling Death Attributes Reduction"],
+        "level_10": ["+1.5 Mana Regen", "+0.25 Reactive Armor Health Regen per Stack"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Exposure Therapy",
+          "type": "passive",
+          "description": "Timbersaw restores a flat amount of mana per tree destroyed.",
+          "values": {
+            "mana_restore_per_destroyed_tree": "4/6/8/10",
+            "heal_per_destroyed_tree": "10"
+          },
+          "details": "This ability levels up with Chakram. Talent upgrade additionally restores health per tree destroyed."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "The Shredder's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {},
+          "details": "Contains multiple hidden innate abilities that can be tapped for more details."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Whirling Death",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Trees",
+        "damage": "Spell / Pure",
+        "cooldown": "7.5/7/6.5/6",
+        "mana_cost": 100,
+        "cast_range": "325",
+        "cast_animation": "0 + 0",
+        "cast_radius": "325",
+        "details": "Deals damage and bonus damage per destroyed tree within the radius centered around Timbersaw, while reducing the affected enemy hero's primary attribute for a brief duration.",
+        "description": "In the case that Rizzrack gets surrounded by the vines and plants of nightmares, he has an immediate chainsaw defense.",
+        "facet_effects": {
+          "base_damage": "85/130/175/220",
+          "damage_bonus_per_tree": "11/18/25/32 (86/93/100/107 with talent)",
+          "attribute_reduction": "13% (16% with talent)",
+          "duration": "12/13/14/15",
+          "all_attributes_reduction": "5% (8% with talent)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Interrupts Timbersaw's channeling abilities upon cast",
+          "Trees within 325 radius are destroyed",
+          "Attribute reduction cannot reduce below 0",
+          "For Universal heroes, reduces lesser portion of all attributes"
+        ],
+        "interaction_notes": [
+          "Affects illusions, clones, and Spirit Bear",
+          "Different calculations for strength and universal heroes",
+          "Does not affect current mana percentage for intelligence heroes"
+        ]
+      },
+      "ability_2": {
+        "name": "Timber Chain",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units / Trees",
+        "damage": "Spell / Pure",
+        "cooldown": "4",
+        "mana_cost": "60/70/80/90",
+        "cast_range": "750/900/1050/1200 (1313/1575/1838/2100 with talent)",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "225",
+        "details": "Fires a chain that embeds itself in the first tree it hits, pulling Timbersaw towards it. Deals damage to enemy units within Timbersaw's travel path.",
+        "description": "You never know when you might need to escape from malevolent saplings.",
+        "facet_effects": {
+          "max_travel_distance": "750/900/1050/1200 (1313/1575/1838/2100 with talent)",
+          "travel_speed": "2200/2400/2600/2800 (3850/4200/4550/4900 with talent)",
+          "tree_search_radius": "90",
+          "damage_radius": "225",
+          "damage": "45/100/155/210",
+          "max_self_disarm_duration": "0.34/0.38/0.4/0.43",
+          "shredder_facet": {
+            "splinter_radius": "700",
+            "number_of_splinters": "10",
+            "splinter_width": "100",
+            "splinter_damage": "20/40/60/80",
+            "move_speed_slow": "30%/40%/50%/60%",
+            "slow_duration": "1"
+          }
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has projectile speed of 2200/2400/2600/2800",
+          "Can latch trees on higher elevation",
+          "Grants vision around projectile and end location",
+          "Can pull over impassable terrain"
+        ],
+        "interaction_notes": [
+          "Root sources do not interrupt self-forced movement",
+          "Affects invisible and untargetable units",
+          "Stops pulling when affected by cyclone or other forced movement"
+        ]
+      },
+      "ability_3": {
+        "name": "Reactive Armor",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "45 (Scepter upgrade)",
+        "mana_cost": "200 (Scepter upgrade)",
+        "cast_range": "600 (Scepter upgrade)",
+        "cast_animation": "0 + 0 (Scepter upgrade)",
+        "cast_radius": "600 (Scepter upgrade)",
+        "details": "Grants bonus armor and bonus health regeneration whenever an enemy hero attacks Timbersaw.",
+        "description": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
+        "facet_effects": {
+          "max_stacks": "12/22/32/42 (18/28/38/48 with talent)",
+          "stack_per_attack": "3 (4 with talent)",
+          "armor_bonus_per_stack": "0.4/0.5/0.6/0.7",
+          "health_regen_bonus_per_stack": "0.4/0.5/0.6/0.7 (0.65/0.75/0.85/0.95 with talent)",
+          "stack_duration": "10/12/14/16",
+          "stack_per_creep_attack": "1",
+          "scepter_upgrade": {
+            "effect_radius": "600",
+            "base_barrier": "200",
+            "barrier_regen_per_second": "100",
+            "barrier_regen_bonus_per_enemy": "75",
+            "max_barrier": "800",
+            "duration": "8",
+            "base_damage": "200",
+            "barrier_to_spell_damage_bonus_factor": "1"
+          }
+        },
+        "ability_behavior": ["passive", "no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Considers clones, illusions and creep-heroes as heroes",
+          "Each stack has independent duration",
+          "Scepter adds active component with damage barrier",
+          "Barrier explodes on expiration or death"
+        ],
+        "interaction_notes": [
+          "Functional for illusions but they cannot use bonus armor",
+          "Break sources disable stack gain but don't remove existing stacks",
+          "Hero model visually indicates stack count with dome"
+        ]
+      },
+      "ability_4": {
+        "name": "Twisted Chakram",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Pure",
+        "cooldown": "20/16/12",
+        "mana_cost": "100/140/180",
+        "cast_range": "1200",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "125",
+        "details": "Launches a secondary saw-blade that deals damage and applies movement speed slow on affected enemy units based on their current health it passes through, then returns to Timbersaw.",
+        "description": "A happy little accident in the lab turned wild new weapon in the forest.",
+        "facet_effects": {
+          "effect_radius": "125",
+          "contact_damage": "100/150/200",
+          "min_move_speed_slow_health_threshold": "5%",
+          "min_move_speed_slow": "5% (10% with talent)",
+          "max_move_speed_slow": "100%",
+          "contact_slow_duration": "2",
+          "min_target_distance": "600",
+          "max_travel_distance": "1200",
+          "peak_to_peak_amplitude": "350"
+        },
+        "ability_behavior": ["area_target", "point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "This is Timbersaw's fourth ability with Twisted Chakram facet",
+          "Travels in fixed parabola path like infinity symbol",
+          "Returns to Timbersaw's current coordinates after cast",
+          "Has 900 projectile speed"
+        ],
+        "interaction_notes": [
+          "Other Chakram notes apply",
+          "Unavailable in Ability Draft",
+          "Does nothing if Chakram is not learned"
+        ]
+      },
+      "ability_5": {
+        "name": "Flamethrower",
+        "key": "F",
+        "type": "active",
+        "affects": "Enemy Units / Trees",
+        "damage": "Spell / Magical",
+        "cooldown": "20",
+        "mana_cost": "100",
+        "cast_range": "400",
+        "cast_animation": "0 + 0",
+        "cast_radius": "275",
+        "details": "Releases a destructive flame in the direction Timbersaw is facing. Deals damage per second, applies a movement speed slow and destroys trees.",
+        "description": "A single saw can only cut so much. A single spark can burn forever.",
+        "facet_effects": {
+          "first_radius": "0",
+          "flame_length": "400",
+          "end_radius": "275",
+          "damage_per_second": "70",
+          "move_speed_slow": "30%",
+          "debuff_duration": "2",
+          "flamethrower_duration": "8",
+          "tree_destruction_delay": "5",
+          "damage_factor": "0.5"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Acquiring Aghanim's Shard unlocks this ability",
+          "Interrupts channeling abilities upon cast",
+          "Grants vision in front of facing angle",
+          "Area-of-effect is cone-shaped"
+        ],
+        "interaction_notes": [
+          "Requires drafting Chakram in Ability Draft",
+          "Trees destroyed after 5 seconds of being set ablaze",
+          "Affects buildings with reduced effectiveness"
+        ]
+      },
+      "ability_6": {
+        "name": "Chakram",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Pure",
+        "cooldown": "8",
+        "mana_cost": "100/140/180",
+        "cast_range": "1200",
+        "cast_animation": "0.15 + 0",
+        "cast_radius": "200",
+        

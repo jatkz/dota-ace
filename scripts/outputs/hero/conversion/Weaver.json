@@ -1,0 +1,241 @@
+{
+  "hero_name": "Weaver",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 16,
+      "strength_gain": 2,
+      "agility": 17,
+      "agility_gain": 3.3,
+      "intelligence": 20,
+      "intelligence_gain": 2,
+      "health": 472,
+      "mana": 315,
+      "armor": 3.83,
+      "magic_resist": 27,
+      "damage": [54, 60],
+      "damage_avg": 57,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 425,
+      "attack_speed": 120,
+      "bat": 1.8,
+      "animation": "0.55 + 0.36",
+      "move_speed": 275,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Skitterstep",
+        "effects": "Shukuchi has a greater haste movement, and applies a movement speed slow on affected enemy units when Weaver passes through them. +50 Haste Speed"
+      },
+      "facet_2": {
+        "name": "Hivemind",
+        "effects": "Each Beetle of The Swarm attached to an enemy hero grants experience to the Weaver over time."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Enables casting on allied heroes, applying most Time Lapse effects on the unit-targeted allied hero."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Puts a pre-Germinate Attack mark on enemy units it passes through for a brief duration.", "Enemy units with the Shukuchi mark are attacked with a secondary Geminate Attack upon Weaver revealing itself."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1 Geminate Attack Count", "-3s Shukuchi Cooldown"],
+        "level_20": ["+0.5 The Swarm Armor Reduction", "+70 Geminate Attack Damage"],
+        "level_15": ["+2 Beetles Hit Count", "+20 Mana Break"],
+        "level_10": ["+7 Strength", "+60 Shukuchi Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Rewoven",
+          "type": "passive",
+          "description": "Grants self attack range bonus for a short period of time per ability cast.",
+          "values": {
+            "attack_range_bonus_per_spell_cast": 50,
+            "duration": 7
+          },
+          "details": "Utilizes a timer to track Weaver's current ability cast count. Each stack places a new buff on Weaver, with each buff duration independent of the other."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Weaver's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {
+            "mana_burn_per_hit": 20,
+            "mana_burn_to_damage_factor": 0.8
+          },
+          "details": "Burns an enemy's mana on each attack and deals damage equal to a percentage of the mana burnt. Mana Break applied to enemy units from Weaver's illusions are less effective."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "The Swarm",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical",
+        "cooldown": "44/36/28/20",
+        "mana_cost": 110,
+        "cast_range": "3000",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "300",
+        "details": "Launches a swarm of Beetles, that latch on any enemy unit in their path, attacking and reducing the affected enemy units' armor until it is killed.",
+        "description": "Skitskurr opens a gap in the space time fabric, allowing young Weavers to slip through and aid him in combat.",
+        "facet_effects": {
+          "hivemind": "Each Beetle attached to an enemy hero grants experience to the Weaver over time (5/8/11/14 exp per instance)"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Beetles: 12",
+          "Hit Count: 3/4/4/5",
+          "Debuff Interval: 1.2/1.05/0.9/0.75",
+          "Damage per Instance: 18/22/26/30",
+          "Armor Reduction per Instance: 1",
+          "Beetle Duration: 16"
+        ],
+        "interaction_notes": [
+          "Beetles are not attackable when traveling as a swarm",
+          "Creep attacks are less effective on the Beetles",
+          "Beetles are destroyed if the host unit becomes invulnerable"
+        ]
+      },
+      "ability_2": {
+        "name": "Shukuchi",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "15/12/9/6",
+        "mana_cost": 65,
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "175",
+        "details": "Shifts out of visibility while reaching max movement speed — doing harm to any enemies it passes through.",
+        "description": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft.",
+        "facet_effects": {
+          "skitterstep": "Haste Speed: 600, Move Speed Slow: 100%, Slow Duration: 0.2"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Fade Time: 0.25",
+          "Damage: 100/130/160/190",
+          "Buff Duration: 4",
+          "Haste Speed: 550"
+        ],
+        "interaction_notes": [
+          "Does not interrupt channeling abilities upon cast",
+          "Disjoints projectiles upon cast if enemy has no True Sight",
+          "Grants Haste movement and Phase movement while invisible"
+        ]
+      },
+      "ability_3": {
+        "name": "Geminate Attack",
+        "key": "E",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Instant Attacks / Physical",
+        "cooldown": "9/7/5/3",
+        "mana_cost": 0,
+        "cast_range": "425",
+        "cast_animation": "0.55 + 0.36",
+        "cast_radius": "0",
+        "details": "Allows Weaver to dispatch more than one attack at once.",
+        "description": "Skitskurr's relationship with time is somewhat variable, causing his actions to be witnessed — and felt — more than once.",
+        "facet_effects": {},
+        "ability_behavior": ["autocast", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Effect Delay: 0.25",
+          "Number of Extra Attacks: 1",
+          "Attack Damage Bonus: 20/35/50/65",
+          "Buff Duration: 0.03"
+        ],
+        "interaction_notes": [
+          "Active attack modifier with Autocast on by default",
+          "Extra attacks have Global attack range",
+          "Procs any attack modifiers and on-cast effects as per normal"
+        ]
+      },
+      "ability_4": {
+        "name": "Time Lapse",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Allied Heroes",
+        "damage": "None",
+        "cooldown": "70/55/40",
+        "mana_cost": "150/75/0",
+        "cast_range": "0",
+        "cast_animation": "0.3 + 0.53",
+        "cast_radius": "0",
+        "details": "Weaver warps backward to whatever position it was in a few seconds earlier — regaining both health and mana values from that time. Neither affects current ability cooldowns nor gold and experience.",
+        "description": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "unit_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Lapse Time: 5"
+        ],
+        "interaction_notes": [
+          "Does not cancel shift-queue commands",
+          "Issues a stop order upon teleporting back",
+          "Sets health and mana to lapsed time value without using heal or mana restore"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": ["Beetles are now destroyed if the host unit becomes invulnerable."]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": ["Increased The Swarm debuff interval from 1.15/1/0.85/0.7 to 1.2/1.05/0.9/0.75."]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Beetle: Increased hero hit count from 3/3/4/4 to 3/4/4/5.",
+          "Beetle: Increased non-hero hit count from 6/6/8/8 to 6/7/8/9."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

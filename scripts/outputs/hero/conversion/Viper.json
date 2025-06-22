@@ -1,0 +1,269 @@
+{
+  "hero_name": "Viper",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 21,
+      "strength_gain": 2.4,
+      "agility": 21,
+      "agility_gain": 2.7,
+      "intelligence": 17,
+      "intelligence_gain": 2,
+      "health": 582,
+      "mana": 279,
+      "armor": 1.5,
+      "magic_resist": 26.7,
+      "damage": [48, 50],
+      "damage_avg": 49,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 575,
+      "attack_speed": 120,
+      "bat": 1.7,
+      "animation": "0.33 + 1",
+      "move_speed": 275,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Initiator, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Poison Burst",
+        "effects": "Additionally deals damage to other enemy units centered around the affected enemy unit based on the total spell damage inflicted when the Poison Attack debuff expires."
+      },
+      "facet_2": {
+        "name": "Caustic Bath",
+        "effects": "Grants Viper a positive aura within the radius. The longer Viper stays within the Nethertoxin, the greater the Corrosive Skin properties. The ability values reach max values based on the same Nethertoxin increment intervals over the entire duration."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Nosedive ability",
+          "The Netherdrake slams into the ground, applying a more potent Corrosive Skin to enemy units within the radius",
+          "Releases Nethertoxin of its corresponding level upon landing"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Now applies armor reduction per stack with its debuff affecting buildings",
+          "The damage per second component is less effective on buildings",
+          "Increases max stacks"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-50% Viper Strike Mana Cost/Cooldown", "+25 Nethertoxin Radius per 0.5s Intervals"],
+        "level_20": ["+0.2 Predator Health Loss to Damage Factor", "+80 Viper Strike Damage per Second"],
+        "level_15": ["+15% Poison Attack Move Speed Slow/Damage", "+40 Nethertoxin Min/Max Damage"],
+        "level_10": ["+20 Corrosive Skin Damage per Second", "+1s Viper Strike Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Predator",
+          "type": "passive",
+          "description": "Attacks apply an additional physical attack damage instance based on the target's current health and Viper's level.",
+          "values": {
+            "health_loss_factor": "0.15 (0.35 with talent)",
+            "factor_increase_per_hero_level": "0.05"
+          },
+          "details": "This ability levels up with Viper"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Viper's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "The Netherdrake is considered a ground unit, despite its hero model showing otherwise"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Poison Attack",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Buildings",
+        "damage": "Spell / Magical",
+        "cooldown": "0",
+        "mana_cost": 22,
+        "cast_range": "600",
+        "cast_animation": "0.33 + 1",
+        "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance reduction while dealing damage over time.",
+        "values": {
+          "max_stacks": "6 (8 with shard)",
+          "damage_per_second_per_stack": "4/8/12/16",
+          "move_speed_slow_per_stack": "3%/6%/9%/12%",
+          "magic_resist_reduction_per_stack": "4%/6%/8%/10%",
+          "debuff_duration": "4",
+          "armor_reduction_per_stack": "1 (with shard)"
+        },
+        "ability_behavior": ["autocast", "active_attack_modifier"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "facet_effects": {
+          "poison_burst": {
+            "effect_radius": 300,
+            "spell_damage_to_burst_damage_factor": 1
+          }
+        }
+      },
+      "ability_2": {
+        "name": "Nethertoxin",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "14",
+        "mana_cost": 70,
+        "cast_range": "900",
+        "cast_animation": "0.2 + 0.5",
+        "description": "Releases a Nethertoxin at the area-targeted location, affected enemy units take an increasing damage over time based on the duration they remain in it.",
+        "values": {
+          "effect_radius": 400,
+          "damage_interval": "0.5",
+          "min_damage_per_instance": "7.5/10/12.5/15",
+          "max_damage_per_instance": "17.5/32.5/47.5/62.5",
+          "nth_instance_as_max_values": 9,
+          "attack_speed_slow": "30/40/50/60",
+          "duration": "6.5/7/7.5/8",
+          "aura_linger_duration": "0.5"
+        },
+        "ability_behavior": ["area"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "facet_effects": {
+          "caustic_bath": {
+            "effect_radius": 400,
+            "magic_resistance_bonus": "1.25%/1.875%/2.5%/3.125% per interval"
+          }
+        }
+      },
+      "ability_3": {
+        "name": "Corrosive Skin",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical / No-reflection",
+        "description": "Viper exudes an infectious toxin that damages and slows the attack speed of any enemy that damages the Netherdrake within the radius.",
+        "values": {
+          "radius": 1400,
+          "damage_per_second": "8/16/24/32",
+          "attack_speed_slow": "8/16/24/32",
+          "duration": 4,
+          "magic_resist_bonus": "10%/15%/20%/25%"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "facet_effects": {
+          "caustic_bath": {
+            "min_damage_per_second": "8/16/24/32",
+            "max_damage_per_second": "16/32/48/64",
+            "min_magic_resist_bonus": "10%/15%/20%/25%",
+            "max_magic_resist_bonus": "20%/30%/40%/50%"
+          }
+        }
+      },
+      "ability_4": {
+        "name": "Nosedive",
+        "key": "D",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "20",
+        "mana_cost": 75,
+        "cast_range": "700",
+        "cast_animation": "0.1 + 0",
+        "description": "The Netherdrake slams into the ground, applying a more potent Corrosive Skin to enemy units within the radius.",
+        "values": {
+          "effect_radius": 500,
+          "damage_per_second": "8/16/24/32",
+          "attack_speed_slow": "32/64/96/128",
+          "debuff_duration": 4
+        },
+        "ability_behavior": ["area"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["This ability levels up with Nethertoxin and Corrosive Skin", "Releases Nethertoxin of its corresponding level upon landing"]
+      },
+      "ability_5": {
+        "name": "Viper Strike",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "50/40/30",
+        "mana_cost": "100/150/200",
+        "cast_range": "700/800/900",
+        "cast_animation": "0.2 + 0.53",
+        "description": "Breaks the targeted enemy unit's passive abilities, slows its movement speed and attack speed, while dealing damage over time. The slowing effect reduces incrementally over the duration of the ability.",
+        "values": {
+          "damage_per_second": "70/100/150",
+          "move_speed_slow": "60%/70%/80%",
+          "attack_speed_slow": "100/140/180",
+          "break_duration": 6,
+          "debuff_duration": 6
+        },
+        "ability_behavior": ["unit"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Poison Attack mana cost from 24 to 22",
+          "Increased Viper Strike attack speed slow from 80/120/160 to 100/140/180"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Aghanim's Scepter upgrade: Nosedive now applies Nethertoxin centered around Viper at the landing radius",
+          "Talents: LVL 10 +4% Poison Attack magic resistance reduction → +1s Viper Strike duration",
+          "Talents: LVL 25 Become Universal → +25 Nethertoxin radius per 0.5s"
+        ]
+      },
+      {
+        "version": "7.37b",
+        "date": "2024-08-14",
+        "changes": [
+          "Predator now affected by the illusions' outgoing damage reduction",
+          "Predator reduced base damage bonus per health loss from 0.25 to 0.15",
+          "Talents: LVL 15 +20 Corrosive Skin attack speed slow → +15% Poison Attack damage/slow",
+          "Talents: LVL 20 +20% Poison Attack damage/slow → +0.2 Predator base damage bonus per health loss"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

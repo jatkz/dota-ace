@@ -1,0 +1,317 @@
+{
+  "hero_name": "Terrorblade",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 18,
+      "strength_gain": 2,
+      "agility": 22,
+      "agility_gain": 4,
+      "intelligence": 19,
+      "intelligence_gain": 1.6,
+      "health": 516,
+      "mana": 303,
+      "armor": 8.67,
+      "magic_resist": 26.9,
+      "damage": [50, 56],
+      "damage_avg": 53,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 110,
+      "bat": 1.5,
+      "animation": "0.3 + 0.8",
+      "move_speed": 315,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Condemned",
+        "effects": "Sunder no longer has a minimum health threshold for affected enemies."
+      },
+      "facet_2": {
+        "name": "Soul Fragment",
+        "effects": "Conjure Image illusions are now created at full health for a current health cost that replaces the mana cost. -100% Mana Cost"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Terror Wave ability",
+          "Causes a wave to travel outwards in all directions fearing all enemy units upon impact",
+          "After the effect delay, he metamorphs into an even more imposing form. If already in Demon Form, the duration is extended",
+          "All Demon Form sources removes Demon Zeal, and vice versa"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Demon Zeal ability",
+          "Grants bonus health regeneration, bonus movement speed, and bonus attack speed within the radius to all affected illusions",
+          "Upon cast, the Demon Zeal grants Reflection-based illusions within the radius a certain bonus attack speed and movement speed",
+          "All Demon Form sources removes Demon Zeal, and vice versa"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+30s Metamorphosis Duration", "-30s Sunder Cooldown"],
+        "level_20": ["+10s Conjure Image Duration", "+10 all stats"],
+        "level_15": ["+10% Reflection Move Speed Slow/Damage +10 Reflection Attack Speed Slow", "-20s Metamorphosis Cooldown"],
+        "level_10": ["-2s Conjure Image Cooldown", "+1s Reflection Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Dark Unity",
+          "type": "passive",
+          "description": "Grants Terrorblade's images within the aura radius outgoing damage bonus. Vice versa, applies an outgoing damage reduction outside the aura radius.",
+          "values": {
+            "proximity_radius": 1200,
+            "damage_dealt_bonus": "25%",
+            "aura_linger_duration": 0.5,
+            "damage_dealt_reduction": "60%"
+          },
+          "details": "Applies a generic outgoing damage manipulation on Terrorblade's illusions within the radius. Stacks additively with other damage manipulation sources."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Terrorblade's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {},
+          "details": "No longer has a chance to block a flat amount of physical attack damage from other incoming attacks while in Demon Form."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Reflection",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "23/20/17/14",
+        "mana_cost": "60/65/70/75",
+        "cast_range": "700",
+        "cast_animation": "0.3 + 0.87",
+        "cast_radius": "500",
+        "details": "Terrorblade brings forth an invulnerable dark reflection of all enemy heroes in a target area. Affected enemy heroes are slowed and attacked by their reflection.",
+        "description": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy. Now it is a lesson he teaches others.",
+        "facet_effects": {
+          "move_speed_slow": "15%/20%/25%/30% (25%/30%/35%/40%)",
+          "attack_speed_slow": "15/20/25/30 (25/30/35/40)",
+          "debuff_duration": "5 (6)",
+          "damage_dealt": "55%/70%/85%/100% (65%/80%/95%/110%)",
+          "set_move_speed": 550,
+          "duration": 5
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Can affect enemy units at max 1200-distance away with the cast range and effect radius",
+          "Creates Reflection-based illusions of all debuff-affected enemy units",
+          "Illusions are invulnerable, uncontrollable and have unobstructed movement with absolute movement speed"
+        ],
+        "interaction_notes": [
+          "Recasting the ability creates another independent Reflection-based illusion instance per affected enemy hero",
+          "Both leveling up the ability and learning the talent do not update the current active Reflection-based illusions instance"
+        ]
+      },
+      "ability_2": {
+        "name": "Conjure Image",
+        "key": "W",
+        "type": "active",
+        "affects": "Self",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "16 (14)",
+        "mana_cost": "55/65/75/85",
+        "cast_range": "0",
+        "cast_animation": "0.15 + 0.77",
+        "cast_radius": "0",
+        "details": "Conjures an illusion of Terrorblade correspondingly to his current health.",
+        "description": "There's only one thing more dangerous than facing Terrorblade. Facing MORE Terrorblades!",
+        "facet_effects": {
+          "number_of_illusions": 1,
+          "damage_dealt": "30%/40%/50%/60%",
+          "damage_taken": "250%",
+          "duration": "34 (44)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "The Conjure Image-based illusion is visually distinguishable from Terrorblade for everyone",
+          "Can have a max 3 (4) Conjure-based illusions at the same time"
+        ],
+        "interaction_notes": [
+          "Soul Fragment facet: Illusions are now created at full health for a current health cost that replaces the mana cost"
+        ]
+      },
+      "ability_3": {
+        "name": "Metamorphosis",
+        "key": "E",
+        "type": "active",
+        "affects": "Self / Illusions",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "155/150/145/140 (135/130/125/120)",
+        "mana_cost": "100",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "1200",
+        "details": "Transforms into a powerful demon with a ranged attack.",
+        "description": "Temper, temper. The rage rises up and takes control. Meet Terrorblade's own worst self.",
+        "facet_effects": {
+          "transform_time": 0.35,
+          "set_base_attack_time": 1.5,
+          "attack_damage_bonus": "20/40/60/80",
+          "attack_range_bonus": "450/500/550/600",
+          "duration": "35/40/45/50 (65/70/75/80)",
+          "aura_radius": 1200,
+          "aura_linger_duration": 0.1
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "All of Terrorblade's illusions that are within the radius will metamorph as well",
+          "Turns Terrorblade and all illusions within the radius into a ranged unit",
+          "Has a 900-attack projectile speed"
+        ],
+        "interaction_notes": [
+          "All Demon Form sources removes Demon Zeal, and vice versa",
+          "Recasting the ability refreshes its buff duration"
+        ]
+      },
+      "ability_4": {
+        "name": "Sunder",
+        "key": "R",
+        "type": "active",
+        "affects": "Heroes",
+        "damage": "Pure",
+        "damage_types": ["Pure"],
+        "cooldown": "120/80/40 (90/50/10)",
+        "mana_cost": "100/75/50",
+        "cast_range": "475",
+        "cast_animation": "0.35 + 0.83",
+        "cast_radius": "0",
+        "details": "Severing the life from both Terrorblade and a target hero, exchanging a percentage of both units' current health. Some health points must remain after the exchange.",
+        "description": "You didn't need that life, did you? The Demon Marauder steals that which you hold most dear.",
+        "facet_effects": {
+          "current_health_percentage_change": "100%",
+          "min_current_health": "35%/30%/25%"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Considers clones and illusions as heroes, creep-heroes as creeps",
+          "Cannot directly be unit-targeted on the Spirit Bear",
+          "Sets both Terrorblade's and the unit target's health utilizing specific formulas"
+        ],
+        "interaction_notes": [
+          "Condemned facet: No longer has a minimum health threshold for affected enemies",
+          "Does not affect debuff immune units of all factions"
+        ]
+      },
+      "ability_5": {
+        "name": "Demon Zeal",
+        "key": "D",
+        "type": "active",
+        "affects": "Self / Illusions",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "60",
+        "mana_cost": "0",
+        "cast_range": "0",
+        "cast_animation": "0.2 + 0.5",
+        "cast_radius": "1200",
+        "details": "Grants bonus health regeneration, bonus movement speed, and bonus attack speed within the radius to all affected illusions.",
+        "description": "Fear is fueled by confusion when Terrorblade's enemies see that the first cut he makes is one to embolden himself.",
+        "facet_effects": {
+          "health_regen_bonus": 20,
+          "move_speed_bonus": 60,
+          "attack_speed_bonus": 100,
+          "duration": 30,
+          "radius": 1200,
+          "aura_linger_duration": 0.1
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Acquiring Aghanim's Shard unlocks this ability in the fourth ability slot",
+          "All of Terrorblade's illusions that are within the radius are affected by Demon Zeal as well"
+        ],
+        "interaction_notes": [
+          "All Demon Form sources removes Demon Zeal, and vice versa",
+          "The current health cost is rounded down, utilizes setting health and is non-lethal"
+        ]
+      },
+      "ability_6": {
+        "name": "Terror Wave",
+        "key": "F",
+        "type": "active",
+        "affects": "Enemy Units / Self / Illusions",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "90",
+        "mana_cost": "75",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "1600",
+        "details": "Causes a wave to travel outwards in all directions fearing all enemy units upon impact.",
+        "description": "A shockwave of power strong enough to break the walls of Foulfell itself.",
+        "facet_effects": {
+          "max_effect_radius": 1600,
+          "effect_delay": 0.6,
+          "fear_duration": 2,
+          "demon_form_duration": 15,
+          "aura_radius": 1200
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Acquiring Aghanim's Scepter unlocks this ability in the fifth ability slot",
+          "After the effect delay, he metamorphs into an even more imposing form"
+        ],
+        "interaction_notes": [
+          "All Demon Form sources removes Demon Zeal, and vice versa",
+          "All of Terrorblade's illusions that are within the radius will metamorph as well"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

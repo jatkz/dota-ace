@@ -1,0 +1,259 @@
+{
+  "hero_name": "Io",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 17,
+      "strength_gain": 3,
+      "agility": 14,
+      "agility_gain": 1.6,
+      "intelligence": 23,
+      "intelligence_gain": 1.7,
+      "health": 494,
+      "mana": 351,
+      "armor": 3.33,
+      "magic_resist": 27.3,
+      "damage": [45, 51],
+      "damage_avg": 48.3,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 500,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.4",
+      "move_speed": 320,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Escape, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Kritzkrieg",
+        "effects": "Overcharge grants bonus attack speed and bonus spell damage amplification."
+      },
+      "facet_2": {
+        "name": "Medigun",
+        "effects": "Overcharge grants bonus armor and bonus magic resistance."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Spirits now passively spawn, orbits and replenishes itself around Io constantly",
+          "Applies movement speed slow to enemy heroes coming in contact with",
+          "Reduces cooldown, and now causes Spirits to immediately explode upon cast"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Additionally deals damage per second to enemy units upon coming in contact with the Tether",
+          "Self-heals for a portion of the damage dealt"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Instant Attack Tethered Ally's Target", "Unslowable Overcharge"],
+        "level_20": ["-30s Relocate Cooldown", "+0.2% Overcharge Max Health as Health Regen Bonus"],
+        "level_15": ["+60 Spirits Hero Damage", "+5% Tether Move Speed"],
+        "level_10": ["+12 Tethered Unit Attack Damage", "+1.5s Overcharge Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Wellspring",
+          "type": "passive",
+          "description": "Consumable items and item abilities that restore Health and Mana over time affect Io twice as fast. Total amount of restored health or mana remains the same",
+          "values": {
+            "consumable_speed_factor": 2
+          },
+          "details": "Hidden Modifier"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Io's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {
+            "effect_range": 256
+          },
+          "details": "The Wisp is considered a ground unit, despite its hero model showing otherwise. The Fundamental's facing direction is a mystery. However, if you watch closely, the facing direction is marked by an arc-like effect."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Tether",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self / Units",
+        "damage": "Instant Attack / Physical",
+        "cooldown": "12",
+        "mana_cost": "40",
+        "cast_range": "1600",
+        "cast_animation": "0 + 0",
+        "description": "The Fundamental tethers itself to an allied unit, granting bonus movement speed to both of them. Whenever Io restores health or mana, the tethered unit gains a portion of the regeneration. Tether breaks when either the allied unit moves too far away, or Io cancels it.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Break Distance: 1000",
+          "Pull Distance: 700",
+          "Break Distance During Pull: 2150",
+          "Ally Heal Factor: 0.6/0.8/1/1.2",
+          "Ally Mana Restore Factor: 0.6/0.8/1/1.2",
+          "Ally Move Speed Bonus: 6%/8%/10%/12%",
+          "Move Speed Slow: 10%/20%/30%/40%",
+          "Attack Speed Slow: 10/20/30/40"
+        ],
+        "interaction_notes": [
+          "Io pulls itself 1000-speed until and latches to the affected ally within 300-distance",
+          "Pulls Io over impassable terrain and through trees",
+          "Trees within 350-radius are destroyed when the pull ends"
+        ]
+      },
+      "ability_2": {
+        "name": "Spirits",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "26/24/22/20",
+        "mana_cost": "100/110/120/130",
+        "cast_animation": "0 + 0",
+        "description": "Summon a number of particles that dance in a circle around Io. If a particle collides with an enemy hero, it explodes and damages all enemy units within the radius. When its duration ends, all remaining particles explode.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Spirits: 5",
+          "Collision Radius: 110",
+          "Explosion Radius: 360",
+          "Explosion Damage: 30/50/70/90",
+          "Duration: 19",
+          "Collision Damage: 10/15/20/25"
+        ],
+        "interaction_notes": [
+          "Summons 1 spirit in 1-second intervals, immediately upon cast",
+          "All spirits rotate clockwise and keep an equal distance from each other",
+          "The spirits complete a revolution per 2.7 seconds regardless of its distance from Io"
+        ]
+      },
+      "ability_3": {
+        "name": "Overcharge",
+        "key": "E",
+        "type": "active",
+        "affects": "Self / Allied Units",
+        "damage": "None",
+        "cooldown": "25/22/19/16",
+        "mana_cost": "40/60/80/100",
+        "cast_animation": "0 + 0",
+        "description": "Grants max health as bonus health regeneration.",
+        "facet_effects": {
+          "kritzkrieg": {
+            "attack_speed_bonus": "35/60/85/110",
+            "spell_damage_amp": "8%/10%/12%/14%"
+          },
+          "medigun": {
+            "armor_bonus": "4/7/10/13",
+            "magic_resist_bonus": "12%/18%/24%/30%"
+          }
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max Health as Health Regen Bonus: 0.5%/0.6%/0.7%/0.8%",
+          "Duration: 8"
+        ],
+        "interaction_notes": [
+          "Grants the tethered allied unit all Overcharges' ability effects as well",
+          "Tether transfers all ability effects to the current affected allied unit"
+        ]
+      },
+      "ability_4": {
+        "name": "Relocate",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Allied Heroes",
+        "damage": "None",
+        "cooldown": "90/80/70",
+        "mana_cost": "175",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0.53",
+        "description": "Teleports Io to any location globally. Upon the duration expires, Io will return to the original ability cast location.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Delay: 3.5/3.25/3",
+          "Duration: 12"
+        ],
+        "interaction_notes": [
+          "Teleports the tethered allied unit alongside with Io",
+          "Upon the duration expires, Io and the tethered allied unit will return to the original ability cast location",
+          "Grants a 3.5/3.25/3-second 300-radius flying vision at the point-targeted location"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "REMOVED Sight Seer",
+          "Wellspring is now Io's innate ability",
+          "Consumable items and item abilities that restore health and mana over time affect Io twice as fast",
+          "Reduced Relocate cooldown from 100/90/80 to 90/80/70",
+          "Aghanim's Scepter upgrade: Increased Spirits movement speed slow from 15% to 25%"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased strength gain from 2.7 to 3",
+          "Increased base attack damage from 4‒10 to 21‒27",
+          "Tether no longer deals 15/25/35/45 contact damage per second",
+          "Now has a debuff that indicates the ability's remaining cooldown visible ally-only",
+          "Increased enemy movement speed slow from 10%/20%/30%/40% to 15%/30%/45%/60%",
+          "Increased enemy attack speed slow from 10/20/30/40 to 15/30/45/60",
+          "REWORKED Aghanim's Shard upgrade",
+          "Tether now deals 120 contact damage per second coming within its slow range",
+          "Applies a 0.5 * DamageDealt lifesteal-based self-heal"
+        ]
+      },
+      {
+        "version": "7.36b",
+        "date": "2024-06-05",
+        "changes": [
+          "Overcharge Medigun: Increased armor bonus from 3/6/9/12 to 4/7/10/13",
+          "Increased magic resistance bonus from 10%/15%/20%/25% to 12%/18%/24%/30%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "hero_name": "Lone Druid",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 18,
+      "strength_gain": 2.5,
+      "agility": 20,
+      "agility_gain": 2.8,
+      "intelligence": 13,
+      "intelligence_gain": 1.4,
+      "health": 516,
+      "mana": 231,
+      "armor": 3.33,
+      "magic_resist": 26.3,
+      "damage": [38, 42],
+      "damage_avg": 40,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.6,
+      "animation": "0.33 + 0.53",
+      "move_speed": 325,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Bear With Me",
+        "effects": "Spirit Link's Shared Armor is increased and Lone Druid's attacks heal his Spirit Bear. +25% Shared Armor"
+      },
+      "facet_2": {
+        "name": "Bear Necessities",
+        "effects": "Applies an item attributes bonus factor for all wielded items, with a reduced number of available items slots as a trade-off. -3 Inventory Slots, +3 Backpack Slots"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Lone Druid severs the link to his Spirit Bear, and connects to the target allied hero, sharing the Spirit Link bonuses with them",
+          "Increases armor sharing and attack speed bonus",
+          "Damage done by the ally heals Lone Druid, as well as the other way around",
+          "The Spirit Bear is feared for the duration of the transformation, unless it has its own Aghanim's Scepter"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants bonus movement speed and bonus attack speed to allied units within the radius",
+          "Applies a basic dispel to both Lone Druid and the Spirit Bear upon cast",
+          "Removes the simultaneous cast restriction while disabled",
+          "Grants the Fetch ability to Spirit Bear"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+45 Spirit Link Attack Speed", "-50s True Form Cooldown"],
+        "level_20": ["+30 Entangling Claws Damage", "+150 Savage Roar Radius"],
+        "level_15": ["+5 Spirit Bear Armor", "-7s Savage Roar Cooldown"],
+        "level_10": ["+30 Spirit Bear Move Speed", "+200 Health"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Gift Bearer",
+          "type": "passive",
+          "description": "Grants the Spirit Bear a functional and cooldown-independent copy of Sylla's neutral item",
+          "values": {},
+          "details": "Grants the Spirit Bear an independent and functional neutral item copy of Lone Druid's"
+        },
+        {
+          "name": "Bear Necessities",
+          "type": "passive",
+          "description": "Applies an item attributes bonus factor for all wielded items, with a reduced number of available items slots as a trade-off",
+          "values": {
+            "item_slots": 3,
+            "backpack_slots": 6,
+            "item_stats_bonus_factor": "1.45/1.55/1.65/1.75"
+          },
+          "details": "This ability levels up with True Form"
+        },
+        {
+          "name": "Universal Unit",
+          "type": "passive",
+          "description": "The Spirit Bear is a Universal Creep-Hero unit without base attributes. However, it cannot gain experience",
+          "values": {
+            "main_attack_damage_per_attribute": 0.45,
+            "health_bonus_per_hero_level": 90,
+            "attack_damage_bonus_per_hero_level": 5
+          },
+          "details": "This ability levels up with Lone Druid"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Summon Spirit Bear",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self / Spirit Bear",
+        "damage": "Spell / Pure / Instant Kill",
+        "cooldown": "150/140/130/120",
+        "mana_cost": 75,
+        "cast_range": "",
+        "cast_animation": "0.5 + 0.63",
+        "cast_radius": "",
+        "details": "Summons a powerful Spirit Bear companion that can wield and utilize items",
+        "description": "Summons a powerful Spirit Bear companion that can wield and utilize items",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Health: 1100/1400/1700/2000",
+          "Health Regen: 5/6/7/8",
+          "Base Attack Time: 1.75/1.65/1.55/1.45",
+          "Armor: 0/2/4/6",
+          "Move Speed: 300/330/360/390",
+          "Attack Proximity Radius: 1100",
+          "Max Health as Damage: 20%",
+          "Downtime: 3"
+        ],
+        "interaction_notes": [
+          "Sylla suffers a portion of max health as backlash damage if the Spirit Bear dies",
+          "Disarms the Spirit Bear if it is too far apart from Sylla",
+          "Player-based damage instance puts the ability on a fixed downtime"
+        ]
+      },
+      "ability_2": {
+        "name": "Spirit Link",
+        "key": "W",
+        "type": "passive",
+        "affects": "Self / Allied Heroes",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "40",
+        "mana_cost": 50,
+        "cast_range": "1200",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Links Lone Druid and the Spirit Bear, sharing a percentage of their armor with each other, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid",
+        "description": "Links Lone Druid and the Spirit Bear, sharing a percentage of their armor with each other, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid",
+        "facet_effects": {
+          "bear_with_me": "Shared Armor: 33%/37%/41%/45%"
+        },
+        "ability_behavior": ["passive", "target_unit"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Attack Speed Bonus: 20/35/50/65",
+          "Shared Lifesteal: 20%/35%/50%/65%",
+          "Shared Armor: 8%/12%/16%/20%",
+          "Ally Attack Speed Bonus: 55/70/85/100",
+          "Ally Shared Armor: 43%/47%/51%/55%",
+          "Buff Duration: 20",
+          "Bear Fear Duration: 20"
+        ],
+        "interaction_notes": [
+          "Uses lifesteal, but instead of healing Spirit Bear, it heals the Spirit Bear's owner instead",
+          "Armor shared between Lone Druid and the Spirit Bear is granted as bonus armor"
+        ]
+      },
+      "ability_3": {
+        "name": "Savage Roar",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Allied Units",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "38/32/26/20",
+        "mana_cost": 50,
+        "cast_range": "",
+        "cast_animation": "0.1 + 0.57",
+        "cast_radius": "350",
+        "details": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain",
+        "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Enemy Radius: 350",
+          "Fear Move Speed Bonus: 20%",
+          "Debuff Duration: 0.8/1.2/1.6/2",
+          "Ally Radius: 700",
+          "Move Speed Bonus: 15%",
+          "Attack Speed Bonus: 40",
+          "Ally Duration: 5",
+          "Downtime: Cooldown"
+        ],
+        "interaction_notes": [
+          "This ability is cast by Lone Druid and the Spirit Bear simultaneously",
+          "Does not affect non-player-controlled units",
+          "The Spirit Bear requires its owner to have Savage Roar for this ability to be unlocked"
+        ]
+      },
+      "ability_4": {
+        "name": "True Form",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "100",
+        "mana_cost": 200,
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Morphs into a raging bear with melee properties. Grants self bonus health and bonus armor, with improved versions of Entangling Claws and Demolish",
+        "description": "Morphs into a raging bear with melee properties. Grants self bonus health and bonus armor, with improved versions of Entangling Claws and Demolish",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Transformation Time: 1.933",
+          "Armor Bonus: 8/10/12",
+          "Health Bonus: 500/1000/1500",
+          "Attack Range Loss: 325",
+          "Duration: 40",
+          "Cooldown on Death: 0"
+        ],
+        "interaction_notes": [
+          "The transformation persist death",
+          "While transforming, Lone Druid cannot act and it cannot be interrupted",
+          "Turns Lone Druid into a melee unit with 225 attack range",
+          "Grants Demolish and Entangling Claws abilities"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Gem of True Sight's True Sight now works when wielded by the Spirit Bear"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Lone Druid no longer is a Universal hero and has Agility as the primary attribute",
+          "Rescaled strength gain from 20 + 1.8 to 18 + 2.5",
+          "Increased agility gain from 2 to 2.8",
+          "Reduced intelligence gain from 2 to 1.4",
+          "Increased base attack damage from 1‒5 to 18‒22",
+          "REWORKED Gift Bearer - OLD Can reroll the Neutral Item list once per tier - NEW Grants the Spirit Bear an independent and functional neutral item copy of Lone Druid's",
+          "Increased Bear Necessities items stats bonus factor from 1.3/1.45/1.6/1.75 to 1.45/1.55/1.65/1.75",
+          "REMOVED the Unbearable facet",
+          "Spirit Link now follows lifesteal mechanic"
+        ]
+      },
+      {
+        "version": "7.37d",
+        "date": "2024-10-01",
+        "changes": [
+          "Bear Necessities no longer applies to neutral items' stats",
+          "Bear Necessities reduced item stats bonus factor from 1.5/1.6/1.7/1.8 to 1.3/1.45/1.6/1.75",
+          "Talents: LVL 15 -7s Savage Roar cooldown reduced to -5s"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

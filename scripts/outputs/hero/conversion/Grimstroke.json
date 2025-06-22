@@ -1,0 +1,293 @@
+{
+  "hero_name": "Grimstroke",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2.4,
+      "agility": 18,
+      "agility_gain": 1.9,
+      "intelligence": 25,
+      "intelligence_gain": 3.8,
+      "health": 582,
+      "mana": 375,
+      "armor": 3,
+      "magic_resist": 27.5,
+      "damage": [46, 50],
+      "damage_avg": 48,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 600,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.85",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Inkstigate",
+        "effects": "Increases Ink Swell's duration by +1s. Grants the Ink Explosion sub-ability to trigger an existing Ink Swell anytime as the ink master wishes."
+      },
+      "facet_2": {
+        "name": "Fine Art",
+        "effects": "Adds a vector-targeting functionality to Stroke of Fate that causes the launched projectile to curve with increased damage increment per enemy hit. +0/10/20/30 Damage Increment per Hit."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Dark Portrait ability", "Masterfully creates an illusion of the affected enemy hero", "The ink illusion is a strong illusion, has bonus movement speed, deals additional damage based on the affected enemy's main attack damage and receives additional incoming damage"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Applies a basic dispel on the target upon cast", "Ink Swell tendrils now heal the affected allied unit based on the damage dealt, and spell lifesteals from the ink explosion damage", "Increases damage"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+70% Stroke of Fate Speed/Travel Range", "+150 Ink Swell Radius"],
+        "level_20": ["+3 Phantom Hit Count", "+80% Stroke of Fate Damage"],
+        "level_15": ["+12% Ink Swell Speed", "+25% Soulbind Spell Damage Amp"],
+        "level_10": ["-4s Ink Swell Cooldown", "+65 Phantom's Embrace Damage per Second"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Ink Trail",
+          "type": "passive",
+          "description": "Successful attacks apply a debuff that causes enemy heroes to leave a trail of ink behind, directly exposing them.",
+          "values": {
+            "expose_duration": 4
+          },
+          "details": "Stroke of Fate also applies the trail to affected enemy heroes. Exposes the affected enemy unit's hero model upon successful attack or Stroke of Fate projectile impact."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Grimstroke's hero model has hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Grimstroke is considered a ground unit, despite its hero model showing otherwise. Dark Portrait is innately bound to Grimstroke's hero model with Aghanim's Scepter."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Stroke of Fate",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "11/9/7/5",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "1400",
+        "cast_animation": "0.6 + 0.5",
+        "cast_radius": "120-160",
+        "details": "Paints a path of ink with his brush, damaging and slowing enemies. The damage is increased with each enemy the ink hits.",
+        "description": "The corruptive force of Grimstroke's ink, drawn from the reservoir of his fallen people, consumes any enemy caught in its path.",
+        "facet_effects": {
+          "fine_art": "Adds vector-targeting functionality with increased damage increment per enemy hit: 20/40/60/80. Vector Curve Radius: 140."
+        },
+        "ability_behavior": ["point_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Travel Distance: 1400",
+          "Base Damage: 100/160/220/280",
+          "Damage Increment per Hit: 20/30/40/50",
+          "Move Speed Slow: 50%/60%/70%/80%",
+          "Slow Duration: 1.75"
+        ],
+        "interaction_notes": [
+          "Stroke of Fate also applies the Ink Trail to affected enemy heroes, exposing them in the process"
+        ]
+      },
+      "ability_2": {
+        "name": "Phantom's Embrace",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemies / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "36/30/24/18",
+        "mana_cost": "80/100/120/140",
+        "cast_range": "900",
+        "cast_animation": "0 + 0",
+        "cast_radius": "130",
+        "details": "Summons a phantom that moves quickly towards the unit-targeted enemy. Once the phantom latches on the unit, she deals damage over time while silencing it.",
+        "description": "Grimstroke holds no sorrow for the downfall of his people. Only for Yaovhi, she who was most dear to him, does he feel even a semblance of longing.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage per Second: 10/20/30/40",
+          "Attacks to Destroy: 2/2/3/3",
+          "Max Silence Duration: 5",
+          "Latch Duration: 5",
+          "Latch Distance: 130",
+          "Damage: 120/200/280/360",
+          "Creep Attacks to Destroy: 6/6/9/9"
+        ],
+        "interaction_notes": [
+          "If she survives the full latch duration she rends her victim for heavy damage and refreshes this ability's cooldown",
+          "Creeps' attacks are less effective on Yaovhi"
+        ]
+      },
+      "ability_3": {
+        "name": "Ink Swell",
+        "key": "E",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "27/24/21/18",
+        "mana_cost": "120/130/140/150",
+        "cast_range": "500/600/700/800",
+        "cast_animation": "0.15 + 0.73",
+        "cast_radius": "375",
+        "details": "Shrouds an allied unit in ink, increasing its movement speed. Enemy units in range of the affected ally are damaged with inky tendrils over time.",
+        "description": "Now that the rise of the ink tide no longer threatens to overwhelm Grimstroke, its tendrils of power are never far from his hand.",
+        "facet_effects": {
+          "inkstigate": "Increases Ink Swell's duration to 4 seconds. Grants Ink Explosion sub-ability."
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Effect Radius: 375",
+          "Move Speed Bonus: 20%",
+          "Radius Damage per Second: 30/45/60/75",
+          "Duration: 3",
+          "Max Power Duration: 2.5",
+          "Max Explosion Damage: 90/180/270/360",
+          "Max Stun Duration: 1.3/1.8/2.3/2.8"
+        ],
+        "interaction_notes": [
+          "After swelling up for a period of time, the ink explodes, applying damage and stun within the radius proportion to the duration the tendril was near any enemy hero",
+          "Has a different cast backswing when self-casting the ability"
+        ]
+      },
+      "ability_4": {
+        "name": "Dark Portrait",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "35",
+        "mana_cost": "200",
+        "cast_range": "1200",
+        "cast_animation": "0 + 0.54",
+        "cast_radius": "N/A",
+        "details": "Masterfully creates an illusion of the affected enemy hero.",
+        "description": "No dark creation is beyond the skill of the master's hand.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Number of Illusions: 1",
+          "Damage Dealt: 150%",
+          "Damage Taken: 350%",
+          "Move Speed Bonus: 30%",
+          "Duration: 25",
+          "Magic Resist: 95%"
+        ],
+        "interaction_notes": [
+          "The ink illusion is a strong illusion, has bonus movement speed, deals additional damage based on the affected enemy's main attack damage and receives additional incoming damage",
+          "This illusion is debuff immune and has high magic resistance"
+        ]
+      },
+      "ability_5": {
+        "name": "Soulbind",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell",
+        "damage_types": ["Source"],
+        "cooldown": "70/65/60",
+        "mana_cost": "150/200/250",
+        "cast_range": "700/800/900",
+        "cast_animation": "0.15 + 0.5",
+        "cast_radius": "600",
+        "details": "Bound an enemy hero to its nearest allied hero within the radius, preventing both affected enemy units from moving away from each other. Any unit-targeted ability that either bound hero received is instantly cast on the other.",
+        "description": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals...",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search Radius: 600",
+          "Max Bound Units: 2",
+          "Break Distance: 700",
+          "Duration: 6/7/8",
+          "Spell Damage Amp: 0% (25% with talent)"
+        ],
+        "interaction_notes": [
+          "If the bonds are broken before the debuff duration expires, the debuff remains on the primary target, and binds itself to the next nearest allied hero"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Stroke of Fate now has vector-targeting functionality by default",
+          "Has a 140-vector curve radius",
+          "Now considers illusions as creeps",
+          "Increased damage increment per enemy hero hit from 20/30/40/50 to 20/40/60/80",
+          "Reduced damage increment per enemy creep hit from 20/30/40/50 to 10/20/30/40",
+          "Fine Art: No longer has a 0/10/20/30 damage increment bonus per enemy unit hit",
+          "Fine Art: Now launches a mirrored curved stroke from Grimstroke's right hand",
+          "Soulbind debuff applied to the secondary target now ends at the same time as the primary unit-targeted enemy"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Stroke of Fate Fine Art now displays the projectile trajectory upon vector-targeted",
+          "Aghanim's Shard upgrade: Ink Swell no longer applies a strong dispel upon expire",
+          "Aghanim's Shard upgrade: Now applies a basic dispel upon cast",
+          "Aghanim's Shard upgrade: Increased damage factor from 1.3 to 1.4",
+          "Aghanim's Shard upgrade: Increased spell lifesteal factor from 0.3 to 0.4"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "CHANGED Stroke of Fate ability operations",
+          "Updated and improved Fine Art behavior when casting at maximum cast range"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

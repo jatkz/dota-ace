@@ -1,0 +1,272 @@
+{
+  "hero_name": "Shadow Fiend",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 19,
+      "strength_gain": 2.7,
+      "agility": 25,
+      "agility_gain": 3.5,
+      "intelligence": 18,
+      "intelligence_gain": 2.2,
+      "health": 538,
+      "mana": 291,
+      "armor": 5.17,
+      "magic_resist": 26.8,
+      "damage": [41, 47],
+      "damage_avg": 44,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 525,
+      "attack_speed": 100,
+      "bat": 1.6,
+      "animation": "0.5 + 0.54",
+      "move_speed": 305,
+      "turn_rate": 0.9,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Lasting Presence",
+        "effects": "Increases the max Necromastery stack count per enemy hero kill until Shadow Fiend's death. Presence of the Dark Lord applies an armor reduction debuff per enemy hero killed within the aura radius."
+      },
+      "facet_2": {
+        "name": "Shadowmire",
+        "effects": "Shadowraze applies a stacking movement speed slow on affected enemy units."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Hero kills are more effective and grants a greater stack",
+          "The souls returns back to Shadow Fiend once expanding to its max travel radius, dealing lesser damage and heals its master in the process",
+          "Reduces cooldown"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Reduces all Shadowrazes' cooldown by a flat amount per hero hit"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Shadowraze Instant Attacks", "+30% Feast of Souls Cast Animation Speed"],
+        "level_20": ["+0.2s Requiem of Souls Debuff Duration per Line", "+2 Necromastery Attack Damage per Stack"],
+        "level_15": ["+120 Shadowraze Base Damage", "+2 Presence of the Dark Lord Armor Reduction"],
+        "level_10": ["+30 Feast of Souls Attack Speed", "+30 Shadowraze Stack Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Necromastery",
+          "type": "passive",
+          "description": "Grants bonus attack damage per stack from unit kills, and loses a portion of stacks upon death.",
+          "values": {
+            "max_stacks": "20 (25 with Scepter)",
+            "stacks_lost_on_death_factor": 0.7,
+            "stack_gain_per_kill": 1,
+            "attack_damage_bonus_per_stack": "1/2/3/4 (3/4/5/6 with Scepter)",
+            "stack_gain_per_hero_kill": 3
+          },
+          "details": "This ability levels up with Requiem of Souls. Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Nevermore's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to activate."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Shadowraze",
+        "key": "Q/W/E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical/Instant Attack/Physical",
+        "damage_types": ["magical", "physical"],
+        "cooldown": "9",
+        "mana_cost": 75,
+        "cast_range": "200/450/700",
+        "cast_animation": "0.55 + 0",
+        "cast_radius": "250",
+        "details": "Shadow Fiend razes the ground at different distances, dealing damage to enemy units in the area. Adds a stacking damage amplifier on targets.",
+        "description": "Nevermore's trademark for harvesting souls.",
+        "facet_effects": {
+          "shadowmire": "Applies a stacking movement speed slow on affected enemy units (6%/8%/10%/12% per stack)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Has three variants: Near (200 distance), Medium (450 distance), Far (700 distance)",
+          "Effect radius: 250",
+          "Base damage: 90/160/230/300",
+          "Damage increase per stack: 35/50/65/80",
+          "Stack duration: 7"
+        ],
+        "interaction_notes": [
+          "Leveling any of the three Shadowraze abilities levels the others as well",
+          "Shard reduces cooldown by 2 seconds per hero hit"
+        ]
+      },
+      "ability_2": {
+        "name": "Feast of Souls",
+        "key": "D",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "21",
+        "mana_cost": "60/65/70/75",
+        "cast_range": "Self",
+        "cast_animation": "0 + 0.2",
+        "cast_radius": "Self",
+        "details": "Grants self bonus attack speed and movement speed for an amount of time. Requires 5 Necromastery stacks to cast.",
+        "description": "For Nevermore, there's as much delight in the harvest as there is in the feast.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Move speed bonus: 5%/7%/9%/11%",
+          "Attack speed bonus: 40/55/70/85",
+          "Duration: 8",
+          "Stack cost: 5",
+          "Stack limit increase: 5"
+        ],
+        "interaction_notes": [
+          "Increases Necromastery stack limit by 5 for the buff duration",
+          "Consumes 5 stacks at the end of the process"
+        ]
+      },
+      "ability_3": {
+        "name": "Presence of the Dark Lord",
+        "key": "F",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "None",
+        "mana_cost": "None",
+        "cast_range": "1200",
+        "cast_animation": "None",
+        "cast_radius": "1200",
+        "details": "The presence itself reduces the armor of enemy units within the radius.",
+        "description": "Even being near Nevermore eats away at one's soul.",
+        "facet_effects": {
+          "lasting_presence": "Applies an armor reduction debuff per enemy hero killed within the aura radius (2 armor reduction per stack, 60 second duration)"
+        },
+        "ability_behavior": ["passive", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Aura radius: 1200",
+          "Armor reduction: 4/5/6/7",
+          "Aura linger duration: 0.5"
+        ],
+        "interaction_notes": [
+          "Affects couriers and buildings",
+          "Does not affect units without vision over Shadow Fiend"
+        ]
+      },
+      "ability_4": {
+        "name": "Requiem of Souls",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Magical",
+        "damage_types": ["magical"],
+        "cooldown": "120/110/100",
+        "mana_cost": "150/175/200",
+        "cast_range": "1000",
+        "cast_animation": "1.67 + 0.9",
+        "cast_radius": "1000",
+        "details": "Gathers captured souls to release them as lines of demonic energy. Enemy units damaged are feared and have movement speed and magic resistance reduced.",
+        "description": "The captured souls of those past slain are released to ravage their former allies.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max travel radius: 1000",
+          "Lines starting width: 125",
+          "Lines end width: 300",
+          "Damage per line: 80/120/160",
+          "Move speed slow: 20%/25%/30%",
+          "Magic resist reduction: 5%/10%/15%",
+          "Debuff duration per line: 0.6",
+          "Max debuff duration: 2.15",
+          "Stack to line factor: 1",
+          "Proc chance on death: 100%"
+        ],
+        "interaction_notes": [
+          "Passively casts upon Shadow Fiend's death regardless of cooldown",
+          "Scepter upgrade makes souls return, dealing lesser damage and healing Shadow Fiend",
+          "Number of lines based on current Necromastery stacks"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Shadowraze Shadowmire: No longer applies 5/6/7/8 attack speed slow per stack",
+          "Shadowraze Shadowmire: Rescaled movement speed slow per stack from 5%/6%/7%/8% to 3%/6%/9%/12%",
+          "Feast of Souls: Reduced mana cost from 75 to 60",
+          "Feast of Souls: Rescaled attack speed bonus from 30/50/70/90 to 40/55/70/85",
+          "Feast of Souls: Rescaled duration from 8 on each level to 7.5/8/8.5/9"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Reduced Necromastery attack damage bonus per stack from 1/3/4/5 to 1/2/3/4",
+          "Presence of the Dark Lord Lasting Presence: The buff is now death dispellable on Shadow Fiend",
+          "Presence of the Dark Lord Lasting Presence: Reduced stack duration from 70 to 60",
+          "Feast of Souls: Now increases Necromastery max stack limit by 5 for the buff duration",
+          "Feast of Souls: Rescaled attack speed bonus from 40/50/60/70 to 30/50/70/90"
+        ]
+      },
+      {
+        "version": "7.37",
+        "date": "2024-07-31",
+        "changes": [
+          "MOVED Necromastery hero kill max stack increase component to Lasting Presence",
+          "Shadowraze: Reduced stack duration from 8 to 7",
+          "Shadowraze: Increased mana cost from 75 to 80",
+          "Requiem of Souls: Reduced lines end width from 350 to 300",
+          "Requiem of Souls: Reduced debuff duration per line from 0.7 to 0.6",
+          "Talents: LVL 20 +0.25s/+0.95s Requiem of Souls debuff duration per line/max debuff duration reduced to +0.2s/+0.45s"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "hero_name": "Phantom Lancer",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 21,
+      "strength_gain": 2.2,
+      "agility": 26,
+      "agility_gain": 2.8,
+      "intelligence": 21,
+      "intelligence_gain": 1.8,
+      "health": 582,
+      "mana": 327,
+      "armor": 4.33,
+      "magic_resist": 27.1,
+      "damage": [52, 62],
+      "damage_avg": 57,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 225,
+      "attack_speed": 110,
+      "bat": 1.7,
+      "animation": "0.5 + 0.5",
+      "move_speed": 285,
+      "turn_rate": 0.6,
+      "collision_size": 18,
+      "bound_radius": 8,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Pusher, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Divergence",
+        "effects": "Juxtapose spawns uncontrollable illusions on random nearby units. Increases illusion damage dealt by +2%."
+      },
+      "facet_2": {
+        "name": "Lancelot",
+        "effects": "The spell projectile of all Spirit Lance-based illusions sourced to Phantom Lancer now deals a portion of spell damage corresponding to its ability level. ×0.25 Illusion Spell Damage Factor."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Increases Phantom Rush max proc distance by 625", "Creates Juxtapose-based illusions whenever Phantom Rush procs while Phantom Lancer rushes through enemy units"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Renders Phantom Lancer invisible for a duration while creating an illusion to confuse enemies", "Grants self bonus movement speed while active"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+20% Illusory Armaments Bonus Damage", "-4s Doppelganger Cooldown"],
+        "level_20": ["+6% Juxtapose Damage", "+15% Spirit Lance Illusion Damage"],
+        "level_15": ["-1s Spirit Lance Cooldown", "+2.5s Phantom Rush Duration"],
+        "level_10": ["+10 Phantom Rush Agility", "+1.25s Spirit Lance Slow Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Illusory Armaments",
+          "type": "passive",
+          "description": "Items that grant bonus attack damage to Azwraith now grant base attack damage instead.",
+          "values": {
+            "attack_damage_bonus_to_base_damage_factor": 1,
+            "illusion_factor": 0.7
+          },
+          "details": "Azwraith only utilizes the base attack damage mechanic, and does not utilize bonus attack damage at all."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Azwraith's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden innate abilities that require channeling to activate."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Spirit Lance",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "10/9/8/7",
+        "mana_cost": 120,
+        "cast_range": "600/650/700/750",
+        "cast_animation": "0.3 + 0.73",
+        "cast_radius": "",
+        "details": "Sends a magical spirit lance to a target enemy unit that damages and slows its movement speed.",
+        "description": "Sends a magical spirit lance to a target enemy unit that damages and slows its movement speed. Summoning an illusory fragment with a different hue to attack the unit per lance upon impact.",
+        "facet_effects": {
+          "lancelot": "The spell projectile of all Spirit Lance-based illusions sourced to Phantom Lancer now deals a portion of spell damage corresponding to its ability level."
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Creates a Spirit Lance-based illusion upon a successful projectile impact", "Reapplying the debuff refreshes its duration"],
+        "interaction_notes": ["Nullifies upon projectile impact with spell block", "Procs Spell Reflection sources upon projectile impact"]
+      },
+      "ability_2": {
+        "name": "Doppelganger",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Illusions",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "22/18/14/10",
+        "mana_cost": 50,
+        "cast_range": "575",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "",
+        "details": "Briefly vanishes from the battlefield. After a delay, Azwraith and any of his nearby illusions reappear at a random position within the targeted location, along with two additional doppelgangers with different properties.",
+        "description": "Briefly vanishes from the battlefield. After a delay, Azwraith and any of his nearby illusions reappear at a random position within the targeted location, along with two additional doppelgangers with different properties. Extends all current illusions' duration upon reappearing.",
+        "facet_effects": {},
+        "ability_behavior": ["area"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Disjoints incoming projectiles upon cast", "Applies basic dispel", "Cannot be interrupted upon cast except upon death"],
+        "interaction_notes": ["Creates two illusions with different properties", "All affected units reappear randomly within a +-shaped formation"]
+      },
+      "ability_3": {
+        "name": "Phantom Rush",
+        "key": "E",
+        "type": "toggle",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "13/10/7/4",
+        "mana_cost": 0,
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "When activated, the Lancer quickly charges into range. Additionally grants temporary agility boost when targeting an enemy unit for an attack.",
+        "description": "When activated, the Lancer quickly charges into range. Additionally grants temporary agility boost when targeting an enemy unit for an attack.",
+        "facet_effects": {},
+        "ability_behavior": ["toggle"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Procs on attack command or unit-targeted enemy", "Grants haste and phase movement upon proc", "Illusions have Phantom Rush always toggled on"],
+        "interaction_notes": ["Root sources temporarily hold the buff-affected unit in place", "Various disable sources dispel the buff"]
+      },
+      "ability_4": {
+        "name": "Juxtapose",
+        "key": "R",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "",
+        "mana_cost": 0,
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "",
+        "details": "Has a chance to create an illusion of himself per attack.",
+        "description": "Has a chance to create an illusion of himself per attack. Illusions also have a chance to fracture further. These images last for a shorter duration.",
+        "facet_effects": {
+          "divergence": "Juxtapose spawns uncontrollable illusions on random nearby units. Increases illusion damage dealt."
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Juxtapose procs use pseudo-random distribution", "Procs upon successful attack including instant attack sources", "Creates 1 illusion per proc"],
+        "interaction_notes": ["Shard upgrade adds active component with invisibility and illusion creation", "Vengeance Illusion uses hero proc chance instead of illusion proc chance"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "REWORKED Aghanim's Scepter upgrade",
+          "OLD Spirit Lance: Now bounces one on enemy units within 750 radius upon projectile impact, prioritizing heroes. Increases Spirit Lance-based illusion damage dealt bonus by 30%.",
+          "NEW Phantom Rush: Increases max proc distance by 625. Creates Juxtapose-based illusions whenever Phantom Rush procs while Phantom Lancer rushes through enemy units.",
+          "Talents: LVL 20 +300 Phantom Rush range → +15% Spirit Lance damage."
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Increased Juxtapose illusion proc chance from 8% to 9%."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased base strength from 19 to 21.",
+          "Spirit Lance: ADDED the Lancelot facet. Upon casting the ability, Spirit Lance-based illusion now deals a 0.25 spell damage factor on the unit-targeted enemy.",
+          "REMOVED the Doppelganger Convergence facet.",
+          "Reduced Juxtapose illusion damage taken from 625% to 600%.",
+          "Aghanim's Scepter upgrade: Spirit Lance: Reduced number of bounces from 2 to 1. Increased illusion damage dealt bonus from 20% to 30%.",
+          "Talents: LVL 10 +35 Spirit Lance damage → +1.25 Spirit Lance slow duration. LVL 25 +15% Illusory Armaments damage factor bonus increased to 20%."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

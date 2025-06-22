@@ -1,0 +1,214 @@
+{
+  "hero_name": "Ursa",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 25,
+      "strength_gain": 2.4,
+      "agility": 18,
+      "agility_gain": 2.8,
+      "intelligence": 16,
+      "intelligence_gain": 1.5,
+      "health": 670,
+      "mana": 267,
+      "armor": 4,
+      "magic_resist": 26.6,
+      "damage": [42, 46],
+      "damage_avg": 44,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 310,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Grudge Bearer",
+        "effects": "Grants bonus attack damage based on the total incoming damage reduced value while Enrage is active."
+      },
+      "facet_2": {
+        "name": "Bear Down",
+        "effects": "Offensive debuffs applied and sourced from Ursa last longer."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Enables Ursa to Enrage at his will, even while being disabled", "Reduces cooldown"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Enrages the ursine for a short duration upon an Earthshock cast"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+3 Overpower Attacks", "2 Earthshock Charges"],
+        "level_20": ["Earthshock Applies 2 Fury Swipes Stacks", "+400 Earthshock Radius"],
+        "level_15": ["+25% Enrage Status Resist", "+5 Fury Swipes Damage"],
+        "level_10": ["+1.75 Mana Regen", "+12s Fury Swipes Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Maul",
+          "type": "passive",
+          "description": "Grants bonus attack damage based on Ursa's current health.",
+          "values": {
+            "current_health_to_attack_damage_bonus": "1.2%/1.3%/1.4%/1.5%"
+          },
+          "details": "This ability levels up with Enrage. Grants flat bonus attack damage based on Ursa's current health."
+        },
+        {
+          "name": "Bear Down",
+          "type": "passive",
+          "description": "Offensive debuffs applied and sourced from Ursa last longer.",
+          "values": {
+            "debuff_duration_factor": "1.14/1.16/1.18/1.2"
+          },
+          "details": "This ability levels up with Enrage. Only available with Bear Down facet."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Earthshock",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical / Physical",
+        "cooldown": "15/13/11/9",
+        "mana_cost": 95,
+        "cast_range": "385",
+        "cast_animation": "0 + 0",
+        "cast_radius": "385",
+        "details": "Leaps forward and slams the earth, causing a powerful shock damaging and slowing all enemy units within the radius.",
+        "description": "Leaps forward 250 distance and deals 75/125/175/225 damage with 22%/28%/34%/40% move speed slow for 4 seconds.",
+        "facet_effects": {
+          "talent_effects": "Applies 2 Fury Swipes stacks with level 20 talent, +400 radius with level 20 talent, 2 charges with level 25 talent"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Interrupts channeling abilities upon cast", "Leaps 250 distance forward and 83 distance upward", "Can leap over units and impassable terrain"],
+        "interaction_notes": ["Root sources disable leap component", "Requires Fury Swipes for stack application", "Requires Enrage for shard effect"]
+      },
+      "ability_2": {
+        "name": "Overpower",
+        "key": "W",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "cooldown": "12/11/10/9",
+        "mana_cost": "45/50/55/60",
+        "cast_range": "Self",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "Self",
+        "details": "Using his skill in combat, Ursa gains increased attack speed and slow resistance for a number of subsequent attacks.",
+        "description": "Grants 400 attack speed bonus and 25% slow resistance for 3/4/5/6 attacks over 20 seconds duration.",
+        "facet_effects": {
+          "talent_effects": "+3 attacks with level 25 talent"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Reduces attack buff charge upon attack point", "Reapplying refreshes duration and charges"],
+        "interaction_notes": ["Stacks multiplicatively with other slow resistance sources"]
+      },
+      "ability_3": {
+        "name": "Fury Swipes",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Physical",
+        "cooldown": "None",
+        "mana_cost": "None",
+        "cast_range": "Passive",
+        "cast_animation": "Passive",
+        "cast_radius": "Passive",
+        "details": "Consecutive attacks to the same enemy deals more damage. If the same target is not attacked after a period of time, the bonus damage is lost.",
+        "description": "Grants 13/21/29/37 attack damage bonus per stack with 8/12/16/20 debuff duration. Less effective on Roshan (8 second duration).",
+        "facet_effects": {
+          "talent_effects": "+5 damage per stack with level 15 talent, +12s duration with level 10 talent"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Stacks have no maximum limit", "Each attack reapplies or increases stack value", "Bonus damage applied at first attack"],
+        "interaction_notes": ["Does not work on allies, buildings, or wards", "Interacts with cleave and lifesteal", "Break disables stack gain but doesn't remove existing stacks"]
+      },
+      "ability_4": {
+        "name": "Enrage",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "None",
+        "cooldown": "70/50/30",
+        "mana_cost": "None",
+        "cast_range": "Self",
+        "cast_animation": "0 + 0",
+        "cast_radius": "Self",
+        "details": "Goes into a frenzy, removing all existing debuffs while providing damage reduction and status resistance.",
+        "description": "Provides 80% damage reduction and 50% status resistance for 4/4.5/5 seconds. Applies strong dispel on cast.",
+        "facet_effects": {
+          "grudge_bearer": "Grants bonus attack damage based on damage reduced (0.05 factor, 5 second linger)",
+          "talent_effects": "+25% status resistance with level 15 talent"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Interrupts channeling upon cast", "Increases model size by 20%", "Recasting adds to remaining duration"],
+        "interaction_notes": ["Scepter allows casting while disabled (except hex, silence, cannot act)", "Stacks multiplicatively with other status resistance", "Strong dispel applied on cast"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Rescaled Overpower slow resistance bonus from 10%/20%/30%/40% to 25% on each level",
+          "Reduced Fury Swipes Roshan debuff duration from 10 to 8"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Talents: LVL 15 +20% Enrage status resistance bonus increased to +25%"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Talents: LVL 10 +15s Fury Swipes stack duration reduced to +12s",
+          "Talents: LVL 15 +7 Fury Swipes damage per stack reduced to +5"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

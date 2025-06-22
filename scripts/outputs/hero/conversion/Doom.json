@@ -1,0 +1,222 @@
+{
+  "hero_name": "Doom",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 24,
+      "strength_gain": 3.8,
+      "agility": 15,
+      "agility_gain": 1.5,
+      "intelligence": 15,
+      "intelligence_gain": 1.7,
+      "health": 648,
+      "mana": 255,
+      "armor": 4.5,
+      "magic_resist": 26.5,
+      "damage": [56, 66],
+      "damage_avg": 61,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 200,
+      "attack_speed": 100,
+      "bat": 1.9,
+      "animation": "0.5 + 0.7",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Disabler, Initiator, Durable, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Gluttony",
+        "effects": "Devour is now a charged-based ability with a replenish time corresponding to the ability's current cooldown. Has a greater creep digest duration. Increases the level of certain devoured creeps' abilities. +10s Digest Duration"
+      },
+      "facet_2": {
+        "name": "Devil's Bargain",
+        "effects": "All items bought can be refunded at a higher price, with a cost — Lucifer now has a higher buyback cost."
+      },
+      "facet_3": {
+        "name": "Impending Doom",
+        "effects": "Increases the Doom duration per in-game interval."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Allied units within the radius around the Doomed target also suffer the effects of Doom", "Lucifer can now self-cast to affect enemy units around himself"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants Doom and his player-controlled units a lifesteal-based heal while active"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Doom Applies Break", "Doom Applies Mute"],
+        "level_20": ["+2.5% Infernal Blade Max Health to Damage", "-10s Scorched Earth Cooldown"],
+        "level_15": ["Can Devour Ancient Creeps", "+5% Scorched Earth Move Speed"],
+        "level_10": ["+0.2 Infernal Blade Stun Duration", "+15% Devour Self Magic Resistance"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Lvl ? Pain",
+          "type": "passive",
+          "description": "Applies an outgoing attack damage amplification to heroes whose level is lower than Lucifer's current hero level.",
+          "values": {
+            "attack_damage_amp": "25%"
+          },
+          "details": "The bonus amplification is always applied when Lucifer is at max level."
+        },
+        {
+          "name": "Devil's Bargain",
+          "type": "passive",
+          "description": "All items bought can be refunded at a higher price, with a cost — Lucifer now has a higher buyback cost.",
+          "values": {
+            "set_items_sell_back_factor": 0.85,
+            "base_gold_cost": 200,
+            "networth_factor": 13,
+            "buyback_factor": 1.2
+          },
+          "details": "Lucifer must pay a greater fee to buy himself back to life."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Devour",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self",
+        "damage": "Instant Kill",
+        "damage_types": [],
+        "cooldown": "70",
+        "mana_cost": "40/50/60/70",
+        "cast_range": "300",
+        "cast_animation": "0.3 + 0.5",
+        "cast_radius": "",
+        "details": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed.",
+        "description": "Lucifer's appetite and greed are never sated.",
+        "facet_effects": {
+          "gluttony": "Devour is now a charged-based ability with 2 charges and 80s digest duration"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Max Creep Level: 4/5/6/6", "Gold Bonus: 40/80/120/160", "XP Factor: 1", "Digest Duration: 70", "Magic Resist Bonus: 15%"],
+        "interaction_notes": ["Cannot devour Ancient creeps without talent", "Cannot devour Couriers, Creep-heroes, Roshan, Tormentor, Ward-type units"]
+      },
+      "ability_2": {
+        "name": "Scorched Earth",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "41/39/37/35",
+        "mana_cost": "60/70/80/90",
+        "cast_range": "",
+        "cast_animation": "0 + 0.5",
+        "cast_radius": "600",
+        "details": "Carpets the nearby earth in flames which damage enemies, while also granting Doom increased movement speed.",
+        "description": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Damage per Second: 20/35/50/65", "Move Speed Bonus: 7%/8%/9%/10%", "Duration: 10/12/14/16", "Aura Linger Duration: 0.5"],
+        "interaction_notes": ["Shard grants lifesteal-based heal", "Multiple instances stack independently"]
+      },
+      "ability_3": {
+        "name": "Infernal Blade",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "13/10/7/4",
+        "mana_cost": "40",
+        "cast_range": "200",
+        "cast_animation": "0.5 + 0.7",
+        "cast_radius": "",
+        "details": "Applies a bash and burns for a base damage plus a percentage of the target's max health as damage per second.",
+        "description": "Lucifer shares the fire branding bestowed upon him at the time of his exile.",
+        "facet_effects": {},
+        "ability_behavior": ["autocast", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Base Damage per Second: 15/30/45/60", "Max Health as Damage per Second: 1%/2%/3%/4%", "Damage Duration: 4", "Bash Duration: 0.6"],
+        "interaction_notes": ["Cannot be cast on Roshan or Tormentor", "Active attack modifier", "Autocast off by default"]
+      },
+      "ability_4": {
+        "name": "Doom",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Pure",
+        "damage_types": ["Pure"],
+        "cooldown": "140/130/120",
+        "mana_cost": "150/200/250",
+        "cast_range": "400",
+        "cast_animation": "0.5 + 0.4",
+        "cast_radius": "",
+        "details": "Inflicts a curse that dispels an enemy hero, prevents them from casting spells or healing in any way, while taking damage over time.",
+        "description": "When a name is tolled from the bell of Vashundol, Doom is sure to follow.",
+        "facet_effects": {
+          "impending_doom": "Increases duration per in-game interval (399.6s intervals, +0.66s duration)"
+        },
+        "ability_behavior": ["unit_target", "aura"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Damage per Second: 25/45/65", "Duration: 12/14/16", "Aura Radius: 0 (350 with Scepter)"],
+        "interaction_notes": ["Cannot be cast on Ancient creeps", "Applies basic dispel", "Prevents healing", "Silences target", "Scepter allows self-cast and aura effect"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": ["Reduced base health regeneration from 1.25 to 0.66"]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Devil's Bargain set items sell-back factor from 0.9 to 0.85",
+          "Reduced Doom mana cost from 150/225/300 to 150/200/250",
+          "Aghanim's Scepter upgrade: Increased Doom effect radius from 300 to 350"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased Lvl ? Pain attack damage bonus from 15% to 25%",
+          "Devour Gluttony: Reduced charge restore time from 85 to 80, Reduced digest duration from 85 to 80",
+          "Rescaled Infernal Blade base damage per second 20/30/40/50 to 15/30/45/60",
+          "Doom: Reduced cast range from 500 to 400, Reduced damage per second from 30/50/70 to 25/45/65",
+          "Talents: LVL 10 +10 Scorched Earth damage per second → +0.2s Infernal Blade bash duration"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

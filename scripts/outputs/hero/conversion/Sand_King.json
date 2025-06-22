@@ -1,0 +1,268 @@
+{
+  "hero_name": "Sand King",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 22,
+      "strength_gain": 2.3,
+      "agility": 19,
+      "agility_gain": 2,
+      "intelligence": 17,
+      "intelligence_gain": 2,
+      "health": 604,
+      "mana": 279,
+      "armor": 4.17,
+      "magic_resist": 26.7,
+      "damage": [45, 55],
+      "damage_avg": 50.1,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 110,
+      "bat": 1.7,
+      "animation": "0.53 + 0.47",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Disabler, Support, Nuker, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Sandblast",
+        "effects": "Attacks within the Sand Storm radius now applies a 5-second 20%/30%/40%/50% blind. Successive attacks reapplies the debuff, and refreshes its duration."
+      },
+      "facet_2": {
+        "name": "Final Sting",
+        "effects": "Each enemy hero affected by Stinger within the proximity radius instantly emits a 0.5 * Σ Spell Damage Caustic Finale based on its current level."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Each Epicenter pulse now randomly summons multiple Stinger spines of its corresponding level, at random locations within its radius.",
+          "The spine radius is a portion of the current Epicenter radius, and can only affect the same enemy units once per pulse."
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Passively releases a lesser Epicenter pulse at a fixed duration.",
+          "Increases pulse damage."
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+45% Sand Storm Move Speed Slow", "+10 Epicenter Pulses"],
+        "level_20": ["+75 Base Epicenter Radius +7 Incremental Epicenter Radius", "-2s Burrowstrike Cooldown"],
+        "level_15": ["+200 Burrowstrike Cast Range", "+25 Sand Storm Damage per Second"],
+        "level_10": ["+100s Caustic Finale Radius", "+12% Stinger Slow"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Caustic Finale",
+          "type": "passive",
+          "description": "Inject a venom per successful attack that causes enemy units to violently explode when they die.",
+          "values": {
+            "effect_radius": "400 (500 with facet)",
+            "base_damage": "20/40/60/80",
+            "max_health_as_damage_bonus": "3%/7%/11%/15%",
+            "duration": "4.5/5/5.5/6"
+          },
+          "details": "This ability levels up with Epicenter. An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Burrowstrike",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "14/13/12/11 (12/11/10/9 with talent)",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "525/600/675/750 (725/800/875/950 with talent)",
+        "cast_animation": "0 + 0.53",
+        "cast_radius": "150",
+        "details": "Burrows into the ground and tunnels forward, damaging and stunning enemy units above Sand King as he resurfaces.",
+        "description": "Burrows into the ground and tunnels forward, damaging and stunning enemy units above Sand King as he resurfaces.",
+        "facet_effects": {
+          "travel_distance": "525/600/675/750 (550/625/700/775 with facet)",
+          "caustic_finale": "Applies a Caustic Finale debuff of its corresponding level on all affected enemy units upon resurfacing"
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Spine Radius: 150",
+          "Damage: 80/140/200/260",
+          "Stun Duration: 1.2/1.4/1.6/1.8"
+        ],
+        "interaction_notes": [
+          "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries."
+        ]
+      },
+      "ability_2": {
+        "name": "Sand Storm",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "40/34/28/22",
+        "mana_cost": "85",
+        "cast_range": "Self",
+        "cast_animation": "0 + 0.5",
+        "cast_radius": "425/500/575/650",
+        "details": "Creates a sandstorm that damages enemy units within the radius. The sandstorm immediately dissipates upon leaving the effect radius.",
+        "description": "Creates a sandstorm that damages enemy units within the radius. The sandstorm immediately dissipates upon leaving the effect radius.",
+        "facet_effects": {
+          "invisibility": "Grants self invisibility with a fade delay, within the sand storm radius",
+          "fade_delay": "0.7",
+          "sandblast": "Enhances the storm aura with additional debuffs"
+        },
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Radius: 425/500/575/650",
+          "Damage per Second: 30/50/70/90 (55/75/95/115 with talent)",
+          "Duration: 16/20/24/28",
+          "Aura Linger Duration: 0.5",
+          "Max Activity Distance: 425/500/575/650"
+        ],
+        "interaction_notes": [
+          "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste."
+        ]
+      },
+      "ability_3": {
+        "name": "Stinger",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Physical / Instant Attack",
+        "cooldown": "15/12/9/6",
+        "mana_cost": "35/40/45/50",
+        "cast_range": "Point / Area",
+        "cast_animation": "0.4 + 0",
+        "cast_radius": "230/250/270/290",
+        "details": "Strikes and attacks an area with bonus damage and applies a movement speed slow to all enemy units within the radius.",
+        "description": "Strikes and attacks an area with bonus damage and applies a movement speed slow to all enemy units within the radius.",
+        "facet_effects": {
+          "proximity_damage": "Deals additional damage to units within the proximity radius",
+          "proximity_radius": "125",
+          "proximity_damage_factor": "1.4"
+        },
+        "ability_behavior": ["point_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: 230/250/270/290",
+          "Instant Attack Factor: 1",
+          "Spell Damage Bonus: 50/75/100/125",
+          "Move Speed Slow: 10%/12%/14%/16% (22%/24%/26%/28% with talent)",
+          "Slow Duration: 4/5/6/7"
+        ],
+        "interaction_notes": [
+          "Crixalis is certainly capable of mercy, but the soul of the sand finds few foes worth sparing."
+        ]
+      },
+      "ability_4": {
+        "name": "Epicenter",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "120/110/100",
+        "mana_cost": "150/225/300",
+        "cast_range": "Self",
+        "cast_animation": "2 + 0",
+        "cast_radius": "500 (575 with talent)",
+        "details": "After its cast point, Sand King causes the ground beneath to shudder violently. All enemy units within the radius are damaged and slowed. Each subsequent pulse increases the Epicenter radius.",
+        "description": "After its cast point, Sand King causes the ground beneath to shudder violently. All enemy units within the radius are damaged and slowed. Each subsequent pulse increases the Epicenter radius.",
+        "facet_effects": {
+          "scepter": "Each Epicenter pulse now randomly summons multiple Stinger spines",
+          "shard": "Passively releases a lesser Epicenter pulse at a fixed duration"
+        },
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Base Radius: 500 (575 with talent)",
+          "Radius Increase per Pulse: 13 (20 with talent)",
+          "Number of Pulses: 12/16/20 (22/26/30 with talent)",
+          "Damage per Pulse: 60/70/80 (70/80/90 with shard)",
+          "Move Speed Slow: 30%/40%/50%",
+          "Attack Speed Slow: 50/55/60",
+          "Slow Duration: 3",
+          "Slow Linger Duration: 3",
+          "Epicenter Duration: 6"
+        ],
+        "interaction_notes": [
+          "Many an explorer was lost to the quicksands of the Scintillant Waste."
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Burrowstrike mana cost from 110/120/130/140 to 100/110/120/130.",
+          "LVL 10 +8% Stinger movement speed slow increased to +12%.",
+          "LVL 15 +150 Burrowstrike cast range increased to +200.",
+          "LVL 15 +20 Sand Storm damage per second increased to +25."
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Caustic Finale base damage from 15/35/55/75 to 20/40/60/80.",
+          "Reduced Caustic Finale enemy max health as damage from 4%/8%/12%/16% to 3%/7%/11%/15%.",
+          "Sand Storm now grants invisibility upon cast with a 0.7-second fade time.",
+          "Increased Sand Storm radius from 350/400/450/500 to 425/500/575/650.",
+          "REMOVED Sandshroud and Dust Devil facets.",
+          "ADDED Sandblast facet.",
+          "Rescaled Stinger effect radius from 225/255/285/315 to 230/250/270/290.",
+          "Rescaled Stinger spell damage bonus from 35/70/105/140 to 50/75/100/125.",
+          "ADDED Final Sting facet.",
+          "LVL 20 +100/+12 Epicenter base radius/incremental radius reduced to +75/+7.",
+          "LVL 25 +35% Sand Storm blind miss chance/movement speed slow changed to +40% Sand Storm movement speed slow."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased base strength from 21 to 22.",
+          "Increased agility gain from 1.8 to 2.",
+          "Increased intelligence gain from 1.8 to 2.",
+          "Increased base attack damage from 7‒15 to 19‒29.",
+          "LVL 10 +0.3s Burrowstrike stun duration changed to +100 Caustic Finale radius."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 500000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

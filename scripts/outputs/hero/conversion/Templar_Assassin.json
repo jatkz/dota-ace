@@ -1,0 +1,269 @@
+{
+  "hero_name": "Templar Assassin",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 23,
+      "strength_gain": 2.4,
+      "agility": 23,
+      "agility_gain": 3.2,
+      "intelligence": 20,
+      "intelligence_gain": 2,
+      "health": 626,
+      "mana": 315,
+      "armor": 3.83,
+      "magic_resist": 27,
+      "damage": [53, 59],
+      "damage_avg": 56,
+      "projectile_speed": 1000,
+      "attack_type": "ranged",
+      "attack_range": 250,
+      "attack_speed": 100,
+      "bat": 1.6,
+      "animation": "0.3 + 0.5",
+      "move_speed": 310,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Voidblades",
+        "effects": "Applies both of Meld's bonus attack damage component and the debuff to Psi Blades-affected enemy units."
+      },
+      "facet_2": {
+        "name": "Refractor",
+        "effects": "Refraction gains an additional bonus attack damage charge every time a barrier instance is depleted."
+      },
+      "facet_3": {
+        "name": "Hidden Reach",
+        "effects": "Grants bonus attack range over an effect delay duration upon Meld cast."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Psionic Projection ability", "Teleports Lanaya to the nearest Psionic Trap after channeling and detonates it upon arrival, damaging and slowing enemy units around it"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Increases max Psionic Trap count and its vision radius", "Lanaya's transposition applies silence within the radius upon arrival"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+4 Refraction Instances", "+1s Meld Bash"],
+        "level_20": ["+40 Refraction Damage", "Refraction Applies Basic Dispel"],
+        "level_15": ["+3 Meld Armor Reduction", "Refraction Can Be Cast While Disabled"],
+        "level_10": ["+5% Trap Move Speed Slow / +5% Psionic Projection Move Speed Slow", "+2s Meld Debuff Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Third Eye",
+          "type": "passive",
+          "description": "The Hidden Temple exposes Roshan's respawn timer to Layana's team.",
+          "values": {},
+          "details": "The Roshan respawn timer is located above both the Scan and Glyph of Fortification ability."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Lanaya's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden Innate Abilities with various functions"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Refraction",
+        "key": "Q",
+        "type": "active",
+        "affects": "Self",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "14",
+        "mana_cost": 95,
+        "cast_range": "",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Grants all damage barrier instances that negates damage. Both the damage negation component and the bonus attack damage component have a limited number of instances and are independent of each other.",
+        "description": "Manipulating her psionic veil, Lanaya bends nature's law to her will.",
+        "facet_effects": {
+          "refractor": "Refraction gains an additional bonus attack damage charge every time a barrier instance is depleted."
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Max Barrier Instances: 3/4/5/6", "Barrier: 30", "Duration: 17", "Max Attack Charges: 3/4/5/6", "Attack Damage Bonus: 15/30/45/60"],
+        "interaction_notes": ["Interrupts Lanaya's channeling abilities upon cast", "The ability has three main components that are applied upon cast and are independent of each other"]
+      },
+      "ability_2": {
+        "name": "Meld",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Attack Damage / Physical",
+        "damage_types": ["physical"],
+        "cooldown": "11/9/7/5",
+        "mana_cost": "35/40/45/50",
+        "cast_range": "",
+        "cast_animation": "0 + 0.53",
+        "cast_radius": "",
+        "details": "Conceals herself, becoming invisible as long as she remains still. If the invisibility is broken by attacking an enemy, Lanaya will deal bonus damage and reduce the affected enemy unit's armor for the duration.",
+        "description": "Lanaya is as elusive as her covenant with the Hidden Temple.",
+        "facet_effects": {
+          "voidblades": "Applies both of Meld's bonus attack damage component and the debuff to Psi Blades-affected enemy units.",
+          "hidden_reach": "Grants bonus attack range over an effect delay duration upon Meld cast. Effect Delay: 1, Attack Range Bonus: 400"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Fade Time: 0", "Invisibility Duration: indefinite", "Attack Damage Instance: 55/105/155/205", "Armor Reduction: 3.5/5/6.5/8", "Debuff Duration: 6", "Bash Duration: 1 (with talent)"],
+        "interaction_notes": ["All offensive ability components do not affect buildings", "The invisibility component persists upon losing ability through Morph or Spell Steal"]
+      },
+      "ability_3": {
+        "name": "Psi Blades",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units",
+        "damage": "Spell / Pure",
+        "damage_types": ["pure"],
+        "cooldown": "",
+        "mana_cost": "",
+        "cast_range": "",
+        "cast_animation": "",
+        "cast_radius": "",
+        "details": "Attacks slice through the attacked unit, spilling and damaging enemy units reduced by a percentage per unit behind it. Grants self bonus attack range.",
+        "description": "Her blades pierce the skin as much as the mind, furthering her understanding of the mystery that is reality.",
+        "facet_effects": {
+          "voidblades": "Applies both of Meld's bonus attack damage component and the debuff to Psi Blades-affected enemy units."
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Area Width: 90", "Spill Length: 400/500/600/700", "Attack Damage to Spill Damage Factor: 0.7/0.8/0.9/1", "Attack Range Bonus: 50/100/150/200"],
+        "interaction_notes": ["Do not spill damage when attacking buildings regardless of the ability visual effects"]
+      },
+      "ability_4": {
+        "name": "Psionic Trap",
+        "key": "R",
+        "type": "active",
+        "affects": "Psionic Trap",
+        "damage": "",
+        "damage_types": [],
+        "cooldown": "11/8/5",
+        "mana_cost": 15,
+        "cast_range": "1800",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "",
+        "details": "Places mystical traps that invisibly monitor enemy movements. Marks the ground with magical and psionic traps.",
+        "description": "Calling upon the reach of the Hidden Temple, none escape the eye of the Templar.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": ["Max Traps: 5/8/11", "Fade Time: 2", "Hit Count: 1 (heroes), 2 (creeps)", "Vision Radius: 400", "Duration: indefinite"],
+        "interaction_notes": ["Does not block neutral creep camps", "Roshan destroys this unit in one punch", "Specifically does not grant vision within Roshan's pit"]
+      },
+      "ability_5": {
+        "name": "Psionic Projection",
+        "key": "F",
+        "type": "channeled",
+        "affects": "Self / Enemy Units / Psionic Trap",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "10",
+        "mana_cost": 50,
+        "cast_range": "Global",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "",
+        "details": "Teleports Lanaya to the nearest Psionic Trap after channeling and detonates it upon arrival, damaging and slowing enemy units around it. Projecting herself to the distance does not break Lanaya's Meld upon cast.",
+        "description": "In reward for her service, Lanaya has been granted access to secrets that unlock new techniques for her psionic gifts.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": ["Channel Time: 2", "Effect Radius: 400", "Damage: 375", "Move Speed Slow: 50%", "Slow Duration: 5", "Silence Duration: 3 (with shard)"],
+        "interaction_notes": ["Acquiring Aghanim's Shard unlocks this ability", "Root and Leash sources prevent the teleport component but don't interrupt channeling"]
+      },
+      "sub_ability": {
+        "name": "Trap",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units / Psionic Trap",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "0.5",
+        "mana_cost": "",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "When sprung at Lanaya's command, the traps apply a movement speed slow based on the charged-up time. Only deals damage over time if the trap is fully charged.",
+        "description": "Sub-ability of Psionic Trap.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Trap Search Radius: Global", "Effect Radius: 400", "Charge-up Time: 3.5", "Total Charged-up Damage: 225/300/375", "Min Move Speed Slow: 20%", "Max Move Speed Slow: 50%", "Slow Duration: 5"],
+        "interaction_notes": ["Does not interrupt Lanaya's channeling abilities upon cast", "Cannot be cast when there are no Psionic Traps present"]
+      }
+    }
+  },
+  "recent_changes": [
+    {
+      "version": "7.39b",
+      "date": "2025-05-29",
+      "changes": [
+        "Refraction: Reduced attack damage bonus from 20/40/60/80 to 15/30/45/60",
+        "Refraction: Increased mana cost from 85 to 95"
+      ]
+    },
+    {
+      "version": "7.39",
+      "date": "2025-05-21", 
+      "changes": [
+        "Meld: Reduced attack damage instance from 70/125/180/235 to 55/105/155/205",
+        "Meld: Reduced armor reduction from 5/6/7/8 to 3.5/5/6.5/8",
+        "Aghanim's Shard upgrade: Reduced Trap min silence duration from 1 to 0.25",
+        "Talents: LVL 10 +2.5s Meld debuff duration reduced to +2s",
+        "Talents: LVL 15 +100 Psi Blades attack range/spill ranged → +3 Meld armor reduction"
+      ]
+    },
+    {
+      "version": "7.38c",
+      "date": "2025-03-27",
+      "changes": [
+        "Refraction: Increased number of instances from 2/3/4/5 to 3/4/5/6",
+        "Refraction: Reduced cooldown from 16 to 14",
+        "Talents: LVL 25 +3 Refraction instances increased to +4"
+      ]
+    }
+  ],
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "hero_name": "Necrophos",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 18,
+      "strength_gain": 2.3,
+      "agility": 12,
+      "agility_gain": 1.3,
+      "intelligence": 23,
+      "intelligence_gain": 2.7,
+      "health": 516,
+      "mana": 351,
+      "armor": 4,
+      "magic_resist": 27.3,
+      "damage": [49, 53],
+      "damage_avg": 51,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 500,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.47",
+      "move_speed": 280,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Durable, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Profane Potency",
+        "effects": "Grants Necrophos a flat area-of-effect bonus per Sadist stack."
+      },
+      "facet_2": {
+        "name": "Rapid Decay",
+        "effects": "Ghost Shroud grants self movement speed bonus based on the total movement speed slow applied within the radius. Applies an all restoration reduction corresponding to Necrophos' all restoration amplification to all affected enemy units within the radius."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants bonus enemy max health loss per second based on Necrophos' current health regeneration."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Death Seeker ability.", "Turns Necrophos into a large death projectile toward the unit-targeted location.", "Necrophos rehabilitate himself upon arriving to the location. Then, the affected enemy unit spreads a wave of Death Pulse corresponding of its level, dealing damage to enemy units and healing allied units."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-2.5s Death Pulse Cooldown", "+0.5% Heartstopper Aura Damage"],
+        "level_20": ["+25% Heartstopper Aura Health Regen Reduction", "+15% Ghost Shroud Self Restore Amp"],
+        "level_15": ["+50 Death Pulse Heal", "+20% Ghost Shroud Slow"],
+        "level_10": ["+2s Sadist Stack Duration", "-2.5 Ghost Shroud Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Sadist",
+          "type": "passive",
+          "description": "The Sadist rewards himself with a bonus health regeneration and bonus mana regeneration stack for a duration per enemy hero kill.",
+          "values": {
+            "stack_per_kill": 6,
+            "health_regen_bonus": "3/4.5/6/7.5",
+            "mana_regen_bonus": "3.5/5/6.5/8",
+            "duration": "8 (10 with talent)",
+            "creep_stack_per_kill": 1
+          },
+          "details": "This ability levels up with Reaper's Scythe. Grants regeneration stacks per kill credit to Necrophos, including from denies."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Death Pulse",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "8/7/6/5",
+        "mana_cost": "115/130/145/160",
+        "cast_range": "500",
+        "cast_animation": "0 + 0.77",
+        "cast_radius": "500",
+        "details": "Releases a wave of death around Necrophos, dealing damage to enemy units and healing allied units.",
+        "description": "Poor souls who succumb to Rotund'jere's plagues are recycled for future use.",
+        "values": {
+          "search_radius": 500,
+          "projectile_speed": 400,
+          "damage": "100/160/220/280",
+          "heal": "70/90/110/130"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true
+      },
+      "ability_2": {
+        "name": "Ghost Shroud",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "None",
+        "cooldown": "28/24/20/16",
+        "mana_cost": "75",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "750",
+        "details": "Slips into the ethereal realm that separates the living from the dead, and emits a movement speed slow aura that affects enemy units around him.",
+        "description": "Rotund'jere uses the souls of his victims as bridge from life to afterlife.",
+        "values": {
+          "slow_radius": 750,
+          "move_speed_slow": "16%/19%/22%/25%",
+          "duration": "3/3.5/4/4.5",
+          "aura_linger_duration": 0.5,
+          "magic_resist_reduction": "20%",
+          "all_health_restoration_factor": "1.45/1.55/1.65/1.75",
+          "ethereal_duration": "3/3.5/4/4.5"
+        },
+        "ability_behavior": ["no_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      },
+      "ability_3": {
+        "name": "Heartstopper Aura",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units / Self",
+        "damage": "HP Removal / Spell / Magical",
+        "cooldown": "0",
+        "mana_cost": "0",
+        "cast_range": "700",
+        "cast_animation": "0",
+        "cast_radius": "700",
+        "details": "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time.",
+        "description": "Those who come within a short distance of the Necrophos can feel pestilence and plague in the air.",
+        "values": {
+          "aura_radius": 700,
+          "max_health_lost_per_second": "0.8%/1.3%/1.8%/2.3%",
+          "aura_linger_duration": 0.5,
+          "self_health_regen_as_health_loss_bonus_factor": 0.5,
+          "health_regen_reduction": "25%"
+        },
+        "ability_behavior": ["passive", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false
+      },
+      "ability_4": {
+        "name": "Death Seeker",
+        "key": "D",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "19",
+        "mana_cost": "125",
+        "cast_range": "900",
+        "cast_animation": "0.2 + 0.6",
+        "cast_radius": "500",
+        "details": "Turns Necrophos into a large death projectile toward the unit-targeted location. Necrophos rehabilitate himself upon arriving to the location. Then, the affected enemy unit spreads a wave of Death Pulse corresponding of its level, dealing damage to enemy units and healing allied units.",
+        "description": "The Rumusque Faithful consider Necrophos to be more plague than person.",
+        "values": {
+          "first_projectile_speed": 900,
+          "damage_factor": 1,
+          "heal_factor": 1
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      },
+      "ability_5": {
+        "name": "Reaper's Scythe",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell / Magical",
+        "cooldown": "100",
+        "mana_cost": "250/375/500",
+        "cast_range": "600",
+        "cast_animation": "0.45 + 1.5",
+        "cast_radius": "0",
+        "details": "Stuns the target enemy hero, then deals damage based on per point of missing health of the targeted enemy unit. Any kills under this effect is credited to Necrophos.",
+        "description": "The amount of death and suffering in the air increases the power of the Necrophos' plague magic.",
+        "values": {
+          "damage_per_missing_health": "0.7/0.8/0.9",
+          "stun_duration": 1.5,
+          "health_regen_bonus_per_kill": "2/4/6",
+          "mana_regen_bonus_per_kill": "1/2/3"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Sadist mana regeneration bonus per unit kill from 3/4.5/6/7.5 to 3.5/5/6.5/8.",
+          "Increased Death Pulse heal from 55/80/105/130 to 70/90/110/130.",
+          "Talents: LVL 10 +125 Reaper's Scythe cast range → -2.5s Ghost Shroud cooldown."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Ghost Shroud: The self restoration manipulation component now includes lifesteal sources and spell lifesteal sources.",
+          "Rapid Decay: Now applies the same amount of restoration reduction by the same value as Necrophos' amplification value.",
+          "Heartstopper Aura: Reduced aura radius from 800 to 700.",
+          "Heartstopper Aura: Rescaled max health loss per second from 0.6%/1.2%/1.8%/2.4% to 0.8%/1.3%/1.8%/2.3%."
+        ]
+      },
+      {
+        "version": "7.37d",
+        "date": "2024-10-01",
+        "changes": [
+          "Increased Ghost Shroud movement speed slow from 10%/15%/20%/25% to 16%/19%/22%/25%.",
+          "Reduced Reaper's Scythe cooldown from 110 to 100."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 85432,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

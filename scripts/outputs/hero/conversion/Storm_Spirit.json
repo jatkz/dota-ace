@@ -1,0 +1,227 @@
+{
+  "hero_name": "Storm Spirit",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2,
+      "agility": 22,
+      "agility_gain": 2.6,
+      "intelligence": 23,
+      "intelligence_gain": 3.7,
+      "health": 582,
+      "mana": 351,
+      "armor": 4.67,
+      "magic_resist": 27.3,
+      "damage": [47, 57],
+      "damage_avg": 52,
+      "projectile_speed": 1100,
+      "attack_type": "ranged",
+      "attack_range": 480,
+      "attack_speed": 115,
+      "bat": 1.6,
+      "animation": "0.5 + 0.3",
+      "move_speed": 285,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Nuker, Initiator, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Shock Collar",
+        "effects": "Electric Vortex applies a temporary debuff to affected enemies that triggers an Overload charge of its corresponding level if they attack."
+      },
+      "facet_2": {
+        "name": "Static Slide",
+        "effects": "Static Remnant images spawn at Raijin's location and moves to the point-targeted position upon cast. -400 Vision Radius"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Affects all enemy units within the radius centered around the Storm Spirit"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Upon cast, Overload grants Storm Spirit and allied heroes within the radius Overload charges and bonus attack speed"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["450 Distance Auto Remnant in Ball Lightning", "2x Overload Attack Bounce"],
+        "level_20": ["-1.25s Static Remnant Cooldown", "+0.2s Electric Vortex Duration"],
+        "level_15": ["+60 Static Remnant Damage", "+250 Health"],
+        "level_10": ["+1.5 Mana Regen", "+20% Overload Move Speed Slow +20 Overload Attack Speed Slow"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Galvanized",
+          "type": "passive",
+          "description": "Innately grants Storm Spirit permanent mana regeneration bonus over time in certain conditions.",
+          "values": {
+            "mana_regen_bonus_per_gained_charge": 0.1,
+            "effect_radius": 1200,
+            "charge_per_kill": 1,
+            "charge_per_hero_death": 1,
+            "mana_regen_bonus_per_charge": 0.2,
+            "bonus_charges_per_ability_level": 3,
+            "stack_loss_on_death": 3
+          },
+          "details": "Additionally grants Raijin a charge per hero kill or per enemy hero's death within the effect radius. Grants a one-time bonus charges upon leveling up Raijin's ultimate ability each time. Loses a portion of stacks upon Raijin's death."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Static Remnant",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "3.5",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "0",
+        "cast_animation": "0 + 1.1",
+        "cast_radius": "300",
+        "details": "Creates an explosively charged remnant of Raijin that gives vision for a period of time at his current location. After an activation delay, the remnant detonates and deals damage if an enemy unit comes near it.",
+        "description": "Creates an explosively charged remnant of Raijin that gives vision for a period of time at his current location.",
+        "facet_effects": {
+          "static_slide": "Static Remnant images spawn at Raijin's location and moves to the point-targeted position upon cast."
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Vision Radius: 500",
+          "Remnant Duration: 12",
+          "Activation Delay: 0.75",
+          "Proc Radius: 235",
+          "Damage Radius: 300",
+          "Damage: 100/160/240/280"
+        ],
+        "interaction_notes": [
+          "Remnants created are fully visible to the enemy",
+          "Affects fogged and invisible units",
+          "Does not affect hidden or invulnerable units"
+        ]
+      },
+      "ability_2": {
+        "name": "Electric Vortex",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemies / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "20/18/16/14",
+        "mana_cost": "60/70/80/90",
+        "cast_range": "300",
+        "cast_animation": "0.3 + 0.77",
+        "cast_radius": "0",
+        "details": "Pulls an enemy unit to Raijin's location.",
+        "description": "Pulls an enemy unit to Raijin's location.",
+        "facet_effects": {
+          "shock_collar": "Electric Vortex applies a temporary debuff to affected enemies that triggers an Overload charge of its corresponding level if they attack."
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Pull Distance: 180/220/260/300",
+          "Link Break Distance: 1200",
+          "Duration: 1.1/1.4/1.7/2"
+        ],
+        "interaction_notes": [
+          "Applies forced movement on the affected enemy unit",
+          "Recasting on same target refreshes duration and distance",
+          "Scepter upgrade changes to non-targeted affecting all enemies in radius"
+        ]
+      },
+      "ability_3": {
+        "name": "Overload",
+        "key": "E",
+        "type": "passive",
+        "affects": "Allied Heroes / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical", "Physical"],
+        "cooldown": "0",
+        "mana_cost": "0",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "300",
+        "details": "Overloads itself and creates an electrical charge upon an ability cast, which is released in the next attack. Deals damage and slows within the attacked enemy unit's radius.",
+        "description": "Overloads itself and creates an electrical charge upon an ability cast, which is released in the next attack. Deals damage and slows within the attacked enemy unit's radius.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Damage Radius: 300",
+          "Damage: 25/50/75/100",
+          "Move Speed Slow: 80%",
+          "Attack Speed Slow: 80",
+          "Slow Duration: 0.8"
+        ],
+        "interaction_notes": [
+          "Does not proc on active item abilities",
+          "Does not proc on abilities with 0-second cooldown",
+          "Missed or disjointed attacks do not consume the buff",
+          "Shard upgrade adds active component granting charges to allies"
+        ]
+      },
+      "ability_4": {
+        "name": "Ball Lightning",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "0",
+        "mana_cost": "25 + 7.5% × MaxMP",
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "200",
+        "details": "Becomes a ball of volatile electricity, charging across the battlefield until he depletes his mana or reaches his target.",
+        "description": "Becomes a ball of volatile electricity, charging across the battlefield until he depletes his mana or reaches his target.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage Radius: 200",
+          "Travel Speed: 1400/1850/2300",
+          "Distance Interval: 100",
+          "Distance to Damage: 6/10/14",
+          "Mana Loss: 10 + 0.65% × MaxMP per 100 distance"
+        ],
+        "interaction_notes": [
+          "Grants invulnerability while traveling",
+          "Provides 400-radius flying vision while traveling",
+          "Can turn, attack and cast abilities while traveling",
+          "Destroys trees within 100-radius while traveling",
+          "Talent upgrade leaves Static Remnants every 450 distance"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

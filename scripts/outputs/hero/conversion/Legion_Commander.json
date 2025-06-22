@@ -1,0 +1,216 @@
+{
+  "hero_name": "Legion Commander",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 24,
+      "strength_gain": 3.1,
+      "agility": 18,
+      "agility_gain": 1.7,
+      "intelligence": 20,
+      "intelligence_gain": 2.2,
+      "health": 648,
+      "mana": 315,
+      "armor": 3,
+      "magic_resist": 27,
+      "damage": [57, 61],
+      "damage_avg": 59,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.46 + 0.64",
+      "move_speed": 325,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Disabler, Initiator, Durable, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Stonehall Plate",
+        "effects": "Overwhelming Odds additionally grants an all damage barrier based on the total spell damage dealt within the radius."
+      },
+      "facet_2": {
+        "name": "Spoils of War",
+        "effects": "Grant a stack of permanent bonus attack damage to other units who assisted with a Duel victory. Casts Press the Attack on all assisting units, including Tresdin, if she is the victor of the Duel. Duration is reduced for allies (-50% Ally Buff Duration)."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants Tresdin debuff immunity for its duration", "Increases duration"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants bonus radius when cast during the Duel", "Grants bonus victor attack damage, and retroactively increases the permanent bonus attack damage granted"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1.5s Press the Attack Debuff Immune Duration", "+75% Moment of Courage Lifesteal"],
+        "level_20": ["+8% Moment of Courage Chance", "+300 Press the Attack Radius"],
+        "level_15": ["+35 Overwhelming Odds Damage per Hero", "+40 Press the Attack Health Regen"],
+        "level_10": ["+12% Press the Attack Move Speed", "-2s Overwhelming Odds Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Outfight Them!",
+          "type": "passive",
+          "description": "Grants self a health restore amplification buff when attacking an equal, higher, or max leveled enemy hero.",
+          "values": {
+            "health_restore_amp": "30%/40%/50%/60%",
+            "duration": 4
+          },
+          "details": "This ability levels up with Duel."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Overwhelming Odds",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "15 (13 with talent)",
+        "mana_cost": "90/105/120/135",
+        "cast_range": "600",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "600",
+        "details": "Turns the enemies' numbers against them, dealing damage per enemy unit and grant self bonus attack speed.",
+        "description": "Turns the enemies' numbers against them, dealing damage per enemy unit and grant self bonus attack speed.",
+        "facet_effects": {
+          "stonehall_plate": "Additionally grants an all damage barrier based on the total spell damage dealt within the radius (Spell Damage to Barrier Factor: 0.4, Duration: 6)"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["During the Duel, has instant cast time", "Only this ability can be cast during Duel regardless of disable sources"],
+        "interaction_notes": ["Considers clones as heroes, illusions and creep-heroes as creeps", "Affects fogged, invisible, and untargetable units"]
+      },
+      "ability_2": {
+        "name": "Press the Attack",
+        "key": "W",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "16/15/14/13",
+        "mana_cost": 110,
+        "cast_range": "700",
+        "cast_animation": "0.2 + 0.93",
+        "cast_radius": "300 (with talent)",
+        "details": "Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and bonus health regeneration for a short time.",
+        "description": "Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and bonus health regeneration for a short time.",
+        "facet_effects": {
+          "spoils_of_war": "Casts Press the Attack on all assisting units if victor of Duel (Ally Buff Duration: 2.5)"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Applies strong dispel", "Grants debuff immunity with talent"],
+        "interaction_notes": ["Doubletap casts on self", "With talent becomes area-targeted"]
+      },
+      "ability_3": {
+        "name": "Moment of Courage",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["Instant Attack"],
+        "cooldown": "1.9/1.5/1.1/0.7",
+        "mana_cost": 0,
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "When attacked, Tresdin counter-attacks with bonus lifesteal immediately.",
+        "description": "When attacked, Tresdin counter-attacks with bonus lifesteal immediately.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Uses pseudo-random distribution", "Grants 1000 attack speed bonus", "Lifesteal reduced against creeps (0.6 factor)"],
+        "interaction_notes": ["Can proc on missed attacks", "Instant attack can proc attack modifiers"]
+      },
+      "ability_4": {
+        "name": "Duel",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "60/55/50",
+        "mana_cost": 75,
+        "cast_range": "200",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "N/A",
+        "details": "Tresdin and the target enemy hero are forced to attack each other for a short duration. Neither hero can use items nor abilities. Grants permanent bonus attack damage to the victor during the Duel duration.",
+        "description": "Tresdin and the target enemy hero are forced to attack each other for a short duration. Neither hero can use items nor abilities. Grants permanent bonus attack damage to the victor during the Duel duration.",
+        "facet_effects": {
+          "spoils_of_war": "Grants assist attack damage bonus to allied units (5/10/15), casts Press the Attack on assisting units upon victory"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": true,
+        "technical_details": ["Applies leash, mute, silence, taunt", "Grants True Sight over both duelists", "Victor gains permanent attack damage"],
+        "interaction_notes": ["Can be nullified under various conditions", "Scepter grants debuff immunity and increases duration", "Shard increases victor damage bonus"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Outfight Them! now also applied when attacking enemy heroes that are equal level of Legion Commander",
+          "Outfight Them! now follows the health restoration mechanic",
+          "Outfight Them! rescaled health restoration bonus from 50% on each level to 30%/40%/50%/60%",
+          "Outfight Them! component levels up with Duel"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Duel Spoils of War: Reduced Press the Attack ally passive cast upon emerging victorious duration from 5 to 2.5"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased base strength from 23 to 24",
+          "Rescaled Overwhelming Odds mana cost from 100/110/120/130 to 90/105/120/135",
+          "Moment of Courage now follow the lifesteal mechanic",
+          "Duel no longer passively self-casts Press the Attack upon emerging victorious",
+          "Duel reduced cast range from 200/250/300 to 200 on each level",
+          "Duel rescaled duration from 3.75/4.5/5.25 to 4/4.5/5",
+          "Duel Spoils of War now passively casts Press the Attack to all assisting allied units upon emerging victorious",
+          "Aghanim's Scepter: Duel updated ability effects, reduced duration bonus from 2.25 to 2",
+          "Aghanim's Shard: Duel reduced victor attack damage bonus from 8 to 5"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

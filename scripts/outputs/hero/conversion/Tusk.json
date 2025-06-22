@@ -1,0 +1,205 @@
+{
+  "hero_name": "Tusk",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 23,
+      "strength_gain": 3.9,
+      "agility": 23,
+      "agility_gain": 2.1,
+      "intelligence": 18,
+      "intelligence_gain": 1.7,
+      "health": 626,
+      "mana": 291,
+      "armor": 4.83,
+      "magic_resist": "26.8%",
+      "damage": [50, 54],
+      "damage_avg": 52,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.36 + 0.64",
+      "move_speed": 310,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Disabler, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Tag Team",
+        "effects": "Creates a negative debuff aura around Tusk, causing enemy units that are attacked under it to have reduced movement speed. Conditionally grants allied units attacking the debuffed enemy unit bonus physical attack damage."
+      },
+      "facet_2": {
+        "name": "Drinking Buddies",
+        "effects": "Reaches out to tag an allied unit and pulls them closer. Grants both Tusk and the tagged ally bonus movement speed and attack damage once tagged."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Walrus Kick ability", "Kicks the closest enemy unit in a targeted direction, stunning, damaging, and slowing them", "Upon the affected unit landing, Tusk deals damage to all enemy heroes within the landing radius"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Increases the depth of the created ice shards formation", "Enemy units trapped within are chilled by a negative aura, damaging them and slowing their movement speed"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-8s Snowball Cooldown", "12% Walrus PUNCH! Chance"],
+        "level_20": ["+75% Walrus PUNCH! Critical Damage", "-6s Ice Shards Cooldown"],
+        "level_15": ["+120 Snowball Damage", "+325 Health"],
+        "level_10": ["+0.75s Walrus PUNCH! Stun Duration", "+2s Tag Team / Drinking Buddies Buff Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Bitter Chill",
+          "type": "passive",
+          "description": "Applies an attack speed slow on all enemy units within the radius",
+          "values": {
+            "radius": 350,
+            "attack_speed_slow": "15/35/55/75",
+            "aura_linger_duration": 0.5
+          },
+          "details": "This ability levels up with Walrus PUNCH!"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Ice Shards",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "23/20/17/14",
+        "mana_cost": 100,
+        "cast_range": "1400",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "200",
+        "details": "Throws a ball of frozen energy that damages all enemy units it comes in contact with. When the ball its point-targeted location, the shards are released, creating a temporary path blocker.",
+        "description": "Throws a ball of frozen energy that damages all enemy units it comes in contact with. When the ball its point-targeted location, the shards are released, creating a temporary path blocker.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Creates 7 Ice Shards enclosing circle with Tusk always facing the open side", "Each created shard has ≈61-collision size", "Impassable terrain and pathing blocker"],
+        "interaction_notes": ["Does not damage Buildings or Ward-type units", "Grants flying vision while traveling and at destination"]
+      },
+      "ability_2": {
+        "name": "Snowball",
+        "key": "W",
+        "type": "active",
+        "affects": "Allied Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "21/19/17/15",
+        "mana_cost": 75,
+        "cast_range": "1150",
+        "cast_animation": "0.1 + 0.5",
+        "details": "Tusk begins rolling into a snowball, and exposes the unit-targeted enemy during its hold duration. Can gather allied units within radius.",
+        "description": "Tusk begins rolling into a snowball, and exposes the unit-targeted enemy during its hold duration.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Max Hold Duration: 3", "Ally Gather Radius: 350", "Ally Jump-in Radius: 110"],
+        "interaction_notes": ["Cannot gather units with Disable Help", "Displays gathered minimap icon for allied heroes"]
+      },
+      "ability_3": {
+        "name": "Tag Team / Drinking Buddies",
+        "key": "E",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "24/21/18/15",
+        "mana_cost": 70,
+        "cast_range": "350 / 900",
+        "cast_animation": "0 + 0",
+        "details": "Facet dependent ability. Tag Team creates negative debuff aura. Drinking Buddies pulls allied unit closer and grants bonuses.",
+        "description": "Creates a negative debuff aura around Tusk or reaches out to tag an allied unit depending on facet",
+        "facet_effects": {
+          "tag_team": "Creates negative debuff aura causing attacked enemies to have reduced movement speed",
+          "drinking_buddies": "Pulls allied unit closer and grants movement speed and attack damage bonuses"
+        },
+        "ability_behavior": ["no_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Tag Team: 75% move speed slow, 25/50/75/100 attack damage bonus", "Drinking Buddies: 11%/14%/17%/20% move speed, 20/50/80/110 attack damage"],
+        "interaction_notes": ["Inactive during Snowball", "Alt-Cast for Drinking Buddies pulls only Tusk"]
+      },
+      "ability_4": {
+        "name": "Walrus PUNCH!",
+        "key": "R",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["Physical"],
+        "cooldown": "16/13/10",
+        "mana_cost": 75,
+        "cast_range": "150",
+        "cast_animation": "0.36 + 0.64",
+        "details": "Applies a critical strike so powerful it launches its victim into the air. Has autocast and passive proc chance with talent.",
+        "description": "Applies a critical strike so powerful it launches its victim into the air.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "autocast"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Attack Damage Bonus: 50/75/100", "Crit Damage: 250%/325%/400%", "Stun Duration: 1", "Self Attack Point Factor: 0.6"],
+        "interaction_notes": ["Inactive during Snowball", "Roshan and Tormentor immune to forced movement", "12% passive proc chance with talent"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": ["Increased Drinking Buddies attack damage from 20/45/70/95 to 20/50/80/110"]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Drinking Buddies: Rescaled movement speed bonus from 10%/15%/20%/25% to 11%/14%/17%/20%",
+          "Drinking Buddies: Reduced cooldown from 24/21/18/15 to 23/20/17/14",
+          "Walrus Kick: No longer can be cast while in Snowball",
+          "Walrus Kick: Increased damage from 350 to 550",
+          "Walrus Kick: Reduced push distance from 1400 to 1200",
+          "Walrus Kick: Reduced slow duration from 4 to 2",
+          "Talents: LVL 10 +25 Tag Team / Drinking Buddies damage → +2s Tag Team / Drinking Buddies duration"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Bitter Chill: This component now levels up with Walrus PUNCH!",
+          "Bitter Chill: Rescaled attack speed slow from 20/30/40/50/60 to 15/35/55/75"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 245000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

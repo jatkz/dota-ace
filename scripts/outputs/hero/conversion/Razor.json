@@ -1,0 +1,264 @@
+{
+  "hero_name": "Razor",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 22,
+      "strength_gain": 2.8,
+      "agility": 24,
+      "agility_gain": 2.8,
+      "intelligence": 21,
+      "intelligence_gain": 2.2,
+      "health": 604,
+      "mana": 327,
+      "armor": 4,
+      "magic_resist": 27.1,
+      "damage": [47, 49],
+      "damage_avg": 48,
+      "projectile_speed": 2000,
+      "attack_type": "ranged",
+      "attack_range": 475,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.4",
+      "move_speed": 280,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Durable, Nuker, Pusher"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Thunderhead",
+        "effects": "While Eye of the Storm is active, Storm Surge procs more often and affects all enemy units within in the storm radius. x2 Storm Surge Proc Chance. Additionally reduces the Storm Surge downtime. -2.5s Downtime"
+      },
+      "facet_2": {
+        "name": "Dynamo",
+        "effects": "Grants bonus spell amplification per current total attack damage."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Creates two eyes within the storm to strike two different units at the same time", "May now damage buildings", "When scalding buildings, the jolts of the eye will only target towers, barracks, and the Ancient"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Now additionally applies a percentage-based movement speed slow corresponding to the attack damage steal value", "Increases cast range"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Static Link Steals Attack Speed", "Secondary Plasma Field"],
+        "level_20": ["-0.1s Eye of the Storm Strike Interval", "+25% Storm Surge Damage/Slow"],
+        "level_15": ["+12 Strength", "+5 Static Link Damage Change"],
+        "level_10": ["10% Spell Lifesteal", "+0.75s Plasma Field Slow Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Unstable Current",
+          "type": "passive",
+          "description": "Grants movement speed bonus per hero level.",
+          "values": {
+            "move_speed_bonus_per_level": "1%"
+          },
+          "details": "This ability levels up with Razor. The innate returns as a powertrain for the Lightning Revenant — keeping him between the lines, lanes, and helps him shift between them."
+        },
+        {
+          "name": "Dynamo",
+          "type": "passive",
+          "description": "Grants bonus spell amplification per current total attack damage.",
+          "values": {
+            "attack_damage_to_spell_damage_amp": "0.0625%"
+          },
+          "details": "Selecting the Dynamo facet unlocks this ability."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Razor's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Has hidden innate abilities that require channeling to activate."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Plasma Field",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "13/12/11/10",
+        "mana_cost": 125,
+        "cast_range": "700",
+        "cast_animation": "0 + 0",
+        "cast_radius": "700",
+        "details": "Releases a wave of energetic plasma that grows in power as it expands, but also zaps on contraction, slowing and dealing damage to enemy units caught in its path. Each enemy unit can be hit twice, once each upon expanding and contracting. The further the distance, the stronger the effect.",
+        "description": "Releases a wave of energetic plasma that grows in power as it expands, but also zaps on contraction, slowing and dealing damage to enemy units caught in its path.",
+        "facet_effects": {
+          "secondary_activation": "Now reactivate itself within the Plasma Field upon cast with 0.8 second delay and 0.7 damage factor"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has a total 2.2-second expand and contract time",
+          "Interrupts Razor's channeling abilities upon cast",
+          "Centered on Razor upon cast for the entire duration",
+          "Grants a 2.2-second 700-radius flying vision following Razor upon cast"
+        ],
+        "interaction_notes": [
+          "Both the magical spell damage and movement speed slow component can affect the same enemy units twice",
+          "The ring starts 105-distance away from Razor, expands up to the max radius covering a total 805-distance",
+          "Does not affect invisible units"
+        ]
+      },
+      "ability_2": {
+        "name": "Static Link",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Heroes / Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "50/40/30/20",
+        "mana_cost": 65,
+        "cast_range": "550",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "800",
+        "details": "Creates a charged link between Razor and an enemy unit, the enemy unit loses attack damage incrementally while being linked to Razor.",
+        "description": "Creates a charged link between Razor and an enemy unit, the enemy unit loses attack damage incrementally while being linked to Razor.",
+        "facet_effects": {
+          "attack_while_moving": "Allows Razor to attack while moving with the link active. Grants Razor bonus attack damage incrementally while being linked to the enemy unit.",
+          "talent_upgrade": "The link now also transfers attack speed from the target to Razor",
+          "shard_upgrade": "Now additionally applies a percentage-based movement speed slow corresponding to the attack damage steal value. Increases cast range."
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Link breaks upon either unit's death or when exceeding 800 break distance",
+          "Grants shared vision over the affected enemy",
+          "Cannot be recast on the same link-affected enemy unit"
+        ],
+        "interaction_notes": [
+          "Considers clones, illusions, and creep-heroes as heroes",
+          "Eye of the Storm prioritizes damaging link-affected enemy units",
+          "Can affect different enemy units simultaneously"
+        ]
+      },
+      "ability_3": {
+        "name": "Storm Surge",
+        "key": "E",
+        "type": "passive",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "3",
+        "mana_cost": 0,
+        "cast_range": "700",
+        "cast_animation": "N/A",
+        "cast_radius": "700",
+        "details": "When attacked by an enemy, Razor has a chance to release a Forked Lightning that strikes the attacking source, prioritizing the attacker's unit-type.",
+        "description": "When attacked by an enemy, Razor has a chance to release a Forked Lightning that strikes the attacking source, prioritizing the attacker's unit-type.",
+        "facet_effects": {
+          "thunderhead": "While Eye of the Storm is active, Storm Surge procs more often (36% chance) and affects all enemy units within storm radius (500). Additionally reduces downtime to 0.5 seconds.",
+          "guaranteed_proc": "Has an ensured proc chance with a Global proc radius on the enemy source, when affected by an offensive unit-targeted ability on Razor"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Uses pseudo-random distribution",
+          "Has a fixed downtime upon proc that cannot be reset with cooldown reset sources",
+          "Forked Lightning searches for additional targets centered around the primary target"
+        ],
+        "interaction_notes": [
+          "Does not proc from building attacks",
+          "Spell damage is considered reflection damage, preventing spell lifesteal benefit",
+          "Affects fogged and invisible units when procced via offensive abilities"
+        ]
+      },
+      "ability_4": {
+        "name": "Eye of the Storm",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Physical"],
+        "cooldown": "80/70/60",
+        "mana_cost": "100/150/200",
+        "cast_range": "500",
+        "cast_animation": "0 + 0",
+        "cast_radius": "500",
+        "details": "A powerful lightning storm strikes out at enemy units with the lowest health, dealing damage and reducing their armor.",
+        "description": "A powerful lightning storm strikes out at enemy units with the lowest health, dealing damage and reducing their armor.",
+        "facet_effects": {
+          "thunderhead": "While Eye of the Storm is active, Storm Surge procs more often and affects all enemy units within storm radius",
+          "scepter_upgrade": "Creates two eyes within the storm to strike two different units at the same time, and it may now damage buildings"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Interrupts Razor's channeling abilities upon cast",
+          "Recasting creates another independent Eye of the Storm",
+          "Eye of the Storm ends upon Razor's death",
+          "While invisible, the Eye of the Storm is still functional and strikes are invisible"
+        ],
+        "interaction_notes": [
+          "Has strike priorities: Static Link debuffed units first, then lowest current health",
+          "Does not affect Roshan, Courier, fogged units, invisible units, ward-type units",
+          "Can strike up to max 42/50/60 times per cast"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": ["Increased Dynamo outgoing spell damage bonus per 20 attack damage from 1% to 1.25%"]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Storm Surge spell damage is now considered reflection damage",
+          "REWORKED Aghanim's Shard upgrade for Static Link",
+          "OLD: No longer pulls Razor and the linked target toward each other at 100 distance per second while active",
+          "REMOVED Static Link (Alt-Cast) functionality",
+          "NEW: Now applies a StackAmount as a percentage-based movement speed slow while active",
+          "Talents: LVL 10 +30 Plasma Field damage → +0.75s Plasma Field slow duration"
+        ]
+      },
+      {
+        "version": "7.37",
+        "date": "2024-07-31",
+        "changes": [
+          "Storm Surge Thunderhead now also reduces downtime from 3 to 2.5 while Eye of the Storm is active",
+          "Talents: LVL 15 -1s Storm Surge strike downtime → +12 strength"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

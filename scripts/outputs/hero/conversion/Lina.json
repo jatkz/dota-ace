@@ -1,0 +1,264 @@
+{
+  "hero_name": "Lina",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.4,
+      "agility": 23,
+      "agility_gain": 2.4,
+      "intelligence": 30,
+      "intelligence_gain": 3.8,
+      "health": 560,
+      "mana": 435,
+      "armor": 3.83,
+      "magic_resist": 28,
+      "damage": [51, 59],
+      "damage_avg": 55,
+      "projectile_speed": 1000,
+      "attack_type": "ranged",
+      "attack_range": 670,
+      "attack_speed": 100,
+      "bat": 1.6,
+      "animation": "0.65 + 0.6",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Carry, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Thermal Runaway",
+        "effects": "Sets Fiery Soul stacks to a certain value, supercharging Lina upon Laguna Blade cast."
+      },
+      "facet_2": {
+        "name": "Slow Burn",
+        "effects": "All Lina's spells now have a lower impact damage. However, it applies a portion of the impact damage as damage per second debuff as a trade-off."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Flame Cloak ability", "Lina ascends and grants herself unobstructed movement, spell damage amplification and bonus magic resistance", "Cloaking herself in flames, she supercharges herself up with Fiery Soul stacks while soaring through the skies"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants Lina an all damage barrier corresponding to the damage dealt by Laguna Blade"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+150% Fiery Soul Crit On Targets Affected By Spells", "+60% Combustion Overheat Damage"],
+        "level_20": ["+10 Fiery Soul Attack Speed per Stack, +1% Fiery Soul Move Speed per Stack", "-20s Laguna Blade Cooldown"],
+        "level_15": ["+150 Light Strike Array Damage", "+5% Fiery Soul Magic Resist per Stack"],
+        "level_10": ["-3s Dragon Slave Cooldown", "+25 Attack Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Combustion",
+          "type": "passive",
+          "description": "Lina's damage instances above a certain threshold cause affected enemy units to combust and overheat. Deals damage per proc to the enemy's allied units within the radius centered around the enemy unit.",
+          "values": {
+            "effect_radius": 400,
+            "damage_threshold": 175,
+            "damage_per_proc": "15/35/55/75",
+            "debuff_duration": 6
+          },
+          "details": "This ability levels up with Laguna Blade. Combustion is less effective on illusions."
+        },
+        {
+          "name": "Slow Burn",
+          "type": "passive",
+          "description": "All Lina's spells now have a lower impact damage. However, it applies a portion of the impact damage as damage per second debuff as a trade-off.",
+          "values": {
+            "impact_damage_factor": 0.6,
+            "impact_damage_to_dps": 0.217,
+            "debuff_duration": 3
+          },
+          "details": "Selecting the Slow Burn facet unlocks this ability. Increases all abilities' total spell damage by 25.1% with the selected facet."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Lina hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {
+            "z_axis_ascend": 100,
+            "ascend_speed": 350
+          },
+          "details": "She is considered a ground unit, despite its hero model showing otherwise. Flame Cloak only turns Lina into a flying unit."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Dragon Slave",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "11/10/9/8",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "800",
+        "cast_animation": "0.35 + 0.38",
+        "cast_radius": "275 first radius, 200 end radius",
+        "details": "Sends out a wave of fire that scorches every enemy in its path. Travel distance: 1075. Has 1200 projectile speed.",
+        "description": "Sends out a wave of fire that scorches every enemy in its path.",
+        "facet_effects": {
+          "slow_burn": {
+            "initial_damage": "51/99/147/195",
+            "damage_per_second": "18.445/35.805/53.165/70.525"
+          }
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Has reversed-cone area of effect", "Affects enemy units up to 1275 range away"],
+        "interaction_notes": ["When unit-targeted, launches toward unit position", "When point-targeted, launches according to facing angle"]
+      },
+      "ability_2": {
+        "name": "Light Strike Array",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "13/11/9/7",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "700",
+        "cast_animation": "0.45 + 0.67",
+        "cast_radius": "250",
+        "details": "Summons a column of flames that damages and stuns enemies. Effect delay: 0.5 seconds. Stun duration: 1/1.4/1.8/2.2.",
+        "description": "Summons a column of flames that damages and stuns enemies.",
+        "facet_effects": {
+          "slow_burn": {
+            "initial_damage": "66/96/126/156",
+            "damage_per_second": "23.87/34.72/45.57/56.42"
+          }
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Trees within effect radius are destroyed", "Visual and sound effects during delay are ally-only"],
+        "interaction_notes": ["Has two different cast animations", "Applies stun then damage"]
+      },
+      "ability_3": {
+        "name": "Fiery Soul",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "N/A",
+        "damage_types": [],
+        "cooldown": "N/A",
+        "mana_cost": "N/A",
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "Grants a stack of bonus attack speed and bonus movement speed per enemy unit affected per ability cast. Max stacks: 7. Stack duration: 18.",
+        "description": "Grants a stack of bonus attack speed and bonus movement speed per enemy unit affected per ability cast.",
+        "facet_effects": {
+          "thermal_runaway": {
+            "laguna_blade_stacks": "10/11/12",
+            "buff_duration": 5
+          }
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["1 stack per affected enemy per Dragon Slave/Light Strike Array cast", "Flame Cloak sets to 7 stacks", "Laguna Blade sets to 10/11/12 stacks with Thermal Runaway facet"],
+        "interaction_notes": ["Break sources disable stack gain but don't remove existing stacks", "Spell reflection sources grant stacks to Lina"]
+      },
+      "ability_4": {
+        "name": "Flame Cloak",
+        "key": "D",
+        "type": "active",
+        "affects": "Self",
+        "damage": "N/A",
+        "damage_types": [],
+        "cooldown": "25",
+        "mana_cost": "50",
+        "cast_range": "N/A",
+        "cast_animation": "0 + 0",
+        "cast_radius": "N/A",
+        "details": "Lina ascends and grants herself unobstructed movement, spell damage amplification and bonus magic resistance. Duration: 7. Magic resist bonus: 35%. Spell amp bonus: 35%.",
+        "description": "Lina ascends and grants herself unobstructed movement, spell damage amplification and bonus magic resistance.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Requires Aghanim's Scepter", "Sets Fiery Soul stacks to 7", "Grants unobstructed movement but not flying vision"],
+        "interaction_notes": ["Interrupts channeling abilities upon cast", "Rubick gets all effects except unobstructed movement when stolen"]
+      },
+      "ability_5": {
+        "name": "Laguna Blade",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "70/60/50",
+        "mana_cost": "150/300/450",
+        "cast_range": "600",
+        "cast_animation": "0.3 + 0.4",
+        "cast_radius": "N/A",
+        "details": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage. Effect delay: 0.25. Damage: 500/750/1000.",
+        "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.",
+        "facet_effects": {
+          "thermal_runaway": {
+            "set_stacks": "10/11/12",
+            "buff_duration": 5
+          },
+          "slow_burn": {
+            "initial_damage": "300/450/600",
+            "damage_per_second": "108.5/162.75/217"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["0.25 second effect delay", "Damage can be avoided with hidden/invulnerable/spell immune sources", "Cannot target couriers"],
+        "interaction_notes": ["Shard grants damage barrier equal to damage dealt", "Thermal Runaway facet sets Fiery Soul stacks and reduces to 7 after buff expires"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": ["CHANGED Slow Burn ability operations: Outgoing spell amplification now affects the total spell damage applied prior to the damage per second component is calculated"]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": ["Increased Combustion damage per proc from 10/30/50/70 to 15/35/55/75", "Increased Laguna Blade damage from 500/700/900 to 500/750/1000"]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": ["Reduced Light Strike Array mana cost from 100/115/130/145 to 100/110/120/130"]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

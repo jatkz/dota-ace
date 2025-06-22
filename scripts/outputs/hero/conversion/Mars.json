@@ -1,0 +1,209 @@
+{
+  "hero_name": "Mars",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 23,
+      "strength_gain": 3.7,
+      "agility": 20,
+      "agility_gain": 1.7,
+      "intelligence": 21,
+      "intelligence_gain": 2.2,
+      "health": 626,
+      "mana": 327,
+      "armor": 2.33,
+      "magic_resist": 27.1,
+      "damage": [49, 57],
+      "damage_avg": 53,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 250,
+      "attack_speed": 100,
+      "bat": 1.8,
+      "animation": "0.4 + 1.38",
+      "move_speed": 310,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Initiator, Disabler, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Victory Feast",
+        "effects": "Grants Mars and his allies inside the arena attack damage bonus for a short duration, additionally heals and restores mana, when an enemy hero dies within the Arena of Blood radius. The effect is lesser for ally heroes."
+      },
+      "facet_2": {
+        "name": "Blood Sport",
+        "effects": "The Arena of Blood now obscures vision outside the arena radius. Enemy units within the radius do not have shared vision with their allied units."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["When activated, Bulwark creates invulnerable soldiers on both sides of Mars. These soldiers move alongside Mars, deal damage based on Mars' attack damage, knockback, and slow affected enemies' movement speed.", "An enemy can only be attacked by one soldier at a time."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["As the Spear of Mars travels, it leaves a fire trail behind that deals damage over time and slows movement speed.", "Increases the amount of units impaled."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+180 Arena of Blood Ally Health Regen", "+65% God's Rebuke Critical Damage"],
+        "level_20": ["+0.4s Spear of Mars Stun", "-20s Arena of Blood Cooldown"],
+        "level_15": ["+100 Spear of Mars Damage", "-2s God's Rebuke Cooldown"],
+        "level_10": ["+20% Dauntless Health Regen Amp", "+100 God's Rebuke Cast Range/Effect Radius"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Dauntless",
+          "type": "passive",
+          "description": "Never outnumbered, Mars gets bonus health regeneration amplification the more enemy heroes are close to him.",
+          "values": {
+            "radius": 700,
+            "max_stacks": 5,
+            "health_regen_amp_per_enemy": "70% (90% with talent)"
+          },
+          "details": "The ability effects are applied as follows: The checks for valid enemy heroes per server tick within the radius. Grants a bonus health regeneration amplification stack per outnumbered enemy heroes within the radius. Considers enemy clones and creep-heroes as heroes, illusions as creeps."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Spear of Mars",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "14/13/12/11",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "Global",
+        "cast_animation": "0.25 + 0.15",
+        "cast_radius": "125",
+        "details": "Max Travel Distance: 900/1000/1100/1200, Impale Search Radius: 125, Number of Impaled Units: 1 (2 with shard), Damage: 100/175/250/325 (200/275/350/425 with talent), Knock Distance: 75, Knock Duration: 0.25, Stun Duration: 1.3/1.6/1.9/2.2 (1.7/2/2.3/2.6 with talent)",
+        "description": "Throws his spear and damages each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Spear of Mars automatically toggles Bulwark upon cast", "The spear projectile is created on Mars' current location and travels in a straight line", "Has a 1400-projectile speed"],
+        "interaction_notes": ["Does not affect enemy heroes behind Mars upon cast", "A spear may only impale 1 (2 with shard) valid enemy heroes at any given time", "Grants flying vision as the spear travels"]
+      },
+      "ability_2": {
+        "name": "God's Rebuke",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["Physical", "Instant Attack"],
+        "cooldown": "16/14/12/10 (14/12/10/8 with talent)",
+        "mana_cost": "90",
+        "cast_range": "500 (600 with talent)",
+        "cast_animation": "0.2 + 1.07",
+        "cast_radius": "500 (600 with talent)",
+        "details": "Effect Radius: 500 (600 with talent), Circle Sector Angle: 140°, Crit Damage: 150%/200%/250%/300% (215%/265%/315%/365% with talent), Knock Distance: 150, Knock Duration: 0.3, Move Speed Slow: 40%, Slow Duration: 2.5, Hero Attack Damage Bonus: 10/15/20/25",
+        "description": "Mars smashes enemies in front of him with his shield, knocking them back and damaging them with a critical hit based on his attack. Has True Strike.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["God's Rebuke is more effective when hitting enemy heroes", "When Bulwark is activated, God's Rebuke is applied at the locked facing direction", "Has True Strike", "Not affected by disarm sources"],
+        "interaction_notes": ["Procs any attack modifiers and on-cast effects as per normal, except cleave", "God's Rebuke is an ensured critical strike source", "Applies non-disabling knockback and movement speed slow on enemy units"]
+      },
+      "ability_3": {
+        "name": "Bulwark",
+        "key": "E",
+        "type": "passive/toggle",
+        "affects": "Self/Enemy Units",
+        "damage": "Instant Attack",
+        "damage_types": ["Instant Attack"],
+        "cooldown": "0.2",
+        "mana_cost": 0,
+        "cast_range": "N/A",
+        "cast_animation": "0 + 0",
+        "cast_radius": "N/A",
+        "details": "Front Angle: 140°, Side Angle: 240°, Front Damage Reduction: 40%/50%/60%/70%, Side Damage Reduction: 20%/25%/30%/35%, Attack Redirect Proc Chance: 70%, Front Redirect Range: 200, Back Redirect Range: 900, Self Move Speed Slow: 18%, Self Turn Rate Factor: 0",
+        "description": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides. When activated, Bulwark removes Mars' ability to attack, and locks the direction he is facing. Reduces Mars' movement speed and redirects a percentage of the attack projectiles aimed at allied units toward Mars instead.",
+        "facet_effects": {},
+        "ability_behavior": ["passive", "toggle"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Toggle does not interrupt Mars' channeling abilities", "The toggle state does not persist death", "The ability cooldown starts upon toggle off"],
+        "interaction_notes": ["Checks the damage source's current coordinates upon a successful offensive attack", "Stacks additively with other incoming damage manipulation sources", "Does not affect HP Removal sources"]
+      },
+      "ability_4": {
+        "name": "Arena of Blood",
+        "key": "R",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Magical",
+        "damage_types": ["Spell", "Magical"],
+        "cooldown": "90 (70 with talent)",
+        "mana_cost": "150/200/250",
+        "cast_range": "400",
+        "cast_animation": "0.2 + 0.97",
+        "cast_radius": "550",
+        "details": "Arena Radius: 550, Wall Width: 100, Effect Delay: 0.1, Arena Duration: 5/6/7, Aura Linger Duration: 0.5, Health Regen Bonus: 180 (with talent), Proc Distance: 160, Damage: 80/160/240, Attack Interval: 1, Knock Distance: 160, Knock Duration: 0.2, Slow Radius: 750, Facing Angle: 90°",
+        "description": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who blocks enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears of his undead warriors, dealing damage and knocking them back. Applies a movement speed slow aura to enemy units without flying movement while they are facing the arena's walls.",
+        "facet_effects": {
+          "victory_feast": "Grants Mars and his allies inside the arena attack damage bonus for a short duration, additionally heals and restores mana, when an enemy hero dies within the Arena of Blood radius. The effect is lesser for ally heroes.",
+          "blood_sport": "The Arena of Blood now obscures vision outside the arena radius. Enemy units within the radius do not have shared vision with their allied units."
+        },
+        "ability_behavior": ["area_target", "aura"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["0.1-seconds after cast, the 550-radius arena is created with a fixed formation at the point-targeted location", "Trees within 1100-radius are destroyed", "The arena does not consider flying movement units as valid enemy units"],
+        "interaction_notes": ["The arena walls blocks and negates offensive ranged, attack-damage based projectiles", "Grants flying vision centered around the arena", "Creates a negative movement speed slow aura centered in the arena"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Dauntless: Reduced radius from 900 to 700",
+          "Dauntless: Increased health regeneration amplification per enemy from 50% to 70%",
+          "Talents: LVL 10 +10% Dauntless health regeneration amplification per enemy increased to +20%"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Dauntless: Now only affects self",
+          "Dauntless: Reduced radius from 2000 to 900",
+          "Dauntless: Increased health regeneration amplification per enemy from 30% to 50%",
+          "Increased Arena of Blood Victory Feast ally ability effects factor from 0 to 0.5",
+          "Talents: LVL 10 +10%/+5% Bulwark front/side damage reduction → +10% Dauntless health regeneration amplification per enemy"
+        ]
+      },
+      {
+        "version": "7.37d",
+        "date": "2024-10-01",
+        "changes": [
+          "Talents: LVL 20 +0.6s Spear of Mars stun duration reduced to +0.4s"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 245678,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

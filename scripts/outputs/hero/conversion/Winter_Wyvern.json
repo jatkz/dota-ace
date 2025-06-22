@@ -1,0 +1,258 @@
+{
+  "hero_name": "Winter Wyvern",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 22,
+      "strength_gain": 2.5,
+      "agility": 16,
+      "agility_gain": 1.7,
+      "intelligence": 26,
+      "intelligence_gain": 3.6,
+      "health": 604,
+      "mana": 387,
+      "armor": 3.67,
+      "magic_resist": 27.6,
+      "damage": [40, 47],
+      "damage_avg": 43.5,
+      "projectile_speed": 700,
+      "attack_type": "ranged",
+      "attack_range": 425,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.25 + 0.8",
+      "move_speed": 285,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 1200",
+      "roles": "Support, Disabler, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Winterproof",
+        "effects": "Enables Cold Embrace casting on allied buildings. Applies physical damage immunity but does not heal buildings. Grants bonus attack damage for a brief duration when the embrace ends."
+      },
+      "facet_2": {
+        "name": "Recursive",
+        "effects": "Whenever the frozen enemy dies, all ability effects are applied on another enemy hero with the lowest current health within the radius. Has a lower recursive taunt duration."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Adds a toggle functionality to the ability that drains mana per second while active", "Removes the debuff limit per affected enemy", "Grants self movement speed bonus"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["When the embrace ends, a Splinter Blast of its corresponding level is released on the affected ally's location", "Hitting all enemy units within the radius", "Reduces cooldown"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1.25s Splinter Blast Stun", "+55 Winter's Curse Attack Speed"],
+        "level_20": ["+100 Splinter Blast Damage", "+17% Arctic Burn Slow"],
+        "level_15": ["+300 Splinter Blast Shatter Radius", "+3s Arctic Burn Debuff Duration"],
+        "level_10": ["+35 Attack Damage", "+25 Cold Embrace Heal per Second"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Eldwurm Scholar",
+          "type": "passive",
+          "description": "Grants a portion of the Shrine of Wisdom experience to allied heroes that would not benefit from it.",
+          "values": {
+            "max_affected_heroes": 3,
+            "total_exp_factor": 0.2
+          },
+          "details": "Other Experience Fountain notes apply."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "Auroth's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {
+            "z_axis_ascend": 150
+          },
+          "details": "Auroth is considered a ground unit, despite her hero model showing otherwise. Only Auroth and certain hero models ascend the z-axis and become a flying unit upon Arctic Burn cast."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Arctic Burn",
+        "key": "Q",
+        "type": "toggle",
+        "affects": "Self/Enemy Units",
+        "damage": "Spell/Magical",
+        "cooldown": "26/24/22/20",
+        "mana_cost": 100,
+        "cast_range": "N/A",
+        "cast_animation": "0 + 0",
+        "description": "Sets Auroth's attack point to a certain value, and grants herself unobstructed movement and bonus attack range. While soaring, Auroth imbues a blistering chill into each attack proportional to the affected enemy unit's current health, and applies a movement speed slow.",
+        "values": {
+          "set_attack_point": 0.1,
+          "attack_range_bonus": "275/300/325/350",
+          "attack_projectile_speed_bonus": 500,
+          "flying_duration": "7/8/9/10",
+          "move_speed_bonus": "25%",
+          "current_health_damage_per_second": "4%/6%/8%/10%",
+          "enemy_move_speed_slow": "16%/24%/32%/40%",
+          "debuff_applied_per_enemy": 1,
+          "debuff_duration": 5
+        },
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "ability_behavior": ["no_target", "toggle"],
+        "pierces_spell_immunity": false,
+        "dispellable": "yes",
+        "technical_details": [
+          "Interrupts Auroth's channeling abilities upon cast",
+          "Grants flying movement but not flying vision",
+          "Trees within 175 unit radius are destroyed at the end of duration while landing",
+          "Can only be applied once per enemy unit per ability cast"
+        ]
+      },
+      "ability_2": {
+        "name": "Splinter Blast",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell/Magical",
+        "cooldown": "6",
+        "mana_cost": "105/115/125/135",
+        "cast_range": "1150",
+        "cast_animation": "0.3 + 1.17",
+        "description": "Launches a projectile towards a unit and shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters to enemy units within the radius and slowing them.",
+        "values": {
+          "splinter_search_radius": 500,
+          "damage": "80/160/240/320",
+          "move_speed_slow": "28%/32%/36%/40%",
+          "slow_duration": 4,
+          "stun_duration": "1.25"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "dispellable": "yes",
+        "technical_details": [
+          "Cannot self-target",
+          "Only splintered secondary projectiles apply all ability effects",
+          "Has 1200 projectile speed",
+          "First projectile cannot be disjointed"
+        ]
+      },
+      "ability_3": {
+        "name": "Cold Embrace",
+        "key": "E",
+        "type": "active",
+        "affects": "Units",
+        "damage": "N/A",
+        "cooldown": "24/21/18/15",
+        "mana_cost": "50/60/70/80",
+        "cast_range": "850/900/950/1000",
+        "cast_animation": "0.3 + 0.63",
+        "description": "Encases the affected allied unit in a cocoon, healing it while preventing all physical damage instances.",
+        "values": {
+          "heal_per_second": "40/45/50/55",
+          "max_health_heal_bonus": "2.25%/3%/3.75%/4.5%",
+          "duration": 4
+        },
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "dispellable": "yes",
+        "facet_effects": {
+          "winterproof": {
+            "attack_damage_bonus": "60%",
+            "buff_duration": 6,
+            "enables_building_targeting": true
+          }
+        },
+        "technical_details": [
+          "Doubletap casts on self",
+          "Applies stun and physical damage immunity",
+          "Heals in 0.25-second intervals for 16 instances"
+        ]
+      },
+      "ability_4": {
+        "name": "Winter's Curse",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "N/A",
+        "cooldown": "100/90/80",
+        "mana_cost": "150/200/250",
+        "cast_range": "700/750/800",
+        "cast_animation": "0.3 + 1.37",
+        "description": "Dispels and stuns an enemy unit in place. Enemy units within the radius are striken with a maddening curse that causes them to attack their frozen ally with increased attack speed.",
+        "values": {
+          "radius": 525,
+          "enemy_attack_speed_bonus": 65,
+          "base_duration": 2,
+          "duration_increase_per_hero": 2,
+          "max_duration": "4/5.5/7",
+          "duration_increase_per_creep": 0.5,
+          "physical_damage_reduction": "100%",
+          "magical_damage_amp": "30%",
+          "pure_damage_amp": "30%"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "dispellable": "no",
+        "facet_effects": {
+          "recursive": {
+            "recursive_duration_factor": 0.5,
+            "reapplies_on_death": true
+          }
+        },
+        "technical_details": [
+          "Applies offensive basic dispel",
+          "Creates negative taunt aura",
+          "Disables buyback while active",
+          "Grants true sight over target"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "LVL 10 +30 attack damage increased to +35",
+          "LVL 15 +400 Splinter Blast radius reduced to +300",
+          "LVL 25 +1.5s Splinter Blast stun reduced to +1.25s"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Winter's Curse debuff-affected enemy unit no longer has physical damage immunity from Winter Wyvern",
+          "Increased cooldown from 85/80/75 to 100/90/80",
+          "Recursive facet no longer applies 125% damage amplification"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "No longer Universal hero, now Intelligence primary attribute",
+          "Increased base strength and gain from 20 + 2.2 to 22 + 2.5",
+          "Increased agility gain from 1.5 to 1.7",
+          "Increased intelligence gain from 2.8 to 3.6",
+          "Increased base attack damage from 0-5 to 14-21",
+          "Increased base attack speed from 90 to 100",
+          "Removed Essence of the Blueheart and Dragon Sight facets",
+          "Added Winterproof facet for Cold Embrace",
+          "Added Recursive facet for Winter's Curse"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

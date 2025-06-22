@@ -1,0 +1,254 @@
+{
+  "hero_name": "Gyrocopter",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 22,
+      "strength_gain": 2.5,
+      "agility": 25,
+      "agility_gain": 3.2,
+      "intelligence": 21,
+      "intelligence_gain": 2.4,
+      "health": 604,
+      "mana": 327,
+      "armor": 5.17,
+      "magic_resist": 27.1,
+      "damage": [43, 49],
+      "damage_avg": 46,
+      "projectile_speed": 3000,
+      "attack_type": "ranged",
+      "attack_range": 365,
+      "attack_speed": 125,
+      "bat": 1.7,
+      "animation": "0.2 + 0.1",
+      "move_speed": 320,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Secondary Strikes",
+        "effects": "Reduces strike interval by 0.2. Adds a secondary strike component to the missiles. If an enemy hero gets hit, a tracking missile is passively called on that specific enemy hero, reapplying all Call Down ability effects again with 0.5x Secondary Damage Factor."
+      },
+      "facet_2": {
+        "name": "Afterburner",
+        "effects": "Grants self movement speed bonus per Rocket hit on enemy heroes."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Adds a Side Gunner that passively attacks random enemy units, prioritizing the furthest unit away from Gyrocopter", "The Side Gunner is more effective while Flak Cannon is active"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["After a delay, Homing Missile now constantly fires Rocket Barrage corresponding to its level in a larger radius, prioritizing the Homing Missile target"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["-30s Call Down Cooldown", "-5s Flak Cannon Cooldown"],
+        "level_20": ["+14 Rocket Barrage Damage", "+3 Flak Cannon Attacks"],
+        "level_15": ["+25 Flak Cannon Damage", "+0.3s Homing Missile Stun Duration"],
+        "level_10": ["+175 Health", "+25% Homing Missile Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Chop Shop",
+          "type": "passive",
+          "description": "The Keen can disassemble most items at all times, and sell back any Recipe he has for a full cost.",
+          "values": {
+            "recipe_sellback_factor": 1
+          },
+          "details": "Cannot disassemble Hand of Midas and Divine Rapier"
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Aurel's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Gyrocopter is considered a ground unit, despite its hero model showing otherwise"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Rocket Barrage",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "7/6.5/6/5.5",
+        "mana_cost": 85,
+        "cast_range": "400",
+        "cast_animation": "0 + 0",
+        "cast_radius": "400",
+        "details": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter",
+        "description": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter.",
+        "facet_effects": {
+          "afterburner": "Grants self movement speed bonus per Rocket hit on enemy heroes. Move Speed Bonus per Hit: 1/2/3/4, Buff Duration: 4.5"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "All ability effects are applied immediately despite the visual effects",
+          "Cannot be disjointed",
+          "Interrupts Gyrocopter's channeling abilities upon cast",
+          "Temporary deactivates while Gyrocopter is hidden"
+        ],
+        "interaction_notes": [
+          "Enemy units are selected randomly within search radius",
+          "Does not affect fogged or invisible units",
+          "Leveling up ability does not update current instance"
+        ]
+      },
+      "ability_2": {
+        "name": "Homing Missile",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "30/24/18/12",
+        "mana_cost": "120/130/140/150",
+        "cast_range": "1050",
+        "cast_animation": "0 + 0",
+        "cast_radius": "400",
+        "details": "Fires a homing missile to seek the targeted enemy unit. Dealing damage and stunning when it impacts the target. Enemy units can destroy the missile before it reaches its target.",
+        "description": "Fires a homing missile to seek the targeted enemy unit. Dealing damage and stunning when it impacts the target.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Launch Delay: 2.5",
+          "Hit Count: 3",
+          "Damage: 90/180/270/360",
+          "Stun Duration: 1.3/1.7/2.1/2.5",
+          "Missile gains speed over time while traveling",
+          "Tower attacks are less effective on the Homing Missile"
+        ],
+        "interaction_notes": [
+          "Missile switches to secondary nearest valid target upon primary target's death",
+          "Grants 3.5-second 400-radius flying vision over hit target",
+          "Only hero attacks and tower attacks can damage the missile"
+        ]
+      },
+      "ability_3": {
+        "name": "Flak Cannon",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Instant Attack",
+        "damage_types": ["Physical"],
+        "cooldown": "26/24/22/20",
+        "mana_cost": "50/60/70/80",
+        "cast_range": "1250",
+        "cast_animation": "0 + 0",
+        "cast_radius": "1250",
+        "details": "Gyrocopter now has a limited amount of attacks that hits all enemy units within the radius. Attack modifiers only affects the primary attacked target.",
+        "description": "Gyrocopter now has a limited amount of attacks that hits all enemy units within the radius. Lasts until the attacks are used or until the duration ends.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Vision Bonus: 200",
+          "Search Radius: 1250",
+          "Number of Attacks: 4/5/6/7",
+          "Instant Attack Factor: 1",
+          "Duration: 12"
+        ],
+        "interaction_notes": [
+          "Interrupts Gyrocopter's channeling abilities upon cast",
+          "Instant attacks all enemies within radius upon attack point",
+          "Primary target is not affected by Flak Cannon"
+        ]
+      },
+      "ability_4": {
+        "name": "Call Down",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "90/75/60",
+        "mana_cost": "150/200/250",
+        "cast_range": "1000",
+        "cast_animation": "0.3 + 0.5",
+        "cast_radius": "400",
+        "details": "Call down a series of aerial missile strikes that slow and damage enemy units in a target area. Each strike has a distance from the previous one with a precised timed delay.",
+        "description": "Call down a series of aerial missile strikes that slow and damage enemy units in a target area.",
+        "facet_effects": {
+          "secondary_strikes": "Reduces strike interval to 0.8. Adds secondary strike component - if enemy hero gets hit, tracking missile is called on that hero, reapplying all Call Down effects with 0.5x damage factor"
+        },
+        "ability_behavior": ["point_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Missile Effect Radius: 400",
+          "Strike Distance: 500",
+          "Number of Strikes: 3",
+          "Strike Interval: 1",
+          "Damage: 250/425/600",
+          "Move Speed Slow: 50%",
+          "Slow Duration: 4"
+        ],
+        "interaction_notes": [
+          "Grants 2-second 400-radius flying vision at targeted location per missile impact",
+          "Subsequent missiles cannot be stopped once cast begins",
+          "Area indicator is visible to allies only"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced base armor from 2 to 1",
+          "Increased Rocket Barrage Afterburner buff duration from 4 to 4.5"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Rescaled base agility and gain from 26 + 3.1 to 25 + 3.2",
+          "Increased Flak Cannon mana cost from 40/50/60/70 to 50/60/70/80",
+          "Aghanim's Scepter upgrade: ADDED Side Gunner visual model and ability effects"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Rescaled Rocket Barrage mana cost from 75/80/85/90 to 85 on each level"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 45000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

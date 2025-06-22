@@ -1,0 +1,217 @@
+{
+  "hero_name": "Void Spirit",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 22,
+      "strength_gain": 2.6,
+      "agility": 21,
+      "agility_gain": 2.2,
+      "intelligence": 24,
+      "intelligence_gain": 3.1,
+      "health": 604,
+      "mana": 363,
+      "armor": 2.5,
+      "magic_resist": 27.4,
+      "damage": [52, 56],
+      "damage_avg": 54.15,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 200,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.78",
+      "move_speed": 290,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Sanctuary",
+        "effects": "Resonant Pulse wraps Inai in an all-damage barrier that gains increased damage absorption per enemy hero hit. +15/20/25/30 Barrier Bonus per Enemy Hit"
+      },
+      "facet_2": {
+        "name": "Call of the Void",
+        "effects": "Upon reassembling from Dissimilate, lesser Aether Remnants are created at a few portals furthest from the Void Spirit. These Aether Remnants at the furthest portals have a lesser search range, a shorter pull distance and duration, and deal less damage at its corresponding level. ×0.7 Remnant Ability Values"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Now applies silences to all affected enemy units, and is now a charged-based ability with a replenish time"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Enemy creeps within the Remnant's path no longer destroys the remnant, but deals damage per second to them corresponding to the total damage value", "Grants True Sight centered around the Remnant, and creates an additional watcher path that rotates around the remnant"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+2s Dissimilate Root Duration", "140% Astral Step Crit Damage"],
+        "level_20": ["-3s Astral Step Charge Restore Time", "Outer Dissimilate Ring"],
+        "level_15": ["+60 Aether Remnant Damage", "+20% Resonant Pulse Barrier"],
+        "level_10": ["+40 Resonant Pulse Damage", "+1.5 Mana Regen"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Intrinsic Edge",
+          "type": "passive",
+          "description": "Grants Inai additional secondary bonuses from all attributes.",
+          "values": {
+            "health_regen_bonus_per_str": 0.125,
+            "armor_bonus_per_agi": 0.208,
+            "mana_regen_bonus_per_int": 0.063,
+            "base_magic_resist_bonus_per_int": 0.125
+          },
+          "details": "Grants the following secondary bonuses per level: 0.325 health regeneration bonus, 0.4576 main armor bonus, 0.1953 mana regeneration bonus"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Aether Remnant",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "17/15/13/11",
+        "mana_cost": "75/80/85/90",
+        "cast_range": "850",
+        "cast_animation": "0 + 0.53",
+        "cast_radius": "130",
+        "details": "Dispatches a remnant that stands watch over an area-of-effect at the point-targeted location, facing the vector-targeted direction.",
+        "description": "The remnant pulls an enemy unit that crosses its gaze and damages it.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Remnant Speed: 900", "Remnant Watch Width: 130", "Watch Path Vision Radius: 200", "Activation Delay: 0.4", "Remnant Search Range: 450", "Damage: 90/140/190/240", "Pull Distance: 44%/50%/56%/62%", "Pull Duration: 1/1.2/1.4/1.6", "Remnant Duration: 20"],
+        "interaction_notes": ["The ability has two area-of-effect components", "Upon cast, the remnant moves to the point-targeted location at 900-speed", "0.4 seconds after casting, the remnant activates"]
+      },
+      "ability_2": {
+        "name": "Dissimilate",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "20/17/14/11",
+        "mana_cost": "130",
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0",
+        "cast_radius": "275",
+        "details": "Temporarily fades into the aether, creating a number of portals through which Inai can reassemble himself.",
+        "description": "Deals damage to all enemy units within the portal radius upon exit.",
+        "facet_effects": {
+          "call_of_the_void": "Upon reassembling from Dissimilate, lesser Aether Remnants are created at a few portals furthest from the Void Spirit"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Portal Radius: 275", "First Ring Radius: 520", "Number of First Ring Portals: 6", "Damage: 100/180/260/340", "Hidden Duration: 1.1"],
+        "interaction_notes": ["Creates 1 portal at Inai's current location upon cast", "The other 6 subsequent portals are created in a hexagon-shaped formation", "Can choose its reappearing portal with any issued order"]
+      },
+      "ability_3": {
+        "name": "Resonant Pulse",
+        "key": "E",
+        "type": "active",
+        "affects": "Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "18",
+        "mana_cost": "115/120/125/130",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "cast_radius": "500",
+        "details": "Swiftly creates a physical damage barrier and emits a single damaging pulse around Inai.",
+        "description": "Increases the barrier bonus per affected enemy hero.",
+        "facet_effects": {
+          "sanctuary": "Resonant Pulse wraps Inai in an all damage barrier instead"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Effect Radius: 500", "Damage: 60/110/160/210", "Base Damage Barrier: 25/50/75/100", "Barrier Duration: 10", "Barrier Bonus per Enemy Hero Hit: 35/50/65/80"],
+        "interaction_notes": ["All ability effects center at Inai's cast location and expand outward in 1200-speed", "Interrupts Inai's channeling abilities upon cast"]
+      },
+      "ability_4": {
+        "name": "Astral Step",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical", "Physical", "Instant Attack"],
+        "cooldown": "25/20/15",
+        "mana_cost": "90",
+        "cast_range": "Global",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "170",
+        "details": "Tears a rift through the astral plane to appear at the target location, slicing all enemy units along the path.",
+        "description": "This attack inflicts a void debuff that applies a movement speed slow, and then detonates.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Min Distance: 200", "Max Distance: 800/900/1000", "Path Width: 170", "Instant Attack Factor: 1", "Move Speed Slow: 40%/60%/80%", "Debuff Damage: 130/230/330", "Debuff Duration: 1.25"],
+        "interaction_notes": ["Immediately teleports Inai toward the point-targeted location", "Does not disjoint incoming projectiles", "The instant attack procs any attack modifiers"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased base agility from 19 to 21",
+          "Intrinsic Edge now displays the current ability values granted",
+          "Increased Aether Remnant damage from 85/135/185/235 to 90/140/190/240",
+          "Increased Resonant Pulse damage from 60/105/150/195 to 60/110/160/210",
+          "Aghanim's Shard upgrade: CHANGED Aether Remnant ability operations",
+          "Talents: LVL 10 +50 Aether Remnant damage → +40 Resonant Pulse damage",
+          "Talents: LVL 15 +70 Resonant Pulse damage → +60 Aether Remnant damage",
+          "Talents: LVL 15 +475 Aether Remnant True Sight radius → +20% Resonant Pulse damage barrier",
+          "Talents: LVL 20 -4s Astral Step charge restore time reduced to -3s"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased base strength and gain from 21 + 2.3 to 22 + 2.6",
+          "Increased intelligence gain from 2.5 to 3.1",
+          "Increased base attack damage from 4‒8 to 22‒26",
+          "Increased Aether Remnant damage from 70/120/170/220 to 85/135/185/235"
+        ]
+      },
+      {
+        "version": "7.37b",
+        "date": "2024-08-14",
+        "changes": [
+          "Dissimilate Call of the Void: Aether Remnant increased pull duration factor from 0.6 to 0.7",
+          "Dissimilate Call of the Void: Aether Remnant increased damage factor from 0.6 to 0.7"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 150000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

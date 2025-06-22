@@ -1,0 +1,306 @@
+{
+  "hero_name": "Treant Protector",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 25,
+      "strength_gain": 3.4,
+      "agility": 15,
+      "agility_gain": 1.8,
+      "intelligence": 20,
+      "intelligence_gain": 1.8,
+      "health": 670,
+      "mana": 315,
+      "armor": 1.5,
+      "magic_resist": 27,
+      "damage": [85, 93],
+      "damage_avg": 89,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.9,
+      "animation": "0.6 + 0.4",
+      "move_speed": 280,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Initiator, Durable, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Primeval Power",
+        "effects": "Grants Treant bonus base attack damage per hero level."
+      },
+      "facet_2": {
+        "name": "Sapling",
+        "effects": "Leech Seed can be ground targeted, planting a tree that heals allies and damages all enemy units within the radius. If the tree is cut down, it regrows on the next ability interval."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Eyes In The Forest ability",
+          "Treant enchants a tree, which grants him unobstructed vision in that location",
+          "The presence of the protector himself globally causes all trees to respawn faster under certain conditions"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Treant become invisible near trees and root enemies upon breaking invisible",
+          "The on-attack root applies a longer root duration if the attack was made near a tree",
+          "Additionally deals damage over time corresponding to Treant's base attack damage value"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+450 Living Armor Radius", "-35s Overgrowth Cooldown"],
+        "level_20": ["+45 Leech Seed Damage/Heal", "+8 Living Armor Bonus Armor"],
+        "level_15": ["+25 Nature's Grasp Damage", "+18% Leech Seed Slow"],
+        "level_10": ["+2.5% Nature's Guise Move Speed", "+2 Living Armor Heal per Second"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Nature's Guise",
+          "type": "passive",
+          "description": "Grants Treant a tree-walking buff whenever he hasn't taken damage for a period of time. Nearby trees and Nature's Grasp grants Treant bonus movement speed.",
+          "values": {
+            "tree_search_radius": 200,
+            "move_speed_bonus": "10% (12.5% with Primeval Power)",
+            "downtime": 2.75,
+            "fade_delay": 0,
+            "invisibility_linger_duration": 0.75,
+            "root_duration": 1,
+            "near_tree_root_duration": 2
+          },
+          "details": "Player-based damage instance regardless of factions disables the ability for a fixed duration. Can be reset with cooldown reset sources."
+        },
+        {
+          "name": "Primeval Power",
+          "type": "passive",
+          "description": "Grants Treant bonus base attack damage per hero level.",
+          "values": {
+            "base_attack_damage_bonus_per_level": 6
+          },
+          "details": "This ability levels up with Treant Protector."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Treant's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {
+            "effect_radius": "Global",
+            "set_tree_respawn_time": 10
+          },
+          "details": "The presence of the protector himself globally causes all trees to respawn faster under certain conditions."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Nature's Grasp",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "cooldown": "20/19/18/17",
+        "mana_cost": 90,
+        "cast_range": "1500",
+        "cast_animation": "0.2 + 0.7",
+        "cast_radius": "135",
+        "details": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through.",
+        "description": "Creates vines towards the target location. Vines slow down and deal damage to enemies that walk through.",
+        "facet_effects": {
+          "tree_contact_damage_factor": 1.5,
+          "creep_damage_factor": 0.5
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Max Vines Length: 1500",
+          "Vines Radius: 135",
+          "Damage per Second: 30/40/50/60 (55/65/75/85 with Primeval Power)",
+          "Move Speed Slow: 25%/30%/35%/40%",
+          "Vines Duration: 9/10/11/12",
+          "Aura Linger Duration: 0.5"
+        ],
+        "interaction_notes": [
+          "Nature's Guise considers the created vines as trees",
+          "Nature's Grasp is less effective on creeps"
+        ]
+      },
+      "ability_2": {
+        "name": "Leech Seed",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "cooldown": "24/20/16/12",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "400/450/500/550",
+        "cast_animation": "0.3 + 0.2",
+        "details": "Plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it.",
+        "description": "Plants a life-sapping seed in an enemy unit, draining its health, while simultaneously slowing it.",
+        "facet_effects": {
+          "sapling": "Leech Seed can be ground targeted, planting a tree that heals allies and damages all enemy units within the radius",
+          "creep_heal_factor": 0.5,
+          "creep_damage_factor": 0.5
+        },
+        "ability_behavior": ["unit_target", "point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage per Second: 15/30/45/60 (60/75/90/105 with Sapling)",
+          "Move Speed Slow: 8%/14%/20%/26% (26%/32%/38%/44% with Sapling)",
+          "Duration: 5",
+          "Search Radius: 650",
+          "Ally Heal per Pulse: 15/30/45/60 (60/75/90/105 with Sapling)"
+        ],
+        "interaction_notes": [
+          "The planted seed heals friendly units around the target",
+          "The heal component is less effective on creeps"
+        ]
+      },
+      "ability_3": {
+        "name": "Living Armor",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "None",
+        "cooldown": "30/25/20/15",
+        "mana_cost": "40/45/50/55",
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0.66",
+        "details": "Infuses an allied hero with a protective coating which heals and grants bonus armor.",
+        "description": "Infuses an allied hero with a protective coating which heals and grants bonus armor.",
+        "facet_effects": {
+          "building_bonus_factor": 1,
+          "talent_radius": 450
+        },
+        "ability_behavior": ["unit_target", "point_target", "area_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Heal per Second: 3/4/5/6 (5/6/7/8 with talent)",
+          "Armor Bonus: 4/6/8/10 (12/14/16/18 with talent)",
+          "Duration: 18/22/26/30"
+        ],
+        "interaction_notes": [
+          "All ability effects can be applied on buildings",
+          "The ground-targeted ability cast attempts and prioritizes buildings",
+          "Living Armor is now an area-targeted ability with talent upgrade"
+        ]
+      },
+      "ability_4": {
+        "name": "Eyes In The Forest",
+        "key": "D",
+        "type": "active",
+        "affects": "Trees / Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "40",
+        "mana_cost": "3",
+        "cast_range": "160",
+        "cast_animation": "0.2 + 0.83",
+        "details": "Treant enchants a tree, which grants him unobstructed vision in that location.",
+        "description": "Treant enchants a tree, which grants him unobstructed vision in that location.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Flying Vision Radius: 800",
+          "Duration: Permanent",
+          "Effect Radius: 800",
+          "Overgrowth Duration: 3/4/5"
+        ],
+        "interaction_notes": [
+          "When Overgrowth is cast, units within the radius of an enchanted tree will be entangled and damaged",
+          "Requires Aghanim's Scepter to unlock this ability"
+        ]
+      },
+      "ability_5": {
+        "name": "Overgrowth",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units / Enchanted Trees",
+        "damage": "Spell / Magical",
+        "cooldown": "110/100/90 (75/65/55 with talent)",
+        "mana_cost": "200/250/300",
+        "cast_range": "No Target",
+        "cast_animation": "0.5 + 1.17",
+        "details": "Summons an overgrowth of vines and branches around Treant that prevent afflicted enemy units from moving, blinking, going invisible, or attacking.",
+        "description": "Summons an overgrowth of vines and branches around Treant that prevent afflicted enemy units from moving, blinking, going invisible, or attacking.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effect Radius: 800",
+          "Damage per Second: 85",
+          "Root Duration: 3/4/5",
+          "Disarm Duration: 3/4/5",
+          "Debuff Duration: 3/4/5"
+        ],
+        "interaction_notes": [
+          "Issues an offensive stop command upon debuff application",
+          "Applies Disarm, Root, and True Sight effects",
+          "With Aghanim's Scepter, also affects enemy units within radius of enchanted trees"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Nature's Guise downtime from 3 to 2.75",
+          "Increased Living Armor duration from 15/20/25/30 to 18/22/26/30",
+          "Reduced Overgrowth cooldown from 120/110/100 to 110/100/90"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Living Armor: Increased heal per second from 2/3/4/5 to 3/4/5/6",
+          "Living Armor: Reduced mana cost from 55 from each level to 40/45/50/55",
+          "Aghanim's Shard upgrade: Nature's Guise no longer applies the fade delay component while attacking an enemy unit",
+          "Talents: LVL 10 -4s Nature's Grasp cooldown → +2.5% Nature's Guise movement speed"
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Increased Primeval Power base attack damage bonus per level from 5 to 6"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "hero_name": "Omniknight",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 22,
+      "strength_gain": 3.1,
+      "agility": 15,
+      "agility_gain": 2,
+      "intelligence": 16,
+      "intelligence_gain": 2.1,
+      "health": 604,
+      "mana": 267,
+      "armor": 4.5,
+      "magic_resist": 26.6,
+      "damage": [53, 63],
+      "damage_avg": 58,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.433 + 0.567",
+      "move_speed": 310,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Durable, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Omnipresent",
+        "effects": "Degen Aura additionally applies an enemy unique incoming damage amplification on affected enemy units. This affects all enemy incoming damage sourced to Omniknight."
+      },
+      "facet_2": {
+        "name": "Healing Hammer",
+        "effects": "The all seeing one converts all spell damage dealt into self heal per second."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants heal amplification, health regeneration amplification, and affect buildings", "Increases radius, and cast range"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Applies a secondary, less effective Purification instance after a short delay"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+75% Hammer of Purity Damage", "+160 Purification Damage/Heal"],
+        "level_20": ["-3s Purification Cooldown", "+2s Guardian Angel Duration"],
+        "level_15": ["-20s Guardian Angel Cooldown", "+5 Repel Strength/Health Regen per Debuff"],
+        "level_10": ["+35 Base Attack Damage", "+1s Repel Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Degen Aura",
+          "type": "passive",
+          "description": "Grants self an aura that applies movement speed slow to enemy units within the radius.",
+          "values": {
+            "radius": 325,
+            "move_speed_slow": "10%/20%/30%/40%",
+            "aura_linger_duration": 1
+          },
+          "details": "This ability levels up with Guardian Angel. The holy embodiment of Purist Thunderwrath is enough to weaken those of lesser faith."
+        },
+        {
+          "name": "Healing Hammer",
+          "type": "passive",
+          "description": "The all seeing one converts all spell damage dealt into self heal per second.",
+          "values": {
+            "spell_damage_to_heal_factor": 0.2,
+            "damage_threshold": 0,
+            "damage_timer": 1,
+            "duration": 5
+          },
+          "details": "Selecting the Healing Hammer facet unlocks this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Purification",
+        "key": "Q",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Pure",
+        "damage_types": ["spell", "pure"],
+        "cooldown": "15/14/13/12",
+        "mana_cost": "90/105/120/135",
+        "cast_range": "600",
+        "cast_animation": "0.2 + 1.4",
+        "cast_radius": "260",
+        "details": "Damage Radius: 260, Damage: 90/160/230/300, Heal: 90/160/230/300",
+        "description": "Instantly heals a friendly unit and damages all nearby enemy units.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Applies pure spell damage within radius centered around the unit-targeted ally", "Cannot cast on ward-type units"],
+        "interaction_notes": ["Doubletap casts the ability on Omniknight", "Affects fogged and invisible units"]
+      },
+      "ability_2": {
+        "name": "Repel",
+        "key": "W",
+        "type": "active",
+        "affects": "Allied Heroes",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "55/50/45/40",
+        "mana_cost": "90/105/120/135",
+        "cast_range": "700",
+        "cast_animation": "0.3 + 1.33",
+        "details": "Base Str Bonus: 7/14/21/28, Base Health Regen Bonus: 8/12/16/20, Str Bonus per Debuff: 3/4/5/6, Health Regen Bonus per Debuff: 3/4/5/6, Magic Resist Bonus: 60%, Debuff Immune Duration: 5",
+        "description": "Grants debuff immunity to the targeted allied hero. The buff additionally grants bonus strength and health regeneration corresponding to the amount of current active debuffs on them.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Only affects allied heroes including clones, illusions, and creep-heroes", "Grants strength bonus to Spirit Bear"],
+        "interaction_notes": ["Doubletap casts this ability on Omniknight", "Reapplying the buff refreshes duration and updates ability values"]
+      },
+      "ability_3": {
+        "name": "Hammer of Purity",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Pure",
+        "damage_types": ["spell", "pure"],
+        "cooldown": "20/15/10/5",
+        "mana_cost": "0",
+        "cast_range": "225",
+        "cast_animation": "0.433 + 0.567",
+        "details": "Base Damage: 25/50/75/100, Main Attack Damage to Damage Factor: 1.55/1.7/1.85/2, Move Speed Slow: 75%, Slow Duration: 0.2",
+        "description": "Grants bonus attack range while dealing additional pure spell damage corresponding to a portion of Omniknight's main attack damage for one attack.",
+        "facet_effects": {},
+        "ability_behavior": ["autocast", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Active attack modifier", "Cast Range = Hero Attack Range + 75", "Grants 75 attack range bonus upon cast"],
+        "interaction_notes": ["Non-functional on illusions", "Cannot be acquired by Spell Steal"]
+      },
+      "ability_4": {
+        "name": "Guardian Angel",
+        "key": "R",
+        "type": "active",
+        "affects": "Allied Units / Buildings",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "110/100/90",
+        "mana_cost": "125/175/225",
+        "cast_range": "600",
+        "cast_animation": "0.4 + 1.07",
+        "cast_radius": "400",
+        "details": "Radius: 400, Duration: 5/6/7",
+        "description": "Grants allied units within the area-targeted location physical damage immunity.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Cannot be cast on buildings without Scepter", "Cannot affect couriers, hidden units, invulnerable units, ward-type units"],
+        "interaction_notes": ["Doubletap casts the ability on Omniknight", "Considers clones, illusions, and creep-heroes as heroes"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Hammer of Purity: Reduced base damage from 40/60/80/100 to 25/50/75/100",
+          "Hammer of Purity: Increased cooldown from 16/12/8/4 to 20/15/10/5"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Hammer of Purity: Now grants 75 attack range bonus upon the cast point",
+          "Hammer of Purity: Now applies an on-hit 0.2-second 75% movement speed slow",
+          "Hammer of Purity: Reduced mana cost from 30/35/40/45 to 0 on each level"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Degen Aura Omnipresent debuff interval from 0.3 to 0.25",
+          "Reduced Purification cooldown from 18/16/14/12 to 15/14/13/12"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

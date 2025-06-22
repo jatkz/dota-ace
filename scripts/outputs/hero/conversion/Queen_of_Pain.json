@@ -1,0 +1,276 @@
+{
+  "hero_name": "Queen of Pain",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.4,
+      "agility": 22,
+      "agility_gain": 2.5,
+      "intelligence": 25,
+      "intelligence_gain": 3.4,
+      "health": 560,
+      "mana": 375,
+      "armor": 3.67,
+      "magic_resist": 27.5,
+      "damage": [51, 57],
+      "damage_avg": 54,
+      "projectile_speed": 1500,
+      "attack_type": "ranged",
+      "attack_range": 550,
+      "attack_speed": 100,
+      "bat": 1.5,
+      "animation": "0.56 + 0.41",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Masochist",
+        "effects": "Grants Akasha spell amplification bonus with a cost of some of her life blood."
+      },
+      "facet_2": {
+        "name": "Bondage",
+        "effects": "Returns a portion of the spell damage she receives back to its source within the radius. Additionally, Spell Lifesteal now also works with both reflected magical damage and reflected pure damage for Akasha."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Shadow Strike now hits all enemy units within the radius.",
+          "When the Shadow Strike debuff expires or whenever it is reapplied, the affected enemy unit emits a Scream of Pain of its corresponding level centered around itself."
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Releases a sonic boom, deals damage and silences affected enemy units within the radius when Akasha blinks, at both her starting and ending locations."
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+250 Sonic Wave Damage", "-2s Blink Cooldown"],
+        "level_20": ["-45s Sonic Wave Cooldown", "+100 Scream of Pain Damage"],
+        "level_15": ["+30 Attack Damage", "-1s Shadow Strike Damage Interval"],
+        "level_10": ["+7 Strength", "+35 Shadow Strike Attack Speed"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Succubus",
+          "type": "passive",
+          "description": "The closer the enemy units, the stronger the Akasha's spell lifesteal for herself is. Spell Lifesteal also works with Pure damage sourced to Akasha.",
+          "values": {
+            "min_bonus_radius": 800,
+            "proximity_radius": 300,
+            "min_spell_lifesteal_bonus": "2%",
+            "proximity_spell_lifesteal_bonus": "14%",
+            "aura_linger_duration": 0.5,
+            "spell_lifesteal_factor": 0.2
+          },
+          "details": "Stacks additively with other spell lifesteal sources. The spell lifesteal value reduces by 2.4% per 100-distance between Akasha and the affected enemy unit up to the min bonus radius."
+        },
+        {
+          "name": "Masochist",
+          "type": "passive",
+          "description": "Grants Akasha spell amplification bonus with a cost of some of her life blood.",
+          "values": {
+            "spell_damage_amp": "14%",
+            "self_damage_per_outgoing_spell_damage": "27%"
+          },
+          "details": "The self-damage is non-lethal and deals the same spell damage type as the ability cast. Does not affect illusions."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Shadow Strike",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "13/10/7/4",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "450/500/550/600",
+        "cast_animation": "0.3 + 0.77",
+        "cast_radius": "375",
+        "details": "Hurls a poisoned dagger that deals first damage to the unit-targeted enemy, then applies damage over time with a movement speed slow.",
+        "description": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims.",
+        "facet_effects": {
+          "first_damage": "50/80/110/140",
+          "move_speed_slow": "25%/35%/45%/55%",
+          "duration": 16,
+          "instance_interval": "3 (2 with talent)",
+          "damage_per_instance": "20/40/60/80",
+          "max_health_threshold": "25%"
+        },
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has 900-projectile speed",
+          "Can travel a max 2/1.8/1.64/1.5 seconds corresponding to the target's current location",
+          "A dagger visibly appears on the debuff-affected enemy unit, visible to everyone"
+        ],
+        "interaction_notes": [
+          "No longer proc Spell Block sources",
+          "No longer proc Spell Reflection sources",
+          "The passive Scream of Pain cast by the affected enemy unit(s) do not proc on-cast effects"
+        ]
+      },
+      "ability_2": {
+        "name": "Blink",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "12/10/8/6",
+        "mana_cost": 65,
+        "cast_range": "Global",
+        "cast_animation": "0.33 + 0.07",
+        "cast_radius": "300",
+        "details": "Short distance teleportation that allows Akasha to move in and out of combat.",
+        "description": "The Secret Queen lives up to her title, making her pain impossible to escape.",
+        "facet_effects": {
+          "min_distance": 200,
+          "max_distance": "1075/1150/1225/1300"
+        },
+        "ability_behavior": ["point_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Disjoints incoming projectiles upon cast",
+          "Utilizes the teleport mechanic",
+          "When point-targeted beyond the min or max distance, Blink teleports Akasha toward the min or max distance respectively"
+        ],
+        "interaction_notes": [
+          "Multiple overlapping Blink radius stack, enemy units within both the start and end location can be affected twice"
+        ]
+      },
+      "ability_3": {
+        "name": "Scream of Pain",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "7.5/7/6.5/6",
+        "mana_cost": 120,
+        "cast_range": "600",
+        "cast_animation": "0 + 0.63",
+        "cast_radius": "600",
+        "details": "Let loose a piercing scream around Akasha, damaging nearby enemies.",
+        "description": "The sultry voice of Akasha beckons her opponents while stealing their souls.",
+        "facet_effects": {
+          "search_radius": 600,
+          "damage": "75/150/225/300"
+        },
+        "ability_behavior": ["no_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Each projectile has a 900-projectile speed",
+          "Can travel up to a max 1.5 seconds based on the location within the radius of the affected enemy unit"
+        ],
+        "interaction_notes": [
+          "Affects Fogged units and Invisible units",
+          "Does not affect Hidden units and Invulnerable units"
+        ]
+      },
+      "ability_4": {
+        "name": "Sonic Wave",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Pure",
+        "damage_types": ["Pure"],
+        "cooldown": "100/95/80",
+        "mana_cost": "250/400/550",
+        "cast_range": "700",
+        "cast_animation": "0.452 + 0.9",
+        "cast_radius": "450",
+        "details": "Creates a gigantic wave of sound in front of Akasha, dealing heavy damage to all enemy units in its wake and pushing them back.",
+        "description": "Her most exquisite of all of torments, Akasha's Sonic Wave puts her poor foes out of their misery.",
+        "facet_effects": {
+          "first_radius": 100,
+          "travel_distance": 900,
+          "end_radius": 450,
+          "knock_distance": 350,
+          "total_damage": "350/500/650",
+          "debuff_duration": 1.4
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Can affect enemy units at max 1350-distance away with the travel distance and end radius",
+          "The wave travels at 900-speed, reaching max distance in 1 seconds",
+          "Deals 25/35.71/46.43 pure spell damage in 0.1-second intervals, over 14 damage instances"
+        ],
+        "interaction_notes": [
+          "Applies a non-disabling fixed 350-distance knockback to all affected units",
+          "Can push enemy units over impassable terrain",
+          "Trees within a 200-radius centered around all debuff-affected enemy units are destroyed"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Succubus Bondage spell damage reflected from 15% to 20%.",
+          "Rescaled Shadow Strike movement speed slow from 20%/35%/50%/65% to 25%/35%/45%/65%."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "REPLACED Bondage with Succubus.",
+          "OLD Grants a 1200-radius aura that returns 0.5 * SpellDmg DamageTaken damage.",
+          "NEW All spell lifesteal sourced to Queen of Pain now includes and interacts with pure damage sourced to her.",
+          "Has a 2% and 14% min to max spell lifesteal bonus.",
+          "ADDED new Bondage facet.",
+          "Increased Masochist self damage per outgoing spell damage from 21% to 27%.",
+          "Increased Shadow Strike first damage from 30/60/90/120 to 50/80/110/140.",
+          "Aghanim's Scepter upgrade: No longer increases Shadow Strike first damage by 50."
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Masochist: Reduced spell amplification bonus from 15% to 14%.",
+          "Increased self damage per outgoing spell damage from 20% to 21%.",
+          "Talents: LVL 10 +8 strength reduced to +7."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

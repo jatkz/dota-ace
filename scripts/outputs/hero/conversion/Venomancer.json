@@ -1,0 +1,213 @@
+{
+  "hero_name": "Venomancer",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 19,
+      "strength_gain": 2.1,
+      "agility": 24,
+      "agility_gain": 2.8,
+      "intelligence": 19,
+      "intelligence_gain": 1.8,
+      "health": 538,
+      "mana": 303,
+      "armor": 4,
+      "magic_resist": 26.9,
+      "damage": [45, 48],
+      "damage_avg": 47.4,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 450,
+      "attack_speed": 115,
+      "bat": 1.7,
+      "animation": "0.3 + 0.7",
+      "move_speed": 280,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Initiator, Pusher, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Patient Zero",
+        "effects": "Noxious Plague now spreads twice. +1 Number of Spreads"
+      },
+      "facet_2": {
+        "name": "Plague Carrier",
+        "effects": "Enables casting Plague Ward on allied units, attaching wards to them. Although these attached units are untargetable, they die one at a time upon the host receiving a certain amount of damage, and granting a lesser gold bounty. Plague Ward is now a charge-based ability."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Increases base damage applied per debuff on the attacked enemy unit"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Dispelling the Venomous Gale debuff now deals damage and stuns the unit"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["2.5x Plague Ward Health/Damage", "+200 Noxious Plague Attack Speed Slow Aura"],
+        "level_20": ["+50 Base Damage", "+1% Noxious Plague Max Health as Damage"],
+        "level_15": ["+5% Poison Sting Move Speed Slow", "-1s Plague Ward Cooldown"],
+        "level_10": ["+15% Poison Sting Health Regen Reduction", "-5 Venomous Gale Cooldown"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Septic Shock",
+          "type": "passive",
+          "description": "Attacks deal extra magical damage based on the current amount of debuffs sourced from Venomancer on the attacked target.",
+          "values": {
+            "main_attack_damage_to_spell_damage_factor": "0.1 (0.25 with Aghanim's Scepter)"
+          },
+          "details": "Each successful attack applies a separate magical spell damage instance based on the number of debuffs sourced to Venomancer"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Venomous Gale",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "21/20/19/18",
+        "mana_cost": "95/105/115/125",
+        "cast_range": "800",
+        "cast_animation": "0 + 0.57",
+        "cast_radius": "125",
+        "details": "Max Travel Distance: 850, Gale Radius: 125, First Damage: 25/50/75/100, Number of Instance: 5, Damage per Instance: 10/40/70/100, Move Speed Slow: 35%/40%/45%/50%, Duration: 15",
+        "description": "Launches a ball of venom in a line. The venom-spit deals an initial damage, then applies a damage over time poison with movement speed slow to all affected enemy units. Units affected regain their movement speed gradually.",
+        "facet_effects": {
+          "plague_carrier": "Creates Plague Ward per enemy hero hit along the Venomous Gale trajectory"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["The projectile has a 1.41-second travel time to max distance", "Grants a non-lingering 280-radius flying vision as the projectile travels"],
+        "interaction_notes": ["An enemy hero with less than the max threshold value can be denied with the debuff active", "Max Health Threshold: 25%"]
+      },
+      "ability_2": {
+        "name": "Poison Sting",
+        "key": "W",
+        "type": "passive",
+        "affects": "Enemy Units / Plague Ward",
+        "damage": "Spell / Magical / HP Removal",
+        "damage_types": ["magical", "hp_removal"],
+        "cooldown": "N/A",
+        "mana_cost": "N/A",
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "Damage per Second: 8/16/24/32, Move Speed Slow: 8%/10%/12%/14%, Duration: 6/9/12/15, Ward Spell Damage Factor: 0.5",
+        "description": "Imbues Venomancer's attack with poison damage and applies a movement speed slow.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Plague Ward's attacks apply all ability effects, albeit with reduced damage", "Both Venomancer's and the Plague Ward's instances of Poison Sting are independent of each other"],
+        "interaction_notes": ["Deals magical spell damage in 1-second intervals, starting 1 second upon debuff application"]
+      },
+      "ability_3": {
+        "name": "Plague Ward",
+        "key": "E",
+        "type": "active",
+        "affects": "Plague Ward",
+        "damage": "Instant Kill",
+        "damage_types": ["instant_kill"],
+        "cooldown": "5",
+        "mana_cost": "21/24/27/30",
+        "cast_range": "850",
+        "cast_animation": "0 + 0.63",
+        "cast_radius": "N/A",
+        "details": "Ward Duration: 40, Ward Health: 150/250/350/450, Ward Damage: 14/23/30/38, Attack Range: 800, Vision Range: 600",
+        "description": "Summons a Plague Ward to attack enemy unit and buildings.",
+        "facet_effects": {
+          "plague_carrier": "Plague Ward is now a charge-based ability. Enables casting Plague Ward on allied units, attaching wards to them."
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Although the ward's attacks are physical attack damage by nature, it is not affected by damage block sources", "The ward has a lower target priority than units and heroes"],
+        "interaction_notes": ["Can be controlled and issued orders", "Has a Spell Immunity buff"]
+      },
+      "ability_4": {
+        "name": "Noxious Plague",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "100/90/80",
+        "mana_cost": "200/300/400",
+        "cast_range": "900",
+        "cast_animation": "0.15 + 0.72",
+        "cast_radius": "800",
+        "details": "Spread Radius: 800, Number of Spreads: 1, Impact Damage: 200/300/400, Max Health as Damage per Second: 3%/4%/5%, Debuff Duration: 5",
+        "description": "Infects an enemy unit with a deadly plague that applies impact damage and additional damage over time based on the unit's max health. When the affected enemy unit dies or the debuff expires, all other enemy units within the radius are infected with a non-contagious plague.",
+        "facet_effects": {
+          "patient_zero": "Noxious Plague now spreads twice. Number of Spreads: 2"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["The plague applies a movement speed slow aura centered on the affected unit", "Min Effect Radius: 800, Min Move Speed Slow: 15%, Max Move Speed Slow: 50%"],
+        "interaction_notes": ["Applies a magical spell damage instance upon projectile impact", "Creates a negative aura centered around the primary unit-targeted enemy"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "ADDED new Plague Carrier facet for Septic Shock - Now considers debuffs applied from the Plague Ward as well",
+          "ADDED new Plague Carrier facet for Venomous Gale - Now summons 2 Plague Wards based on its current level around hit enemy heroes",
+          "Plague Ward: Increased health from 120/230/340/450 to 150/250/350/450",
+          "Plague Ward: Rescaled gold bounty from 15/17/19/21 to 10/14/18/22",
+          "Aghanim's Scepter upgrade: Septic Shock no longer considers debuffs applied from the Plague Wards",
+          "Aghanim's Scepter upgrade: Increased main attack damage to spell damage factor from 0.2 to 0.25",
+          "Talents: LVL 20 Venomous Gale creates 2 Plague Wards around hit enemy heroes → +50 base attack damage"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Reduced Venomous Gale movement speed slow from 50% on each level to 35%/40%/45%/50%"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Increased strength gain from 2 to 2.1",
+          "Increased agility gain from 2 to 2.8",
+          "Increased intelligence gain from 1.4 to 1.8",
+          "Increased base attack damage from (-3)‒0 to 18‒21"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156789,
+    "sections_found": 5,
+    "parse_time_ms": 847,
+    "success_rate": "100%"
+  }
+}

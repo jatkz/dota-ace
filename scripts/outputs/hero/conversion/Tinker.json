@@ -1,0 +1,285 @@
+{
+  "hero_name": "Tinker",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 19,
+      "strength_gain": 2.3,
+      "agility": 17,
+      "agility_gain": 1.4,
+      "intelligence": 30,
+      "intelligence_gain": 3.3,
+      "health": 538,
+      "mana": 435,
+      "armor": 4.83,
+      "magic_resist": 28,
+      "damage": [52, 58],
+      "damage_avg": 55,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 500,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.65",
+      "move_speed": 310,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Nuker, Pusher"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Repair Bots",
+        "effects": "March of the Machines applies a non-stacking heal over time while passing through allied heroes."
+      },
+      "facet_2": {
+        "name": "Translocator",
+        "effects": "When Defense Matrix is active on Tinker, the barrier dispels Tinker and then relocates him to a random point within a certain distance upon the all damage barrier depletion."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Applies a stacking debuff that reduces the model size, and both the current and max health of affected enemy heroes",
+          "Laser also bounces once within the radius, prioritizing the farthest enemy hero",
+          "Increases cast range"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Warp Flare ability",
+          "Fires a damaging flare towards an enemy unit and applies a debuff that reduces both the affected enemy unit's cast range and attack range"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+10s Defense Matrix Duration", "+200 Laser Radius"],
+        "level_20": ["-0.5s Keen Conveyance Channel Time", "+10% Defense Matrix Status Resist"],
+        "level_15": ["+50 Laser Damage", "+60 Defense Matrix Barrier"],
+        "level_10": ["+8% Manacost/Manaloss Reduction", "+1s March of the Machines Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Eureka!",
+          "type": "passive",
+          "description": "Grants Tinker an item-based cooldown reduction per intelligence, with a cap.",
+          "values": {
+            "item_cooldown_reduction_cap": "60%",
+            "item_cooldown_factor_threshold": "1%",
+            "cooldown_factor_per_int_threshold": 3
+          },
+          "details": "Only affects item abilities. Requires Tinker to have 180 intelligence for the max item cooldown reduction value."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Tinker's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to function"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Laser",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Pure",
+        "damage_types": ["spell", "pure"],
+        "cooldown": "19/18/17/16",
+        "mana_cost": "95/105/115/125",
+        "cast_range": "600",
+        "cast_animation": "0.4 + 1",
+        "cast_radius": "0",
+        "details": "Blinds and damages the unit-targeted enemy.",
+        "description": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "All ability effects are visible and audible to everyone during the cast point",
+          "Blind uses pseudo-random distribution",
+          "Stacks additively with other blind sources and multiplicatively with evasion sources"
+        ],
+        "interaction_notes": [
+          "The model size reduction affects debuff immune enemy units",
+          "Does not proc Spell Block sources on secondary affected targets"
+        ]
+      },
+      "ability_2": {
+        "name": "March of the Machines",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units / Allied Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["spell", "magical"],
+        "cooldown": "35/33/31/29",
+        "mana_cost": "100/120/140/160",
+        "cast_range": "300",
+        "cast_animation": "0.53 + 0.63",
+        "cast_radius": "900",
+        "details": "Enlists an army of robotic minions to destroy enemy units in an area around Tinker.",
+        "description": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order.",
+        "facet_effects": {
+          "repair_bots": "Applies a non-stacking heal over time while passing through allied heroes"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Creates 144 robots in 0.4-second intervals",
+          "Each robot has 400 projectile speed",
+          "Robots detonate upon collision or reaching max distance"
+        ],
+        "interaction_notes": [
+          "Does not interact with Couriers, Hidden units, or Invulnerable units",
+          "The ability sound effects upon cast are audible ally-only"
+        ]
+      },
+      "ability_3": {
+        "name": "Defense Matrix",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "20",
+        "mana_cost": "90/105/120/135",
+        "cast_range": "700",
+        "cast_animation": "0.2 + 0.6",
+        "cast_radius": "0",
+        "details": "Applies an all damage barrier and grants bonus status resistance to the affected allied unit.",
+        "description": "A gifted mind unconstrained by moral or ethical boundaries tends to attract an adversary or two.",
+        "facet_effects": {
+          "translocator": "When Defense Matrix is active on Tinker, the barrier dispels Tinker and then relocates him to a random point within a certain distance upon barrier depletion"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Doubletap casts the ability on Tinker",
+          "Reapplying the buff refreshes the duration and resets the damage barrier capacity",
+          "Stacks multiplicatively with other status resistance sources"
+        ],
+        "interaction_notes": [
+          "Root sources disable the Translocator component upon barrier depletion",
+          "Leash sources disable the Translocator component upon barrier depletion"
+        ]
+      },
+      "ability_4": {
+        "name": "Warp Flare",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["spell", "magical"],
+        "cooldown": "15",
+        "mana_cost": "80",
+        "cast_range": "700",
+        "cast_animation": "0.2 + 0.5",
+        "cast_radius": "0",
+        "details": "Fires a damaging flare towards an enemy unit and applies a debuff that reduces both the affected enemy unit's cast range and attack range.",
+        "description": "Tinker's deadliest weapon instantly turns an enemy into space dust. Research to resolve the annoying 'perfect copy' side effect... is ongoing.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Acquiring Aghanim's Shard unlocks this ability",
+          "Has 1900 projectile speed",
+          "Teleport distance is defined as Current Cast Range + 100, MAX = 2000"
+        ],
+        "interaction_notes": [
+          "Nullifies the ability upon projectile impact with Spell Block",
+          "Cannot be cast on Roshan at all"
+        ]
+      },
+      "ability_5": {
+        "name": "Keen Conveyance",
+        "key": "F",
+        "type": "channeled",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "80",
+        "mana_cost": "75",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Globally convey to an allied unit conditionally. Self-cast automatically convey to the fountain after a certain distance.",
+        "description": "As Boush likes to say, \"There is nothing the arcane can accomplish that the curious mind cannot reproduce given time. And proper funding, of course.\"",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "unit_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "This ability levels up with Rearm",
+          "Has initial cooldown of 20 seconds",
+          "Disjoints incoming projectiles upon teleport"
+        ],
+        "interaction_notes": [
+          "Root sources nullify both the ability cast and cancel the teleport if channeling",
+          "Teleport is interrupted on allied summon units upon death"
+        ]
+      },
+      "ability_6": {
+        "name": "Rearm",
+        "key": "R",
+        "type": "channeled",
+        "affects": "Self",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "7/6/5",
+        "mana_cost": "100/150/200",
+        "cast_range": "0",
+        "cast_animation": "0 + 0",
+        "cast_radius": "0",
+        "details": "Resets the cooldown of Tinker's abilities. Does not affect item abilities cooldowns.",
+        "description": "A new battery here, another set of rockets there, Boush continually improves on existing technology.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "This ability levels up with Keen Conveyance",
+          "Only resets Tinker's current abilities' cooldown, including this ability",
+          "This ability cannot be acquired by the Grand Magus by design"
+        ],
+        "interaction_notes": [
+          "Unacquirable by Spell Steal",
+          "In Ability Draft, replenishes 1 charge to charged-based abilities upon channeling completion"
+        ]
+      }
+    }
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

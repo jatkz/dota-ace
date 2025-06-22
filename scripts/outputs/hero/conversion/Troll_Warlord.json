@@ -1,0 +1,285 @@
+{
+  "hero_name": "Troll Warlord",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 21,
+      "strength_gain": 2.5,
+      "agility": 23,
+      "agility_gain": 3.3,
+      "intelligence": 13,
+      "intelligence_gain": 1,
+      "health": 582,
+      "mana": 231,
+      "armor": 2.83,
+      "magic_resist": 26.3,
+      "damage": [50, 58],
+      "damage_avg": 54,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 500,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.3 + 0.3",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Disabler, Durable"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Insensitive",
+        "effects": "Fervor grants bonus armor per stack while in Melee Form."
+      },
+      "facet_2": {
+        "name": "Bad Influence",
+        "effects": "Unlocks max attack speed and removes the attack speed cap for Troll while Battle Trance is active. Additionally grants allied heroes bonus attack speed bonus while active. +2 Max Stacks"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "The ranged Whirling Axes now dispel affected enemy units",
+          "The melee Whirling Axes now self-dispels",
+          "Reduces cooldown and mana cost"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants a chance with additional chance per stack to throw a ranged-based instant attack at another enemy unit within the search radius"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["Battle Trance Applies Strong Dispel", "Whirling Axes Pierce Debuff Immunity"],
+        "level_20": ["+9 Berserker's Rage Armor", "+1.5s Battle Trance Duration"],
+        "level_15": ["+100 Whirling Axes Damage", "+5 Fervor Attack Speed"],
+        "level_10": ["+25 Berserker's Rage Move Speed", "+2.5s Whirling Axes Debuff Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Battle Stance",
+          "type": "toggle",
+          "description": "Toggle Off swaps back to Ranged Form. Toggle On swaps to Melee Form. Reduces Troll's base attack time and base attack range in Melee Form.",
+          "values": {
+            "attack_range_loss": 350,
+            "set_base_attack_time": 1.4,
+            "min_attack_range": 150
+          },
+          "details": "Jah'rakal has a variety of ways to get under an enemy's skin."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Has a chance to block a flat amount of physical attack damage from other incoming attacks while in Melee Form.",
+          "values": {
+            "proc_chance": "50%",
+            "damage_blocked": 16
+          },
+          "details": "The Troll's hero model has the following hidden innate abilities."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Whirling Axes (Ranged)",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "9 (4 with Aghanim's Scepter)",
+        "mana_cost": "60 (30 with Aghanim's Scepter)",
+        "cast_range": "950",
+        "cast_animation": "0.2 + 0",
+        "cast_radius": "100",
+        "details": "Hurls a fistful of axes in a cone shape over a distance, slowing and damaging enemy units.",
+        "description": "Only axes fueled by hate whirl with such a deadly spin.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Spawns 5 axes in front of Troll's facing angle which spread up to 25°",
+          "Each axe travels at 1500 projectile speed",
+          "Automatically toggles Battle Stance off and turns Troll into ranged form"
+        ],
+        "interaction_notes": [
+          "Has instant cast time while Battle Trance is active",
+          "Does not affect Roshan at all",
+          "Talent upgrade allows piercing debuff immunity"
+        ]
+      },
+      "ability_2": {
+        "name": "Whirling Axes (Melee)",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "9 (4 with Aghanim's Scepter)",
+        "mana_cost": "50 (25 with Aghanim's Scepter)",
+        "cast_range": "350",
+        "cast_animation": "0 + 0",
+        "cast_radius": "350",
+        "details": "Hurls axes around him in a close range area of effect, damaging enemy units and causing them to miss some attacks.",
+        "description": "Keep your enemies close.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "2 axes travel out at 1250 speed and orbit clockwise while spiraling outward",
+          "Automatically toggles Battle Stance on and turns Troll into melee form",
+          "Applies basic dispel on Troll with Aghanim's Scepter"
+        ],
+        "interaction_notes": [
+          "Does not affect Roshan at all",
+          "Talent upgrade allows piercing debuff immunity"
+        ]
+      },
+      "ability_3": {
+        "name": "Fervor",
+        "key": "D",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Instant Attack / Physical",
+        "damage_types": ["physical"],
+        "cooldown": "passive",
+        "mana_cost": 0,
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "With each continuous blow on the same target, Troll gains increased attack speed. If Troll changes targets, the stacks drops to nil.",
+        "description": "If at first you don't succeed, strike, strike again.",
+        "facet_effects": {
+          "insensitive": "Grants bonus armor per stack while in Melee Form (1 armor per stack)",
+          "bad_influence": "During Battle Trance, Fervor has increased max stacks (12 instead of 10)"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Max stacks: 10 (12 with Bad Influence facet during Battle Trance)",
+          "Attack speed bonus per stack: 15/20/25/30 (20/25/30/35 with talent)",
+          "Shard upgrade adds chance to throw ranged instant attack at another enemy"
+        ],
+        "interaction_notes": [
+          "Stacks reset when changing targets",
+          "Uses pseudo-random distribution for shard proc"
+        ]
+      },
+      "ability_4": {
+        "name": "Berserker's Rage",
+        "key": "F",
+        "type": "passive",
+        "affects": "Self / Enemy Units",
+        "damage": "Physical",
+        "damage_types": ["physical"],
+        "cooldown": "passive",
+        "mana_cost": 0,
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "Grants different bonuses corresponding to the current Battle Stance.",
+        "description": "Like his anger, Troll Warlord's supply of axes is infinite.",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Ranged Form: 20% chance to slow and deal bonus spell damage (10/15/20/25)",
+          "Melee Form: 14%/16%/18%/20% chance to root for 0.8/1.2/1.6/2 seconds",
+          "Melee Form grants armor bonus: 4/5/6/7 (13/14/15/16 with talent)",
+          "Melee Form grants move speed bonus: 15/25/35/45 (40/50/60/70 with talent)"
+        ],
+        "interaction_notes": [
+          "Uses pseudo-random distribution",
+          "Root applies True Sight"
+        ]
+      },
+      "ability_5": {
+        "name": "Battle Trance",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "N/A",
+        "damage_types": [],
+        "cooldown": "90/80/70",
+        "mana_cost": 150,
+        "cast_range": "900",
+        "cast_animation": "0 + 0",
+        "cast_radius": "900",
+        "details": "Unleashes a powerful battle trance, that forces Troll to continuously attack the closest enemy unit, prioritizing heroes, within the radius. Grants Troll bonus lifesteal, bonus attack speed, and bonus movement speed.",
+        "description": "An adrenaline rush of pure hatred quickens your blades.",
+        "facet_effects": {
+          "bad_influence": "Unlocks max attack speed and removes attack speed cap. Additionally grants allied heroes 70/85/100 attack speed globally."
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Duration: 6.5 seconds (8 with talent)",
+          "Lifesteal: 40%/60%/80%",
+          "Attack speed bonus: 140/170/200",
+          "Move speed bonus: 25%/30%/35%",
+          "Health threshold: Cannot go below 1 HP"
+        ],
+        "interaction_notes": [
+          "Forces attack on closest enemy within 900 range",
+          "Does not consider Roshan as valid target",
+          "Talent allows casting while disabled and applies strong dispel"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Fervor Bad Influence max stacks bonus from 5 to 2"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Berserker's Rage melee form spell damage proc from 5/10/15/20 to 10/15/20/25"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Aghanim's Shard upgrade: Fervor no longer procs additional instant attacks when attacking Buildings or Ward-type units"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

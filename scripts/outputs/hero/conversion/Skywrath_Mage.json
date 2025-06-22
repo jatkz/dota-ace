@@ -1,0 +1,267 @@
+{
+  "hero_name": "Skywrath Mage",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 21,
+      "strength_gain": 2,
+      "agility": 13,
+      "agility_gain": 0.8,
+      "intelligence": 25,
+      "intelligence_gain": 4.1,
+      "health": 582,
+      "mana": 375,
+      "armor": 0.17,
+      "magic_resist": 27.5,
+      "damage": [41, 51],
+      "damage_avg": 46,
+      "projectile_speed": 1000,
+      "attack_type": "ranged",
+      "attack_range": 625,
+      "attack_speed": 90,
+      "bat": 1.7,
+      "animation": "0.4 + 0.78",
+      "move_speed": 325,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Shield of the Scion",
+        "effects": "Encloses Dragonus in a magical damage barrier per spell damage instance applied to enemy heroes. The barrier scales correspondingly to Dragonus' current hero level."
+      },
+      "facet_2": {
+        "name": "Staff of the Scion",
+        "effects": "Reduces all Dragonus' current abilities' cooldown per spell damage instance applied on enemy heroes."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Launches additional Concussive Shots toward other units centered around the debuff-affected enemy, prioritizing heroes",
+          "Applies Ancient Seal on another enemy unit centered around unit-targeted enemy upon cast, prioritizing heroes",
+          "Upon cast, another Mystic Flare instance is passively cast on another enemy hero within the search radius"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Launches additional Arcane Bolts upon cast toward other units centered around the unit-targeted enemy, prioritizing heroes"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+400 Mystic Flare Damage", "+1.5x Arcane Bolt Intelligence Factor"],
+        "level_20": ["+10% Ancient Seal Magic Resist Reduction", "Global Concussive Shot"],
+        "level_15": ["+15% Concussive Shot Slow", "-7s Ancient Seal Cooldown"],
+        "level_10": ["+125 Arcane Bolt Cast Range", "+1.5 Mana Regen"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Ruin and Restoration",
+          "type": "passive",
+          "description": "Dragonus innately has bonus spell lifesteal.",
+          "values": {
+            "spell_lifesteal_bonus": "25%/30%/35%/40%",
+            "spell_lifesteal_factor": "0.2"
+          },
+          "details": "This ability levels up with Mystic Flare. Spell lifesteal is less effective on creeps."
+        },
+        {
+          "name": "Shield of the Scion",
+          "type": "passive",
+          "description": "Encloses Dragonus in a magical damage barrier per spell damage instance applied to enemy heroes. The barrier scales correspondingly to Dragonus' current hero level.",
+          "values": {
+            "stack_per_damage_instance": 1,
+            "barrier_per_stack": 10,
+            "barrier_bonus_per_hero_level": 1,
+            "stack_duration": 12
+          },
+          "details": "Selecting the Shield of the Scion facet unlocks this ability."
+        },
+        {
+          "name": "Staff of the Scion",
+          "type": "passive",
+          "description": "Reduces all Dragonus' current abilities' cooldown per spell damage instance applied on enemy heroes.",
+          "values": {
+            "current_cooldown_reduction_per_damage_instance": 0.1
+          },
+          "details": "Selecting the Staff of the Scion facet unlocks this ability."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Arcane Bolt",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "5/4/3/2",
+        "mana_cost": 70,
+        "cast_range": "875 (1000 with Shard)",
+        "cast_animation": "0.1 + 0.9",
+        "cast_radius": "N/A",
+        "details": "Launches a slow-moving bolt to the unit-targeted enemy that deals bonus damage based on current intelligence.",
+        "description": "Launches a slow-moving bolt to the unit-targeted enemy that deals bonus damage based on current intelligence.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Has 500 projectile speed",
+          "Grants flying vision as projectile travels",
+          "Base damage: 60/90/120/150",
+          "Int damage bonus factor: 1.5 (3 with talent)"
+        ],
+        "interaction_notes": [
+          "Checks intelligence upon cast point",
+          "Shard launches additional projectiles to secondary targets"
+        ]
+      },
+      "ability_2": {
+        "name": "Concussive Shot",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "15/14/13/12",
+        "mana_cost": "80/85/90/95",
+        "cast_range": "1600 (Global with talent)",
+        "cast_animation": "0 + 1.03",
+        "cast_radius": "250",
+        "details": "Sets a long range shot that hits the closest hero. Upon impact, the projectile deals damage and slows all affected enemy units within the radius.",
+        "description": "Sets a long range shot that hits the closest hero. Upon impact, the projectile deals damage and slows all affected enemy units within the radius.",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Search radius: 1600",
+          "Effect radius: 250",
+          "Area damage: 120/180/240/300",
+          "Move speed slow: 40% (55% with talent)",
+          "Slow duration: 4"
+        ],
+        "interaction_notes": [
+          "Homes in on closest valid enemy unit",
+          "Prioritizes heroes over creeps",
+          "Has 800 projectile speed"
+        ]
+      },
+      "ability_3": {
+        "name": "Ancient Seal",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "N/A",
+        "damage_types": [],
+        "cooldown": "14 (7 with talent)",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "700/750/800/850",
+        "cast_animation": "0.1 + 0.97",
+        "cast_radius": "N/A",
+        "details": "Reduces the unit-targeted enemy's magic resistance. If the targeted unit is an enemy hero, the Ancient Seal further silences it.",
+        "description": "Reduces the unit-targeted enemy's magic resistance.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Magic resist reduction: 20%/25%/30%/35% (30%/35%/40%/45% with talent)",
+          "Debuff duration: 3/4/5/6",
+          "Silence duration: 3/4/5/6"
+        ],
+        "interaction_notes": [
+          "Stacks multiplicatively with other magic resistance sources",
+          "Silences enemy heroes only"
+        ]
+      },
+      "ability_4": {
+        "name": "Mystic Flare",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "60/40/20",
+        "mana_cost": "300/550/800",
+        "cast_range": "1200",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "170",
+        "details": "Deals massive damage that is distributed evenly among all enemy heroes within the radius.",
+        "description": "Deals massive damage that is distributed evenly among all enemy heroes within the radius.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Total damage: 800/1200/1600 (1200/1600/2000 with talent)",
+          "Damage interval: 0.1",
+          "Flare duration: 2.2",
+          "Instant kills illusions"
+        ],
+        "interaction_notes": [
+          "Damage is distributed evenly among heroes in radius",
+          "Prioritizes heroes over creeps",
+          "22 damage instances over duration"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased base intelligence from 23 to 25",
+          "Talents: LVL 10 +0.5x Arcane Bolt intelligence damage factor → +125 Arcane Bolt cast range",
+          "Talents: LVL 25 Arcane Bolt pierces spell immunity → +1.5x Arcane Bolt intelligence damage factor"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Arcane Bolt mana cost from 85 to 70"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Rescaled Ruin and Restoration spell lifesteal bonus from 20%/30%/40%/50% to 25%/30%/35%/40%",
+          "Arcane Bolt: Rescaled base damage from 75/95/115/135 to 60/85/110/135",
+          "Arcane Bolt: Reduced mana cost from 95 to 85",
+          "Increased Concussive Shot creep damage factor from 0.75 to 1",
+          "Aghanim's Scepter upgrade: Reduced secondary target search radius for multiple abilities",
+          "Aghanim's Shard upgrade: Reduced Arcane Bolt secondary target search radius from 700 to 500"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

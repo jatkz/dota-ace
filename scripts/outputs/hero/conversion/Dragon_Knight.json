@@ -1,0 +1,289 @@
+{
+  "hero_name": "Dragon Knight",
+  "sections": {
+    "general": {
+      "primary_attribute": "strength",
+      "strength": 21,
+      "strength_gain": 3.6,
+      "agility": 16,
+      "agility_gain": 2,
+      "intelligence": 18,
+      "intelligence_gain": 1.7,
+      "health": 582,
+      "mana": 291,
+      "armor": 2.67,
+      "magic_resist": 26.8,
+      "damage": [55, 61],
+      "damage_avg": 58,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.6,
+      "animation": "0.5 + 0.5",
+      "move_speed": 315,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Pusher, Durable, Disabler, Initiator, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Fire Dragon",
+        "effects": "Dragon Knight deals additional Magic Damage with his attacks. Spells and items have increased AoE. +25/50/75/100 Spells/Items Effect Radius. When in Dragon Form, Dragon Tail applies to all enemies around the primary target."
+      },
+      "facet_2": {
+        "name": "Corrosive Dragon",
+        "effects": "Dragon Knight's attacks are filled with lethal poison that affects enemy units and structures, reducing armor and dealing physical damage over time. Breathe Fire, Dragon Tail, and Fireball damage types changed to Physical."
+      },
+      "facet_3": {
+        "name": "Frost Dragon",
+        "effects": "Dragon Knight's attacks apply movement speed slow, attack speed slow, and a health restoration reduction debuff to affected enemies."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["All of Wyrm's Wrath effects are increased during Elder Dragon Form, except debuff durations"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Grants the Fireball ability", "Ignites an area, dealing damage over time that lingers on enemies in it", "Has reduced cast range in human form"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+50% Wyrm's Wrath Effects", "+12 Dragon Blood Health Regen/Armor"],
+        "level_20": ["+85% Breathe Fire Damage/Cast Range", "+150 Elder Dragon Form Attack Range"],
+        "level_15": ["+300 Health", "+0.4s Dragon Tail Stun"],
+        "level_10": ["30% Breathe Fire Damage Reduction", "+15 Attack Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Dragon Blood",
+          "type": "passive",
+          "description": "The life blood of the Dragon improves health regeneration and strengthens armor per level.",
+          "values": {
+            "base_health_regen_bonus": 2,
+            "health_regen_bonus_per_level": 0.5,
+            "base_armor_bonus": 2,
+            "armor_bonus_per_level": 0.5,
+            "health_regen_bonus_factor": 1.5,
+            "armor_bonus_factor": 1.5
+          },
+          "details": "This ability levels up with Dragon Knight. The Eldwurm-blood infused knight in dragon form has nigh impenetrable armor and health regeneration."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Breathe Fire",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "14/13/12/11",
+        "mana_cost": "90/95/100/105",
+        "cast_range": "600",
+        "cast_animation": "0.2 + 0.67",
+        "cast_radius": "150 first radius, 250 end radius",
+        "details": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.",
+        "description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal.",
+        "facet_effects": {
+          "fire_dragon": "Breathe Fire has increased radius",
+          "corrosive_dragon": "Breathe Fire damage type changed to Physical"
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Travel Distance: 750",
+          "Damage: 80/160/240/320",
+          "Attack Damage Reduction: 30%",
+          "Debuff Duration: 11"
+        ],
+        "interaction_notes": [
+          "The wave travels at 1050-speed",
+          "Reduces both main and bonus attack damage"
+        ]
+      },
+      "ability_2": {
+        "name": "Dragon Tail",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "16/14/12/10",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "150",
+        "cast_animation": "0 + 0.5",
+        "cast_radius": "0",
+        "details": "Smites an enemy unit in melee range with his shield, stunning it while dealing minor damage.",
+        "description": "Smites an enemy unit in melee range with his shield, stunning it while dealing minor damage.",
+        "facet_effects": {
+          "fire_dragon": "When in Dragon Form, Dragon Tail applies to all enemies around the primary target",
+          "corrosive_dragon": "Dragon Tail damage type changed to Physical"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage: 60/90/120/150",
+          "Stun Duration: 1.8/2/2.2/2.4",
+          "Extended cast range in Elder Dragon Form: 450",
+          "Projectile Speed in Dragon Form: 1600"
+        ],
+        "interaction_notes": [
+          "Cannot be disjointed in human form",
+          "Has extended cast range while in Elder Dragon Form"
+        ]
+      },
+      "ability_3": {
+        "name": "Wyrm's Wrath",
+        "key": "E",
+        "type": "passive",
+        "affects": "Self",
+        "damage": "Various",
+        "damage_types": ["Magical", "Physical"],
+        "cooldown": "0",
+        "mana_cost": 0,
+        "cast_range": "0",
+        "cast_animation": "0",
+        "cast_radius": "0",
+        "details": "The lifeblood of the Eldwurm passively improves Davion's attacks. Requires leveling up the ability for the corresponding facet to work.",
+        "description": "The lifeblood of the Eldwurm passively improves Davion's attacks. While in Elder Dragon Form, these attack modifiers are more potent.",
+        "facet_effects": {
+          "fire_dragon": "Dragon Knight deals additional Magic Damage with his attacks. Magic Damage Bonus: 6/12/18/24",
+          "corrosive_dragon": "Dragon Knight's attacks reduce armor and deal physical damage over time. Armor Reduction: 0/1/2/3, Damage per Second: 5/10/15/20, Duration: 3",
+          "frost_dragon": "Dragon Knight's attacks apply movement speed slow, attack speed slow, and health restoration reduction. Move Speed Slow: 14%/21%/28%/35%, Attack Speed Slow: 14/21/28/35, Duration: 3"
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Effects are enhanced during Elder Dragon Form",
+          "Different effects based on selected facet"
+        ],
+        "interaction_notes": [
+          "All attack modifiers are multiplied according to Elder Dragon Form factor"
+        ]
+      },
+      "ability_4": {
+        "name": "Fireball",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Magical",
+        "damage_types": ["Magical"],
+        "cooldown": "20",
+        "mana_cost": "80",
+        "cast_range": "600",
+        "cast_animation": "0.2 + 0.53",
+        "cast_radius": "275",
+        "details": "Ignites an area, dealing damage over time that lingers on enemies in it. Has reduced cast range in human form.",
+        "description": "Ignites an area, dealing damage over time that lingers on enemies in it. Has reduced cast range in human form.",
+        "facet_effects": {
+          "fire_dragon": "Fireball has increased radius: 300/325/350/375",
+          "corrosive_dragon": "Fireball damage type changed to Physical"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Damage per Second: 75",
+          "Duration: 8",
+          "Aura Linger Duration: 2",
+          "Extended cast range in Elder Dragon Form: 1400"
+        ],
+        "interaction_notes": [
+          "Acquiring Aghanim's Shard unlocks this ability",
+          "Creates a negative aura that deals damage in 0.5-second intervals"
+        ]
+      },
+      "ability_5": {
+        "name": "Elder Dragon Form",
+        "key": "R",
+        "type": "active",
+        "affects": "Self",
+        "damage": "Physical",
+        "damage_types": ["Physical", "Spell"],
+        "cooldown": "100",
+        "mana_cost": "50",
+        "cast_range": "0",
+        "cast_animation": "0 + 0.5",
+        "cast_radius": "275",
+        "details": "Takes the form of the Eldwurm. Grants splash attack, bonus movement speed, bonus attack range, and certain other ability bonuses.",
+        "description": "Takes the form of the Eldwurm. Grants splash attack, bonus movement speed, bonus attack range, and certain other ability bonuses.",
+        "facet_effects": {
+          "fire_dragon": "Elder Dragon Form has increased attack splash radius"
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Splash Attack Radius: 275",
+          "Attack Damage Bonus: 20/60/100/140",
+          "Attack Range Bonus: 350",
+          "Attack Projectile Speed: 900",
+          "Move Speed Bonus: 20",
+          "Duration: 60",
+          "Wyrm's Wrath Effect Factor: 1.2/1.3/1.4/1.5"
+        ],
+        "interaction_notes": [
+          "Transformation is instantaneous",
+          "Grants unobstructed movement with Aghanim's Scepter",
+          "Becomes ranged hero with 900 projectile speed"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Elder Dragon Form Frost Dragon now follows the health restoration mechanic",
+          "Applies a 14%/21%/28%/35% health restoration reduction"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced Elder Dragon Form movement speed bonus from 20/25/30/35 to 20 on each level"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Wyrm's Wrath Fire Dragon: Reduced magical attack damage bonus from 10/20/30/40 to 6/12/18/24",
+          "Reduced Elder Dragon Form Dragon Tail radius from 175 to 100"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 245000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "hero_name": "Magnus",
+  "sections": {
+    "general": {
+      "primary_attribute": "universal",
+      "strength": 23,
+      "strength_gain": 3.1,
+      "agility": 12,
+      "agility_gain": 2,
+      "intelligence": 20,
+      "intelligence_gain": 2.1,
+      "health": 626,
+      "mana": 315,
+      "armor": 3,
+      "magic_resist": 27,
+      "damage": [54, 62],
+      "damage_avg": 58,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 200,
+      "attack_speed": 100,
+      "bat": 1.8,
+      "animation": "0.5 + 0.84",
+      "move_speed": 305,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Disabler, Nuker, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Eternal Empowerment",
+        "effects": "Ability is always enabled on Magnus. Every one of his subsequent attacks grants a damage/cleave bonus stack. Each stack refreshes the duration."
+      },
+      "facet_2": {
+        "name": "Diminishing Return",
+        "effects": "Increases the max ability level of Shockwave, which makes the Shockwave returns towards Magnus' location after reaching max length, damaging enemy units a second time for a portion of the damage. +1 Max Ability Level"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Grants the Horn Toss ability", "Tosses any enemy units in front of Magnus, launching them upward and to his rear", "Applies a stun and deals damage to all affected enemy units upon landing"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Applies bonus damage to all affected enemy units per tree or cliff collided", "Increases max skewer distance"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+0.8s Reverse Polarity Stun Duration", "+10% Empower Damage/Cleave"],
+        "level_20": ["+0.15× Skewer Distance to Damage", "+125 Shockwave Damage"],
+        "level_15": ["-5s Skewer Cooldown", "+12 All Attributes per Reverse Polarity Hero Hit"],
+        "level_10": ["+1.25s Skewer Slow Duration", "+1.5 Mana Regen"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Solid Core",
+          "type": "passive",
+          "description": "The Solid Core causes knockback sources to be less effective on Magnus and grants him slow resistance bonus.",
+          "values": {
+            "knockback_distance_factor": 0.5,
+            "slow_resistance_bonus": "20%/30%/40%/50%"
+          },
+          "details": "This ability levels up with Reverse Polarity. Applies to knockback sources. Stacks multiplicatively with other slow resistance sources."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive/channeling",
+          "description": "The Magnataur's hero model has the following hidden innate abilities. He may only perform or utilize the ability's functions upon a successful channeling, excluding passive innate abilities.",
+          "values": {},
+          "details": "Contains hidden innate abilities that require channeling to activate"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Shockwave",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "cooldown": "13/12/11/10/10",
+        "mana_cost": "85/90/95/100/100",
+        "cast_range": "1200",
+        "cast_animation": "0.3 + 1.2",
+        "cast_radius": "200",
+        "details": "Sends out a wave of force, damaging enemy units in a line, while knocking them toward Magnus and slowing them for a brief moment.",
+        "description": "Wave Distance: 1200/1200/1200/1200/1400, Wave Speed: 1200, Damage: 75/150/225/300/300, Knock Distance: 150, Move Speed Slow: 75%, Slow Duration: 0.4/0.6/0.8/1/1",
+        "facet_effects": {
+          "diminishing_return": "Max Ability Level: 5, Return Damage Factor: 0/0/0/0/0.5"
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Has a 1200-projectile speed and takes 1/1/1/1/1.17 seconds to reach max distance", "Applies knockback-based pull components toward center and cast location"],
+        "interaction_notes": ["Trees that enemy units come into contact with are destroyed", "Affects enemy units up to 1400/1400/1400/1400/1600 range"]
+      },
+      "ability_2": {
+        "name": "Empower",
+        "key": "W",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "N/A",
+        "cooldown": "8",
+        "mana_cost": "45/55/65/75",
+        "cast_range": "800",
+        "cast_animation": "0.3 + 1.07",
+        "cast_radius": "N/A",
+        "details": "Grants the affected attack damage bonus for the duration. Additionally grants cleave damage if the affected allied unit is a melee unit.",
+        "description": "Cleave Damage: 16%/24%/32%/40%, Attack Damage Bonus: 16%/24%/32%/40%, Duration: 30/33/36/39, Self-cast bonus factor: 1.3",
+        "facet_effects": {
+          "eternal_empowerment": "Bonus Damage/Cleave per Stack: 2%/3%/4%/5%, Max Stacks: 4, Stack Duration: 10"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": true,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Doubletap casts the ability on Magnus", "Grants flat bonus attack damage based on current main attack damage"],
+        "interaction_notes": ["Can be cast on Couriers but does nothing", "Does not proc cleave when attacking allied units"]
+      },
+      "ability_3": {
+        "name": "Skewer",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Heroes/Self",
+        "damage": "Spell/Magical",
+        "cooldown": "22/20/18/16",
+        "mana_cost": "80",
+        "cast_range": "Global",
+        "cast_animation": "0.3 + 0.3",
+        "cast_radius": "145",
+        "details": "Rushes forward, damages, and drags all affected enemy heroes along the way. Applies a movement speed slow to affected enemy heroes at the destination.",
+        "description": "Max Skewer Distance: 800/900/1000/1100, Base Damage: 80/160/240/320, Distance to Damage Factor: 0.06/0.09/0.12/0.15, Move Speed Slow: 20%/30%/40%/50%, Slow Duration: 3.25, Skewer Speed: 900",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Magnus cannot act while charging", "Applies disabling forced movement", "Can charge through impassable terrain"],
+        "interaction_notes": ["Trees are destroyed within 200-radius while charging", "Interrupted by death or other forced movement sources"]
+      },
+      "ability_4": {
+        "name": "Horn Toss",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell/Magical",
+        "cooldown": "30",
+        "mana_cost": "100",
+        "cast_range": "N/A",
+        "cast_animation": "0.2 + 0.79",
+        "cast_radius": "325",
+        "details": "Tosses any enemy units in front of Magnus, launching them upward and to his rear. Applies a stun and deals damage to all affected enemy units upon landing.",
+        "description": "Search Radius: 325, Facing Angle: 115°, Damage: 300, Toss Duration: 0.6, Landing Stun Duration: 0.75",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Acquiring Aghanim's Scepter unlocks this ability", "Search radius is a circular segment with specific geometry"],
+        "interaction_notes": ["Trees within 200-radius are destroyed when units land", "Affects units up to 400 range in front of Magnus"]
+      },
+      "ability_5": {
+        "name": "Reverse Polarity",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units/Self",
+        "damage": "Spell/Magical",
+        "cooldown": "120",
+        "mana_cost": "150/225/300",
+        "cast_range": "N/A",
+        "cast_animation": "0.3 + 1.3",
+        "cast_radius": "N/A",
+        "details": "Damages all affected enemy units and stuns them with a powerful slam.",
+        "description": "Damage: 100/200/300, Stun Duration: 2.5/3/3.5",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "strong_dispels_only",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Immediately teleports all affected enemy units within radius", "Affects Couriers as well"],
+        "interaction_notes": ["All ability effects are visible and audible upon cast point", "Talent upgrade grants attributes per hero hit"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Shockwave slow duration from 0.7/0.8/0.9/1/1 to 0.4/0.6/0.8/1/1",
+          "Aghanim's Scepter upgrade: Skewer increased damage bonus per tree collided from 30 to 40",
+          "Aghanim's Scepter upgrade: Skewer increased damage bonus per cliff collided from 125 to 150"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced base strength from 25 to 23",
+          "Reduced Shockwave damage from 90/160/230/300/300 to 75/150/225/300/300",
+          "Reduced Empower self-cast bonus factor from 1.5 to 1.3"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Reduced Empower Eternal Empowerment max self bonus from 10%/15%/20%/25% to 8%/12%/16%/20%",
+          "Reduced max Skewer distance from 900/975/1050/1125 to 800/900/1000/1100"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "hero_name": "Monkey King",
+  "sections": {
+    "general": {
+      "primary_attribute": "agility",
+      "strength": 19,
+      "strength_gain": 2.8,
+      "agility": 24,
+      "agility_gain": 3.7,
+      "intelligence": 20,
+      "intelligence_gain": 1.8,
+      "health": 538,
+      "mana": 315,
+      "armor": 6,
+      "magic_resist": 27,
+      "damage": [53, 57],
+      "damage_avg": 55,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 300,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.45 + 0.2",
+      "move_speed": 300,
+      "turn_rate": 0.6,
+      "collision_size": 18,
+      "bound_radius": 8,
+      "vision_range": "1800 / 800",
+      "roles": "Carry, Escape, Disabler, Initiator"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Simian Stride",
+        "effects": "Increases Tree Dance max level which negates its cooldown. +1 Max Ability Level"
+      },
+      "facet_2": {
+        "name": "Changing of the Guard",
+        "effects": "Grants Monkey King the Changing of the Guard sub-ability while Wukong's Command is active"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "The Monkey King spawns a Wukong's Command soldier at a fixed duration",
+          "Soldiers do not spawn while being invisible or on trees",
+          "Soldiers only attack buildings when the Monkey King himself is nearby",
+          "The soldiers now may gain and utilize Jingu Mastery charges independently"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Monkey King leaps to the end of his Jingu Bang as soon as Boundless Strike hits the ground with Alt-Cast toggled on",
+          "Applies a portion of Primal Spring max channeling duration of its corresponding level upon at the end location"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+1 Wukong's Command Ring", "-1 Jingu Mastery Required Hits"],
+        "level_20": ["+60% Boundless Strike Critical Damage", "No Primal Spring Cooldown"],
+        "level_15": ["+110 Jingu Mastery Damage", "+450 Tree Dance Cast Range"],
+        "level_10": ["+0.2s Boundless Strike Stun Duration", "+100 Primal Spring Max Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Mischief",
+          "type": "active",
+          "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming.",
+          "values": {
+            "cast_animation": "0 + 0.53",
+            "damage_negation_duration": 0.1,
+            "damage_threshold": 0,
+            "move_speed_bonus": "6%/9%/12%/15%",
+            "cooldown": "24/20/16/12"
+          },
+          "details": "This ability levels up with Wukong's Command. Disguises as Roshan, Power Runes, creeps, trees, or couriers based on priority system."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Only Monkey King can disguise himself as a tree by design. Wukong's hero model has hidden innate abilities that may only be performed upon successful channeling.",
+          "values": {},
+          "details": "Contains hidden innate abilities that can be accessed through channeling"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Boundless Strike",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Instant Attack / Physical / Spell / Magical",
+        "cooldown": "28/26/24/22",
+        "mana_cost": "85/90/95/100",
+        "cast_range": "1100",
+        "cast_animation": "0.4 + 0.5",
+        "cast_radius": "150 width, 1100 length",
+        "details": "Enlarges his staff and slams it against the ground with True Strike, stunning enemy units in a line and damaging them with a critical hit based on his attack.",
+        "description": "Enlarges his staff and slams it against the ground with True Strike, stunning enemy units in a line and damaging them with a critical hit based on his attack.",
+        "facet_effects": {
+          "crit_damage": "135%/165%/195%/225%",
+          "stun_duration": "0.7/0.9/1.1/1.3"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": true,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Does not unperch Wukong from Tree Dance tree",
+          "Consumes a Jingu Mastery charge per cast",
+          "Has True Strike",
+          "Not affected by disarm sources"
+        ],
+        "interaction_notes": [
+          "Affects fogged and invisible units",
+          "Does not affect couriers or spell immune units",
+          "With Shard: leaps to end of staff with Alt-Cast"
+        ]
+      },
+      "ability_2": {
+        "name": "Tree Dance",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Trees",
+        "damage": "None",
+        "cooldown": "1.4/1.2/1/0.8/0",
+        "mana_cost": "0",
+        "cast_range": "900",
+        "cast_animation": "0.1 + 0",
+        "cast_radius": "N/A",
+        "details": "Jumps to a tree and perches atop it. If the tree Monkey King's is perched on is destroyed, he falls and is stunned.",
+        "description": "Jumps to a tree and perches atop it. If the tree Monkey King's is perched on is destroyed, he falls and is stunned.",
+        "facet_effects": {
+          "max_ability_level": "4/5",
+          "max_tree_dance_distance": 1850,
+          "unperch_self_stun_duration": 4,
+          "set_vision_radius_day": 700,
+          "set_vision_radius_night": 500,
+          "downtime": 3
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "While perched, grants flying vision and Primal Spring ability",
+          "Hidden from sight except from flying vision or elevated positions",
+          "Player-based damage disables ability for 3 seconds"
+        ],
+        "interaction_notes": [
+          "This ability levels up with Primal Spring",
+          "Simian Stride facet increases max level to 5 with 0 cooldown"
+        ]
+      },
+      "ability_3": {
+        "name": "Primal Spring",
+        "key": "E",
+        "type": "channeled",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "cooldown": "18/16/14/12",
+        "mana_cost": "100",
+        "cast_range": "Global",
+        "cast_animation": "0 + 0",
+        "cast_radius": "375",
+        "details": "Springs out from his tree perch, damaging and slowing enemy units in proportion to the channel duration toward the landing area.",
+        "description": "Springs out from his tree perch, damaging and slowing enemy units in proportion to the channel duration toward the landing area.",
+        "facet_effects": {
+          "max_leap_distance": 800,
+          "max_channel_time": 1.75,
+          "max_damage": "110/200/290/380",
+          "max_move_speed_slow": "20%/40%/60%/80%",
+          "slow_duration": 4,
+          "max_landing_distance": 4
+        },
+        "ability_behavior": ["area_target", "channeled"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Only active while on trees or during Tree Dance cast point",
+          "Values change per channeling server tick linearly over 52 instances",
+          "Leap component nullified if max distance exceeded"
+        ],
+        "interaction_notes": [
+          "This ability levels up with Tree Dance",
+          "Has Spring Early sub-ability to end channeling early"
+        ]
+      },
+      "ability_4": {
+        "name": "Jingu Mastery",
+        "key": "D",
+        "type": "passive",
+        "affects": "Self / Clones",
+        "damage": "None",
+        "cooldown": "N/A",
+        "mana_cost": "N/A",
+        "cast_range": "N/A",
+        "cast_animation": "N/A",
+        "cast_radius": "N/A",
+        "details": "Grants certain bonuses after a number of attacks on the same enemy hero within a duration.",
+        "description": "Grants certain bonuses after a number of attacks on the same enemy hero within a duration.",
+        "facet_effects": {
+          "required_hits": "4",
+          "counter_duration": "5.5/7/8.5/10",
+          "max_attack_charges": 4,
+          "attack_damage_bonus": "30/75/120/165",
+          "lifesteal": "20%/40%/60%/80%",
+          "buff_duration": 35,
+          "creep_lifesteal_factor": 0.6
+        },
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Grants bonus attack damage and lifesteal for subsequent attacks",
+          "Lifesteal less effective when attacking creeps",
+          "With Scepter: soldiers may gain and utilize charges independently"
+        ],
+        "interaction_notes": [
+          "Considers clones as heroes, illusions and creep-heroes as creeps",
+          "Break sources disable gaining new stacks"
+        ]
+      },
+      "ability_5": {
+        "name": "Wukong's Command",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes / Self",
+        "damage": "None",
+        "cooldown": "100/90/80",
+        "mana_cost": "100",
+        "cast_range": "625",
+        "cast_animation": "1 + 0.57",
+        "cast_radius": "300/750 rings",
+        "details": "Creates a circular formation of soldiers that spread out from his position. Grants Monkey King bonus armor for its duration.",
+        "description": "Creates a circular formation of soldiers that spread out from his position. Grants Monkey King bonus armor for its duration.",
+        "facet_effects": {
+          "first_ring_radius": 300,
+          "second_ring_radius": 750,
+          "third_ring_radius": 1100,
+          "soldier_attack_interval": 1.1,
+          "self_armor_bonus": "15/20/25",
+          "max_duration": 13,
+          "command_radius": 780,
+          "number_first_ring_soldiers": 5,
+          "number_second_ring_soldiers": 9,
+          "number_third_ring_soldiers": 7
+        },
+        "ability_behavior": ["area_target", "passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "If Monkey King leaves leadership radius, soldiers disperse",
+          "Soldiers are hidden, invulnerable, and uncontrollable",
+          "With Scepter: spawns soldiers at fixed duration"
+        ],
+        "interaction_notes": [
+          "Clones benefit from attributes and Jingu Mastery talent",
+          "Soldiers only attack visible enemy heroes within vision range"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced Primal Spring max leap distance from 1000 to 800",
+          "Reduced Jingu Mastery counter duration from 7/8/9/10 to 5.5/7/8.5/10",
+          "REMOVED the Wukong's Faithful facet",
+          "ADDED the Changing of the Guard facet"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "No longer grants Wukong's Command Soldiers the copied neutral item"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Mischief: Rescaled cooldown from 15 on each level to 24/20/16/12",
+          "Mischief: Rescaled movement speed bonus from 10% on each level to 6%/9%/12%/15%",
+          "ADDED the Simian Stride facet",
+          "Tree Dance: Increased max ability level from 4 to 5",
+          "Tree Dance: Reduced cooldown from 1.4/1.2/1/0.8 to 1.4/1.2/1/0.8/0",
+          "Jingu Mastery now follows the lifesteal mechanic"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 245000,
+    "sections_found": 5,
+    "parse_time_ms": 850,
+    "success_rate": "100%"
+  }
+}

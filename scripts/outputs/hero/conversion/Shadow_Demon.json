@@ -1,0 +1,303 @@
+{
+  "hero_name": "Shadow Demon",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 23,
+      "strength_gain": 2.6,
+      "agility": 18,
+      "agility_gain": 2.2,
+      "intelligence": 22,
+      "intelligence_gain": 3.6,
+      "health": 626,
+      "mana": 339,
+      "armor": 3,
+      "magic_resist": 27.2,
+      "damage": [51, 55],
+      "damage_avg": 53,
+      "projectile_speed": 900,
+      "attack_type": "ranged",
+      "attack_range": 500,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.35 + 0.5",
+      "move_speed": 290,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Disabler, Initiator, Nuker"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Promulgate",
+        "effects": "Disseminate-affected enemy units lose a percentage of their current health, regaining half of it after the debuff ends."
+      },
+      "facet_2": {
+        "name": "Shadow Servant",
+        "effects": "Creates illusions of dying heroes within the radius centered around Shadow Demon."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Demonic Purge is now a charged-based ability with a restore time corresponding to the the ability's current cooldown.",
+          "Applies Break."
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "Grants the Demonic Cleanse ability.",
+          "Dispels debuffs continuously on the affected allied unit, then heals it at the end of the duration."
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["2 Disruption Charges", "-30s Demonic Purge Cooldown"],
+        "level_20": ["+150 Demonic Purge Damage", "+15% Disseminate Shared Damage"],
+        "level_15": ["-1s Shadow Poison Cooldown", "+25 Move Speed"],
+        "level_10": ["+10 Strength", "+15% Shadow Poison Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Menace",
+          "type": "passive",
+          "description": "Imbues attacks with an offensive stacking debuff that amplifies incoming damage taken by the affected enemy unit.",
+          "values": {
+            "max_stacks": 4,
+            "damage_amp_per_stack": "2.5%",
+            "duration": 8
+          },
+          "details": "Applies a generic incoming damage amplification debuff on the affected enemy unit per successful attack. Stacks additively with other incoming damage manipulation sources."
+        },
+        {
+          "name": "Shadow Servant",
+          "type": "passive",
+          "description": "Creates illusions of dying heroes within the radius centered around Shadow Demon.",
+          "values": {
+            "aura_radius": 1500,
+            "number_of_illusions": 1,
+            "damage_dealt": "20%/25%/30%/35%/40%",
+            "damage_taken": "200%",
+            "enemy_respawn_time_to_duration_factor": 1
+          },
+          "details": "These servants are illusions that deals a portion of dying enemy hero's damage and receives additional incoming damage. This ability levels up with Disruption."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Disruption",
+        "key": "Q",
+        "type": "active",
+        "affects": "Heroes",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "26/24/22/20",
+        "mana_cost": 120,
+        "cast_range": "650",
+        "cast_animation": "0.3 + 0.6",
+        "cast_radius": "N/A",
+        "details": "Sends the hero to the hidden dimension for a short duration. Upon returning, Shadow Demon creates illusions of the banished hero under his control.",
+        "description": "Sends the hero to the hidden dimension for a short duration.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Hidden Duration: 2.75",
+          "Number of Illusions: 2",
+          "Base Attack Damage Bonus: 25/40/55/70",
+          "Damage Dealt: 20%/30%/40%/50%",
+          "Damage Taken: 300%",
+          "Duration: 11/12/13/14"
+        ],
+        "interaction_notes": [
+          "Doubletap casts the ability on Shadow Demon",
+          "Disable Help on Shadow Demon prevents Disruption from affecting the allied hero"
+        ]
+      },
+      "ability_2": {
+        "name": "Disseminate",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Source / HP Removal",
+        "damage_types": ["magical"],
+        "cooldown": "30/25/20/15",
+        "mana_cost": 100,
+        "cast_range": "700/800/900/1000",
+        "cast_animation": "0.3 + 0.6",
+        "cast_radius": "675",
+        "details": "Whenever the affected unit takes damage, all enemy units, including the target itself if it is an enemy, also receive a portion of that damage.",
+        "description": "Whenever the affected unit takes damage, all enemy units, including the target itself if it is an enemy, also receive a portion of that damage.",
+        "facet_effects": {
+          "promulgate": {
+            "set_current_health_loss": "9%/11%/13%/15%",
+            "health_regain_factor": 0.5,
+            "set_max_health_gain": "9%/11%/13%/15%"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Radius: 675",
+          "Damage Shared: 20%/25%/30%/35%",
+          "Duration: 6",
+          "Enemy Damage Amp: 20%/25%/30%/35%"
+        ],
+        "interaction_notes": [
+          "Doubletap casts the ability on Shadow Demon",
+          "Recasting the ability updates the ability values and refreshes its duration"
+        ]
+      },
+      "ability_3": {
+        "name": "Shadow Poison",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "2.5",
+        "mana_cost": 45,
+        "cast_range": "1500",
+        "cast_animation": "0.25 + 0",
+        "cast_radius": "200",
+        "details": "Deals damage in a straight line and applies additional stack damage if the debuff is present.",
+        "description": "Deals damage in a straight line and applies additional stack damage if the debuff is present.",
+        "facet_effects": {},
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Travel Distance: 1500",
+          "Effect Radius: 200",
+          "Base Damage: 24/36/48/60",
+          "Stack Duration: 10",
+          "Stacks to Multiply: 5",
+          "Exponent Base: 2",
+          "Max Nth Power: 4",
+          "Final Damage Increment: 50"
+        ],
+        "interaction_notes": [
+          "This ability fully affects enemy units under Disruption"
+        ]
+      },
+      "ability_4": {
+        "name": "Demonic Purge",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "70/65/60",
+        "mana_cost": "150/175/200",
+        "cast_range": "800",
+        "cast_animation": "0.3 + 0.6",
+        "cast_radius": "N/A",
+        "details": "Dispels buff and slows the enemy unit for the duration. The unit slowly regains its movement speed until the end of the duration, upon which the damage is applied.",
+        "description": "Dispels buff and slows the enemy unit for the duration. The unit slowly regains its movement speed until the end of the duration, upon which the damage is applied.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Min Damage: 0",
+          "Max Damage: 300/450/600",
+          "Min Move Speed Slow: 20%",
+          "Max Move Speed Slow: 100%",
+          "Duration: 5",
+          "Break Duration: 5 (with Scepter)"
+        ],
+        "interaction_notes": [
+          "This ability fully affects enemy units under Disruption, regardless of its source",
+          "A unit can be affected by either Demonic Purge or Demonic Cleanse, but not both"
+        ]
+      },
+      "ability_5": {
+        "name": "Demonic Cleanse",
+        "key": "F",
+        "type": "active",
+        "affects": "Allied Units",
+        "damage": "None",
+        "damage_types": [],
+        "cooldown": "60",
+        "mana_cost": 150,
+        "cast_range": "800",
+        "cast_animation": "0.3 + 0.6",
+        "cast_radius": "N/A",
+        "details": "Dispels debuffs continuously on the affected allied unit, then heals it at the end of the duration.",
+        "description": "Dispels debuffs continuously on the affected allied unit, then heals it at the end of the duration.",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Min Heal: 0",
+          "Max Heal: 450",
+          "Dispel Duration: 5"
+        ],
+        "interaction_notes": [
+          "This ability fully affects enemy units under Disruption, regardless of its source",
+          "A unit can be affected by either Demonic Purge or Demonic Cleanse, but not both",
+          "Acquiring Aghanim's Shard unlocks this ability"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Increased Menace enemy incoming damage amplification per stack from 2% to 2.5%."
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Reduced Shadow Poison base damage from 30/40/50/60 to 24/36/48/60.",
+          "Reduced Demonic Purge duration from 6 to 5.",
+          "Aghanim's Scepter upgrade: No longer replaces Demonic Cleanse 70/65/60-second cooldown with 2 charges that have a 70/65/60-second restore time.",
+          "Aghanim's Shard upgrade: Demonic Cleanse no longer is Demonic Purge's linked ability, rescaled heal from 300/450/600 to 450, reduced duration from 6 to 5, reduced cooldown from 70/65/60 to 60, reduced mana cost from 150/175/200 to 150.",
+          "Talents: LVL 20 +150 Demonic Purge / Demonic Cleanse damage/heal → +150 Demonic Purge, LVL 25 -30s Demonic Purge / Demonic Cleanse cooldown → -30s Demonic Purge cooldown."
+        ]
+      },
+      {
+        "version": "7.37e",
+        "date": "2024-11-19",
+        "changes": [
+          "Rescaled Disruption illusion base attack damage bonus from 30/40/50/60 to 25/40/55/70.",
+          "Increased Demonic Purge cooldown from 60 on each level to 70/65/60.",
+          "Aghanim's Scepter upgrade: Increased Demonic Purge charge restore time from 60 on each level to 70/65/60, increased Demonic Cleanse charge restore time from 60 on each level to 70/65/60.",
+          "Aghanim's Shard upgrade: Increased Demonic Cleanse cooldown from 60 on each level to 70/65/60."
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156743,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

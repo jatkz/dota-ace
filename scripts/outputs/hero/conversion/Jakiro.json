@@ -1,0 +1,246 @@
+{
+  "hero_name": "Jakiro",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 25,
+      "strength_gain": 2.5,
+      "agility": 15,
+      "agility_gain": 1.2,
+      "intelligence": 26,
+      "intelligence_gain": 3,
+      "health": 670,
+      "mana": 387,
+      "armor": 3.5,
+      "magic_resist": 27.6,
+      "damage": [53, 61],
+      "damage_avg": 57,
+      "projectile_speed": 1100,
+      "attack_type": "ranged",
+      "attack_range": 400,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.4 + 0.3",
+      "move_speed": 290,
+      "turn_rate": 0.8,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Pusher, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Twin Terror",
+        "effects": "Reduces the total attack damage reduction. This ability component levels up with Macropyre. -10%/15%/20%/25% Total Attack Damage Reduction"
+      },
+      "facet_2": {
+        "name": "Ice Breaker",
+        "effects": "The Ice Path now automatically detonates once it expires, dealing additional damage and applies another stun on all affected enemy units. Increases path duration. +2/1.5/1/0.5s Path Duration. Grants the Destroy Ice Path sub-ability."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Emits two ice walls along the edges of Macropyre that slow any enemy units trying to cross them", "Increases path duration", "Macropyre now deals pure damage"],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Removes the shared cooldown and fixed downtime restriction with Liquid Frost", "Removes the shared cooldown and fixed downtime restriction with Liquid Fire"],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+2.5% Liquid Fire / Liquid Frost Max Health as Damage", "2x Dual Breath Damage/Range"],
+        "level_20": ["+20 Macropyre Damage per Second", "+0.4s Ice Path Duration/Stun Duration"],
+        "level_15": ["+60 Ice Path First Damage", "+50 Liquid Fire Attack Speed Slow / +10 Liquid Frost Proc Damage"],
+        "level_10": ["-2s Dual Breath Cooldown", "+150 Attack Range"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Double Trouble",
+          "type": "passive",
+          "description": "Jakiro's attack launches two projectiles at the target, but deals less damage. The Ice Head always attacks first.",
+          "values": {
+            "total_attack_damage_reduction": "50%",
+            "attacks_per_attack_point": 1,
+            "instant_attack_interval": 0.2
+          },
+          "details": "The Fire Head applies an instant attack after the Ice Head's attack at a fixed interval. This attack ignores the melee heroes' damage block innate ability."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Jakiro's hero model has the following hidden innate abilities. It may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "The twin head dragon is considered a ground unit, despite its hero model showing otherwise."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Dual Breath",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units / Self",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "10",
+        "mana_cost": "135/150/165/180",
+        "cast_range": "850",
+        "cast_animation": "0.35 + 1.17",
+        "cast_radius": "150 to 275",
+        "details": "An icy blast followed by a wave of fire launches out in a path in front of Jakiro.",
+        "description": "The ice head applies an attack speed slow and a movement speed slow to affected enemy units. The fire head applies damage over time to affected enemy units.",
+        "facet_effects": {
+          "twin_terror": "2x Dual Breath Damage/Range"
+        },
+        "ability_behavior": ["point_target", "unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Travel Distance: 750", "First Damage: 0", "Move Speed Slow: 25%/30%/35%/40%", "Attack Speed Slow: 25/30/35/40", "Debuff Duration: 5", "Damage per Second: 20/40/60/80"],
+        "interaction_notes": ["Dual Breath has targeting functionalities for both unit and point targeting", "Can affect enemy units at max 1025-distance away"]
+      },
+      "ability_2": {
+        "name": "Ice Path",
+        "key": "W",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "20/17/14/11",
+        "mana_cost": "100",
+        "cast_range": "1100",
+        "cast_animation": "0.65 + 0.8",
+        "cast_radius": "150",
+        "details": "Creates a path of ice that stuns and damages enemy units that touch it.",
+        "description": "Jakiro's cunning right head calls upon its frozen heritage, glazing the earth with blistering cold.",
+        "facet_effects": {
+          "ice_breaker": "Path Duration: 5, Detonate Damage: 50/100/150/200, Detonate Stun Duration: 0.5"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": ["Path Distance: 1100", "Path Radius: 150", "Effect Delay: 0.2", "First Damage: 50", "Stun Duration: 1.25/1.5/1.75/2", "Path Duration: 3/3.5/4/4.5"],
+        "interaction_notes": ["All ability effects are applied immediately within the area-of-effect after the effect delay", "Can only affect the same enemy units once per cast"]
+      },
+      "ability_3": {
+        "name": "Liquid Fire",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "13/10/7/4",
+        "mana_cost": 0,
+        "cast_range": "400",
+        "cast_animation": "0.4 + 0.3",
+        "cast_radius": "300",
+        "details": "Burns affected enemy units with fire added to his attack, while slowing their attack speed within the radius.",
+        "description": "The left maw of Jakiro opens, laying waste to any in its path.",
+        "facet_effects": {
+          "twin_terror": "+50 Liquid Fire Attack Speed Slow, +2.5% Max Health as Damage per Second"
+        },
+        "ability_behavior": ["autocast", "attack_modifier"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["Effect Radius: 300", "Attack Speed Slow: 30/40/50/60", "Base Damage per Second: 20/30/40/50", "Debuff Duration: 5", "Active Cast Range: 600", "Damage Factor: 0.75"],
+        "interaction_notes": ["Liquid Fire is an active attack modifier", "Has different cast range when casting manually vs autocast", "Less effective on buildings"]
+      },
+      "ability_4": {
+        "name": "Liquid Frost",
+        "key": "D",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical"],
+        "cooldown": "13/10/7/4",
+        "mana_cost": 0,
+        "cast_range": "400",
+        "cast_animation": "0.4 + 0.3",
+        "cast_radius": "300",
+        "details": "Frosts the affected enemy unit with ice added to his attack while slowing their movement speed within the radius. Damage instances sourced from Jakiro procs additional damage on the affected unit.",
+        "description": "The right maw of Jakiro opens, punishing all with bitter frost.",
+        "facet_effects": {
+          "twin_terror": "+10 Liquid Frost Proc Damage, +2.5% Max Health as Damage per Second"
+        },
+        "ability_behavior": ["autocast", "attack_modifier"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": ["First Damage: 10/15/20/25", "Proc Damage: 8/16/24/32", "Move Speed Slow: 15%/20%/25%/30%", "Debuff Duration: 4", "Active Cast Range: 600"],
+        "interaction_notes": ["Liquid Frost is an active attack modifier", "Does not affect buildings", "Procs on all damage instances sourced to Jakiro"]
+      },
+      "ability_5": {
+        "name": "Macropyre",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell",
+        "damage_types": ["Magical", "Pure"],
+        "cooldown": "90/80/70",
+        "mana_cost": "300/400/500",
+        "cast_range": "1400",
+        "cast_animation": "0.4 + 0.97",
+        "cast_radius": "500",
+        "details": "Exhales a wide line of lasting flames, which deals damage per second to any enemy units caught in the fire.",
+        "description": "Ice and fire combine to rip the battlefield to shreds with extreme temperatures.",
+        "facet_effects": {
+          "twin_terror": "+20 Macropyre Damage per Second"
+        },
+        "ability_behavior": ["point_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": ["Path Width: 500", "Path Distance: 1400", "Damage per Second: 100/150/200", "Damage Linger Duration: 1", "Path Duration: 10"],
+        "interaction_notes": ["Creates 6 negative auras cells immediately within the area-of-effect", "Scepter upgrade creates two ice walls along the edges", "Deals pure damage with Aghanim's Scepter"]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Rescaled Liquid Frost proc damage from 12/18/24/30 to 8/16/24/32",
+          "Reduced Macropyre damage linger duration from 2 to 1",
+          "Aghanim's Scepter upgrade: No longer increases Macropyre path width by 70"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Increased Dual Breath mana cost from 125/140/155/170 to 135/150/165/180",
+          "Reduced Ice Path Ice Breaker detonate damage from 75/125/175/225 to 50/100/150/200"
+        ]
+      },
+      {
+        "version": "7.38b",
+        "date": "2025-03-05",
+        "changes": [
+          "Ice Path: Increased cooldown from 18/15/12/9 to 20/17/14/11",
+          "Reduced Ice Breaker path duration bonus from 3/2.5/2/1.5 to 2/1.5/1/0.5",
+          "Talents: LVL 15 -1.5s Ice Path cooldown → +60 Ice Path first damage"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156742,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}
