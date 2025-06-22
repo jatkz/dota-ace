@@ -102,17 +102,17 @@
     {
         "urlName": "Dark_Seer",
         "displayName": "Dark Seer",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Dark_Willow",
         "displayName": "Dark Willow",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Dawnbreaker",
         "displayName": "Dawnbreaker",
-        "runConversion": true
+        "runConversion": false
     },
     {
         "urlName": "Dazzle",

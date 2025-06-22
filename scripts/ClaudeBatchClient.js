@@ -5,7 +5,7 @@ import fs from 'fs';
 const API_KEY = process.env.CLAUDE_API_KEY;
 
 class ClaudeMessageBatchClient {
-    constructor(apiKey = API_KEY) {
+    constructor(apiKey = API_KEY, templatePath = '') {
         if (!apiKey) {
             throw new Error('API key is required. Set ANTHROPIC_API_KEY in your .env file');
         }
@@ -14,6 +14,14 @@ class ClaudeMessageBatchClient {
         this.anthropic = new Anthropic({ 
             apiKey,
         });
+
+        this.defaultModel = 'claude-sonnet-4-20250514';
+        this.max_tokens = 4000;
+        this.temperature = 0;
+        if (fs.existsSync(templatePath)) {
+            const systemPrompt = fs.readFileSync(templatePath, 'utf8');
+            this.system = systemPrompt
+        }
     }
 
     async listBatches() {
@@ -60,8 +68,10 @@ class ClaudeMessageBatchClient {
             switch (batchType) {
                 case 'hero':
                     path = `./scripts/outputs/${batchTypes[0]}/conversion`
+                    break;
                 case 'item':
                     path = `./scripts/outputs/${batchTypes[1]}/conversion`
+                    break;
                 default:
                     path = `./scripts/outputs`
             }
@@ -142,7 +152,7 @@ class ClaudeMessageBatchClient {
         }
     }
 
-    static claudeCleanupAndSave(text, outputPath) {
+    claudeCleanupAndSave(text, outputPath) {
         const jsonString = text
             .replace(/^```json\n/, '')  // Remove opening ```json
             .replace(/\n```$/, '');     // Remove closing ```
@@ -150,6 +160,68 @@ class ClaudeMessageBatchClient {
         fs.writeFileSync(outputPath, jsonString);
     }
 
+
+    // Basic text completion
+    async createBatch(messages) {
+        try {
+
+            const response = await this.anthropic.messages.batches.create({
+                requests: messages.map(x => {
+                    return {
+                        custom_id: x.custom_id,
+                            params: {
+                                model: this.defaultModel,
+                                max_tokens: this.max_tokens,
+                                temperature: this.temperature,
+                                system: this.system,
+                                messages: [
+                                    {
+                                        role: 'user',
+                                        content: x.message
+                                    }
+                                ]
+                            }
+                    }
+                })
+            });
+
+            return {
+                success: true,
+                content: response
+            };
+        } catch (error) {
+            console.log(error);
+            return {
+                success: false,
+                error: error.message,
+                content: null
+            };
+        }
+    }
+    
+    // Helper: Send file content to Claude
+    async batchAnalyzeFile(batchConfig) {
+        const prompt = "Analyze this file:"
+        try {
+            const messages = batchConfig.map(x => {
+                const content = fs.readFileSync(x.filePath, 'utf8');
+                const message = `${prompt}\n\n${content}`;
+                return {
+                    message: message,
+                    custom_id: x.custom_id
+                }
+            })
+            
+            return await this.createBatch(messages);
+        } catch (error) {
+            console.log(error);
+            return {
+                success: false,
+                error: `File analysis failed: ${error.message}`,
+                content: null
+            };
+        }
+    }
 }
 
 export {

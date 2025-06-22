@@ -1,0 +1,291 @@
+{
+  "hero_name": "Dark Willow",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2,
+      "agility": 18,
+      "agility_gain": 1.6,
+      "intelligence": 21,
+      "intelligence_gain": 3.5,
+      "health": 560,
+      "mana": 327,
+      "armor": 3,
+      "magic_resist": 27.1,
+      "damage": [48, 56],
+      "damage_avg": 52,
+      "projectile_speed": 1200,
+      "attack_type": "ranged",
+      "attack_range": 475,
+      "attack_speed": 115,
+      "bat": 1.5,
+      "animation": "0.3 + 1",
+      "move_speed": 290,
+      "turn_rate": 0.7,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Support, Nuker, Disabler, Escape"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Throwing Shade",
+        "effects": "Grants Mireska an enemy incoming damage amplification aura centered around her. The longer the Shadow Realm, the potent the amplification."
+      },
+      "facet_2": {
+        "name": "Shattering Crown",
+        "effects": "Accumulates a portion of the damage dealt by Mireska to the Cursed Crown-affected enemy unit during its effect delay. This accumulated damage is dealt to all enemy units within the stun radius after the effect delay. Also accumulates a portion of Mireska's allied heroes' attack damage dealt to the cursed enemy unit."
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": ["Attacking no longer takes Dark Willow out of Shadow Realm. Each attack still has bonus damage based on the duration of the buff."],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": ["Decreases cooldown. Creates brambles around the affected enemy unit when the effect delay ends. Additionally, the full ability effect is applied even if the debuff is dispelled before the delay ends."],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+2 Bedlam Attack Targets", "+500 Terrorize Damage"],
+        "level_20": ["-7s Bramble Maze Cooldown", "+1.5s Shadow Realm Duration"],
+        "level_15": ["+150 Cursed Crown Radius", "+30 Bedlam Damage"],
+        "level_10": ["+10 Intelligence", "+1s Bedlam Duration"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Pixie Dust",
+          "type": "passive",
+          "description": "Grants self bonus health regeneration and bonus mana regeneration while being affected by untargetable and hidden sources.",
+          "values": {
+            "health_regen_factor": 2.5,
+            "mana_regen_factor": 2.5
+          },
+          "details": "The mana regeneration factor stacks additively with other mana regeneration amplification sources. However, it applies a unique health regeneration amplification. Stacks multiplicatively with other health regeneration amplification sources."
+        },
+        {
+          "name": "Hero Model",
+          "type": "passive",
+          "description": "Mireska's hero model has the following hidden innate abilities. She may only perform or utilize the ability's functions upon a successful channeling.",
+          "values": {},
+          "details": "Hidden innate abilities that can be tapped for more details."
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Bramble Maze",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "22 (15)",
+        "mana_cost": "100/120/140/160",
+        "cast_range": "1000/1100/1200/1300",
+        "cast_animation": "0.3 + 0.8",
+        "cast_radius": "500",
+        "details": "Creates a maze of brambles that grow in the area-targeted location after a short delay. Enemy units coming in contact with a matured bramble are rooted and take damage over time.",
+        "description": "Creates a maze of brambles that grow in the area-targeted location after a short delay.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Has custom area-targeting indicator with all brambles' formation visualized",
+          "The created brambles are always in the same formation",
+          "Each bramble has its own independent duration and root activation duration"
+        ],
+        "interaction_notes": [
+          "Deals 50/82.5/120/162.5 spell damage for the entire root duration",
+          "Grants True Sight over the affected enemy unit"
+        ]
+      },
+      "ability_2": {
+        "name": "Shadow Realm",
+        "key": "W",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "21/19/17/15",
+        "mana_cost": "70/80/90/100",
+        "cast_range": "600",
+        "cast_animation": "0 + 0",
+        "cast_radius": "",
+        "details": "Recedes into the shadows and becomes untargetable. Mireska's next attack has increased attack range imbued with magical powers corresponding to the duration within the Shadow Realm. Attacking breaks the incantation and brings her back to the physical plane.",
+        "description": "Recedes into the shadows and becomes untargetable. Mireska's next attack has increased attack range imbued with magical powers corresponding to the duration within the Shadow Realm.",
+        "facet_effects": {
+          "throwing_shade": {
+            "aura_radius": 700,
+            "max_enemy_damage_amp": "30%",
+            "aura_linger_duration": 0.75
+          }
+        },
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": true,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Does not interrupt Mireska's channeling abilities upon cast",
+          "Disjoint incoming projectiles after 0.3-second effect delay",
+          "Attack immune, untargetable, phase movement"
+        ],
+        "interaction_notes": [
+          "Max damage: 120/200/280/360",
+          "Duration: 5 (6.5 with talent)",
+          "Attack range bonus: 600"
+        ]
+      },
+      "ability_3": {
+        "name": "Cursed Crown",
+        "key": "E",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "17/15/13/11 (15.5/13.5/11.5/9.5)",
+        "mana_cost": "80/90/100/110",
+        "cast_range": "600/625/650/675",
+        "cast_animation": "0.2 + 0.4",
+        "cast_radius": "360 (510)",
+        "details": "Casts an ancient fae curse that stuns the affected enemy unit after a delay.",
+        "description": "Casts an ancient fae curse that stuns the affected enemy unit after a delay.",
+        "facet_effects": {
+          "shattering_crown": {
+            "accumulated_damage": "35%",
+            "ally_accumulated_attack_damage": "15%"
+          }
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Effect delay: 4 seconds",
+          "Stun duration: 1.2/1.6/2/2.4",
+          "With shard: Creates 4 brambles around target when effect delay ends"
+        ],
+        "interaction_notes": [
+          "Nullifies the ability with Spell Block",
+          "Does not proc Spell Block/Reflection on secondary targets",
+          "Requires drafting Bramble Maze in Ability Draft"
+        ]
+      },
+      "ability_4": {
+        "name": "Bedlam",
+        "key": "D",
+        "type": "active",
+        "affects": "Self / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "30",
+        "mana_cost": "100/150/200",
+        "cast_range": "900",
+        "cast_animation": "0 + 0",
+        "cast_radius": "200",
+        "details": "Summons her pet wisp, Jex, to roam around herself. Jex damages the enemy unit within its range per orbit for the entire duration.",
+        "description": "Summons her pet wisp, Jex, to roam around herself",
+        "facet_effects": {},
+        "ability_behavior": ["no_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Duration: 5.5 (6.5 with talent)",
+          "Max enemy targets: 1 (3 with talent)",
+          "Damage per instance: 70/120/170 (100/150/200 with talent)",
+          "Orbit time: 1.5 seconds"
+        ],
+        "interaction_notes": [
+          "This ability levels up with Terrorize",
+          "Terrorize is inactive until Jex returns from the ability cast",
+          "Jex orbits at 200 radius around Dark Willow"
+        ]
+      },
+      "ability_5": {
+        "name": "Terrorize",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "100/90/80",
+        "mana_cost": "150",
+        "cast_range": "1200",
+        "cast_animation": "1 + 2.57",
+        "cast_radius": "400/450/500",
+        "details": "Releases her pet wisp, Jex, after a short delay to terrorize and apply a fountain-fear on enemy units within the radius.",
+        "description": "Releases her pet wisp, Jex, after a short delay to terrorize and apply a fountain-fear on enemy units within the radius.",
+        "facet_effects": {},
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Fear duration: 3.5/3.75/4",
+          "Damage: 500 (with talent)",
+          "This ability levels up with Bedlam"
+        ],
+        "interaction_notes": [
+          "Applies Expose, Fountain-fear, Mute, and Silence",
+          "For neutral creeps, they retreat back to their respective camps",
+          "Bedlam is inactive until Jex returns from the ability cast"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Pixie Dust: Increased health regeneration bonus factor from 2 to 2.5",
+          "Pixie Dust: Increased mana regeneration bonus factor from 2 to 2.5",
+          "Shadow Realm: Reduced cooldown from 22/20/18/16 to 21/19/17/15"
+        ]
+      },
+      {
+        "version": "7.38",
+        "date": "2025-02-19",
+        "changes": [
+          "Dark Willow no longer is a Universal hero and has Intelligence as the primary attribute",
+          "Increased base attack damage from 5‒13 to 27‒35",
+          "Increased agility gain from 1.3 to 1.6",
+          "Increased intelligence gain from 2.6 to 3.5",
+          "REMOVED Bramble Maze Thorny Thicket facet",
+          "ADDED new Cursed Crown Shattering Crown facet",
+          "Aghanim's Shard upgrade: Cursed Crown no longer reduces effect delay by 1, now also reduces cooldown by 1.5",
+          "Talents: LVL 10 -2s Shadow Realm cooldown → +10 intelligence",
+          "Talents: LVL 10 +0.5s Cursed Crown stun duration → +1s Bedlam duration"
+        ]
+      },
+      {
+        "version": "7.37b",
+        "date": "2024-08-14",
+        "changes": [
+          "Increased Shadow Realm Throwing Shade aura radius from 600 to 700"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 89432,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}

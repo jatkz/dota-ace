@@ -19,8 +19,8 @@ async function main() {
         }
 
         const batchTypes = ['hero', 'item']
-        if (false) {
-            const res = await claude.retrieveBatchResult('msgbatch_01HkHmFwJaqnBaLBghvvMxBR', `./scripts/outputs/${batchTypes[0]}/conversion`);
+        if (true) {
+            const res = await claude.retrieveBatchResult('msgbatch_01E6HPNgvYa8RnwyLWAPghRu', 'hero');
             console.log('Retrieve Batch Result ', res);
         }
 

@@ -1,0 +1,312 @@
+{
+  "hero_name": "Dark Seer",
+  "sections": {
+    "general": {
+      "primary_attribute": "intelligence",
+      "strength": 20,
+      "strength_gain": 2.6,
+      "agility": 19,
+      "agility_gain": 1.5,
+      "intelligence": 21,
+      "intelligence_gain": 2.7,
+      "health": 560,
+      "mana": 327,
+      "armor": 4.17,
+      "magic_resist": 27.1,
+      "damage": [52, 58],
+      "damage_avg": 55,
+      "projectile_speed": "Instant",
+      "attack_type": "melee",
+      "attack_range": 150,
+      "attack_speed": 100,
+      "bat": 1.7,
+      "animation": "0.59 + 0.58",
+      "move_speed": 295,
+      "turn_rate": 0.6,
+      "collision_size": 27,
+      "bound_radius": 24,
+      "vision_range": "1800 / 800",
+      "roles": "Initiator, Escape, Disabler"
+    },
+    "facets": {
+      "facet_1": {
+        "name": "Quick Wit",
+        "effects": "Grants self flat bonus attack speed per current intelligence"
+      },
+      "facet_2": {
+        "name": "Heart of Battle",
+        "effects": "Grants the Dark Seer a fraction of the sum of all heroes' movement speed within the radius, with a minuscule trade-off"
+      }
+    },
+    "upgrades": {
+      "aghanim_scepter": {
+        "effects": [
+          "Grants the Normal Punch ability",
+          "The next attack on an enemy hero has True Strike, damages, and stuns based on Dark Seer's recently moved distance",
+          "The punch knocks a replica of the affected enemy hero that deals additional damage and receives additional incoming damage"
+        ],
+        "found": true
+      },
+      "aghanim_shard": {
+        "effects": [
+          "The charged-up allied unit leave behind a trail that damages and slows enemy units around it",
+          "Does not create the Surge trail with Alt-Cast toggled on"
+        ],
+        "found": true
+      },
+      "talents": {
+        "level_25": ["+350 Surge Radius", "2 Ion Shell Charges"],
+        "level_20": ["+50 Ion Shell Damage", "-40s Wall of Replica Cooldown"],
+        "level_15": ["Ion Shell Grants +250 Max Health", "+75 Vacuum Radius"],
+        "level_10": ["+65 Ion Shell Radius", "+15% Wall of Replica-based Illusion Damage"]
+      }
+    },
+    "innate": {
+      "abilities": [
+        {
+          "name": "Aggrandize",
+          "type": "passive",
+          "description": "Self-heals and self-mana restores every time the Dark Seer levels up",
+          "values": {
+            "max_health_as_heal": "10%",
+            "max_health_as_heal_bonus_per_level": "1.5%",
+            "max_mana_as_mana_restore": "10%",
+            "max_mana_as_mana_restore_bonus_per_level": "1.5%"
+          },
+          "details": "Hidden modifier that provides ability special overrides"
+        },
+        {
+          "name": "Quick Wit",
+          "type": "passive",
+          "description": "Grants self flat bonus attack speed per current intelligence",
+          "values": {
+            "attack_speed_bonus_per_int": 1
+          },
+          "details": "Unlocked by selecting the Quick Wit facet"
+        },
+        {
+          "name": "Heart of Battle",
+          "type": "passive",
+          "description": "Grants the Dark Seer a fraction of the sum of all heroes' movement speed within the radius, with a minuscule trade-off",
+          "values": {
+            "radius": 1200,
+            "hero_speed_to_flat_move_speed_bonus": "7%",
+            "self_move_speed_slow": 20
+          },
+          "details": "Unlocked by selecting the Heart of Battle facet. Considers clones, illusions, and creep-heroes as heroes"
+        }
+      ]
+    },
+    "abilities": {
+      "ability_1": {
+        "name": "Vacuum",
+        "key": "Q",
+        "type": "active",
+        "affects": "Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "60/50/40/30",
+        "mana_cost": "60/90/120/150",
+        "cast_range": "450/500/550/600",
+        "cast_animation": "0.4 + 0.4",
+        "cast_radius": "325/400/475/550",
+        "details": "Creates a vacuum within the area-targeted location that sucks in all enemy units within the radius, interrupting and dealing damage",
+        "description": "Ish'Kafel modifies the center of gravity to a place of his choosing",
+        "facet_effects": {
+          "heart_of_battle": "400/475/550/625 radius"
+        },
+        "ability_behavior": ["area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage: 70/130/190/250",
+          "Pull Duration: 0.3/0.4/0.5/0.6",
+          "Trees within 150 radius destroyed upon cast",
+          "Grants phase movement and unobstructed movement during pull"
+        ],
+        "interaction_notes": [
+          "Does not affect Ancient creeps or Creep-heroes except Spirit Bear",
+          "Can dispel certain invulnerability buffs like cyclones"
+        ]
+      },
+      "ability_2": {
+        "name": "Ion Shell",
+        "key": "W",
+        "type": "active",
+        "affects": "Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "9",
+        "mana_cost": "100/110/120/130",
+        "cast_range": "800",
+        "cast_animation": "0.2 + 0.9",
+        "cast_radius": "275",
+        "details": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it",
+        "description": "The Dark Seer slices holes into the 'Land Behind the Wall,' causing prismatic energy to seep forth",
+        "facet_effects": {
+          "heart_of_battle": "340 damage radius, 80/100/120/140 damage per second, 250 max health bonus"
+        },
+        "ability_behavior": ["unit_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Damage per Second: 30/50/70/90",
+          "Duration: 20/22/24/26",
+          "Deals damage in 0.2-second intervals",
+          "Can be cast on both enemy and allied units",
+          "Cannot be cast on Couriers"
+        ],
+        "interaction_notes": [
+          "Affected unit with Ion Shell is not damaged",
+          "Doubletap casts on Dark Seer",
+          "Multiple instances work independently"
+        ]
+      },
+      "ability_3": {
+        "name": "Surge",
+        "key": "E",
+        "type": "active",
+        "affects": "Allied Units / Enemy Units",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "24/19/14/9",
+        "mana_cost": "50",
+        "cast_range": "600",
+        "cast_animation": "0.4 + 0.57",
+        "cast_radius": "350",
+        "details": "Charges an allied unit with power, granting a brief max movement speed burst and phase movement. The allied unit cannot be slowed",
+        "description": "Ish'Kafel once used his speed of mind to navigate the maze between the walls",
+        "facet_effects": {},
+        "ability_behavior": ["unit_target", "area_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "yes",
+        "scepter_upgradable": false,
+        "shard_upgradable": true,
+        "technical_details": [
+          "Haste Speed: 550",
+          "Duration: 3/4/5/6",
+          "Trail Width: 150 (with Shard)",
+          "Trail Damage per Second: 40 (with Shard)",
+          "Trail Move Speed Slow: 50% (with Shard)"
+        ],
+        "interaction_notes": [
+          "Grants phase movement and haste movement",
+          "With talent becomes area-targeted with 350 radius",
+          "Shard creates damaging trail behind surged unit"
+        ]
+      },
+      "ability_4": {
+        "name": "Normal Punch",
+        "key": "D",
+        "type": "passive",
+        "affects": "Enemy Heroes",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "10",
+        "mana_cost": 0,
+        "cast_range": "melee",
+        "cast_animation": "instant",
+        "cast_radius": "N/A",
+        "details": "The next attack on an enemy hero has True Strike, damages, and stuns based on Dark Seer's recently moved distance",
+        "description": "As a young soldier, long before he became a leader of his people, Ish'Kafel was known amongst his fellow recruits as quite the pugilist",
+        "facet_effects": {},
+        "ability_behavior": ["passive"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Movement Timer: 3",
+          "Max Values Distance: 1100",
+          "Min/Max Damage: 10/400",
+          "Min/Max Stun Duration: 0.2/1.25",
+          "Min/Max Knock Distance: 10/350",
+          "Creates illusion with 70%/80%/90% damage dealt, 200% damage taken"
+        ],
+        "interaction_notes": [
+          "Requires Aghanim's Scepter to unlock",
+          "Distance counter never resets",
+          "Creates replica illusion behind knocked back enemy"
+        ]
+      },
+      "ability_5": {
+        "name": "Wall of Replica",
+        "key": "R",
+        "type": "active",
+        "affects": "Enemy Heroes",
+        "damage": "Spell / Magical",
+        "damage_types": ["magical"],
+        "cooldown": "100",
+        "mana_cost": "125/250/375",
+        "cast_range": "1000",
+        "cast_animation": "0.2 + 0.73",
+        "cast_radius": "N/A",
+        "details": "Raises a wall of light that slows and creates replicas of any enemy hero who crosses it. These replicas serve at the Dark Seer's will, they last until destroyed or until the wall duration ends",
+        "description": "The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks",
+        "facet_effects": {},
+        "ability_behavior": ["point_target", "vector_target"],
+        "pierces_spell_immunity": false,
+        "blocked_by_root": false,
+        "dispellable": "no",
+        "scepter_upgradable": false,
+        "shard_upgradable": false,
+        "technical_details": [
+          "Wall Length: 1300",
+          "Wall Width: 50",
+          "Wall Duration: 30",
+          "Damage Upon Illusion Creation: 25/40/55",
+          "Move Speed Slow: 50%/60%/70%",
+          "Slow Duration: 1",
+          "Illusion Damage Dealt: 70%/80%/90%",
+          "Illusion Damage Taken: 200%"
+        ],
+        "interaction_notes": [
+          "Creates 1 illusion per enemy hero",
+          "Illusions attack corresponding enemy heroes",
+          "Wall provides negative aura that slows enemies"
+        ]
+      }
+    },
+    "recent_changes": [
+      {
+        "version": "7.39b",
+        "date": "2025-05-29",
+        "changes": [
+          "Reduced Ion Shell duration from 21/24/27/30 to 20/22/24/26",
+          "Reduced Wall of Replica cast range from 1300 to 1000"
+        ]
+      },
+      {
+        "version": "7.39",
+        "date": "2025-05-21",
+        "changes": [
+          "Reduced agility gain from 1.8 to 1.5",
+          "Aghanim's Scepter upgrade: Increased Normal Punch cooldown from 9 to 10"
+        ]
+      },
+      {
+        "version": "7.38c",
+        "date": "2025-03-27",
+        "changes": [
+          "Reduced base attack damage from 33‒39 to 31‒37",
+          "Increased Heart of Battle radius from 900 to 1200",
+          "LVL 10 Talent: +20% Wall of Replica / Normal Punch illusion damage dealt reduced to +15%"
+        ]
+      }
+    ]
+  },
+  "parsing_stats": {
+    "file_size": 156847,
+    "sections_found": 5,
+    "parse_time_ms": 45,
+    "success_rate": "100%"
+  }
+}
