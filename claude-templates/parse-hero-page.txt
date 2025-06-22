@@ -120,6 +120,7 @@ Structure the parsed data as a comprehensive JSON object with this schema:
       "ability_3": { /* same structure */ },
       "ability_4": { /* same structure */ }
     }
+  }
 }
 ```
 
