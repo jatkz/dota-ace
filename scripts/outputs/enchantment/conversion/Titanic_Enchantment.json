@@ -1,0 +1,15 @@
+{
+  "name": "Titanic Enchantment",
+  "description": null,
+  "tier": [4, 5],
+  "stats": {
+    "statusResistance": "10/15%",
+    "mainAttackDamage": "10/20%"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Stacks multiplicatively with other status resistance sources.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

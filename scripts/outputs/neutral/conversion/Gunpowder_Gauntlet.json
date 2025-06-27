@@ -1,0 +1,46 @@
+{
+  "name": "Gunpowder Gauntlet",
+  "description": "A 'harmless' prank that went entirely too far.",
+  "tier": "Tier 3",
+  "abilities": [
+    {
+      "name": "Beat the Crowd",
+      "type": "passive",
+      "description": "The next attack deals additional magical damage against the primary target.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 6,
+      "effects": {
+        "magicalAttackDamageBonus": 120,
+        "splashRadius": 250,
+        "splashDamage": "50%",
+        "magicalAttackDamageBonusWithCurio": 156
+      },
+      "notes": [
+        "The ability triggers upon reaching the attack point, not upon landing an attack",
+        "This means the ability can trigger on missed attacks",
+        "For ranged heroes, this is upon projectile launch",
+        "However, the attack must land on the target in order to apply the splash damage",
+        "Does not trigger when attacking allied units or buildings",
+        "Triggers upon attacking ward-type units, but does not apply the attack damage bonus or splash damage",
+        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+        "It is not considered by lifesteal, crit or cleave",
+        "It can be reduced only by flat reductions (e.g. magical damage barrier)",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "The splash damage is applied as spell damage, with the damage type based on the attack damage source",
+        "The physical portion is splashed as physical damage, the magical portion is splashed as magical damage",
+        "It is fully affected by incoming and outgoing spell damage manipulation and works with spell lifesteal",
+        "The splash damage is not affected by Damage Block",
+        "The splash damage does not affect the primary target, buildings, or ward-type units"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the magical attack damage bonus is increased by 30%",
+    "The attack also splashes to units nearby for a percentage of the attack's damage, including the magical damage"
+  ],
+  "states": []
+}

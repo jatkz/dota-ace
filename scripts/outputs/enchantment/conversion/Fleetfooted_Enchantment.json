@@ -1,0 +1,13 @@
+{
+  "name": "Fleetfooted Enchantment",
+  "description": null,
+  "tier": [5],
+  "stats": {
+    "moveSpeed": 115
+  },
+  "additionalInfo": [
+    "Does not stack with the movement speed bonuses of Boots of Speed-based items, the one with a higher value takes priority",
+    "Stacks with all other movement speed bonus",
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics"
+  ]
+}

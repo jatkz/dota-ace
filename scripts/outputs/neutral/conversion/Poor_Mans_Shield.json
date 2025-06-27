@@ -1,0 +1,43 @@
+{
+  "name": "Poor Man's Shield",
+  "description": "A busted old shield that seems to block more than it should.",
+  "tier": "Tier 2",
+  "abilities": [
+    {
+      "name": "Damage Block",
+      "type": "passive",
+      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "50%",
+        "blockedDamage": 30,
+        "blockedDamageRanged": 20,
+        "procChanceVsHeroes": "100%",
+        "blockedDamageWithCurio": 39,
+        "blockedDamageRangedWithCurio": 26
+      },
+      "notes": [
+        "Ranged wielders block less damage with the same proc chance",
+        "Has increased chances to proc against hero attacks",
+        "When crafted with the Dormant Curio, the blocked damage is increased by 30%",
+        "Uses pseudo-random distribution",
+        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
+        "Multiple sources of the same value stack multiplicatively",
+        "Does not work against damage from wards sources",
+        "Does not reduce physical damage from abilities, except for specific abilities",
+        "Treats illusions as heroes and creep-heroes as creeps"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone",
+    "Item is currently removed from the game",
+    "Not shareable",
+    "No usage alert"
+  ],
+  "states": []
+}

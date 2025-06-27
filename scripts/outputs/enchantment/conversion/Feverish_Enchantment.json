@@ -1,0 +1,14 @@
+{
+  "name": "Feverish Enchantment",
+  "description": null,
+  "tier": [5],
+  "stats": {
+    "cooldown_reduction": "15%",
+    "mana_loss_reduction": "-7%"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

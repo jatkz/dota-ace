@@ -1,0 +1,47 @@
+{
+  "name": "Helm of the Undying",
+  "description": "The price for wearing it is paid in the afterlife.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Death Delay",
+      "type": "passive",
+      "description": "When receiving a killing blow, the death gets delayed for a short time, during which the wielder can still act freely.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "baseDuration": 5,
+        "deathRadius": 1200,
+        "durationIncrease": 5,
+        "baseDurationWithCurio": 6.5,
+        "curioBonus": "30%",
+        "modelSizeIncrease": "25%"
+      },
+      "notes": [
+        "The wielder enters Death Delay when their health reaches 1, unless they are affected by Shallow Grave, Battle Trance, Wraith Delay, or have Reincarnation",
+        "The wielder is kept alive by having their minimum health set to 1. Damage taken is technically not reduced",
+        "Death Delay does not trigger for Meepo if one of his Meepo Clones get killed, instead of the prime Meepo who carries the item",
+        "Death Delay grants the wielder unobstructed movement, allowing them to move through units, trees, and over cliffs",
+        "During Death Delay, the wielder is still alive, so they are still fully targetable and affected by spells and attacks",
+        "Since the wielder did not die yet, buffs and debuffs are not dispelled either, like how they would upon death",
+        "When Death Delay expires, the wielder dies. The kill is credited to whoever triggered it",
+        "The wielder cannot be saved by any means. They will die once the effect expires, even if they are invulnerable, or anything that usually prevents death",
+        "If the wielder gains reincarnation during Death Delay, it still triggers regularly and reincarnates the wielder",
+        "Death Delay causes the wielder's model size to increase by 25% for its duration. This has no impact on their collision size",
+        "While active, enemy heroes that die nearby extend the duration",
+        "When crafted with the Dormant Curio, the base duration is increased by 30%",
+        "The sound effect only plays when there is a Wraith King within the same match"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+    "Shareable: No",
+    "Usage Alert: No",
+    "Item is removed from the game"
+  ],
+  "states": []
+}

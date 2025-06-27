@@ -1,0 +1,56 @@
+{
+  "name": "Psychic Headband",
+  "description": "A failed experiment in finer telekinetic control, still fit for other ends.",
+  "tier": "Tier 3",
+  "abilities": [
+    {
+      "name": "Psychic Push",
+      "type": "active",
+      "description": "Pushes the target enemy unit away from you 400 distance.",
+      "castAnimation": null,
+      "castRange": 600,
+      "manaCost": 0,
+      "cooldown": 20,
+      "effects": {
+        "pushDistance": 400,
+        "pushDuration": 0.3,
+        "pushSpeed": 1333.33,
+        "enhancedPushDistance": 520,
+        "enhancedPushSpeed": 1733.33
+      },
+      "notes": [
+        "With the item's cast range bonus, Psychic Push has a total cast range of 400",
+        "The target is not disabled during the push, so they still can cast abilities, attack, and turn during the push",
+        "Does not interrupt channeling abilities upon cast",
+        "Does not push units affected by Black Hole, Chronosphere, Duel or Flaming Lasso",
+        "Cannot push units through Kinetic Field or Arena of Blood",
+        "If the target is affected by Soulbind, it cannot push the unit further than its max stretch distance allows",
+        "If the target is leashed by Pounce, the leash gets instantly broken upon cast",
+        "Cannot be cast on wards or buildings. Can be cast on Homing Missile",
+        "Can move units over impassable terrain. Trees within 200 radius around the pushed target gets destroyed during the push",
+        "Can be cast on Roshan but without any effect, since Roshan is immune to forced movement",
+        "Does not share cooldown with Force Staff-based items",
+        "When crafted with the Dormant Curio, the push distance is increased by 30%"
+      ]
+    },
+    {
+      "name": "Psychic Headband",
+      "type": "passive",
+      "description": null,
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {},
+      "notes": []
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+    "Shareable: No",
+    "Usage Alert: No",
+    "Item is removed from the game"
+  ],
+  "states": []
+}

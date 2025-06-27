@@ -1,0 +1,18 @@
+{
+  "name": "Mystical Enchantment",
+  "description": null,
+  "tier": [1, 2, 3, 4],
+  "stats": {
+    "manaRegeneration": [1, 1.75, 2.5, 3.25],
+    "magicResistance": [0, 10, 13, 16],
+    "castRange": [0, 0, 0, 100]
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Stacks multiplicatively with other magic resistance sources.",
+    "Increases most heroes' magic resistance to 25%/775%/1000%/37%.",
+    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 1%/-9%/-12%/0.84%.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

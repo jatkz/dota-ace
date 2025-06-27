@@ -1,0 +1,34 @@
+{
+  "name": "Whisper of the Dread",
+  "description": "The air that passes through this amulet makes a dreadful sound.",
+  "tier": "Tier 3",
+  "abilities": [
+    {
+      "name": "Tunnel Vision",
+      "type": "passive",
+      "description": "Grants spell damage but decreases the wearer's daytime vision in return.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "spellDamageAmp": "10%",
+        "daytimeVisionReduction": "15%",
+        "spellDamageAmpWithCurio": "13%"
+      },
+      "notes": [
+        "When crafted with the Dormant Curio, the spell damage amp is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {
+    "spellDamageAmplification": "10%",
+    "daytimeVisionReduction": "15%"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": null
+}

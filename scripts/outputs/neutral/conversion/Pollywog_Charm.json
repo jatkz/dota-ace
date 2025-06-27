@@ -1,0 +1,33 @@
+{
+  "name": "Pollywog Charm",
+  "description": "A tiny trinket that wriggles when wet.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "Ribbit",
+      "type": "active",
+      "description": "Increases the health regeneration of a target ally for a duration.",
+      "castAnimation": "0 + 0",
+      "castRange": 1000,
+      "manaCost": 0,
+      "cooldown": 45,
+      "effects": {
+        "healthRegenBonus": 8,
+        "duration": 14
+      },
+      "notes": [
+        "Does not interrupt the wielder's channeling abilities upon cast",
+        "Doubletap casts the ability on the wielder",
+        "Reapplying the buff refreshes the duration",
+        "Taking more than 0 damage from Roshan (after reductions) dispels the buff"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": null
+}

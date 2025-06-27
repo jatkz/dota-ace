@@ -1,0 +1,38 @@
+{
+  "name": "Essence Ring",
+  "description": "An ancient bauble blessed by the breath of Verodicia.",
+  "tier": "Tier 2",
+  "abilities": [
+    {
+      "name": "Life Essence",
+      "type": "active",
+      "description": "Increases the caster's current and maximum health for a short time.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 25,
+      "effects": {
+        "healthBonus": 240,
+        "duration": 10,
+        "healthBonusWithDormantCurio": 312,
+        "dormantCurioBonus": "30%"
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "First increases maximum health, keeping the current health value. The current health percentage is not kept",
+        "Then increases the current health by the same amount. This does not count as a heal and bypasses any heal manipulation",
+        "Upon losing the buff, reduces maximum health, keeping the current health value. The current health percentage is not kept",
+        "This means the current health bonus is not reverted",
+        "Multiple instances of the buff do not stack. A re-cast increases the current health again, and refreshes the existing buff"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+    "When crafted with the Dormant Curio, the health bonus is increased by 30%",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

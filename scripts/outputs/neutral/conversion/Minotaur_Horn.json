@@ -1,0 +1,37 @@
+{
+  "name": "Minotaur Horn",
+  "description": "The trophy from a mighty beast ambushed and slain in the recesses of its own home.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Lesser Avatar",
+      "type": "active",
+      "description": "Applies a basic dispel. Grants magic resistance and immunity to pure and reflected damage. For the duration, any negative effect from enemy spells has no effect.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 40,
+      "cooldown": 0,
+      "effects": {
+        "magicResistBonus": "50%",
+        "duration": "2",
+        "durationWithDormantCurio": "2.6",
+        "modelSizeIncrease": "30%"
+      },
+      "notes": [
+        "Interrupts the wielder's channeling abilities upon cast",
+        "Stacks multiplicatively with other magic resistance sources",
+        "Applies a basic dispel on the wielder",
+        "Grants debuff immunity and pure damage immunity for the entire duration",
+        "30% model size increase. Does not affect collision size",
+        "Has 62.5% magic resistance while active",
+        "Avatar increases the total magic resistance by 0.5% per 10 intelligence points"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the duration is increased by 30%"
+  ],
+  "states": []
+}

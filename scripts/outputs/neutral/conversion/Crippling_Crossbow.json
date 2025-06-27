@@ -1,0 +1,36 @@
+{
+  "name": "Crippling Crossbow",
+  "description": "The ever-weeping woodgrain of this crossbow coats every bolt in a potent but short-lived narcotic sap.",
+  "tier": "Tier 4",
+  "abilities": [
+    {
+      "name": "Hobble",
+      "type": "active",
+      "description": "Hits an enemy for some damage, then slows them and reduces the effectiveness of health restoration on the target for some time. The slow gradually decays over the duration.",
+      "castAnimation": "0 + 0",
+      "castRange": 800,
+      "manaCost": 50,
+      "cooldown": 12,
+      "effects": {
+        "damage": 75,
+        "moveSpeedSlow": "80%",
+        "healthRestoreReduction": "40%",
+        "duration": 4,
+        "damageType": "Spell / Magical",
+        "slowDecayPerTick": "2.67%"
+      },
+      "notes": [
+        "The following values decrease per server tick, over 120 instances: 2.67% movement speed per tick",
+        "Reapplying the debuff refreshes the duration and resets the slow value",
+        "When crafted with the Dormant Curio, the health restore reduction is increased by 30% (to 52%)"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

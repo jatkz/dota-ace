@@ -1,0 +1,15 @@
+{
+  "name": "Crude Enchantment",
+  "description": null,
+  "tier": [4, 5],
+  "stats": {
+    "intelligence": "-5%",
+    "baseAttackTime": "-12/-18%",
+    "healthRestoreAmp": "+30/40%"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

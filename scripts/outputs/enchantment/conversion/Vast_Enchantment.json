@@ -1,0 +1,13 @@
+{
+  "name": "Vast Enchantment",
+  "description": null,
+  "tier": [2, 3],
+  "stats": {
+    "attackRange": "75/110"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Greedy Enchantment",
+  "description": null,
+  "tier": [2, 3],
+  "stats": {
+    "mana": "200/250",
+    "attackDamage": "-30/-60",
+    "goldPerMinute": "75/100"
+  },
+  "additionalInfo": [
+    "Grants reliable gold and works while dead as well",
+    "Increases gold gained to a total of 90.75 gold per minute while equipped",
+    "Fully stacks with other gold per minute increasing effects",
+    "Illusions and clones cannot utilize the passive gold gain",
+    "Acquired by crafting with Madstone",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

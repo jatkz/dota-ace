@@ -1,0 +1,41 @@
+{
+  "name": "Searing Signet",
+  "description": "To torture a magic user, one must devise means far beyond the mundane.",
+  "tier": "Tier 2",
+  "abilities": [
+    {
+      "name": "Burn Through",
+      "type": "passive",
+      "description": "Instances of magic damage from spells over a threshold ignite enemies if they are within range, causing them to take damage over time.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "maxDistance": 2000,
+        "damageThreshold": 55,
+        "totalDamage": 72,
+        "duration": 6,
+        "damagePerInterval": 3,
+        "interval": 0.25,
+        "totalInstances": 24,
+        "dormantCurioBonus": "30%",
+        "dormantCurioTotalDamage": 93.6
+      },
+      "notes": [
+        "Does not apply the debuff if the enemy is out of range from the source",
+        "Already applied debuffs persist, even if the target moves out of range",
+        "Reapplying the buff refreshes the duration",
+        "Deals 3 (3.9 with Dormant Curio) damage in 0.25-second intervals, resulting in 24 damage instances",
+        "Does not trigger on Radiance, Urn of Shadows, and Spirit Vessel",
+        "The damage from Poison Attack is direct HP Removal, so it does not trigger any on-damage effects"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the total damage is increased by 30%"
+  ],
+  "states": []
+}

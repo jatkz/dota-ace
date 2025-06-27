@@ -1,0 +1,19 @@
+{
+  "name": "Evolved Enchantment",
+  "description": null,
+  "tier": [5],
+  "stats": {
+    "primaryAttributeBonus": 40,
+    "allAttributesBonus": 24
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Provides either +40 Primary Attribute OR +24 All Attributes",
+    "For Strength heroes: 40 main attack damage, 880 health, 4 health regen",
+    "For Agility heroes: 40 main attack damage, 6.67 armor, 40 attack speed",
+    "For Intelligence heroes: 40 main attack damage, 480 mana, 2 mana regen, 4% magic resistance",
+    "For Universal heroes: 32.4 main attack damage, 528 health, 2.4 health regen, 4 armor, 24 attack speed, 288 mana, 1.2 mana regen, 2.4% magic resistance",
+    "Not shareable between players",
+    "No usage alert"
+  ]
+}

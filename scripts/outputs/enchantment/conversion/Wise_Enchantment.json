@@ -1,0 +1,14 @@
+{
+  "name": "Wise Enchantment",
+  "description": null,
+  "tier": [5],
+  "stats": {
+    "mana_percentage": 15,
+    "experience_per_minute": 1000
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

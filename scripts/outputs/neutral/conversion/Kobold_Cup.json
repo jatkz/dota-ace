@@ -1,0 +1,33 @@
+{
+  "name": "Kobold Cup",
+  "description": "The Kobold King will sip when he damn well pleases.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "One for the Road",
+      "type": "active",
+      "description": "Grants movement speed to nearby allies for a short while on cast.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 40,
+      "cooldown": 40,
+      "effects": {
+        "radius": 1000,
+        "moveSpeedBonus": "10%",
+        "duration": 6
+      },
+      "notes": [
+        "Interrupt the caster's channeling abilities upon cast.",
+        "The buff of successive casts does not stack but refreshes the duration instead."
+      ]
+    }
+  ],
+  "stats": {
+    "shareable": false,
+    "usageAlert": false
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+  ],
+  "states": null
+}

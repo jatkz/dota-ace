@@ -1,0 +1,35 @@
+{
+  "name": "Outworld Staff",
+  "description": "Proof that the lone sentinel was not always so.",
+  "tier": "Tier 4",
+  "abilities": [
+    {
+      "name": "Self-Exile",
+      "type": "active",
+      "description": "Briefly places the wielder into an astral prison. The hidden wielder is invulnerable and disabled.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 30,
+      "cooldown": 40,
+      "effects": {
+        "duration": "0.7",
+        "maxHealthAsDamage": "5%",
+        "damageType": "Pure / HP-Removal",
+        "dormantCurioDuration": "0.91",
+        "dormantCurioBonusDuration": "30%"
+      },
+      "notes": [
+        "Fully disables the caster and turns them invulnerable and hidden",
+        "Upon returning, the wielder takes damage based on their maximum health. This damage is not lethal",
+        "When crafted with the Dormant Curio, the duration is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

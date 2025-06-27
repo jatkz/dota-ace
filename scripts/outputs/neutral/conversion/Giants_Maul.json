@@ -1,0 +1,40 @@
+{
+  "name": "Giant's Maul",
+  "description": "Crude but smashingly effective.",
+  "tier": "Tier 4",
+  "abilities": [
+    {
+      "name": "Crushing Blow",
+      "type": "passive",
+      "description": "Empowers the next attack with a critical hit, and slows the target's movement, attack, and cast speed for a short while.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 15,
+      "effects": {
+        "criticalDamage": "150%",
+        "moveSpeedSlow": "10%",
+        "attackSpeedSlow": "15%",
+        "castSpeedSlow": "20%",
+        "duration": 3,
+        "criticalDamageWithDormantCurio": "195%"
+      },
+      "notes": [
+        "When another source of critical strike procs on the same attack, the higher damage value takes priority. The other effects of Crushing Blow are still applied normally.",
+        "Crushing Blow triggers upon executing an attack, regardless of its outcome. For ranged heroes, this is upon projectile launch.",
+        "The effects are only applied and the cooldown only begins if the attack lands on the target.",
+        "If multiple attack projectiles are launched, only the first launched one can apply the attack.",
+        "Even if the first launched one misses or is disjointed, other already launched attack projectiles cannot apply the effects.",
+        "The attack speed slow is a percentage, applied to the total attack speed."
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the critical damage is increased by 30%.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

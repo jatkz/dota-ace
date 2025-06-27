@@ -1,0 +1,38 @@
+{
+  "name": "Stygian Desolator",
+  "description": "The original demonic favorite that served as basis for the beloved mortal design.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Greater Corruption",
+      "type": "passive",
+      "description": "The wielder's attacks apply an armor reducing debuff on enemy units.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "armorReduction": 13,
+        "duration": 7,
+        "armorReductionWithDormantCurio": 16.9,
+        "dormantCurioBonus": "30%"
+      },
+      "notes": [
+        "The bonus armor reduction value does not stack",
+        "Reapplying the debuff refreshes the duration",
+        "Affects allied units, buildings, and ward-type units",
+        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other",
+        "When crafted with the Dormant Curio, the armor reduction is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No",
+    "Has specific attack projectile modifying priority among similar items",
+    "The ability effects are applied in order: the desolator_2_buff, then the wielder's attack instance"
+  ],
+  "states": []
+}

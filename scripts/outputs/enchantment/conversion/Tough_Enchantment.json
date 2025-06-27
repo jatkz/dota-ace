@@ -1,0 +1,15 @@
+{
+  "name": "Tough Enchantment",
+  "description": null,
+  "tier": [1, 2, 3, 4],
+  "stats": {
+    "armor": [0, 4, 6, 8],
+    "knockback_resistance": [0, 0, 0, 40],
+    "attack_damage": [7, 10, 13, 16]
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

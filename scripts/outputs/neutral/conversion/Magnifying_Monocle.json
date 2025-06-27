@@ -1,0 +1,38 @@
+{
+  "name": "Magnifying Monocle",
+  "description": "Deadly refinement.",
+  "tier": "Tier 4",
+  "abilities": [
+    {
+      "name": "Keen Eye",
+      "type": "passive",
+      "description": "Increases cast range and attack range for melee and ranged heroes.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "castRangeBonus": 100,
+        "attackRangeBonus": 100,
+        "castRangeBonusWithCurio": 130,
+        "attackRangeBonusWithCurio": 130,
+        "downtime": 3
+      },
+      "notes": [
+        "When crafted with the Dormant Curio, the cast range bonus and attack range bonus are increased by 30%",
+        "Player-based damage greater than 25 - regardless of alliance - puts the item on a fixed cooldown",
+        "Can be reset with cooldown reset sources",
+        "The player-based damage cooldown does not proc on self-damage sources",
+        "The player-based damage cooldown does not proc on HP Removal sources",
+        "The player-based damage cooldown does not proc on Roshan, despite the in-game tooltip"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

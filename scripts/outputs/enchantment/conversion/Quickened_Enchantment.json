@@ -1,0 +1,14 @@
+{
+  "name": "Quickened Enchantment",
+  "description": null,
+  "tier": [1, 2, 3, 4],
+  "stats": {
+    "mana": [0, 100, 160, 220],
+    "evasion": [0, 0, 0, 15],
+    "moveSpeed": [15, 20, 25, 30]
+  },
+  "additionalInfo": [
+    "Fully stacks with other movement speed sources",
+    "Acquired by crafting with Madstone"
+  ]
+}

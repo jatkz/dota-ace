@@ -1,0 +1,41 @@
+{
+  "name": "Tumbler's Toy",
+  "description": "An antique plaything found in the ruins of an Ozenja circus bazaar.",
+  "tier": "Tier 2",
+  "abilities": [
+    {
+      "name": "Vault",
+      "type": "active",
+      "description": "Propels the caster a short distance forward.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 15,
+      "effects": {
+        "leapDistance": 300,
+        "leapDistanceWithCurio": 390,
+        "leapSpeed": 1300,
+        "leapDuration": 0.23,
+        "leapDurationWithCurio": 0.3,
+        "downtime": 3
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Always leaps towards the direction the user is facing. Locks the user's facing angle during the leap",
+        "Can leap over other units and over impassable terrain",
+        "During Leap, the user can attack, use items and cast abilities, except recasting Vault",
+        "However, they cannot turn, so targeted abilities and items may only be used in the direction they are facing",
+        "Getting rooted while already leaping does not cancel the leap",
+        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) puts the item on a cooldown"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+    "When crafted with the Dormant Curio, the leap distance is increased by 30%",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

@@ -9,9 +9,9 @@ class ClaudeMessageBatchClient {
         if (!apiKey) {
             throw new Error('API key is required. Set ANTHROPIC_API_KEY in your .env file');
         }
-        
+
         // Pass fetch to the Anthropic client
-        this.anthropic = new Anthropic({ 
+        this.anthropic = new Anthropic({
             apiKey,
         });
 
@@ -63,7 +63,7 @@ class ClaudeMessageBatchClient {
 
     async retrieveBatchResult(messageBatchId, batchType) {
         try {
-            const batchTypes = ['hero', 'item'];
+            const batchTypes = ['hero', 'item', 'neutral', 'enchantment'];
             let path;
             switch (batchType) {
                 case 'hero':
@@ -72,6 +72,12 @@ class ClaudeMessageBatchClient {
                 case 'item':
                     path = `./scripts/outputs/${batchTypes[1]}/conversion`
                     break;
+                case 'neutral':
+                    path = `./scripts/outputs/${batchTypes[2]}/conversion`
+                    break;
+                case 'enchantment':
+                    path = `./scripts/outputs/${batchTypes[3]}/conversion`
+                    break;
                 default:
                     path = `./scripts/outputs`
             }
@@ -79,8 +85,8 @@ class ClaudeMessageBatchClient {
 
             // Stream results file in memory-efficient chunks, processing one at a time
             for await (const result of await this.anthropic.messages.batches.results(
-                    messageBatchId
-                )) {
+                messageBatchId
+            )) {
                 switch (result.result.type) {
                     case 'succeeded':
                         console.log(result.result.message.content[0]);
@@ -156,7 +162,7 @@ class ClaudeMessageBatchClient {
         const jsonString = text
             .replace(/^```json\n/, '')  // Remove opening ```json
             .replace(/\n```$/, '');     // Remove closing ```
-        
+
         fs.writeFileSync(outputPath, jsonString);
     }
 
@@ -169,18 +175,18 @@ class ClaudeMessageBatchClient {
                 requests: messages.map(x => {
                     return {
                         custom_id: x.custom_id,
-                            params: {
-                                model: this.defaultModel,
-                                max_tokens: this.max_tokens,
-                                temperature: this.temperature,
-                                system: this.system,
-                                messages: [
-                                    {
-                                        role: 'user',
-                                        content: x.message
-                                    }
-                                ]
-                            }
+                        params: {
+                            model: this.defaultModel,
+                            max_tokens: this.max_tokens,
+                            temperature: this.temperature,
+                            system: this.system,
+                            messages: [
+                                {
+                                    role: 'user',
+                                    content: x.message
+                                }
+                            ]
+                        }
                     }
                 })
             });
@@ -198,7 +204,7 @@ class ClaudeMessageBatchClient {
             };
         }
     }
-    
+
     // Helper: Send file content to Claude
     async batchAnalyzeFile(batchConfig) {
         const prompt = "Analyze this file:"
@@ -211,7 +217,7 @@ class ClaudeMessageBatchClient {
                     custom_id: x.custom_id
                 }
             })
-            
+
             return await this.createBatch(messages);
         } catch (error) {
             console.log(error);

@@ -40934,5 +40934,1759 @@
                 ]
             }
         }
+    },
+    "neutrals": {
+        "Book of the Dead": {
+            "name": "Book of the Dead",
+            "description": "A record of the final reckoning. With one page torn out.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Greater Demonic Summoning",
+                    "type": "active",
+                    "description": "Summons a number of Necronomicon Warriors and Necronomicon Archers that are under the caster's control, with strong attacks and several abilities of their own.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 80,
+                    "cooldown": 0,
+                    "effects": {
+                        "numberOfWarriors": 2,
+                        "numberOfArchers": 2,
+                        "duration": 65,
+                        "attackDamageMultiplier": 0.75,
+                        "dormantCurioDurationBonus": "30%",
+                        "dormantCurioDuration": 84.5
+                    },
+                    "notes": [
+                        "Interrupts the caster's channeling abilities upon cast",
+                        "The summons always spawn in front of the caster",
+                        "Recasting Greater Demonic Summoning replaces the summons from the previous cast, no matter under whose control they are",
+                        "However, recasting it with a second Book of the Dead (stolen from the enemy or copied by a Tempest Double) creates new summons",
+                        "The summons cannot be targeted by Helm of the Dominator or Helm of the Overlord, and the warrior cannot be targeted by Hand of Midas",
+                        "However, they can be targeted by other unit converting or instantly killing abilities (e.g. Holy Persuasion or Devour)"
+                    ]
+                }
+            ],
+            "stats": {
+                "shareable": false,
+                "usageAlert": false
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "The summons are granted an attack damage bonus",
+                "When crafted with the Dormant Curio, the duration is increased by 30%"
+            ],
+            "states": null
+        },
+        "Brigand's Blade": {
+            "name": "Brigand's Blade",
+            "description": "An infamous assassin's blade stolen and smuggled out of White Spire after its owner's mysterious demise.",
+            "tier": "Tier 2",
+            "abilities": [
+                {
+                    "name": "Dark Mercy",
+                    "type": "passive",
+                    "description": "Regular attacks deal more damage to enemies for each instance of health they are missing.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "enemyHealthThresholdInstance": "7%",
+                        "attackDamageBonusPerInstance": 3,
+                        "attackDamageBonusPerInstanceWithCurio": 3.9
+                    },
+                    "notes": [
+                        "Works against any unit, including buildings, wards, and allies",
+                        "Dark Mercy is considered as a conditional attack damage bonus",
+                        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage",
+                        "The attack damage bonus values are not considered by critical strike and cleave",
+                        "However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block)",
+                        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+                        "Grants the user 3/6/9/12/15/18/21/24/27/30/33/36/39/42 attack damage if their target is at less than 98%/91%/84%/77%/70%/63%/56%/49%/42%/35%/28%/21%/14%/7% health"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the attack damage bonus per instance is increased by 30%"
+            ],
+            "states": []
+        },
+        "Chipped Vest": {
+            "name": "Chipped Vest",
+            "description": "It doesn't look like much, but it's oddly comfy.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Chipper",
+                    "type": "passive",
+                    "description": "Everytime you are attacked, you return damage to heroes and damage to creeps.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "returnDamageHeroes": 30,
+                        "returnDamageCreeps": 20,
+                        "damageType": "Physical/Reflected"
+                    },
+                    "notes": [
+                        "Only reacts on attack damage. Other sources of damage are ignored.",
+                        "The returned damage is always dealt right after the incoming damage.",
+                        "The damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
+                        "The damage has the no-spell-lifesteal flag, preventing its damage from utilising spell lifesteal.",
+                        "The damage has the no-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+                        "The returned damage is affected by damage block.",
+                        "Does not work against wards, buildings and allied units."
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Item is marked as Removed"
+            ],
+            "states": []
+        },
+        "Crippling Crossbow": {
+            "name": "Crippling Crossbow",
+            "description": "The ever-weeping woodgrain of this crossbow coats every bolt in a potent but short-lived narcotic sap.",
+            "tier": "Tier 4",
+            "abilities": [
+                {
+                    "name": "Hobble",
+                    "type": "active",
+                    "description": "Hits an enemy for some damage, then slows them and reduces the effectiveness of health restoration on the target for some time. The slow gradually decays over the duration.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 800,
+                    "manaCost": 50,
+                    "cooldown": 12,
+                    "effects": {
+                        "damage": 75,
+                        "moveSpeedSlow": "80%",
+                        "healthRestoreReduction": "40%",
+                        "duration": 4,
+                        "damageType": "Spell / Magical",
+                        "slowDecayPerTick": "2.67%"
+                    },
+                    "notes": [
+                        "The following values decrease per server tick, over 120 instances: 2.67% movement speed per tick",
+                        "Reapplying the debuff refreshes the duration and resets the slow value",
+                        "When crafted with the Dormant Curio, the health restore reduction is increased by 30% (to 52%)"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Dezun Bloodrite": {
+            "name": "Dezun Bloodrite",
+            "description": "The gateway to a lost lineage of power, unlocked only with blood.",
+            "tier": "Tier 4",
+            "abilities": [
+                {
+                    "name": "Blood Invocation",
+                    "type": "passive",
+                    "description": "Grants an AoE bonus to all spells of the wielder, including items. However, all spells now also cost health to cast, based on their mana cost.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "aoeBonusBase": "12%",
+                        "aoeBonusWithCurio": "15.6%",
+                        "manaCostAsHealthCost": "35%"
+                    },
+                    "notes": [
+                        "Increases the area of effect of all abilities that support it",
+                        "The health cost is applied to all abilities, even to those that do not have AoE to be increased",
+                        "Does not affect active attack modifier",
+                        "The health cost only applies to the initial cast costs, and not to mana cost over time",
+                        "The health cost added is displayed within the ability tooltips",
+                        "When crafted with the Dormant Curio, the AoE bonus is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Divine Regalia": {
+            "name": "Divine Regalia",
+            "description": "So magnificent, it cannot abide failure.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Exalted",
+                    "type": "passive",
+                    "description": "Increases the wielder's outgoing damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "outgoingDamageAmplification": "20%",
+                        "outgoingDamageAmplificationWithCurio": "26%"
+                    },
+                    "notes": [
+                        "When crafted with the Dormant Curio, the outgoing damage amplification is increased by 30%",
+                        "Dying disgraces the regalia, making it lose its bonus, as well as its enchantment"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When dying, replaces this artifact with the Disgraced Regalia",
+                "The Disgraced Regalia has no bonuses, and loses the chosen enchantment as well",
+                "If held by Techies with the Spoon's Stash Facet, only the chosen tier 5 enchantment is lost",
+                "If the wielder had Dormant Curio, its Unleashed Enchantment is lost as well",
+                "When re-crafting a tier 5 neutral item, the Disgraced Regalia will be available as a 4th option, as the currently owned artifact",
+                "If chosen, the new enchantment chosen along with it will work normally",
+                "Dying again does not cause the newly chosen enchantment to get lost",
+                "The Divine Regalia can still appear amongst the other 3 options when re-crafting, since the disgraced version is a separate artifact"
+            ],
+            "states": []
+        },
+        "Dormant Curio": {
+            "name": "Dormant Curio",
+            "description": "Everyone has an idea, but no one has a clue.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Hidden Potential",
+                    "type": "passive",
+                    "description": "Neutral items crafted while holding the Dormant Curio have their potency increased considerably.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "potencyIncrease": "30%",
+                        "affects": "Self"
+                    },
+                    "notes": [
+                        "Directly buffs the next neutral item's ability stats",
+                        "The effect is provided by the Unleashed Enchantment that is built in to this artifact",
+                        "Techies' Spoon's Stash facet does not keep this enchantment"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Essence Ring": {
+            "name": "Essence Ring",
+            "description": "An ancient bauble blessed by the breath of Verodicia.",
+            "tier": "Tier 2",
+            "abilities": [
+                {
+                    "name": "Life Essence",
+                    "type": "active",
+                    "description": "Increases the caster's current and maximum health for a short time.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 25,
+                    "effects": {
+                        "healthBonus": 240,
+                        "duration": 10,
+                        "healthBonusWithDormantCurio": 312,
+                        "dormantCurioBonus": "30%"
+                    },
+                    "notes": [
+                        "Interrupts the caster's channeling abilities upon cast",
+                        "First increases maximum health, keeping the current health value. The current health percentage is not kept",
+                        "Then increases the current health by the same amount. This does not count as a heal and bypasses any heal manipulation",
+                        "Upon losing the buff, reduces maximum health, keeping the current health value. The current health percentage is not kept",
+                        "This means the current health bonus is not reverted",
+                        "Multiple instances of the buff do not stack. A re-cast increases the current health again, and refreshes the existing buff"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+                "When crafted with the Dormant Curio, the health bonus is increased by 30%",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Fallen Sky": {
+            "name": "Fallen Sky",
+            "description": "One of the few surviving creations of the acolytes of the Wyrmforge.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Fallen Sky",
+                    "type": "active",
+                    "description": "Transforms into a meteor that strikes down at the target area after a delay, stunning enemies and dealing impact damage. Continues to deal damage over time to enemy units for a while.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 1200,
+                    "manaCost": null,
+                    "cooldown": "25",
+                    "effects": {
+                        "impactRadius": 315,
+                        "effectDelay": 1,
+                        "impactDamage": 150,
+                        "damagePerSecond": 60,
+                        "burnDuration": 6,
+                        "stunDuration": 1.6,
+                        "impactDamageBuildings": 75,
+                        "downtime": 25,
+                        "dormantCurioBonus": {
+                            "damagePerSecond": 78,
+                            "impactDamage": 195,
+                            "impactDamageBuildings": 97.5,
+                            "bonusPercentage": "30%"
+                        }
+                    },
+                    "notes": [
+                        "Disjoints projectiles and teleports the caster upon cast",
+                        "The meteor takes 1 second to land. During this period, the caster is invulnerable and hidden",
+                        "Upon landing, all enemies within the area, including buildings but excluding wards, get damaged, stunned, and receive a damaging debuff",
+                        "The meteor first applies the debuffs, then the impact damage",
+                        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 7 total instances, including the impact damage",
+                        "Can deal a total of 510 damage (before reductions), or 663 damage with Dormant Curio",
+                        "Multiple casts on the same targets do not stack but refresh the duration instead",
+                        "Stacks with the debuff of Meteor Hammer",
+                        "Destroys trees within the radius upon impact",
+                        "Damage greater than 0 from any player (including allies, excluding self) or Roshan puts Fallen Sky on a 25 second cooldown",
+                        "The damage cooldown only triggers when Fallen Sky is in its active state in the neutral item slot",
+                        "Since it is a cooldown and not actually disabled, it can be refreshed with cooldown resetting sources",
+                        "This cooldown is not affected by cooldown reduction sources",
+                        "It is also not disabled by damage flagged as HP Removal",
+                        "Neither shares cooldown with any Blink Dagger-based items or Meteor Hammer"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+                "The meteor impact affects buildings as well, stunning and burning them. Buildings take less impact damage",
+                "When crafted with the Dormant Curio, the damage per second, impact damage, and impact damage against buildings are increased by 30%",
+                "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) puts the item on a cooldown"
+            ],
+            "states": []
+        },
+        "Gale Guard": {
+            "name": "Gale Guard",
+            "description": "If one truly listens, they can always rely upon the wind to make its will known.",
+            "tier": "Tier 3",
+            "abilities": [
+                {
+                    "name": "Cyclonic Shield",
+                    "type": "active",
+                    "description": "Envelops the caster in an all damage barrier that absorbs a percentage of incoming damage up to a certain amount. While the barrier is active, the caster has slow resistance.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 30,
+                    "effects": {
+                        "barrierHealth": 250,
+                        "damageAbsorbed": "75%",
+                        "slowResistance": "50%",
+                        "duration": 10,
+                        "dormantCurioBarrierHealth": 325,
+                        "dormantCurioBonus": "30%"
+                    },
+                    "notes": [
+                        "Interrupts the user's channeling abilities upon cast",
+                        "When crafted with the Dormant Curio, the barrier health is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Giant's Maul": {
+            "name": "Giant's Maul",
+            "description": "Crude but smashingly effective.",
+            "tier": "Tier 4",
+            "abilities": [
+                {
+                    "name": "Crushing Blow",
+                    "type": "passive",
+                    "description": "Empowers the next attack with a critical hit, and slows the target's movement, attack, and cast speed for a short while.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 15,
+                    "effects": {
+                        "criticalDamage": "150%",
+                        "moveSpeedSlow": "10%",
+                        "attackSpeedSlow": "15%",
+                        "castSpeedSlow": "20%",
+                        "duration": 3,
+                        "criticalDamageWithDormantCurio": "195%"
+                    },
+                    "notes": [
+                        "When another source of critical strike procs on the same attack, the higher damage value takes priority. The other effects of Crushing Blow are still applied normally.",
+                        "Crushing Blow triggers upon executing an attack, regardless of its outcome. For ranged heroes, this is upon projectile launch.",
+                        "The effects are only applied and the cooldown only begins if the attack lands on the target.",
+                        "If multiple attack projectiles are launched, only the first launched one can apply the attack.",
+                        "Even if the first launched one misses or is disjointed, other already launched attack projectiles cannot apply the effects.",
+                        "The attack speed slow is a percentage, applied to the total attack speed."
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the critical damage is increased by 30%.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Gunpowder Gauntlet": {
+            "name": "Gunpowder Gauntlet",
+            "description": "A 'harmless' prank that went entirely too far.",
+            "tier": "Tier 3",
+            "abilities": [
+                {
+                    "name": "Beat the Crowd",
+                    "type": "passive",
+                    "description": "The next attack deals additional magical damage against the primary target.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 6,
+                    "effects": {
+                        "magicalAttackDamageBonus": 120,
+                        "splashRadius": 250,
+                        "splashDamage": "50%",
+                        "magicalAttackDamageBonusWithCurio": 156
+                    },
+                    "notes": [
+                        "The ability triggers upon reaching the attack point, not upon landing an attack",
+                        "This means the ability can trigger on missed attacks",
+                        "For ranged heroes, this is upon projectile launch",
+                        "However, the attack must land on the target in order to apply the splash damage",
+                        "Does not trigger when attacking allied units or buildings",
+                        "Triggers upon attacking ward-type units, but does not apply the attack damage bonus or splash damage",
+                        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+                        "It is not considered by lifesteal, crit or cleave",
+                        "It can be reduced only by flat reductions (e.g. magical damage barrier)",
+                        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+                        "The splash damage is applied as spell damage, with the damage type based on the attack damage source",
+                        "The physical portion is splashed as physical damage, the magical portion is splashed as magical damage",
+                        "It is fully affected by incoming and outgoing spell damage manipulation and works with spell lifesteal",
+                        "The splash damage is not affected by Damage Block",
+                        "The splash damage does not affect the primary target, buildings, or ward-type units"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the magical attack damage bonus is increased by 30%",
+                "The attack also splashes to units nearby for a percentage of the attack's damage, including the magical damage"
+            ],
+            "states": []
+        },
+        "Helm of the Undying": {
+            "name": "Helm of the Undying",
+            "description": "The price for wearing it is paid in the afterlife.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Death Delay",
+                    "type": "passive",
+                    "description": "When receiving a killing blow, the death gets delayed for a short time, during which the wielder can still act freely.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "baseDuration": 5,
+                        "deathRadius": 1200,
+                        "durationIncrease": 5,
+                        "baseDurationWithCurio": 6.5,
+                        "curioBonus": "30%",
+                        "modelSizeIncrease": "25%"
+                    },
+                    "notes": [
+                        "The wielder enters Death Delay when their health reaches 1, unless they are affected by Shallow Grave, Battle Trance, Wraith Delay, or have Reincarnation",
+                        "The wielder is kept alive by having their minimum health set to 1. Damage taken is technically not reduced",
+                        "Death Delay does not trigger for Meepo if one of his Meepo Clones get killed, instead of the prime Meepo who carries the item",
+                        "Death Delay grants the wielder unobstructed movement, allowing them to move through units, trees, and over cliffs",
+                        "During Death Delay, the wielder is still alive, so they are still fully targetable and affected by spells and attacks",
+                        "Since the wielder did not die yet, buffs and debuffs are not dispelled either, like how they would upon death",
+                        "When Death Delay expires, the wielder dies. The kill is credited to whoever triggered it",
+                        "The wielder cannot be saved by any means. They will die once the effect expires, even if they are invulnerable, or anything that usually prevents death",
+                        "If the wielder gains reincarnation during Death Delay, it still triggers regularly and reincarnates the wielder",
+                        "Death Delay causes the wielder's model size to increase by 25% for its duration. This has no impact on their collision size",
+                        "While active, enemy heroes that die nearby extend the duration",
+                        "When crafted with the Dormant Curio, the base duration is increased by 30%",
+                        "The sound effect only plays when there is a Wraith King within the same match"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+                "Shareable: No",
+                "Usage Alert: No",
+                "Item is removed from the game"
+            ],
+            "states": []
+        },
+        "Jidi Pollen Bag": {
+            "name": "Jidi Pollen Bag",
+            "description": "Very dangerous. Very difficult to obtain more.",
+            "tier": "Tier 3",
+            "abilities": [
+                {
+                    "name": "Pollinate",
+                    "type": "active",
+                    "description": "Spreads pollen on nearby enemies, reducing the effectiveness of health restoration on them, and dealing damage over time based on their maximum health.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 45,
+                    "effects": {
+                        "radius": 700,
+                        "healthRestoreReduction": "30%",
+                        "maxHealthAsTotalDamage": "12%",
+                        "duration": 12,
+                        "damageInterval": "1% of max health per second",
+                        "dormantCurioBonus": "15.6% max health as total damage (30% increase)"
+                    },
+                    "notes": [
+                        "Interrupt the caster's channeling abilities upon cast",
+                        "Deals 1% (1.3% with Dormant Curio) of max health as damage in 1-second intervals, starting 1 second after the debuff is placed",
+                        "Multiple casts do not stack, but refresh the duration"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the max health as total damage is increased by 30%",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Kobold Cup": {
+            "name": "Kobold Cup",
+            "description": "The Kobold King will sip when he damn well pleases.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "One for the Road",
+                    "type": "active",
+                    "description": "Grants movement speed to nearby allies for a short while on cast.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 40,
+                    "cooldown": 40,
+                    "effects": {
+                        "radius": 1000,
+                        "moveSpeedBonus": "10%",
+                        "duration": 6
+                    },
+                    "notes": [
+                        "Interrupt the caster's channeling abilities upon cast.",
+                        "The buff of successive casts does not stack but refreshes the duration instead."
+                    ]
+                }
+            ],
+            "stats": {
+                "shareable": false,
+                "usageAlert": false
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+            ],
+            "states": null
+        },
+        "Magnifying Monocle": {
+            "name": "Magnifying Monocle",
+            "description": "Deadly refinement.",
+            "tier": "Tier 4",
+            "abilities": [
+                {
+                    "name": "Keen Eye",
+                    "type": "passive",
+                    "description": "Increases cast range and attack range for melee and ranged heroes.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "castRangeBonus": 100,
+                        "attackRangeBonus": 100,
+                        "castRangeBonusWithCurio": 130,
+                        "attackRangeBonusWithCurio": 130,
+                        "downtime": 3
+                    },
+                    "notes": [
+                        "When crafted with the Dormant Curio, the cast range bonus and attack range bonus are increased by 30%",
+                        "Player-based damage greater than 25 - regardless of alliance - puts the item on a fixed cooldown",
+                        "Can be reset with cooldown reset sources",
+                        "The player-based damage cooldown does not proc on self-damage sources",
+                        "The player-based damage cooldown does not proc on HP Removal sources",
+                        "The player-based damage cooldown does not proc on Roshan, despite the in-game tooltip"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Mana Draught": {
+            "name": "Mana Draught",
+            "description": "A refreshing drink best shared with friends.",
+            "tier": "Tier 2",
+            "abilities": [
+                {
+                    "name": "Bottoms Up",
+                    "type": "active",
+                    "description": "Restores the user's mana over the duration by increasing their mana regeneration, based on a fixed amount plus a portion of their maximum mana.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 650,
+                    "manaCost": 0,
+                    "cooldown": 60,
+                    "effects": {
+                        "flatTotalManaRestore": 70,
+                        "maxManaRestore": "3%",
+                        "duration": 6,
+                        "maxManaRestoreWithDormantCurio": "3.9%"
+                    },
+                    "notes": [
+                        "Interrupts the wielder's channeling abilities upon cast",
+                        "The ability always self-casts upon cast",
+                        "Ctrl enables casting Regenerate on an allied hero",
+                        "Considers clones, illusions, and creep-heroes as heroes",
+                        "Reapplying the buff refreshes the duration",
+                        "The regeneration checks the target's max mana periodically and updates the regeneration value instantly",
+                        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
+                        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
+                        "When crafted with the Dormant Curio, the max mana restore is increased by 30%"
+                    ]
+                },
+                {
+                    "name": "Fill Up",
+                    "type": "passive",
+                    "description": "The cooldown speed of Bottoms Up is increased while standing in waters.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "cooldownReduction": "30%"
+                    },
+                    "notes": [
+                        "The cooldown updates immediately upon leaving or entering any body of water",
+                        "The reduction is always based on the current remaining cooldown",
+                        "When entering waters while e.g. 10 seconds are left on the cooldown, it drops down to 7 seconds"
+                    ]
+                }
+            ],
+            "stats": {
+                "shareable": false,
+                "usageAlert": false
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+            ],
+            "states": null
+        },
+        "Minotaur Horn": {
+            "name": "Minotaur Horn",
+            "description": "The trophy from a mighty beast ambushed and slain in the recesses of its own home.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Lesser Avatar",
+                    "type": "active",
+                    "description": "Applies a basic dispel. Grants magic resistance and immunity to pure and reflected damage. For the duration, any negative effect from enemy spells has no effect.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 40,
+                    "cooldown": 0,
+                    "effects": {
+                        "magicResistBonus": "50%",
+                        "duration": "2",
+                        "durationWithDormantCurio": "2.6",
+                        "modelSizeIncrease": "30%"
+                    },
+                    "notes": [
+                        "Interrupts the wielder's channeling abilities upon cast",
+                        "Stacks multiplicatively with other magic resistance sources",
+                        "Applies a basic dispel on the wielder",
+                        "Grants debuff immunity and pure damage immunity for the entire duration",
+                        "30% model size increase. Does not affect collision size",
+                        "Has 62.5% magic resistance while active",
+                        "Avatar increases the total magic resistance by 0.5% per 10 intelligence points"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the duration is increased by 30%"
+            ],
+            "states": []
+        },
+        "Occult Bracelet": {
+            "name": "Occult Bracelet",
+            "description": "A band that bears effigy of the dark goddess Eloshar's unsleeping eye.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Rites of Eloshar",
+                    "type": "passive",
+                    "description": "Each time the wearer is attacked they gain a stack of 0.4 mana regen, up to 5 stacks. Stacks last for 5 seconds.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "maxStacks": 5,
+                        "manaRegenBonusPerStack": 0.4,
+                        "duration": 5,
+                        "maxManaRegenBonus": 2,
+                        "totalManaRegeneration": 10
+                    },
+                    "notes": [
+                        "Rites of Eloshar can give at most 2 mana regeneration bonus",
+                        "With max stacks and its duration, it can regenerate up to a total of 10 mana",
+                        "Each stack places a new hidden modifier buff on its wielder. This means their durations are independent from each other",
+                        "The number of stacks can be seen on the status buff icon"
+                    ]
+                }
+            ],
+            "stats": {
+                "shareable": false,
+                "usageAlert": false
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+            ],
+            "states": null
+        },
+        "Outworld Staff": {
+            "name": "Outworld Staff",
+            "description": "Proof that the lone sentinel was not always so.",
+            "tier": "Tier 4",
+            "abilities": [
+                {
+                    "name": "Self-Exile",
+                    "type": "active",
+                    "description": "Briefly places the wielder into an astral prison. The hidden wielder is invulnerable and disabled.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 30,
+                    "cooldown": 40,
+                    "effects": {
+                        "duration": "0.7",
+                        "maxHealthAsDamage": "5%",
+                        "damageType": "Pure / HP-Removal",
+                        "dormantCurioDuration": "0.91",
+                        "dormantCurioBonusDuration": "30%"
+                    },
+                    "notes": [
+                        "Fully disables the caster and turns them invulnerable and hidden",
+                        "Upon returning, the wielder takes damage based on their maximum health. This damage is not lethal",
+                        "When crafted with the Dormant Curio, the duration is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Pollywog Charm": {
+            "name": "Pollywog Charm",
+            "description": "A tiny trinket that wriggles when wet.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Ribbit",
+                    "type": "active",
+                    "description": "Increases the health regeneration of a target ally for a duration.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 1000,
+                    "manaCost": 0,
+                    "cooldown": 45,
+                    "effects": {
+                        "healthRegenBonus": 8,
+                        "duration": 14
+                    },
+                    "notes": [
+                        "Does not interrupt the wielder's channeling abilities upon cast",
+                        "Doubletap casts the ability on the wielder",
+                        "Reapplying the buff refreshes the duration",
+                        "Taking more than 0 damage from Roshan (after reductions) dispels the buff"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": null
+        },
+        "Poor Man's Shield": {
+            "name": "Poor Man's Shield",
+            "description": "A busted old shield that seems to block more than it should.",
+            "tier": "Tier 2",
+            "abilities": [
+                {
+                    "name": "Damage Block",
+                    "type": "passive",
+                    "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "50%",
+                        "blockedDamage": 30,
+                        "blockedDamageRanged": 20,
+                        "procChanceVsHeroes": "100%",
+                        "blockedDamageWithCurio": 39,
+                        "blockedDamageRangedWithCurio": 26
+                    },
+                    "notes": [
+                        "Ranged wielders block less damage with the same proc chance",
+                        "Has increased chances to proc against hero attacks",
+                        "When crafted with the Dormant Curio, the blocked damage is increased by 30%",
+                        "Uses pseudo-random distribution",
+                        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
+                        "Multiple sources of the same value stack multiplicatively",
+                        "Does not work against damage from wards sources",
+                        "Does not reduce physical damage from abilities, except for specific abilities",
+                        "Treats illusions as heroes and creep-heroes as creeps"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone",
+                "Item is currently removed from the game",
+                "Not shareable",
+                "No usage alert"
+            ],
+            "states": []
+        },
+        "Psychic Headband": {
+            "name": "Psychic Headband",
+            "description": "A failed experiment in finer telekinetic control, still fit for other ends.",
+            "tier": "Tier 3",
+            "abilities": [
+                {
+                    "name": "Psychic Push",
+                    "type": "active",
+                    "description": "Pushes the target enemy unit away from you 400 distance.",
+                    "castAnimation": null,
+                    "castRange": 600,
+                    "manaCost": 0,
+                    "cooldown": 20,
+                    "effects": {
+                        "pushDistance": 400,
+                        "pushDuration": 0.3,
+                        "pushSpeed": 1333.33,
+                        "enhancedPushDistance": 520,
+                        "enhancedPushSpeed": 1733.33
+                    },
+                    "notes": [
+                        "With the item's cast range bonus, Psychic Push has a total cast range of 400",
+                        "The target is not disabled during the push, so they still can cast abilities, attack, and turn during the push",
+                        "Does not interrupt channeling abilities upon cast",
+                        "Does not push units affected by Black Hole, Chronosphere, Duel or Flaming Lasso",
+                        "Cannot push units through Kinetic Field or Arena of Blood",
+                        "If the target is affected by Soulbind, it cannot push the unit further than its max stretch distance allows",
+                        "If the target is leashed by Pounce, the leash gets instantly broken upon cast",
+                        "Cannot be cast on wards or buildings. Can be cast on Homing Missile",
+                        "Can move units over impassable terrain. Trees within 200 radius around the pushed target gets destroyed during the push",
+                        "Can be cast on Roshan but without any effect, since Roshan is immune to forced movement",
+                        "Does not share cooldown with Force Staff-based items",
+                        "When crafted with the Dormant Curio, the push distance is increased by 30%"
+                    ]
+                },
+                {
+                    "name": "Psychic Headband",
+                    "type": "passive",
+                    "description": null,
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {},
+                    "notes": []
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+                "Shareable: No",
+                "Usage Alert: No",
+                "Item is removed from the game"
+            ],
+            "states": []
+        },
+        "Pyrrhic Cloak": {
+            "name": "Pyrrhic Cloak",
+            "description": "There are generals that care far less about the survival of their troops than the destruction of their enemies.",
+            "tier": "Tier 4",
+            "abilities": [
+                {
+                    "name": "Retribution",
+                    "type": "active",
+                    "description": "For the next few seconds, a portion of damage taken by the caster is reflected to the target unit as physical damage.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 800,
+                    "manaCost": 0,
+                    "cooldown": 40,
+                    "effects": {
+                        "damageReflected": "75%",
+                        "duration": 6,
+                        "damageReflectedWithDormantCurio": "97.5%"
+                    },
+                    "notes": [
+                        "Returns incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally.",
+                        "Reflected physical damage is affected by damage block as well.",
+                        "The returned damage is always dealt right after the incoming damage.",
+                        "Returned damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
+                        "Fully procs on-damage effects, except those which have a minimum damage threshold (e.g. Gravekeeper's Cloak).",
+                        "The damage has the no-spell-lifesteal flag, preventing its damage from utilising spell lifesteal.",
+                        "The damage has the no-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+                        "Damage Return has a global range and affects units through the Fog of War or invisibility.",
+                        "Fully stacks with Damage Return."
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the damage reflected is increased by 30%.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Ripper's Lash": {
+            "name": "Ripper's Lash",
+            "description": "The Fae horticulturists of Revtel are known to push the boundaries of both cross pollination and safety.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Flay",
+                    "type": "active",
+                    "description": "Embeds thorns into all enemies within the target area. Affected enemies take additional damage when attacked.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 850,
+                    "manaCost": 0,
+                    "cooldown": 25,
+                    "effects": {
+                        "radius": 200,
+                        "damagePerProc": 16,
+                        "duration": 10,
+                        "creepDamagePerProc": 4
+                    },
+                    "notes": [
+                        "Creep attacks proc the debuff too, but for less damage."
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+            ],
+            "states": []
+        },
+        "Searing Signet": {
+            "name": "Searing Signet",
+            "description": "To torture a magic user, one must devise means far beyond the mundane.",
+            "tier": "Tier 2",
+            "abilities": [
+                {
+                    "name": "Burn Through",
+                    "type": "passive",
+                    "description": "Instances of magic damage from spells over a threshold ignite enemies if they are within range, causing them to take damage over time.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "maxDistance": 2000,
+                        "damageThreshold": 55,
+                        "totalDamage": 72,
+                        "duration": 6,
+                        "damagePerInterval": 3,
+                        "interval": 0.25,
+                        "totalInstances": 24,
+                        "dormantCurioBonus": "30%",
+                        "dormantCurioTotalDamage": 93.6
+                    },
+                    "notes": [
+                        "Does not apply the debuff if the enemy is out of range from the source",
+                        "Already applied debuffs persist, even if the target moves out of range",
+                        "Reapplying the buff refreshes the duration",
+                        "Deals 3 (3.9 with Dormant Curio) damage in 0.25-second intervals, resulting in 24 damage instances",
+                        "Does not trigger on Radiance, Urn of Shadows, and Spirit Vessel",
+                        "The damage from Poison Attack is direct HP Removal, so it does not trigger any on-damage effects"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "When crafted with the Dormant Curio, the total damage is increased by 30%"
+            ],
+            "states": []
+        },
+        "Serrated Shiv": {
+            "name": "Serrated Shiv",
+            "description": "Too dangerous for taskwork, this blade's only purpose is vile murder.",
+            "tier": "Tier 3",
+            "abilities": [
+                {
+                    "name": "Gut 'Em",
+                    "type": "passive",
+                    "description": "Attacks have a chance to have True Strike and deal a percentage of the target's current health as bonus physical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "20%",
+                        "currentHealthAsDamageBonus": "8%",
+                        "attackDamageBonusVsRoshan": 200,
+                        "enhancedCurrentHealthBonus": "10.4%",
+                        "enhancedRoshanDamageBonus": 260
+                    },
+                    "notes": [
+                        "Uses pseudo-random distribution",
+                        "Cannot proc against Buildings",
+                        "Can proc against buildings but does not apply the attack damage bonus against them",
+                        "Fully works against ward-type units",
+                        "Effects are calculated upon reaching the attack point, not upon landing an attack",
+                        "Can proc on missed attacks",
+                        "For ranged heroes, this is upon projectile launch",
+                        "When crafted with the Dormant Curio, the current health as attack damage bonus and the attack damage bonus against Roshan are increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Deals a flat attack damage bonus against Roshan",
+                "Enhancement available when crafted with Dormant Curio"
+            ],
+            "states": []
+        },
+        "Sister's Shroud": {
+            "name": "Sister's Shroud",
+            "description": "A pall that draped the sarcophagus of the First Sister.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Veiled",
+                    "type": "passive",
+                    "description": "Upon falling below the health threshold, grants the wielder enormous amounts of evasion for a short while.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "healthThreshold": "50%",
+                        "evasionBonus": "200%",
+                        "duration": 8,
+                        "currentEvasionBonusReduction": "75%"
+                    },
+                    "notes": [
+                        "Triggers upon taking damage from an enemy while below 50% health",
+                        "Triggers on any damage, not just attacks",
+                        "The buff is applied after the triggering damage instance",
+                        "If triggered by an attack, that attack is not evaded",
+                        "Each attack that misses the wielder reduces the evasion bonus by 75% of the current value",
+                        "Grants 200%/50%/12.5%/3.13%/0.78% evasion after evading 0/1/2/3/4 attacks",
+                        "The evasion uses pseudo-random distribution",
+                        "Stacks diminishingly with other evasion sources"
+                    ]
+                },
+                {
+                    "name": "Last Caress",
+                    "type": "passive",
+                    "description": "Veiled cooldown is only reset if the wielder dies or kills an enemy hero.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {},
+                    "notes": [
+                        "Although the cooldown elapses normally, it freezes upon reaching 0",
+                        "Cannot be reset with cooldown resetting sources"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+            ],
+            "states": []
+        },
+        "Spark of Courage": {
+            "name": "Spark of Courage",
+            "description": "A common battle charm in the armies that served the Children of the Light.",
+            "tier": "Tier 1",
+            "abilities": [
+                {
+                    "name": "Courage",
+                    "type": "passive",
+                    "description": "Provides attack damage when the owner is above the health threshold. Provides armor when the owner is below the health threshold.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "maxHealthThreshold": "50%",
+                        "attackDamageBonus": 10,
+                        "armorBonus": 5
+                    },
+                    "notes": [
+                        "Grants flat bonus attack damage"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamageBonus": 10,
+                "armorBonus": 5,
+                "healthThreshold": "50%"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+            ],
+            "states": null
+        },
+        "Spider Legs": {
+            "name": "Spider Legs",
+            "description": "A horrifying yet useful mixture of necromancy and artificing.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Skitter",
+                    "type": "active",
+                    "description": "Grants the caster movement speed, improved turn rate, and free pathing for some time.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 20,
+                    "effects": {
+                        "moveSpeedBonus": "20%",
+                        "turnRateBonus": "50%",
+                        "duration": 10,
+                        "moveSpeedBonusWithCurio": "26%"
+                    },
+                    "notes": [
+                        "Interrupts the caster's channeling abilities upon cast",
+                        "Allows the user to walk through units, buildings, cliffs, and trees",
+                        "Walking over trees causes them to be destroyed",
+                        "When crafted with the Dormant Curio, the movement speed bonus is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Stygian Desolator": {
+            "name": "Stygian Desolator",
+            "description": "The original demonic favorite that served as basis for the beloved mortal design.",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Greater Corruption",
+                    "type": "passive",
+                    "description": "The wielder's attacks apply an armor reducing debuff on enemy units.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "armorReduction": 13,
+                        "duration": 7,
+                        "armorReductionWithDormantCurio": 16.9,
+                        "dormantCurioBonus": "30%"
+                    },
+                    "notes": [
+                        "The bonus armor reduction value does not stack",
+                        "Reapplying the debuff refreshes the duration",
+                        "Affects allied units, buildings, and ward-type units",
+                        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other",
+                        "When crafted with the Dormant Curio, the armor reduction is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No",
+                "Has specific attack projectile modifying priority among similar items",
+                "The ability effects are applied in order: the desolator_2_buff, then the wielder's attack instance"
+            ],
+            "states": []
+        },
+        "Tumbler's Toy": {
+            "name": "Tumbler's Toy",
+            "description": "An antique plaything found in the ruins of an Ozenja circus bazaar.",
+            "tier": "Tier 2",
+            "abilities": [
+                {
+                    "name": "Vault",
+                    "type": "active",
+                    "description": "Propels the caster a short distance forward.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 15,
+                    "effects": {
+                        "leapDistance": 300,
+                        "leapDistanceWithCurio": 390,
+                        "leapSpeed": 1300,
+                        "leapDuration": 0.23,
+                        "leapDurationWithCurio": 0.3,
+                        "downtime": 3
+                    },
+                    "notes": [
+                        "Interrupts the caster's channeling abilities upon cast",
+                        "Always leaps towards the direction the user is facing. Locks the user's facing angle during the leap",
+                        "Can leap over other units and over impassable terrain",
+                        "During Leap, the user can attack, use items and cast abilities, except recasting Vault",
+                        "However, they cannot turn, so targeted abilities and items may only be used in the direction they are facing",
+                        "Getting rooted while already leaping does not cancel the leap",
+                        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) puts the item on a cooldown"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+                "When crafted with the Dormant Curio, the leap distance is increased by 30%",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": []
+        },
+        "Unrelenting Eye": {
+            "name": "Unrelenting Eye",
+            "description": "A serpent's eye the size of a melon (and just as moist).",
+            "tier": "Tier 5",
+            "abilities": [
+                {
+                    "name": "Relentless",
+                    "type": "passive",
+                    "description": "Increases slow resistance. This bonus is decreased for every enemy hero within close range. Increases status resistance for each enemy within the same area.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "enemySearchRadius": 600,
+                        "maxSlowResistance": "100%",
+                        "slowResistanceLossPerEnemy": "20%",
+                        "statusResistanceBonusPerEnemy": "10%",
+                        "craftedMaxSlowResistance": "130%"
+                    },
+                    "notes": [
+                        "Does not react on Invisible heroes or on heroes in the Fog of War",
+                        "Treats Creep-Heroes and Illusions as heroes",
+                        "The status resistance bonus is not capped and can increase further",
+                        "When crafted with the Dormant Curio, the max slow resistance is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {},
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": null
+        },
+        "Whisper of the Dread": {
+            "name": "Whisper of the Dread",
+            "description": "The air that passes through this amulet makes a dreadful sound.",
+            "tier": "Tier 3",
+            "abilities": [
+                {
+                    "name": "Tunnel Vision",
+                    "type": "passive",
+                    "description": "Grants spell damage but decreases the wearer's daytime vision in return.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "spellDamageAmp": "10%",
+                        "daytimeVisionReduction": "15%",
+                        "spellDamageAmpWithCurio": "13%"
+                    },
+                    "notes": [
+                        "When crafted with the Dormant Curio, the spell damage amp is increased by 30%"
+                    ]
+                }
+            ],
+            "stats": {
+                "spellDamageAmplification": "10%",
+                "daytimeVisionReduction": "15%"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Shareable: No",
+                "Usage Alert: No"
+            ],
+            "states": null
+        }
+    },
+    "enchantments": {
+        "Alert Enchantment": {
+            "name": "Alert Enchantment",
+            "description": null,
+            "tier": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "stats": {
+                "attackSpeed": [
+                    10,
+                    17,
+                    24,
+                    31
+                ],
+                "attackRange": [
+                    0,
+                    0,
+                    0,
+                    100
+                ],
+                "nightVision": [
+                    0,
+                    150,
+                    225,
+                    300
+                ]
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "Usage Alert disabled"
+            ]
+        },
+        "Audacious Enchantment": {
+            "name": "Audacious Enchantment",
+            "description": null,
+            "tier": [
+                5
+            ],
+            "stats": {
+                "attack_damage": 80,
+                "attack_speed": 100
+            },
+            "additionalInfo": [
+                "The attack damage bonus is magical damage",
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics"
+            ]
+        },
+        "Boundless Enchantment": {
+            "name": "Boundless Enchantment",
+            "description": null,
+            "tier": [
+                5
+            ],
+            "stats": {
+                "attack_range": 150,
+                "cast_range": 350
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Brawny Enchantment": {
+            "name": "Brawny Enchantment",
+            "description": null,
+            "tier": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "stats": {
+                "health": [
+                    110,
+                    150,
+                    190,
+                    230
+                ],
+                "health_regeneration": [
+                    0,
+                    4,
+                    18,
+                    12
+                ],
+                "slow_resistance": [
+                    0,
+                    0,
+                    0,
+                    25
+                ]
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Crude Enchantment": {
+            "name": "Crude Enchantment",
+            "description": null,
+            "tier": [
+                4,
+                5
+            ],
+            "stats": {
+                "intelligence": "-5%",
+                "baseAttackTime": "-12/-18%",
+                "healthRestoreAmp": "+30/40%"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Evolved Enchantment": {
+            "name": "Evolved Enchantment",
+            "description": null,
+            "tier": [
+                5
+            ],
+            "stats": {
+                "primaryAttributeBonus": 40,
+                "allAttributesBonus": 24
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Provides either +40 Primary Attribute OR +24 All Attributes",
+                "For Strength heroes: 40 main attack damage, 880 health, 4 health regen",
+                "For Agility heroes: 40 main attack damage, 6.67 armor, 40 attack speed",
+                "For Intelligence heroes: 40 main attack damage, 480 mana, 2 mana regen, 4% magic resistance",
+                "For Universal heroes: 32.4 main attack damage, 528 health, 2.4 health regen, 4 armor, 24 attack speed, 288 mana, 1.2 mana regen, 2.4% magic resistance",
+                "Not shareable between players",
+                "No usage alert"
+            ]
+        },
+        "Feverish Enchantment": {
+            "name": "Feverish Enchantment",
+            "description": null,
+            "tier": [
+                5
+            ],
+            "stats": {
+                "cooldown_reduction": "15%",
+                "mana_loss_reduction": "-7%"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Fleetfooted Enchantment": {
+            "name": "Fleetfooted Enchantment",
+            "description": null,
+            "tier": [
+                5
+            ],
+            "stats": {
+                "moveSpeed": 115
+            },
+            "additionalInfo": [
+                "Does not stack with the movement speed bonuses of Boots of Speed-based items, the one with a higher value takes priority",
+                "Stacks with all other movement speed bonus",
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics"
+            ]
+        },
+        "Greedy Enchantment": {
+            "name": "Greedy Enchantment",
+            "description": null,
+            "tier": [
+                2,
+                3
+            ],
+            "stats": {
+                "mana": "200/250",
+                "attackDamage": "-30/-60",
+                "goldPerMinute": "75/100"
+            },
+            "additionalInfo": [
+                "Grants reliable gold and works while dead as well",
+                "Increases gold gained to a total of 90.75 gold per minute while equipped",
+                "Fully stacks with other gold per minute increasing effects",
+                "Illusions and clones cannot utilize the passive gold gain",
+                "Acquired by crafting with Madstone",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Keen-Eyed Enchantment": {
+            "name": "Keen-Eyed Enchantment",
+            "description": null,
+            "tier": [
+                2,
+                3
+            ],
+            "stats": {
+                "mana": "-10%",
+                "manaRegeneration": "+1/1.5",
+                "castRange": "+125/135"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Mystical Enchantment": {
+            "name": "Mystical Enchantment",
+            "description": null,
+            "tier": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "stats": {
+                "manaRegeneration": [
+                    1,
+                    1.75,
+                    2.5,
+                    3.25
+                ],
+                "magicResistance": [
+                    0,
+                    10,
+                    13,
+                    16
+                ],
+                "castRange": [
+                    0,
+                    0,
+                    0,
+                    100
+                ]
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Stacks multiplicatively with other magic resistance sources.",
+                "Increases most heroes' magic resistance to 25%/775%/1000%/37%.",
+                "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 1%/-9%/-12%/0.84%.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Quickened Enchantment": {
+            "name": "Quickened Enchantment",
+            "description": null,
+            "tier": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "stats": {
+                "mana": [
+                    0,
+                    100,
+                    160,
+                    220
+                ],
+                "evasion": [
+                    0,
+                    0,
+                    0,
+                    15
+                ],
+                "moveSpeed": [
+                    15,
+                    20,
+                    25,
+                    30
+                ]
+            },
+            "additionalInfo": [
+                "Fully stacks with other movement speed sources",
+                "Acquired by crafting with Madstone"
+            ]
+        },
+        "Timeless Enchantment": {
+            "name": "Timeless Enchantment",
+            "description": null,
+            "tier": [
+                4,
+                5
+            ],
+            "stats": {
+                "debuffDurationAmp": "10/15%",
+                "spellDamageAmp": "8/16%"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Titanic Enchantment": {
+            "name": "Titanic Enchantment",
+            "description": null,
+            "tier": [
+                4,
+                5
+            ],
+            "stats": {
+                "statusResistance": "10/15%",
+                "mainAttackDamage": "10/20%"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Stacks multiplicatively with other status resistance sources.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Tough Enchantment": {
+            "name": "Tough Enchantment",
+            "description": null,
+            "tier": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "stats": {
+                "armor": [
+                    0,
+                    4,
+                    6,
+                    8
+                ],
+                "knockback_resistance": [
+                    0,
+                    0,
+                    0,
+                    40
+                ],
+                "attack_damage": [
+                    7,
+                    10,
+                    13,
+                    16
+                ]
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Vampiric Enchantment": {
+            "name": "Vampiric Enchantment",
+            "description": null,
+            "tier": [
+                2,
+                3,
+                4
+            ],
+            "stats": {
+                "lifesteal_hero": "12%/14%/16%",
+                "lifesteal_creep": "7.2%/8.4%/9.6%",
+                "spell_lifesteal_hero": "6%/8%/10%",
+                "spell_lifesteal_creep": "1.2%/1.6%/2%",
+                "night_vision": "0/0/200"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Vast Enchantment": {
+            "name": "Vast Enchantment",
+            "description": null,
+            "tier": [
+                2,
+                3
+            ],
+            "stats": {
+                "attackRange": "75/110"
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+                "Not shareable",
+                "No usage alert"
+            ]
+        },
+        "Wise Enchantment": {
+            "name": "Wise Enchantment",
+            "description": null,
+            "tier": [
+                5
+            ],
+            "stats": {
+                "mana_percentage": 15,
+                "experience_per_minute": 1000
+            },
+            "additionalInfo": [
+                "Acquired by crafting with Madstone",
+                "Not shareable",
+                "No usage alert"
+            ]
+        }
     }
 }

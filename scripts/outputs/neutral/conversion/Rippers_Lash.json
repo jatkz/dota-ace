@@ -1,0 +1,30 @@
+{
+  "name": "Ripper's Lash",
+  "description": "The Fae horticulturists of Revtel are known to push the boundaries of both cross pollination and safety.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "Flay",
+      "type": "active",
+      "description": "Embeds thorns into all enemies within the target area. Affected enemies take additional damage when attacked.",
+      "castAnimation": "0 + 0",
+      "castRange": 850,
+      "manaCost": 0,
+      "cooldown": 25,
+      "effects": {
+        "radius": 200,
+        "damagePerProc": 16,
+        "duration": 10,
+        "creepDamagePerProc": 4
+      },
+      "notes": [
+        "Creep attacks proc the debuff too, but for less damage."
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+  ],
+  "states": []
+}

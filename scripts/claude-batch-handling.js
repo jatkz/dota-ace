@@ -20,12 +20,12 @@ async function main() {
 
         const batchTypes = ['hero', 'item']
         if (false) {
-            const res = await claude.retrieveBatchResult('msgbatch_01NfREuStfCXXRTVYQo8QabL', 'hero');
+            const res = await claude.retrieveBatchResult('msgbatch_01GPFPKdnBRNTby68vUD4swz', 'enchantment');
             console.log('Retrieve Batch Result ', res);
         }
 
-        if (true) {
-            const res = await claude.deleteBatch('msgbatch_01NfREuStfCXXRTVYQo8QabL');
+        if (false) {
+            const res = await claude.deleteBatch('msgbatch_01DyChSsKGwLiLASNe4SeKrx');
             console.log('Delete Result ', res);
 
         }

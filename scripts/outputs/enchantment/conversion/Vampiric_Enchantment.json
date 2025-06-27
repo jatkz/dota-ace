@@ -1,0 +1,17 @@
+{
+  "name": "Vampiric Enchantment",
+  "description": null,
+  "tier": [2, 3, 4],
+  "stats": {
+    "lifesteal_hero": "12%/14%/16%",
+    "lifesteal_creep": "7.2%/8.4%/9.6%",
+    "spell_lifesteal_hero": "6%/8%/10%",
+    "spell_lifesteal_creep": "1.2%/1.6%/2%",
+    "night_vision": "0/0/200"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

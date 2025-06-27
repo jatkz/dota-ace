@@ -4,10 +4,10 @@ import path from 'path';
 // Main execution
 async function main() {
     console.log('🤖 Claude API Starter Examples\n');
-    
+
     try {
 
-        const dataset = {heroes: {}, items: {}}
+        const dataset = { heroes: {}, items: {}, neutrals: {}, enchantments: {} }
 
         const heroDir = './scripts/outputs/hero/conversion';
 
@@ -44,6 +44,37 @@ async function main() {
             const content = data;
 
             dataset['items'][name] = content;
+        }
+
+        const neutralDir = './scripts/outputs/neutral/conversion';
+
+        dir = neutralDir
+        files = fs.readdirSync(dir);
+        for (const file of files) {
+            const filePath = path.join(dir, file);
+            console.log('file', file);
+
+            const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+            const name = data['name'];
+            const content = data;
+
+            dataset['neutrals'][name] = content;
+        }
+
+        const enchantmentDir = './scripts/outputs/enchantment/conversion';
+
+        dir = enchantmentDir
+        files = fs.readdirSync(dir);
+        for (const file of files) {
+            const filePath = path.join(dir, file);
+
+            const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+            const name = data['name'];
+            const content = data;
+
+            dataset['enchantments'][name] = content;
         }
 
         fs.writeFileSync('./scripts/outputs/dataset.json', JSON.stringify(dataset, null, 4));

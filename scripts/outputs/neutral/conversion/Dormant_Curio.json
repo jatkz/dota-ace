@@ -1,0 +1,32 @@
+{
+  "name": "Dormant Curio",
+  "description": "Everyone has an idea, but no one has a clue.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "Hidden Potential",
+      "type": "passive",
+      "description": "Neutral items crafted while holding the Dormant Curio have their potency increased considerably.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "potencyIncrease": "30%",
+        "affects": "Self"
+      },
+      "notes": [
+        "Directly buffs the next neutral item's ability stats",
+        "The effect is provided by the Unleashed Enchantment that is built in to this artifact",
+        "Techies' Spoon's Stash facet does not keep this enchantment"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

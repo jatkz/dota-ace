@@ -1,0 +1,36 @@
+{
+  "name": "Dezun Bloodrite",
+  "description": "The gateway to a lost lineage of power, unlocked only with blood.",
+  "tier": "Tier 4",
+  "abilities": [
+    {
+      "name": "Blood Invocation",
+      "type": "passive",
+      "description": "Grants an AoE bonus to all spells of the wielder, including items. However, all spells now also cost health to cast, based on their mana cost.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "aoeBonusBase": "12%",
+        "aoeBonusWithCurio": "15.6%",
+        "manaCostAsHealthCost": "35%"
+      },
+      "notes": [
+        "Increases the area of effect of all abilities that support it",
+        "The health cost is applied to all abilities, even to those that do not have AoE to be increased",
+        "Does not affect active attack modifier",
+        "The health cost only applies to the initial cast costs, and not to mana cost over time",
+        "The health cost added is displayed within the ability tooltips",
+        "When crafted with the Dormant Curio, the AoE bonus is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

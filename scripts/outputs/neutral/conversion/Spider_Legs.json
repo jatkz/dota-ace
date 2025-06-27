@@ -1,0 +1,35 @@
+{
+  "name": "Spider Legs",
+  "description": "A horrifying yet useful mixture of necromancy and artificing.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Skitter",
+      "type": "active",
+      "description": "Grants the caster movement speed, improved turn rate, and free pathing for some time.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 20,
+      "effects": {
+        "moveSpeedBonus": "20%",
+        "turnRateBonus": "50%",
+        "duration": 10,
+        "moveSpeedBonusWithCurio": "26%"
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Allows the user to walk through units, buildings, cliffs, and trees",
+        "Walking over trees causes them to be destroyed",
+        "When crafted with the Dormant Curio, the movement speed bonus is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

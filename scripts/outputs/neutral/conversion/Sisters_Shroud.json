@@ -1,0 +1,51 @@
+{
+  "name": "Sister's Shroud",
+  "description": "A pall that draped the sarcophagus of the First Sister.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "Veiled",
+      "type": "passive",
+      "description": "Upon falling below the health threshold, grants the wielder enormous amounts of evasion for a short while.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "healthThreshold": "50%",
+        "evasionBonus": "200%",
+        "duration": 8,
+        "currentEvasionBonusReduction": "75%"
+      },
+      "notes": [
+        "Triggers upon taking damage from an enemy while below 50% health",
+        "Triggers on any damage, not just attacks",
+        "The buff is applied after the triggering damage instance",
+        "If triggered by an attack, that attack is not evaded",
+        "Each attack that misses the wielder reduces the evasion bonus by 75% of the current value",
+        "Grants 200%/50%/12.5%/3.13%/0.78% evasion after evading 0/1/2/3/4 attacks",
+        "The evasion uses pseudo-random distribution",
+        "Stacks diminishingly with other evasion sources"
+      ]
+    },
+    {
+      "name": "Last Caress",
+      "type": "passive",
+      "description": "Veiled cooldown is only reset if the wielder dies or kills an enemy hero.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {},
+      "notes": [
+        "Although the cooldown elapses normally, it freezes upon reaching 0",
+        "Cannot be reset with cooldown resetting sources"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+  ],
+  "states": []
+}

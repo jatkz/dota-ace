@@ -1,0 +1,57 @@
+{
+  "name": "Fallen Sky",
+  "description": "One of the few surviving creations of the acolytes of the Wyrmforge.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Fallen Sky",
+      "type": "active",
+      "description": "Transforms into a meteor that strikes down at the target area after a delay, stunning enemies and dealing impact damage. Continues to deal damage over time to enemy units for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": 1200,
+      "manaCost": null,
+      "cooldown": "25",
+      "effects": {
+        "impactRadius": 315,
+        "effectDelay": 1,
+        "impactDamage": 150,
+        "damagePerSecond": 60,
+        "burnDuration": 6,
+        "stunDuration": 1.6,
+        "impactDamageBuildings": 75,
+        "downtime": 25,
+        "dormantCurioBonus": {
+          "damagePerSecond": 78,
+          "impactDamage": 195,
+          "impactDamageBuildings": 97.5,
+          "bonusPercentage": "30%"
+        }
+      },
+      "notes": [
+        "Disjoints projectiles and teleports the caster upon cast",
+        "The meteor takes 1 second to land. During this period, the caster is invulnerable and hidden",
+        "Upon landing, all enemies within the area, including buildings but excluding wards, get damaged, stunned, and receive a damaging debuff",
+        "The meteor first applies the debuffs, then the impact damage",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 7 total instances, including the impact damage",
+        "Can deal a total of 510 damage (before reductions), or 663 damage with Dormant Curio",
+        "Multiple casts on the same targets do not stack but refresh the duration instead",
+        "Stacks with the debuff of Meteor Hammer",
+        "Destroys trees within the radius upon impact",
+        "Damage greater than 0 from any player (including allies, excluding self) or Roshan puts Fallen Sky on a 25 second cooldown",
+        "The damage cooldown only triggers when Fallen Sky is in its active state in the neutral item slot",
+        "Since it is a cooldown and not actually disabled, it can be refreshed with cooldown resetting sources",
+        "This cooldown is not affected by cooldown reduction sources",
+        "It is also not disabled by damage flagged as HP Removal",
+        "Neither shares cooldown with any Blink Dagger-based items or Meteor Hammer"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics",
+    "The meteor impact affects buildings as well, stunning and burning them. Buildings take less impact damage",
+    "When crafted with the Dormant Curio, the damage per second, impact damage, and impact damage against buildings are increased by 30%",
+    "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) puts the item on a cooldown"
+  ],
+  "states": []
+}

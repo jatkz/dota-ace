@@ -1,0 +1,36 @@
+{
+  "name": "Unrelenting Eye",
+  "description": "A serpent's eye the size of a melon (and just as moist).",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Relentless",
+      "type": "passive",
+      "description": "Increases slow resistance. This bonus is decreased for every enemy hero within close range. Increases status resistance for each enemy within the same area.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "enemySearchRadius": 600,
+        "maxSlowResistance": "100%",
+        "slowResistanceLossPerEnemy": "20%",
+        "statusResistanceBonusPerEnemy": "10%",
+        "craftedMaxSlowResistance": "130%"
+      },
+      "notes": [
+        "Does not react on Invisible heroes or on heroes in the Fog of War",
+        "Treats Creep-Heroes and Illusions as heroes",
+        "The status resistance bonus is not capped and can increase further",
+        "When crafted with the Dormant Curio, the max slow resistance is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": null
+}

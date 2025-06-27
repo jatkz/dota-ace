@@ -1,0 +1,37 @@
+{
+  "name": "Occult Bracelet",
+  "description": "A band that bears effigy of the dark goddess Eloshar's unsleeping eye.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "Rites of Eloshar",
+      "type": "passive",
+      "description": "Each time the wearer is attacked they gain a stack of 0.4 mana regen, up to 5 stacks. Stacks last for 5 seconds.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "maxStacks": 5,
+        "manaRegenBonusPerStack": 0.4,
+        "duration": 5,
+        "maxManaRegenBonus": 2,
+        "totalManaRegeneration": 10
+      },
+      "notes": [
+        "Rites of Eloshar can give at most 2 mana regeneration bonus",
+        "With max stacks and its duration, it can regenerate up to a total of 10 mana",
+        "Each stack places a new hidden modifier buff on its wielder. This means their durations are independent from each other",
+        "The number of stacks can be seen on the status buff icon"
+      ]
+    }
+  ],
+  "stats": {
+    "shareable": false,
+    "usageAlert": false
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+  ],
+  "states": null
+}

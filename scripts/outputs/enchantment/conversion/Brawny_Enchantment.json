@@ -1,0 +1,15 @@
+{
+  "name": "Brawny Enchantment",
+  "description": null,
+  "tier": [1, 2, 3, 4],
+  "stats": {
+    "health": [110, 150, 190, 230],
+    "health_regeneration": [0, 4, 18, 12],
+    "slow_resistance": [0, 0, 0, 25]
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Jidi Pollen Bag",
+  "description": "Very dangerous. Very difficult to obtain more.",
+  "tier": "Tier 3",
+  "abilities": [
+    {
+      "name": "Pollinate",
+      "type": "active",
+      "description": "Spreads pollen on nearby enemies, reducing the effectiveness of health restoration on them, and dealing damage over time based on their maximum health.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 45,
+      "effects": {
+        "radius": 700,
+        "healthRestoreReduction": "30%",
+        "maxHealthAsTotalDamage": "12%",
+        "duration": 12,
+        "damageInterval": "1% of max health per second",
+        "dormantCurioBonus": "15.6% max health as total damage (30% increase)"
+      },
+      "notes": [
+        "Interrupt the caster's channeling abilities upon cast",
+        "Deals 1% (1.3% with Dormant Curio) of max health as damage in 1-second intervals, starting 1 second after the debuff is placed",
+        "Multiple casts do not stack, but refresh the duration"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the max health as total damage is increased by 30%",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

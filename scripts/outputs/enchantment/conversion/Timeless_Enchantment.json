@@ -1,0 +1,14 @@
+{
+  "name": "Timeless Enchantment",
+  "description": null,
+  "tier": [4, 5],
+  "stats": {
+    "debuffDurationAmp": "10/15%",
+    "spellDamageAmp": "8/16%"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

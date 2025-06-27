@@ -1,0 +1,14 @@
+{
+  "name": "Boundless Enchantment",
+  "description": null,
+  "tier": [5],
+  "stats": {
+    "attack_range": 150,
+    "cast_range": 350
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Not shareable",
+    "No usage alert"
+  ]
+}

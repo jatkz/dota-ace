@@ -1,0 +1,37 @@
+{
+  "name": "Divine Regalia",
+  "description": "So magnificent, it cannot abide failure.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Exalted",
+      "type": "passive",
+      "description": "Increases the wielder's outgoing damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "outgoingDamageAmplification": "20%",
+        "outgoingDamageAmplificationWithCurio": "26%"
+      },
+      "notes": [
+        "When crafted with the Dormant Curio, the outgoing damage amplification is increased by 30%",
+        "Dying disgraces the regalia, making it lose its bonus, as well as its enchantment"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When dying, replaces this artifact with the Disgraced Regalia",
+    "The Disgraced Regalia has no bonuses, and loses the chosen enchantment as well",
+    "If held by Techies with the Spoon's Stash Facet, only the chosen tier 5 enchantment is lost",
+    "If the wielder had Dormant Curio, its Unleashed Enchantment is lost as well",
+    "When re-crafting a tier 5 neutral item, the Disgraced Regalia will be available as a 4th option, as the currently owned artifact",
+    "If chosen, the new enchantment chosen along with it will work normally",
+    "Dying again does not cause the newly chosen enchantment to get lost",
+    "The Divine Regalia can still appear amongst the other 3 options when re-crafting, since the disgraced version is a separate artifact"
+  ],
+  "states": []
+}

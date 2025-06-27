@@ -1,0 +1,35 @@
+{
+  "name": "Gale Guard",
+  "description": "If one truly listens, they can always rely upon the wind to make its will known.",
+  "tier": "Tier 3",
+  "abilities": [
+    {
+      "name": "Cyclonic Shield",
+      "type": "active",
+      "description": "Envelops the caster in an all damage barrier that absorbs a percentage of incoming damage up to a certain amount. While the barrier is active, the caster has slow resistance.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 30,
+      "effects": {
+        "barrierHealth": 250,
+        "damageAbsorbed": "75%",
+        "slowResistance": "50%",
+        "duration": 10,
+        "dormantCurioBarrierHealth": 325,
+        "dormantCurioBonus": "30%"
+      },
+      "notes": [
+        "Interrupts the user's channeling abilities upon cast",
+        "When crafted with the Dormant Curio, the barrier health is increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

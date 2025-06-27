@@ -1,0 +1,58 @@
+{
+  "name": "Mana Draught",
+  "description": "A refreshing drink best shared with friends.",
+  "tier": "Tier 2",
+  "abilities": [
+    {
+      "name": "Bottoms Up",
+      "type": "active",
+      "description": "Restores the user's mana over the duration by increasing their mana regeneration, based on a fixed amount plus a portion of their maximum mana.",
+      "castAnimation": "0 + 0",
+      "castRange": 650,
+      "manaCost": 0,
+      "cooldown": 60,
+      "effects": {
+        "flatTotalManaRestore": 70,
+        "maxManaRestore": "3%",
+        "duration": 6,
+        "maxManaRestoreWithDormantCurio": "3.9%"
+      },
+      "notes": [
+        "Interrupts the wielder's channeling abilities upon cast",
+        "The ability always self-casts upon cast",
+        "Ctrl enables casting Regenerate on an allied hero",
+        "Considers clones, illusions, and creep-heroes as heroes",
+        "Reapplying the buff refreshes the duration",
+        "The regeneration checks the target's max mana periodically and updates the regeneration value instantly",
+        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
+        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
+        "When crafted with the Dormant Curio, the max mana restore is increased by 30%"
+      ]
+    },
+    {
+      "name": "Fill Up",
+      "type": "passive",
+      "description": "The cooldown speed of Bottoms Up is increased while standing in waters.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "cooldownReduction": "30%"
+      },
+      "notes": [
+        "The cooldown updates immediately upon leaving or entering any body of water",
+        "The reduction is always based on the current remaining cooldown",
+        "When entering waters while e.g. 10 seconds are left on the cooldown, it drops down to 7 seconds"
+      ]
+    }
+  ],
+  "stats": {
+    "shareable": false,
+    "usageAlert": false
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+  ],
+  "states": null
+}

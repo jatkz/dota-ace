@@ -1,0 +1,36 @@
+{
+  "name": "Brigand's Blade",
+  "description": "An infamous assassin's blade stolen and smuggled out of White Spire after its owner's mysterious demise.",
+  "tier": "Tier 2",
+  "abilities": [
+    {
+      "name": "Dark Mercy",
+      "type": "passive",
+      "description": "Regular attacks deal more damage to enemies for each instance of health they are missing.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "enemyHealthThresholdInstance": "7%",
+        "attackDamageBonusPerInstance": 3,
+        "attackDamageBonusPerInstanceWithCurio": 3.9
+      },
+      "notes": [
+        "Works against any unit, including buildings, wards, and allies",
+        "Dark Mercy is considered as a conditional attack damage bonus",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage",
+        "The attack damage bonus values are not considered by critical strike and cleave",
+        "However, it is considered by lifesteal, and it can be reduced only by flat reductions (e.g. damage block)",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+        "Grants the user 3/6/9/12/15/18/21/24/27/30/33/36/39/42 attack damage if their target is at less than 98%/91%/84%/77%/70%/63%/56%/49%/42%/35%/28%/21%/14%/7% health"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the attack damage bonus per instance is increased by 30%"
+  ],
+  "states": []
+}

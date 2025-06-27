@@ -1,0 +1,33 @@
+{
+  "name": "Spark of Courage",
+  "description": "A common battle charm in the armies that served the Children of the Light.",
+  "tier": "Tier 1",
+  "abilities": [
+    {
+      "name": "Courage",
+      "type": "passive",
+      "description": "Provides attack damage when the owner is above the health threshold. Provides armor when the owner is below the health threshold.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "maxHealthThreshold": "50%",
+        "attackDamageBonus": 10,
+        "armorBonus": 5
+      },
+      "notes": [
+        "Grants flat bonus attack damage"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamageBonus": 10,
+    "armorBonus": 5,
+    "healthThreshold": "50%"
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics."
+  ],
+  "states": null
+}

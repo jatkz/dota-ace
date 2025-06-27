@@ -1,0 +1,40 @@
+{
+  "name": "Pyrrhic Cloak",
+  "description": "There are generals that care far less about the survival of their troops than the destruction of their enemies.",
+  "tier": "Tier 4",
+  "abilities": [
+    {
+      "name": "Retribution",
+      "type": "active",
+      "description": "For the next few seconds, a portion of damage taken by the caster is reflected to the target unit as physical damage.",
+      "castAnimation": "0 + 0",
+      "castRange": 800,
+      "manaCost": 0,
+      "cooldown": 40,
+      "effects": {
+        "damageReflected": "75%",
+        "duration": 6,
+        "damageReflectedWithDormantCurio": "97.5%"
+      },
+      "notes": [
+        "Returns incoming damage before all manipulations. However, damage manipulation on the enemy still affects the damage normally.",
+        "Reflected physical damage is affected by damage block as well.",
+        "The returned damage is always dealt right after the incoming damage.",
+        "Returned damage has the no-reflection flag, preventing its damage from interacting with other sources of damage with the same flag.",
+        "Fully procs on-damage effects, except those which have a minimum damage threshold (e.g. Gravekeeper's Cloak).",
+        "The damage has the no-spell-lifesteal flag, preventing its damage from utilising spell lifesteal.",
+        "The damage has the no-spell-amplification flag, preventing its damage from being amplified with spell damage amplification.",
+        "Damage Return has a global range and affects units through the Fog of War or invisibility.",
+        "Fully stacks with Damage Return."
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "When crafted with the Dormant Curio, the damage reflected is increased by 30%.",
+    "Shareable: No",
+    "Usage Alert: No"
+  ],
+  "states": []
+}

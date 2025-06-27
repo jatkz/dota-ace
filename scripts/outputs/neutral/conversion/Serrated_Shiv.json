@@ -1,0 +1,40 @@
+{
+  "name": "Serrated Shiv",
+  "description": "Too dangerous for taskwork, this blade's only purpose is vile murder.",
+  "tier": "Tier 3",
+  "abilities": [
+    {
+      "name": "Gut 'Em",
+      "type": "passive",
+      "description": "Attacks have a chance to have True Strike and deal a percentage of the target's current health as bonus physical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "20%",
+        "currentHealthAsDamageBonus": "8%",
+        "attackDamageBonusVsRoshan": 200,
+        "enhancedCurrentHealthBonus": "10.4%",
+        "enhancedRoshanDamageBonus": 260
+      },
+      "notes": [
+        "Uses pseudo-random distribution",
+        "Cannot proc against Buildings",
+        "Can proc against buildings but does not apply the attack damage bonus against them",
+        "Fully works against ward-type units",
+        "Effects are calculated upon reaching the attack point, not upon landing an attack",
+        "Can proc on missed attacks",
+        "For ranged heroes, this is upon projectile launch",
+        "When crafted with the Dormant Curio, the current health as attack damage bonus and the attack damage bonus against Roshan are increased by 30%"
+      ]
+    }
+  ],
+  "stats": {},
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "Deals a flat attack damage bonus against Roshan",
+    "Enhancement available when crafted with Dormant Curio"
+  ],
+  "states": []
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Book of the Dead",
+  "description": "A record of the final reckoning. With one page torn out.",
+  "tier": "Tier 5",
+  "abilities": [
+    {
+      "name": "Greater Demonic Summoning",
+      "type": "active",
+      "description": "Summons a number of Necronomicon Warriors and Necronomicon Archers that are under the caster's control, with strong attacks and several abilities of their own.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 80,
+      "cooldown": 0,
+      "effects": {
+        "numberOfWarriors": 2,
+        "numberOfArchers": 2,
+        "duration": 65,
+        "attackDamageMultiplier": 0.75,
+        "dormantCurioDurationBonus": "30%",
+        "dormantCurioDuration": 84.5
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "The summons always spawn in front of the caster",
+        "Recasting Greater Demonic Summoning replaces the summons from the previous cast, no matter under whose control they are",
+        "However, recasting it with a second Book of the Dead (stolen from the enemy or copied by a Tempest Double) creates new summons",
+        "The summons cannot be targeted by Helm of the Dominator or Helm of the Overlord, and the warrior cannot be targeted by Hand of Midas",
+        "However, they can be targeted by other unit converting or instantly killing abilities (e.g. Holy Persuasion or Devour)"
+      ]
+    }
+  ],
+  "stats": {
+    "shareable": false,
+    "usageAlert": false
+  },
+  "additionalInfo": [
+    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
+    "The summons are granted an attack damage bonus",
+    "When crafted with the Dormant Curio, the duration is increased by 30%"
+  ],
+  "states": null
+}
