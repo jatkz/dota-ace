@@ -6,9 +6,9 @@
   "sellValue": 2200,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Soul Booster", "Perseverance", "Point Booster"],
+    "components": ["Voodoo Mask", "Soul Booster", "Void Stone"],
     "totalCost": 4400
   },
   "abilities": [
@@ -23,9 +23,7 @@
       "effects": {
         "spellLifestealFactor": 4,
         "duration": 5,
-        "drainedStatusDuration": 30,
-        "heroSpellLifesteal": "80%",
-        "creepSpellLifesteal": "16%"
+        "drainedStatusDuration": 30
       },
       "notes": [
         "Interrupts the caster's channeling abilities upon cast",
@@ -37,18 +35,17 @@
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 450,
     "mana": 450,
     "manaRegeneration": 3,
-    "spellLifestealHero": "20%",
-    "spellLifestealCreep": "4%"
+    "spellLifestealHero": 20,
+    "spellLifestealCreep": 4
   },
   "additionalInfo": [
     "Spell lifesteal from different sources stacks additively",
-    "Multiple instances of spell lifesteal from the same source do not stack",
-    "Listed at the Base Shop, under Magical, but requires items from the Secret Shop to be assembled",
-    "Cannot be disassembled"
+    "Multiple instances of spell lifesteal from the same source do not stack"
   ],
-  "states": null
+  "states": []
 }

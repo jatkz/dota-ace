@@ -1,24 +1,21 @@
 {
   "name": "Platemail",
   "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
-  "category": "Armor items",
+  "category": "Secret Shop",
   "cost": 1400,
   "sellValue": 700,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": null,
-    "totalCost": null
+    "components": [],
+    "totalCost": 1400
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "armor": 10
   },
-  "additionalInfo": [
-    "Purchasable at the Secret Shop",
-    "Builds into Lotus Orb",
-    "Builds into Shiva's Guard"
-  ],
+  "additionalInfo": [],
   "states": []
 }

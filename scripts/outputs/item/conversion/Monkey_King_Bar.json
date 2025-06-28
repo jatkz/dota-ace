@@ -6,9 +6,9 @@
   "sellValue": 2350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Javelin", "Javelin", "Demon Edge", "Recipe"],
+    "components": ["Demon Edge", "Javelin", "Blitz Knuckles", "Recipe"],
     "totalCost": 4700
   },
   "abilities": [
@@ -23,7 +23,7 @@
       "effects": {
         "procChance": "80%",
         "bonusMagicalDamage": 70,
-        "averageDamagePerAttack": 56
+        "damageType": "Attack / Magical"
       },
       "notes": [
         "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
@@ -31,24 +31,22 @@
         "It is not considered by lifesteal, crit or cleave",
         "It can be reduced only by flat reductions (e.g. magical damage barrier)",
         "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
-        "Self-illusions can use the accuracy, but do not apply the bonus magical attack damage",
-        "Does not work against buildings, but works against wards and allied units",
-        "Pierce uses pseudo-random distribution",
         "Pierce from Javelin-based items fully stack with another and themselves, except for multiple Monkey King Bars",
-        "Multiple sources can proc on the same attack"
+        "Multiple sources can proc on the same attack",
+        "Illusions can use the accuracy, but do not apply the bonus magical attack damage",
+        "Does not work against buildings, but works against wards and allied units",
+        "Adds an average of 56 magical damage to every attack",
+        "Pierce uses pseudo-random distribution"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "attackDamage": 40,
     "attackSpeed": 45
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Can only be completed with items from the Secret Shop",
-    "Key item to counter heroes or items that have intense evasion",
-    "Can be purchased to counter some abilities that cause blind",
-    "Because Pierce cannot proc on buildings, Monkey King Bar will not help in solving Uphill Miss when a ranged hero is below the ramp while attacking enemy T3 towers and barracks"
+    "This item is shown as a Team Item in the shop window when purchased by an ally"
   ],
   "states": null
 }

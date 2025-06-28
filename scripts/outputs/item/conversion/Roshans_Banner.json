@@ -1,12 +1,12 @@
 {
   "name": "Roshan's Banner",
   "description": "Another one of the Immortal's kill rewards, something feels familiar about this ancient banner.",
-  "category": "Kill Rewards",
+  "category": "Roshan Drop",
   "cost": null,
-  "sellValue": 0,
+  "sellValue": null,
   "maxStacks": 1,
   "shareable": true,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": null,
   "abilities": [
     {
@@ -16,15 +16,15 @@
       "castAnimation": "0 + 0",
       "castRange": 1200,
       "manaCost": null,
-      "cooldown": null,
+      "cooldown": 1,
       "effects": {
         "effectRadius": 650,
         "invulnerabilityDuration": 120,
         "bannerDuration": 120,
         "auraLingerDuration": 0.1,
         "creepHitCount": 24,
-        "hitCount": 12,
-        "meleeUnitsHitCount": 6
+        "rangedHitCount": 12,
+        "meleeHitCount": 6
       },
       "notes": [
         "Pings the minimap and shows the banner's location",
@@ -35,6 +35,8 @@
         "The aura only affects lane creeps, including lane creeps affected by dominate sources",
         "Trees within 200-radius are destroyed upon cast",
         "Creeps affected by the banner's aura will not be affected by Glyph of Fortification as the two use the same modifier",
+        "Attacks from heroes deal 4 damage to the banner",
+        "Attacks from creeps deal 1 damage to the banner",
         "Creeps' attacks are not effective on Roshan's Banner",
         "Melee hero attacks are more effective on Roshan's Banner"
       ]
@@ -43,10 +45,11 @@
   "stats": {
     "charges": 1
   },
+  "bonus": null,
   "additionalInfo": [
     "On his second death and onwards, Roshan drops Roshan's Banner as a second item if he was slain in the Radiant pit. In the Dire pit, he drops a Cheese instead.",
     "Roshan's Banner is consumed upon use. It does not have a charge counter, and multiple Roshan's Banners do not stack in the inventory.",
-    "Against Roshan's Banner: Attacks from heroes deal 4 damage, Attacks from creeps deal 1 damage.",
+    "Against Roshan's Banner: Attacks from heroes deal 4 damage. Attacks from creeps deal 1 damage.",
     "Unlike the Aegis of the Immortal, Roshan's Banner is not reclaimed by Roshan."
   ],
   "states": null

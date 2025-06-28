@@ -1,7 +1,7 @@
 {
   "name": "Refresher Shard",
   "description": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
-  "category": "Kill Rewards",
+  "category": "Roshan Drop",
   "cost": null,
   "sellValue": 500,
   "maxStacks": 1,
@@ -18,36 +18,39 @@
       "manaCost": 200,
       "cooldown": 180,
       "effects": {
+        "affects": "Self",
         "charges": 1
       },
       "notes": [
-        "Also resets all charges of charge-based abilities and items",
-        "Does not affect charge-based items that do not have a charge replenish timer",
-        "If the item is not in the owner's main inventory, its cooldown freezes completely, only continuing to tick down when entering the main inventory again",
-        "Interrupts the caster's channeling abilities upon cast",
-        "Resets Invoker's abilities that are currently not invoked",
-        "Resets Kez's alternative skill set, even when currently not using that set",
-        "Does not reset Rubick's previously stolen and used abilities that are no longer stolen",
-        "Does not reset cooldowns of abilities acquired via Morphling while currently unmorphed, or his default abilities while currently morphed",
-        "Does not reset Doom's previously acquired and used neutral creep abilities that are no longer there",
-        "Does not reset the cooldown of Aghanim's Shard",
-        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state",
-        "Does not skip the fade delay for Cloak and Dagger",
+        "Also resets all charges of charge-based abilities and items.",
+        "Does not affect charge-based items that do not have a charge replenish timer.",
+        "If the item is not in the owner's main inventory, its cooldown freezes completely, only continuing to tick down when entering the main inventory again.",
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Resets Invoker's abilities that are currently not invoked.",
+        "Resets Kez's alternative skill set, even when currently not using that set.",
+        "Does not reset Rubick's previously stolen and used abilities that are no longer stolen.",
+        "Does not reset cooldowns of abilities acquired via Morphling while currently unmorphed, or his default abilities while currently morphed.",
+        "Does not reset Doom's previously acquired and used neutral creep abilities that are no longer there.",
+        "Does not reset the cooldown of Aghanim's Shard.",
+        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state.",
+        "Does not skip the fade delay for Riki's Cloak and Dagger.",
+        "The 'Channeled abilities require hold/stop to cancel' setting does not stop Refresher Shard from being cast while channeling.",
         "Shares cooldown with Refresher Orb"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "healthRegeneration": 12,
     "manaRegeneration": 6,
     "attackDamage": 20
   },
   "additionalInfo": [
-    "On his third death and onwards, Roshan drops the Refresher Shard as a third item if he was slain in the Radiant pit. In the Dire pit, he drops an Aghanim's Blessing - Roshan instead",
-    "Although Refresher Shard cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it",
-    "If a Courier is the first unit to pick up the Refresher Shard, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards",
-    "If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory",
-    "Unlike the Aegis of the Immortal, Refresher Shard is not reclaimed by Roshan"
+    "On his third death and onwards, Roshan drops the Refresher Shard as a third item if he was slain in the Radiant pit. In the Dire pit, he drops an Aghanim's Blessing - Roshan instead.",
+    "Although Refresher Shard cannot be bought, it can be sold for 500 Gold. However, only the hero whose main inventory it enters first can sell it.",
+    "If a Courier is the first unit to pick up the Refresher Shard, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards.",
+    "If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
+    "Unlike the Aegis of the Immortal, Refresher Shard is not reclaimed by Roshan."
   ],
   "states": null
 }

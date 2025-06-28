@@ -6,19 +6,16 @@
   "sellValue": 900,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
-    "totalCost": 1800
+    "components": ["Khanda", "Scythe of Vyse", "Refresher Orb", "Octarine Core"],
+    "totalCost": null
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "manaRegeneration": 6
   },
-  "additionalInfo": [
-    "Builds into Khanda (as of version 7.38)",
-    "Previously built into Scythe of Vyse, Refresher Orb, and Octarine Core",
-    "Item was created in version 7.35 (2023-12-14)"
-  ],
+  "additionalInfo": [],
   "states": []
 }

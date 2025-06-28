@@ -6,9 +6,9 @@
   "sellValue": 212.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Ring of Regen", "Ring of Regen"],
+    "components": ["Ring of Regen", "Recipe"],
     "totalCost": 425
   },
   "abilities": [
@@ -26,36 +26,20 @@
         "auraLingerDuration": 0.5
       },
       "notes": [
-        "Can regenerate up to 120 health in one minute",
-        "Does not affect invulnerable units"
+        "Can regenerate up to 120 health in one minute.",
+        "Does not affect invulnerable units.",
+        "Affected by AoE Radius increasing sources.",
+        "Utilizes Health Regeneration. Affected by Health Restore sources.",
+        "This ability can be bestowed by Illusions."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "healthRegeneration": 0.5
   },
   "additionalInfo": [
-    "With Regeneration Aura, the item grants a total of 2.5 health regeneration to the wielder"
+    "With Regeneration Aura, the item grants a total of 2.5 health regeneration to the wielder."
   ],
-  "recommendedHeroes": [],
-  "states": null,
-  "trivia": [
-    "In DotA, this item is named Headdress of Rejuvenation"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Holy Locket",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "Now grants 0.5 health regeneration bonus",
-        "date": "2021-04-09"
-      },
-      {
-        "description": "Now builds into Holy Locket",
-        "date": "2020-12-17"
-      }
-    ]
-  }
+  "states": []
 }

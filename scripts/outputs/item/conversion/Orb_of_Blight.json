@@ -6,10 +6,10 @@
   "sellValue": 150,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
-    "totalCost": 300
+    "components": ["Desolator", "Orb of Corrosion"],
+    "totalCost": null
   },
   "abilities": [
     {
@@ -25,48 +25,22 @@
         "duration": 3
       },
       "notes": [
-        "The bonus armor reduction value does not stack",
-        "Reapplying the debuff refreshes the duration",
-        "Affects Allied units, Buildings, and Ward-type units",
-        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other",
-        "The ability effects are applied as follows: 1. The modifier_blight_stone_buff, 2. The wielder's attack instance"
+        "The bonus armor reduction value does not stack.",
+        "Reapplying the debuff refreshes the duration.",
+        "Affects allied units, buildings, and ward-type units.",
+        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other.",
+        "Pierces Debuff Immunity sources.",
+        "This ability is not bestowed by Illusions."
       ]
     }
   ],
   "stats": {},
+  "bonus": {},
   "additionalInfo": [
-    "Purchasable at the Main Shop under Equipment",
-    "Now builds into Orb of Corrosion"
+    "Available in the Base Shop",
+    "Full price refunded within 10s",
+    "Creates debuff modifier_blight_stone_buff that is dispellable by any Dispel sources",
+    "Part of Orb of Blight-based Items Priority system with Greater Corruption, Corruption, and Corrosion abilities"
   ],
-  "recommendedHeroes": [
-    "Weaver",
-    "Sniper", 
-    "Legion Commander",
-    "Lifestealer",
-    "Windranger",
-    "Clinkz",
-    "Mirana",
-    "Templar Assassin",
-    "Wraith King",
-    "Tusk",
-    "Nature's Prophet"
-  ],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "RENAMED item from Blight Stone to Orb of Blight. Reduced Lesser Corruption duration from 8 to 3. Now builds into Orb of Corrosion.",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "No longer builds into the following items: Medallion of Courage, Orb of Corrosion.",
-        "date": "7.35 (2023-12-14)"
-      },
-      {
-        "description": "Now builds into Orb of Corrosion. Lesser Corruption no longer stacks with Corruption and Greater Corruption.",
-        "date": "7.28 (2020-12-17)"
-      }
-    ]
-  }
+  "states": []
 }

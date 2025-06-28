@@ -6,9 +6,9 @@
   "sellValue": null,
   "maxStacks": null,
   "shareable": true,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
+    "components": ["Observer and Sentry Wards"],
     "totalCost": 0
   },
   "abilities": [
@@ -18,8 +18,8 @@
       "description": "Plants an invisible and phased Observer Ward at the target location, which grants ground vision around it.",
       "castAnimation": "0 + 0",
       "castRange": 500,
-      "manaCost": null,
-      "cooldown": null,
+      "manaCost": 0,
+      "cooldown": 1,
       "effects": {
         "visionRadius": 1600,
         "wardDuration": 360,
@@ -31,11 +31,11 @@
         "meleeAttackRangeBonus": 150
       },
       "notes": [
-        "Holding CTRL allows Plant to be cast on an allied hero, sharing an Observer Ward with them",
-        "As the match goes on, Observer Wards become more and more valuable. Their gold and experience bounties scale with elapsed game time",
-        "The ward takes a fixed amount of attacks to be destroyed. Creeps take more attacks than heroes",
-        "Attacks against Observer Wards cannot miss. Melee units have an increased attack range when attacking Observer Wards",
-        "The player that placed the ward can always attack it with any of their units, but all their attacks are treated as non-hero attacks until the ward comes within the 50% deny range"
+        "Holding the CTRL allows Plant to be cast on an allied hero, sharing an Observer Ward with them, using the item's cast range.",
+        "As the match goes on, Observer Wards become more and more valuable. Their gold and experience bounties scale with elapsed game time.",
+        "The ward takes a fixed amount of attacks to be destroyed. Creeps take more attacks than heroes, treats Illusions and Creep-Heroes as creeps.",
+        "Attacks against Observer Wards cannot miss. Melee units have an increased attack range when attacking Observer Wards.",
+        "The player that placed the ward can always attack it with any of their units. However, all their attacks are treated as non-hero attacks, until the ward comes within the 50% deny range."
       ]
     }
   ],
@@ -44,33 +44,14 @@
     "stock": "2 INIT / 4 MAX",
     "stockReplenishTime": 135
   },
+  "bonus": {},
   "additionalInfo": [
-    "Stacks with itself and with Sentry Wards in a single inventory slot, there is no stack limit",
-    "Observer Wards do not provide True Sight",
-    "Killing an Observer Ward prints out a chat notification to allies",
-    "Observer Ward's vision is considered team vision, and is not bound to the player that placed the ward",
-    "Cannot be placed in Fountain areas, Roshan's pits, within bound radius of buildings and trees, or on impassable terrain",
-    "The Ward's bounty increases by 1 gold every 15 seconds, and the experience by 1 every 7.5 seconds"
+    "Stacks with itself and with Sentry Wards in a single inventory slot, there is no stack limit. The sell value adapts based on the number of instances in a stack.",
+    "Wards from multiple players are combined when given by allies.",
+    "Observer Wards do not provide True Sight.",
+    "Killing an Observer Ward prints out a chat notification to allies.",
+    "Observer Ward's vision is considered team vision, and is not bound to the player that placed the ward.",
+    "This means if that player has their vision limited to themselves, wards placed by them do not grant them vision."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "In DotA, this item's name is pluralized to Observer Wards"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Observer Wards' vision is now considered team vision, and not attributed to the player that placed the ward",
-        "date": "2024-06-05"
-      },
-      {
-        "description": "Increased base experience bounty from 50 to 70. Increased experience bounty per minute from 6 to 8",
-        "date": "2023-05-13"
-      },
-      {
-        "description": "Strength of the Immortal now causes Roshan's attacks to immediately destroy Observer Ward",
-        "date": "2022-06-08"
-      }
-    ]
-  }
+  "states": null
 }

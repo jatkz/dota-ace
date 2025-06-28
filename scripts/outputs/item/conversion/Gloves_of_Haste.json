@@ -6,37 +6,18 @@
   "sellValue": 225,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 450
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "attackSpeed": 20
   },
-  "additionalInfo": [],
-  "recommendedHeroes": [
-    "Heroes who intend to build Hand of Midas"
+  "additionalInfo": [
+    "Heroes who intend to build a Hand of Midas will sometimes purchase Gloves of Haste in the early game."
   ],
-  "states": [],
-  "trivia": [
-    "This item is based on the Gloves of Haste from Warcraft 3."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Orb of Corrosion. Now builds into Mage Slayer.",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Now builds into the following items: Maelstrom, Orb of Corrosion",
-        "date": "7.35 (2023-12-14)"
-      },
-      {
-        "description": "No longer builds into Glimmer Cape.",
-        "date": "7.28 (2020-12-17)"
-      }
-    ]
-  }
+  "states": []
 }

@@ -6,9 +6,9 @@
   "sellValue": 3400,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Eul's Scepter of Divinity"],
+    "components": ["Eul's Scepter of Divinity", "Mystic Staff", "Recipe"],
     "totalCost": 6800
   },
   "abilities": [
@@ -23,8 +23,8 @@
       "effects": {
         "pathingBlockerSize": 24,
         "duration": 2.5,
-        "damage": 50,
-        "setSelfSpeed": 300
+        "enemyDamage": 50,
+        "selfSetSpeed": 300
       },
       "notes": [
         "Double-tapping automatically targets self",
@@ -34,8 +34,8 @@
         "Cyclone first applies the dispel, then the cyclone modifier",
         "While cycloned, the affected unit is moved upwards and has no collision",
         "A 24-radius pathing blocker is created at the base of the affected unit while active",
-        "The damage is applied at the end of the duration and only to enemy targets",
-        "If the cyclone gets dispelled, it still applies the damage as soon as the target lands",
+        "The damage is applied at the end of the duration. If the cyclone gets dispelled, it still applies the damage as soon as the target lands",
+        "The damage is only applied to enemy targets",
         "If the target is an enemy, they also take damage upon landing",
         "If the target is the wielder, they can move freely at a fixed speed, but are still unable to attack or cast abilities or items. Gains free pathing and ignores turn rates",
         "Cannot lift up Roshan, instead, it instantly applies the damage",
@@ -43,15 +43,11 @@
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "intelligence": 35,
     "manaRegeneration": 3,
-    "moveSpeed": 30,
-    "bonusMana": 420,
-    "bonusManaRegeneration": 1.75,
-    "magicResistance": "3.5%",
-    "mainAttackDamageInt": 35,
-    "mainAttackDamageUniversal": 15.75
+    "moveSpeed": 30
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
@@ -60,9 +56,7 @@
     "35 main attack damage to Intelligence heroes",
     "15.75 main attack damage to universal heroes",
     "Stacks with all other movement speed bonuses",
-    "Purges first, then applies Cyclone modifier",
-    "Item can only be completed with items from the Secret Shop",
-    "Cannot be disassembled"
+    "Purges first, then applies Cyclone modifier"
   ],
   "states": null
 }

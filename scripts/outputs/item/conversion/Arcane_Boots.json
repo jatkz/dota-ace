@@ -6,29 +6,29 @@
   "sellValue": 700,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 1,
+  "usageAlert": true,
   "recipe": {
-    "components": ["Boots of Speed", "Energy Booster", "Recipe"],
+    "components": ["Boots of Speed", "Ring of Basilius", "Recipe"],
     "totalCost": 1400
   },
   "abilities": [
     {
-      "name": "Replenish",
+      "name": "Replenish Mana",
       "type": "active",
       "description": "Replenishes mana to nearby allies on cast.",
       "castAnimation": "0 + 0",
       "castRange": null,
-      "manaCost": 55,
-      "cooldown": 0,
+      "manaCost": 0,
+      "cooldown": 55,
       "effects": {
         "radius": 1200,
         "manaReplenished": 150
       },
       "notes": [
-        "Interrupts the caster's channeling abilities upon cast",
-        "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings",
-        "Using Replenish every time it is off cooldown is equivalent to having 2.727 mana regeneration bonus per second",
-        "Cannot be cast by Meepo clones"
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units, excluding wards and buildings.",
+        "Using Replenish every time it is off cooldown is equivalent to having 2.727 mana regeneration bonus per second.",
+        "Cannot be cast by Meepo clones."
       ]
     },
     {
@@ -45,57 +45,21 @@
         "auraLingerDuration": 0.5
       },
       "notes": [
-        "Can regenerate up to 60 mana in one minute",
-        "Does not affect invulnerable units",
-        "Multiple identical instances of Basilius Aura do not stack, regardless of source. Stacks with upgraded versions of the aura"
+        "Can regenerate up to 60 mana in one minute.",
+        "Does not affect invulnerable units.",
+        "Multiple identical instances of Basilius Aura do not stack, regardless of source. Stacks with upgraded versions of the aura."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "manaRegeneration": 0.25,
     "moveSpeed": 45
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack",
-    "Stacks with all other movement speed bonus"
+    "This item is shown as a Team Item in the shop window when purchased by an ally.",
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack.",
+    "Stacks with all other movement speed bonus."
   ],
-  "recommendedHeroes": [
-    "Crystal Maiden",
-    "Lich",
-    "Lion",
-    "Shadow Shaman",
-    "Witch Doctor",
-    "Jakiro",
-    "Keeper of the Light",
-    "Lina",
-    "Pugna",
-    "Skywrath Mage",
-    "Zeus",
-    "Anti-Mage",
-    "Queen of Pain",
-    "Storm Spirit",
-    "Tinker"
-  ],
-  "states": null,
-  "trivia": [
-    "Arcane Boots was originally created as Arcane Ring, being built out of Ring of Protection, Energy Booster, and a recipe. Its recipe got changed and its theme reworked into Arcane Boots in the 6.68 gameplay patch",
-    "Arcane Ring's appearance is designed after this as well, sharing aesthetics with Arcane Boots"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "RENAMED Replenish Mana to just \"Replenish\"",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Increased Recipe cost from 375 to 475 (total cost increases from 1300 to 1400). Reduced mana regeneration bonus from 0.5 to 0.25. Reduced Replenish Mana mana restore from 175 to 150",
-        "date": "7.37d (2024-10-01)"
-      },
-      {
-        "description": "Reduced mana regeneration bonus from 0.75 to 0.5",
-        "date": "7.36c (2024-06-24)"
-      }
-    ]
-  }
+  "states": []
 }

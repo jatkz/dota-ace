@@ -6,7 +6,7 @@
   "sellValue": 175,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 350
@@ -15,7 +15,7 @@
     {
       "name": "Poison Attack",
       "type": "passive",
-      "description": "The next attack poisons the target, dealing damage over time. This attack cannot miss.",
+      "description": "The next attack poisons the target, dealing damage over time.",
       "castAnimation": null,
       "castRange": null,
       "manaCost": null,
@@ -23,14 +23,11 @@
       "effects": {
         "damagePerSecond": 10,
         "duration": 3,
-        "damageType": "Magical/HP Removal",
-        "affects": "Enemy Units"
+        "damageType": "Spell / Magical / HP Removal"
       },
       "notes": [
-        "The effects are calculated upon reaching the attack point, not upon landing an attack",
-        "For ranged heroes, this is upon projectile launch",
-        "The attack has True Strike, so it cannot miss",
-        "Reapplying the debuff refreshes the duration",
+        "The effects are calculated upon reaching the attack point, not upon landing an attack. For ranged heroes, this is upon projectile launch.",
+        "Reapplying the debuff refreshes the duration.",
         "Does not affect Buildings, Ward-type units, or Ally units",
         "The attacks first apply the debuff, then their own attack damage",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 3 instances",
@@ -40,29 +37,12 @@
     }
   ],
   "stats": {},
-  "additionalInfo": [],
-  "recommendedHeroes": [
-    "Generally picked up by melee heroes who intend to harass their opponents in the lane"
+  "bonus": {},
+  "additionalInfo": [
+    "Generally picked up by melee heroes who intend to harass their opponents in the lane",
+    "Does not pierce Debuff Immunity sources",
+    "This ability is not bestowed by Illusions",
+    "Creates debuff modifier_item_orb_of_venom_slow that is dispellable by any Dispel sources"
   ],
-  "states": [],
-  "trivia": [
-    "This item is based on the Orb of Venom from Warcraft 3",
-    "Orb of Venom's lore 'Envenoms your veapon with the venom of a venomous viper.' is a reference to the quote of V for Vendetta. 'Weapon' was intentionally written wrong, with a V, for the reference's sake"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Increased gold cost from 250 to 350. No longer builds into Orb of Corrosion. Now builds into Mage Slayer. Now builds into Witch Blade. REWORKED Poison Attack.",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Reduced gold cost from 275 to 250.",
-        "date": "7.35c (2024-02-21)"
-      },
-      {
-        "description": "Reduced Poison Attack melee movement speed slow from 15% to 13%. Now builds into Orb of Corrosion. Reduced gold cost from 300 to 275.",
-        "date": "7.28 (2020-12-17)"
-      }
-    ]
-  }
+  "states": []
 }

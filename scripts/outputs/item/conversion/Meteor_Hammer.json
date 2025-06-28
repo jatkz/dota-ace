@@ -6,10 +6,10 @@
   "sellValue": 1425,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Ogre Axe", "Staff of Wizardry", "Sage's Mask"],
-    "totalCost": 2550
+    "components": ["Kaya", "Crown", "Recipe"],
+    "totalCost": 2850
   },
   "abilities": [
     {
@@ -37,15 +37,17 @@
         "The meteor takes 0.5 seconds to land",
         "Upon landing, all enemies within the area, including buildings but excluding wards, get damaged, stunned, and receive a damaging debuff",
         "The meteor first applies the debuffs, then the impact damage",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 7 total instances",
-        "Can deal a total of 430 damage (before reductions)",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 7 total instances, including the impact damage",
+        "Can deal a total of 430 (780 to buildings) damage before reductions",
         "Multiple casts on the same targets do not stack but refresh the duration instead",
+        "Stacks with the debuff of Fallen Sky",
         "Destroys trees within the radius upon impact",
         "Does not share a cooldown with Fallen Sky"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 6,
     "agility": 6,
     "intelligence": 24,
@@ -58,7 +60,7 @@
     "6 attack speed and 1 main armor",
     "6, 6 and 24 main attack damage to all Strength/Agility/Intelligence heroes respectively",
     "16.2 main attack damage to universal heroes",
-    "Multiple sources of spell damage amplification do not stack",
+    "For Kaya-based items: Multiple sources of spell damage amplification do not stack",
     "Multiple sources of mana regeneration amplification do not stack"
   ],
   "states": null

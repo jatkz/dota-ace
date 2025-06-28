@@ -6,9 +6,9 @@
   "sellValue": 2325,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Yasha", "Ultimate Orb", "Recipe"],
+    "components": ["Yasha", "Diadem", "Recipe"],
     "totalCost": 4650
   },
   "abilities": [
@@ -25,43 +25,44 @@
         "numberOfIllusions": 2,
         "duration": 18,
         "meleeDamageDealt": "33%",
-        "meleeDamageTaken": "300%",
         "rangedDamageDealt": "28%",
-        "rangedDamageTaken": "300%"
+        "damageTaken": "300%"
       },
       "notes": [
         "The wielder is hidden upon cast; this disjoints incoming projectiles",
-        "Issues the wielder a stop-command, canceling all queued orders",
+        "The 0.1-second split time",
+        "Issues the wielder a stop-command, canceling all queued orders, including orders to player-controlled units",
         "Applies a basic dispel on the wielder",
-        "Creates illusions based on the ability's cast position",
+        "Creates the illusions based on the ability's cast position",
         "Grants 400-radius flying vision centered around caster during split time",
-        "The wielder and illusions reappear in random positions within fixed formations",
+        "The wielder and created illusions reappear in random positions within fixed formations",
         "Recasting the ability replaces all Mirror Image-based illusions of the current instance"
       ]
     }
   ],
   "stats": {
-    "strength": 10,
-    "agility": 26,
-    "intelligence": 10,
-    "moveSpeed": "10%",
-    "attackSpeed": 15,
     "health": 220,
     "healthRegeneration": 1,
     "mana": 120,
     "manaRegeneration": 0.5,
     "magicResistance": "1%",
-    "mainArmor": 4.33
+    "attackSpeed": 26,
+    "mainArmor": 4.33,
+    "strengthDamage": 10,
+    "agilityDamage": 26,
+    "intelligenceDamage": 10,
+    "universalDamage": 20.7
+  },
+  "bonus": {
+    "strength": 10,
+    "agility": 26,
+    "intelligence": 10,
+    "moveSpeed": "10%",
+    "attackSpeed": 15
   },
   "additionalInfo": [
-    "The item's attributes grant 220 health and 1 health regeneration",
-    "Grants 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "Provides 26 attack speed and 4.33 main armor",
-    "Grants 10, 26 and 10 main attack damage to Strength/Agility/Intelligence heroes respectively",
-    "Grants 20.7 main attack damage to universal heroes",
     "For Yasha-based items: Multiple sources of movement speed do not stack",
-    "Multiple sources of attack speed fully stack",
-    "Item is not shareable and cannot be disassembled"
+    "For Yasha-based items: Multiple sources of attack speed fully stack"
   ],
   "states": null
 }

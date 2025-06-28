@@ -6,9 +6,9 @@
   "sellValue": 887.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 1,
+  "usageAlert": true,
   "recipe": {
-    "components": ["Headdress", "Buckler", "Recipe"],
+    "components": ["Headdress", "Chainmail", "Recipe"],
     "totalCost": 1775
   },
   "abilities": [
@@ -26,11 +26,12 @@
         "stackLimitDuration": 49
       },
       "notes": [
-        "Interrupts the caster's channeling abilities upon cast",
-        "Affects every allied unit, including illusions, invulnerable units and hidden units",
-        "Does not heal units that have been healed by Restore in the last 49 seconds, or Mend in the last 44 seconds",
-        "A status buff icon on affected units shows how much time is left for it to be able to get affected by the aforementioned abilities again",
-        "Units may only be affected by Restore once in a while, including units affected by Guardian Greaves"
+        "Interrupts the caster's channeling abilities upon cast.",
+        "Affects every allied unit, including illusions, invulnerable units and hidden units.",
+        "Does not heal units that have been healed by Restore in the last 49 seconds, or Mend in the last 44 seconds.",
+        "A status buff icon on affected units shows how much time is left for it to be able to get affected by the aforementioned abilities again.",
+        "The stack limit duration has the following properties: The duration is set upon cast and is always 1 second less than the cooldown.",
+        "Units may only be affected by Restore once in a while, including units affected by Guardian Greaves."
       ]
     },
     {
@@ -47,18 +48,18 @@
         "auraLingerDuration": 0.5
       },
       "notes": [
-        "Can regenerate up to 150 health in one minute",
-        "Does not affect invulnerable units"
+        "Can regenerate up to 150 health in one minute.",
+        "Does not affect invulnerable units."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "armor": 4
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Guardian Greaves was purchased as well, Guardian Greaves' icon takes priority",
-    "Cannot be disassembled"
+    "This item is shown as a Team Item in the shop window when purchased by an ally.",
+    "If a Guardian Greaves was purchased as well, Guardian Greaves' icon takes priority."
   ],
-  "states": null
+  "states": []
 }

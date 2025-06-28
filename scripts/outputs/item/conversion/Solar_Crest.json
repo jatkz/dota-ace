@@ -6,16 +6,16 @@
   "sellValue": 1287.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Pavise", "Wind Lace"],
+    "components": ["Pavise", "Crown", "Wind Lace", "Recipe"],
     "totalCost": 2575
   },
   "abilities": [
     {
       "name": "Shine",
       "type": "active",
-      "description": "Grants the target ally a physical damage barrier for a while. If not cast on self, also increases the target's armor, movement speed, and attack speed for the duration.",
+      "description": "Grants the target ally a physical damage barrier for a while.",
       "castAnimation": "0 + 0",
       "castRange": 1000,
       "manaCost": 100,
@@ -28,16 +28,25 @@
         "attackSpeedBonus": 60
       },
       "notes": [
-        "Grants a physical damage barrier that absorbs physical damage values",
-        "Stacks additively with the same damage-type barrier sources",
-        "Has higher priority than universal damage barriers",
-        "Successive casts refresh the buff and reset the damage barrier capacity",
-        "Always places both buffs, but armor and speed increasing buff has values set to 0 when cast on self",
-        "Shares cooldown with Pavise"
+        "If not cast on self, also increases the target's armor, movement speed, and attack speed for the duration",
+        "Always places both buffs, but the armor and speed increasing buff has its values set to 0 when cast on self",
+        "Shares cooldown with Pavise",
+        "Successive casts refresh the buff and reset the damage barrier capacity"
       ]
     }
   ],
   "stats": {
+    "healthFromAttributes": 88,
+    "healthRegeneration": 0.4,
+    "manaFromAttributes": 48,
+    "manaRegeneration": 0.2,
+    "magicResistance": "0.4%",
+    "attackSpeed": 4,
+    "mainArmor": 0.67,
+    "mainAttackDamage": 4,
+    "mainAttackDamageUniversal": 5.4
+  },
+  "bonus": {
     "strength": 4,
     "agility": 4,
     "intelligence": 4,
@@ -49,14 +58,8 @@
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
     "If a Pavise was purchased as well, Solar Crest's icon takes priority",
-    "The item's attributes grant 88 health and 0.4 health regeneration",
-    "Grants 48 mana, 0.2 mana regeneration and 0.4% flat base magic resistance",
-    "Provides 4 attack speed and 0.67 main armor",
-    "Adds 4 main attack damage to all Strength/Agility/Intelligence heroes",
-    "Adds 5.4 main attack damage to universal heroes",
     "Movement speed bonuses from multiple Solar Crests fully stack",
-    "Stacks with all other movement speed bonuses",
-    "Cannot be disassembled"
+    "Stacks with all other movement speed bonuses"
   ],
   "states": null
 }

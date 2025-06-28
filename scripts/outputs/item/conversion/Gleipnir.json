@@ -6,7 +6,7 @@
   "sellValue": 2275,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Point Booster", "Rod of Atos", "Recipe"],
     "totalCost": 4550
@@ -22,9 +22,7 @@
       "cooldown": 18,
       "effects": {
         "radius": 275,
-        "duration": 2,
-        "rootEffect": true,
-        "trueSight": true
+        "duration": 2
       },
       "notes": [
         "Launches projectiles onto enemies within the radius",
@@ -34,29 +32,30 @@
         "Provides True Sight over affected targets",
         "The True Sight pierces debuff immunity, the root does not",
         "Blocked individually on impact by Spell Block",
-        "Reflected individually on impact by Spell Reflect",
+        "Reflected individually on impact by Spell Reflection",
         "Shares cooldown with Rod of Atos"
       ]
     }
   ],
   "stats": {
-    "intelligence": 12,
-    "health": 450,
-    "mana": 200,
-    "aoeRadius": 75,
     "additionalMana": 144,
     "manaRegeneration": 0.6,
     "magicResistance": "1.2%",
     "mainAttackDamageInt": 12,
     "mainAttackDamageUniversal": 5.4
   },
+  "bonus": {
+    "intelligence": 12,
+    "health": 450,
+    "mana": 200,
+    "aoeRadius": 75
+  },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
     "If a Rod of Atos was purchased as well, Gleipnir's icon takes priority",
-    "The item's attributes grant 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
-    "Grants 12 main attack damage to Intelligence heroes",
-    "Grants 5.4 main attack damage to Universal heroes",
-    "Cannot be disassembled"
+    "The item's attributes grant additional stats: 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
+    "12 main attack damage to Intelligence heroes",
+    "5.4 main attack damage to Universal heroes"
   ],
   "states": null
 }

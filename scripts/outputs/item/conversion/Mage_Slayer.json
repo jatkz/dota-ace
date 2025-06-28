@@ -6,7 +6,7 @@
   "sellValue": 1400,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Cloak", "Orb of Venom", "Gloves of Haste", "Cornucopia"],
     "totalCost": 2800
@@ -22,30 +22,36 @@
       "cooldown": null,
       "effects": {
         "damagePerSecond": 20,
-        "spellDamageReduction": "40%",
-        "duration": 3
+        "spellDamageReduction": 40,
+        "duration": 3,
+        "damageType": "Spell/Magical"
       },
       "notes": [
-        "The debuff from successive attacks on the same target does not stack but refreshes the duration",
-        "The attacks first apply the debuff, then their own damage",
-        "Applies generic outgoing damage reduction on the affected target. Stacks additively with other sources of generic outgoing damage manipulation",
-        "Affects spell damage the affected enemy deals. Does not reduce damage flagged as HP removal",
-        "Does not work against wards, buildings, and allied units"
+        "The debuff from successive attacks on the same target does not stack but refreshes the duration.",
+        "The attacks first apply the debuff, then their own damage.",
+        "Applies generic outgoing damage reduction on the affected target. Stacks additively with other sources of generic outgoing damage manipulation.",
+        "Affects spell damage the affected enemy deals. Does not reduce damage flagged as HP removal.",
+        "Does not work against wards, buildings, and allied units.",
+        "Pierces Debuff Immunity sources.",
+        "This ability is not bestowed by Illusions."
       ]
     }
   ],
   "stats": {
+    "mainAttackDamage": 8
+  },
+  "bonus": {
     "healthRegeneration": 5,
     "manaRegeneration": 2,
-    "magicResistance": "20%",
+    "magicResistance": 20,
     "attackDamage": 8,
     "attackSpeed": 30
   },
   "additionalInfo": [
-    "The item's attributes grant additional main attack damage",
-    "Stacks multiplicatively with other magic resistance sources",
-    "Increases most heroes' magic resistance to 40%",
-    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%"
+    "The item's attributes grant the following additional stats: main attack damage to [heroes].",
+    "Stacks multiplicatively with other magic resistance sources.",
+    "Increases most heroes' magic resistance to 40%.",
+    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%."
   ],
-  "states": null
+  "states": []
 }

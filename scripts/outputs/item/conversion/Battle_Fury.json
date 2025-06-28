@@ -6,9 +6,9 @@
   "sellValue": 1950,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Broadsword", "Cornucopia", "Recipe"],
+    "components": ["Broadsword", "Broadsword", "Cornucopia", "Quelling Blade", "Recipe"],
     "totalCost": 3900
   },
   "abilities": [
@@ -20,10 +20,8 @@
       "castRange": 350,
       "manaCost": null,
       "cooldown": 4,
-      "effects": {
-        "affects": "Trees"
-      },
-      "notes": ["Does not share cooldown with Chop Tree from other sources"]
+      "effects": {},
+      "notes": ["Does not share cooldown with Quelling Blade Chop Tree."]
     },
     {
       "name": "Quell",
@@ -34,16 +32,18 @@
       "manaCost": null,
       "cooldown": null,
       "effects": {
-        "attackDamageBonusMelee": 10,
-        "attackDamageBonusRanged": 5,
-        "affects": "Enemies",
-        "damageType": "Attack / Physical"
+        "attackDamageBonus": 10,
+        "attackDamageBonusRanged": 5
       },
       "notes": [
-        "Quell is considered as a conditional attack damage bonus",
-        "The attack damage bonus adapts immediately depending on the wielder's range type",
-        "Stacks with the Quell of Quelling Blade, but not with additional Battle Furies",
-        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, or Allied units"
+        "Quell is considered as a conditional attack damage bonus.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage.",
+        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities.",
+        "It can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "The attack damage bonus adapts immediately depending on the wielder's range type (melee or ranged).",
+        "Stacks with the Quell of Quelling Blade, but not with additional Battle Furies.",
+        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, and Allied units."
       ]
     },
     {
@@ -58,31 +58,31 @@
         "startingRadius": 150,
         "distance": 650,
         "endRadius": 360,
-        "cleaveDamageHeroes": "60%",
-        "cleaveDamageNonHeroes": "40%",
-        "affects": "Enemies",
-        "damageType": "Spell / Physical"
+        "cleaveDamage": "60%",
+        "cleaveDamageVsCreeps": "40%"
       },
       "notes": [
-        "Grants cleave if the affected hero's range type is melee",
-        "Ranged units cannot cleave",
-        "Visual effects and sounds still play when illusions attack",
-        "Does not proc cleave when attacking ally units",
-        "Does not damage Couriers",
-        "Neither proc nor damage Buildings or Ward-type units"
+        "Grants cleave if the affected hero's range type is melee.",
+        "Deals physical spell damage correspondingly to the hero's attack damage value.",
+        "Affected by damage block sources on the enemy individually within the area-of-effect.",
+        "Has the following damage flags: No-spell-lifesteal, No-spell-amplification.",
+        "Stack independently with other cleave sources.",
+        "The total ability area-of-effect is an isosceles trapezoid in front of the hero.",
+        "Visual effects and sounds still play when illusions attack.",
+        "The damage is applied immediately to all valid enemy units within the area-of-effect regardless of the ability visual effects.",
+        "Does not proc cleave when attacking Ally units.",
+        "Does not damage Couriers.",
+        "Neither proc nor damage Buildings and Ward-type units.",
+        "Ranged units cannot cleave."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "healthRegeneration": 7.5,
     "manaRegeneration": 2.75,
     "attackDamage": 50
   },
-  "additionalInfo": [
-    "Purchasable at the Base Shop, under Weapons",
-    "Requires items from the Secret Shop to be completed",
-    "Cannot be disassembled",
-    "Internal name is 'bfury'"
-  ],
-  "states": null
+  "additionalInfo": [],
+  "states": []
 }

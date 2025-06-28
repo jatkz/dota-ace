@@ -6,21 +6,14 @@
   "sellValue": 600,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 1200
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 175,
     "mana": 175
   },
-  "additionalInfo": [
-    "No longer builds into Eye of Skadi (as of version 7.39)",
-    "Now builds into Gleipnir (as of version 7.38)",
-    "No longer builds into Wraith Pact (as of version 7.33)",
-    "Now builds into Phylactery (as of version 7.33)"
-  ],
+  "additionalInfo": [],
   "states": []
 }

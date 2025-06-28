@@ -6,33 +6,16 @@
   "sellValue": 87.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": null,
+  "usageAlert": false,
+  "recipe": {
+    "components": [],
+    "totalCost": 175
+  },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "armor": 2
   },
   "additionalInfo": [],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Ring of Protection from Warcraft 3.",
-    "During pre-4.0beta2 in DotA, there were two types of Ring of Protection, providing 2 and 4 bonus armor respectively."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Orb of Corrosion",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Now builds into Orb of Corrosion",
-        "date": "7.35 (2023-12-14)"
-      },
-      {
-        "description": "Now builds into Pavise",
-        "date": "7.33 (2023-04-20)"
-      }
-    ]
-  }
+  "states": []
 }

@@ -6,9 +6,9 @@
   "sellValue": 1137.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Void Stone", "Recipe"],
+    "components": ["Energy Booster", "Void Stone", "Recipe"],
     "totalCost": 2275
   },
   "abilities": [
@@ -32,7 +32,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "mana": 300,
     "manaRegeneration": 2.5
   },
@@ -43,5 +44,5 @@
     "Abilities with Global cast range have their max distance increased instead",
     "All vector targeted abilities have their cast range increased but not their effect range"
   ],
-  "states": null
+  "states": []
 }

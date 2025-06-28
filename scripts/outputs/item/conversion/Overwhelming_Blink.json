@@ -6,9 +6,9 @@
   "sellValue": 3400,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Blink Dagger", "Reaver"],
+    "components": ["Blink Dagger", "Reaver", "Recipe"],
     "totalCost": 6800
   },
   "abilities": [
@@ -32,29 +32,29 @@
         "downtime": 3
       },
       "notes": [
+        "Blink utilizes the teleport mechanic",
+        "When targeting a point within 1200 distance, teleports directly onto the targeted point",
+        "When targeting a point beyond 1200 distance, teleports 1200 distance towards the targeted point instead",
+        "Incoming projectiles are disjointed upon teleporting",
+        "Doubletap targets a point in front of the team's Fountain",
+        "The shockwave at the teleport location is instant, despite the visual effect",
+        "The shockwave first applies the debuff, then the impact damage",
+        "The debuff deals 16.67% of the caster's Strength as damage in 1-second intervals, starting 1 second after the debuff is applied",
         "Taking more than 0 damage from any other player or Roshan puts the item on a fixed cooldown",
         "Cannot be reset with cooldown reset sources",
-        "Shares cooldown with other blink items",
-        "Utilizes teleport mechanic - disjoints incoming projectiles",
-        "When targeting beyond 1200 distance, teleports 1200 distance towards the targeted point",
-        "Doubletap targets a point in front of the team's Fountain",
-        "The shockwave is instant despite visual effect",
-        "Debuff deals 16.67% of caster's Strength as damage in 1-second intervals",
-        "Shockwave first applies debuff, then impact damage"
+        "Shares cooldown with Blink Dagger, Swift Blink, and Arcane Blink"
       ]
     }
   ],
-  "stats": {
-    "strength": 25,
-    "health": 550,
-    "healthRegeneration": 2.5,
-    "mainAttackDamageStrengthHeroes": 25,
-    "mainAttackDamageUniversalHeroes": 11.25
+  "stats": {},
+  "bonus": {
+    "strength": 25
   },
   "additionalInfo": [
-    "Purchasable at Base Shop under Armaments, but can only be completed with items from Secret Shop",
-    "Cannot be disassembled",
-    "The item's attributes grant additional health, health regeneration, and attack damage based on hero type"
+    "The item's attributes grant the following additional stats:",
+    "550 health and 2.5 health regeneration",
+    "25 main attack damage to Strength heroes",
+    "11.25 main attack damage to Universal heroes"
   ],
-  "states": null
+  "states": []
 }

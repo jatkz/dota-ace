@@ -6,43 +6,20 @@
   "sellValue": 500,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 1000
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
   "stats": {
-    "intelligence": 10,
-    "mana": 120,
-    "manaRegeneration": 0.5,
-    "magicResistance": 1,
-    "mainAttackDamageIntelligence": 10,
-    "mainAttackDamageUniversal": 4.5
+    "intelligence": 10
+  },
+  "bonus": {
+    "intelligence": 10
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
     "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
-    "10 main attack damage to intelligence heroes.",
+    "10 main attack damage to Intelligence heroes.",
     "4.5 main attack damage to universal heroes."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Dagon. Now builds into Orchid Malevolence",
-        "date": "2023-04-20"
-      },
-      {
-        "description": "Now builds into Dagon.",
-        "date": "2020-12-17"
-      },
-      {
-        "description": "No longer builds into the following items: Dagon, Meteor Hammer",
-        "date": "2020-06-28"
-      }
-    ]
-  }
+  "states": []
 }

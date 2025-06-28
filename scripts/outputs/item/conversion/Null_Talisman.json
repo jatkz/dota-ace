@@ -6,29 +6,22 @@
   "sellValue": 252.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Circlet", "Mantle of Intelligence", "Iron Branch"],
+    "components": ["Circlet", "Mantle of Intelligence", "Recipe"],
     "totalCost": 505
   },
   "abilities": [],
   "stats": {
+    "levels": 2,
+    "autoUpgrade": "based on in-game clock"
+  },
+  "bonus": {
     "strength": 2,
     "agility": 2,
     "intelligence": 5,
     "manaPercentage": 3,
-    "manaRegeneration": 1,
-    "health": 44,
-    "healthRegeneration": 0.2,
-    "mana": 60,
-    "manaRegenerationFlat": 0.25,
-    "magicResistance": 0.5,
-    "attackSpeed": 2,
-    "armor": 0.33,
-    "attackDamageStr": 2,
-    "attackDamageAgi": 2,
-    "attackDamageInt": 5,
-    "attackDamageUniversal": 4.05
+    "manaRegeneration": 1
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
@@ -38,36 +31,8 @@
     "2, 2 and 5 main attack damage to all Strength/Agility/Intelligence heroes respectively",
     "4.05 main attack damage to universal heroes",
     "Has 2 levels and automatically upgrades based on the in-game clock",
-    "Cannot be disassembled"
+    "Heroes who need an early game stat boost often benefit from Null Talisman, spell-casters can also benefit from the additional mana and mana regeneration",
+    "For intelligence heroes, a Bracer grants almost as much main attack damage as a Null Talisman"
   ],
-  "recommendedHeroes": [
-    "Crystal Maiden",
-    "Invoker", 
-    "Lina",
-    "Pudge",
-    "Shadow Fiend",
-    "Storm Spirit",
-    "Tinker",
-    "Zeus"
-  ],
-  "states": null,
-  "trivia": [
-    "Null Talisman was one of the best stat efficient items in the game, purchased by most heroes, before the introduction of Bracer and Wraith Band in version 6.00"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer upgrades to Null Talisman 2 at the 25th minute mark",
-        "date": "2024-10-01"
-      },
-      {
-        "description": "Increased mana regeneration bonus from 0.75/1.5 to 1/2",
-        "date": "2024-03-21"
-      },
-      {
-        "description": "Turbo Mode: Now automatically upgrades at the 12th minute mark to Null Talisman 2",
-        "date": "2023-03-07"
-      }
-    ]
-  }
+  "states": []
 }

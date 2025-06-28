@@ -1,7 +1,7 @@
 import fs from 'fs';
 import * as cheerio from 'cheerio';
 
-import { optimizeItemGridHtmlForParsing, optimizeItemSingleHtmlForParsing } from './html-parser.js';
+import { optimizeItemGridHtmlForParsing, optimizeNeutralSingleHtmlForParsingV2 } from './html-parser.js';
 
 // Wrap everything in an async function
 async function main() {
@@ -48,7 +48,7 @@ async function main() {
             // Get the HTML text from the response
             const html = await itemResponse.text();
             console.log(`Downloaded ${html.length} characters - ${itemName}`);
-            if (false) {
+            if (true) {
                 const dir = './scripts/outputs/item/raw';
                 if (!fs.existsSync(dir)) {
                     fs.mkdirSync(dir, { recursive: true });
@@ -57,7 +57,8 @@ async function main() {
             }
             
             // 2. Clean the HTML
-            const cleanItemHtml = optimizeItemSingleHtmlForParsing(html);
+            const cleanItemHtml = optimizeNeutralSingleHtmlForParsingV2(html);
+
             
             // 3. Save to file
             const outputPath = `./scripts/outputs/item/clean/${itemName}.html`;

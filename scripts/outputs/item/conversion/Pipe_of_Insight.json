@@ -8,7 +8,7 @@
   "shareable": false,
   "usageAlert": 1,
   "recipe": {
-    "components": ["Hood of Defiance", "Headdress", "Chainmail", "Recipe"],
+    "components": ["Cloak", "Headdress", "Ring of Tarrasque", "Recipe"],
     "totalCost": 3725
   },
   "abilities": [
@@ -18,8 +18,8 @@
       "description": "Grants nearby allied units and buildings a magical damage barrier for a while.",
       "castAnimation": "0 + 0",
       "castRange": null,
-      "manaCost": 60,
-      "cooldown": 150,
+      "manaCost": 150,
+      "cooldown": 60,
       "effects": {
         "radius": 1200,
         "magicalDamageBarrier": 425,
@@ -54,12 +54,13 @@
         "Can regenerate up to 150 health in one minute",
         "Stacks multiplicatively with other magic resistance sources",
         "Increases most heroes' magic resistance to 31%",
-        "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.92%",
+        "Every 10 points of intelligence further increases the total magic resistance by 0.92%",
         "Does not affect invulnerable units"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "healthRegeneration": 14,
     "magicResistance": "20%"
   },

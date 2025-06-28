@@ -6,9 +6,9 @@
   "sellValue": 1250,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Boots of Speed", "Recipe: Boots of Travel"],
+    "components": ["Boots of Speed", "Recipe"],
     "totalCost": 2500
   },
   "abilities": [
@@ -26,58 +26,31 @@
         "upgradeChannelTime": 2
       },
       "notes": [
-        "Refunds all Town Portal Scrolls the hero currently has equipped, using the regular sellback value",
-        "Grants the hero a new Town Portal Scroll for free",
-        "Further upgrades reduce channel time and allow targeting allied heroes",
-        "The refunding triggers when Boots of Travel enters the hero's main inventory for the first time",
+        "Town Portal Scroll refunding mechanics: The refunding triggers when Boots of Travel enters the hero's main inventory for the first time",
         "Does not trigger when in the backpack, the stash, or in the Courier's inventory",
-        "Free Town Portal Scroll can be sold but has no sellback value",
-        "While owning Boots of Travel, the hero does not get the free Town Portal Scroll upon dying"
+        "Triggers a second time upon upgrading the Boots of Travel, following the same rules as before",
+        "The refunding is bound to the item, not the hero. Acquiring Boots of Travel a second time triggers it again",
+        "The refunding mechanic only considers Town Portal Scrolls within the dedicated slot",
+        "The refund value is based on the current sellback value: 100 Gold if within the grace period, 50 Gold otherwise",
+        "The free Town Portal Scroll can be sold, but has no sellback value",
+        "While owning Boots of Travel, the hero does not get the free Town Portal Scroll upon dying",
+        "Further upgrades the Town Portal Scroll, reducing its channel time and allowing it to additionally target allied heroes"
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "moveSpeed": "90/110"
   },
   "additionalInfo": [
     "Upgrading the item improves the passive Teleport Upgrade. Can be upgraded only once.",
-    "The total gold cost for each level is 2500/5000.",
+    "The total gold cost for each level is 2500 Gold.",
     "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
     "Stacks with all other movement speed bonuses.",
-    "Alt shows your allied heroes' teleport status and cooldowns under their portraits below the top bar of the HUD."
+    "Alt shows your allied heroes' teleport status and cooldowns under their portraits below the top bar of the HUD.",
+    "The icon shows their current cooldown on their teleport. If the ally has no teleport item, no icon appears. If it is in the backpack, it appears grey.",
+    "The teleport status display has the following priorities: Boots of Travel 2 ➤ Boots of Travel ➤ Town Portal Scroll.",
+    "The teleport status does not show other teleport abilities (e.g. Teleportation)."
   ],
-  "recommendedHeroes": [
-    "Arc Warden",
-    "Alchemist", 
-    "Ember Spirit",
-    "Invoker",
-    "Leshrac",
-    "Meepo",
-    "Morphling",
-    "Naga Siren",
-    "Phantom Lancer",
-    "Timbersaw"
-  ],
-  "states": null,
-  "trivia": [
-    "Boots of Travels is useful on all heroes during the late game, where it is needed to make desperate pushes or defenses",
-    "Consider using Glyph of Fortification to prevent creeps from dying so Boots of Travel can complete channeling of Teleport",
-    "Heroes with high split pushing potential should always consider Boots of Travel"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Increased Upgrade: Town Portal Scroll cooldown from 30 to 40",
-        "date": "7.33b (2023-04-25)"
-      },
-      {
-        "description": "Reduced movement speed bonus from 100/120 to 90/110. Upgrade: Town Portal Scroll now also reduces all channel time by 1",
-        "date": "7.31 (2022-02-23)"
-      },
-      {
-        "description": "Reduced movement speed bonus from 110/130 to 100/120",
-        "date": "7.29 (2021-04-09)"
-      }
-    ]
-  }
+  "states": []
 }

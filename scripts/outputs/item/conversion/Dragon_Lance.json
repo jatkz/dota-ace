@@ -6,7 +6,7 @@
   "sellValue": 950,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Blade of Alacrity", "Belt of Strength", "Recipe"],
     "totalCost": 1900
@@ -24,31 +24,29 @@
         "attackRangeBonus": 150
       },
       "notes": [
-        "The bonus attack range from multiple Dragon Lance-based items do not stack",
-        "Stacks additively with other ranged bonus attack range sources"
+        "The bonus attack range from multiple Dragon Lance-based items do not stack.",
+        "Stacks additively with other ranged bonus attack range sources."
       ]
     }
   ],
   "stats": {
-    "strength": 10,
-    "agility": 15,
-    "attackRange": 150,
     "health": 220,
     "healthRegeneration": 1,
     "attackSpeed": 15,
-    "armor": 2.5,
-    "attackDamageStr": 10,
-    "attackDamageAgi": 15,
-    "attackDamageUniversal": 11.25
+    "mainArmor": 2.5,
+    "mainAttackDamageStrength": 10,
+    "mainAttackDamageAgility": 15,
+    "mainAttackDamageUniversal": 11.25
+  },
+  "bonus": {
+    "strength": 10,
+    "agility": 15,
+    "attackRange": 150
   },
   "additionalInfo": [
-    "The attack range bonus works for ranged heroes only",
-    "Stacks with all other attack range bonuses",
-    "Affects the cast range of active attack modifiers as well",
-    "The item's attributes grant 220 health and 1 health regeneration",
-    "Provides 15 attack speed and 2.5 main armor",
-    "Gives 10 and 15 main attack damage to strength/agility heroes respectively",
-    "Provides 11.25 main attack damage to universal heroes"
+    "The attack range bonus works for ranged heroes only.",
+    "Stacks with all other attack range bonuses.",
+    "Affects the cast range of active attack modifiers as well."
   ],
   "states": null
 }

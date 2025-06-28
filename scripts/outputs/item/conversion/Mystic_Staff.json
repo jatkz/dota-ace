@@ -1,18 +1,19 @@
 {
   "name": "Mystic Staff",
   "description": "Enigmatic staff made of only the most expensive crystals.",
-  "category": "Intelligence items",
+  "category": "Secret Shop",
   "cost": 2800,
   "sellValue": 1400,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 2800
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "intelligence": 25
   },
   "additionalInfo": [

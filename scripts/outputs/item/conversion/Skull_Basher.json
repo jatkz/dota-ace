@@ -6,9 +6,9 @@
   "sellValue": 1437.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Javelin", "Belt of Strength", "Recipe"],
+    "components": ["Mithril Hammer", "Belt of Strength", "Recipe"],
     "totalCost": 2875
   },
   "abilities": [
@@ -18,40 +18,35 @@
       "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage.",
       "castAnimation": null,
       "castRange": null,
-      "manaCost": null,
+      "manaCost": 0,
       "cooldown": 2.3,
       "effects": {
-        "procChance": "25% (melee) / 10% (ranged)",
+        "procChance": "25% (melee), 10% (ranged)",
         "damage": 100,
-        "stunDuration": 1.2,
-        "damageType": "Physical"
+        "stunDuration": 1.2
       },
       "notes": [
         "Multiple instances of Skull Basher-based Bash do not stack",
         "Does not stack with Bash of the Deep, Greater Bash, and Time Lock. If any of these are present, this ability is inactive",
         "This ability is inactive on Clones",
+        "Ranged wielders have a lower proc chance",
         "Does not work against wards and buildings, but works against allied units",
         "Bash uses pseudo-random distribution",
         "The bonus damage is considered as a conditional attack damage bonus",
-        "Goes through spell immunity",
-        "Adds an average of 0.3 and 0.12 damage to every attack for melee and ranged heroes respectively"
+        "Pierces debuff immunity",
+        "Not bestowed by illusions"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 10,
-    "attackDamage": 30,
-    "health": 220,
-    "healthRegeneration": 1,
-    "mainAttackDamageBonus": "10 (strength heroes) / 4.5 (universal heroes)"
+    "attackDamage": 30
   },
   "additionalInfo": [
     "The item's attributes grant 220 health and 1 health regeneration",
-    "Grants 10 main attack damage to strength heroes",
-    "Grants 4.5 main attack damage to universal heroes",
-    "Since the Bash is a chance based ability, buying attack speed granting items increases the odds of a bash proccing",
-    "The Bash goes through spell immunity, making it effective against heroes with Black King Bar",
-    "Despite having a much lower chance to proc for ranged heroes, it still has a decent chance when coupled with high attack speed"
+    "10 main attack damage to Strength heroes",
+    "4.5 main attack damage to Universal heroes"
   ],
   "states": null
 }

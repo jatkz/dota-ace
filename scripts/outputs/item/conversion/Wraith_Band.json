@@ -6,54 +6,39 @@
   "sellValue": 252.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Circlet", "Slippers of Agility", "Iron Branch"],
+    "components": ["Circlet", "Slippers of Agility", "Recipe"],
     "totalCost": 505
   },
   "abilities": [],
   "stats": {
-    "strength": 2,
-    "agility": 5,
-    "intelligence": 2,
-    "armor": 1.75,
-    "attackSpeed": 5,
     "health": 44,
     "healthRegeneration": 0.2,
     "mana": 24,
     "manaRegeneration": 0.1,
     "magicResistance": 0.2,
+    "attackSpeed": 5,
     "mainArmor": 0.83,
-    "attackDamageStr": 2,
-    "attackDamageAgi": 5,
-    "attackDamageInt": 2,
-    "attackDamageUniversal": 4.05
+    "mainAttackDamageStr": 2,
+    "mainAttackDamageAgi": 5,
+    "mainAttackDamageInt": 2,
+    "mainAttackDamageUniversal": 4.05
+  },
+  "bonus": {
+    "strength": 2,
+    "agility": 5,
+    "intelligence": 2,
+    "armor": 1.75,
+    "attackSpeed": 5
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "44 health and 0.2 health regeneration",
-    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance",
-    "5 attack speed and 0.83 main armor",
-    "2, 5 and 2 main attack damage to all Strength/Agility/Intelligence heroes respectively",
-    "4.05 main attack damage to universal heroes"
+    "44 health and 0.2 health regeneration.",
+    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
+    "5 attack speed and 0.83 main armor.",
+    "2, 5 and 2 main attack damage to all Strength/Agility/Intelligence heroes respectively.",
+    "4.05 main attack damage to universal heroes."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer doubles its bonuses at 25 minutes.",
-        "date": "2024-10-01"
-      },
-      {
-        "description": "Reduced Armor bonus from 2/4 to 1.75/3.5.",
-        "date": "2024-02-21"
-      },
-      {
-        "description": "Reduced attack speed bonus from 6/12 to 5/10. Turbo Mode: Now automatically upgrades at the 12th minute mark to Wraith Band 2.",
-        "date": "2023-03-07"
-      }
-    ]
-  }
+  "states": []
 }

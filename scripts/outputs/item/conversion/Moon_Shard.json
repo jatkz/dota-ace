@@ -6,7 +6,7 @@
   "sellValue": 2000,
   "maxStacks": 1,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Hyperstone", "Hyperstone"],
     "totalCost": 4000
@@ -18,8 +18,8 @@
       "description": "Consumes the item to permanently gain bonus attack speed and bonus base night vision. A hero can only consume the Moon Shard once per game.",
       "castAnimation": "0 + 0",
       "castRange": "Global",
-      "manaCost": 0,
-      "cooldown": null,
+      "manaCost": null,
+      "cooldown": 0,
       "effects": {
         "maxBuffPerHero": 1,
         "attackSpeedBonus": 60,
@@ -30,7 +30,7 @@
         "Doubletap automatically self-targets",
         "Does not stack with Shade Sight",
         "Considers the Spirit Bear as heroes; clones, illusions and other creep-heroes as creeps",
-        "Cannot utilize the bonus attack speed component by design for self-illusions"
+        "Within a certain range, the wielder does not need to face the unit-targeted allied hero to grant them the permanent buff"
       ]
     },
     {
@@ -52,41 +52,13 @@
     }
   ],
   "stats": {
+    "charges": 1
+  },
+  "bonus": {
     "attackSpeed": 140
   },
   "additionalInfo": [
     "Attack speed bonus from multiple Moon Shards fully stacks. The attack speed bonus from the Consume buff fully stack with the item as well."
   ],
-  "recommendedHeroes": [
-    "Anti-Mage",
-    "Phantom Assassin", 
-    "Drow Ranger",
-    "Sniper",
-    "Invoker",
-    "Alchemist",
-    "Juggernaut",
-    "Troll Warlord",
-    "Windranger",
-    "Clinkz"
-  ],
-  "states": null,
-  "trivia": [
-    "Prior to the July 14, 2017 Patch, Moon Shard's active ability, Consume, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Increased Shade Sight nighttime vision bonus from 300 to 400. Increased Consume nighttime vision bonus from 150 to 200.",
-        "date": "7.17 (2018-06-10)"
-      },
-      {
-        "description": "Increased attack speed bonus from 130 to 140.",
-        "date": "7.16 (2018-05-27)"
-      },
-      {
-        "description": "Increased attack speed bonus from 120 to 130.",
-        "date": "7.12 (2018-03-29)"
-      }
-    ]
-  }
+  "states": null
 }

@@ -6,9 +6,9 @@
   "sellValue": 1637.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Oblivion Staff", "Quarterstaff", "Recipe"],
+    "components": ["Oblivion Staff", "Cornucopia", "Recipe"],
     "totalCost": 3275
   },
   "abilities": [
@@ -22,36 +22,39 @@
       "cooldown": 18,
       "effects": {
         "accumulatedDamage": "30%",
-        "duration": 5,
-        "damageType": "Magical"
+        "duration": 5
       },
       "notes": [
-        "The damage counter accumulates all damage instances dealt to the Soul Burn target within the last 5 seconds",
-        "The accumulated damage is based on the actual damage taken, after all damage manipulation is applied",
-        "Does not include damage with the HP Removal or the no-reflection flag",
-        "The damage is summed up into and applied as a single instance at the end of the duration, sourced to the caster of Soul Burn",
-        "The accumulated damage is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled",
-        "Re-casting Soul Burn on the same target refreshes the duration, but does not reset the already accumulated damage"
+        "The damage counter accumulates all damage instances dealt to the Soul Burn target within the last 5 seconds.",
+        "The accumulated damage is based on the actual damage taken, after all damage manipulation is applied.",
+        "Does not include damage with the HP Removal or the no-reflection flag (e.g. Blade Mail).",
+        "The damage is summed up into and applied as a single instance at the end of the duration, sourced to the caster of Soul Burn.",
+        "The accumulated is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled.",
+        "Re-casting Soul Burn on the same target refreshes the duration, but does not reset the already accumulated damage.",
+        "Shares cooldown with Bloodthorn"
       ]
     }
   ],
   "stats": {
+    "mana": 120,
+    "manaRegeneration": 0.5,
+    "magicResistance": "1%",
+    "mainAttackDamageIntelligence": 10,
+    "mainAttackDamageUniversal": 4.5
+  },
+  "bonus": {
     "intelligence": 10,
     "healthRegeneration": 6,
     "manaRegeneration": 3,
     "attackDamage": 10,
-    "attackSpeed": 35,
-    "bonusMana": 120,
-    "bonusManaRegeneration": 0.5,
-    "magicResistance": "1%"
+    "attackSpeed": 35
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Bloodthorn was purchased as well, Bloodthorn's icon takes priority",
-    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "Grants 10 main attack damage to intelligence heroes",
-    "Grants 4.5 main attack damage to universal heroes",
-    "Shares cooldown with Bloodthorn"
+    "This item is shown as a Team Item in the shop window when purchased by an ally.",
+    "If a Bloodthorn was purchased as well, Bloodthorn's icon takes priority.",
+    "The item's attributes grant the following additional stats: 120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 main attack damage to Intelligence heroes.",
+    "4.5 main attack damage to universal heroes."
   ],
   "states": null
 }

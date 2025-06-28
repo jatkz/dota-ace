@@ -1,12 +1,12 @@
 {
   "name": "Cheese",
   "description": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it.",
-  "category": "Kill Reward",
+  "category": "Roshan Drop",
   "cost": null,
   "sellValue": 500,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": null,
   "abilities": [
     {
@@ -16,23 +16,27 @@
       "castAnimation": "0 + 0",
       "castRange": null,
       "manaCost": null,
-      "cooldown": null,
+      "cooldown": 40,
       "effects": {
         "heal": 2500,
-        "manaRestored": 1500
+        "manaRestored": 1500,
+        "sellingPrice": 500
       },
       "notes": [
-        "Interrupts the wielder's channeling abilities upon cast",
-        "Both restore values are absolute and is not affected by restoration manipulation sources, except health freeze sources"
+        "Although this item cannot be bought, but it can be sold.",
+        "If the Courier is the first unit to pick up the item, it cannot be sold by anyone afterwards.",
+        "Interrupts the wielder's channeling abilities upon cast.",
+        "Both restore values are absolute and is not affected by restoration manipulation sources, except health freeze sources."
       ]
     }
   ],
   "stats": {
     "charges": 1
   },
+  "bonus": {},
   "additionalInfo": [
     "On his second death and onwards, Roshan drops the Cheese as a second item if he was slain in the Dire pit. In the Radiant pit, he drops a Roshan's Banner instead.",
-    "Although Cheese cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it.",
+    "Although Cheese cannot be bought, it can be sold for 500 Gold. However, only the hero whose main inventory it enters first can sell it.",
     "If a Courier is the first unit to pick up the Cheese, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards.",
     "If a Cheese directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
     "Unlike the Aegis of the Immortal, Cheese is not reclaimed by Roshan."

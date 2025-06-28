@@ -6,9 +6,9 @@
   "sellValue": 1750,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Orb of Blight", "Orb of Blight", "Orb of Blight"],
+    "components": ["Mithril Hammer", "Mithril Hammer", "Orb of Blight"],
     "totalCost": 3500
   },
   "abilities": [
@@ -25,10 +25,10 @@
         "duration": 7
       },
       "notes": [
-        "The bonus armor reduction value does not stack",
-        "Reapplying the debuff refreshes the duration",
-        "Affects allied units, buildings, and ward-type units",
-        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other"
+        "The bonus armor reduction value does not stack.",
+        "Reapplying the debuff refreshes the duration.",
+        "Affects allied units, buildings, and ward-type units.",
+        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other."
       ]
     },
     {
@@ -45,20 +45,21 @@
         "attackDamageBonusPerStack": 1
       },
       "notes": [
-        "The item grants 85 total flat bonus attack damage at max stacks",
-        "Considers The Double, enemy illusions and creep-heroes as creeps",
-        "Only the first acquired Desolator grants stacks in the wielder's inventory or backpack",
-        "Grant stacks to the most recent player who refreshed the desolator_buff",
-        "The current stack is bound to the item",
-        "Non-functional on self-illusions, but they copy the item's stack value upon creation for camouflaging purposes"
+        "The item grants 85 total flat bonus attack damage at max stacks.",
+        "Considers The Tempest Double, enemy illusions and creep-heroes as creeps.",
+        "Only the first acquired Desolator grants stacks in the wielder's inventory or backpack.",
+        "Grant stacks to the most recent player who refreshed the desolator_buff.",
+        "The current stack is bound to the item.",
+        "Non-functional on illusions, but they copy the item's stack value upon creation for camouflaging purposes."
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "attackDamage": 55
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally"
+    "This item is shown as a Team Item in the shop window when purchased by an ally."
   ],
   "states": null
 }

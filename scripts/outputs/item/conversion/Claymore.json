@@ -6,33 +6,13 @@
   "sellValue": 675,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 1350
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
-    "attackDamage": 20
+  "stats": {},
+  "bonus": {
+    "Attack Damage": 20
   },
   "additionalInfo": [],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Battle Fury. Now builds into Shadow Blade.",
-        "date": "2025-02-19"
-      },
-      {
-        "description": "Now builds into the following items: Butterfly, Crystalys",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "No longer builds into Orchid Malevolence.",
-        "date": "2023-04-20"
-      }
-    ]
-  }
+  "states": []
 }

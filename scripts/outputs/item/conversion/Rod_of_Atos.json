@@ -6,7 +6,7 @@
   "sellValue": 1125,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Staff of Wizardry", "Vitality Booster", "Recipe"],
     "totalCost": 2250
@@ -21,9 +21,7 @@
       "manaCost": 100,
       "cooldown": 18,
       "effects": {
-        "duration": 2,
-        "affects": "Enemies",
-        "abilityType": "Unit"
+        "duration": 2
       },
       "notes": [
         "Can target invisible units and units inside the Fog of War",
@@ -32,27 +30,28 @@
         "Provides True Sight over affected target",
         "The True Sight pierces debuff immunity, the root does not",
         "Blocked individually on impact by Spell Block",
-        "Reflected individually on impact by Spell Reflect",
+        "Reflected individually on impact by Spell Reflection",
         "Shares cooldown with Gleipnir"
       ]
     }
   ],
   "stats": {
-    "intelligence": 12,
-    "health": 275,
     "mana": 144,
-    "manaRegeneration": 0.6,
-    "magicResistance": 1.2,
-    "mainAttackDamageInt": 12,
-    "mainAttackDamageUniversal": 5.4
+    "mana_regeneration": 0.6,
+    "magic_resistance": "1.2%",
+    "main_attack_damage_intelligence": 12,
+    "main_attack_damage_universal": 5.4
+  },
+  "bonus": {
+    "intelligence": 12,
+    "health": 275
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
     "If a Gleipnir was purchased as well, Gleipnir's icon takes priority",
     "The item's attributes grant 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
-    "Grants 12 main attack damage to Intelligence heroes",
-    "Grants 5.4 main attack damage to Universal heroes",
-    "Cannot be disassembled"
+    "12 main attack damage to Intelligence heroes",
+    "5.4 main attack damage to universal heroes"
   ],
   "states": null
 }

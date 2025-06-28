@@ -6,20 +6,21 @@
   "sellValue": 1500,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Vitality Booster", "Energy Booster"],
+    "components": ["Vitality Booster", "Energy Booster", "Point Booster"],
     "totalCost": 3000
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 425,
     "mana": 425
   },
   "additionalInfo": [
-    "Listed at the Base Shop, under Accessories",
-    "Assembled entirely with items from the Secret Shop",
-    "Cannot be disassembled"
+    "Components required from the Secret Shop",
+    "Cannot be disassembled",
+    "Full price refunded within 10s"
   ],
   "states": []
 }

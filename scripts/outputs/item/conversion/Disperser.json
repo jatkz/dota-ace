@@ -6,9 +6,9 @@
   "sellValue": 3050,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Eaglesong", "Diffusal Blade", "Recipe"],
+    "components": ["Diffusal Blade", "Eaglesong", "Recipe"],
     "totalCost": 6100
   },
   "abilities": [
@@ -25,15 +25,14 @@
         "slowDecayRate": 1,
         "duration": 5,
         "slowResistance": "40%",
-        "moveSpeedBonus": "100%",
-        "allyDuration": 5
+        "moveSpeedBonus": "100%"
       },
       "notes": [
         "The wielder always gets the allied buff, no matter whom Suppress is cast on",
         "Can be cast on and fully affect invulnerable units",
+        "Shares cooldown with Diffusal Blade",
         "The slow decays evenly over the duration in 1-second intervals (100%/80%/60%/40%/20% at second 5/4/3/2/1/0)",
-        "The movement speed bonus decays evenly over the duration in 1-second intervals",
-        "Shares cooldown with Diffusal Blade-based items"
+        "The movement speed bonus decays evenly over the duration in 1-second intervals (100%/80%/60%/40%/20% at second 5/4/3/2/1/0)"
       ]
     },
     {
@@ -47,12 +46,12 @@
       "effects": {
         "manaBurnPerHit": 40,
         "manaBurnToDamageFactor": 1,
-        "illusionManaBurn": 8
+        "illusionManaBurnPerHit": 8
       },
       "notes": [
         "Does not stack with Diffusal Blade-based abilities",
         "Stacks additively with other sources of Mana Break",
-        "Attacks of illusions burn less mana (8 instead of 40)",
+        "Attacks of illusions burn less mana (8 per hit)",
         "Mana Break is a conditional attack damage bonus",
         "Does not interact with percentage-based bonus attack damage, lifesteal, critical strike, cleave, or damage block",
         "Does nothing if the attack target has no mana",
@@ -61,25 +60,21 @@
     }
   ],
   "stats": {
-    "agility": 40,
-    "intelligence": 10,
     "mana": 120,
     "manaRegeneration": 0.5,
     "magicResistance": "1%",
     "attackSpeed": 40,
-    "armor": 6.67,
-    "attackDamageAgi": 40,
-    "attackDamageInt": 10,
-    "attackDamageUniversal": 22.5
+    "mainArmor": 6.67
+  },
+  "bonus": {
+    "agility": 40,
+    "intelligence": 10
   },
   "additionalInfo": [
     "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "Grants 40 attack speed and 6.67 main armor",
-    "Provides 40 and 10 main attack damage to agility/intelligence heroes respectively",
-    "Provides 22.5 main attack damage to universal heroes",
-    "Generally works well with illusion-based heroes",
-    "Cost-effective damage item on agility carries/heroes in general",
-    "Cannot be disassembled"
+    "40 attack speed and 6.67 main armor",
+    "40 and 10 main attack damage to agility/intelligence heroes respectively",
+    "22.5 main attack damage to universal heroes"
   ],
   "states": null
 }

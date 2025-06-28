@@ -6,11 +6,8 @@
   "sellValue": 350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 700
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [
     {
       "name": "Magic Lifesteal",
@@ -30,33 +27,17 @@
         "Does not work with damage with the HP Removal or the no-reflection flags",
         "Stacks additively with other spell lifesteal sources",
         "Treats creep-heroes as heroes",
+        "Does not work on Allied units, Illusions, Buildings, Ward-type units, or Couriers",
         "The lifesteal value is reduced by a factor of 0.2 against creeps",
-        "Does not work on allied units, illusions, buildings, ward-type units, or couriers"
+        "All ability effects are visible on illusions for camouflaging purposes"
       ]
     }
   ],
   "stats": {},
+  "bonus": {},
   "additionalInfo": [
     "Multiple instances of spell lifesteal from the same source do not stack",
     "Spell lifesteal from different sources stacks additively"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Spell Lifesteal bonus against heroes/creeps increased from +10/2% to +12/2.4%",
-        "date": "2024-02-21"
-      },
-      {
-        "description": "Now builds into Revenant's Brooch",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "Now builds into Dagon. No longer builds into Eternal Shroud",
-        "date": "2023-04-20"
-      }
-    ]
-  }
+  "states": []
 }

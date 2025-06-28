@@ -6,29 +6,31 @@
   "sellValue": 1050,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Ogre Axe", "Belt of Strength", "Recipe"],
     "totalCost": 2100
   },
   "abilities": [],
   "stats": {
-    "strength": 16,
-    "slowResistance": "20%",
-    "healthRestoreAmp": "16%",
     "health": 352,
     "healthRegeneration": 1.6,
     "mainAttackDamageStrength": 16,
     "mainAttackDamageUniversal": 7.2
   },
+  "bonus": {
+    "strength": 16,
+    "slowResistance": "20%",
+    "healthRestoreAmp": "16%"
+  },
   "additionalInfo": [
-    "The item's attributes grant 352 health and 1.6 health regeneration",
-    "Grants 16 main attack damage to strength heroes",
-    "Grants 7.2 main attack damage to universal heroes",
+    "The item's attributes grant the following additional stats:",
+    "352 health and 1.6 health regeneration",
+    "16 main attack damage to Strength heroes",
+    "7.2 main attack damage to Universal heroes",
+    "For Sange-based items:",
     "Multiple sources of slow resistance do not stack",
-    "Multiple sources of health restoration amplification do not stack",
-    "Item is not shareable",
-    "Item is not disassemblable"
+    "Multiple sources of health restoration amplification do not stack"
   ],
   "states": []
 }

@@ -6,7 +6,7 @@
   "sellValue": 25,
   "maxStacks": null,
   "shareable": true,
-  "usageAlert": 1,
+  "usageAlert": true,
   "recipe": {
     "components": [],
     "totalCost": 50
@@ -19,7 +19,7 @@
       "castAnimation": "0 + 0",
       "castRange": null,
       "manaCost": null,
-      "cooldown": null,
+      "cooldown": 1,
       "effects": {
         "applicationRadius": 1200,
         "dispelRadius": 1025,
@@ -27,55 +27,41 @@
         "moveSpeedBonus": "15%",
         "duration": 45,
         "proximityRadius": 300,
-        "downtime": 2,
-        "charges": 1
+        "downtime": 2
       },
       "notes": [
         "While still disguised, any allied unit that comes within proximity of the caster also gets the buff applied to them",
         "Couriers can cast Disguise as well, but are not affected by it",
         "Casting this ability puts all affected allied heroes' Smoke of Deceit on a fixed downtime",
         "Can be reset with cooldown reset sources, but it is not affected by percentage-based cooldown reductions",
-        "Grants invisibility with True Sight immunity and bonus movement speed",
+        "Grants invisibility with True Sight immunity",
+        "Bonus movement speed",
         "Does not grant phase movement",
-        "Affected heroes can pick up or drop items without breaking invisibility",
-        "Invisibility breaks upon attack point or abilities' cast point",
-        "Only the caster can share the Disguise cast to allied units within proximity radius",
-        "Interrupts channeling abilities and other orders upon cast, but not move orders",
+        "The affected allied heroes can pick up or drop items without breaking invisibility",
+        "The invisibility breaks upon attack point, or the abilities' cast point",
+        "Only the caster can share the Disguise cast to allied units within the proximity radius",
+        "Interrupts the wielder's channeling abilities and other orders upon cast",
+        "Does not interrupt regular move orders",
         "Does not affect Lane Creeps, Couriers, Hidden units, or Invulnerable units",
-        "Invisibility is dispelled when entering enemy fountain area or when enemy heroes are within dispel radius"
+        "Affected allied units do not provide vision from shared vision sources, unless they are explicitly affected by an offensive expose source that reveals unit models",
+        "The invisibility effect is not applied or gets dispelled upon entering the elevated fountain area of the other faction",
+        "When enemy heroes are present within the dispel radius, regardless of their status effects",
+        "Explicitly considers Meepo Clones as enemy heroes, other units as creeps",
+        "While other types of clones do not dispel an already placed invisibility buff, they still prevent it from being applied"
       ]
     }
   ],
   "stats": {
+    "charges": 1,
     "stock": "2 INIT / 3 MAX",
-    "restockTime": 420
+    "stockCooldown": 420
   },
+  "bonus": {},
   "additionalInfo": [
-    "Stacks with no limit per inventory slot",
-    "Has 1 initial charge",
-    "Affected allied units do not provide vision from shared vision sources unless explicitly affected by offensive expose sources",
-    "Considers Meepo Clones as enemy heroes for dispel purposes",
-    "Other types of clones do not dispel existing invisibility but prevent new application"
+    "Available in the Base Shop under Consumables",
+    "Full price refunded within 10s",
+    "No limit per inventory slot for stacking",
+    "Has usage alert functionality"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "The item was suggested in the Playdota forums by drgaliza on Dec 18, 2010. It was implemented by Icefrog in the Christmas update."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Added a visual indicator over the caster of Disguise",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "While the caster is still disguised, any allies that come within 300 radius of them will also be Disguised. The buff can only be applied once to allies per cast. Increased duration from 35 to 45.",
-        "date": "7.34 (2023-08-08)"
-      },
-      {
-        "description": "Now has a 2-second buff stack limit duration. The duration is set upon cast, successive casts no longer reapply the buff.",
-        "date": "7.33 (2023-04-20)"
-      }
-    ]
-  }
+  "states": []
 }

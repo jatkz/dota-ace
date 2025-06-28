@@ -6,9 +6,9 @@
   "sellValue": 2687.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Ghost Scepter", "Eaglesong", "Recipe"],
+    "components": ["Aether Lens", "Ghost Scepter", "Recipe"],
     "totalCost": 5375
   },
   "abilities": [
@@ -24,47 +24,43 @@
         "magicResistanceReduction": "40%",
         "duration": 4,
         "baseDamage": 50,
-        "primaryAttributeDamage": "150%",
+        "primaryAttributeAsDamage": "150%",
         "moveSpeedSlow": "80%",
-        "universalHeroDamage": "45% of all attributes"
+        "allAttributesAsDamage": "45%"
       },
       "notes": [
         "Double-tapping automatically targets self",
-        "Turns the target ethereal, disarming them and granting 100% physical damage resistance",
-        "Magic resistance reduction does not stack with other ethereal sources",
+        "Turns the target ethereal, disarming them, rendering them attack immune, and granting 100% physical damage resistance",
+        "Magic resistance reduction of multiple ethereal sources does not stack, the one with higher value takes priority",
+        "Stacks multiplicatively with other magic resistance sources",
         "Reduces most heroes' magic resistance to -5%",
-        "Shares cooldowns with Ghost Scepter",
-        "Can be used on allies or enemies",
-        "For primary attribute heroes: 50 + 1.5 × CurrentPrimaryAttribute damage",
-        "For universal heroes: 50 + 0.45 × Sum of all attributes damage"
+        "With the magic resistance reduction from this source, every 10 points of intelligence further increases the total magic resistance by 1.4%",
+        "Ether Blast first applies the ethereal debuff, the damage, then the movement speed slow debuff",
+        "Checks the target's attributes upon projectile hit",
+        "Heroes with primary attribute: 50 + 1.5 × CurrentPrimaryAttribute",
+        "Universal heroes: 50 + 0.45 × ΣAttributes",
+        "If the target is an enemy, they also have their movement speed slowed, and take damage based on their primary attribute",
+        "If the target enemy is an universal hero, the damage is based on the sum of their attributes instead",
+        "Shares cooldowns with Ghost Scepter"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 8,
     "agility": 8,
     "intelligence": 8,
     "mana": 300,
     "manaRegeneration": 3,
-    "castRange": 250,
-    "health": 176,
-    "healthRegeneration": 0.8,
-    "bonusMana": 96,
-    "bonusManaRegeneration": 0.4,
-    "magicResistance": "0.8%",
-    "attackSpeed": 8,
-    "armor": 1.33,
-    "attackDamage": 8,
-    "universalHeroAttackDamage": 10.8
+    "castRange": 250
   },
   "additionalInfo": [
-    "Can be disassembled",
-    "The item's attributes grant additional health, mana, attack speed, armor, and attack damage",
-    "Excellent for intelligence heroes and spellcasters",
-    "Can be used defensively on self to avoid physical damage",
-    "Works well in combination with Dagon for burst damage",
-    "Disrupts enemies who rely on right-click attacks",
-    "Provides spell lifesteal amplification and mana regeneration amplification"
+    "The item's attributes grant the following additional stats:",
+    "176 health and 0.8 health regeneration",
+    "96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance",
+    "8 attack speed and 1.33 main armor",
+    "8 main attack damage to all Strength/Agility/Intelligence heroes",
+    "10.8 main attack damage to universal heroes"
   ],
   "states": null
 }

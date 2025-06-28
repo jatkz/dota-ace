@@ -1,9 +1,9 @@
 {
   "name": "Aghanim's Blessing - Roshan",
   "description": "The scepter of a wizard with demigod-like powers.",
-  "category": "Kill Rewards",
+  "category": "Roshan Drop",
   "cost": null,
-  "sellValue": 0,
+  "sellValue": null,
   "maxStacks": 1,
   "shareable": true,
   "usageAlert": 0,
@@ -19,32 +19,30 @@
       "cooldown": null,
       "effects": {
         "maxBuffPerHero": 1,
-        "networthGain": 5800,
-        "charges": 1
+        "networthGain": 5800
       },
       "notes": [
-        "Interrupts the user's channeling abilities upon cast",
-        "Once consumed the item gets converted into a permanent buff",
-        "Can only be consumed once. If the hero already has the buff, a new one cannot be consumed",
-        "When consumed, the item is still counted towards the player's networth",
-        "Grants each hero one or multiple unique enhancements, ranging from ability upgrades, to hero changes, and sometimes even new abilities",
-        "Aghanim's Scepter acquired from Roshan does not grant the default item's stats. Does not grant attributes, health or mana",
-        "Illusions copy the modifier on their creation. The upgrades fully work for them",
-        "Most upgrades work normally for the player that drafted the abilities in Ability Draft",
-        "Reflected abilities are upgraded based on the original caster's upgrades"
+        "Interrupts the user's channeling abilities upon cast.",
+        "Once consumed the item gets converted into a permanent buff.",
+        "Can only be consumed once. If the hero already has the buff, a new one cannot be consumed.",
+        "When consumed, the item is still counted towards the player's networth.",
+        "Grants each hero one or multiple unique enhancements, ranging from ability upgrades, to hero changes, and sometimes even new abilities.",
+        "Illusions copy the modifier on their creation. The upgrades fully work for them.",
+        "Most upgrades work normally for the player that drafted the abilities in Ability Draft.",
+        "Reflected abilities are upgraded based on the original caster's upgrades.",
+        "Aghanim's Scepter acquired from Roshan does not grant the default item's stats. Does not grant attributes, health or mana."
       ]
     }
   ],
   "stats": {
-    "charges": 1,
-    "destroyable": true
+    "charges": 1
   },
+  "bonus": {},
   "additionalInfo": [
-    "Unlike Aghanim's Shard, multiple Aghanim's Blessings can be acquired, however, only one of them can be consumed",
-    "Dropped by Roshan on the ground on his third death and onward, but only when killed on the Dire side",
-    "Must be actively used by the player to consume. Cannot be consumed if the hero already has the Aghanim's Blessing buff",
-    "Cannot be sold. Can fully be shared with allies",
-    "Has a dedicated interface element within the HUD, along with Aghanim's Shard. The symbol lights up once Aghanim's Scepter is acquired"
+    "Unlike Aghanim's Shard, multiple Aghanim's Blessings can be acquired, however, only one of them can be consumed.",
+    "Dropped by Roshan on the ground on his third death and onward, but only when killed on the Dire side.",
+    "Has a dedicated interface element within the HUD, along with Aghanim's Shard. The symbol lights up once Aghanim's Scepter is acquired.",
+    "A tooltip pops up when pointing the mouse on this HUD element, showing the hero's ability upgrades."
   ],
-  "states": null
+  "states": []
 }

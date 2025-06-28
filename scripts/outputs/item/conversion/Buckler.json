@@ -6,9 +6,9 @@
   "sellValue": 212.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Ring of Protection"],
+    "components": ["Ring of Protection", "Recipe"],
     "totalCost": 425
   },
   "abilities": [
@@ -26,38 +26,18 @@
         "auraLingerDuration": 0.5
       },
       "notes": [
-        "Multiple instances of Buckler Aura do not stack",
-        "Fully stacks with other sources of Buckler-based items' armor aura",
-        "Does not affect invulnerable units"
+        "Multiple instances of Buckler Aura do not stack.",
+        "Fully stacks with other sources of Buckler-based items' armor aura.",
+        "Does not affect invulnerable units."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "armor": 1
   },
   "additionalInfo": [
-    "With Buckler Aura, the item grants a total of 3 armor to the wielder"
+    "With Buckler Aura, the item grants a total of 3 armor to the wielder."
   ],
-  "recommendedHeroes": null,
-  "states": null,
-  "trivia": [
-    "In DotA, this item is named Nathrezim Buckler, which is a reference to the Nathrezim, a race within the Warcraft universe",
-    "In Dota 2, the item's name was shortened to just Buckler, to avoid copyright issues with Blizzard Entertainment"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Now grants 1 armor bonus. Increased Recipe cost from 200 to 250 (total cost increases from 375 to 425)",
-        "date": "7.29 (2021-04-09)"
-      },
-      {
-        "description": "No longer builds into Mekansm. Now builds into Guardian Greaves and Vladmir's Offering",
-        "date": "7.28 (2020-12-17)"
-      },
-      {
-        "description": "No longer builds into Vladmir's Offering. Now builds into Mekansm. Item cost changes: Increased Ring of Protection cost from 150 to 175, Reduced Recipe cost from 225 to 200. Total gold cost remains at 375",
-        "date": "7.27 (2020-06-28)"
-      }
-    ]
-  }
+  "states": []
 }

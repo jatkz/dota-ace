@@ -6,9 +6,9 @@
   "sellValue": 862.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Null Talisman", "Ring of Health", "Recipe"],
+    "components": ["Helm of Iron Will", "Crown", "Recipe"],
     "totalCost": 1725
   },
   "abilities": [
@@ -37,6 +37,17 @@
     }
   ],
   "stats": {
+    "health": 88,
+    "healthRegeneration": 4.4,
+    "mana": 48,
+    "manaRegeneration": 0.2,
+    "magicResistance": "0.4%",
+    "attackSpeed": 4,
+    "mainArmor": 0.67,
+    "mainAttackDamage": 4,
+    "mainAttackDamageUniversal": 5.4
+  },
+  "bonus": {
     "strength": 4,
     "agility": 4,
     "intelligence": 4,

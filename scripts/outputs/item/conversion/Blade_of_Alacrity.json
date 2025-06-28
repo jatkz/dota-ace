@@ -6,39 +6,23 @@
   "sellValue": 500,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": null,
   "abilities": [],
   "stats": {
-    "agility": 10,
     "attackSpeed": 10,
     "mainArmor": 1.67,
     "mainAttackDamageAgility": 10,
     "mainAttackDamageUniversal": 4.5
   },
+  "bonus": {
+    "agility": 10
+  },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "10 attack speed and 1.67 main armor",
-    "10 main attack damage to agility heroes",
-    "4.5 main attack damage to universal heroes"
+    "10 attack speed and 1.67 main armor.",
+    "10 main attack damage to Agility heroes.",
+    "4.5 main attack damage to universal heroes."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Now builds into Dragon Lance",
-        "date": "7.32 (2022-08-24)"
-      },
-      {
-        "description": "No longer builds into Mage Slayer",
-        "date": "7.30 (2021-08-18)"
-      },
-      {
-        "description": "Now builds into Mage Slayer",
-        "date": "7.28 (2020-12-17)"
-      }
-    ]
-  }
+  "states": []
 }

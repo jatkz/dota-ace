@@ -6,16 +6,16 @@
   "sellValue": 2225,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Force Staff", "Dragon Lance"],
+    "components": ["Force Staff", "Dragon Lance", "Recipe"],
     "totalCost": 4450
   },
   "abilities": [
     {
       "name": "Hurricane Thrust",
       "type": "active",
-      "description": "Pushes the caster and the enemy target away from each other.",
+      "description": "Pushes the caster and the enemy target away from each other. If cast on an enemy, greatly increases the caster's attack speed and — if the caster is ranged — grants them infinite attack range against the target for a few attacks, or until the buff expires. When cast on an ally or on self, pushes the target in the direction they are facing.",
       "castAnimation": "0 + 0",
       "castRange": 450,
       "manaCost": 150,
@@ -24,6 +24,7 @@
         "pushDistance": 450,
         "pushDuration": 0.2,
         "maxAttacks": 5,
+        "attackRangeBonus": "Infinite",
         "attackSpeedBonus": 100,
         "buffDuration": 6,
         "allyPushDistance": 600,
@@ -31,16 +32,17 @@
         "allyCastRange": 650
       },
       "notes": [
-        "If cast on an enemy, greatly increases the caster's attack speed and — if the caster is ranged — grants them infinite attack range against the target for a few attacks, or until the buff expires",
-        "When cast on an ally or on self, pushes the target in the direction they are facing",
-        "Roshan cannot be moved. However, the caster buff is still applied, since Roshan is an enemy",
         "Double-tapping automatically targets self",
         "Can be cast on Homing Missile",
         "Cannot be cast on other Ward-type units",
-        "Does not disable the target, they can still attack, cast abilities and items, and turn during it",
-        "Does not interrupt channeling abilities of the affected target",
-        "Can move the target over impassable terrain",
-        "Destroys trees within a 100 radius around the target"
+        "Shares cooldown with Force Staff",
+        "Cannot be cast on debuff immune enemies, but can be cast on debuff immune allies",
+        "Cannot be cast on leashed units",
+        "Does not move units affected by Flaming Lasso, Black Hole, Chronosphere, or Duel",
+        "Cannot push units through Kinetic Field or Arena of Blood",
+        "Destroys trees within 100 radius around affected units",
+        "Can move units over impassable terrain",
+        "Does not interrupt channeling abilities"
       ]
     },
     {
@@ -55,12 +57,14 @@
         "attackRangeBonus": 150
       },
       "notes": [
+        "Only affects ranged heroes",
         "The bonus attack range from multiple Dragon Lance-based items do not stack",
         "Stacks additively with other ranged bonus attack range sources"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 15,
     "agility": 20,
     "intelligence": 15,

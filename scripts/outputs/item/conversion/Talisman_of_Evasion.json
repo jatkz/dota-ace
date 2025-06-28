@@ -6,13 +6,11 @@
   "sellValue": 650,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 1300
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "evasion": "15%"
   },
   "additionalInfo": [

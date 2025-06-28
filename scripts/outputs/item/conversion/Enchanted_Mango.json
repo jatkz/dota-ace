@@ -6,8 +6,11 @@
   "sellValue": 32.5,
   "maxStacks": 3,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": null,
+  "usageAlert": false,
+  "recipe": {
+    "components": [],
+    "totalCost": 65
+  },
   "abilities": [
     {
       "name": "Eat Mango",
@@ -15,14 +18,14 @@
       "description": "Consumes the mango and instantly mana restores.",
       "castAnimation": "0 + 0",
       "castRange": 400,
-      "manaCost": 0,
+      "manaCost": null,
       "cooldown": 0,
       "effects": {
         "manaRestored": 100,
         "totalPickupRange": 300
       },
       "notes": [
-        "Self-mana restores upon activation, even while the wielder is invulnerable",
+        "Has the following targeting functionalities: Self-mana restores upon activation, even while the wielder is invulnerable",
         "Requires Ctrl to target an allied hero",
         "Considers clones, illusions, and creep-heroes as heroes",
         "Neither requires turning nor facing the targeted unit to cast, as long it is within the cast range",
@@ -32,34 +35,19 @@
     }
   ],
   "stats": {
-    "healthRegeneration": 0.4,
-    "charges": 1
+    "charges": 1,
+    "stock": {
+      "initial": 4,
+      "maximum": 4,
+      "restockTime": 120
+    }
+  },
+  "bonus": {
+    "healthRegeneration": 0.4
   },
   "additionalInfo": [
     "The health regeneration bonus from multiple instances fully stacks",
     "Enchanted Mangoes dug up with Trusty Shovel are fully shareable, but cannot be sold"
   ],
-  "recommendedHeroes": null,
-  "states": null,
-  "trivia": [
-    "Enchanted Mango's description is a reference to an old Weibo post by Icefrog, in which he mentioned that he loves mangoes",
-    "It is believed that the item idea came from a Reddit thread where someone suggested a Tango that restores mana — and a user jokingly suggested that the item be named Mango",
-    "Prior to the July 14, 2017 Patch, Enchanted Mango's active ability, Eat Mango, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced initial stock from Infinite to 4. Reduced max stock from Infinite to 4. Increased restock time from 0 to 120.",
-        "date": "7.33 (2023-04-20)"
-      },
-      {
-        "description": "Reduced health regeneration bonus from 0.6 to 0.4.",
-        "date": "7.32e (2023-03-07)"
-      },
-      {
-        "description": "Reduced gold cost from 70 to 65. Eat Mango no longer has a 250 cast range buffer.",
-        "date": "7.30 (2021-08-18)"
-      }
-    ]
-  }
+  "states": null
 }

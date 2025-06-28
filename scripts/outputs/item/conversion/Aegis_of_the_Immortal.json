@@ -1,12 +1,12 @@
 {
   "name": "Aegis of the Immortal",
   "description": "The Immortal was said to own a shield that protected him from death itself.",
-  "category": "Kill Reward",
+  "category": "Roshan Drop",
   "cost": null,
-  "sellValue": 0,
+  "sellValue": null,
   "maxStacks": 1,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": null,
   "abilities": [
     {
@@ -21,30 +21,29 @@
         "effectDelay": 5,
         "maxHealthRestoreOnDeath": "100%",
         "maxManaRestoreOnDeath": "100%",
-        "groundVisionBonus": 1800,
+        "groundVisionBonusDay": 1800,
         "groundVisionBonusNight": 800,
         "aegisDuration": 300,
         "turboAegisDuration": 240,
         "dispelDamageThreshold": 0,
         "maxHealthRegenPerSecond": "20%",
         "maxManaRegenPerSecond": "20%",
-        "regenDuration": 5
+        "duration": 5
       },
       "notes": [
+        "Whenever Roshan reclaims the Aegis, it disappears from the wielder's inventory",
+        "Grants the wielder bonus max health regeneration and max mana regeneration for a short duration",
         "Neither resets the cooldown of abilities and items",
         "Dispels the buff upon taking a 0-damage instance, except from self-damage sources and HP Removal sources",
         "The countdown timer starts upon wielding the item, visible to everyone",
-        "The timer is independent of Roshan's respawn time",
-        "Whenever Roshan reclaims the Aegis, it disappears from the wielder's inventory",
-        "Grants the wielder bonus max health regeneration and max mana regeneration for a short duration"
+        "The timer is independent of Roshan's respawn time"
       ]
     }
   ],
   "stats": {
-    "charges": 1,
-    "droppable": false,
-    "destroyable": true
+    "charges": 1
   },
+  "bonus": {},
   "additionalInfo": [
     "The Aegis is consumed/disappears when one of the following happens, be it in a player's inventory, or still on the ground where Roshan dropped it:",
     "Roshan respawns 8 – 11 minutes after being killed",

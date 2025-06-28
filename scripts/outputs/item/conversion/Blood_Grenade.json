@@ -6,9 +6,9 @@
   "sellValue": 25,
   "maxStacks": 2,
   "shareable": true,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
+    "components": ["Blood Grenade"],
     "totalCost": 50
   },
   "abilities": [
@@ -28,44 +28,29 @@
         "duration": 5,
         "healthCost": 75,
         "projectileSpeed": 1100,
-        "totalMagicalDamage": 125
+        "totalDamage": 125
       },
       "notes": [
         "Deals magical spell damage in 1-second intervals, starting 1 second after debuff application upon projectile impact, over 5 instances",
         "Reapplying the debuff refreshes the duration, but does not change the damage intervals",
         "The current health cost utilizes setting health and is non-lethal",
-        "Can be cast when the wielder has less than the required current health",
-        "Sticky Napalm no longer amplifies the damage of Throw Grenade"
+        "Hence, this ability can be cast when the wielder has less than the required current health",
+        "The ability effects are applied as follows: 1. The item_blood_grenade_debuff, 2. The first magical spell damage, 3. The magical spell damage per second"
       ]
     }
   ],
   "stats": {
-    "health": 50,
-    "charges": 1
+    "charges": 1,
+    "stock": "1 INIT / 2 MAX",
+    "stockCooldown": 180
+  },
+  "bonus": {
+    "health": 50
   },
   "additionalInfo": [
-    "Stock: 1 INIT / 2 MAX",
-    "Stock cooldown: 180 seconds",
-    "Affects Enemy Units",
-    "Damage type: Spell / Magical"
+    "Deals 125 magical spell damage (before reductions) for the entire duration",
+    "Has a 1100-projectile speed",
+    "Debuff is dispellable by any Dispel sources"
   ],
-  "recommendedHeroes": [],
-  "states": null,
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced gold cost from 65 to 50. Reduced inventory stack count from 3 to 2. Reduced stock count from 3 to 2. Increased stock cooldown from 120 to 180.",
-        "date": "7.34 (2023-08-08)"
-      },
-      {
-        "description": "Now has an inventory stack limit of 3, instead of stacking infinitely. Sticky Napalm no longer amplifies the damage of Throw Grenade.",
-        "date": "7.33b (2023-04-25)"
-      },
-      {
-        "description": "CREATED",
-        "date": "7.33 (2023-04-20)"
-      }
-    ]
-  }
+  "states": null
 }

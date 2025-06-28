@@ -1,18 +1,48 @@
 {
   "name": "Kaya and Sange",
-  "description": null,
+  "description": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge.",
   "category": "Armaments",
-  "cost": null,
-  "sellValue": null,
+  "cost": 4200,
+  "sellValue": 2100,
   "maxStacks": null,
-  "shareable": null,
-  "usageAlert": null,
+  "shareable": false,
+  "usageAlert": false,
   "recipe": {
-    "components": null,
-    "totalCost": null
+    "components": ["Sange", "Kaya"],
+    "totalCost": 4200
   },
   "abilities": [],
-  "stats": {},
-  "additionalInfo": [],
+  "stats": {
+    "health": 352,
+    "healthRegeneration": 1.6,
+    "mana": 192,
+    "manaRegeneration": 0.8,
+    "magicResistance": "1.6%",
+    "mainAttackDamageStrengthInt": 16,
+    "mainAttackDamageUniversal": 14.4
+  },
+  "bonus": {
+    "strength": 16,
+    "intelligence": 16,
+    "slowResistance": "25%",
+    "manaLossReduction": "25%",
+    "spellDamageAmp": "12%",
+    "healthRestoreAmp": "20%",
+    "manaRegenAmp": "50%",
+    "spellLifestealAmp": "25%"
+  },
+  "additionalInfo": [
+    "The item's attributes grant 352 health and 1.6 health regeneration",
+    "The item's attributes grant 192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
+    "The item's attributes grant 16 main attack damage to Strength/Intelligence heroes",
+    "The item's attributes grant 14.4 main attack damage to universal heroes",
+    "For Kaya-based items: Multiple sources of spell damage amplification do not stack",
+    "For Kaya-based items: Multiple sources of mana regeneration amplification do not stack",
+    "For Sange-based items: Multiple sources of slow resistance do not stack",
+    "For Sange-based items: Multiple sources of health restoration amplification do not stack",
+    "Can be disassembled",
+    "Much like Sange and Yasha, this is a cost-effective item that greatly increases a spellcaster's mid-game presence",
+    "May be purchased if one wishes to start fighting earlier and establish control"
+  ],
   "states": []
 }

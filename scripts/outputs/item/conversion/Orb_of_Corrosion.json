@@ -6,9 +6,9 @@
   "sellValue": 525,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Orb of Venom", "Blight Stone", "Orb of Frost"],
+    "components": ["Orb of Frost", "Orb of Blight", "Band of Elvenskin"],
     "totalCost": 1050
   },
   "abilities": [
@@ -22,51 +22,32 @@
       "cooldown": null,
       "effects": {
         "armorReduction": 3,
-        "moveSpeedSlow": "8% (melee) / 16% (ranged)",
-        "duration": 2,
-        "healthRestoreReduction": "16%"
+        "moveSpeedSlow": 8,
+        "moveSpeedSlowRanged": 16,
+        "healthRestoreReduction": 16,
+        "duration": 2
       },
       "notes": [
         "The corrosive attacks also reduce the effectiveness of health restoration on the targets",
         "The slow is more effective against ranged enemies",
+        "Does not pierce Debuff Immunity sources",
+        "This ability is not bestowed by Illusions",
+        "The bonus armor reduction value does not stack",
+        "Reapplying the debuff refreshes the duration",
+        "Affects allied units and buildings",
+        "Does not work against ward-type units and couriers",
         "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other",
-        "Weaker sources do not slow or reduce health restoration if a stronger source is present",
-        "Does not work against Ward-type units and Couriers",
-        "Affects Allied units and Buildings",
-        "The debuff does not have its own particle system and uses the particle effects of Thunder Clap's slow debuff instead"
+        "Weaker sources do not slow or reduce health restoration if a stronger source is present"
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "agility": 7
   },
   "additionalInfo": [
-    "Disassemble: No",
-    "Shareable: No",
-    "Usage Alert: 0"
+    "Dispellable by any Dispel sources",
+    "The ability effects are applied as follows: 1. The modifier_blight_stone_buff, 2. The wielder's attack instance"
   ],
-  "recommendedHeroes": [
-    "Abaddon",
-    "Lifestealer"
-  ],
-  "states": null,
-  "trivia": [
-    "Corrosion's debuff does not have its own particle system and uses the particle effects of Thunder Clap's slow debuff instead"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Increased Orb of Frost cost from 250 to 300 (total cost increases from 1000 to 1050). Health Regen Manipulation, Lifesteal Manipulation, and Spell Lifesteal Manipulation are now replaced by Health Restoration Manipulation, combining all three into one mechanic. Reduction value remains 16%. No longer applies heal reduction. Slow and heal/health restore reduction of Orb of Frost-based items no longer stack, the highest values take priority.",
-        "date": "7.39 (2025-05-21)"
-      },
-      {
-        "description": "Reduced Corrosion duration from 3 to 2.",
-        "date": "7.38c (2025-03-27)"
-      },
-      {
-        "description": "Reduced agility bonus from 8 to 7. Increased Corrosion movement speed slow from 6% / 16% to 8% / 16%.",
-        "date": "7.38b (2025-03-05)"
-      }
-    ]
-  }
+  "states": []
 }

@@ -6,9 +6,9 @@
   "sellValue": 412.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Sage's Mask", "Ring of Protection", "Circlet", "Recipe"],
+    "components": ["Circlet", "Sage's Mask", "Ring of Protection", "Recipe"],
     "totalCost": 825
   },
   "abilities": [
@@ -18,7 +18,7 @@
       "description": "When cast on an ally, consumes a charge to grant the target allied hero bonus health regeneration for a while. When cast on an enemy, consumes a charge to deal damage over time to the target for a while.",
       "castAnimation": "0 + 0",
       "castRange": 750,
-      "manaCost": null,
+      "manaCost": 0,
       "cooldown": 10,
       "effects": {
         "healthRegenBonus": 30,
@@ -31,24 +31,28 @@
         "initialChargeGainPerOwnDeath": 1
       },
       "notes": [
-        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the healing buff",
-        "Taking more than 0 damage from Roshan (after reductions) dispels the healing buff",
-        "Has no recharge time. Cooldown resetting effects do not restore charges",
-        "Gains charges whenever an enemy hero dies within range. Gains more charges when at 0 charges",
-        "Also gains charges when the wielder dies while at 0 charges",
-        "When upgraded to Spirit Vessel, all the current charges are carried over",
-        "Double-tapping automatically targets self",
-        "Does not interrupt the wielder's channeling abilities",
-        "Can only be cast on heroes, including illusions and creep-heroes",
-        "Does not gain charges from Illusions, Clones, or Creep-Heroes",
-        "Does not gain a charge if the enemy hero has Reincarnation",
-        "Has to be within the main inventory to gain charges",
-        "Successive casts on the same target do not stack but refresh the duration instead",
-        "Urn of Shadows' modifiers get both overridden by Spirit Vessel's modifiers"
+        "Has no recharge time. Cooldown resetting effects do not restore charges.",
+        "Gains charges whenever an enemy hero dies within range. Gains more charges when at 0 charges.",
+        "Also gains charges when the wielder dies while at 0 charges.",
+        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the healing buff.",
+        "Taking more than 0 damage from Roshan (after reductions) dispels the healing buff.",
+        "When upgraded to Spirit Vessel, all the current charges are carried over.",
+        "Double-tapping automatically targets self.",
+        "Does not interrupt the wielder's channeling abilities.",
+        "Can only be cast on heroes, including illusions and creep-heroes.",
+        "Gains charge for each enemy hero that dies within the radius.",
+        "If the item is at 0 charges, it gains charges at once, otherwise, it gains charge.",
+        "Does not gain charges from Illusions, Clones, or Creep-Heroes.",
+        "Does not gain a charge if the enemy hero has Reincarnation.",
+        "Has to be within the main inventory to gain charges."
       ]
     }
   ],
   "stats": {
+    "charges": "∞",
+    "chargeReplenishTime": "-"
+  },
+  "bonus": {
     "strength": 2,
     "agility": 2,
     "intelligence": 2,
@@ -56,44 +60,15 @@
     "armor": 2
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Spirit Vessel was purchased as well, Spirit Vessel's icon takes priority",
-    "The item's attributes grant 44 health and 0.2 health regeneration",
-    "Grants 24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance",
-    "Provides 2 attack speed and 0.33 main armor",
-    "Adds 2 main attack damage to all Strength/Agility/Intelligence heroes",
-    "Adds 2.7 main attack damage to universal heroes",
-    "Can regenerate up to 240 health on target allies",
-    "Can deal up to 200 damage to target enemies (before reductions)"
+    "This item is shown as a Team Item in the shop window when purchased by an ally.",
+    "If a Spirit Vessel was purchased as well, Spirit Vessel's icon takes priority.",
+    "The item's attributes grant 44 health and 0.2 health regeneration.",
+    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
+    "2 attack speed and 0.33 main armor.",
+    "2 main attack damage to all Strength/Agility/Intelligence heroes.",
+    "2.7 main attack damage to universal heroes.",
+    "Can regenerate up to 240 health on target allies.",
+    "Can deal up to 200 damage to target enemies (before reductions)."
   ],
-  "recommendedHeroes": [
-    "Crystal Maiden",
-    "Dazzle", 
-    "Lich",
-    "Lion",
-    "Shadow Shaman",
-    "Vengeful Spirit",
-    "Warlock",
-    "Witch Doctor",
-    "Jakiro",
-    "Keeper of the Light"
-  ],
-  "states": null,
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "REWORKED recipe and stats. Recipe changed from Sage's Mask + Ring of Protection + Fluffy Hat + Recipe (880 gold total) to Sage's Mask + Ring of Protection + Circlet + Recipe (825 gold total). Stats changed from +125 Health, +1.4 Mana Regeneration, +2 Armor to +2 Strength, +2 Agility, +2 Intelligence, +1.4 Mana Regeneration, +2 Armor.",
-        "date": "7.39 (2025-05-21)"
-      },
-      {
-        "description": "REWORKED recipe and stats. Recipe changed from Sage's Mask + Ring of Protection + Circlet + Recipe (880 gold total) to Sage's Mask + Ring of Protection + Fluffy Hat + Recipe (880 gold total). Stats changed from +2 Strength, +2 Agility, +2 Intelligence, +1.4 Mana Regeneration, +2 Armor to +125 Health, +1.4 Mana Regeneration, +2 Armor. Soul Release cooldown increased from 7s to 10s.",
-        "date": "7.37 (2024-07-31)"
-      },
-      {
-        "description": "Clone sources no longer gain Soul Release charges.",
-        "date": "7.36c (2024-06-24)"
-      }
-    ]
-  }
+  "states": null
 }

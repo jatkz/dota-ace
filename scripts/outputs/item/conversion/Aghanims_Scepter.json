@@ -6,9 +6,9 @@
   "sellValue": 2100,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Point Booster", "Staff of Wizardry", "Blade of Alacrity", "Ogre Axe"],
+    "components": ["Point Booster", "Staff of Wizardry", "Ogre Axe", "Blade of Alacrity"],
     "totalCost": 4200
   },
   "abilities": [
@@ -24,16 +24,17 @@
         "affects": "Self"
       },
       "notes": [
-        "Grants each hero one or multiple unique enhancements, ranging from ability upgrades, to hero changes, and sometimes even new abilities",
-        "Aghanim's Scepter status of allies can be seen in the scoreboard at all times",
-        "Enemies' status can be seen as well, but it only updates once gaining vision over them",
-        "Illusions copy the modifier on their creation. The upgrades fully work for them",
-        "Most upgrades work normally for the player that drafted the abilities in Ability Draft",
-        "Reflected abilities are upgraded based on the original caster's upgrades"
+        "Grants each hero one or multiple unique enhancements, ranging from ability upgrades, to hero changes, and sometimes even new abilities.",
+        "Aghanim's Scepter status of allies can be seen in the scoreboard at all times.",
+        "Enemies' status can be seen as well, but it only updates once gaining vision over them.",
+        "Illusions copy the modifier on their creation. The upgrades fully work for them.",
+        "Most upgrades work normally for the player that drafted the abilities in Ability Draft.",
+        "Reflected abilities are upgraded based on the original caster's upgrades."
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 10,
     "agility": 10,
     "intelligence": 10,
@@ -41,18 +42,17 @@
     "mana": 175
   },
   "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "220 health and 1 health regeneration",
-    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "10 attack speed and 1.67 main armor",
-    "10 main attack damage to all Strength/Agility/Intelligence heroes",
-    "13.5 main attack damage to universal heroes",
-    "Upgrading the item into Aghanim's Blessing automatically consumes the item, converting it into a permanent buff",
-    "As a permanent buff, it provides the ability upgrades like the item, but does not provide attributes, health, or mana",
-    "The total gold cost for each level is 4200/5800",
-    "Aghanim's Blessing is also a Kill Reward item guaranteed to drop on Roshan's third death and onward, when killed on the Dire side",
-    "Has a dedicated interface element within the HUD, along with Aghanim's Shard. The symbol lights up once Aghanim's Scepter is acquired",
-    "A tooltip pops up when pointing the mouse on this HUD element, showing the hero's ability upgrades"
+    "The item's attributes grant the following additional stats: 220 health and 1 health regeneration.",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 attack speed and 1.67 main armor.",
+    "10 main attack damage to all Strength/Agility/Intelligence heroes.",
+    "13.5 main attack damage to universal heroes.",
+    "Upgrading the item into Aghanim's Blessing automatically consumes the item, converting it into a permanent buff.",
+    "As a permanent buff, it provides the ability upgrades like the item, but does not provide attributes, health, or mana.",
+    "The total gold cost for each level is 4200/5800 Gold.",
+    "Aghanim's Blessing is also a Kill Reward item guaranteed to drop on Roshan's third death and onward, when killed on the Dire side.",
+    "Has a dedicated interface element within the HUD, along with Aghanim's Shard.",
+    "A tooltip pops up when pointing the mouse on this HUD element, showing the hero's ability upgrades."
   ],
   "states": null
 }

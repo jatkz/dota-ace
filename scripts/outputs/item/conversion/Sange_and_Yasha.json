@@ -6,39 +6,35 @@
   "sellValue": 2100,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Sange", "Yasha"],
+    "components": ["Yasha", "Sange"],
     "totalCost": 4200
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "strength": 16,
     "agility": 16,
     "statusResistance": 15,
     "slowResistance": 25,
     "moveSpeed": 12,
     "attackSpeed": 20,
-    "healthRestoreAmp": 20,
-    "health": 352,
-    "healthRegeneration": 1.6,
-    "mainArmor": 2.67,
-    "mainAttackDamage": 16,
-    "mainAttackDamageUniversal": 14.4
+    "healthRestoreAmp": 20
   },
   "additionalInfo": [
-    "The item's attributes grant 352 health and 1.6 health regeneration",
-    "Grants 16 attack speed and 2.67 main armor",
-    "Grants 16 main attack damage to Strength/Agility heroes",
-    "Grants 14.4 main attack damage to Universal heroes",
-    "Multiple sources of slow resistance do not stack",
-    "Multiple sources of status resistance do not stack", 
-    "Multiple sources of health restoration amplification do not stack",
-    "Multiple sources of movement speed do not stack",
-    "Multiple sources of attack speed fully stack",
-    "Can be disassembled",
-    "Particularly strong for boosting midgame power",
-    "Consider disassembling late game to build Manta Style and Heaven's Halberd"
+    "The item's attributes grant the following additional stats:",
+    "352 health and 1.6 health regeneration.",
+    "16 attack speed and 2.67 main armor.",
+    "16 main attack damage to Strength/Agility heroes.",
+    "14.4 main attack damage to universal heroes.",
+    "For Sange-based items:",
+    "Multiple sources of slow resistance do not stack.",
+    "Multiple sources of status resistance do not stack.",
+    "Multiple sources of health restoration amplification do not stack.",
+    "For Yasha-based items:",
+    "Multiple sources of movement speed do not stack.",
+    "Multiple sources of attack speed fully stack."
   ],
   "states": []
 }

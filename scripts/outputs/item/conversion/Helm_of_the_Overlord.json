@@ -6,9 +6,9 @@
   "sellValue": 2825,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Helm of the Dominator"],
+    "components": ["Helm of the Dominator", "Ultimate Orb", "Recipe"],
     "totalCost": 5650
   },
   "abilities": [
@@ -36,15 +36,25 @@
         "Dominating a creep while already having one dominated instantly kills the previously dominated creep",
         "Applies a basic dispel on the creep upon cast",
         "Sets the unit's type to Creep-Hero",
-        "If cast on a neutral creep, increases its abilities' level by 1 and unlocks their 4th level",
-        "The number of max dominated units is bound to the wielder, and shared amongst multiple Helms of the Overlord and Helms of the Dominator",
-        "Roshan cannot be dominated",
+        "Sets base movement speed to 380, regardless of its default movement speed",
+        "If max health is below the min health threshold, sets current and max health to 1800",
+        "Sets gold bounty to 250, overwriting its default bounty",
+        "Increases base attack damage, it is not granted as an attack damage bonus",
+        "Increases health regen and mana regen",
+        "Grants an armor bonus, it is not added to the base armor",
+        "If cast on a neutral creep, increases its abilities' by 1 and unlocks their 4th level",
+        "Does not restore the creep's mana",
+        "The number of max allowed units is bound to the player",
+        "When owning both Helm of the Dominator and Helm of the Overlord, Helm of the Overlord takes priority",
+        "When the item gets sold or destroyed, the Dominated creep dies",
         "Reinforced units receive less damage from the dominated creep",
-        "Does not share cooldowns with Helm of the Dominator"
+        "Does not share cooldowns with Helm of the Dominator",
+        "Roshan cannot be dominated"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 21,
     "agility": 21,
     "intelligence": 21,
@@ -53,12 +63,10 @@
   },
   "additionalInfo": [
     "The item's attributes grant 462 health and 2.1 health regeneration",
-    "Grants 252 mana, 1.05 mana regeneration and 2.1% flat base magic resistance",
-    "Provides 21 attack speed and 3.5 main armor",
-    "Adds 21 main attack damage to all Strength/Agility/Intelligence heroes",
-    "Adds 28.35 main attack damage to universal heroes",
-    "Cannot be disassembled",
-    "Not shareable"
+    "252 mana, 1.05 mana regeneration and 2.1% flat base magic resistance",
+    "21 attack speed and 3.5 main armor",
+    "21 main attack damage to all Strength/Agility/Intelligence heroes",
+    "28.35 main attack damage to universal heroes"
   ],
   "states": null
 }

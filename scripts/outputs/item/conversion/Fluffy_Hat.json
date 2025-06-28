@@ -6,35 +6,16 @@
   "sellValue": 125,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
-    "totalCost": 250
+    "components": ["Force Staff", "Falcon Blade", "Pavise"],
+    "totalCost": null
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 125
   },
   "additionalInfo": [],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "Just like the Orb of Venom, the description for the Fluffy Hat is an alliteration — a figure of speech where the beginning sounds or letters of multiple words are the same. In this case, most of its words start with the letter F."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Urn of Shadows.",
-        "date": "2025-05-21"
-      },
-      {
-        "description": "No longer builds into Spirit Vessel. Now builds into Urn of Shadows.",
-        "date": "2024-07-31"
-      },
-      {
-        "description": "No longer builds into Orb of Corrosion.",
-        "date": "2023-12-14"
-      }
-    ]
-  }
+  "states": []
 }

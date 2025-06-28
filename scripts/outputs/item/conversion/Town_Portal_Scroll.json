@@ -8,17 +8,17 @@
   "shareable": "Partially",
   "usageAlert": 0,
   "recipe": {
-    "components": [],
+    "components": ["Town Portal Scroll"],
     "totalCost": 100
   },
   "abilities": [
     {
       "name": "Teleport",
       "type": "active",
-      "description": "Teleports its wielder to the unit-targeted allied building. Increases the teleport channel time when multiple allied heroes simultaneously channels to the same allied building.",
+      "description": "Teleports its wielder to the unit-targeted allied building. Increases the teleport channel time when multiple allied heroes simutaneously channels to the same allied building.",
       "castAnimation": "0 + 0",
       "castRange": "Global",
-      "manaCost": null,
+      "manaCost": 75,
       "cooldown": "80/40/40",
       "effects": {
         "teleportCheckRadius": 1150,
@@ -35,66 +35,32 @@
         "fountainChannelTime": "3/3/2"
       },
       "notes": [
-        "Consumes mana, goes into cooldown and does nothing when the channeling is interrupted",
-        "Has targeting functionalities for buildings, outposts, and fountain",
-        "Channel time increases linearly for most buildings when multiple heroes teleport to the same location",
+        "Acquiring Boots of Travel unlocks subsequent Teleport levels",
+        "Consumes mana, goes into cooldown and does nothing when channeling is interrupted",
+        "Cannot be cast while rooted or leashed",
+        "Doubletap automatically targets the Fountain when exceeding min distance",
+        "Requires Boots of Travel upgrades to directly target allied units",
+        "Channel time increases linearly for multiple heroes teleporting to same building",
         "Does not increase channel time when teleporting to Fountain",
-        "Grants 1-second 200-radius flying vision at teleport destination during channeling",
-        "All ability effects are visible and audible to everyone"
-      ]
-    },
-    {
-      "name": "Item Properties",
-      "type": "passive",
-      "description": "All heroes start the game with an unsellable Town Portal Scroll. Grants a charge whenever a hero dies to an enemy or an allied unit.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "initialCooldown": 100,
-        "chargeGainPerDeath": "1/0/0"
-      },
-      "notes": [
-        "Does not grant charges from self-denies or kills credited to neutral creeps",
-        "Town Portal Scrolls gained from death do not refund gold when sold upon upgrading to Boots of Travel",
-        "Heroes have a dedicated Town Portal Scroll slot on the HUD",
-        "An unsellable Town Portal Scroll in a stack makes every item in the stack unsellable"
+        "All ability effects are visible and audible to everyone",
+        "Grants 1-second 200-radius flying vision at teleport destination during channeling"
       ]
     }
   ],
   "stats": {
     "charges": 1,
-    "stacksPerSlot": "NO LIMIT"
+    "chargeReplenishTime": "Purchase/Upon Death"
   },
+  "bonus": {},
   "additionalInfo": [
     "Alt shows your allied heroes' teleport status and cooldowns under their portraits",
-    "Teleport status display priorities: Boots of Travel 2 > Boots of Travel > Town Portal Scroll",
-    "Teleport status does not show other teleport abilities"
+    "All heroes start the game with an unsellable Town Portal Scroll",
+    "Grants a charge whenever a hero dies to an enemy or allied unit",
+    "Town Portal Scrolls gained upon death have no gold value and don't affect Net Worth",
+    "Unsellable Town Portal Scrolls in a stack make every item in the stack unsellable",
+    "Heroes have a dedicated Town Portal Scroll slot on the HUD",
+    "Item can neither be dropped nor carried in inventory or backpack",
+    "Couriers can transport the item and allow dropping/sharing when in courier inventory"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Scroll of Town Portal from Warcraft 3",
-    "On August 13, 2018, a green Town Portal Scroll briefly appeared in the main game that worked like Boots of Travel 2 and cost only 50 gold",
-    "The description is a reference to the very first Dota 2 Gamescom trailer",
-    "Activating a Town Portal Scroll appears to require the casting hero's blood",
-    "Using Black King Bar before Town Portal Scroll is sometimes called 'Nightfalling' in the pro scene"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Upgrade: Town Portal Scroll now also reduces all channel time by 1",
-        "date": "7.31 (2022-02-23)"
-      },
-      {
-        "description": "Heroes no longer gain a free Town Portal Scroll if they denied themselves",
-        "date": "7.29b (2021-04-16)"
-      },
-      {
-        "description": "Reduced number of starting Town Portal Scrolls from 3 to 1. Heroes now gain 1 unsellable Town Portal Scroll for free upon dying. Increased gold cost from 90 to 100. Teleport: Increased max distance towards building from 575 to 800. Reduced channel time towards Outposts from 6 to 5",
-        "date": "7.29 (2021-04-09)"
-      }
-    ]
-  }
+  "states": []
 }

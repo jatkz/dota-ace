@@ -6,47 +6,23 @@
   "sellValue": 225,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 450
   },
   "abilities": [],
   "stats": {
-    "agility": 6,
-    "attackSpeed": 6,
-    "mainArmor": 1,
-    "mainAttackDamageAgility": 6,
-    "mainAttackDamageUniversal": 2.7
+    "agility": 6
+  },
+  "bonus": {
+    "agility": 6
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
     "6 attack speed and 1 main armor",
-    "6 main attack damage to agility heroes",
-    "2.7 main attack damage to universal heroes"
+    "6 main attack damage to Agility heroes",
+    "2.7 main attack damage to Universal heroes"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Boots of Quel'Thalas from Warcraft 3",
-    "In DotA, the item is named Boots of Elvenskin, which was the original name of the Warcraft 3 item as well",
-    "During early beta, this item was named Boots of Elvenskin in Dota 2 as well, along with an icon depicting green boots",
-    "However, this was likely changed, to avoid confusion with other boot items, as Band of Elvenskin does not grant movement speed"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Now builds into Orb of Corrosion",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "No longer builds into Dragon Lance",
-        "date": "7.32 (2022-08-24)"
-      },
-      {
-        "description": "No longer builds into Dagon",
-        "date": "7.28 (2020-12-17)"
-      }
-    ]
-  }
+  "states": []
 }

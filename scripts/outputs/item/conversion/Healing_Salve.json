@@ -6,7 +6,7 @@
   "sellValue": 50,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 100
@@ -19,14 +19,12 @@
       "castAnimation": "0 + 0",
       "castRange": 250,
       "manaCost": null,
-      "cooldown": null,
+      "cooldown": 0,
       "effects": {
         "damageThreshold": 0,
         "healthRegenBonus": 30,
         "duration": 13,
-        "allyDuration": 6.5,
-        "totalHealthRestored": 390,
-        "totalHealthRestoredAlly": 195
+        "allyDuration": 6.5
       },
       "notes": [
         "Salve is less effective when cast on allied heroes, including the wielder's own player-controlled units",
@@ -42,34 +40,14 @@
   ],
   "stats": {
     "charges": 1,
-    "initialStock": 4,
-    "maxStock": 4,
-    "restockTime": 120
+    "stock": "4 INIT / 4 MAX",
+    "stockCooldown": 120
   },
+  "bonus": {},
   "additionalInfo": [
-    "Healing Salves dug up with Trusty Shovel are fully shareable, but cannot be sold"
+    "Healing Salves dug up with Trusty Shovel are fully shareable, but cannot be sold",
+    "Can regenerate 390 HP for the entire duration when used on self",
+    "Can regenerate 195 HP for the entire duration when used on allies"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Healing Salve from Warcraft 3",
-    "Prior to version 6.54 in DotA, Healing Salve was known as 'Flask of Sapphire Water'",
-    "The name, along with its icon, was likely changed to help visually differentiate it from Bottle"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced initial stock from Infinite to 4. Reduced max stock from Infinite to 4. Increased restock time from 0 to 120.",
-        "date": "7.33 (2023-04-20)"
-      },
-      {
-        "description": "Reduced Salve ally duration from 13 to 6.5. Reduced gold cost from 110 to 100.",
-        "date": "7.31d (2022-06-08)"
-      },
-      {
-        "description": "Reduced health regeneration bonus from 40 to 30. Increased duration from 10 to 13. Total health restored from 400 to 390.",
-        "date": "7.31 (2022-02-23)"
-      }
-    ]
-  }
+  "states": []
 }

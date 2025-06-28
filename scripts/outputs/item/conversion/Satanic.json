@@ -6,9 +6,9 @@
   "sellValue": 2525,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Helm of the Dominator", "Reaver", "Recipe"],
+    "components": ["Morbid Mask", "Claymore", "Reaver"],
     "totalCost": 5050
   },
   "abilities": [
@@ -31,7 +31,7 @@
         "Stacks additively with other lifesteal sources",
         "Treats illusions and creep-heroes as heroes",
         "Does not work on allied units, buildings, ward-type units, or couriers",
-        "Lifesteal is less effective when attacking creeps"
+        "All ability effects are visible on illusions for camouflaging purposes"
       ]
     },
     {
@@ -49,25 +49,19 @@
       },
       "notes": [
         "Interrupts the caster's channeling abilities upon cast",
-        "Applies a basic dispel on the user upon cast",
-        "Lifesteal is less effective when attacking creeps"
+        "Applies a basic dispel on the user upon cast"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 25,
-    "attackDamage": 25,
-    "health": 550,
-    "healthRegeneration": 2.5,
-    "mainAttackDamageStrength": 25,
-    "mainAttackDamageUniversal": 11.25
+    "attackDamage": 25
   },
   "additionalInfo": [
     "The item's attributes grant 550 health and 2.5 health regeneration",
-    "Grants 25 main attack damage to strength heroes",
-    "Grants 11.25 main attack damage to universal heroes",
-    "Can only be completed with items from the Secret Shop",
-    "Cannot be disassembled"
+    "25 main attack damage to Strength heroes",
+    "11.25 main attack damage to Universal heroes"
   ],
   "states": null
 }

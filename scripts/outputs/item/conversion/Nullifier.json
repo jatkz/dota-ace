@@ -6,9 +6,9 @@
   "sellValue": 2187.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Sacred Relic", "Robe of the Magi"],
+    "components": ["Sacred Relic", "Helm of Iron Will"],
     "totalCost": 4375
   },
   "abilities": [
@@ -18,8 +18,8 @@
       "description": "Launches a projectile at the target enemy, that applies a debuff on the which continuously dispels them and slows their movement speed.",
       "castAnimation": "0 + 0",
       "castRange": 900,
-      "manaCost": 10,
-      "cooldown": 0,
+      "manaCost": 0,
+      "cooldown": 10,
       "effects": {
         "moveSpeedSlow": "10%",
         "duration": 4,
@@ -32,21 +32,22 @@
         "Can be cast on Invulnerable units",
         "The initial dispel pierces invulnerability",
         "However, the debuff is not applied on invulnerable targets",
-        "If the invulnerability could not be dispelled by the initial dispel, the debuff is not applied",
-        "If the target was already debuffed, its duration does get refreshed",
-        "Nullify is one of the very few debuffs that cannot be dispelled at all"
+        "Does not pierce Debuff Immunity sources",
+        "This ability is nullified by Spell Block sources",
+        "This ability is reflected by Spell Reflection sources",
+        "This ability can be disjointed",
+        "The debuff is only dispellable by Death"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "healthRegeneration": 6,
     "armor": 10,
     "attackDamage": 75
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Cannot be disassembled",
-    "Not shareable"
+    "This item is shown as a Team Item in the shop window when purchased by an ally"
   ],
   "states": null
 }

@@ -6,24 +6,18 @@
   "sellValue": 1400,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 2800
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
-    "strength": 25,
-    "health": 550,
-    "healthRegeneration": 2.5,
-    "mainAttackDamageStrength": 25,
-    "mainAttackDamageUniversal": 11.25
+  "stats": {},
+  "bonus": {
+    "strength": 25
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "550 health and 2.5 health regeneration.",
-    "25 main attack damage to strength heroes.",
-    "11.25 main attack damage to universal heroes."
+    "550 health and 2.5 health regeneration",
+    "25 main attack damage to Strength heroes",
+    "11.25 main attack damage to Universal heroes"
   ],
   "states": []
 }

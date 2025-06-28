@@ -1,13 +1,13 @@
 import fs from 'fs';
 
-import { optimizeHtmlForParsing } from './html-parser.js';
+import { optimizeHtmlForParsing, optimizeNeutralSingleHtmlForParsingV2 } from './html-parser.js';
 
 // Wrap everything in an async function
 async function main() {
     try {
         // 1. Download HTML
         console.log('Fetching HTML from Liquipedia...');
-        const response = await fetch('https://liquipedia.net/dota2/Morphling');
+        const response = await fetch('https://liquipedia.net/dota2/Kaya_and_Sange');
         
         // Check if the request was successful
         if (!response.ok) {
@@ -20,7 +20,7 @@ async function main() {
         fs.writeFileSync("./scripts/outputs/single_raw.html", html, 'utf8');
         
         // 2. Clean the HTML
-        const cleanHtml = optimizeHtmlForParsing(html);
+        const cleanHtml = optimizeNeutralSingleHtmlForParsingV2(html);
         console.log(`Cleaned HTML: ${cleanHtml.length} characters (${Math.round((1 - cleanHtml.length/html.length) * 100)}% reduction)`);
         
         // 3. Save to file

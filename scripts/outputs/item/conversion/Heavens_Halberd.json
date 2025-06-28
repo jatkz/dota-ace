@@ -6,9 +6,9 @@
   "sellValue": 1300,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Vanguard", "Crown", "Ring of Regen", "Recipe"],
+    "components": ["Vanguard", "Crown", "Recipe"],
     "totalCost": 2600
   },
   "abilities": [
@@ -26,7 +26,10 @@
       },
       "notes": [
         "The effect lasts longer on ranged targets",
-        "Can now be dispelled"
+        "Does not pierce Debuff Immunity sources",
+        "This ability is nullified by Spell Block sources",
+        "This ability is reflected by Spell Reflection sources",
+        "Dispellable by any Dispel sources"
       ]
     },
     {
@@ -48,31 +51,28 @@
         "When multiple different sources proc on the same attack, the one with a higher value takes priority",
         "Multiple sources of the same value stack multiplicatively",
         "Does not work against damage from wards sources",
-        "Does not reduce physical damage from abilities, except for specific abilities"
+        "Does not reduce physical damage from abilities, except for specific abilities",
+        "This ability can be bestowed by Illusions"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 5,
     "agility": 5,
     "intelligence": 5,
     "health": 275,
-    "health_regeneration": 6,
-    "additional_health_from_attributes": 110,
-    "additional_health_regen_from_attributes": 0.5,
-    "additional_mana_from_attributes": 60,
-    "additional_mana_regen_from_attributes": 0.25,
-    "magic_resistance_from_attributes": "0.5%",
-    "attack_speed_from_attributes": 5,
-    "armor_from_attributes": 0.83,
-    "attack_damage_primary_attributes": 5,
-    "attack_damage_universal": 6.75
+    "health_regeneration": 6
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "The item's attributes grant 110 health and 0.5 health regeneration",
+    "60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance",
+    "5 attack speed and 0.83 main armor",
+    "5 main attack damage to all Strength/Agility/Intelligence heroes",
+    "6.75 main attack damage to universal heroes",
     "The proc chances of all sources of damage block work independently from each other",
-    "When multiple sources of damage block proc on the same attack, only the one with the highest blocked damage value takes effect",
-    "Can be disassembled"
+    "When multiple sources of damage block proc on the same attack, only the one with the highest blocked damage value takes effect"
   ],
   "states": null
 }

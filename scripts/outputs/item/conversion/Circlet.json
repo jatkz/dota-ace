@@ -6,54 +6,35 @@
   "sellValue": 77.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 155
   },
   "abilities": [],
   "stats": {
-    "strength": 2,
-    "agility": 2,
-    "intelligence": 2,
     "health": 44,
     "healthRegeneration": 0.2,
     "mana": 24,
     "manaRegeneration": 0.1,
     "magicResistance": 0.2,
     "attackSpeed": 2,
-    "armor": 0.33,
-    "attackDamage": 2,
-    "attackDamageUniversal": 2.7
+    "mainArmor": 0.33,
+    "mainAttackDamage": 2,
+    "mainAttackDamageUniversal": 2.7
+  },
+  "bonus": {
+    "strength": 2,
+    "agility": 2,
+    "intelligence": 2
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "44 health and 0.2 health regeneration",
-    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance",
-    "2 attack speed and 0.33 main armor",
-    "2 main attack damage to all Strength/Agility/Intelligence heroes",
-    "2.7 main attack damage to universal heroes"
+    "44 health and 0.2 health regeneration.",
+    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
+    "2 attack speed and 0.33 main armor.",
+    "2 main attack damage to all Strength/Agility/Intelligence heroes.",
+    "2.7 main attack damage to universal heroes."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Circlet of Nobility from Warcraft 3",
-    "In DotA, the item is named Circlet of Nobility as well"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Now builds into Urn of Shadows",
-        "date": "7.39 (2025-05-21)"
-      },
-      {
-        "description": "No longer builds into Urn of Shadows",
-        "date": "7.37 (2024-07-31)"
-      },
-      {
-        "description": "Reduced gold cost from 165 to 155",
-        "date": "7.23 (2019-11-26)"
-      }
-    ]
-  }
+  "states": []
 }

@@ -212,10 +212,58 @@ function parseHtmlFile(filename, tagsToRemove = [], outputPath = null) {
     }
 }
 
+function optimizeNeutralSingleHtmlForParsingV2(html) {
+    const $ = cheerio.load(html);
+
+    // Remove unwanted elements more aggressively
+    $('script').remove();
+    $('noscript').remove();
+    $('footer').remove();
+    $('style').remove();
+    $('nav').remove();
+    $('link').remove();
+    $('meta').remove();
+
+    // Find the Recent Changes heading first (since it comes before potential Trivia)
+    const recentChangesHeading = $('h2').filter((i, el) => {
+        const text = $(el).text().toLowerCase();
+        return text.includes('recent changes');
+    });
+
+    if (recentChangesHeading.length > 0) {
+        // Remove everything after Recent Changes
+        let current = recentChangesHeading;
+        while (current.length > 0) {
+            const next = current.next();
+            current.remove();
+            current = next;
+        }
+    }
+
+    // Find the Trivia heading (in case it comes before Recent Changes)
+    const triviaHeading = $('h2').filter((i, el) => {
+        const text = $(el).text().toLowerCase();
+        return text.includes('trivia');
+    });
+
+    if (triviaHeading.length > 0) {
+        let current = triviaHeading;
+        while (current.length > 0) {
+            const next = current.next();
+            current.remove();
+            current = next;
+        }
+    }
+
+    return $.html();
+}
+
+
 // Export the functions
 export {
     parseHtmlFile,
     optimizeHtmlForParsing,
     optimizeItemGridHtmlForParsing,
-    optimizeItemSingleHtmlForParsing
+    optimizeItemSingleHtmlForParsing,
+    optimizeNeutralSingleHtmlForParsingV2
 };

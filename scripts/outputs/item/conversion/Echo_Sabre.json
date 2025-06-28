@@ -6,7 +6,7 @@
   "sellValue": 1350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Ogre Axe", "Broadsword", "Void Stone"],
     "totalCost": 2700
@@ -23,36 +23,37 @@
       "effects": {
         "attackSpeedBonus": 490,
         "numberOfAttacks": 1,
+        "duration": "Indefinite",
         "moveSpeedSlow": "100%",
         "slowDuration": 0.8
       },
       "notes": [
-        "Ranged heroes cannot use Echo Strike",
-        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow",
-        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not",
-        "The attack speed buff has no set duration. It lasts until the user makes a second attack",
-        "Echo Strike triggers on Instant Attacks as well, except specific sources like Sproink, Side Gunner, Infest, etc.",
-        "Does not stack with Falcon Rush",
-        "The slow debuff cannot be applied by Clones",
-        "Multiple instances of the slow debuff do not stack"
+        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow.",
+        "Ranged heroes cannot use Echo Strike.",
+        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not.",
+        "Triggers against and fully affects any target the wielder attacks.",
+        "Grants the wielder an attack speed bonus upon triggering, the second attack is not an Instant Attack.",
+        "The attack speed buff has no set duration. It lasts until the user makes a second attack.",
+        "The buff is removed upon reaching the attack point of the next attack, regardless of whether it lands or not.",
+        "Echo Strike triggers on Instant Attacks as well, except certain specific abilities.",
+        "Does not stack with Falcon Rush - when Echo Strike is off cooldown, Falcon Rush does not trigger.",
+        "The slow debuff cannot be applied by Clones.",
+        "The attacks first apply the slow debuff, then their own attack damage.",
+        "Multiple instances of the slow debuff do not stack."
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 15,
     "manaRegeneration": 1.75,
-    "attackDamage": 20,
-    "health": 330,
-    "healthRegeneration": 1.5,
-    "mainAttackDamageStrength": 15,
-    "mainAttackDamageUniversal": 6.75
+    "attackDamage": 20
   },
   "additionalInfo": [
-    "The item's attributes grant 330 health and 1.5 health regeneration",
-    "Grants 15 main attack damage to strength heroes",
-    "Grants 6.75 main attack damage to universal heroes",
-    "Can be disassembled",
-    "Shares cooldown with other echo-type items"
+    "The item's attributes grant the following additional stats:",
+    "330 health and 1.5 health regeneration.",
+    "15 main attack damage to Strength heroes.",
+    "6.75 main attack damage to universal heroes."
   ],
   "states": null
 }

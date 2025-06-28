@@ -6,7 +6,7 @@
   "sellValue": 2750,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Maelstrom", "Hyperstone", "Recipe"],
     "totalCost": 5500
@@ -18,8 +18,8 @@
       "description": "Places a charged shield on the target ally that a chance to release electric bolts upon the ally taking damage. The bolts hit the source of the damage, as well as additional nearby enemies around the ally, dealing magical damage.",
       "castAnimation": "0 + 0",
       "castRange": 800,
-      "manaCost": 35,
-      "cooldown": 50,
+      "manaCost": 50,
+      "cooldown": 35,
       "effects": {
         "procChance": "20%",
         "effectRadius": 900,
@@ -33,9 +33,11 @@
         "Double-tapping automatically targets self",
         "Successive casts on the same target do not stack but refresh the duration",
         "Reacts on any damage above a threshold (after all reductions), attacks and abilities alike",
+        "The source of the damage can be any unit, including allies, buildings, and wards",
         "Does not react on self-inflicted damage, or on damage flagged as HP Removal",
+        "Static Charge's effect has a downtime after it procs, limiting the amount of times it can proc",
         "All bolts together can deal up to 1125 damage (before reductions)",
-        "Uses pseudo-random distribution"
+        "Static Charge uses pseudo-random distribution"
       ]
     },
     {
@@ -55,25 +57,26 @@
         "illusionDamageFactor": 1.5
       },
       "notes": [
-        "Chain Lightning from Maelstrom-based items have no stacking priority; The oldest source within the inventory takes priority",
-        "Attacks which proc Chain Lightning cannot miss",
-        "Uses pseudo-random distribution",
+        "Chain Lightning uses pseudo-random distribution",
         "The lightning bounces in 0.25-second intervals, hitting 12 targets takes 2.75 seconds",
         "All bounces together can deal up to 2160 damage (before reductions)",
         "Against a lone target, Chain Lightning adds an average of 45 magical spell damage to every attack",
-        "Uses a custom cooldown system"
+        "Chain Lightning uses a custom cooldown system. It is neither displayed on the item icon when procced nor is affected by cooldown manipulation",
+        "Attacks which proc Chain Lightning cannot miss",
+        "Chain Lightning from Maelstrom-based items have no stacking priority; The oldest source within the inventory takes priority",
+        "Illusions take increased damage from the lightning"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "attackDamage": 25,
     "attackSpeed": 90
   },
   "additionalInfo": [
-    "Very effective against heroes with illusions like Naga Siren, Spectre and particularly Phantom Lancer and Chaos Knight",
-    "Good for pushing, you can apply the Static Charge on a creep to push a lane safely while you jungle",
-    "Most effective item to push back mega creeps",
-    "Cannot be disassembled"
+    "Mjollnir is very effective against heroes with illusions like Naga Siren, Spectre and particularly Phantom Lancer and Chaos Knight that can surround you because the lightning goes all around you compared to cleave and the Static Charge has more chance to be triggered",
+    "This item is very good for pushing, you can apply the Static Charge on a creep to push a lane safely while you jungle and get extra gold",
+    "This is the most effective item to push back mega creeps"
   ],
   "states": null
 }

@@ -6,7 +6,7 @@
   "sellValue": 2550,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Crystalys", "Demon Edge", "Recipe"],
     "totalCost": 5100
@@ -25,22 +25,18 @@
         "criticalDamage": "225%"
       },
       "notes": [
-        "The proc is determined during the unit's attack point",
-        "The proc chance of multiple sources stack",
-        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
-        "Critical Strike uses pseudo-random distribution",
-        "Increases attack damage by an average of 37.5%",
-        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+        "Critical strike procs have the following properties: The proc is determined during the unit's attack point.",
+        "The proc chance of multiple sources stack. However, when multiple critical strike sources proc simultaneously, the higher critical factor takes precedence.",
+        "Critical Strike uses pseudo-random distribution.",
+        "Increases attack damage by an average of 37.5%.",
+        "Displays critical strike values before all damage manipulation sources for camouflaging purposes."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "attackDamage": 88
   },
-  "additionalInfo": [
-    "Purchasable at the Base Shop under Weapons",
-    "Can only be completed with items from the Secret Shop",
-    "Cannot be disassembled"
-  ],
-  "states": null
+  "additionalInfo": [],
+  "states": []
 }

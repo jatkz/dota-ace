@@ -6,9 +6,9 @@
   "sellValue": 1925,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Perseverance", "Energy Booster", "Recipe"],
+    "components": ["Perseverance", "Platemail", "Energy Booster", "Recipe"],
     "totalCost": 3850
   },
   "abilities": [
@@ -22,12 +22,11 @@
       "cooldown": 15,
       "effects": {
         "duration": 5,
-        "affects": "Allied Heroes",
-        "dispelType": "Basic Dispel"
+        "affects": "Allied Heroes"
       },
       "notes": [
         "Can be cast on allied heroes, Clones, Illusions, and the Spirit Bear",
-        "Can be cast on Creep-Heroes as well, but it does not reflect abilities for them",
+        "Can be cast on Creep-heroes as well, but it does not reflect abilities for them",
         "Double-tapping automatically targets self",
         "Applies a Basic Dispel on the target upon cast",
         "Spell Reflection triggers before Spell Block, so a blocked ability is still reflected normally",
@@ -38,7 +37,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "healthRegeneration": 6.5,
     "mana": 250,
     "manaRegeneration": 4,
@@ -46,9 +46,7 @@
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Can be disassembled",
-    "Purchasable at the Main Shop, under Armor",
-    "Requires items from the Secret Shop to be assembled, or can be assembled entirely with items from the Secret Shop"
+    "Can be disassembled"
   ],
   "states": null
 }

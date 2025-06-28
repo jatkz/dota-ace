@@ -6,45 +6,23 @@
   "sellValue": 812.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Blitz Knuckles", "Sage's Mask", "Recipe"],
+    "components": ["Blitz Knuckles", "Sage's Mask", "Robe of the Magi"],
     "totalCost": 1625
   },
   "abilities": [],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "intelligence": 10,
     "manaRegeneration": 1,
-    "attackSpeed": 35,
-    "bonusMana": 120,
-    "bonusManaRegeneration": 0.5,
-    "magicResistance": "1% flat base",
-    "mainAttackDamageInt": 10,
-    "mainAttackDamageUniversal": 4.5
+    "attackSpeed": 35
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "10 main attack damage to Intelligence heroes",
-    "4.5 main attack damage to Universal heroes"
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 main attack damage to Intelligence heroes.",
+    "4.5 main attack damage to universal heroes."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Mage Slayer",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Reduced mana regeneration bonus from 1.25 to 1",
-        "date": "7.35d (2024-03-21)"
-      },
-      {
-        "description": "Oblivion Staff now requires Blitz Knuckles (1000 gold) to build, instead of Quarterstaff (875 gold) (total cost increases from 1500 gold to 1625 gold). Increased attack speed bonus from 10 to 35. No longer grants 15 attack damage bonus. No longer builds into Echo Sabre. Now builds into Orchid Malevolence and Witch Blade",
-        "date": "7.35 (2023-12-14)"
-      }
-    ]
-  }
+  "states": []
 }

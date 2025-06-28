@@ -2,14 +2,14 @@
   "name": "Phylactery",
   "description": "An amulet overflowing with powerful magics.",
   "category": "Armaments",
-  "cost": 2600,
-  "sellValue": 1300,
+  "cost": 2500,
+  "sellValue": 1250,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Recipe components not clearly specified in HTML"],
-    "totalCost": 2600
+    "components": ["Diadem", "Point Booster", "Recipe"],
+    "totalCost": 2500
   },
   "abilities": [
     {
@@ -24,33 +24,34 @@
         "damage": 150,
         "moveSpeedSlow": "30%",
         "duration": 3,
-        "damageType": "Magical"
+        "downtime": 10
       },
       "notes": [
-        "Affects most offensive unit-targeted ability casts, except item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities",
+        "Affects most offensive unit-targeted ability casts, except Item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities",
         "If the ability's target turns invulnerable, or if Spell Block triggers, Empower Spell will not trigger",
         "The order of damage and debuff application depends on the target health when receiving target spell",
         "If the target's health is above 150, Empower Spell's effects get applied before the triggering ability's effects",
-        "If the target's health below or equal to 150, the triggering ability's effects get applied before Empower Spell's effects",
-        "Shares cooldowns with Khanda. If both items are present, the older one takes priority"
+        "If the target's health below or equal to 150, the triggering ability's effects get before Empower Spell's effects",
+        "Shares cooldowns with Khanda. If both items are present, the older one takes priority",
+        "Only the oldest source within the inventory applies its debuffs. If applied by different players, the debuffs fully stack"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 7,
     "agility": 7,
     "intelligence": 7,
     "health": 200,
-    "mana": 200,
-    "disassemble": false
+    "mana": 200
   },
   "additionalInfo": [
-    "The item's attributes grant 154 health and 0.7 health regeneration",
-    "Grants 84 mana, 0.35 mana regeneration and 0.7% flat base magic resistance",
-    "Provides 7 attack speed and 1.17 main armor",
-    "Adds 7 main attack damage to all Strength/Agility/Intelligence heroes",
-    "Adds 9.45 main attack damage to universal heroes",
-    "Ganking heroes with low-cooldown unit-targeted abilities often benefit from Phylactery for a noticeable early boost to damage output"
+    "The item's attributes grant the following additional stats:",
+    "154 health and 0.7 health regeneration",
+    "84 mana, 0.35 mana regeneration and 0.7% flat base magic resistance",
+    "7 attack speed and 1.17 main armor",
+    "7 main attack damage to all Strength/Agility/Intelligence heroes",
+    "9.45 main attack damage to universal heroes"
   ],
   "states": null
 }

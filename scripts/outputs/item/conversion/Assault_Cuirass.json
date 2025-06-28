@@ -6,9 +6,9 @@
   "sellValue": 2562.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Buckler", "Platemail", "Chainmail", "Recipe"],
+    "components": ["Platemail", "Hyperstone", "Buckler", "Recipe"],
     "totalCost": 5125
   },
   "abilities": [
@@ -33,23 +33,18 @@
         "A unit can be affected by the positive and the negative aura from different sources at the same time",
         "Affects invulnerable allies and enemies, but not hidden ones",
         "The status debuff icon on enemies only shows up when the affected unit has vision over the source",
-        "However, the armor reduction in the HUD is always visible",
-        "Now pierces Debuff Immunity"
+        "However, the armor reduction in the HUD is always visible"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "armor": 10,
     "attackSpeed": 30
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "With the Assault Aura, the item grants a total of 15 armor and 60 attack speed to the wielder",
-    "The Assault Aura is a great tool for pushing enemy towers, as it provides reliable attack speed and armor",
-    "The Attack Speed aura works on illusions, but the armor aura does not",
-    "The aura is also good for controlled units especially with low base attack time and for the bonus armor and armor reduction of the enemy",
-    "Can only be completed with items from the Secret Shop",
-    "Cannot be disassembled"
+    "With the Assault Aura, the item grants a total of 15 armor and 60 attack speed to the wielder"
   ],
   "states": null
 }

@@ -6,11 +6,8 @@
   "sellValue": 500,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": ["Shadow Amulet"],
-    "totalCost": 1000
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [
     {
       "name": "Fade",
@@ -24,7 +21,7 @@
         "fadeTime": 1.25,
         "duration": 3.5,
         "moveSpeedSlow": "35%",
-        "affects": "Allied Heroes"
+        "effectiveDuration": 2.25
       },
       "notes": [
         "Double-tapping automatically targets self",
@@ -37,45 +34,19 @@
         "Picking up, dropping, or selling items does not break the invisibility",
         "During the fade time, casting abilities or items does not break the invisibility",
         "After the fade time, upon reaching the cast point of abilities or items breaks invisibility",
-        "After the fade, upon reaching the attack point of an attack breaks invisibility",
-        "Does not share cooldowns with Glimmer Cape",
-        "Can now be dispelled"
+        "After the fade, upon reaching the attack point of an attack breaks invisibility, regardless of whether the attack lands or not",
+        "For ranged units this is upon projectile launch",
+        "Does not share cooldowns with Glimmer Cape"
       ]
     }
   ],
-  "stats": {
-    "moveSpeedSlowWhileInvisible": "35%"
-  },
+  "stats": {},
+  "bonus": {},
   "additionalInfo": [
-    "Reduces the target's movement speed for the whole duration",
-    "Invisibility is broken upon casting an ability or item, or upon attacking"
+    "Available in the Base Shop under Miscellaneous category",
+    "Used as a component for Glimmer Cape and Shadow Blade",
+    "Provides invisibility with movement speed reduction during fade time",
+    "Buff is dispellable by any dispel sources"
   ],
-  "recommendedHeroes": null,
-  "states": [
-    {
-      "icon": "Fading into invisibility",
-      "contains": "Hero in fade time state"
-    },
-    {
-      "icon": "Fully invisible", 
-      "contains": "Hero in full invisibility state"
-    }
-  ],
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer resets its cooldown when cast on self. Increased cooldown from 7 to 18. No longer requires the target to remain stationary while invisible. Now slows the target's movement speed by 35% while invisible. Reduced duration from 15 to 3.5. Can now be dispelled.",
-        "date": "7.37 (2024-07-31)"
-      },
-      {
-        "description": "Reduced Fade duration from Indefinite to 15.",
-        "date": "7.32 (2022-08-24)"
-      },
-      {
-        "description": "Fade no longer has a 250 cast range buffer.",
-        "date": "7.30 (2021-08-18)"
-      }
-    ]
-  }
+  "states": null
 }

@@ -40,6 +40,9 @@ Parse the provided HTML content and extract all relevant item information. Creat
   "stats": {
     // Item-specific stats as key-value pairs
   },
+  "bonus": {
+    // Key-value pair stats included only in the bonus section
+  }
   "additionalInfo": [
     "array of additional information points"
   ],
@@ -62,6 +65,7 @@ Parse the provided HTML content and extract all relevant item information. Creat
 6. **Stats**: Extract any numerical bonuses or effects
 7. **Additional Info**: Include bullet points about item mechanics
 8. **States**: For items like Bottle, extract different visual/functional states
+9. **Bonus**: Extract item bonus section only.
 
 ## Special Handling
 

@@ -6,9 +6,9 @@
   "sellValue": 1387.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Oblivion Staff", "Chainmail", "Recipe"],
+    "components": ["Oblivion Staff", "Chainmail", "Orb of Venom", "Recipe"],
     "totalCost": 2775
   },
   "abilities": [
@@ -39,7 +39,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "intelligence": 12,
     "manaRegeneration": 1.5,
     "armor": 6,
@@ -47,8 +48,7 @@
     "projectileSpeed": 300
   },
   "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
+    "The item's attributes grant 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
     "12 main attack damage to Intelligence heroes",
     "5.4 main attack damage to Universal heroes",
     "The projectile speed bonus only affects attack projectiles"

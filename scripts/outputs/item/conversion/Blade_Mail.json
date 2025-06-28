@@ -6,9 +6,9 @@
   "sellValue": 1150,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Chainmail", "Broadsword", "Recipe"],
+    "components": ["Broadsword", "Chainmail", "Recipe"],
     "totalCost": 2300
   },
   "abilities": [
@@ -47,21 +47,20 @@
       "cooldown": 25,
       "effects": {
         "damageReflected": "85%",
-        "duration": 5.5,
-        "passiveIncrease": "105% of attack damage taken plus flat value"
+        "duration": 5.5
       },
       "notes": [
         "Does not interrupts the caster's channeling abilities upon cast.",
         "Increases the passive value to 105% of attack damage taken, plus the flat value.",
         "Additionally causes Blade Mail to reflect Spell Damage as well, returning 85% of the damage taken.",
         "Does not reflect self-inflicted damage, damage flagged as HP Removal, or damage with the No-Reflection flag.",
-        "Returns the same damage type as received.",
-        "Multiple instances of Damage Return from Blade Mails do not stack."
+        "Returns the same damage type as received."
       ]
     }
   ],
-  "stats": {
-    "armor": 7,
+  "stats": null,
+  "bonus": {
+    "armor": 6,
     "attackDamage": 18
   },
   "additionalInfo": [

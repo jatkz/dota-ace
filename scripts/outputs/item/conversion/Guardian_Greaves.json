@@ -6,9 +6,9 @@
   "sellValue": 2525,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 1,
+  "usageAlert": true,
   "recipe": {
-    "components": ["Arcane Boots", "Mekansm", "Recipe"],
+    "components": ["Mekansm", "Arcane Boots", "Buckler", "Recipe"],
     "totalCost": 5050
   },
   "abilities": [
@@ -54,7 +54,7 @@
         "healthThreshold": "25%",
         "boostedHealthRegeneration": 14.5,
         "boostedManaRegeneration": 5,
-        "boostedArmorBonus": 8
+        "boostedArmor": 8
       },
       "notes": [
         "Multiple instances of Guardian Aura do not stack",
@@ -69,7 +69,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "manaRegeneration": 1.5,
     "armor": 4,
     "moveSpeed": 50

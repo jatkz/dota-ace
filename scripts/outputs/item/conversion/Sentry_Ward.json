@@ -6,9 +6,9 @@
   "sellValue": 25,
   "maxStacks": null,
   "shareable": true,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
+    "components": ["Observer and Sentry Wards"],
     "totalCost": 50
   },
   "abilities": [
@@ -19,25 +19,23 @@
       "castAnimation": "0 + 0",
       "castRange": 500,
       "manaCost": 0,
-      "cooldown": 0,
+      "cooldown": 1,
       "effects": {
         "visionRadius": 150,
         "visionDuration": 12,
         "wardDuration": 420,
-        "trueSightRadius": 1050,
-        "auraLingerDuration": 0.5,
         "heroHitCount": 2,
         "nonHeroHitCount": 10,
         "attackerAccuracy": "100%",
-        "meleeAttackRangeBonus": 150
+        "meleeAttackRangeBonus": 150,
+        "trueSightRadius": 1050,
+        "auraLingerDuration": 0.5
       },
       "notes": [
-        "Holding CTRL allows Plant to be cast on an allied hero, sharing a Sentry Ward with them",
-        "The ward takes a fixed amount of attacks to be destroyed",
-        "Creeps take more attacks than heroes, treats Illusions and Creep-Heroes as creeps",
-        "Attacks against Sentry Wards cannot miss",
-        "Melee units have an increased attack range when attacking Sentry Wards",
-        "The player that placed the ward can always attack it with any of their units",
+        "Holding the CTRL allows Plant to be cast on an allied hero, sharing a Sentry Ward with them, using the item's cast range",
+        "The ward takes a fixed amount of attacks to be destroyed. Creeps take more attacks than heroes, treats Illusions and Creep-Heroes as creeps",
+        "Attacks against Sentry Wards cannot miss. Melee units have an increased attack range when attacking Sentry Wards",
+        "The player that placed the ward can always attack it with any of their units. However, all their attacks are treated as non-hero attacks, until the ward comes within the 50% deny range",
         "Cannot be placed in Fountain areas, Roshan's pits, within bound radius of buildings and trees, or on impassable terrain"
       ]
     }
@@ -45,38 +43,14 @@
   "stats": {
     "charges": 1,
     "stock": "3 INIT / 8 MAX",
-    "restockTime": 70
+    "stockReplenishTime": 70
   },
+  "bonus": {},
   "additionalInfo": [
-    "Stacks with itself and with Observer Wards in the inventory, there is no stack limit",
-    "The sell value adapts based on the number of instances in a stack",
+    "Stacks with itself and with Observer Wards in the inventory, there is no stack limit. The sell value adapts based on the number of instances in a stack",
     "Wards from multiple players are combined when given by allies",
     "Sentry Ward's True Sight is considered team vision, and is not bound to the player that placed the ward",
-    "If a player has their vision limited to themselves, wards placed by them do not grant them True Sight",
-    "Selecting a placed allied Sentry Ward shows the name of the player that placed the ward",
-    "Holding Alt shows all allied Sentry Wards' True Sight radius with a green ring",
-    "Destroying an enemy Sentry Ward prints out a chat notification to allies"
+    "This means if that player has their vision limited to themselves, wards placed by them do not grant them True Sight"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Sentry Wards from Warcraft 3",
-    "In DotA, it is pluralized to Sentry Wards as well"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced restock time from 80 to 70. Increased True Sight radius from 1000 to 1050.",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Sentry Wards' True Sight is now considered team vision, and not attributed to the player that placed the ward.",
-        "date": "7.36b (2024-06-05)"
-      },
-      {
-        "description": "Increased True Sight radius from 900 to 1000.",
-        "date": "7.33c (2023-05-13)"
-      }
-    ]
-  }
+  "states": null
 }

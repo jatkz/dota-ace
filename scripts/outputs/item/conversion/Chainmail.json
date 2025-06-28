@@ -6,33 +6,13 @@
   "sellValue": 275,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 550
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "armor": 4
   },
   "additionalInfo": [],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Medallion of Courage.",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "Now builds into the following items: Mekansm, Witch Blade.",
-        "date": "2020-12-17"
-      },
-      {
-        "description": "REMOVED from Side Lane Shops. No longer builds into Buckler.",
-        "date": "2019-11-26"
-      }
-    ]
-  }
+  "states": []
 }

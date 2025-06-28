@@ -6,9 +6,9 @@
   "sellValue": 700,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Boots of Speed", "Gloves of Haste", "Belt of Strength/Band of Elvenskin/Robe of the Magi"],
+    "components": ["Boots of Speed", "Gloves of Haste", "Belt of Strength"],
     "totalCost": 1400
   },
   "abilities": [
@@ -18,7 +18,7 @@
       "description": "Switches between granting strength, agility, and intelligence.",
       "castAnimation": "0 + 0",
       "castRange": null,
-      "manaCost": 0,
+      "manaCost": null,
       "cooldown": 0,
       "effects": {
         "selectedAttributeBonus": 10
@@ -34,55 +34,34 @@
     }
   ],
   "stats": {
-    "moveSpeed": {
-      "strength": 45,
-      "agility": 55,
-      "intelligence": 45
-    },
-    "attackSpeed": 25,
-    "mainAttackDamage": {
-      "strengthAgilityIntelligence": 10,
-      "universal": 4.5
-    }
+    "moveSpeedMelee": 55,
+    "moveSpeedRanged": 45,
+    "attackSpeed": 25
+  },
+  "bonus": {
+    "moveSpeedMelee": 55,
+    "moveSpeedRanged": 45,
+    "attackSpeed": 25
   },
   "additionalInfo": [
     "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority",
     "Stacks with all other movement speed bonus",
-    "There are three ways to assemble Power Treads. Based on which item is chosen, the boot's initial attribute status is different",
-    "The status can be switched with Switch Attribute freely after purchase",
+    "There are three ways to assemble Power Treads. Based on which item is chosen, the boot's initial Strength / Agility / Intelligence attribute status is different. The status can be switched with Switch Attribute freely after purchase",
     "When listed in quickbuy, the item's assembly components are based on the hero's primary attribute. For universal heroes, it shows the strength version",
     "Disassembling Power Treads returns the items which were originally used to build it. It is not based on the currently selected attribute"
   ],
-  "recommendedHeroes": null,
   "states": [
     {
-      "icon": "Strength Treads",
+      "icon": "Power Treads (Strength)",
       "contains": "220 health + 1 health regen, 25 attack speed"
     },
     {
-      "icon": "Agility Treads", 
+      "icon": "Power Treads (Agility)", 
       "contains": "1.67 armor, 35 attack speed"
     },
     {
-      "icon": "Intelligence Treads",
+      "icon": "Power Treads (Intelligence)",
       "contains": "120 mana + 0.5 mana regen + 1% magic resistance, 25 attack speed"
     }
-  ],
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Increased movement speed bonus from 45/45 to 45/55",
-        "date": "7.33 (2023-04-20)"
-      },
-      {
-        "description": "Increased Gloves of Haste cost from 400 to 450 (total cost increases from 1350 to 1400)",
-        "date": "7.26b (2020-04-28)"
-      },
-      {
-        "description": "CHANGED movement speed bonus from 15% to a flat 45",
-        "date": "7.26a (2020-04-21)"
-      }
-    ]
-  }
+  ]
 }

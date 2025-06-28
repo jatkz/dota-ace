@@ -6,28 +6,32 @@
   "sellValue": 1050,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Staff of Wizardry", "Robe of the Magi", "Recipe"],
     "totalCost": 2100
   },
   "abilities": [],
   "stats": {
-    "intelligence": 16,
-    "spellDamageAmp": 10,
-    "manaRegenAmp": 40,
     "mana": 192,
     "manaRegeneration": 0.8,
     "magicResistance": 1.6,
-    "mainAttackDamageInt": 16,
+    "mainAttackDamageIntelligence": 16,
     "mainAttackDamageUniversal": 7.2
   },
+  "bonus": {
+    "intelligence": 16,
+    "spellDamageAmp": 10,
+    "manaRegenAmp": 40
+  },
   "additionalInfo": [
-    "The item's attributes grant 192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
-    "Grants 16 main attack damage to Intelligence heroes",
-    "Grants 7.2 main attack damage to Universal heroes",
-    "Multiple sources of spell damage amplification do not stack",
-    "Multiple sources of mana regeneration amplification do not stack"
+    "The item's attributes grant the following additional stats:",
+    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance.",
+    "16 main attack damage to Intelligence heroes.",
+    "7.2 main attack damage to universal heroes.",
+    "For Kaya-based items:",
+    "Multiple sources of spell damage amplification do not stack.",
+    "Multiple sources of mana regeneration amplification do not stack."
   ],
   "states": []
 }

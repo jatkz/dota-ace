@@ -6,17 +6,20 @@
   "sellValue": 1000,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 2000
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "attackSpeed": 60
   },
   "additionalInfo": [
-    "Hyperstone is featured in the Dota 2 Gamescom trailer, and is described as an item that grants \"speed beyond measure\"."
+    "Available in the Secret Shop",
+    "Full price refunded within 10s",
+    "Used as component in Assault Cuirass, Moon Shard, Mjollnir, and Bloodthorn"
   ],
   "states": []
 }

@@ -6,13 +6,14 @@
   "sellValue": 112.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 225
   },
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "moveSpeed": 15
   },
   "additionalInfo": [
@@ -20,36 +21,5 @@
     "However, Wind Lace stacks with other Wind Lace-based items.",
     "Stacks with all other movement speed bonus."
   ],
-  "recommendedHeroes": [
-    "Crystal Maiden",
-    "Invoker", 
-    "Techies",
-    "Pudge",
-    "Witch Doctor",
-    "Bloodseeker",
-    "Lycan",
-    "Spirit Breaker"
-  ],
-  "states": [],
-  "trivia": [
-    "The Wind Lace was first suggested on Playdota in 2010 by RCHLNKI.",
-    "Wind Lace was inspired by the introduction of Javelin, which became the base for proc based items. Wind Lace aimed to be a base for non-boot movement based items.",
-    "Wind Lace was called \"Wind Lance\" in the beta."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced gold cost from 250 to 225. Reduced movement speed bonus from 20 to 15.",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "No longer builds into Spirit Vessel.",
-        "date": "7.26a (2020-04-21)"
-      },
-      {
-        "description": "CHANGED movement speed bonus from 6% to a flat 20.",
-        "date": "7.21 (2019-01-29)"
-      }
-    ]
-  }
+  "states": []
 }

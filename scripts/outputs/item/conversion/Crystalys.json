@@ -6,7 +6,7 @@
   "sellValue": 1000,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Claymore", "Blades of Attack", "Recipe"],
     "totalCost": 2000
@@ -22,26 +22,26 @@
       "cooldown": null,
       "effects": {
         "procChance": "30%",
-        "criticalDamage": "160%",
-        "averageDamageIncrease": "18%"
+        "criticalDamage": "160%"
       },
       "notes": [
         "The proc is determined during the unit's attack point",
         "The proc chance of multiple sources stack",
         "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
         "Critical Strike uses pseudo-random distribution",
+        "Increases attack damage by an average of 18%",
         "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "attackDamage": 32
   },
   "additionalInfo": [
-    "Affects Enemy Units",
-    "Damage type: Attack / Physical",
-    "Disassemble: No",
-    "Increases attack damage by an average of 18%"
+    "Can be used by illusions",
+    "Cannot be disassembled",
+    "Not shareable between players"
   ],
   "states": null
 }

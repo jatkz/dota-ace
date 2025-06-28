@@ -6,9 +6,9 @@
   "sellValue": 2587.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Mystic Staff", "Platemail", "Recipe"],
+    "components": ["Veil of Discord", "Platemail", "Recipe"],
     "totalCost": 5175
   },
   "abilities": [
@@ -27,7 +27,7 @@
         "slowDuration": 4,
         "illusionsDamageMultiplier": 1.5,
         "incomingSpellDamageAmp": "15%",
-        "magicWeaknessDuration": 16
+        "spellAmpDuration": 16
       },
       "notes": [
         "Does not interrupt the caster's channeling abilities upon cast. Exception: Tricks of the Trade.",
@@ -60,7 +60,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 5,
     "agility": 5,
     "intelligence": 5,
@@ -69,12 +70,7 @@
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally.",
-    "The item's attributes grant the following additional stats:",
-    "110 health and 0.5 health regeneration.",
-    "60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance.",
-    "5 attack speed and 0.83 main armor.",
-    "5 main attack damage to all Strength/Agility/Intelligence heroes.",
-    "6.75 main attack damage to universal heroes."
+    "The item's attributes grant the following additional stats: 110 health and 0.5 health regeneration, 60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance, 5 attack speed and 0.83 main armor, 5 main attack damage to all Strength/Agility/Intelligence heroes, 6.75 main attack damage to universal heroes."
   ],
   "states": null
 }

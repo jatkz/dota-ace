@@ -5,12 +5,9 @@
   "cost": 200,
   "sellValue": 100,
   "maxStacks": null,
-  "shareable": "0",
-  "usageAlert": "0",
-  "recipe": {
-    "components": [],
-    "totalCost": 200
-  },
+  "shareable": false,
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [
     {
       "name": "Energy Charge",
@@ -18,7 +15,7 @@
       "description": "Instantly heals and and replenishes the caster's health and mana per accumulated charge.",
       "castAnimation": "0 + 0",
       "castRange": null,
-      "manaCost": null,
+      "manaCost": 0,
       "cooldown": 17,
       "effects": {
         "maxCharges": 10,
@@ -33,34 +30,18 @@
         "When upgraded to Magic Wand, all the current charges are carried over.",
         "Interrupts the wielder's channeling abilities.",
         "Gains 1 charge for each ability cast by an enemy.",
-        "Does not gain charges from active attack modifiers, toggle-able abilities, other excluded sources, active abilities that are procced passively, or abilities cast out of invisibility.",
-        "With multiple copies within the inventory, the oldest item gains charges first.",
-        "Can heal and mana restore up to 150 with max charges."
+        "Does not gain charges from active attack modifiers, toggle-able abilities, other sources listed, active abilities that are procced passively, abilities cast out of invisibility",
+        "With multiple copies within the inventory, the oldest item gains charges first",
+        "Can heal and mana restore up to 150 with max charges"
       ]
     }
   ],
   "stats": {},
+  "bonus": {},
   "additionalInfo": [
-    "Shares cooldown with other Magic Stick-based items",
-    "Maximum healing and mana restoration of 150 with full charges"
+    "Shares cooldown with Magic Wand and Holy Locket",
+    "Available in the Base Shop under Miscellaneous category",
+    "Can be upgraded to Magic Wand"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Energy Charge cooldown increased from 13s to 17s.",
-        "date": "2024-03-21"
-      },
-      {
-        "description": "REMOVED from Side Lane Shops.",
-        "date": "2019-11-26"
-      },
-      {
-        "description": "No longer loses its current charges upon getting upgraded to Magic Wand.",
-        "date": "2012-01-12"
-      }
-    ]
-  }
+  "states": []
 }

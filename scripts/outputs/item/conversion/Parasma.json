@@ -6,16 +6,16 @@
   "sellValue": 2987.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Recipe"],
+    "components": ["Witch Blade", "Mystic Staff", "Recipe"],
     "totalCost": 5975
   },
   "abilities": [
     {
       "name": "Witch Blade",
       "type": "passive",
-      "description": "The next attack poisons the target, slowing their movement speed and dealing damage over time, based on the wielder's intelligence. This attack cannot miss.",
+      "description": "The next attack poisons the target, slowing their movement speed and dealing damage over time, basead on the wielder's intelligence. This attack cannot miss.",
       "castAnimation": null,
       "castRange": null,
       "manaCost": null,
@@ -32,6 +32,7 @@
         "Uses a custom projectile when the wielder is ranged",
         "Reapplying the debuff refreshes the duration",
         "Does not affect Buildings, Ward-type units, or Ally units",
+        "Shares cooldown with Witch Blade",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 4 instances",
         "Can deal up to 300% of the wielder's intelligence as damage (before reductions)"
       ]
@@ -52,28 +53,30 @@
         "The magic resistance reduction value does not stack",
         "Reapplying the debuff refreshes the duration",
         "Stacks multiplicatively with other sources of magic resistance",
-        "Affects Allied units and Ward-type units"
+        "Affects Allied units and Ward-type units",
+        "Pierces Debuff Immunity"
       ]
     }
   ],
   "stats": {
+    "mana": 480,
+    "manaRegeneration": 2,
+    "magicResistance": "4%",
+    "mainAttackDamageIntelligence": 40,
+    "mainAttackDamageUniversal": 18
+  },
+  "bonus": {
     "intelligence": 40,
     "manaRegeneration": 1.5,
     "armor": 6,
     "attackSpeed": 40,
-    "projectileSpeed": 300,
-    "mana": 480,
-    "flatBaseMagicResistance": "4%",
-    "mainAttackDamageToIntelligenceHeroes": 40,
-    "mainAttackDamageToUniversalHeroes": 18
+    "projectileSpeed": 300
   },
   "additionalInfo": [
     "The item's attributes grant 480 mana, 2 mana regeneration and 4% flat base magic resistance",
-    "40 main attack damage to intelligence heroes",
+    "40 main attack damage to Intelligence heroes",
     "18 main attack damage to universal heroes",
-    "The projectile speed bonus only affects attack projectiles",
-    "Can only be completed with items from the Secret Shop",
-    "Cannot be disassembled"
+    "The projectile speed bonus only affects attack projectiles"
   ],
   "states": null
 }

@@ -6,7 +6,7 @@
   "sellValue": 2025,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Ogre Axe", "Mithril Hammer", "Recipe"],
     "totalCost": 4050
@@ -18,40 +18,37 @@
       "description": "Grants bonus magic resistance, debuff immunity, and applies a basic dispel upon cast. The wielder has pure damage immunity, including from damage reflect sources for the entire duration.",
       "castAnimation": "0 + 0",
       "castRange": null,
-      "manaCost": 0,
+      "manaCost": 50,
       "cooldown": 95,
       "effects": {
         "magicResistanceBonus": "60%",
         "duration": "9/8/7/6",
-        "manaCost": 50,
-        "modelSizeIncrease": "30%",
-        "debuffImmunity": true,
-        "pureDamageImmunity": true,
-        "basicDispel": true
+        "modelSizeIncrease": "30%"
       },
       "notes": [
         "The ability duration reduces per cast and is bound to the wielder. Rebuying the item does not reset the ability duration.",
         "Interrupts the wielder's channeling abilities upon cast.",
         "Stacks multiplicatively with other magic resistance sources.",
+        "Applies a basic dispel on the wielder.",
+        "Debuff immunity and pure damage immunity for the entire duration.",
+        "A 30% model size increase. Does not affect collision size.",
         "A countdown on the item's icon indicates the remaining duration, visible to everyone.",
-        "Avatar increases the total magic resistance by 0.4% per 10 intelligence points.",
-        "Does not affect collision size despite model size increase."
+        "Has 70% magic resistance while active.",
+        "Avatar increases the total magic resistance by 0.4% per 10 intelligence points."
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 10,
-    "attackDamage": 24,
-    "health": 220,
-    "healthRegeneration": 1,
-    "mainAttackDamageStrength": 10,
-    "mainAttackDamageUniversal": 4.5
+    "attackDamage": 24
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally.",
-    "The item's attributes grant 220 health and 1 health regeneration.",
-    "Grants 10 main attack damage to strength heroes.",
-    "Grants 4.5 main attack damage to universal heroes."
+    "The item's attributes grant the following additional stats:",
+    "220 health and 1 health regeneration.",
+    "10 main attack damage to Strength heroes.",
+    "4.5 main attack damage to universal heroes."
   ],
   "states": null
 }

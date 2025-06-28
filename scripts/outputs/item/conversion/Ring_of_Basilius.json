@@ -6,9 +6,9 @@
   "sellValue": 212.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Sage's Mask", "Ring of Protection"],
+    "components": ["Sage's Mask", "Recipe"],
     "totalCost": 425
   },
   "abilities": [
@@ -32,31 +32,12 @@
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "manaRegeneration": 0.5
   },
   "additionalInfo": [
     "With Basilius Aura, the item grants a total of 1.5 mana regeneration to the wielder."
   ],
-  "recommendedHeroes": [],
-  "states": null,
-  "trivia": [
-    "Basilius is derived from the Greek word Basileus, meaning \"king\" or \"emperor\"."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Now builds into Arcane Boots. No longer builds into Veil of Discord.",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "Reduced mana regeneration bonus from 0.6 to 0.5.",
-        "date": "2021-04-29"
-      },
-      {
-        "description": "Now grants 0.6 mana regeneration bonus. Reduced Basilius Aura mana regeneration bonus from 1.4 to 1.",
-        "date": "2021-04-09"
-      }
-    ]
-  }
+  "states": []
 }

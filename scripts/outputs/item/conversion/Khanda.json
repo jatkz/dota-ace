@@ -2,14 +2,14 @@
   "name": "Khanda",
   "description": "A blade sharp enough to slice through magic itself.",
   "category": "Armaments",
-  "cost": 5700,
-  "sellValue": 2850,
+  "cost": 5600,
+  "sellValue": 2800,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Tiara of Selemene"],
-    "totalCost": 5700
+    "components": ["Phylactery", "Tiara of Selemene", "Recipe"],
+    "totalCost": 5600
   },
   "abilities": [
     {
@@ -24,20 +24,31 @@
         "damage": 250,
         "moveSpeedSlow": "30%",
         "duration": 4,
-        "damageType": "Magical"
+        "downtime": 10
       },
       "notes": [
         "Shares cooldowns with Phylactery. If both items are present, the older one takes priority.",
-        "Affects most offensive unit-targeted ability casts, except item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities",
-        "Applies Break on the target",
-        "If the ability's target turns invulnerable, or if Spell Block triggers, Empower Spell will not trigger",
-        "The order of damage and debuff application depends on the target health when receiving target spell",
-        "If the target's health is above 250, Empower Spell's effects get applied before the triggering ability's effects",
-        "If the target's health below or equal to 250, the triggering ability's effects get before Empower Spell's effects"
+        "Affects most offensive unit-targeted ability casts, except Item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities.",
+        "Applies Break on the target.",
+        "If the ability's target turns invulnerable, or if Spell Block triggers, Empower Spell will not trigger.",
+        "The order of damage and debuff application depends on the target health when receiving target spell.",
+        "If the target's health is above 250, Empower Spell's effects get applied before the triggering ability's effects.",
+        "If the target's health below or equal to 250, the triggering ability's effects get before Empower Spell's effects."
       ]
     }
   ],
   "stats": {
+    "healthFromAttributes": 176,
+    "healthRegenerationFromAttributes": 0.8,
+    "manaFromAttributes": 96,
+    "manaRegenerationFromAttributes": 0.4,
+    "magicResistanceFromAttributes": "0.8%",
+    "attackSpeedFromAttributes": 8,
+    "armorFromAttributes": 1.33,
+    "attackDamageToStrAgiInt": 8,
+    "attackDamageToUniversal": 10.8
+  },
+  "bonus": {
     "strength": 8,
     "agility": 8,
     "intelligence": 8,
@@ -47,11 +58,11 @@
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "176 health and 0.8 health regeneration",
-    "96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance",
-    "8 attack speed and 1.33 main armor",
-    "8 main attack damage to all Strength/Agility/Intelligence heroes",
-    "10.8 main attack damage to universal heroes"
+    "176 health and 0.8 health regeneration.",
+    "96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance.",
+    "8 attack speed and 1.33 main armor.",
+    "8 main attack damage to all Strength/Agility/Intelligence heroes.",
+    "10.8 main attack damage to universal heroes."
   ],
   "states": null
 }

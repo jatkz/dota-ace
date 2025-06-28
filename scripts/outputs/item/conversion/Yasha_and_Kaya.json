@@ -6,32 +6,36 @@
   "sellValue": 2100,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Yasha", "Kaya"],
+    "components": ["Kaya", "Yasha"],
     "totalCost": 4200
   },
   "abilities": [],
   "stats": {
+    "disassemble": true
+  },
+  "bonus": {
     "agility": 16,
     "intelligence": 16,
     "moveSpeed": "12%",
     "spellDamageAmp": "12%",
     "attackSpeed": 20,
     "castSpeed": 25,
-    "manaRegenAmp": "50%",
-    "disassemble": true
+    "manaRegenAmp": "50%"
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
-    "16 attack speed and 2.67 main armor",
-    "16 main attack damage to agility/intelligence heroes",
-    "14.4 main attack damage to universal heroes",
-    "For Yasha-based items: Multiple sources of movement speed do not stack",
-    "For Yasha-based items: Multiple sources of attack speed fully stack",
-    "For Kaya-based items: Multiple sources of spell damage amplification do not stack",
-    "For Kaya-based items: Multiple sources of mana regeneration amplification do not stack"
+    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance.",
+    "16 attack speed and 2.67 main armor.",
+    "16 main attack damage to Agility/Intelligence heroes.",
+    "14.4 main attack damage to universal heroes.",
+    "For Yasha-based items:",
+    "Multiple sources of movement speed do not stack.",
+    "Multiple sources of attack speed fully stack.",
+    "For Kaya-based items:",
+    "Multiple sources of spell damage amplification do not stack.",
+    "Multiple sources of mana regeneration amplification do not stack."
   ],
   "states": []
 }

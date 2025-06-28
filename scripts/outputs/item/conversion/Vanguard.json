@@ -6,9 +6,9 @@
   "sellValue": 850,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Ring of Health", "Vitality Booster", "Stout Shield"],
+    "components": ["Ring of Health", "Vitality Booster"],
     "totalCost": 1700
   },
   "abilities": [
@@ -22,10 +22,11 @@
       "cooldown": null,
       "effects": {
         "procChance": "60%",
-        "blockedDamageMelee": 50,
+        "blockedDamage": 50,
         "blockedDamageRanged": 25
       },
       "notes": [
+        "Ranged wielders block less damage with the same proc chance",
         "Uses pseudo-random distribution",
         "When multiple different sources proc on the same attack, the one with a higher value takes priority",
         "Multiple sources of the same value stack multiplicatively",
@@ -34,7 +35,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 250,
     "healthRegeneration": 4.5
   },
@@ -42,11 +44,12 @@
     "The proc chances of all sources of Damage Block work independently from each other",
     "When multiple sources of Damage Block proc on the same attack, only the one with the highest blocked damage value takes effect",
     "Can be disassembled",
-    "Effective to block the attack damage from summoned units and illusions",
-    "Especially useful with tanky frontline heroes",
+    "Effective to block the attack damage from summoned units and illusions (except from Chaos Knight Phantasm illusions which applies full damage and proc crit)",
+    "Especially useful with tanky frontline heroes that need to survive much damage",
     "Less useful for heroes with high armor",
     "Can be purchased over a lifesteal item to jungle with a melee hero",
-    "Often disassembled into Heart of Tarrasque or Lotus Orb in late game"
+    "Because it is less effective in late game, it is often disassembled into a Heart of Tarrasque or Lotus Orb",
+    "On a melee hero with low amount of HP it can be more effective than magic resistance items to tank both spells and physical damages"
   ],
-  "states": null
+  "states": []
 }

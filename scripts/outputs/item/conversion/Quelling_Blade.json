@@ -6,9 +6,9 @@
   "sellValue": 50,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": [],
+    "components": ["Quelling Blade"],
     "totalCost": 100
   },
   "abilities": [
@@ -24,7 +24,7 @@
         "affects": "Trees"
       },
       "notes": [
-        "Does not share cooldown with Chop Tree from other items"
+        "Does not share cooldown with Chop Tree."
       ]
     },
     {
@@ -36,55 +36,28 @@
       "manaCost": null,
       "cooldown": null,
       "effects": {
-        "meleeAttackDamageBonus": 8,
-        "rangedAttackDamageBonus": 4,
+        "attackDamageBonus": 8,
+        "attackDamageBonusRanged": 4,
         "affects": "Enemies",
         "damageType": "Attack / Physical"
       },
       "notes": [
-        "Quell is considered as a conditional attack damage bonus",
-        "Attack damage bonus values are not displayed in the HUD but are still considered",
-        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities",
-        "Can be reduced only by flat reductions (e.g. damage block)",
-        "Not affected by percentage-based attack damage bonuses or reductions",
-        "The attack damage bonus adapts immediately depending on the wielder's range type",
-        "Stacks with the Quell of Battle Fury, but not with additional Quelling Blades",
-        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, or Allied units"
+        "Quell is considered as a conditional attack damage bonus.",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage.",
+        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities (e.g. Psi Blades and Moon Glaives)",
+        "It can be reduced only by flat reductions (e.g. damage block).",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
+        "The attack damage bonus adapts immediately depending on the wielder's range type (melee or ranged).",
+        "Stacks with the Quell of Battle Fury, but not with additional Quelling Blades.",
+        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, Allied units"
       ]
     }
   ],
   "stats": {},
+  "bonus": {},
   "additionalInfo": [
-    "Quell is less effective if its wielder is a ranged hero"
+    "Quelling Blade is usually purchased by melee carries who need to ensure that they can get last hits in the lane.",
+    "Quell is less effective if its wielder is a ranged hero."
   ],
-  "recommendedHeroes": [
-    "Anti-Mage",
-    "Phantom Assassin", 
-    "Juggernaut",
-    "Sven",
-    "Wraith King",
-    "Alchemist",
-    "Lifestealer",
-    "Chaos Knight",
-    "Dragon Knight",
-    "Pudge"
-  ],
-  "states": null,
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced gold cost from 130 to 100. Reduced Quell attack damage bonus from melee heroes from 12 to 8. Reduced attack damage bonus from ranged heroes from 6 to 4.",
-        "date": "7.31 (2022-02-23)"
-      },
-      {
-        "description": "Reduced Quell attack damage bonus from melee heroes from 13 to 12.",
-        "date": "7.29 (2021-04-09)"
-      },
-      {
-        "description": "Reduced Quell attack damage bonus from melee heroes from 15 to 13.",
-        "date": "7.28 (2020-12-17)"
-      }
-    ]
-  }
+  "states": []
 }

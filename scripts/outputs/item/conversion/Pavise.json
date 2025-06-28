@@ -6,9 +6,9 @@
   "sellValue": 700,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": null,
+    "components": ["Energy Booster", "Ring of Protection", "Fluffy Hat", "Recipe"],
     "totalCost": 1400
   },
   "abilities": [
@@ -22,47 +22,27 @@
       "cooldown": 16,
       "effects": {
         "physicalDamageBarrier": 250,
-        "duration": 7,
-        "targetType": "Unit",
-        "affects": "Allies"
+        "duration": 7
       },
       "notes": [
         "Grants a physical damage barrier that absorbs physical damage values, causing several on-damage effects to not trigger within its capacity",
         "Stacks additively with the same damage-type barrier sources, and independently with other damage-type barrier sources",
         "Has a higher priority than universal damage barriers in the group of damage barriers",
-        "When combined with other higher-priority damage-negating sources (e.g. Refraction), Protect does not absorb any damage until the damage-negation sources expire",
+        "When combined with other higher-priority damage-negating sources (e.g. Templar Assassin Refraction), Protect does not absorb any damage until the damage-negation sources expire",
         "Successive casts refresh the buff and reset the damage barrier capacity",
-        "Shares cooldown with other similar items"
+        "Shares cooldown with Solar Crest"
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 175,
     "mana": 250,
     "armor": 2
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Solar Crest was purchased as well, Solar Crest's icon takes priority",
-    "Cannot be disassembled"
+    "If a Solar Crest was purchased as well, Solar Crest's icon takes priority"
   ],
-  "recommendedHeroes": null,
-  "states": null,
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Protect: Reduced barrier health from 300 to 250. Reduced duration from 8s to 7s. Increased mana cost from 75 to 100",
-        "date": "7.37d (2024-10-01)"
-      },
-      {
-        "description": "Health bonus increased from 150 to 175",
-        "date": "7.37 (2024-07-31)"
-      },
-      {
-        "description": "Reduced armor bonus from 3 to 2. Reduced health bonus from 175 to 150",
-        "date": "7.35b (2023-12-21)"
-      }
-    ]
-  }
+  "states": []
 }

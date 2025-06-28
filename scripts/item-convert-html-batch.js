@@ -16,7 +16,8 @@ async function main() {
 
         console.log('Total items ', DOTA2_ITEMS.length);
 
-        const items = DOTA2_ITEMS.slice(139, 189);
+        // const items = DOTA2_ITEMS.slice(70, 71);
+        // const items = DOTA2_ITEMS.filter(x => x.includes('Kaya_and_Sange'));
         console.log('items to handle....', items);
         const batchConfig = items.map(x => {
             const fileName = x.split('/').pop();

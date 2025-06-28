@@ -6,7 +6,7 @@
   "sellValue": 1300,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Staff of Wizardry", "Void Stone", "Wind Lace", "Recipe"],
     "totalCost": 2600
@@ -34,32 +34,29 @@
         "Can only target enemies, self or own Meepo Clones and Tempest Doubles",
         "Cannot target other allies, wards or buildings",
         "While cycloned, the affected unit is moved upwards and has no collision",
-        "A 24-radius pathing blocker is created at the base of the affected unit while active",
-        "The magical spell damage is applied at the end of the duration",
-        "If the cyclone gets dispelled, it still applies the damage as soon as the target lands",
+        "However, a 24-radius pathing blocker is created at the base of the affected unit while active",
+        "The magical spell damage is applied at the end of the duration. If the cyclone gets dispelled, it still applies the damage as soon as the target lands",
         "The damage is only applied to enemy targets",
-        "Cannot lift up Roshan, instead, it instantly applies the damage"
+        "If the target is an enemy, they also take damage upon landing",
+        "Cannot lift up Roshan, instead, it instantly applies the damage",
+        "Shares cooldown with Wind Waker"
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "intelligence": 10,
     "manaRegeneration": 2.5,
-    "moveSpeed": 20,
-    "bonusMana": 120,
-    "bonusManaRegeneration": 0.5,
-    "magicResistance": "1%",
-    "mainAttackDamageInt": 10,
-    "mainAttackDamageUniversal": 4.5
+    "moveSpeed": 20
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
     "If a Wind Waker was purchased as well, Wind Waker's icon takes priority",
-    "The item's attributes grant additional mana, mana regeneration and magic resistance",
-    "Provides main attack damage to intelligence and universal heroes",
+    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "10 main attack damage to Intelligence heroes",
+    "4.5 main attack damage to universal heroes",
     "Stacks with all other movement speed bonuses",
-    "Purges first, then applies Cyclone modifier",
-    "Shares cooldown with Wind Waker"
+    "Purges first, then applies Cyclone modifier"
   ],
-  "states": null
+  "states": []
 }

@@ -6,33 +6,13 @@
   "sellValue": 350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 700
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "manaRegeneration": 1.75
   },
   "additionalInfo": [],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "MOVED from Secret Shops to Base Shops under Miscellaneous. No longer builds into Octarine Core and Pavise. Now builds into Echo Sabre.",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "Now builds into Octarine Core.",
-        "date": "2023-06-15"
-      },
-      {
-        "description": "Reduced gold cost from 825 to 700. Reduced mana regeneration bonus from 2.25 to 1.75. No longer builds into Orchid Malevolence. Now builds into Pavise.",
-        "date": "2023-04-20"
-      }
-    ]
-  }
+  "states": []
 }

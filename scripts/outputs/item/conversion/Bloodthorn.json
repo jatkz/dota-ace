@@ -6,16 +6,16 @@
   "sellValue": 3312.5,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Orchid Malevolence", "Crystalys", "Recipe"],
+    "components": ["Orchid Malevolence", "Javelin", "Hyperstone", "Recipe"],
     "totalCost": 6625
   },
   "abilities": [
     {
       "name": "Soul Rend",
       "type": "active",
-      "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage.",
+      "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage. The caster's units gain full accuracy against the target. Additionally, whenever the target gets attacked by any unit, they take additional magical damage.",
       "castAnimation": "0 + 0",
       "castRange": 900,
       "manaCost": 125,
@@ -27,14 +27,15 @@
         "bonusMagicalDamage": 50
       },
       "notes": [
-        "The caster's units gain full accuracy against the target",
-        "Whenever the target gets attacked by any unit, they take additional magical damage",
         "The damage counter accumulates all damage instances dealt to the Soul Rend target within the last 5 seconds",
         "The accumulated damage is based on the actual damage taken, after all damage manipulation is applied",
         "Does not include damage with the HP Removal or the no-reflection flag",
-        "The accumulated damage is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled",
+        "The damage is summed up into and applied as a single instance at the end of the duration, sourced to the caster of Soul Rend",
+        "The accumulated is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled",
         "Re-casting Soul Rend on the same target refreshes the duration, but does not reset the already accumulated damage",
+        "All of the caster's units have full accuracy against the target, preventing their attacks from missing",
         "The attack-based bonus damage is dealt in a separate damage instance, and counts as spell damage",
+        "The bonus damage is applied to all incoming attacks, including attacks from buildings, wards, and allies",
         "The source of the damage is the Bloodthorn caster, not the attacker itself"
       ]
     },
@@ -52,30 +53,31 @@
       },
       "notes": [
         "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage",
         "It is not considered by lifesteal, crit or cleave",
         "It can be reduced only by flat reductions",
+        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
         "Does not work against buildings, but works against wards and allied units",
         "Adds an average of 24 magical damage to every attack",
         "Pierce uses pseudo-random distribution",
-        "Pierce from Javelin-based items fully stack with another and themselves"
+        "Illusions can use the accuracy, but do not apply the bonus magical attack damage"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "intelligence": 10,
     "healthRegeneration": 6.5,
     "manaRegeneration": 3.25,
     "attackDamage": 10,
-    "attackSpeed": 95,
-    "mana": 120,
-    "flatBaseMagicResistance": "1%"
+    "attackSpeed": 95
   },
   "additionalInfo": [
     "This item is shown as a Team Item in the shop window when purchased by an ally",
     "If an Orchid Malevolence was purchased as well, Bloodthorn's icon takes priority",
     "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "Grants 10 main attack damage to Intelligence heroes",
-    "Grants 4.5 main attack damage to Universal heroes"
+    "10 main attack damage to Intelligence heroes",
+    "4.5 main attack damage to universal heroes"
   ],
   "states": null
 }

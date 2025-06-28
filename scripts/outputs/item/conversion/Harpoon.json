@@ -6,9 +6,9 @@
   "sellValue": 2350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Echo Sabre", "Recipe"],
+    "components": ["Echo Sabre", "Diadem", "Recipe"],
     "totalCost": 4700
   },
   "abilities": [
@@ -28,14 +28,16 @@
         "projectileSpeed": 2000
       },
       "notes": [
-        "When the caster is ranged, pulls the target and the caster for a percentage of the distance instead, but still respecting the max pull distance",
-        "Roshan cannot be moved, only the caster gets moved",
-        "The projectile travels at a speed of 2000",
-        "Does not disable the pulled units, they can still attack, cast abilities and items, and turn during it",
-        "Can move the units over impassable terrain",
-        "Destroys trees within a 100 radius around the pulled units",
-        "Can be cast on debuff immune enemies, pulling the caster, but not the target",
-        "Casting Harpoon instantly breaks Pounce"
+        "When the caster is ranged, pulls the target and the caster for a percentage of the distance instead, but still respecting the max pull distance.",
+        "Roshan cannot be moved, only the caster gets moved.",
+        "The projectile travels at a speed of 2000.",
+        "Does not disable the pulled units, they can still attack, cast abilities and items, and turn during it.",
+        "Does not interrupt channeling abilities of the pulled units.",
+        "Can move the units over impassable terrain.",
+        "Destroys trees within a 100 radius around the pulled units.",
+        "When cast by ranged heroes, both get moved for 35% of the distance respectively.",
+        "When cast by melee heroes, both get moved towards the halfway point, meeting at the middle.",
+        "If cast on a target within 100 distance, the ability does nothing, wasting the mana and cooldown."
       ]
     },
     {
@@ -49,39 +51,40 @@
       "effects": {
         "attackSpeedBonus": 490,
         "numberOfAttacks": 1,
+        "duration": "Indefinite",
         "moveSpeedSlow": "100%",
         "slowDuration": 1
       },
       "notes": [
-        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow",
-        "Ranged heroes cannot use Echo Strike",
-        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not",
-        "The attack speed buff has no set duration. It lasts until the user makes a second attack",
-        "Uses a custom cooldown system not affected by cooldown manipulation",
-        "Does not stack with Falcon Rush"
+        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow.",
+        "Ranged heroes cannot use Echo Strike.",
+        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not.",
+        "Grants the wielder an attack speed bonus upon triggering, the second attack is not an Instant Attack.",
+        "The attack speed buff has no set duration. It lasts until the user makes a second attack.",
+        "Harpoon's Echo Strike uses a custom cooldown system.",
+        "It is not displayed on the item icon when procced, but instead by a debuff within the status bar.",
+        "It is not affected by cooldown manipulation and cannot be reset.",
+        "Echo Strike triggers on Instant Attacks as well, with certain exceptions.",
+        "The slow debuff cannot be applied by Clones.",
+        "Multiple instances of the slow debuff do not stack."
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "strength": 25,
     "agility": 10,
     "intelligence": 10,
     "manaRegeneration": 2,
-    "attackDamage": 25,
-    "health": 550,
-    "healthRegeneration": 2.5,
-    "mana": 120,
-    "magicResistance": "1%",
-    "attackSpeed": 10,
-    "armor": 1.67
+    "attackDamage": 25
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "550 health and 2.5 health regeneration",
-    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "10 attack speed and 1.67 main armor",
-    "25, 10 and 10 main attack damage to all Strength/Agility/Intelligence heroes respectively",
-    "20.25 main attack damage to universal heroes"
+    "550 health and 2.5 health regeneration.",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
+    "10 attack speed and 1.67 main armor.",
+    "25, 10 and 10 main attack damage to all Strength / Agility / Intelligence heroes respectively.",
+    "20.25 main attack damage to universal heroes."
   ],
   "states": null
 }

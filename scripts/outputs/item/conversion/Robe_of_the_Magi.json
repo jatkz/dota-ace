@@ -6,40 +6,24 @@
   "sellValue": 225,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 450
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
   "stats": {
+    "mana": 72,
+    "manaRegeneration": 0.3,
+    "magicResistance": 0.6,
+    "mainAttackDamageIntelligence": 6,
+    "mainAttackDamageUniversal": 2.7
+  },
+  "bonus": {
     "intelligence": 6
   },
   "additionalInfo": [
     "The item's attributes grant the following additional stats:",
-    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance.",
-    "6 main attack damage to intelligence heroes.",
-    "2.7 main attack damage to universal heroes."
+    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance",
+    "6 main attack damage to Intelligence heroes",
+    "2.7 main attack damage to Universal heroes"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Robe of the Magi from Warcraft 3."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "No longer builds into Dagon. Now builds into the following items: Drum of Endurance, Witch Blade",
-        "date": "7.28 (2020-12-17)"
-      },
-      {
-        "description": "No longer builds into Blade Mail. Now builds into Dagon.",
-        "date": "7.27 (2020-06-28)"
-      },
-      {
-        "description": "REMOVED from Side Lane Shops.",
-        "date": "7.23 (2019-11-26)"
-      }
-    ]
-  }
+  "states": []
 }

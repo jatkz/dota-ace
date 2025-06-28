@@ -6,7 +6,7 @@
   "sellValue": 450,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": ["Boots of Speed", "Wind Lace", "Ring of Regen"],
     "totalCost": 900
@@ -19,7 +19,7 @@
       "castAnimation": null,
       "castRange": null,
       "manaCost": null,
-      "cooldown": null,
+      "cooldown": 13,
       "effects": {
         "moveSpeedLoss": 25,
         "healthRegenLoss": 14,
@@ -37,7 +37,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "healthRegeneration": 14,
     "moveSpeed": 65
   },
@@ -46,23 +47,14 @@
     "Stacks with all other movement speed bonus",
     "The health regeneration of multiple Tranquil Boots-based items fully stacks"
   ],
-  "recommendedHeroes": [],
-  "states": null,
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced Wind Lace cost from 250 to 225 (total cost decreases from 925 to 900)",
-        "date": "7.38 (2025-02-19)"
-      },
-      {
-        "description": "Now builds into Boots of Bearing",
-        "date": "7.31 (2022-02-23)"
-      },
-      {
-        "description": "Reduced movement speed bonus from 70 to 65",
-        "date": "7.29 (2021-04-09)"
-      }
-    ]
-  }
+  "states": [
+    {
+      "icon": "Active state",
+      "contains": "Full bonuses: +14 Health Regeneration, +65 Move Speed"
+    },
+    {
+      "icon": "Inactive/Broken state", 
+      "contains": "Reduced bonuses: +0 Health Regeneration, +40 Move Speed"
+    }
+  ]
 }

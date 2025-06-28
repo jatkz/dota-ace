@@ -6,9 +6,9 @@
   "sellValue": 1475,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Mithril Hammer", "Gloves of Haste"],
+    "components": ["Mithril Hammer", "Javelin", "Gloves of Haste"],
     "totalCost": 2950
   },
   "abilities": [
@@ -19,39 +19,43 @@
       "castAnimation": null,
       "castRange": null,
       "manaCost": null,
-      "cooldown": null,
+      "cooldown": 0.2,
       "effects": {
         "procChance": "25%",
         "bounceDistance": 650,
         "numberOfBounces": 4,
         "bounceInterval": 0.25,
         "damage": 110,
-        "illusion_damage_factor": 1.5
+        "illusionDamageFactor": 1.5
       },
       "notes": [
-        "Chain Lightning can proc on invisible enemies, enemies in fog of war, and already dead enemies",
+        "Chain Lightning can proc on invisible enemies (i.e. instant attacks hitting an invisible enemy)",
+        "Can proc on enemies inside the Fog of War",
+        "Can proc on already dead enemies (i.e. target died before projectile impact)",
         "Attacks which proc Chain Lightning cannot miss",
-        "Uses pseudo-random distribution",
-        "Lightning bounces in 0.25-second intervals, hitting 4 targets takes 0.75 seconds",
+        "Chain Lightning uses pseudo-random distribution",
+        "The lightning bounces in 0.25-second intervals, hitting 4 targets takes 0.75 seconds",
         "All bounces together can deal up to 440 damage (before reductions)",
         "Against a lone target, Chain Lightning adds an average of 27.5 magical spell damage to every attack",
-        "Cannot bounce on enemies it has already bounced to, invisible enemies, enemies in fog of war, non-targetable enemies, ward-type units, or buildings",
-        "If the wielder dies, all ongoing Chain Lightning instances stop immediately",
-        "Cannot proc while the wielder is dead",
-        "Multiple instances fully stack",
-        "Chain Lightning from Maelstrom-based items have no stacking priority; the oldest source within the inventory takes priority"
+        "Chain Lightning uses a custom cooldown system. It is neither displayed on the item icon when procced nor is affected by cooldown manipulation",
+        "Cannot bounce on enemies it has bounced to already, invisible enemies, enemies inside the Fog of War, non-targetable enemies, ward-type units, or buildings",
+        "If the wielder dies, all their currently ongoing Chain Lightning instances stop immediately",
+        "Cannot proc while the wielder is dead either",
+        "Multiple instances of the buff fully stack",
+        "Illusions take increased damage from the lightning"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "attackDamage": 25,
     "attackSpeed": 25
   },
   "additionalInfo": [
     "Maelstrom is a very good item for speeding up farming. If the extra experience is not needed, it is a good alternative to Hand of Midas",
-    "Great to deal with illusions or mass-summons like Broodmother's spiders, Nature's Prophet's treants, etc. Especially useful for ranged heroes that lack area damage",
-    "The Chain Lightning deals magical damage which ignores armor and Damage Block, making it good against heroes with Vanguard, Tidehunter with Kraken Shell, and heroes with high armor",
-    "Useful pickup against mega creeps to help clear waves"
+    "It is also great to deal with illusions or mass-summons like Broodmother's spiders, Nature's Prophet's treants, etc. Especially useful for ranged heroes that lack area damage, since they cannot make use of cleave",
+    "The Chain Lightning deals magical damage which ignores armor and Damage Block, making it good against heroes that get a Vanguard, or Tidehunter with his Kraken Shell, and against heroes with high armor like Dragon Knight or Terrorblade",
+    "Maelstrom is a useful pickup against mega creeps in order to help clear waves"
   ],
   "states": null
 }

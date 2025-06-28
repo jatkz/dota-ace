@@ -18,16 +18,13 @@
       "description": "Blocks and completely negates most single-target abilities targeted at the wielder.",
       "castAnimation": null,
       "castRange": null,
-      "manaCost": null,
+      "manaCost": 0,
       "cooldown": 14,
-      "effects": {
-        "affects": "Self",
-        "blockType": "Single-target abilities"
-      },
+      "effects": {},
       "notes": [
-        "Does not block abilities cast by allies",
-        "If stacked with other spell blocks, triggers in priority order",
-        "For a list of blocked abilities and their interactions, see interactions page"
+        "Does not block abilities cast by allies.",
+        "For a list of blocked abilities and their interactions, see Spell Block page.",
+        "If stacked, Spell Block triggers in priority order: Counterspell → Counterspell Ally → Transfer Spellblock → Spellblock"
       ]
     },
     {
@@ -39,23 +36,20 @@
       "manaCost": 0,
       "cooldown": 14,
       "effects": {
-        "affects": "Allied Heroes",
         "duration": 14,
-        "transferDuration": "Matches current cooldown of the item"
+        "downtime": 14
       },
       "notes": [
-        "Can be cast on allied heroes, Clones, and Creep-Heroes",
-        "Can be cast on Illusions, but it does not block abilities for them",
-        "Puts Spellblock on cooldown when transferred to an ally",
-        "If the transferred Spell Block gets triggered, the item goes on cooldown again",
-        "Successive casts on the same target refresh the duration, the buff does not stack",
-        "The duration of the transfer matches the current cooldown of the item",
-        "Cooldown reductions are considered",
-        "Resetting the item cooldown does not prematurely end the transfer"
+        "The duration of the transfer matches the current cooldown of the item. Cooldown reductions are considered. However, resetting the item cooldown does not prematurely end the transfer.",
+        "Puts Spellblock on cooldown when transferred to an ally. If the transferred Spell Block gets triggered, the item goes on cooldown again.",
+        "Can be cast on allied heroes, Clones, and Creep-Heroes.",
+        "Can be cast on Illusions, but it does not block abilities for them.",
+        "Successive casts on the same target refresh the duration, the buff does not stack."
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "strength": 16,
     "agility": 16,
     "intelligence": 16,
@@ -63,13 +57,13 @@
     "manaRegeneration": 4.25
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "The item's attributes grant 352 health and 1.6 health regeneration",
-    "Grants 192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
-    "Provides 16 attack speed and 2.67 main armor",
-    "Adds 16 main attack damage to all Strength/Agility/Intelligence heroes",
-    "Adds 21.6 main attack damage to universal heroes",
-    "Cannot be disassembled"
+    "This item is shown as a Team Item in the shop window when purchased by an ally.",
+    "The item's attributes grant the following additional stats:",
+    "352 health and 1.6 health regeneration.",
+    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance.",
+    "16 attack speed and 2.67 main armor.",
+    "16 main attack damage to all Strength/Agility/Intelligence heroes.",
+    "21.6 main attack damage to universal heroes."
   ],
-  "states": null
+  "states": []
 }

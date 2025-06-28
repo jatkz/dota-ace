@@ -6,9 +6,9 @@
   "sellValue": 1075,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Shadow Amulet", "Cloak"],
+    "components": ["Shadow Amulet", "Cloak", "Recipe"],
     "totalCost": 2150
   },
   "abilities": [
@@ -24,8 +24,7 @@
         "fadeDelay": 0.5,
         "duration": 5,
         "magicalDamageBarrier": 375,
-        "moveSpeedBonus": 20,
-        "affects": "Allies"
+        "moveSpeedBonus": 20
       },
       "notes": [
         "Double-tapping automatically targets self",
@@ -38,12 +37,15 @@
         "Picking up, dropping, or selling items does not break the invisibility",
         "Reaching the cast point of abilities or items breaks invisibility",
         "Reaching the attack point of an attack breaks invisibility",
-        "Grants magical damage barrier for the whole duration",
-        "Increases movement speed during invisibility phases, but not during fade delay"
+        "Grants the target a magical damage barrier for the whole duration",
+        "Depleting the barrier does not prematurely end the ability",
+        "Increases the target's movement speed during the invisibility phases, but not during the fade delay",
+        "Does not share cooldowns with Glimmer Cape"
       ]
     }
   ],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "magicResistance": "20%"
   },
   "additionalInfo": [
@@ -52,5 +54,5 @@
     "Increases most heroes' magic resistance to 40%",
     "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%"
   ],
-  "states": null
+  "states": []
 }

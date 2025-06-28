@@ -6,9 +6,9 @@
   "sellValue": 1100,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Ring of Basilius", "Buckler", "Chainmail", "Recipe"],
+    "components": ["Buckler", "Ring of Basilius", "Morbid Mask", "Blades of Attack"],
     "totalCost": 2200
   },
   "abilities": [
@@ -45,7 +45,8 @@
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "manaRegeneration": 0.75,
     "armor": 1
   },

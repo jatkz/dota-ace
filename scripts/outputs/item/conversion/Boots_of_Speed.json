@@ -6,38 +6,16 @@
   "sellValue": 250,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 500
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "moveSpeed": 45
   },
   "additionalInfo": [
     "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
     "Stacks with all other movement speed bonus."
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Boots of Speed from Warcraft 3."
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "CHANGED movement speed bonus from 15% to a flat 45.",
-        "date": "2020-04-21"
-      },
-      {
-        "description": "REMOVED from Side Lane Shops.",
-        "date": "2019-11-26"
-      },
-      {
-        "description": "CHANGED movement speed bonus from a flat 50 to 15%.",
-        "date": "2018-11-19"
-      }
-    ]
-  }
+  "states": []
 }

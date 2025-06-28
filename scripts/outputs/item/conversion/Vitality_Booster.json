@@ -6,16 +6,13 @@
   "sellValue": 500,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "health": 250
   },
-  "additionalInfo": [
-    "Purchasable at the Secret Shop",
-    "Previously built into Spirit Vessel (removed in version 7.39)",
-    "Currently builds into Eternal Shroud (since version 7.35)"
-  ],
+  "additionalInfo": [],
   "states": []
 }

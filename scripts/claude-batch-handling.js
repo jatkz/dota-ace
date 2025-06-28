@@ -5,7 +5,7 @@ const API_KEY = process.env.CLAUDE_API_KEY;
 // Main execution
 async function main() {
     console.log('🤖 Claude API Starter Examples\n');
-    
+
     try {
         const claude = new ClaudeMessageBatchClient(API_KEY);
 
@@ -18,19 +18,26 @@ async function main() {
             console.log('Retrieve Batch ', res);
         }
 
+        // SAVE
         const batchTypes = ['hero', 'item']
-        if (true) {
-            const res = await claude.retrieveBatchResult('msgbatch_01WuVZs6hkZnqkmczQLTMBHo', 'item');
+        if (false) {
+            const res = await claude.retrieveBatchResult('msgbatch_01Hn9dJXmZUEr7eppcKMAvk5', 'item');
             console.log('Retrieve Batch Result ', res);
         }
 
+        // DELETE
         if (false) {
-            const res = await claude.deleteBatch('msgbatch_01KP3gBuGYvuyZBKsPRtst5Q');
+            const res = await claude.deleteBatch('msgbatch_01Kh4PkMWsjN1UHvc2FSXWa5');
             console.log('Delete Result ', res);
 
         }
-        // claude.cancelBatch();
+        //CANCEL
+        if (false) {
+            const res = claude.cancelBatch('msgbatch_01HtEhWsE6XWuzX9vZWwx6oU');
+            console.log('Delete Result ', res);
+        }
         
+
     } catch (error) {
         console.error('❌ Error running examples:', error.message);
         console.error(error);

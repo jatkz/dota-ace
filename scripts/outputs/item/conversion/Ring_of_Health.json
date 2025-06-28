@@ -6,48 +6,16 @@
   "sellValue": 350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": {
-    "components": [],
-    "totalCost": 700
-  },
+  "usageAlert": false,
+  "recipe": null,
   "abilities": [],
-  "stats": {
+  "stats": {},
+  "bonus": {
     "healthRegeneration": 4.5
   },
   "additionalInfo": [
-    "Heroes who need to farm continuously against lane harassment often purchase Ring of Health",
-    "Resilient heroes who seek to dominate the lane will also do well with an early Ring of Health"
+    "Heroes who need to farm continuously against lane harassment often purchase Ring of Health.",
+    "Resilient heroes who seek to dominate the lane will also do well with an early Ring of Health."
   ],
-  "recommendedHeroes": [
-    "Anti-Mage",
-    "Huskar", 
-    "Medusa",
-    "Morphling",
-    "Phantom Assassin",
-    "Spectre",
-    "Axe",
-    "Bristleback",
-    "Centaur Warrunner",
-    "Timbersaw",
-    "Primal Beast"
-  ],
-  "states": [],
-  "trivia": [],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "MOVED from Secret Shops to Base Shops under Miscellaneous. No longer builds into the following items: Eternal Shroud, Pipe of Insight.",
-        "date": "2023-12-14"
-      },
-      {
-        "description": "Reduced health regeneration bonus from 4.75 to 4.5.",
-        "date": "2023-06-15"
-      },
-      {
-        "description": "Reduced health regeneration bonus from 5.25 to 4.75.",
-        "date": "2023-05-13"
-      }
-    ]
-  }
+  "states": []
 }

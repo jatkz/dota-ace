@@ -6,7 +6,7 @@
   "sellValue": 40,
   "maxStacks": null,
   "shareable": true,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
     "components": [],
     "totalCost": 80
@@ -25,8 +25,7 @@
         "damage": 25,
         "moveSpeedSlow": "20%",
         "duration": 12,
-        "auraLingerDuration": 8,
-        "damageType": "Magical"
+        "auraLingerDuration": 8
       },
       "notes": [
         "Interrupts the wielder's channeling abilities upon cast",
@@ -45,32 +44,14 @@
   "stats": {
     "charges": 1
   },
+  "bonus": {},
   "additionalInfo": [
-    "NO LIMIT / Inventory Slot stacking",
-    "Single use consumable item",
-    "Creates 12-second aura applying all ability effects centered around the caster",
-    "Has an 8-second aura linger duration"
+    "Pierces Debuff Immunity sources",
+    "Ability: No / Aura",
+    "Affects: Enemy Units",
+    "Damage: Magical",
+    "Debuff modifier: modifier_item_dustofappearance",
+    "Dispellable by any Dispel sources"
   ],
-  "recommendedHeroes": [],
-  "states": [],
-  "trivia": [
-    "This item is based on the Dust of Appearance from Warcraft 3",
-    "Prior to the July 14, 2017 Patch, Dust of Appearance's active ability, Reveal, did not have an official name. The name was taken from the Dota 2 Wiki and officially implemented into Dota 2"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "CHANGED Reveal ability operations. Now creates a 12-second aura applying all of its ability effects centered around the caster, instead of applying a debuff. Has an 8-second aura linger duration.",
-        "date": "7.33 (2023-04-20)"
-      },
-      {
-        "description": "Reveal now deals 25 magical damage to invisible enemies upon placing the debuff.",
-        "date": "7.31 (2022-02-23)"
-      },
-      {
-        "description": "Reduced gold cost from 90 to 80.",
-        "date": "7.25c (2020-04-06)"
-      }
-    ]
-  }
+  "states": []
 }

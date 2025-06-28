@@ -6,9 +6,9 @@
   "sellValue": 750,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Boots of Speed", "Blades of Attack", "Blades of Attack"],
+    "components": ["Boots of Speed", "Chainmail", "Blades of Attack"],
     "totalCost": 1500
   },
   "abilities": [
@@ -23,53 +23,30 @@
       "effects": {
         "moveSpeedBonus": "10%",
         "duration": 3,
-        "meleeBonus": {
-          "moveSpeedBonus": "20%",
-          "setTurnRate": 1
-        }
+        "meleeSpeedBonus": "20%",
+        "setTurnRate": 1
       },
       "notes": [
-        "Does not interrupt the caster's channeling abilities upon cast",
-        "Grants the user phased movement",
-        "Checks the caster's attack range type periodically and updates the movement speed and turn rate bonus immediately",
-        "Turn rate slowing effects still affect the wielder normally",
-        "For melee heroes, it increases the average movement speed by 7.5% and increases the caster base turn rate to 1 for its duration",
-        "For ranged heroes, it increases the average movement speed by 3.75%",
-        "The buff is immediately dispelled, if the item is removed from the main inventory in any way"
+        "Does not interrupt the caster's channeling abilities upon cast.",
+        "Grants the user phased movement.",
+        "Checks the caster's attack range type periodically and updates the movement speed and turn rate bonus immediately.",
+        "Turn rate slowing effects still affect the wielder normally.",
+        "For melee heroes, it increases the average movement speed by 7.5% and increases the caster base turn rate to 1 for its duration.",
+        "For ranged heroes, it increases the average movement speed by 3.75%.",
+        "The buff is immediately dispelled, if the item is removed from the main inventory in any way."
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "armor": 4,
     "moveSpeed": 50,
-    "attackDamage": 18,
-    "meleeAttackDamage": 12
+    "meleeAttackDamage": 18,
+    "rangedAttackDamage": 12
   },
   "additionalInfo": [
-    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority",
-    "Stacks with all other movement speed bonus"
+    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
+    "Stacks with all other movement speed bonus."
   ],
-  "recommendedHeroes": [
-    "Heroes who rely on quick attacks or on random procs like critical strike will hit harder with Phase Boots",
-    "Heroes who chase enemies a lot get a great speed boost from Phase Boots",
-    "Heroes who have high health pool but have low armor will get a considerable increase in effective HP"
-  ],
-  "states": null,
-  "trivia": null,
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Increased movement speed bonus from 45 to 50",
-        "date": "7.33 (2023-04-20)"
-      },
-      {
-        "description": "Increased Blades of Attack cost from 430 to 450 (total cost increases from 1480 to 1500)",
-        "date": "7.26b (2020-04-28)"
-      },
-      {
-        "description": "CHANGED movement speed bonus from 15% to a flat 45. Reduced Phase movement speed bonus for melee heroes from 22% to 20%",
-        "date": "7.26a (2020-04-21)"
-      }
-    ]
-  }
+  "states": null
 }

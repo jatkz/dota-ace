@@ -6,8 +6,11 @@
   "sellValue": 32.5,
   "maxStacks": 1,
   "shareable": false,
-  "usageAlert": 0,
-  "recipe": null,
+  "usageAlert": false,
+  "recipe": {
+    "components": ["Faerie Fire"],
+    "totalCost": 65
+  },
   "abilities": [
     {
       "name": "Imbue",
@@ -21,40 +24,22 @@
         "heal": 85
       },
       "notes": [
-        "Interrupts the wielder's channeling abilities upon cast",
+        "Interrupts the wielder's channeling abilities upon cast.",
         "Can be used by Spirit Bear",
         "Cannot be used by Courier"
       ]
     }
   ],
   "stats": {
-    "attackDamage": 2,
     "charges": 1
   },
+  "bonus": {
+    "attack_damage": 2
+  },
   "additionalInfo": [
-    "When randoming a hero, the hero starts with a free, unsellable Faerie Fire, except in Turbo Mode",
-    "The attack damage from multiple instances fully stacks",
-    "Couriers are able to use Faerie Fire"
+    "When randoming a hero, the hero starts with a free, unsellable Faerie Fire, except in Turbo Mode.",
+    "The attack damage from multiple instances fully stacks.",
+    "Couriers are able to use Faerie Fire."
   ],
-  "recommendedHeroes": null,
-  "states": null,
-  "trivia": [
-    "Faerie Fire is the only healing consumable without an in-game model, using the default item box instead"
-  ],
-  "changelog": {
-    "recentChanges": [
-      {
-        "description": "Reduced gold cost from 70 to 65",
-        "date": "2023-05-13"
-      },
-      {
-        "description": "Reduced attack damage bonus from 3 to 2; Reduced Imbue heal from 100 to 85; Reduced gold cost from 125 to 70",
-        "date": "2019-12-11"
-      },
-      {
-        "description": "Increased attack damage bonus from 2 to 3; Increased Imbue heal from 85 to 100; Increased gold cost from 70 to 125",
-        "date": "2019-11-26"
-      }
-    ]
-  }
+  "states": null
 }

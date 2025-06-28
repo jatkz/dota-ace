@@ -6,15 +6,15 @@
   "sellValue": 2350,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Sacred Relic", "Talisman of Evasion", "Recipe"],
+    "components": ["Sacred Relic", "Talisman of Evasion"],
     "totalCost": 4700
   },
   "abilities": [
     {
       "name": "Burn",
-      "type": "passive",
+      "type": "toggle",
       "description": "When active, scorches nearby enemies, dealing magical damage over time and causing them to miss on some of their attacks.",
       "castAnimation": "0 + 0",
       "castRange": null,
@@ -25,23 +25,24 @@
         "damagePerSecond": 60,
         "missChance": "15%",
         "auraLingerDuration": 0.5,
-        "illusionDamagePerSecond": 35,
+        "illusion_damagePerSecond": 35,
         "damageMultiplierAgainstIllusions": 1.5
       },
       "notes": [
         "Does not interrupt the caster's channeling abilities upon toggling On/Off",
         "All of the effects are provided by an aura, that is only active while toggled on",
         "Multiple instances of the aura do not stack, if multiple are present, the first applied instance deals damage",
-        "Blind uses pseudo-random distribution and stacks additively with other blind sources and multiplicatively with evasion sources",
+        "Blind uses pseudo-random distribution",
+        "Stacks additively with other blind sources and multiplicatively with evasion sources",
         "Illusions copy and stick with the current toggle state as they are created",
         "Radiance of illusions have a lower priority than those of heroes, if both are present",
-        "Burn applied by illusions deals less damage. Burn applied to illusions deals more damage",
         "Roshan is not affected by the damage, but is still blinded",
         "Deals damage in 1-second intervals, starting 1 second after the debuff is placed"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "evasion": "15%",
     "attackDamage": 55
   },
@@ -49,8 +50,16 @@
     "This item is shown as a Team Item in the shop window when purchased by an ally",
     "Evasion uses pseudo-random distribution",
     "Stacks diminishingly with other evasion sources",
-    "Increases most heroes against physical attacks by 17.65%",
-    "Can be disassembled"
+    "Increases most heroes against physical attacks by 17.65%"
   ],
-  "states": null
+  "states": [
+    {
+      "icon": "Active Radiance",
+      "contains": "Normal active state with burning aura"
+    },
+    {
+      "icon": "Inactive Radiance", 
+      "contains": "Toggled off state without burning aura"
+    }
+  ]
 }

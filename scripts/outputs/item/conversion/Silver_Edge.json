@@ -6,16 +6,16 @@
   "sellValue": 2900,
   "maxStacks": null,
   "shareable": false,
-  "usageAlert": 0,
+  "usageAlert": false,
   "recipe": {
-    "components": ["Shadow Blade", "Ultimate Orb", "Recipe"],
+    "components": ["Shadow Blade", "Demon Edge", "Recipe"],
     "totalCost": 5800
   },
   "abilities": [
     {
       "name": "Shadow Walk",
       "type": "active",
-      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible. The attack breaking invisibility has True Strike and deals physical spell damage bonus with the attack, and also breaks the target's passive abilities.",
+      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible.",
       "castAnimation": "0 + 0",
       "castRange": null,
       "manaCost": 75,
@@ -33,22 +33,23 @@
         "The caster gains phased movement while invisible",
         "Picking up, dropping, or selling items does not break the invisibility",
         "During the fade time, casting abilities or items does not break the invisibility",
-        "The attack also applies Break on the target",
+        "The attack breaking invisibility has True Strike and deals physical spell damage bonus with the attack, and also breaks the target's passive abilities",
+        "Adds physical conditional attack damage to the next attack while invisible",
+        "Does not interact with Critical Strike or percentage-based bonus attack damage",
+        "Interacts with Lifesteal, Cleave and Splash, Damage Block",
         "Does not affect Buildings or Ward-type units",
-        "Shares cooldown with other invisibility items"
+        "The attack also applies Break on the target",
+        "Shares cooldown with Shadow Blade"
       ]
     }
   ],
-  "stats": {
+  "stats": null,
+  "bonus": {
     "attackDamage": 70,
     "attackSpeed": 35
   },
   "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Cannot be disassembled",
-    "Break mechanic has no effect on opponents' items",
-    "Consider purchasing against troubling passives like Immaterial, Berserker's Blood, Fury Swipes, Bristleback, Untouchable and Dispersion",
-    "Abilities using stacks are only prevented from gaining or placing new stacks, existing stacks can still function until they expire"
+    "This item is shown as a Team Item in the shop window when purchased by an ally"
   ],
   "states": null
 }
