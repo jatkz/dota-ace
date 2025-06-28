@@ -1,0 +1,392 @@
+[
+    {
+        "level": 1,
+        "stats": {
+            "strength": 46,
+            "agility": 32,
+            "intelligence": 54,
+            "attack_speed": 257,
+            "attack_damage": 206
+        },
+        "attackRate": 1.7133333333333334,
+        "attacksPS": 0.5836575875486382,
+        "dps": 352.94666666666666
+    },
+    {
+        "level": 2,
+        "stats": {
+            "strength": 48.4,
+            "agility": 34.5,
+            "intelligence": 57.4,
+            "attack_speed": 259.5,
+            "attack_damage": 209.4
+        },
+        "attackRate": 1.73,
+        "attacksPS": 0.5780346820809249,
+        "dps": 362.262
+    },
+    {
+        "level": 3,
+        "stats": {
+            "strength": 50.8,
+            "agility": 37,
+            "intelligence": 60.8,
+            "attack_speed": 262,
+            "attack_damage": 212.8
+        },
+        "attackRate": 1.7466666666666666,
+        "attacksPS": 0.5725190839694657,
+        "dps": 371.6906666666667
+    },
+    {
+        "level": 4,
+        "stats": {
+            "strength": 53.2,
+            "agility": 39.5,
+            "intelligence": 64.2,
+            "attack_speed": 264.5,
+            "attack_damage": 216.2
+        },
+        "attackRate": 1.7633333333333334,
+        "attacksPS": 0.5671077504725898,
+        "dps": 381.23266666666666
+    },
+    {
+        "level": 5,
+        "stats": {
+            "strength": 55.6,
+            "agility": 42,
+            "intelligence": 67.6,
+            "attack_speed": 267,
+            "attack_damage": 219.6
+        },
+        "attackRate": 1.78,
+        "attacksPS": 0.5617977528089888,
+        "dps": 390.888
+    },
+    {
+        "level": 6,
+        "stats": {
+            "strength": 58,
+            "agility": 44.5,
+            "intelligence": 71,
+            "attack_speed": 269.5,
+            "attack_damage": 223
+        },
+        "attackRate": 1.7966666666666666,
+        "attacksPS": 0.5565862708719852,
+        "dps": 400.65666666666664
+    },
+    {
+        "level": 7,
+        "stats": {
+            "strength": 60.4,
+            "agility": 47,
+            "intelligence": 74.4,
+            "attack_speed": 272,
+            "attack_damage": 226.4
+        },
+        "attackRate": 1.8133333333333332,
+        "attacksPS": 0.5514705882352942,
+        "dps": 410.53866666666664
+    },
+    {
+        "level": 8,
+        "stats": {
+            "strength": 62.8,
+            "agility": 49.5,
+            "intelligence": 77.8,
+            "attack_speed": 274.5,
+            "attack_damage": 229.8
+        },
+        "attackRate": 1.83,
+        "attacksPS": 0.5464480874316939,
+        "dps": 420.53400000000005
+    },
+    {
+        "level": 9,
+        "stats": {
+            "strength": 65.2,
+            "agility": 52,
+            "intelligence": 81.2,
+            "attack_speed": 277,
+            "attack_damage": 233.2
+        },
+        "attackRate": 1.8466666666666667,
+        "attacksPS": 0.5415162454873647,
+        "dps": 430.6426666666666
+    },
+    {
+        "level": 10,
+        "stats": {
+            "strength": 67.6,
+            "agility": 54.5,
+            "intelligence": 84.6,
+            "attack_speed": 279.5,
+            "attack_damage": 236.6
+        },
+        "attackRate": 1.8633333333333333,
+        "attacksPS": 0.5366726296958855,
+        "dps": 440.86466666666666
+    },
+    {
+        "level": 11,
+        "stats": {
+            "strength": 70,
+            "agility": 57,
+            "intelligence": 88,
+            "attack_speed": 282,
+            "attack_damage": 240
+        },
+        "attackRate": 1.88,
+        "attacksPS": 0.5319148936170213,
+        "dps": 451.2
+    },
+    {
+        "level": 12,
+        "stats": {
+            "strength": 72.4,
+            "agility": 59.5,
+            "intelligence": 91.4,
+            "attack_speed": 284.5,
+            "attack_damage": 243.4
+        },
+        "attackRate": 1.8966666666666667,
+        "attacksPS": 0.5272407732864675,
+        "dps": 461.6486666666667
+    },
+    {
+        "level": 13,
+        "stats": {
+            "strength": 74.8,
+            "agility": 62,
+            "intelligence": 94.8,
+            "attack_speed": 287,
+            "attack_damage": 246.8
+        },
+        "attackRate": 1.9133333333333333,
+        "attacksPS": 0.5226480836236934,
+        "dps": 472.21066666666667
+    },
+    {
+        "level": 14,
+        "stats": {
+            "strength": 77.2,
+            "agility": 64.5,
+            "intelligence": 98.19999999999999,
+            "attack_speed": 289.5,
+            "attack_damage": 250.2
+        },
+        "attackRate": 1.93,
+        "attacksPS": 0.5181347150259068,
+        "dps": 482.88599999999997
+    },
+    {
+        "level": 15,
+        "stats": {
+            "strength": 79.6,
+            "agility": 67,
+            "intelligence": 101.6,
+            "attack_speed": 292,
+            "attack_damage": 253.6
+        },
+        "attackRate": 1.9466666666666668,
+        "attacksPS": 0.5136986301369862,
+        "dps": 493.67466666666667
+    },
+    {
+        "level": 16,
+        "stats": {
+            "strength": 82,
+            "agility": 69.5,
+            "intelligence": 105,
+            "attack_speed": 294.5,
+            "attack_damage": 257
+        },
+        "attackRate": 1.9633333333333334,
+        "attacksPS": 0.5093378607809848,
+        "dps": 504.57666666666665
+    },
+    {
+        "level": 17,
+        "stats": {
+            "strength": 84.4,
+            "agility": 72,
+            "intelligence": 108.4,
+            "attack_speed": 297,
+            "attack_damage": 260.4
+        },
+        "attackRate": 1.98,
+        "attacksPS": 0.5050505050505051,
+        "dps": 515.592
+    },
+    {
+        "level": 18,
+        "stats": {
+            "strength": 86.8,
+            "agility": 74.5,
+            "intelligence": 111.8,
+            "attack_speed": 299.5,
+            "attack_damage": 263.8
+        },
+        "attackRate": 1.9966666666666666,
+        "attacksPS": 0.5008347245409015,
+        "dps": 526.7206666666667
+    },
+    {
+        "level": 19,
+        "stats": {
+            "strength": 89.19999999999999,
+            "agility": 77,
+            "intelligence": 115.19999999999999,
+            "attack_speed": 302,
+            "attack_damage": 267.2
+        },
+        "attackRate": 2.013333333333333,
+        "attacksPS": 0.49668874172185434,
+        "dps": 537.9626666666666
+    },
+    {
+        "level": 20,
+        "stats": {
+            "strength": 91.6,
+            "agility": 79.5,
+            "intelligence": 118.6,
+            "attack_speed": 304.5,
+            "attack_damage": 270.6
+        },
+        "attackRate": 2.03,
+        "attacksPS": 0.4926108374384237,
+        "dps": 549.318
+    },
+    {
+        "level": 21,
+        "stats": {
+            "strength": 94,
+            "agility": 82,
+            "intelligence": 122,
+            "attack_speed": 307,
+            "attack_damage": 274
+        },
+        "attackRate": 2.046666666666667,
+        "attacksPS": 0.4885993485342019,
+        "dps": 560.7866666666667
+    },
+    {
+        "level": 22,
+        "stats": {
+            "strength": 96.4,
+            "agility": 84.5,
+            "intelligence": 125.39999999999999,
+            "attack_speed": 309.5,
+            "attack_damage": 277.4
+        },
+        "attackRate": 2.0633333333333335,
+        "attacksPS": 0.4846526655896607,
+        "dps": 572.3686666666666
+    },
+    {
+        "level": 23,
+        "stats": {
+            "strength": 98.8,
+            "agility": 87,
+            "intelligence": 128.8,
+            "attack_speed": 312,
+            "attack_damage": 280.8
+        },
+        "attackRate": 2.08,
+        "attacksPS": 0.4807692307692307,
+        "dps": 584.0640000000001
+    },
+    {
+        "level": 24,
+        "stats": {
+            "strength": 101.19999999999999,
+            "agility": 89.5,
+            "intelligence": 132.2,
+            "attack_speed": 314.5,
+            "attack_damage": 284.2
+        },
+        "attackRate": 2.0966666666666667,
+        "attacksPS": 0.4769475357710652,
+        "dps": 595.8726666666666
+    },
+    {
+        "level": 25,
+        "stats": {
+            "strength": 103.6,
+            "agility": 92,
+            "intelligence": 135.6,
+            "attack_speed": 317,
+            "attack_damage": 287.6
+        },
+        "attackRate": 2.1133333333333333,
+        "attacksPS": 0.47318611987381703,
+        "dps": 607.7946666666667
+    },
+    {
+        "level": 26,
+        "stats": {
+            "strength": 106,
+            "agility": 94.5,
+            "intelligence": 139,
+            "attack_speed": 319.5,
+            "attack_damage": 291
+        },
+        "attackRate": 2.13,
+        "attacksPS": 0.4694835680751174,
+        "dps": 619.8299999999999
+    },
+    {
+        "level": 27,
+        "stats": {
+            "strength": 108.4,
+            "agility": 97,
+            "intelligence": 142.39999999999998,
+            "attack_speed": 322,
+            "attack_damage": 294.4
+        },
+        "attackRate": 2.1466666666666665,
+        "attacksPS": 0.46583850931677023,
+        "dps": 631.9786666666665
+    },
+    {
+        "level": 28,
+        "stats": {
+            "strength": 110.8,
+            "agility": 99.5,
+            "intelligence": 145.8,
+            "attack_speed": 324.5,
+            "attack_damage": 297.8
+        },
+        "attackRate": 2.1633333333333336,
+        "attacksPS": 0.4622496147919876,
+        "dps": 644.2406666666668
+    },
+    {
+        "level": 29,
+        "stats": {
+            "strength": 113.2,
+            "agility": 102,
+            "intelligence": 149.2,
+            "attack_speed": 327,
+            "attack_damage": 301.2
+        },
+        "attackRate": 2.18,
+        "attacksPS": 0.4587155963302752,
+        "dps": 656.616
+    },
+    {
+        "level": 30,
+        "stats": {
+            "strength": 115.6,
+            "agility": 104.5,
+            "intelligence": 152.6,
+            "attack_speed": 329.5,
+            "attack_damage": 304.6
+        },
+        "attackRate": 2.1966666666666668,
+        "attacksPS": 0.4552352048558422,
+        "dps": 669.1046666666667
+    }
+]
