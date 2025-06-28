@@ -1,0 +1,57 @@
+{
+  "name": "Skull Basher",
+  "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
+  "category": "Weapons",
+  "cost": 2875,
+  "sellValue": 1437.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Javelin", "Belt of Strength", "Recipe"],
+    "totalCost": 2875
+  },
+  "abilities": [
+    {
+      "name": "Bash",
+      "type": "passive",
+      "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 2.3,
+      "effects": {
+        "procChance": "25% (melee) / 10% (ranged)",
+        "damage": 100,
+        "stunDuration": 1.2,
+        "damageType": "Physical"
+      },
+      "notes": [
+        "Multiple instances of Skull Basher-based Bash do not stack",
+        "Does not stack with Bash of the Deep, Greater Bash, and Time Lock. If any of these are present, this ability is inactive",
+        "This ability is inactive on Clones",
+        "Does not work against wards and buildings, but works against allied units",
+        "Bash uses pseudo-random distribution",
+        "The bonus damage is considered as a conditional attack damage bonus",
+        "Goes through spell immunity",
+        "Adds an average of 0.3 and 0.12 damage to every attack for melee and ranged heroes respectively"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 10,
+    "attackDamage": 30,
+    "health": 220,
+    "healthRegeneration": 1,
+    "mainAttackDamageBonus": "10 (strength heroes) / 4.5 (universal heroes)"
+  },
+  "additionalInfo": [
+    "The item's attributes grant 220 health and 1 health regeneration",
+    "Grants 10 main attack damage to strength heroes",
+    "Grants 4.5 main attack damage to universal heroes",
+    "Since the Bash is a chance based ability, buying attack speed granting items increases the odds of a bash proccing",
+    "The Bash goes through spell immunity, making it effective against heroes with Black King Bar",
+    "Despite having a much lower chance to proc for ranged heroes, it still has a decent chance when coupled with high attack speed"
+  ],
+  "states": null
+}

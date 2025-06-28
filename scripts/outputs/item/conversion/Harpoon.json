@@ -1,0 +1,87 @@
+{
+  "name": "Harpoon",
+  "description": "A perfect solution for the flight of foes.",
+  "category": "Armaments",
+  "cost": 4700,
+  "sellValue": 2350,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Echo Sabre", "Recipe"],
+    "totalCost": 4700
+  },
+  "abilities": [
+    {
+      "name": "Draw Forth",
+      "type": "active",
+      "description": "Launches a harpoon that latches onto the target, pulling the caster and the target towards each other, meeting in the middle. Has a maximum pull distance.",
+      "castAnimation": "0 + 0",
+      "castRange": 700,
+      "manaCost": 50,
+      "cooldown": 19,
+      "effects": {
+        "minPullDistance": 100,
+        "maxPullDistance": 1000,
+        "pullDuration": 0.3,
+        "rangedPullDistance": "35%",
+        "projectileSpeed": 2000
+      },
+      "notes": [
+        "When the caster is ranged, pulls the target and the caster for a percentage of the distance instead, but still respecting the max pull distance",
+        "Roshan cannot be moved, only the caster gets moved",
+        "The projectile travels at a speed of 2000",
+        "Does not disable the pulled units, they can still attack, cast abilities and items, and turn during it",
+        "Can move the units over impassable terrain",
+        "Destroys trees within a 100 radius around the pulled units",
+        "Can be cast on debuff immune enemies, pulling the caster, but not the target",
+        "Casting Harpoon instantly breaks Pounce"
+      ]
+    },
+    {
+      "name": "Echo Strike",
+      "type": "passive",
+      "description": "The next attack grants the wielder a buff that greatly increases attack speed for one attack.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 5,
+      "effects": {
+        "attackSpeedBonus": 490,
+        "numberOfAttacks": 1,
+        "moveSpeedSlow": "100%",
+        "slowDuration": 1
+      },
+      "notes": [
+        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow",
+        "Ranged heroes cannot use Echo Strike",
+        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not",
+        "The attack speed buff has no set duration. It lasts until the user makes a second attack",
+        "Uses a custom cooldown system not affected by cooldown manipulation",
+        "Does not stack with Falcon Rush"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 25,
+    "agility": 10,
+    "intelligence": 10,
+    "manaRegeneration": 2,
+    "attackDamage": 25,
+    "health": 550,
+    "healthRegeneration": 2.5,
+    "mana": 120,
+    "magicResistance": "1%",
+    "attackSpeed": 10,
+    "armor": 1.67
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "550 health and 2.5 health regeneration",
+    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "10 attack speed and 1.67 main armor",
+    "25, 10 and 10 main attack damage to all Strength/Agility/Intelligence heroes respectively",
+    "20.25 main attack damage to universal heroes"
+  ],
+  "states": null
+}

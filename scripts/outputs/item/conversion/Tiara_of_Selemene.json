@@ -1,0 +1,24 @@
+{
+  "name": "Tiara of Selemene",
+  "description": "A symbol of favor bestowed upon the high priestess of Selemene.",
+  "category": "Secret Shop",
+  "cost": 1800,
+  "sellValue": 900,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 1800
+  },
+  "abilities": [],
+  "stats": {
+    "manaRegeneration": 6
+  },
+  "additionalInfo": [
+    "Builds into Khanda (as of version 7.38)",
+    "Previously built into Scythe of Vyse, Refresher Orb, and Octarine Core",
+    "Item was created in version 7.35 (2023-12-14)"
+  ],
+  "states": []
+}

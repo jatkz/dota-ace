@@ -1,0 +1,81 @@
+{
+  "name": "Bloodthorn",
+  "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
+  "category": "Weapons",
+  "cost": 6625,
+  "sellValue": 3312.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Orchid Malevolence", "Crystalys", "Recipe"],
+    "totalCost": 6625
+  },
+  "abilities": [
+    {
+      "name": "Soul Rend",
+      "type": "active",
+      "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage.",
+      "castAnimation": "0 + 0",
+      "castRange": 900,
+      "manaCost": 125,
+      "cooldown": 15,
+      "effects": {
+        "accumulatedDamage": "60%",
+        "duration": 5,
+        "accuracy": "100%",
+        "bonusMagicalDamage": 50
+      },
+      "notes": [
+        "The caster's units gain full accuracy against the target",
+        "Whenever the target gets attacked by any unit, they take additional magical damage",
+        "The damage counter accumulates all damage instances dealt to the Soul Rend target within the last 5 seconds",
+        "The accumulated damage is based on the actual damage taken, after all damage manipulation is applied",
+        "Does not include damage with the HP Removal or the no-reflection flag",
+        "The accumulated damage is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled",
+        "Re-casting Soul Rend on the same target refreshes the duration, but does not reset the already accumulated damage",
+        "The attack-based bonus damage is dealt in a separate damage instance, and counts as spell damage",
+        "The source of the damage is the Bloodthorn caster, not the attacker itself"
+      ]
+    },
+    {
+      "name": "Pierce",
+      "type": "passive",
+      "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "40%",
+        "bonusMagicalDamage": 60
+      },
+      "notes": [
+        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+        "It is not considered by lifesteal, crit or cleave",
+        "It can be reduced only by flat reductions",
+        "Does not work against buildings, but works against wards and allied units",
+        "Adds an average of 24 magical damage to every attack",
+        "Pierce uses pseudo-random distribution",
+        "Pierce from Javelin-based items fully stack with another and themselves"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 10,
+    "healthRegeneration": 6.5,
+    "manaRegeneration": 3.25,
+    "attackDamage": 10,
+    "attackSpeed": 95,
+    "mana": 120,
+    "flatBaseMagicResistance": "1%"
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "If an Orchid Malevolence was purchased as well, Bloodthorn's icon takes priority",
+    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "Grants 10 main attack damage to Intelligence heroes",
+    "Grants 4.5 main attack damage to Universal heroes"
+  ],
+  "states": null
+}

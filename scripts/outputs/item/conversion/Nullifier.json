@@ -1,0 +1,52 @@
+{
+  "name": "Nullifier",
+  "description": "A dangerous weapon pilfered from an inverse dimension.",
+  "category": "Weapons",
+  "cost": 4375,
+  "sellValue": 2187.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Sacred Relic", "Robe of the Magi"],
+    "totalCost": 4375
+  },
+  "abilities": [
+    {
+      "name": "Nullify",
+      "type": "active",
+      "description": "Launches a projectile at the target enemy, that applies a debuff on the which continuously dispels them and slows their movement speed.",
+      "castAnimation": "0 + 0",
+      "castRange": 900,
+      "manaCost": 10,
+      "cooldown": 0,
+      "effects": {
+        "moveSpeedSlow": "10%",
+        "duration": 4,
+        "dispelInterval": "0.2 seconds",
+        "totalDispelInstances": 20
+      },
+      "notes": [
+        "Applies a basic dispel upon projectile impact, before applying the modifier",
+        "The modifier applies a basic dispel in 0.2-second intervals, 0.2 seconds after the debuff is applied, resulting in 20 dispel instances",
+        "Can be cast on Invulnerable units",
+        "The initial dispel pierces invulnerability",
+        "However, the debuff is not applied on invulnerable targets",
+        "If the invulnerability could not be dispelled by the initial dispel, the debuff is not applied",
+        "If the target was already debuffed, its duration does get refreshed",
+        "Nullify is one of the very few debuffs that cannot be dispelled at all"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 6,
+    "armor": 10,
+    "attackDamage": 75
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "Cannot be disassembled",
+    "Not shareable"
+  ],
+  "states": null
+}

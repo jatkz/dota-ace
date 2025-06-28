@@ -1,0 +1,70 @@
+{
+  "name": "Divine Rapier",
+  "description": "So powerful, it cannot have a single owner.",
+  "category": "Weapons",
+  "cost": 5600,
+  "sellValue": 0,
+  "maxStacks": null,
+  "shareable": "Partially",
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Sacred Relic", "Demon Edge"],
+    "totalCost": 5600
+  },
+  "abilities": [
+    {
+      "name": "Transmute",
+      "type": "active",
+      "description": "Toggle on to gain bonus spell damage amplification. Toggle off to gain bonus attack damage. Item starts in this mode upon purchase.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 6,
+      "effects": {
+        "spellDamageAmplificationBonus": "25%",
+        "attackDamageBonus": 250
+      },
+      "notes": [
+        "Does not interrupt the caster's channeling abilities upon toggling On/Off",
+        "The cooldown only triggers upon toggling off, not upon toggling on"
+      ]
+    },
+    {
+      "name": "Everlasting",
+      "type": "passive",
+      "description": "Dropped on death, and cannot be destroyed.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {},
+      "notes": [
+        "The rapier belongs to the player that purchased it, and is muted when held by allies. The purchasing player can manually drop or stash the Rapier freely at any time",
+        "If picked up by an enemy once, it becomes a free Divine Rapier; it now works for anyone carrying it. However, it can no longer be dropped manually, and is bound to the player that picked it up until they die"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 100
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "Divine Rapier drops when the wielder dies, unless they have Reincarnation",
+    "This item cannot be put into the backpack",
+    "Buying, using components in the backpack to combine Divine Rapier while the inventory is full, drops the item on the floor",
+    "Unlike other combined items, Divine Rapier cannot be disassembled within seconds after assembling it",
+    "The Courier can be used to buy a Divine Rapier, but they cannot pick Divine Rapiers up from the ground",
+    "Divine Rapier does not count towards the owner's Net Worth if it is on the ground",
+    "Divine Rapier changes owner when claimed in its free state, thus counting towards the claimer's Net Worth"
+  ],
+  "states": [
+    {
+      "icon": "Original Rapier",
+      "contains": "The initial state upon buying the item. Manually droppable: Yes, Drops on Death: Yes, Damage Bonus: Only for purchasing hero"
+    },
+    {
+      "icon": "Free Rapier", 
+      "contains": "The state after the item is picked up by an enemy once. Manually droppable: No, Drops on Death: Yes, Damage Bonus: The hero who claims it"
+    }
+  ]
+}

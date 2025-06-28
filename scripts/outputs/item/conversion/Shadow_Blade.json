@@ -1,0 +1,59 @@
+{
+  "name": "Shadow Blade",
+  "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
+  "category": "Weapons",
+  "cost": 3350,
+  "sellValue": 1675,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Claymore"],
+    "totalCost": 3350
+  },
+  "abilities": [
+    {
+      "name": "Shadow Walk",
+      "type": "active",
+      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 75,
+      "cooldown": 25,
+      "effects": {
+        "fadeTime": 0.3,
+        "moveSpeedBonus": "20%",
+        "duration": 17,
+        "attackDamageBonus": 175,
+        "damageType": "Physical"
+      },
+      "notes": [
+        "Does not interrupt the wielder's channeling abilities upon cast",
+        "Recasting the ability refreshes the buff duration",
+        "The caster gains phased movement while invisible",
+        "Picking up, dropping, or selling items does not break the invisibility",
+        "During the fade time, casting abilities or items does not break the invisibility",
+        "Invisibility breaks upon reaching the cast point of abilities or items after fade time",
+        "Invisibility breaks upon reaching the attack point of an attack",
+        "The attack breaking invisibility deals physical spell damage bonus with the attack",
+        "Adds physical conditional attack damage to the next attack while invisible",
+        "Does not interact with critical strike or percentage-based bonus attack damage",
+        "Interacts with lifesteal, cleave, splash, and damage block",
+        "Does not affect buildings or ward-type units",
+        "Shares cooldown with other invisibility items"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 25,
+    "attackSpeed": 35
+  },
+  "additionalInfo": [
+    "Disassemble: No",
+    "Shares cooldown with other invisibility items",
+    "In DotA, this item was named Lothar's Edge, referencing Sir Anduin Lothar from Warcraft",
+    "Active ability is based on the Blademaster's Wind Walk",
+    "Kunkka has a cosmetic item based on Shadow Blade"
+  ],
+  "states": null
+}

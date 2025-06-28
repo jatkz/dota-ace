@@ -1,0 +1,25 @@
+{
+  "name": "Energy Booster",
+  "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
+  "category": "Secret Shop",
+  "cost": 800,
+  "sellValue": 400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 800
+  },
+  "abilities": [],
+  "stats": {
+    "mana": 250
+  },
+  "additionalInfo": [
+    "No longer builds into Arcane Boots as of version 7.35",
+    "Now builds into Pavise as of version 7.35",
+    "No longer builds into Holy Locket as of version 7.33",
+    "Gold cost reduced from 900 to 800 in version 7.29"
+  ],
+  "states": []
+}

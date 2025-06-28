@@ -1,0 +1,70 @@
+{
+  "name": "Ethereal Blade",
+  "description": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
+  "category": "Magical",
+  "cost": 5375,
+  "sellValue": 2687.5,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Ghost Scepter", "Eaglesong", "Recipe"],
+    "totalCost": 5375
+  },
+  "abilities": [
+    {
+      "name": "Ether Blast",
+      "type": "active",
+      "description": "Blasts the target with an projectile that turns them ethereal, rendering them immune to physical damage and not attackable, but more vulnerable to magical damage, as well as disarming them.",
+      "castAnimation": "0 + 0",
+      "castRange": 800,
+      "manaCost": 100,
+      "cooldown": 22,
+      "effects": {
+        "magicResistanceReduction": "40%",
+        "duration": 4,
+        "baseDamage": 50,
+        "primaryAttributeDamage": "150%",
+        "moveSpeedSlow": "80%",
+        "universalHeroDamage": "45% of all attributes"
+      },
+      "notes": [
+        "Double-tapping automatically targets self",
+        "Turns the target ethereal, disarming them and granting 100% physical damage resistance",
+        "Magic resistance reduction does not stack with other ethereal sources",
+        "Reduces most heroes' magic resistance to -5%",
+        "Shares cooldowns with Ghost Scepter",
+        "Can be used on allies or enemies",
+        "For primary attribute heroes: 50 + 1.5 × CurrentPrimaryAttribute damage",
+        "For universal heroes: 50 + 0.45 × Sum of all attributes damage"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 8,
+    "agility": 8,
+    "intelligence": 8,
+    "mana": 300,
+    "manaRegeneration": 3,
+    "castRange": 250,
+    "health": 176,
+    "healthRegeneration": 0.8,
+    "bonusMana": 96,
+    "bonusManaRegeneration": 0.4,
+    "magicResistance": "0.8%",
+    "attackSpeed": 8,
+    "armor": 1.33,
+    "attackDamage": 8,
+    "universalHeroAttackDamage": 10.8
+  },
+  "additionalInfo": [
+    "Can be disassembled",
+    "The item's attributes grant additional health, mana, attack speed, armor, and attack damage",
+    "Excellent for intelligence heroes and spellcasters",
+    "Can be used defensively on self to avoid physical damage",
+    "Works well in combination with Dagon for burst damage",
+    "Disrupts enemies who rely on right-click attacks",
+    "Provides spell lifesteal amplification and mana regeneration amplification"
+  ],
+  "states": null
+}

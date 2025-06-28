@@ -1,0 +1,57 @@
+{
+  "name": "Maelstrom",
+  "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
+  "category": "Armaments",
+  "cost": 2950,
+  "sellValue": 1475,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Mithril Hammer", "Gloves of Haste"],
+    "totalCost": 2950
+  },
+  "abilities": [
+    {
+      "name": "Chain Lightning",
+      "type": "passive",
+      "description": "Grants the wielder's attacks a chance to pierce through evasion, and to release a bolt of electricity on the target, that leaps between other nearby targets, dealing magical damage to all of them.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "25%",
+        "bounceDistance": 650,
+        "numberOfBounces": 4,
+        "bounceInterval": 0.25,
+        "damage": 110,
+        "illusion_damage_factor": 1.5
+      },
+      "notes": [
+        "Chain Lightning can proc on invisible enemies, enemies in fog of war, and already dead enemies",
+        "Attacks which proc Chain Lightning cannot miss",
+        "Uses pseudo-random distribution",
+        "Lightning bounces in 0.25-second intervals, hitting 4 targets takes 0.75 seconds",
+        "All bounces together can deal up to 440 damage (before reductions)",
+        "Against a lone target, Chain Lightning adds an average of 27.5 magical spell damage to every attack",
+        "Cannot bounce on enemies it has already bounced to, invisible enemies, enemies in fog of war, non-targetable enemies, ward-type units, or buildings",
+        "If the wielder dies, all ongoing Chain Lightning instances stop immediately",
+        "Cannot proc while the wielder is dead",
+        "Multiple instances fully stack",
+        "Chain Lightning from Maelstrom-based items have no stacking priority; the oldest source within the inventory takes priority"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 25,
+    "attackSpeed": 25
+  },
+  "additionalInfo": [
+    "Maelstrom is a very good item for speeding up farming. If the extra experience is not needed, it is a good alternative to Hand of Midas",
+    "Great to deal with illusions or mass-summons like Broodmother's spiders, Nature's Prophet's treants, etc. Especially useful for ranged heroes that lack area damage",
+    "The Chain Lightning deals magical damage which ignores armor and Damage Block, making it good against heroes with Vanguard, Tidehunter with Kraken Shell, and heroes with high armor",
+    "Useful pickup against mega creeps to help clear waves"
+  ],
+  "states": null
+}

@@ -1,0 +1,88 @@
+{
+  "name": "Battle Fury",
+  "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
+  "category": "Weapons",
+  "cost": 3900,
+  "sellValue": 1950,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Broadsword", "Cornucopia", "Recipe"],
+    "totalCost": 3900
+  },
+  "abilities": [
+    {
+      "name": "Chop Tree",
+      "type": "active",
+      "description": "Instantly destroys the targeted tree.",
+      "castAnimation": "0 + 0",
+      "castRange": 350,
+      "manaCost": null,
+      "cooldown": 4,
+      "effects": {
+        "affects": "Trees"
+      },
+      "notes": ["Does not share cooldown with Chop Tree from other sources"]
+    },
+    {
+      "name": "Quell",
+      "type": "passive",
+      "description": "Grants bonus attack damage against non-hero units.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "attackDamageBonusMelee": 10,
+        "attackDamageBonusRanged": 5,
+        "affects": "Enemies",
+        "damageType": "Attack / Physical"
+      },
+      "notes": [
+        "Quell is considered as a conditional attack damage bonus",
+        "The attack damage bonus adapts immediately depending on the wielder's range type",
+        "Stacks with the Quell of Quelling Blade, but not with additional Battle Furies",
+        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, or Allied units"
+      ]
+    },
+    {
+      "name": "Cleave",
+      "type": "passive",
+      "description": "Deals a percentage of the wielder's attack damage as physical damage in a cone in front of the wielder on each attack.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "startingRadius": 150,
+        "distance": 650,
+        "endRadius": 360,
+        "cleaveDamageHeroes": "60%",
+        "cleaveDamageNonHeroes": "40%",
+        "affects": "Enemies",
+        "damageType": "Spell / Physical"
+      },
+      "notes": [
+        "Grants cleave if the affected hero's range type is melee",
+        "Ranged units cannot cleave",
+        "Visual effects and sounds still play when illusions attack",
+        "Does not proc cleave when attacking ally units",
+        "Does not damage Couriers",
+        "Neither proc nor damage Buildings or Ward-type units"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 7.5,
+    "manaRegeneration": 2.75,
+    "attackDamage": 50
+  },
+  "additionalInfo": [
+    "Purchasable at the Base Shop, under Weapons",
+    "Requires items from the Secret Shop to be completed",
+    "Cannot be disassembled",
+    "Internal name is 'bfury'"
+  ],
+  "states": null
+}

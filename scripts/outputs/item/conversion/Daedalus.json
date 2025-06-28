@@ -1,0 +1,46 @@
+{
+  "name": "Daedalus",
+  "description": "A weapon of incredible power that is difficult for even the strongest of warriors to control.",
+  "category": "Weapons",
+  "cost": 5100,
+  "sellValue": 2550,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Crystalys", "Demon Edge", "Recipe"],
+    "totalCost": 5100
+  },
+  "abilities": [
+    {
+      "name": "Critical Strike",
+      "type": "passive",
+      "description": "The wielder's attacks have a chance to inflict critical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "30%",
+        "criticalDamage": "225%"
+      },
+      "notes": [
+        "The proc is determined during the unit's attack point",
+        "The proc chance of multiple sources stack",
+        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
+        "Critical Strike uses pseudo-random distribution",
+        "Increases attack damage by an average of 37.5%",
+        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 88
+  },
+  "additionalInfo": [
+    "Purchasable at the Base Shop under Weapons",
+    "Can only be completed with items from the Secret Shop",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

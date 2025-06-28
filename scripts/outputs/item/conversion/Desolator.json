@@ -1,0 +1,64 @@
+{
+  "name": "Desolator",
+  "description": "A wicked weapon, used in torturing political criminals.",
+  "category": "Weapons",
+  "cost": 3500,
+  "sellValue": 1750,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Orb of Blight", "Orb of Blight", "Orb of Blight"],
+    "totalCost": 3500
+  },
+  "abilities": [
+    {
+      "name": "Corruption",
+      "type": "passive",
+      "description": "The wielder's successful attack applies an armor reduction debuff on the affected enemy unit.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "armorReduction": 6,
+        "duration": 7
+      },
+      "notes": [
+        "The bonus armor reduction value does not stack",
+        "Reapplying the debuff refreshes the duration",
+        "Affects allied units, buildings, and ward-type units",
+        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other"
+      ]
+    },
+    {
+      "name": "Soul Stealer",
+      "type": "passive",
+      "description": "Increases the item's bonus attack damage per debuff-affected enemy hero killed by Corruption.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "maxStacks": 30,
+        "stackPerKill": 2,
+        "attackDamageBonusPerStack": 1
+      },
+      "notes": [
+        "The item grants 85 total flat bonus attack damage at max stacks",
+        "Considers The Double, enemy illusions and creep-heroes as creeps",
+        "Only the first acquired Desolator grants stacks in the wielder's inventory or backpack",
+        "Grant stacks to the most recent player who refreshed the desolator_buff",
+        "The current stack is bound to the item",
+        "Non-functional on self-illusions, but they copy the item's stack value upon creation for camouflaging purposes"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 55
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally"
+  ],
+  "states": null
+}

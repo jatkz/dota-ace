@@ -1,0 +1,29 @@
+{
+  "name": "Eaglesong",
+  "description": "Capturing the majestic call of an eagle, this mystical horn brings limitless dexterity to those who hear it.",
+  "category": "Secret Shop",
+  "cost": 2800,
+  "sellValue": 1400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 2800
+  },
+  "abilities": [],
+  "stats": {
+    "agility": 25,
+    "attackSpeed": 25,
+    "mainArmor": 4.17,
+    "mainAttackDamageAgility": 25,
+    "mainAttackDamageUniversal": 11.25
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "25 attack speed and 4.17 main armor",
+    "25 main attack damage to agility heroes",
+    "11.25 main attack damage to universal heroes"
+  ],
+  "states": []
+}

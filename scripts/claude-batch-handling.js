@@ -19,13 +19,13 @@ async function main() {
         }
 
         const batchTypes = ['hero', 'item']
-        if (false) {
-            const res = await claude.retrieveBatchResult('msgbatch_01GPFPKdnBRNTby68vUD4swz', 'enchantment');
+        if (true) {
+            const res = await claude.retrieveBatchResult('msgbatch_01WuVZs6hkZnqkmczQLTMBHo', 'item');
             console.log('Retrieve Batch Result ', res);
         }
 
         if (false) {
-            const res = await claude.deleteBatch('msgbatch_01DyChSsKGwLiLASNe4SeKrx');
+            const res = await claude.deleteBatch('msgbatch_01KP3gBuGYvuyZBKsPRtst5Q');
             console.log('Delete Result ', res);
 
         }

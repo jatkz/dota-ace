@@ -1,0 +1,55 @@
+{
+  "name": "Arcane Blink",
+  "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
+  "category": "Armaments",
+  "cost": 6800,
+  "sellValue": 3400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Blink Dagger", "Point Booster", "Mystic Staff"],
+    "totalCost": 6800
+  },
+  "abilities": [
+    {
+      "name": "Arcane Blink",
+      "type": "active",
+      "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, heals and replenishes the caster's health and mana.",
+      "castAnimation": "0 + 0",
+      "castRange": "Global",
+      "manaCost": 0,
+      "cooldown": 9,
+      "effects": {
+        "maxBlinkDistance": 1400,
+        "heal": 250,
+        "manaReplenish": 100,
+        "downtime": 3
+      },
+      "notes": [
+        "Taking more than 0 damage from any other player or Roshan (after reductions and not flagged as HP Removal) puts the item on a fixed cooldown. Cannot be reset with cooldown reset sources.",
+        "Blink utilizes the teleport mechanic",
+        "When targeting a point within 1400 distance, teleports directly onto the targeted point",
+        "When targeting a point beyond 1400 distance, teleports 1400 distance towards the targeted point instead",
+        "Incoming projectiles are disjointed upon teleporting",
+        "Doubletap targets a point in front of the team's Fountain",
+        "Shares cooldown with other Blink items"
+      ]
+    }
+  ],
+  "stats": {
+    "intelligence": 25,
+    "mana": 300,
+    "manaRegeneration": 1.25,
+    "magicResistance": 2.5,
+    "mainAttackDamageInt": 25,
+    "mainAttackDamageUniversal": 11.25
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance",
+    "25 main attack damage to Intelligence heroes",
+    "11.25 main attack damage to Universal heroes"
+  ],
+  "states": null
+}

@@ -1,0 +1,73 @@
+{
+  "name": "Satanic",
+  "description": "Immense power at the cost of your soul.",
+  "category": "Armaments",
+  "cost": 5050,
+  "sellValue": 2525,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Helm of the Dominator", "Reaver", "Recipe"],
+    "totalCost": 5050
+  },
+  "abilities": [
+    {
+      "name": "Lifesteal",
+      "type": "passive",
+      "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "lifesteal": "30%",
+        "creepLifestealFactor": "0.6"
+      },
+      "notes": [
+        "Only works with physical attack damage, does not work with magical or pure attack damage",
+        "Does not work with physical or any other spell damage",
+        "Does not work with instant attacks that do not trigger attack modifier",
+        "Stacks additively with other lifesteal sources",
+        "Treats illusions and creep-heroes as heroes",
+        "Does not work on allied units, buildings, ward-type units, or couriers",
+        "Lifesteal is less effective when attacking creeps"
+      ]
+    },
+    {
+      "name": "Unholy Rage",
+      "type": "active",
+      "description": "Applies a basic dispel on the caster and greatly increases the lifesteal value for a short duration.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 30,
+      "effects": {
+        "lifesteal": "175%",
+        "duration": "6",
+        "creepLifestealFactor": "0.6"
+      },
+      "notes": [
+        "Interrupts the caster's channeling abilities upon cast",
+        "Applies a basic dispel on the user upon cast",
+        "Lifesteal is less effective when attacking creeps"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 25,
+    "attackDamage": 25,
+    "health": 550,
+    "healthRegeneration": 2.5,
+    "mainAttackDamageStrength": 25,
+    "mainAttackDamageUniversal": 11.25
+  },
+  "additionalInfo": [
+    "The item's attributes grant 550 health and 2.5 health regeneration",
+    "Grants 25 main attack damage to strength heroes",
+    "Grants 11.25 main attack damage to universal heroes",
+    "Can only be completed with items from the Secret Shop",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

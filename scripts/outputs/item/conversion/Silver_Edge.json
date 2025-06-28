@@ -1,0 +1,54 @@
+{
+  "name": "Silver Edge",
+  "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
+  "category": "Weapons",
+  "cost": 5800,
+  "sellValue": 2900,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Shadow Blade", "Ultimate Orb", "Recipe"],
+    "totalCost": 5800
+  },
+  "abilities": [
+    {
+      "name": "Shadow Walk",
+      "type": "active",
+      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible. The attack breaking invisibility has True Strike and deals physical spell damage bonus with the attack, and also breaks the target's passive abilities.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 75,
+      "cooldown": 20,
+      "effects": {
+        "fadeTime": 0.3,
+        "moveSpeedBonus": "20%",
+        "duration": 17,
+        "attackDamageBonus": 300,
+        "breakDuration": 6
+      },
+      "notes": [
+        "Does not interrupt the wielder's channeling abilities upon cast",
+        "Recasting the ability refreshes the buff duration",
+        "The caster gains phased movement while invisible",
+        "Picking up, dropping, or selling items does not break the invisibility",
+        "During the fade time, casting abilities or items does not break the invisibility",
+        "The attack also applies Break on the target",
+        "Does not affect Buildings or Ward-type units",
+        "Shares cooldown with other invisibility items"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 70,
+    "attackSpeed": 35
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "Cannot be disassembled",
+    "Break mechanic has no effect on opponents' items",
+    "Consider purchasing against troubling passives like Immaterial, Berserker's Blood, Fury Swipes, Bristleback, Untouchable and Dispersion",
+    "Abilities using stacks are only prevented from gaining or placing new stacks, existing stacks can still function until they expire"
+  ],
+  "states": null
+}

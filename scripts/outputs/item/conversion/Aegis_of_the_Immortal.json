@@ -1,0 +1,56 @@
+{
+  "name": "Aegis of the Immortal",
+  "description": "The Immortal was said to own a shield that protected him from death itself.",
+  "category": "Kill Reward",
+  "cost": null,
+  "sellValue": 0,
+  "maxStacks": 1,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": null,
+  "abilities": [
+    {
+      "name": "Reincarnation",
+      "type": "passive",
+      "description": "Brings its wielder to life at its death location with full health and mana after its effect delay.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "effectDelay": 5,
+        "maxHealthRestoreOnDeath": "100%",
+        "maxManaRestoreOnDeath": "100%",
+        "groundVisionBonus": 1800,
+        "groundVisionBonusNight": 800,
+        "aegisDuration": 300,
+        "turboAegisDuration": 240,
+        "dispelDamageThreshold": 0,
+        "maxHealthRegenPerSecond": "20%",
+        "maxManaRegenPerSecond": "20%",
+        "regenDuration": 5
+      },
+      "notes": [
+        "Neither resets the cooldown of abilities and items",
+        "Dispels the buff upon taking a 0-damage instance, except from self-damage sources and HP Removal sources",
+        "The countdown timer starts upon wielding the item, visible to everyone",
+        "The timer is independent of Roshan's respawn time",
+        "Whenever Roshan reclaims the Aegis, it disappears from the wielder's inventory",
+        "Grants the wielder bonus max health regeneration and max mana regeneration for a short duration"
+      ]
+    }
+  ],
+  "stats": {
+    "charges": 1,
+    "droppable": false,
+    "destroyable": true
+  },
+  "additionalInfo": [
+    "The Aegis is consumed/disappears when one of the following happens, be it in a player's inventory, or still on the ground where Roshan dropped it:",
+    "Roshan respawns 8 – 11 minutes after being killed",
+    "The Aegis wielder dies and reincarnates, consuming the Aegis",
+    "5 minutes pass since the Aegis was picked up by a hero, 4 minutes in Turbo Mode",
+    "This means it is impossible for multiple Aegis to exist in a match"
+  ],
+  "states": null
+}

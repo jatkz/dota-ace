@@ -1,0 +1,22 @@
+{
+  "name": "Hyperstone",
+  "description": "A mystical, carved stone that boosts the fervor of the holder.",
+  "category": "Secret Shop",
+  "cost": 2000,
+  "sellValue": 1000,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 2000
+  },
+  "abilities": [],
+  "stats": {
+    "attackSpeed": 60
+  },
+  "additionalInfo": [
+    "Hyperstone is featured in the Dota 2 Gamescom trailer, and is described as an item that grants \"speed beyond measure\"."
+  ],
+  "states": []
+}

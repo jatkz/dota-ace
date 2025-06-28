@@ -1,0 +1,47 @@
+{
+  "name": "Crystalys",
+  "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
+  "category": "Weapons",
+  "cost": 2000,
+  "sellValue": 1000,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Claymore", "Blades of Attack", "Recipe"],
+    "totalCost": 2000
+  },
+  "abilities": [
+    {
+      "name": "Critical Strike",
+      "type": "passive",
+      "description": "The wielder's attacks have a chance to inflict critical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "30%",
+        "criticalDamage": "160%",
+        "averageDamageIncrease": "18%"
+      },
+      "notes": [
+        "The proc is determined during the unit's attack point",
+        "The proc chance of multiple sources stack",
+        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
+        "Critical Strike uses pseudo-random distribution",
+        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 32
+  },
+  "additionalInfo": [
+    "Affects Enemy Units",
+    "Damage type: Attack / Physical",
+    "Disassemble: No",
+    "Increases attack damage by an average of 18%"
+  ],
+  "states": null
+}

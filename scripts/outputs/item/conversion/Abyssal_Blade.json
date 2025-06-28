@@ -1,0 +1,79 @@
+{
+  "name": "Abyssal Blade",
+  "description": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
+  "category": "Weapons",
+  "cost": 6250,
+  "sellValue": 3125,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Skull Basher", "Sange", "Recipe"],
+    "totalCost": 6250
+  },
+  "abilities": [
+    {
+      "name": "Overwhelm",
+      "type": "active",
+      "description": "Instantly stuns the target enemy unit. Pierces debuff immunity.",
+      "castAnimation": "0 + 0",
+      "castRange": 150,
+      "manaCost": 75,
+      "cooldown": 35,
+      "effects": {
+        "duration": 1.6,
+        "downtime": 2.3
+      },
+      "notes": [
+        "The caster is ordered to attack the target on cast",
+        "The effect is applied instantly, despite the visual effects",
+        "Can be cast on Couriers",
+        "Triggers Bash's cooldown on cast"
+      ]
+    },
+    {
+      "name": "Bash",
+      "type": "passive",
+      "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 2.3,
+      "effects": {
+        "procChance": "25% (melee) / 10% (ranged)",
+        "damage": 120,
+        "stunDuration": 1.2,
+        "downtime": 2.3
+      },
+      "notes": [
+        "Multiple instances of Skull Basher-based Bash do not stack",
+        "Does not stack with Bash of the Deep, Greater Bash, and Time Lock",
+        "This ability is inactive on Clones",
+        "Goes on cooldown when Overwhelm is cast",
+        "Does not work against wards and buildings, but works against allied units",
+        "Bash uses pseudo-random distribution",
+        "The bonus damage is considered as a conditional attack damage bonus",
+        "Adds an average of 30 and 12 damage to every attack for melee and ranged heroes respectively"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 26,
+    "attackDamage": 35,
+    "slowResistance": "25%",
+    "healthRestoreAmp": "20%",
+    "health": 572,
+    "healthRegeneration": 2.6,
+    "mainAttackDamageStrength": 26,
+    "mainAttackDamageUniversal": 11.7
+  },
+  "additionalInfo": [
+    "The item's attributes grant 572 health and 2.6 health regeneration",
+    "Grants 26 main attack damage to strength heroes",
+    "Grants 11.7 main attack damage to universal heroes",
+    "Multiple sources of slow resistance do not stack",
+    "Multiple sources of health restoration amplification do not stack",
+    "Item can only be completed with items from the Secret Shop"
+  ],
+  "states": null
+}

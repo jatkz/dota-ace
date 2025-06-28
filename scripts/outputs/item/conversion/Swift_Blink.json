@@ -1,0 +1,59 @@
+{
+  "name": "Swift Blink",
+  "description": "A cunning blade able to anticipate and enable its bearer's movements.",
+  "category": "Armaments",
+  "cost": 6800,
+  "sellValue": 3400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Blink Dagger", "Eaglesong", "Recipe"],
+    "totalCost": 6800
+  },
+  "abilities": [
+    {
+      "name": "Swift Blink",
+      "type": "active",
+      "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, grants the caster phased movement, increased movement speed, and bonus agility for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": "Global",
+      "manaCost": 0,
+      "cooldown": 15,
+      "effects": {
+        "maxBlinkDistance": 1200,
+        "moveSpeedBonus": "40%",
+        "agilityBonus": 35,
+        "buffDuration": 6,
+        "downtime": 3
+      },
+      "notes": [
+        "Blink utilizes the teleport mechanic",
+        "When targeting a point within 1200 distance, teleports directly onto the targeted point",
+        "When targeting a point beyond 1200 distance, teleports 1200 distance towards the targeted point instead",
+        "Incoming projectiles are disjointed upon teleporting",
+        "Doubletap targets a point in front of the team's Fountain",
+        "Grants the caster phased movement",
+        "Taking more than 0 damage from any other player or Roshan puts the item on a fixed cooldown",
+        "Cannot be reset with cooldown reset sources",
+        "Shares cooldown with other Blink items"
+      ]
+    }
+  ],
+  "stats": {
+    "agility": 25,
+    "attackSpeed": 25,
+    "mainArmor": 4.17,
+    "mainAttackDamageAgility": 25,
+    "mainAttackDamageUniversal": 11.25
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "25 attack speed and 4.17 main armor",
+    "25 main attack damage to agility heroes",
+    "11.25 main attack damage to universal heroes",
+    "Item can only be completed with items from the Secret Shop",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

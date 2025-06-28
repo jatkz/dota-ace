@@ -1,0 +1,78 @@
+{
+  "name": "Heaven's Halberd",
+  "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
+  "category": "Armaments",
+  "cost": 2600,
+  "sellValue": 1300,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Vanguard", "Crown", "Ring of Regen", "Recipe"],
+    "totalCost": 2600
+  },
+  "abilities": [
+    {
+      "name": "Disarm",
+      "type": "active",
+      "description": "Disarms the targeted enemy unit, preventing them from attacking.",
+      "castAnimation": "0 + 0",
+      "castRange": 650,
+      "manaCost": 25,
+      "cooldown": 18,
+      "effects": {
+        "duration_melee": 3,
+        "duration_ranged": 4
+      },
+      "notes": [
+        "The effect lasts longer on ranged targets",
+        "Can now be dispelled"
+      ]
+    },
+    {
+      "name": "Damage Block",
+      "type": "passive",
+      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "proc_chance": "60%",
+        "blocked_damage_melee": 60,
+        "blocked_damage_ranged": 30
+      },
+      "notes": [
+        "Ranged wielders block less damage with the same proc chance",
+        "Uses pseudo-random distribution",
+        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
+        "Multiple sources of the same value stack multiplicatively",
+        "Does not work against damage from wards sources",
+        "Does not reduce physical damage from abilities, except for specific abilities"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 5,
+    "agility": 5,
+    "intelligence": 5,
+    "health": 275,
+    "health_regeneration": 6,
+    "additional_health_from_attributes": 110,
+    "additional_health_regen_from_attributes": 0.5,
+    "additional_mana_from_attributes": 60,
+    "additional_mana_regen_from_attributes": 0.25,
+    "magic_resistance_from_attributes": "0.5%",
+    "attack_speed_from_attributes": 5,
+    "armor_from_attributes": 0.83,
+    "attack_damage_primary_attributes": 5,
+    "attack_damage_universal": 6.75
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "The proc chances of all sources of damage block work independently from each other",
+    "When multiple sources of damage block proc on the same attack, only the one with the highest blocked damage value takes effect",
+    "Can be disassembled"
+  ],
+  "states": null
+}

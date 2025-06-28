@@ -1,0 +1,52 @@
+{
+  "name": "Revenant's Brooch",
+  "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
+  "category": "Weapons",
+  "cost": 3300,
+  "sellValue": 1650,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Crystalys"],
+    "totalCost": 3300
+  },
+  "abilities": [
+    {
+      "name": "Phantom Critical",
+      "type": "passive",
+      "description": "The wielder's attacks have a chance to inflict critical magical damage.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "procChance": "30%",
+        "criticalDamage": "80%",
+        "damageType": "Attack / Magical"
+      },
+      "notes": [
+        "Phantom Critical adds magical attack damage directly to the attack",
+        "The proc is determined during the unit's attack point",
+        "The proc chance of multiple sources stack",
+        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
+        "Critical Strike uses pseudo-random distribution",
+        "Works like critical strike, but adding the damage as magical damage, instead of physical",
+        "Increases attack damage by an average of 6%",
+        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+      ]
+    }
+  ],
+  "stats": {
+    "attackDamage": 35,
+    "spellLifestealHero": "14%",
+    "spellLifestealCreep": "2.8%"
+  },
+  "additionalInfo": [
+    "Purchasable at the Base Shop, under Weapons",
+    "Can only be completed with items from the Secret Shop",
+    "Cannot be disassembled",
+    "Affects enemies"
+  ],
+  "states": []
+}

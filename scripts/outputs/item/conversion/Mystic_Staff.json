@@ -1,0 +1,25 @@
+{
+  "name": "Mystic Staff",
+  "description": "Enigmatic staff made of only the most expensive crystals.",
+  "category": "Intelligence items",
+  "cost": 2800,
+  "sellValue": 1400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 2800
+  },
+  "abilities": [],
+  "stats": {
+    "intelligence": 25
+  },
+  "additionalInfo": [
+    "The item's attributes grant the following additional stats:",
+    "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance.",
+    "25 main attack damage to Intelligence heroes.",
+    "11.25 main attack damage to universal heroes."
+  ],
+  "states": []
+}

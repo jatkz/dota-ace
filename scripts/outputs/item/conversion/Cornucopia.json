@@ -1,0 +1,29 @@
+{
+  "name": "Cornucopia",
+  "description": "A source of spiritual and physical nourishment.",
+  "category": "Secret Shop",
+  "cost": 1200,
+  "sellValue": 600,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 1200
+  },
+  "abilities": [],
+  "stats": {
+    "healthRegeneration": 5,
+    "manaRegeneration": 2,
+    "attackDamage": 7
+  },
+  "additionalInfo": [
+    "Now builds into Mage Slayer (as of version 7.38)",
+    "Previously built into Linken's Sphere until version 7.35",
+    "Created in version 7.33",
+    "Builds into Battle Fury",
+    "Builds into Orchid Malevolence", 
+    "Builds into Refresher Orb"
+  ],
+  "states": []
+}

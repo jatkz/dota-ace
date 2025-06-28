@@ -1,0 +1,60 @@
+{
+  "name": "Overwhelming Blink",
+  "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
+  "category": "Armaments",
+  "cost": 6800,
+  "sellValue": 3400,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Blink Dagger", "Reaver"],
+    "totalCost": 6800
+  },
+  "abilities": [
+    {
+      "name": "Overwhelming Blink",
+      "type": "active",
+      "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, creates a huge shockwave that instantly deals damage to nearby enemies, based on the caster's strength, plus a base amount. Enemies also have their movement and attack speed slowed, and take additional damage over time based on the caster's strength.",
+      "castAnimation": "0 + 0",
+      "castRange": "Global",
+      "manaCost": 0,
+      "cooldown": 15,
+      "effects": {
+        "maxBlinkDistance": 1200,
+        "radius": 800,
+        "baseImpactDamage": 100,
+        "strengthAsImpactDamage": "50%",
+        "strengthAsTotalDamageOverTime": "100%",
+        "moveSpeedSlow": "50%",
+        "attackSpeedSlow": 50,
+        "debuffDuration": 6,
+        "downtime": 3
+      },
+      "notes": [
+        "Taking more than 0 damage from any other player or Roshan puts the item on a fixed cooldown",
+        "Cannot be reset with cooldown reset sources",
+        "Shares cooldown with other blink items",
+        "Utilizes teleport mechanic - disjoints incoming projectiles",
+        "When targeting beyond 1200 distance, teleports 1200 distance towards the targeted point",
+        "Doubletap targets a point in front of the team's Fountain",
+        "The shockwave is instant despite visual effect",
+        "Debuff deals 16.67% of caster's Strength as damage in 1-second intervals",
+        "Shockwave first applies debuff, then impact damage"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 25,
+    "health": 550,
+    "healthRegeneration": 2.5,
+    "mainAttackDamageStrengthHeroes": 25,
+    "mainAttackDamageUniversalHeroes": 11.25
+  },
+  "additionalInfo": [
+    "Purchasable at Base Shop under Armaments, but can only be completed with items from Secret Shop",
+    "Cannot be disassembled",
+    "The item's attributes grant additional health, health regeneration, and attack damage based on hero type"
+  ],
+  "states": null
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Armlet of Mordiggian",
+  "description": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
+  "category": "Armor",
+  "cost": 2500,
+  "sellValue": 1250,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Helm of Iron Will", "Gloves of Haste", "Blades of Attack", "Recipe"],
+    "totalCost": 2500
+  },
+  "abilities": [
+    {
+      "name": "Unholy Strength",
+      "type": "active",
+      "description": "While active, grants the wielder strength, attack damage, and armor. The attack damage bonus is granted instantly, the strength bonus granted gradually over a short delay, while the armor bonus is granted after the delay.",
+      "castAnimation": "0 + 0",
+      "castRange": null,
+      "manaCost": 0,
+      "cooldown": 0,
+      "effects": {
+        "effectDelay": 0.6,
+        "strengthBonus": 25,
+        "attackDamageBonus": 35,
+        "armorBonus": 4,
+        "healthDrain": "45 HP/second",
+        "healthDrainInterval": "0.11 seconds",
+        "currentHealthIncrease": "22 per strength point"
+      },
+      "notes": [
+        "Does not interrupt channeling abilities upon toggling",
+        "The strength bonus grants 550 health and 2.5 health regeneration",
+        "Grants 25 main attack damage to strength heroes, 11.25 to universal heroes",
+        "Health drain is not lethal and stops while invulnerable",
+        "Upon toggling off, all bonuses are lost instantly including current health bonus",
+        "Multiple instances do not stack",
+        "Automatically toggles off upon death",
+        "Takes 13.75 seconds for health cost to overcome bonus health",
+        "Strength bonus increases current health by 550 total once all strength is gained",
+        "Health bonus is not considered a heal but is prevented by Ice Blast"
+      ]
+    }
+  ],
+  "stats": {
+    "healthRegeneration": 5,
+    "armor": 6,
+    "attackDamage": 15,
+    "attackSpeed": 25
+  },
+  "additionalInfo": [
+    "Attack damage, attack speed, armor, and health regeneration bonuses of multiple Armlets of Mordiggian do not stack"
+  ],
+  "states": null
+}

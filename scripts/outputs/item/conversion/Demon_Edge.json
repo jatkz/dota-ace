@@ -1,0 +1,24 @@
+{
+  "name": "Demon Edge",
+  "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
+  "category": "Damage items",
+  "cost": 2200,
+  "sellValue": 1100,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 2200
+  },
+  "abilities": [],
+  "stats": {
+    "attackDamage": 40
+  },
+  "additionalInfo": [
+    "Purchasable at the Secret Shop",
+    "Demon Edge is featured in the first Dota2 promotional comic, Are We Heroes Yet?",
+    "The hilt of the sword is made from Direstone, the blade itself is Radiant Ore"
+  ],
+  "states": []
+}

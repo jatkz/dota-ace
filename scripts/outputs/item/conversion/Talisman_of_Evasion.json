@@ -1,0 +1,24 @@
+{
+  "name": "Talisman of Evasion",
+  "description": "A necklace that allows you to anticipate enemy attacks.",
+  "category": "Secret Shop",
+  "cost": 1300,
+  "sellValue": 650,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 1300
+  },
+  "abilities": [],
+  "stats": {
+    "evasion": "15%"
+  },
+  "additionalInfo": [
+    "Evasion uses pseudo-random distribution",
+    "Stacks diminishingly with other evasion sources",
+    "Increases most heroes against physical attacks by 17.65%"
+  ],
+  "states": []
+}

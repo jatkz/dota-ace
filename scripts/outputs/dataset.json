@@ -33071,6 +33071,145 @@
         }
     },
     "items": {
+        "Abyssal Blade": {
+            "name": "Abyssal Blade",
+            "description": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
+            "category": "Weapons",
+            "cost": 6250,
+            "sellValue": 3125,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Skull Basher",
+                    "Sange",
+                    "Recipe"
+                ],
+                "totalCost": 6250
+            },
+            "abilities": [
+                {
+                    "name": "Overwhelm",
+                    "type": "active",
+                    "description": "Instantly stuns the target enemy unit. Pierces debuff immunity.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 150,
+                    "manaCost": 75,
+                    "cooldown": 35,
+                    "effects": {
+                        "duration": 1.6,
+                        "downtime": 2.3
+                    },
+                    "notes": [
+                        "The caster is ordered to attack the target on cast",
+                        "The effect is applied instantly, despite the visual effects",
+                        "Can be cast on Couriers",
+                        "Triggers Bash's cooldown on cast"
+                    ]
+                },
+                {
+                    "name": "Bash",
+                    "type": "passive",
+                    "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 2.3,
+                    "effects": {
+                        "procChance": "25% (melee) / 10% (ranged)",
+                        "damage": 120,
+                        "stunDuration": 1.2,
+                        "downtime": 2.3
+                    },
+                    "notes": [
+                        "Multiple instances of Skull Basher-based Bash do not stack",
+                        "Does not stack with Bash of the Deep, Greater Bash, and Time Lock",
+                        "This ability is inactive on Clones",
+                        "Goes on cooldown when Overwhelm is cast",
+                        "Does not work against wards and buildings, but works against allied units",
+                        "Bash uses pseudo-random distribution",
+                        "The bonus damage is considered as a conditional attack damage bonus",
+                        "Adds an average of 30 and 12 damage to every attack for melee and ranged heroes respectively"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 26,
+                "attackDamage": 35,
+                "slowResistance": "25%",
+                "healthRestoreAmp": "20%",
+                "health": 572,
+                "healthRegeneration": 2.6,
+                "mainAttackDamageStrength": 26,
+                "mainAttackDamageUniversal": 11.7
+            },
+            "additionalInfo": [
+                "The item's attributes grant 572 health and 2.6 health regeneration",
+                "Grants 26 main attack damage to strength heroes",
+                "Grants 11.7 main attack damage to universal heroes",
+                "Multiple sources of slow resistance do not stack",
+                "Multiple sources of health restoration amplification do not stack",
+                "Item can only be completed with items from the Secret Shop"
+            ],
+            "states": null
+        },
+        "Aegis of the Immortal": {
+            "name": "Aegis of the Immortal",
+            "description": "The Immortal was said to own a shield that protected him from death itself.",
+            "category": "Kill Reward",
+            "cost": null,
+            "sellValue": 0,
+            "maxStacks": 1,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": null,
+            "abilities": [
+                {
+                    "name": "Reincarnation",
+                    "type": "passive",
+                    "description": "Brings its wielder to life at its death location with full health and mana after its effect delay.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "effectDelay": 5,
+                        "maxHealthRestoreOnDeath": "100%",
+                        "maxManaRestoreOnDeath": "100%",
+                        "groundVisionBonus": 1800,
+                        "groundVisionBonusNight": 800,
+                        "aegisDuration": 300,
+                        "turboAegisDuration": 240,
+                        "dispelDamageThreshold": 0,
+                        "maxHealthRegenPerSecond": "20%",
+                        "maxManaRegenPerSecond": "20%",
+                        "regenDuration": 5
+                    },
+                    "notes": [
+                        "Neither resets the cooldown of abilities and items",
+                        "Dispels the buff upon taking a 0-damage instance, except from self-damage sources and HP Removal sources",
+                        "The countdown timer starts upon wielding the item, visible to everyone",
+                        "The timer is independent of Roshan's respawn time",
+                        "Whenever Roshan reclaims the Aegis, it disappears from the wielder's inventory",
+                        "Grants the wielder bonus max health regeneration and max mana regeneration for a short duration"
+                    ]
+                }
+            ],
+            "stats": {
+                "charges": 1,
+                "droppable": false,
+                "destroyable": true
+            },
+            "additionalInfo": [
+                "The Aegis is consumed/disappears when one of the following happens, be it in a player's inventory, or still on the ground where Roshan dropped it:",
+                "Roshan respawns 8 – 11 minutes after being killed",
+                "The Aegis wielder dies and reincarnates, consuming the Aegis",
+                "5 minutes pass since the Aegis was picked up by a hero, 4 minutes in Turbo Mode",
+                "This means it is impossible for multiple Aegis to exist in a match"
+            ],
+            "states": null
+        },
         "Aeon Disk": {
             "name": "Aeon Disk",
             "description": "A powerful artifact long ago smuggled out of the Ivory Incubarium. Or so many believe.",
@@ -33183,6 +33322,56 @@
                 "Certain abilities do not have their effect range increased, despite their cast range being increased",
                 "Abilities with Global cast range have their max distance increased instead",
                 "All vector targeted abilities have their cast range increased but not their effect range"
+            ],
+            "states": null
+        },
+        "Aghanim's Blessing - Roshan": {
+            "name": "Aghanim's Blessing - Roshan",
+            "description": "The scepter of a wizard with demigod-like powers.",
+            "category": "Kill Rewards",
+            "cost": null,
+            "sellValue": 0,
+            "maxStacks": 1,
+            "shareable": true,
+            "usageAlert": 0,
+            "recipe": null,
+            "abilities": [
+                {
+                    "name": "Ability Upgrade",
+                    "type": "active",
+                    "description": "Consume to to gain upgrades to an existing ability or to gain a new ability, unique to each hero.\n\nA hero can acquire the ability upgrade buff only once per match.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "maxBuffPerHero": 1,
+                        "networthGain": 5800,
+                        "charges": 1
+                    },
+                    "notes": [
+                        "Interrupts the user's channeling abilities upon cast",
+                        "Once consumed the item gets converted into a permanent buff",
+                        "Can only be consumed once. If the hero already has the buff, a new one cannot be consumed",
+                        "When consumed, the item is still counted towards the player's networth",
+                        "Grants each hero one or multiple unique enhancements, ranging from ability upgrades, to hero changes, and sometimes even new abilities",
+                        "Aghanim's Scepter acquired from Roshan does not grant the default item's stats. Does not grant attributes, health or mana",
+                        "Illusions copy the modifier on their creation. The upgrades fully work for them",
+                        "Most upgrades work normally for the player that drafted the abilities in Ability Draft",
+                        "Reflected abilities are upgraded based on the original caster's upgrades"
+                    ]
+                }
+            ],
+            "stats": {
+                "charges": 1,
+                "destroyable": true
+            },
+            "additionalInfo": [
+                "Unlike Aghanim's Shard, multiple Aghanim's Blessings can be acquired, however, only one of them can be consumed",
+                "Dropped by Roshan on the ground on his third death and onward, but only when killed on the Dire side",
+                "Must be actively used by the player to consume. Cannot be consumed if the hero already has the Aghanim's Blessing buff",
+                "Cannot be sold. Can fully be shared with allies",
+                "Has a dedicated interface element within the HUD, along with Aghanim's Shard. The symbol lights up once Aghanim's Scepter is acquired"
             ],
             "states": null
         },
@@ -33321,6 +33510,65 @@
                 ]
             }
         },
+        "Arcane Blink": {
+            "name": "Arcane Blink",
+            "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
+            "category": "Armaments",
+            "cost": 6800,
+            "sellValue": 3400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Blink Dagger",
+                    "Point Booster",
+                    "Mystic Staff"
+                ],
+                "totalCost": 6800
+            },
+            "abilities": [
+                {
+                    "name": "Arcane Blink",
+                    "type": "active",
+                    "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, heals and replenishes the caster's health and mana.",
+                    "castAnimation": "0 + 0",
+                    "castRange": "Global",
+                    "manaCost": 0,
+                    "cooldown": 9,
+                    "effects": {
+                        "maxBlinkDistance": 1400,
+                        "heal": 250,
+                        "manaReplenish": 100,
+                        "downtime": 3
+                    },
+                    "notes": [
+                        "Taking more than 0 damage from any other player or Roshan (after reductions and not flagged as HP Removal) puts the item on a fixed cooldown. Cannot be reset with cooldown reset sources.",
+                        "Blink utilizes the teleport mechanic",
+                        "When targeting a point within 1400 distance, teleports directly onto the targeted point",
+                        "When targeting a point beyond 1400 distance, teleports 1400 distance towards the targeted point instead",
+                        "Incoming projectiles are disjointed upon teleporting",
+                        "Doubletap targets a point in front of the team's Fountain",
+                        "Shares cooldown with other Blink items"
+                    ]
+                }
+            ],
+            "stats": {
+                "intelligence": 25,
+                "mana": 300,
+                "manaRegeneration": 1.25,
+                "magicResistance": 2.5,
+                "mainAttackDamageInt": 25,
+                "mainAttackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance",
+                "25 main attack damage to Intelligence heroes",
+                "11.25 main attack damage to Universal heroes"
+            ],
+            "states": null
+        },
         "Arcane Boots": {
             "name": "Arcane Boots",
             "description": "Magi equipped with these boots are valued in battle.",
@@ -33425,6 +33673,67 @@
                     }
                 ]
             }
+        },
+        "Armlet of Mordiggian": {
+            "name": "Armlet of Mordiggian",
+            "description": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
+            "category": "Armor",
+            "cost": 2500,
+            "sellValue": 1250,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Helm of Iron Will",
+                    "Gloves of Haste",
+                    "Blades of Attack",
+                    "Recipe"
+                ],
+                "totalCost": 2500
+            },
+            "abilities": [
+                {
+                    "name": "Unholy Strength",
+                    "type": "active",
+                    "description": "While active, grants the wielder strength, attack damage, and armor. The attack damage bonus is granted instantly, the strength bonus granted gradually over a short delay, while the armor bonus is granted after the delay.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 0,
+                    "effects": {
+                        "effectDelay": 0.6,
+                        "strengthBonus": 25,
+                        "attackDamageBonus": 35,
+                        "armorBonus": 4,
+                        "healthDrain": "45 HP/second",
+                        "healthDrainInterval": "0.11 seconds",
+                        "currentHealthIncrease": "22 per strength point"
+                    },
+                    "notes": [
+                        "Does not interrupt channeling abilities upon toggling",
+                        "The strength bonus grants 550 health and 2.5 health regeneration",
+                        "Grants 25 main attack damage to strength heroes, 11.25 to universal heroes",
+                        "Health drain is not lethal and stops while invulnerable",
+                        "Upon toggling off, all bonuses are lost instantly including current health bonus",
+                        "Multiple instances do not stack",
+                        "Automatically toggles off upon death",
+                        "Takes 13.75 seconds for health cost to overcome bonus health",
+                        "Strength bonus increases current health by 550 total once all strength is gained",
+                        "Health bonus is not considered a heal but is prevented by Ice Blast"
+                    ]
+                }
+            ],
+            "stats": {
+                "healthRegeneration": 5,
+                "armor": 6,
+                "attackDamage": 15,
+                "attackSpeed": 25
+            },
+            "additionalInfo": [
+                "Attack damage, attack speed, armor, and health regeneration bonuses of multiple Armlets of Mordiggian do not stack"
+            ],
+            "states": null
         },
         "Assault Cuirass": {
             "name": "Assault Cuirass",
@@ -33537,6 +33846,100 @@
                     }
                 ]
             }
+        },
+        "Battle Fury": {
+            "name": "Battle Fury",
+            "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
+            "category": "Weapons",
+            "cost": 3900,
+            "sellValue": 1950,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Broadsword",
+                    "Cornucopia",
+                    "Recipe"
+                ],
+                "totalCost": 3900
+            },
+            "abilities": [
+                {
+                    "name": "Chop Tree",
+                    "type": "active",
+                    "description": "Instantly destroys the targeted tree.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 350,
+                    "manaCost": null,
+                    "cooldown": 4,
+                    "effects": {
+                        "affects": "Trees"
+                    },
+                    "notes": [
+                        "Does not share cooldown with Chop Tree from other sources"
+                    ]
+                },
+                {
+                    "name": "Quell",
+                    "type": "passive",
+                    "description": "Grants bonus attack damage against non-hero units.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "attackDamageBonusMelee": 10,
+                        "attackDamageBonusRanged": 5,
+                        "affects": "Enemies",
+                        "damageType": "Attack / Physical"
+                    },
+                    "notes": [
+                        "Quell is considered as a conditional attack damage bonus",
+                        "The attack damage bonus adapts immediately depending on the wielder's range type",
+                        "Stacks with the Quell of Quelling Blade, but not with additional Battle Furies",
+                        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, or Allied units"
+                    ]
+                },
+                {
+                    "name": "Cleave",
+                    "type": "passive",
+                    "description": "Deals a percentage of the wielder's attack damage as physical damage in a cone in front of the wielder on each attack.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "startingRadius": 150,
+                        "distance": 650,
+                        "endRadius": 360,
+                        "cleaveDamageHeroes": "60%",
+                        "cleaveDamageNonHeroes": "40%",
+                        "affects": "Enemies",
+                        "damageType": "Spell / Physical"
+                    },
+                    "notes": [
+                        "Grants cleave if the affected hero's range type is melee",
+                        "Ranged units cannot cleave",
+                        "Visual effects and sounds still play when illusions attack",
+                        "Does not proc cleave when attacking ally units",
+                        "Does not damage Couriers",
+                        "Neither proc nor damage Buildings or Ward-type units"
+                    ]
+                }
+            ],
+            "stats": {
+                "healthRegeneration": 7.5,
+                "manaRegeneration": 2.75,
+                "attackDamage": 50
+            },
+            "additionalInfo": [
+                "Purchasable at the Base Shop, under Weapons",
+                "Requires items from the Secret Shop to be completed",
+                "Cannot be disassembled",
+                "Internal name is 'bfury'"
+            ],
+            "states": null
         },
         "Belt of Strength": {
             "name": "Belt of Strength",
@@ -34043,6 +34446,91 @@
                 "Multiple instances of spell lifesteal from the same source do not stack",
                 "Listed at the Base Shop, under Magical, but requires items from the Secret Shop to be assembled",
                 "Cannot be disassembled"
+            ],
+            "states": null
+        },
+        "Bloodthorn": {
+            "name": "Bloodthorn",
+            "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
+            "category": "Weapons",
+            "cost": 6625,
+            "sellValue": 3312.5,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Orchid Malevolence",
+                    "Crystalys",
+                    "Recipe"
+                ],
+                "totalCost": 6625
+            },
+            "abilities": [
+                {
+                    "name": "Soul Rend",
+                    "type": "active",
+                    "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 900,
+                    "manaCost": 125,
+                    "cooldown": 15,
+                    "effects": {
+                        "accumulatedDamage": "60%",
+                        "duration": 5,
+                        "accuracy": "100%",
+                        "bonusMagicalDamage": 50
+                    },
+                    "notes": [
+                        "The caster's units gain full accuracy against the target",
+                        "Whenever the target gets attacked by any unit, they take additional magical damage",
+                        "The damage counter accumulates all damage instances dealt to the Soul Rend target within the last 5 seconds",
+                        "The accumulated damage is based on the actual damage taken, after all damage manipulation is applied",
+                        "Does not include damage with the HP Removal or the no-reflection flag",
+                        "The accumulated damage is only applied if the debuff expires naturally, it does not trigger if the debuff gets dispelled",
+                        "Re-casting Soul Rend on the same target refreshes the duration, but does not reset the already accumulated damage",
+                        "The attack-based bonus damage is dealt in a separate damage instance, and counts as spell damage",
+                        "The source of the damage is the Bloodthorn caster, not the attacker itself"
+                    ]
+                },
+                {
+                    "name": "Pierce",
+                    "type": "passive",
+                    "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "40%",
+                        "bonusMagicalDamage": 60
+                    },
+                    "notes": [
+                        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+                        "It is not considered by lifesteal, crit or cleave",
+                        "It can be reduced only by flat reductions",
+                        "Does not work against buildings, but works against wards and allied units",
+                        "Adds an average of 24 magical damage to every attack",
+                        "Pierce uses pseudo-random distribution",
+                        "Pierce from Javelin-based items fully stack with another and themselves"
+                    ]
+                }
+            ],
+            "stats": {
+                "intelligence": 10,
+                "healthRegeneration": 6.5,
+                "manaRegeneration": 3.25,
+                "attackDamage": 10,
+                "attackSpeed": 95,
+                "mana": 120,
+                "flatBaseMagicResistance": "1%"
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "If an Orchid Malevolence was purchased as well, Bloodthorn's icon takes priority",
+                "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+                "Grants 10 main attack damage to Intelligence heroes",
+                "Grants 4.5 main attack damage to Universal heroes"
             ],
             "states": null
         },
@@ -34564,6 +35052,47 @@
                 ]
             }
         },
+        "Butterfly": {
+            "name": "Butterfly",
+            "description": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
+            "category": "Weapons",
+            "cost": 5450,
+            "sellValue": 2725,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Claymore",
+                    "Talisman of Evasion",
+                    "Eaglesong"
+                ],
+                "totalCost": 5450
+            },
+            "abilities": [],
+            "stats": {
+                "agility": 35,
+                "evasion": 35,
+                "attackDamage": 25,
+                "baseAttackSpeed": 20,
+                "attackSpeed": 35,
+                "mainArmor": 5.83,
+                "mainAttackDamageAgility": 35,
+                "mainAttackDamageUniversal": 15.75
+            },
+            "additionalInfo": [
+                "The item's attributes grant 35 attack speed and 5.83 main armor",
+                "35 main attack damage to agility heroes",
+                "15.75 main attack damage to universal heroes",
+                "Evasion uses pseudo-random distribution",
+                "Stacks diminishingly with other evasion sources",
+                "Increases most heroes survivability against physical attacks by 53.85%",
+                "If someone in your team already has evasion like Phantom Assassin or another Butterfly, decide if increasing evasion will be a good idea as the enemy team will generally rush a Monkey King Bar",
+                "The more evasion a team has, the more valuable Monkey King Bar gets for the enemy team",
+                "However, if the enemy team is greatly suppressed and underfarmed, increasing evasion could be a good decision"
+            ],
+            "states": []
+        },
         "Chainmail": {
             "name": "Chainmail",
             "description": "A medium weave of metal chains.",
@@ -34601,6 +35130,47 @@
                     }
                 ]
             }
+        },
+        "Cheese": {
+            "name": "Cheese",
+            "description": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it.",
+            "category": "Kill Reward",
+            "cost": null,
+            "sellValue": 500,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": null,
+            "abilities": [
+                {
+                    "name": "Fondue",
+                    "type": "active",
+                    "description": "Both heals and mana restores a flat amount instantly upon cast.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "heal": 2500,
+                        "manaRestored": 1500
+                    },
+                    "notes": [
+                        "Interrupts the wielder's channeling abilities upon cast",
+                        "Both restore values are absolute and is not affected by restoration manipulation sources, except health freeze sources"
+                    ]
+                }
+            ],
+            "stats": {
+                "charges": 1
+            },
+            "additionalInfo": [
+                "On his second death and onwards, Roshan drops the Cheese as a second item if he was slain in the Dire pit. In the Radiant pit, he drops a Roshan's Banner instead.",
+                "Although Cheese cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it.",
+                "If a Courier is the first unit to pick up the Cheese, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards.",
+                "If a Cheese directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory.",
+                "Unlike the Aegis of the Immortal, Cheese is not reclaimed by Roshan."
+            ],
+            "states": null
         },
         "Circlet": {
             "name": "Circlet",
@@ -34819,6 +35389,35 @@
                 ]
             }
         },
+        "Cornucopia": {
+            "name": "Cornucopia",
+            "description": "A source of spiritual and physical nourishment.",
+            "category": "Secret Shop",
+            "cost": 1200,
+            "sellValue": 600,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 1200
+            },
+            "abilities": [],
+            "stats": {
+                "healthRegeneration": 5,
+                "manaRegeneration": 2,
+                "attackDamage": 7
+            },
+            "additionalInfo": [
+                "Now builds into Mage Slayer (as of version 7.38)",
+                "Previously built into Linken's Sphere until version 7.35",
+                "Created in version 7.33",
+                "Builds into Battle Fury",
+                "Builds into Orchid Malevolence",
+                "Builds into Refresher Orb"
+            ],
+            "states": []
+        },
         "Crimson Guard": {
             "name": "Crimson Guard",
             "description": "A cuirass originally built to protect against the dreaded Year Beast.",
@@ -34955,6 +35554,107 @@
                 ]
             }
         },
+        "Crystalys": {
+            "name": "Crystalys",
+            "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
+            "category": "Weapons",
+            "cost": 2000,
+            "sellValue": 1000,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Claymore",
+                    "Blades of Attack",
+                    "Recipe"
+                ],
+                "totalCost": 2000
+            },
+            "abilities": [
+                {
+                    "name": "Critical Strike",
+                    "type": "passive",
+                    "description": "The wielder's attacks have a chance to inflict critical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "30%",
+                        "criticalDamage": "160%",
+                        "averageDamageIncrease": "18%"
+                    },
+                    "notes": [
+                        "The proc is determined during the unit's attack point",
+                        "The proc chance of multiple sources stack",
+                        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
+                        "Critical Strike uses pseudo-random distribution",
+                        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 32
+            },
+            "additionalInfo": [
+                "Affects Enemy Units",
+                "Damage type: Attack / Physical",
+                "Disassemble: No",
+                "Increases attack damage by an average of 18%"
+            ],
+            "states": null
+        },
+        "Daedalus": {
+            "name": "Daedalus",
+            "description": "A weapon of incredible power that is difficult for even the strongest of warriors to control.",
+            "category": "Weapons",
+            "cost": 5100,
+            "sellValue": 2550,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Crystalys",
+                    "Demon Edge",
+                    "Recipe"
+                ],
+                "totalCost": 5100
+            },
+            "abilities": [
+                {
+                    "name": "Critical Strike",
+                    "type": "passive",
+                    "description": "The wielder's attacks have a chance to inflict critical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "30%",
+                        "criticalDamage": "225%"
+                    },
+                    "notes": [
+                        "The proc is determined during the unit's attack point",
+                        "The proc chance of multiple sources stack",
+                        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
+                        "Critical Strike uses pseudo-random distribution",
+                        "Increases attack damage by an average of 37.5%",
+                        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 88
+            },
+            "additionalInfo": [
+                "Purchasable at the Base Shop under Weapons",
+                "Can only be completed with items from the Secret Shop",
+                "Cannot be disassembled"
+            ],
+            "states": null
+        },
         "Dagon": {
             "name": "Dagon",
             "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
@@ -35024,6 +35724,98 @@
             ],
             "states": null
         },
+        "Demon Edge": {
+            "name": "Demon Edge",
+            "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
+            "category": "Damage items",
+            "cost": 2200,
+            "sellValue": 1100,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 2200
+            },
+            "abilities": [],
+            "stats": {
+                "attackDamage": 40
+            },
+            "additionalInfo": [
+                "Purchasable at the Secret Shop",
+                "Demon Edge is featured in the first Dota2 promotional comic, Are We Heroes Yet?",
+                "The hilt of the sword is made from Direstone, the blade itself is Radiant Ore"
+            ],
+            "states": []
+        },
+        "Desolator": {
+            "name": "Desolator",
+            "description": "A wicked weapon, used in torturing political criminals.",
+            "category": "Weapons",
+            "cost": 3500,
+            "sellValue": 1750,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Orb of Blight",
+                    "Orb of Blight",
+                    "Orb of Blight"
+                ],
+                "totalCost": 3500
+            },
+            "abilities": [
+                {
+                    "name": "Corruption",
+                    "type": "passive",
+                    "description": "The wielder's successful attack applies an armor reduction debuff on the affected enemy unit.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "armorReduction": 6,
+                        "duration": 7
+                    },
+                    "notes": [
+                        "The bonus armor reduction value does not stack",
+                        "Reapplying the debuff refreshes the duration",
+                        "Affects allied units, buildings, and ward-type units",
+                        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other"
+                    ]
+                },
+                {
+                    "name": "Soul Stealer",
+                    "type": "passive",
+                    "description": "Increases the item's bonus attack damage per debuff-affected enemy hero killed by Corruption.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "maxStacks": 30,
+                        "stackPerKill": 2,
+                        "attackDamageBonusPerStack": 1
+                    },
+                    "notes": [
+                        "The item grants 85 total flat bonus attack damage at max stacks",
+                        "Considers The Double, enemy illusions and creep-heroes as creeps",
+                        "Only the first acquired Desolator grants stacks in the wielder's inventory or backpack",
+                        "Grant stacks to the most recent player who refreshed the desolator_buff",
+                        "The current stack is bound to the item",
+                        "Non-functional on self-illusions, but they copy the item's stack value upon creation for camouflaging purposes"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 55
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally"
+            ],
+            "states": null
+        },
         "Diadem": {
             "name": "Diadem",
             "description": "A crown that can never be removed.",
@@ -35070,6 +35862,314 @@
                     }
                 ]
             }
+        },
+        "Diffusal Blade": {
+            "name": "Diffusal Blade",
+            "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+            "category": "Weapons",
+            "cost": 2500,
+            "sellValue": 1250,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Blade of Alacrity",
+                    "Robe of the Magi",
+                    "Recipe"
+                ],
+                "totalCost": 2500
+            },
+            "abilities": [
+                {
+                    "name": "Inhibit",
+                    "type": "active",
+                    "description": "Greatly slows the target enemy's movement speed, which decays over the duration.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 600,
+                    "manaCost": 25,
+                    "cooldown": 15,
+                    "effects": {
+                        "moveSpeedSlow": "100%",
+                        "slowDecayRate": 0.8,
+                        "duration": 4
+                    },
+                    "notes": [
+                        "The slow decays evenly over the duration in 0.8-second intervals",
+                        "Results in a slow of 100%/80%/60%/40%/20% at second 4/3.2/2.4/1.6/0.8/0",
+                        "Can be cast on and fully affect invulnerable units",
+                        "Can trigger an enemy's Linken's Sphere"
+                    ]
+                },
+                {
+                    "name": "Manabreak",
+                    "type": "passive",
+                    "description": "The wielder's attacks burn their target's mana and deal damage equal to a percentage of the mana burnt.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "manaBurnPerHit": 40,
+                        "manaBurnToDamageFactor": 1,
+                        "illusionManaBurnPerHit": 8
+                    },
+                    "notes": [
+                        "Mana Break is a conditional attack damage bonus",
+                        "The bonus attack damage is directly added to the wielder's attack damage, but is not visible in the HUD",
+                        "Does not interact with percentage-based bonus attack damage, lifesteal, critical strike, cleave, or damage block sources",
+                        "Does nothing if the attack target has no mana",
+                        "Does not work against allied units",
+                        "Does not stack with Diffusal Blade-based abilities. Stacks additively with other sources of Mana Break"
+                    ]
+                }
+            ],
+            "stats": {
+                "agility": 15,
+                "intelligence": 10,
+                "mana": 120,
+                "manaRegeneration": 0.5,
+                "magicResistance": "1%",
+                "attackSpeed": 15,
+                "armor": 2.5,
+                "attackDamageAgi": 15,
+                "attackDamageInt": 10,
+                "attackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+                "Grants 15 attack speed and 2.5 main armor",
+                "Grants 15 and 10 main attack damage to agility/intelligence heroes respectively",
+                "Grants 11.25 main attack damage to universal heroes",
+                "Generally works well with illusion-based heroes",
+                "Heroes that can hit enemies with multiple attacks in quick succession can deal a lot of Manabreak damage",
+                "The bonus attributes and the Manabreak ability make Diffusal Blade a cost-effective damage item on agility and universal carries/heroes in general",
+                "Because of the way Manabreak interacts with illusions, Diffusal Blade is most common and most effective on heroes with easy access to them",
+                "Commonly seen together with Manta Style",
+                "The movement slow is an effective way to kite melee characters",
+                "The movement slow can help your illusions and/or summoned units stick to their attack target"
+            ],
+            "states": null
+        },
+        "Disperser": {
+            "name": "Disperser",
+            "description": "Once entrusted to an Apostle General of the Rumusque Faithful's expiditionary force.",
+            "category": "Weapons",
+            "cost": 6100,
+            "sellValue": 3050,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Eaglesong",
+                    "Diffusal Blade",
+                    "Recipe"
+                ],
+                "totalCost": 6100
+            },
+            "abilities": [
+                {
+                    "name": "Suppress",
+                    "type": "active",
+                    "description": "When cast on an enemy, greatly slows the target enemy's movement speed, which decays over the duration. When cast on an ally or self, dispels the target, grants them slow resistance, and greatly increases their movement speed, which decays over the duration.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 600,
+                    "manaCost": 75,
+                    "cooldown": 15,
+                    "effects": {
+                        "moveSpeedSlow": "100%",
+                        "slowDecayRate": 1,
+                        "duration": 5,
+                        "slowResistance": "40%",
+                        "moveSpeedBonus": "100%",
+                        "allyDuration": 5
+                    },
+                    "notes": [
+                        "The wielder always gets the allied buff, no matter whom Suppress is cast on",
+                        "Can be cast on and fully affect invulnerable units",
+                        "The slow decays evenly over the duration in 1-second intervals (100%/80%/60%/40%/20% at second 5/4/3/2/1/0)",
+                        "The movement speed bonus decays evenly over the duration in 1-second intervals",
+                        "Shares cooldown with Diffusal Blade-based items"
+                    ]
+                },
+                {
+                    "name": "Manabreak",
+                    "type": "passive",
+                    "description": "The wielder's attacks burn their target's mana and deal damage equal to a percentage of the mana burnt.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "manaBurnPerHit": 40,
+                        "manaBurnToDamageFactor": 1,
+                        "illusionManaBurn": 8
+                    },
+                    "notes": [
+                        "Does not stack with Diffusal Blade-based abilities",
+                        "Stacks additively with other sources of Mana Break",
+                        "Attacks of illusions burn less mana (8 instead of 40)",
+                        "Mana Break is a conditional attack damage bonus",
+                        "Does not interact with percentage-based bonus attack damage, lifesteal, critical strike, cleave, or damage block",
+                        "Does nothing if the attack target has no mana",
+                        "Does not work against allied units"
+                    ]
+                }
+            ],
+            "stats": {
+                "agility": 40,
+                "intelligence": 10,
+                "mana": 120,
+                "manaRegeneration": 0.5,
+                "magicResistance": "1%",
+                "attackSpeed": 40,
+                "armor": 6.67,
+                "attackDamageAgi": 40,
+                "attackDamageInt": 10,
+                "attackDamageUniversal": 22.5
+            },
+            "additionalInfo": [
+                "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+                "Grants 40 attack speed and 6.67 main armor",
+                "Provides 40 and 10 main attack damage to agility/intelligence heroes respectively",
+                "Provides 22.5 main attack damage to universal heroes",
+                "Generally works well with illusion-based heroes",
+                "Cost-effective damage item on agility carries/heroes in general",
+                "Cannot be disassembled"
+            ],
+            "states": null
+        },
+        "Divine Rapier": {
+            "name": "Divine Rapier",
+            "description": "So powerful, it cannot have a single owner.",
+            "category": "Weapons",
+            "cost": 5600,
+            "sellValue": 0,
+            "maxStacks": null,
+            "shareable": "Partially",
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Sacred Relic",
+                    "Demon Edge"
+                ],
+                "totalCost": 5600
+            },
+            "abilities": [
+                {
+                    "name": "Transmute",
+                    "type": "active",
+                    "description": "Toggle on to gain bonus spell damage amplification. Toggle off to gain bonus attack damage. Item starts in this mode upon purchase.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 6,
+                    "effects": {
+                        "spellDamageAmplificationBonus": "25%",
+                        "attackDamageBonus": 250
+                    },
+                    "notes": [
+                        "Does not interrupt the caster's channeling abilities upon toggling On/Off",
+                        "The cooldown only triggers upon toggling off, not upon toggling on"
+                    ]
+                },
+                {
+                    "name": "Everlasting",
+                    "type": "passive",
+                    "description": "Dropped on death, and cannot be destroyed.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {},
+                    "notes": [
+                        "The rapier belongs to the player that purchased it, and is muted when held by allies. The purchasing player can manually drop or stash the Rapier freely at any time",
+                        "If picked up by an enemy once, it becomes a free Divine Rapier; it now works for anyone carrying it. However, it can no longer be dropped manually, and is bound to the player that picked it up until they die"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 100
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "Divine Rapier drops when the wielder dies, unless they have Reincarnation",
+                "This item cannot be put into the backpack",
+                "Buying, using components in the backpack to combine Divine Rapier while the inventory is full, drops the item on the floor",
+                "Unlike other combined items, Divine Rapier cannot be disassembled within seconds after assembling it",
+                "The Courier can be used to buy a Divine Rapier, but they cannot pick Divine Rapiers up from the ground",
+                "Divine Rapier does not count towards the owner's Net Worth if it is on the ground",
+                "Divine Rapier changes owner when claimed in its free state, thus counting towards the claimer's Net Worth"
+            ],
+            "states": [
+                {
+                    "icon": "Original Rapier",
+                    "contains": "The initial state upon buying the item. Manually droppable: Yes, Drops on Death: Yes, Damage Bonus: Only for purchasing hero"
+                },
+                {
+                    "icon": "Free Rapier",
+                    "contains": "The state after the item is picked up by an enemy once. Manually droppable: No, Drops on Death: Yes, Damage Bonus: The hero who claims it"
+                }
+            ]
+        },
+        "Dragon Lance": {
+            "name": "Dragon Lance",
+            "description": "The forward charge of the wyvern host grants no quarter.",
+            "category": "Armaments",
+            "cost": 1900,
+            "sellValue": 950,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Blade of Alacrity",
+                    "Belt of Strength",
+                    "Recipe"
+                ],
+                "totalCost": 1900
+            },
+            "abilities": [
+                {
+                    "name": "Dragon's Reach",
+                    "type": "passive",
+                    "description": "Grants flat attack range bonus to ranged wielders.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "attackRangeBonus": 150
+                    },
+                    "notes": [
+                        "The bonus attack range from multiple Dragon Lance-based items do not stack",
+                        "Stacks additively with other ranged bonus attack range sources"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 10,
+                "agility": 15,
+                "attackRange": 150,
+                "health": 220,
+                "healthRegeneration": 1,
+                "attackSpeed": 15,
+                "armor": 2.5,
+                "attackDamageStr": 10,
+                "attackDamageAgi": 15,
+                "attackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The attack range bonus works for ranged heroes only",
+                "Stacks with all other attack range bonuses",
+                "Affects the cast range of active attack modifiers as well",
+                "The item's attributes grant 220 health and 1 health regeneration",
+                "Provides 15 attack speed and 2.5 main armor",
+                "Gives 10 and 15 main attack damage to strength/agility heroes respectively",
+                "Provides 11.25 main attack damage to universal heroes"
+            ],
+            "states": null
         },
         "Drum of Endurance": {
             "name": "Drum of Endurance",
@@ -35260,6 +36360,97 @@
                 ]
             }
         },
+        "Eaglesong": {
+            "name": "Eaglesong",
+            "description": "Capturing the majestic call of an eagle, this mystical horn brings limitless dexterity to those who hear it.",
+            "category": "Secret Shop",
+            "cost": 2800,
+            "sellValue": 1400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 2800
+            },
+            "abilities": [],
+            "stats": {
+                "agility": 25,
+                "attackSpeed": 25,
+                "mainArmor": 4.17,
+                "mainAttackDamageAgility": 25,
+                "mainAttackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "25 attack speed and 4.17 main armor",
+                "25 main attack damage to agility heroes",
+                "11.25 main attack damage to universal heroes"
+            ],
+            "states": []
+        },
+        "Echo Sabre": {
+            "name": "Echo Sabre",
+            "description": "A deceptively swift blade imbued with resonant magic.",
+            "category": "Armaments",
+            "cost": 2700,
+            "sellValue": 1350,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Ogre Axe",
+                    "Broadsword",
+                    "Void Stone"
+                ],
+                "totalCost": 2700
+            },
+            "abilities": [
+                {
+                    "name": "Echo Strike",
+                    "type": "passive",
+                    "description": "The next attack grants the wielder a buff that greatly increases attack speed for one attack.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 5,
+                    "effects": {
+                        "attackSpeedBonus": 490,
+                        "numberOfAttacks": 1,
+                        "moveSpeedSlow": "100%",
+                        "slowDuration": 0.8
+                    },
+                    "notes": [
+                        "Ranged heroes cannot use Echo Strike",
+                        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow",
+                        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not",
+                        "The attack speed buff has no set duration. It lasts until the user makes a second attack",
+                        "Echo Strike triggers on Instant Attacks as well, except specific sources like Sproink, Side Gunner, Infest, etc.",
+                        "Does not stack with Falcon Rush",
+                        "The slow debuff cannot be applied by Clones",
+                        "Multiple instances of the slow debuff do not stack"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 15,
+                "manaRegeneration": 1.75,
+                "attackDamage": 20,
+                "health": 330,
+                "healthRegeneration": 1.5,
+                "mainAttackDamageStrength": 15,
+                "mainAttackDamageUniversal": 6.75
+            },
+            "additionalInfo": [
+                "The item's attributes grant 330 health and 1.5 health regeneration",
+                "Grants 15 main attack damage to strength heroes",
+                "Grants 6.75 main attack damage to universal heroes",
+                "Can be disassembled",
+                "Shares cooldown with other echo-type items"
+            ],
+            "states": null
+        },
         "Enchanted Mango": {
             "name": "Enchanted Mango",
             "description": "The bittersweet flavors of Jidi Isle are irresistible to amphibians.",
@@ -35324,6 +36515,31 @@
                     }
                 ]
             }
+        },
+        "Energy Booster": {
+            "name": "Energy Booster",
+            "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
+            "category": "Secret Shop",
+            "cost": 800,
+            "sellValue": 400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 800
+            },
+            "abilities": [],
+            "stats": {
+                "mana": 250
+            },
+            "additionalInfo": [
+                "No longer builds into Arcane Boots as of version 7.35",
+                "Now builds into Pavise as of version 7.35",
+                "No longer builds into Holy Locket as of version 7.33",
+                "Gold cost reduced from 900 to 800 in version 7.29"
+            ],
+            "states": []
         },
         "Eternal Shroud": {
             "name": "Eternal Shroud",
@@ -35396,6 +36612,80 @@
             ],
             "states": null
         },
+        "Ethereal Blade": {
+            "name": "Ethereal Blade",
+            "description": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
+            "category": "Magical",
+            "cost": 5375,
+            "sellValue": 2687.5,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Ghost Scepter",
+                    "Eaglesong",
+                    "Recipe"
+                ],
+                "totalCost": 5375
+            },
+            "abilities": [
+                {
+                    "name": "Ether Blast",
+                    "type": "active",
+                    "description": "Blasts the target with an projectile that turns them ethereal, rendering them immune to physical damage and not attackable, but more vulnerable to magical damage, as well as disarming them.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 800,
+                    "manaCost": 100,
+                    "cooldown": 22,
+                    "effects": {
+                        "magicResistanceReduction": "40%",
+                        "duration": 4,
+                        "baseDamage": 50,
+                        "primaryAttributeDamage": "150%",
+                        "moveSpeedSlow": "80%",
+                        "universalHeroDamage": "45% of all attributes"
+                    },
+                    "notes": [
+                        "Double-tapping automatically targets self",
+                        "Turns the target ethereal, disarming them and granting 100% physical damage resistance",
+                        "Magic resistance reduction does not stack with other ethereal sources",
+                        "Reduces most heroes' magic resistance to -5%",
+                        "Shares cooldowns with Ghost Scepter",
+                        "Can be used on allies or enemies",
+                        "For primary attribute heroes: 50 + 1.5 × CurrentPrimaryAttribute damage",
+                        "For universal heroes: 50 + 0.45 × Sum of all attributes damage"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 8,
+                "agility": 8,
+                "intelligence": 8,
+                "mana": 300,
+                "manaRegeneration": 3,
+                "castRange": 250,
+                "health": 176,
+                "healthRegeneration": 0.8,
+                "bonusMana": 96,
+                "bonusManaRegeneration": 0.4,
+                "magicResistance": "0.8%",
+                "attackSpeed": 8,
+                "armor": 1.33,
+                "attackDamage": 8,
+                "universalHeroAttackDamage": 10.8
+            },
+            "additionalInfo": [
+                "Can be disassembled",
+                "The item's attributes grant additional health, mana, attack speed, armor, and attack damage",
+                "Excellent for intelligence heroes and spellcasters",
+                "Can be used defensively on self to avoid physical damage",
+                "Works well in combination with Dagon for burst damage",
+                "Disrupts enemies who rely on right-click attacks",
+                "Provides spell lifesteal amplification and mana regeneration amplification"
+            ],
+            "states": null
+        },
         "Eul's Scepter of Divinity": {
             "name": "Eul's Scepter of Divinity",
             "description": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil.",
@@ -35463,6 +36753,72 @@
                 "Stacks with all other movement speed bonuses",
                 "Purges first, then applies Cyclone modifier",
                 "Shares cooldown with Wind Waker"
+            ],
+            "states": null
+        },
+        "Eye of Skadi": {
+            "name": "Eye of Skadi",
+            "description": "Extremely rare artifact, guarded by the azure dragons.",
+            "category": "Armor",
+            "cost": 5900,
+            "sellValue": 2950,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Ultimate Orb",
+                    "Ultimate Orb",
+                    "Orb of Frost"
+                ],
+                "totalCost": 5900
+            },
+            "abilities": [
+                {
+                    "name": "Cold Attack",
+                    "type": "passive",
+                    "description": "The wielder's attacks apply a movement speed and attack speed slow on enemy units.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "moveSpeedSlow": "25%",
+                        "attackSpeedSlow": "20%",
+                        "duration": 3,
+                        "healReduction": "40%",
+                        "healthRestoreReduction": "40%",
+                        "rangedMoveSpeedSlow": "50%"
+                    },
+                    "notes": [
+                        "The frigid attacks also reduce the effectiveness of healing and health restoration on the targets",
+                        "The movement speed slow is more effective against ranged enemies",
+                        "Reapplying the debuff refreshes the duration",
+                        "Does not affect Buildings or Ward-type units",
+                        "Affects Ally units and Couriers",
+                        "Weaker sources do not slow or reduce health restoration if a stronger source is present"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 35,
+                "agility": 35,
+                "intelligence": 35,
+                "health": 770,
+                "healthRegeneration": 3.5,
+                "mana": 420,
+                "manaRegeneration": 1.75,
+                "magicResistance": "3.5%",
+                "attackSpeed": 35,
+                "armor": 5.83,
+                "attackDamage": 35,
+                "universalAttackDamage": 47.25
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "The item's attributes grant additional health, mana, attack speed, armor, and attack damage bonuses",
+                "Item is purchasable at the Main Shop under Armor but assembled entirely with items from the Secret Shop",
+                "Cannot be disassembled"
             ],
             "states": null
         },
@@ -36278,6 +37634,96 @@
                 ]
             }
         },
+        "Harpoon": {
+            "name": "Harpoon",
+            "description": "A perfect solution for the flight of foes.",
+            "category": "Armaments",
+            "cost": 4700,
+            "sellValue": 2350,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Echo Sabre",
+                    "Recipe"
+                ],
+                "totalCost": 4700
+            },
+            "abilities": [
+                {
+                    "name": "Draw Forth",
+                    "type": "active",
+                    "description": "Launches a harpoon that latches onto the target, pulling the caster and the target towards each other, meeting in the middle. Has a maximum pull distance.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 700,
+                    "manaCost": 50,
+                    "cooldown": 19,
+                    "effects": {
+                        "minPullDistance": 100,
+                        "maxPullDistance": 1000,
+                        "pullDuration": 0.3,
+                        "rangedPullDistance": "35%",
+                        "projectileSpeed": 2000
+                    },
+                    "notes": [
+                        "When the caster is ranged, pulls the target and the caster for a percentage of the distance instead, but still respecting the max pull distance",
+                        "Roshan cannot be moved, only the caster gets moved",
+                        "The projectile travels at a speed of 2000",
+                        "Does not disable the pulled units, they can still attack, cast abilities and items, and turn during it",
+                        "Can move the units over impassable terrain",
+                        "Destroys trees within a 100 radius around the pulled units",
+                        "Can be cast on debuff immune enemies, pulling the caster, but not the target",
+                        "Casting Harpoon instantly breaks Pounce"
+                    ]
+                },
+                {
+                    "name": "Echo Strike",
+                    "type": "passive",
+                    "description": "The next attack grants the wielder a buff that greatly increases attack speed for one attack.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 5,
+                    "effects": {
+                        "attackSpeedBonus": 490,
+                        "numberOfAttacks": 1,
+                        "moveSpeedSlow": "100%",
+                        "slowDuration": 1
+                    },
+                    "notes": [
+                        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow",
+                        "Ranged heroes cannot use Echo Strike",
+                        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not",
+                        "The attack speed buff has no set duration. It lasts until the user makes a second attack",
+                        "Uses a custom cooldown system not affected by cooldown manipulation",
+                        "Does not stack with Falcon Rush"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 25,
+                "agility": 10,
+                "intelligence": 10,
+                "manaRegeneration": 2,
+                "attackDamage": 25,
+                "health": 550,
+                "healthRegeneration": 2.5,
+                "mana": 120,
+                "magicResistance": "1%",
+                "attackSpeed": 10,
+                "armor": 1.67
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "550 health and 2.5 health regeneration",
+                "120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+                "10 attack speed and 1.67 main armor",
+                "25, 10 and 10 main attack damage to all Strength/Agility/Intelligence heroes respectively",
+                "20.25 main attack damage to universal heroes"
+            ],
+            "states": null
+        },
         "Headdress": {
             "name": "Headdress",
             "description": "Creates a soothing aura that restores allies in battle.",
@@ -36453,6 +37899,89 @@
                 "Later in the game it can replace a magic resistance item"
             ],
             "states": []
+        },
+        "Heaven's Halberd": {
+            "name": "Heaven's Halberd",
+            "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
+            "category": "Armaments",
+            "cost": 2600,
+            "sellValue": 1300,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Vanguard",
+                    "Crown",
+                    "Ring of Regen",
+                    "Recipe"
+                ],
+                "totalCost": 2600
+            },
+            "abilities": [
+                {
+                    "name": "Disarm",
+                    "type": "active",
+                    "description": "Disarms the targeted enemy unit, preventing them from attacking.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 650,
+                    "manaCost": 25,
+                    "cooldown": 18,
+                    "effects": {
+                        "duration_melee": 3,
+                        "duration_ranged": 4
+                    },
+                    "notes": [
+                        "The effect lasts longer on ranged targets",
+                        "Can now be dispelled"
+                    ]
+                },
+                {
+                    "name": "Damage Block",
+                    "type": "passive",
+                    "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "proc_chance": "60%",
+                        "blocked_damage_melee": 60,
+                        "blocked_damage_ranged": 30
+                    },
+                    "notes": [
+                        "Ranged wielders block less damage with the same proc chance",
+                        "Uses pseudo-random distribution",
+                        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
+                        "Multiple sources of the same value stack multiplicatively",
+                        "Does not work against damage from wards sources",
+                        "Does not reduce physical damage from abilities, except for specific abilities"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 5,
+                "agility": 5,
+                "intelligence": 5,
+                "health": 275,
+                "health_regeneration": 6,
+                "additional_health_from_attributes": 110,
+                "additional_health_regen_from_attributes": 0.5,
+                "additional_mana_from_attributes": 60,
+                "additional_mana_regen_from_attributes": 0.25,
+                "magic_resistance_from_attributes": "0.5%",
+                "attack_speed_from_attributes": 5,
+                "armor_from_attributes": 0.83,
+                "attack_damage_primary_attributes": 5,
+                "attack_damage_universal": 6.75
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "The proc chances of all sources of damage block work independently from each other",
+                "When multiple sources of damage block proc on the same attack, only the one with the highest blocked damage value takes effect",
+                "Can be disassembled"
+            ],
+            "states": null
         },
         "Helm of Iron Will": {
             "name": "Helm of Iron Will",
@@ -36820,6 +38349,28 @@
             ],
             "states": null
         },
+        "Hyperstone": {
+            "name": "Hyperstone",
+            "description": "A mystical, carved stone that boosts the fervor of the holder.",
+            "category": "Secret Shop",
+            "cost": 2000,
+            "sellValue": 1000,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 2000
+            },
+            "abilities": [],
+            "stats": {
+                "attackSpeed": 60
+            },
+            "additionalInfo": [
+                "Hyperstone is featured in the Dota 2 Gamescom trailer, and is described as an item that grants \"speed beyond measure\"."
+            ],
+            "states": []
+        },
         "Infused Raindrops": {
             "name": "Infused Raindrops",
             "description": "Elemental protection from magical assaults.",
@@ -37037,6 +38588,120 @@
                 ]
             }
         },
+        "Kaya": {
+            "name": "Kaya",
+            "description": "The staff of a renowned sorceress, lost for countless millennia.",
+            "category": "Armaments",
+            "cost": 2100,
+            "sellValue": 1050,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Staff of Wizardry",
+                    "Robe of the Magi",
+                    "Recipe"
+                ],
+                "totalCost": 2100
+            },
+            "abilities": [],
+            "stats": {
+                "intelligence": 16,
+                "spellDamageAmp": 10,
+                "manaRegenAmp": 40,
+                "mana": 192,
+                "manaRegeneration": 0.8,
+                "magicResistance": 1.6,
+                "mainAttackDamageInt": 16,
+                "mainAttackDamageUniversal": 7.2
+            },
+            "additionalInfo": [
+                "The item's attributes grant 192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
+                "Grants 16 main attack damage to Intelligence heroes",
+                "Grants 7.2 main attack damage to Universal heroes",
+                "Multiple sources of spell damage amplification do not stack",
+                "Multiple sources of mana regeneration amplification do not stack"
+            ],
+            "states": []
+        },
+        "Kaya and Sange": {
+            "name": "Kaya and Sange",
+            "description": null,
+            "category": "Armaments",
+            "cost": null,
+            "sellValue": null,
+            "maxStacks": null,
+            "shareable": null,
+            "usageAlert": null,
+            "recipe": {
+                "components": null,
+                "totalCost": null
+            },
+            "abilities": [],
+            "stats": {},
+            "additionalInfo": [],
+            "states": []
+        },
+        "Khanda": {
+            "name": "Khanda",
+            "description": "A blade sharp enough to slice through magic itself.",
+            "category": "Armaments",
+            "cost": 5700,
+            "sellValue": 2850,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Tiara of Selemene"
+                ],
+                "totalCost": 5700
+            },
+            "abilities": [
+                {
+                    "name": "Empower Spell",
+                    "type": "passive",
+                    "description": "The next unit targeted ability the wielder casts deals additional magical damage in a separate instance, and debuffs the target, slowing their movement speed and breaking their passive abilities.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 10,
+                    "effects": {
+                        "damage": 250,
+                        "moveSpeedSlow": "30%",
+                        "duration": 4,
+                        "damageType": "Magical"
+                    },
+                    "notes": [
+                        "Shares cooldowns with Phylactery. If both items are present, the older one takes priority.",
+                        "Affects most offensive unit-targeted ability casts, except item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities",
+                        "Applies Break on the target",
+                        "If the ability's target turns invulnerable, or if Spell Block triggers, Empower Spell will not trigger",
+                        "The order of damage and debuff application depends on the target health when receiving target spell",
+                        "If the target's health is above 250, Empower Spell's effects get applied before the triggering ability's effects",
+                        "If the target's health below or equal to 250, the triggering ability's effects get before Empower Spell's effects"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 8,
+                "agility": 8,
+                "intelligence": 8,
+                "health": 200,
+                "healthRegeneration": 8,
+                "mana": 200
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "176 health and 0.8 health regeneration",
+                "96 mana, 0.4 mana regeneration and 0.8% flat base magic resistance",
+                "8 attack speed and 1.33 main armor",
+                "8 main attack damage to all Strength/Agility/Intelligence heroes",
+                "10.8 main attack damage to universal heroes"
+            ],
+            "states": null
+        },
         "Linken's Sphere": {
             "name": "Linken's Sphere",
             "description": "This magical sphere once protected one of the most famous heroes in history.",
@@ -37171,6 +38836,122 @@
                 "Can be disassembled",
                 "Purchasable at the Main Shop, under Armor",
                 "Requires items from the Secret Shop to be assembled, or can be assembled entirely with items from the Secret Shop"
+            ],
+            "states": null
+        },
+        "Maelstrom": {
+            "name": "Maelstrom",
+            "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
+            "category": "Armaments",
+            "cost": 2950,
+            "sellValue": 1475,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Mithril Hammer",
+                    "Gloves of Haste"
+                ],
+                "totalCost": 2950
+            },
+            "abilities": [
+                {
+                    "name": "Chain Lightning",
+                    "type": "passive",
+                    "description": "Grants the wielder's attacks a chance to pierce through evasion, and to release a bolt of electricity on the target, that leaps between other nearby targets, dealing magical damage to all of them.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "25%",
+                        "bounceDistance": 650,
+                        "numberOfBounces": 4,
+                        "bounceInterval": 0.25,
+                        "damage": 110,
+                        "illusion_damage_factor": 1.5
+                    },
+                    "notes": [
+                        "Chain Lightning can proc on invisible enemies, enemies in fog of war, and already dead enemies",
+                        "Attacks which proc Chain Lightning cannot miss",
+                        "Uses pseudo-random distribution",
+                        "Lightning bounces in 0.25-second intervals, hitting 4 targets takes 0.75 seconds",
+                        "All bounces together can deal up to 440 damage (before reductions)",
+                        "Against a lone target, Chain Lightning adds an average of 27.5 magical spell damage to every attack",
+                        "Cannot bounce on enemies it has already bounced to, invisible enemies, enemies in fog of war, non-targetable enemies, ward-type units, or buildings",
+                        "If the wielder dies, all ongoing Chain Lightning instances stop immediately",
+                        "Cannot proc while the wielder is dead",
+                        "Multiple instances fully stack",
+                        "Chain Lightning from Maelstrom-based items have no stacking priority; the oldest source within the inventory takes priority"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 25,
+                "attackSpeed": 25
+            },
+            "additionalInfo": [
+                "Maelstrom is a very good item for speeding up farming. If the extra experience is not needed, it is a good alternative to Hand of Midas",
+                "Great to deal with illusions or mass-summons like Broodmother's spiders, Nature's Prophet's treants, etc. Especially useful for ranged heroes that lack area damage",
+                "The Chain Lightning deals magical damage which ignores armor and Damage Block, making it good against heroes with Vanguard, Tidehunter with Kraken Shell, and heroes with high armor",
+                "Useful pickup against mega creeps to help clear waves"
+            ],
+            "states": null
+        },
+        "Mage Slayer": {
+            "name": "Mage Slayer",
+            "description": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
+            "category": "Weapons",
+            "cost": 2800,
+            "sellValue": 1400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Cloak",
+                    "Orb of Venom",
+                    "Gloves of Haste",
+                    "Cornucopia"
+                ],
+                "totalCost": 2800
+            },
+            "abilities": [
+                {
+                    "name": "Mage Slayer",
+                    "type": "passive",
+                    "description": "The wielder's attacks deal damage over time to the target, and reduce the target's spell damage output.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "damagePerSecond": 20,
+                        "spellDamageReduction": "40%",
+                        "duration": 3
+                    },
+                    "notes": [
+                        "The debuff from successive attacks on the same target does not stack but refreshes the duration",
+                        "The attacks first apply the debuff, then their own damage",
+                        "Applies generic outgoing damage reduction on the affected target. Stacks additively with other sources of generic outgoing damage manipulation",
+                        "Affects spell damage the affected enemy deals. Does not reduce damage flagged as HP removal",
+                        "Does not work against wards, buildings, and allied units"
+                    ]
+                }
+            ],
+            "stats": {
+                "healthRegeneration": 5,
+                "manaRegeneration": 2,
+                "magicResistance": "20%",
+                "attackDamage": 8,
+                "attackSpeed": 30
+            },
+            "additionalInfo": [
+                "The item's attributes grant additional main attack damage",
+                "Stacks multiplicatively with other magic resistance sources",
+                "Increases most heroes' magic resistance to 40%",
+                "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%"
             ],
             "states": null
         },
@@ -37602,6 +39383,75 @@
             ],
             "states": null
         },
+        "Meteor Hammer": {
+            "name": "Meteor Hammer",
+            "description": "An enchanted hammer forged of metals discovered in the ruins of a village destroyed by a great star storm.",
+            "category": "Magical",
+            "cost": 2850,
+            "sellValue": 1425,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Ogre Axe",
+                    "Staff of Wizardry",
+                    "Sage's Mask"
+                ],
+                "totalCost": 2550
+            },
+            "abilities": [
+                {
+                    "name": "Meteor Hammer",
+                    "type": "active",
+                    "description": "After a successful channel, summons a meteor that strikes down at the target area after a delay, stunning enemies and dealing impact damage. Slows movement speed and continues to deal damage over time to enemy units for a while.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 600,
+                    "manaCost": 75,
+                    "cooldown": 24,
+                    "effects": {
+                        "channelTime": 2,
+                        "impactRadius": 400,
+                        "effectDelay": 0.5,
+                        "impactDamage": 130,
+                        "damagePerSecond": 50,
+                        "moveSpeedSlow": "20%",
+                        "burnDuration": 6,
+                        "stunDuration": 0.5,
+                        "buildingImpactDamage": 90
+                    },
+                    "notes": [
+                        "Interrupting the channeling causes the ability to do nothing, consuming mana and going on cooldown",
+                        "Provides flying vision within the targeted area for 2.8 seconds, starting upon channel beginning",
+                        "The meteor takes 0.5 seconds to land",
+                        "Upon landing, all enemies within the area, including buildings but excluding wards, get damaged, stunned, and receive a damaging debuff",
+                        "The meteor first applies the debuffs, then the impact damage",
+                        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 7 total instances",
+                        "Can deal a total of 430 damage (before reductions)",
+                        "Multiple casts on the same targets do not stack but refresh the duration instead",
+                        "Destroys trees within the radius upon impact",
+                        "Does not share a cooldown with Fallen Sky"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 6,
+                "agility": 6,
+                "intelligence": 24,
+                "spellDamageAmp": "10%",
+                "manaRegenAmp": "40%"
+            },
+            "additionalInfo": [
+                "The item's attributes grant 132 health and 0.6 health regeneration",
+                "288 mana, 1.2 mana regeneration and 2.4% flat base magic resistance",
+                "6 attack speed and 1 main armor",
+                "6, 6 and 24 main attack damage to all Strength/Agility/Intelligence heroes respectively",
+                "16.2 main attack damage to universal heroes",
+                "Multiple sources of spell damage amplification do not stack",
+                "Multiple sources of mana regeneration amplification do not stack"
+            ],
+            "states": null
+        },
         "Mithril Hammer": {
             "name": "Mithril Hammer",
             "description": "A hammer forged of pure mithril.",
@@ -37638,6 +39488,148 @@
                     }
                 ]
             }
+        },
+        "Mjollnir": {
+            "name": "Mjollnir",
+            "description": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
+            "category": "Armaments",
+            "cost": 5500,
+            "sellValue": 2750,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Maelstrom",
+                    "Hyperstone",
+                    "Recipe"
+                ],
+                "totalCost": 5500
+            },
+            "abilities": [
+                {
+                    "name": "Static Charge",
+                    "type": "active",
+                    "description": "Places a charged shield on the target ally that a chance to release electric bolts upon the ally taking damage. The bolts hit the source of the damage, as well as additional nearby enemies around the ally, dealing magical damage.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 800,
+                    "manaCost": 35,
+                    "cooldown": 50,
+                    "effects": {
+                        "procChance": "20%",
+                        "effectRadius": 900,
+                        "additionalTargets": 4,
+                        "damage": 225,
+                        "buffDuration": 15,
+                        "damageThreshold": 5,
+                        "downtime": 1
+                    },
+                    "notes": [
+                        "Double-tapping automatically targets self",
+                        "Successive casts on the same target do not stack but refresh the duration",
+                        "Reacts on any damage above a threshold (after all reductions), attacks and abilities alike",
+                        "Does not react on self-inflicted damage, or on damage flagged as HP Removal",
+                        "All bolts together can deal up to 1125 damage (before reductions)",
+                        "Uses pseudo-random distribution"
+                    ]
+                },
+                {
+                    "name": "Chain Lightning",
+                    "type": "passive",
+                    "description": "Grants the wielder's attacks a chance to pierce through evasion, and to release a bolt of electricity on the target, that leaps between other nearby targets, dealing magical damage to all of them.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 0.2,
+                    "effects": {
+                        "procChance": "25%",
+                        "bounceDistance": 650,
+                        "numberOfBounces": 12,
+                        "bounceInterval": 0.25,
+                        "damage": 180,
+                        "illusionDamageFactor": 1.5
+                    },
+                    "notes": [
+                        "Chain Lightning from Maelstrom-based items have no stacking priority; The oldest source within the inventory takes priority",
+                        "Attacks which proc Chain Lightning cannot miss",
+                        "Uses pseudo-random distribution",
+                        "The lightning bounces in 0.25-second intervals, hitting 12 targets takes 2.75 seconds",
+                        "All bounces together can deal up to 2160 damage (before reductions)",
+                        "Against a lone target, Chain Lightning adds an average of 45 magical spell damage to every attack",
+                        "Uses a custom cooldown system"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 25,
+                "attackSpeed": 90
+            },
+            "additionalInfo": [
+                "Very effective against heroes with illusions like Naga Siren, Spectre and particularly Phantom Lancer and Chaos Knight",
+                "Good for pushing, you can apply the Static Charge on a creep to push a lane safely while you jungle",
+                "Most effective item to push back mega creeps",
+                "Cannot be disassembled"
+            ],
+            "states": null
+        },
+        "Monkey King Bar": {
+            "name": "Monkey King Bar",
+            "description": "A powerful staff used by a master warrior.",
+            "category": "Weapons",
+            "cost": 4700,
+            "sellValue": 2350,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Javelin",
+                    "Javelin",
+                    "Demon Edge",
+                    "Recipe"
+                ],
+                "totalCost": 4700
+            },
+            "abilities": [
+                {
+                    "name": "Pierce",
+                    "type": "passive",
+                    "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "80%",
+                        "bonusMagicalDamage": 70,
+                        "averageDamagePerAttack": 56
+                    },
+                    "notes": [
+                        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
+                        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage",
+                        "It is not considered by lifesteal, crit or cleave",
+                        "It can be reduced only by flat reductions (e.g. magical damage barrier)",
+                        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
+                        "Self-illusions can use the accuracy, but do not apply the bonus magical attack damage",
+                        "Does not work against buildings, but works against wards and allied units",
+                        "Pierce uses pseudo-random distribution",
+                        "Pierce from Javelin-based items fully stack with another and themselves, except for multiple Monkey King Bars",
+                        "Multiple sources can proc on the same attack"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 40,
+                "attackSpeed": 45
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "Can only be completed with items from the Secret Shop",
+                "Key item to counter heroes or items that have intense evasion",
+                "Can be purchased to counter some abilities that cause blind",
+                "Because Pierce cannot proc on buildings, Monkey King Bar will not help in solving Uphill Miss when a ranged hero is below the ramp while attacking enemy T3 towers and barracks"
+            ],
+            "states": null
         },
         "Moon Shard": {
             "name": "Moon Shard",
@@ -37799,6 +39791,31 @@
                 ]
             }
         },
+        "Mystic Staff": {
+            "name": "Mystic Staff",
+            "description": "Enigmatic staff made of only the most expensive crystals.",
+            "category": "Intelligence items",
+            "cost": 2800,
+            "sellValue": 1400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 2800
+            },
+            "abilities": [],
+            "stats": {
+                "intelligence": 25
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance.",
+                "25 main attack damage to Intelligence heroes.",
+                "11.25 main attack damage to universal heroes."
+            ],
+            "states": []
+        },
         "Null Talisman": {
             "name": "Null Talisman",
             "description": "A small gemstone attached to several chains.",
@@ -37875,6 +39892,61 @@
                     }
                 ]
             }
+        },
+        "Nullifier": {
+            "name": "Nullifier",
+            "description": "A dangerous weapon pilfered from an inverse dimension.",
+            "category": "Weapons",
+            "cost": 4375,
+            "sellValue": 2187.5,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Sacred Relic",
+                    "Robe of the Magi"
+                ],
+                "totalCost": 4375
+            },
+            "abilities": [
+                {
+                    "name": "Nullify",
+                    "type": "active",
+                    "description": "Launches a projectile at the target enemy, that applies a debuff on the which continuously dispels them and slows their movement speed.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 900,
+                    "manaCost": 10,
+                    "cooldown": 0,
+                    "effects": {
+                        "moveSpeedSlow": "10%",
+                        "duration": 4,
+                        "dispelInterval": "0.2 seconds",
+                        "totalDispelInstances": 20
+                    },
+                    "notes": [
+                        "Applies a basic dispel upon projectile impact, before applying the modifier",
+                        "The modifier applies a basic dispel in 0.2-second intervals, 0.2 seconds after the debuff is applied, resulting in 20 dispel instances",
+                        "Can be cast on Invulnerable units",
+                        "The initial dispel pierces invulnerability",
+                        "However, the debuff is not applied on invulnerable targets",
+                        "If the invulnerability could not be dispelled by the initial dispel, the debuff is not applied",
+                        "If the target was already debuffed, its duration does get refreshed",
+                        "Nullify is one of the very few debuffs that cannot be dispelled at all"
+                    ]
+                }
+            ],
+            "stats": {
+                "healthRegeneration": 6,
+                "armor": 10,
+                "attackDamage": 75
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "Cannot be disassembled",
+                "Not shareable"
+            ],
+            "states": null
         },
         "Oblivion Staff": {
             "name": "Oblivion Staff",
@@ -38381,6 +40453,69 @@
             ],
             "states": null
         },
+        "Overwhelming Blink": {
+            "name": "Overwhelming Blink",
+            "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
+            "category": "Armaments",
+            "cost": 6800,
+            "sellValue": 3400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Blink Dagger",
+                    "Reaver"
+                ],
+                "totalCost": 6800
+            },
+            "abilities": [
+                {
+                    "name": "Overwhelming Blink",
+                    "type": "active",
+                    "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, creates a huge shockwave that instantly deals damage to nearby enemies, based on the caster's strength, plus a base amount. Enemies also have their movement and attack speed slowed, and take additional damage over time based on the caster's strength.",
+                    "castAnimation": "0 + 0",
+                    "castRange": "Global",
+                    "manaCost": 0,
+                    "cooldown": 15,
+                    "effects": {
+                        "maxBlinkDistance": 1200,
+                        "radius": 800,
+                        "baseImpactDamage": 100,
+                        "strengthAsImpactDamage": "50%",
+                        "strengthAsTotalDamageOverTime": "100%",
+                        "moveSpeedSlow": "50%",
+                        "attackSpeedSlow": 50,
+                        "debuffDuration": 6,
+                        "downtime": 3
+                    },
+                    "notes": [
+                        "Taking more than 0 damage from any other player or Roshan puts the item on a fixed cooldown",
+                        "Cannot be reset with cooldown reset sources",
+                        "Shares cooldown with other blink items",
+                        "Utilizes teleport mechanic - disjoints incoming projectiles",
+                        "When targeting beyond 1200 distance, teleports 1200 distance towards the targeted point",
+                        "Doubletap targets a point in front of the team's Fountain",
+                        "The shockwave is instant despite visual effect",
+                        "Debuff deals 16.67% of caster's Strength as damage in 1-second intervals",
+                        "Shockwave first applies debuff, then impact damage"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 25,
+                "health": 550,
+                "healthRegeneration": 2.5,
+                "mainAttackDamageStrengthHeroes": 25,
+                "mainAttackDamageUniversalHeroes": 11.25
+            },
+            "additionalInfo": [
+                "Purchasable at Base Shop under Armaments, but can only be completed with items from Secret Shop",
+                "Cannot be disassembled",
+                "The item's attributes grant additional health, health regeneration, and attack damage based on hero type"
+            ],
+            "states": null
+        },
         "Parasma": {
             "name": "Parasma",
             "description": "Warning: There is no antidote if picked up by the wrong end.",
@@ -38656,6 +40791,64 @@
                 ]
             }
         },
+        "Phylactery": {
+            "name": "Phylactery",
+            "description": "An amulet overflowing with powerful magics.",
+            "category": "Armaments",
+            "cost": 2600,
+            "sellValue": 1300,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Recipe components not clearly specified in HTML"
+                ],
+                "totalCost": 2600
+            },
+            "abilities": [
+                {
+                    "name": "Empower Spell",
+                    "type": "passive",
+                    "description": "The next unit targeted ability the wielder casts deals additional magical damage in a separate instance, and debuffs the target, slowing their movement speed.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 10,
+                    "effects": {
+                        "damage": 150,
+                        "moveSpeedSlow": "30%",
+                        "duration": 3,
+                        "damageType": "Magical"
+                    },
+                    "notes": [
+                        "Affects most offensive unit-targeted ability casts, except item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities",
+                        "If the ability's target turns invulnerable, or if Spell Block triggers, Empower Spell will not trigger",
+                        "The order of damage and debuff application depends on the target health when receiving target spell",
+                        "If the target's health is above 150, Empower Spell's effects get applied before the triggering ability's effects",
+                        "If the target's health below or equal to 150, the triggering ability's effects get applied before Empower Spell's effects",
+                        "Shares cooldowns with Khanda. If both items are present, the older one takes priority"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 7,
+                "agility": 7,
+                "intelligence": 7,
+                "health": 200,
+                "mana": 200,
+                "disassemble": false
+            },
+            "additionalInfo": [
+                "The item's attributes grant 154 health and 0.7 health regeneration",
+                "Grants 84 mana, 0.35 mana regeneration and 0.7% flat base magic resistance",
+                "Provides 7 attack speed and 1.17 main armor",
+                "Adds 7 main attack damage to all Strength/Agility/Intelligence heroes",
+                "Adds 9.45 main attack damage to universal heroes",
+                "Ganking heroes with low-cooldown unit-targeted abilities often benefit from Phylactery for a noticeable early boost to damage output"
+            ],
+            "states": null
+        },
         "Pipe of Insight": {
             "name": "Pipe of Insight",
             "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
@@ -38734,6 +40927,56 @@
                 "Every 10 points of intelligence further increases the total magic resistance by 0.736% for the wielder"
             ],
             "states": null
+        },
+        "Platemail": {
+            "name": "Platemail",
+            "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
+            "category": "Armor items",
+            "cost": 1400,
+            "sellValue": 700,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": null,
+                "totalCost": null
+            },
+            "abilities": [],
+            "stats": {
+                "armor": 10
+            },
+            "additionalInfo": [
+                "Purchasable at the Secret Shop",
+                "Builds into Lotus Orb",
+                "Builds into Shiva's Guard"
+            ],
+            "states": []
+        },
+        "Point Booster": {
+            "name": "Point Booster",
+            "description": "A perfectly formed amethyst that nourishes body and mind when held.",
+            "category": "Secret Shop",
+            "cost": 1200,
+            "sellValue": 600,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 1200
+            },
+            "abilities": [],
+            "stats": {
+                "health": 175,
+                "mana": 175
+            },
+            "additionalInfo": [
+                "No longer builds into Eye of Skadi (as of version 7.39)",
+                "Now builds into Gleipnir (as of version 7.38)",
+                "No longer builds into Wraith Pact (as of version 7.33)",
+                "Now builds into Phylactery (as of version 7.33)"
+            ],
+            "states": []
         },
         "Power Treads": {
             "name": "Power Treads",
@@ -38917,6 +41160,95 @@
                 ]
             }
         },
+        "Radiance": {
+            "name": "Radiance",
+            "description": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
+            "category": "Weapons",
+            "cost": 4700,
+            "sellValue": 2350,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Sacred Relic",
+                    "Talisman of Evasion",
+                    "Recipe"
+                ],
+                "totalCost": 4700
+            },
+            "abilities": [
+                {
+                    "name": "Burn",
+                    "type": "passive",
+                    "description": "When active, scorches nearby enemies, dealing magical damage over time and causing them to miss on some of their attacks.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 0,
+                    "effects": {
+                        "radius": 650,
+                        "damagePerSecond": 60,
+                        "missChance": "15%",
+                        "auraLingerDuration": 0.5,
+                        "illusionDamagePerSecond": 35,
+                        "damageMultiplierAgainstIllusions": 1.5
+                    },
+                    "notes": [
+                        "Does not interrupt the caster's channeling abilities upon toggling On/Off",
+                        "All of the effects are provided by an aura, that is only active while toggled on",
+                        "Multiple instances of the aura do not stack, if multiple are present, the first applied instance deals damage",
+                        "Blind uses pseudo-random distribution and stacks additively with other blind sources and multiplicatively with evasion sources",
+                        "Illusions copy and stick with the current toggle state as they are created",
+                        "Radiance of illusions have a lower priority than those of heroes, if both are present",
+                        "Burn applied by illusions deals less damage. Burn applied to illusions deals more damage",
+                        "Roshan is not affected by the damage, but is still blinded",
+                        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed"
+                    ]
+                }
+            ],
+            "stats": {
+                "evasion": "15%",
+                "attackDamage": 55
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "Evasion uses pseudo-random distribution",
+                "Stacks diminishingly with other evasion sources",
+                "Increases most heroes against physical attacks by 17.65%",
+                "Can be disassembled"
+            ],
+            "states": null
+        },
+        "Reaver": {
+            "name": "Reaver",
+            "description": "A massive axe capable of tearing whole mountains down.",
+            "category": "Secret Shop",
+            "cost": 2800,
+            "sellValue": 1400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 2800
+            },
+            "abilities": [],
+            "stats": {
+                "strength": 25,
+                "health": 550,
+                "healthRegeneration": 2.5,
+                "mainAttackDamageStrength": 25,
+                "mainAttackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "550 health and 2.5 health regeneration.",
+                "25 main attack damage to strength heroes.",
+                "11.25 main attack damage to universal heroes."
+            ],
+            "states": []
+        },
         "Refresher Orb": {
             "name": "Refresher Orb",
             "description": "A powerful artifact created for wizards.",
@@ -38976,6 +41308,113 @@
                 "Shares cooldown with other refresh-type items"
             ],
             "states": null
+        },
+        "Refresher Shard": {
+            "name": "Refresher Shard",
+            "description": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
+            "category": "Kill Rewards",
+            "cost": null,
+            "sellValue": 500,
+            "maxStacks": 1,
+            "shareable": true,
+            "usageAlert": 0,
+            "recipe": null,
+            "abilities": [
+                {
+                    "name": "Reset Cooldowns",
+                    "type": "active",
+                    "description": "Resets the cooldowns of all abilities of the wielder, as well as all item cooldowns within their inventory or backpack.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 200,
+                    "cooldown": 180,
+                    "effects": {
+                        "charges": 1
+                    },
+                    "notes": [
+                        "Also resets all charges of charge-based abilities and items",
+                        "Does not affect charge-based items that do not have a charge replenish timer",
+                        "If the item is not in the owner's main inventory, its cooldown freezes completely, only continuing to tick down when entering the main inventory again",
+                        "Interrupts the caster's channeling abilities upon cast",
+                        "Resets Invoker's abilities that are currently not invoked",
+                        "Resets Kez's alternative skill set, even when currently not using that set",
+                        "Does not reset Rubick's previously stolen and used abilities that are no longer stolen",
+                        "Does not reset cooldowns of abilities acquired via Morphling while currently unmorphed, or his default abilities while currently morphed",
+                        "Does not reset Doom's previously acquired and used neutral creep abilities that are no longer there",
+                        "Does not reset the cooldown of Aghanim's Shard",
+                        "Visually resets the cooldown of Tranquil Boots, but does not skip the broken state",
+                        "Does not skip the fade delay for Cloak and Dagger",
+                        "Shares cooldown with Refresher Orb"
+                    ]
+                }
+            ],
+            "stats": {
+                "healthRegeneration": 12,
+                "manaRegeneration": 6,
+                "attackDamage": 20
+            },
+            "additionalInfo": [
+                "On his third death and onwards, Roshan drops the Refresher Shard as a third item if he was slain in the Radiant pit. In the Dire pit, he drops an Aghanim's Blessing - Roshan instead",
+                "Although Refresher Shard cannot be bought, it can be sold for 500 gold. However, only the hero whose main inventory it enters first can sell it",
+                "If a Courier is the first unit to pick up the Refresher Shard, it cannot be sold by anyone, even if it remains on the Courier or is given to a hero afterwards",
+                "If a Refresher Shard directly enters a backpack when picked up, it remains sellable by anyone until it enters any unit's main inventory",
+                "Unlike the Aegis of the Immortal, Refresher Shard is not reclaimed by Roshan"
+            ],
+            "states": null
+        },
+        "Revenant's Brooch": {
+            "name": "Revenant's Brooch",
+            "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
+            "category": "Weapons",
+            "cost": 3300,
+            "sellValue": 1650,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Crystalys"
+                ],
+                "totalCost": 3300
+            },
+            "abilities": [
+                {
+                    "name": "Phantom Critical",
+                    "type": "passive",
+                    "description": "The wielder's attacks have a chance to inflict critical magical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "procChance": "30%",
+                        "criticalDamage": "80%",
+                        "damageType": "Attack / Magical"
+                    },
+                    "notes": [
+                        "Phantom Critical adds magical attack damage directly to the attack",
+                        "The proc is determined during the unit's attack point",
+                        "The proc chance of multiple sources stack",
+                        "When multiple critical strike sources proc simultaneously, the higher critical factor takes precedence",
+                        "Critical Strike uses pseudo-random distribution",
+                        "Works like critical strike, but adding the damage as magical damage, instead of physical",
+                        "Increases attack damage by an average of 6%",
+                        "Displays critical strike values before all damage manipulation sources for camouflaging purposes"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 35,
+                "spellLifestealHero": "14%",
+                "spellLifestealCreep": "2.8%"
+            },
+            "additionalInfo": [
+                "Purchasable at the Base Shop, under Weapons",
+                "Can only be completed with items from the Secret Shop",
+                "Cannot be disassembled",
+                "Affects enemies"
+            ],
+            "states": []
         },
         "Ring of Basilius": {
             "name": "Ring of Basilius",
@@ -39174,6 +41613,30 @@
                 ]
             }
         },
+        "Ring of Tarrasque": {
+            "name": "Ring of Tarrasque",
+            "description": "An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component.",
+            "category": "Secret Shop",
+            "cost": 1800,
+            "sellValue": 900,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 1800
+            },
+            "abilities": [],
+            "stats": {
+                "healthRegeneration": 12
+            },
+            "additionalInfo": [
+                "This item was revealed first in Artifact",
+                "The name \"Tarrasque\" references the Tarrasque, an almost undefeatable monster in Dungeons & Dragons, which in return references the Tarasque, a mythological dragon-hybrid that was tamed by Saint Martha",
+                "Builds into Heart of Tarrasque, Pipe of Insight, and Refresher Orb"
+            ],
+            "states": []
+        },
         "Robe of the Magi": {
             "name": "Robe of the Magi",
             "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
@@ -39281,6 +41744,83 @@
             ],
             "states": null
         },
+        "Roshan's Banner": {
+            "name": "Roshan's Banner",
+            "description": "Another one of the Immortal's kill rewards, something feels familiar about this ancient banner.",
+            "category": "Kill Rewards",
+            "cost": null,
+            "sellValue": 0,
+            "maxStacks": 1,
+            "shareable": true,
+            "usageAlert": 0,
+            "recipe": null,
+            "abilities": [
+                {
+                    "name": "Place Banner",
+                    "type": "active",
+                    "description": "Places a banner on the point-targeted location that grants an invulnerability aura to lane creeps within the radius for the entire duration of the banner.",
+                    "castAnimation": "0 + 0",
+                    "castRange": 1200,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "effectRadius": 650,
+                        "invulnerabilityDuration": 120,
+                        "bannerDuration": 120,
+                        "auraLingerDuration": 0.1,
+                        "creepHitCount": 24,
+                        "hitCount": 12,
+                        "meleeUnitsHitCount": 6
+                    },
+                    "notes": [
+                        "Pings the minimap and shows the banner's location",
+                        "Prints a message with the hero minimap icon",
+                        "Creates an aura centered around the banner granting all ability effects",
+                        "Cannot be placed within the fountain area",
+                        "Cannot be placed within Roshan's pit",
+                        "The aura only affects lane creeps, including lane creeps affected by dominate sources",
+                        "Trees within 200-radius are destroyed upon cast",
+                        "Creeps affected by the banner's aura will not be affected by Glyph of Fortification as the two use the same modifier",
+                        "Creeps' attacks are not effective on Roshan's Banner",
+                        "Melee hero attacks are more effective on Roshan's Banner"
+                    ]
+                }
+            ],
+            "stats": {
+                "charges": 1
+            },
+            "additionalInfo": [
+                "On his second death and onwards, Roshan drops Roshan's Banner as a second item if he was slain in the Radiant pit. In the Dire pit, he drops a Cheese instead.",
+                "Roshan's Banner is consumed upon use. It does not have a charge counter, and multiple Roshan's Banners do not stack in the inventory.",
+                "Against Roshan's Banner: Attacks from heroes deal 4 damage, Attacks from creeps deal 1 damage.",
+                "Unlike the Aegis of the Immortal, Roshan's Banner is not reclaimed by Roshan."
+            ],
+            "states": null
+        },
+        "Sacred Relic": {
+            "name": "Sacred Relic",
+            "description": "An ancient weapon that often turns the tides of war.",
+            "category": "Secret Shop",
+            "cost": 3400,
+            "sellValue": 1700,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 3400
+            },
+            "abilities": [],
+            "stats": {
+                "attackDamage": 55
+            },
+            "additionalInfo": [
+                "Divine Rapier has a lower priority in item combining compared to Radiance and Nullifier",
+                "When having a Demon Edge and a Talisman of Evasion in the inventory, buying Sacred Relic results in a finished Radiance",
+                "When having a Demon Edge and a Helm of Iron Will, buying Sacred Relic results in a finished Nullifier"
+            ],
+            "states": []
+        },
         "Sage's Mask": {
             "name": "Sage's Mask",
             "description": "A mask commonly used by mages and warlocks for various rituals.",
@@ -39318,6 +41858,168 @@
                     }
                 ]
             }
+        },
+        "Sange": {
+            "name": "Sange",
+            "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
+            "category": "Armaments",
+            "cost": 2100,
+            "sellValue": 1050,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Ogre Axe",
+                    "Belt of Strength",
+                    "Recipe"
+                ],
+                "totalCost": 2100
+            },
+            "abilities": [],
+            "stats": {
+                "strength": 16,
+                "slowResistance": "20%",
+                "healthRestoreAmp": "16%",
+                "health": 352,
+                "healthRegeneration": 1.6,
+                "mainAttackDamageStrength": 16,
+                "mainAttackDamageUniversal": 7.2
+            },
+            "additionalInfo": [
+                "The item's attributes grant 352 health and 1.6 health regeneration",
+                "Grants 16 main attack damage to strength heroes",
+                "Grants 7.2 main attack damage to universal heroes",
+                "Multiple sources of slow resistance do not stack",
+                "Multiple sources of health restoration amplification do not stack",
+                "Item is not shareable",
+                "Item is not disassemblable"
+            ],
+            "states": []
+        },
+        "Sange and Yasha": {
+            "name": "Sange and Yasha",
+            "description": "Sange and Yasha, when attuned by the moonlight and used together, become a very powerful combination.",
+            "category": "Armaments",
+            "cost": 4200,
+            "sellValue": 2100,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Sange",
+                    "Yasha"
+                ],
+                "totalCost": 4200
+            },
+            "abilities": [],
+            "stats": {
+                "strength": 16,
+                "agility": 16,
+                "statusResistance": 15,
+                "slowResistance": 25,
+                "moveSpeed": 12,
+                "attackSpeed": 20,
+                "healthRestoreAmp": 20,
+                "health": 352,
+                "healthRegeneration": 1.6,
+                "mainArmor": 2.67,
+                "mainAttackDamage": 16,
+                "mainAttackDamageUniversal": 14.4
+            },
+            "additionalInfo": [
+                "The item's attributes grant 352 health and 1.6 health regeneration",
+                "Grants 16 attack speed and 2.67 main armor",
+                "Grants 16 main attack damage to Strength/Agility heroes",
+                "Grants 14.4 main attack damage to Universal heroes",
+                "Multiple sources of slow resistance do not stack",
+                "Multiple sources of status resistance do not stack",
+                "Multiple sources of health restoration amplification do not stack",
+                "Multiple sources of movement speed do not stack",
+                "Multiple sources of attack speed fully stack",
+                "Can be disassembled",
+                "Particularly strong for boosting midgame power",
+                "Consider disassembling late game to build Manta Style and Heaven's Halberd"
+            ],
+            "states": []
+        },
+        "Satanic": {
+            "name": "Satanic",
+            "description": "Immense power at the cost of your soul.",
+            "category": "Armaments",
+            "cost": 5050,
+            "sellValue": 2525,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Helm of the Dominator",
+                    "Reaver",
+                    "Recipe"
+                ],
+                "totalCost": 5050
+            },
+            "abilities": [
+                {
+                    "name": "Lifesteal",
+                    "type": "passive",
+                    "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": null,
+                    "effects": {
+                        "lifesteal": "30%",
+                        "creepLifestealFactor": "0.6"
+                    },
+                    "notes": [
+                        "Only works with physical attack damage, does not work with magical or pure attack damage",
+                        "Does not work with physical or any other spell damage",
+                        "Does not work with instant attacks that do not trigger attack modifier",
+                        "Stacks additively with other lifesteal sources",
+                        "Treats illusions and creep-heroes as heroes",
+                        "Does not work on allied units, buildings, ward-type units, or couriers",
+                        "Lifesteal is less effective when attacking creeps"
+                    ]
+                },
+                {
+                    "name": "Unholy Rage",
+                    "type": "active",
+                    "description": "Applies a basic dispel on the caster and greatly increases the lifesteal value for a short duration.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 0,
+                    "cooldown": 30,
+                    "effects": {
+                        "lifesteal": "175%",
+                        "duration": "6",
+                        "creepLifestealFactor": "0.6"
+                    },
+                    "notes": [
+                        "Interrupts the caster's channeling abilities upon cast",
+                        "Applies a basic dispel on the user upon cast",
+                        "Lifesteal is less effective when attacking creeps"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 25,
+                "attackDamage": 25,
+                "health": 550,
+                "healthRegeneration": 2.5,
+                "mainAttackDamageStrength": 25,
+                "mainAttackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The item's attributes grant 550 health and 2.5 health regeneration",
+                "Grants 25 main attack damage to strength heroes",
+                "Grants 11.25 main attack damage to universal heroes",
+                "Can only be completed with items from the Secret Shop",
+                "Cannot be disassembled"
+            ],
+            "states": null
         },
         "Scythe of Vyse": {
             "name": "Scythe of Vyse",
@@ -39541,6 +42243,67 @@
                 ]
             }
         },
+        "Shadow Blade": {
+            "name": "Shadow Blade",
+            "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
+            "category": "Weapons",
+            "cost": 3350,
+            "sellValue": 1675,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Claymore"
+                ],
+                "totalCost": 3350
+            },
+            "abilities": [
+                {
+                    "name": "Shadow Walk",
+                    "type": "active",
+                    "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 75,
+                    "cooldown": 25,
+                    "effects": {
+                        "fadeTime": 0.3,
+                        "moveSpeedBonus": "20%",
+                        "duration": 17,
+                        "attackDamageBonus": 175,
+                        "damageType": "Physical"
+                    },
+                    "notes": [
+                        "Does not interrupt the wielder's channeling abilities upon cast",
+                        "Recasting the ability refreshes the buff duration",
+                        "The caster gains phased movement while invisible",
+                        "Picking up, dropping, or selling items does not break the invisibility",
+                        "During the fade time, casting abilities or items does not break the invisibility",
+                        "Invisibility breaks upon reaching the cast point of abilities or items after fade time",
+                        "Invisibility breaks upon reaching the attack point of an attack",
+                        "The attack breaking invisibility deals physical spell damage bonus with the attack",
+                        "Adds physical conditional attack damage to the next attack while invisible",
+                        "Does not interact with critical strike or percentage-based bonus attack damage",
+                        "Interacts with lifesteal, cleave, splash, and damage block",
+                        "Does not affect buildings or ward-type units",
+                        "Shares cooldown with other invisibility items"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 25,
+                "attackSpeed": 35
+            },
+            "additionalInfo": [
+                "Disassemble: No",
+                "Shares cooldown with other invisibility items",
+                "In DotA, this item was named Lothar's Edge, referencing Sir Anduin Lothar from Warcraft",
+                "Active ability is based on the Blademaster's Wind Walk",
+                "Kunkka has a cosmetic item based on Shadow Blade"
+            ],
+            "states": null
+        },
         "Shiva's Guard": {
             "name": "Shiva's Guard",
             "description": "Said to have belonged to a goddess, today it retains much of its former power.",
@@ -39622,6 +42385,125 @@
                 "5 attack speed and 0.83 main armor.",
                 "5 main attack damage to all Strength/Agility/Intelligence heroes.",
                 "6.75 main attack damage to universal heroes."
+            ],
+            "states": null
+        },
+        "Silver Edge": {
+            "name": "Silver Edge",
+            "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
+            "category": "Weapons",
+            "cost": 5800,
+            "sellValue": 2900,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Shadow Blade",
+                    "Ultimate Orb",
+                    "Recipe"
+                ],
+                "totalCost": 5800
+            },
+            "abilities": [
+                {
+                    "name": "Shadow Walk",
+                    "type": "active",
+                    "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible. The attack breaking invisibility has True Strike and deals physical spell damage bonus with the attack, and also breaks the target's passive abilities.",
+                    "castAnimation": "0 + 0",
+                    "castRange": null,
+                    "manaCost": 75,
+                    "cooldown": 20,
+                    "effects": {
+                        "fadeTime": 0.3,
+                        "moveSpeedBonus": "20%",
+                        "duration": 17,
+                        "attackDamageBonus": 300,
+                        "breakDuration": 6
+                    },
+                    "notes": [
+                        "Does not interrupt the wielder's channeling abilities upon cast",
+                        "Recasting the ability refreshes the buff duration",
+                        "The caster gains phased movement while invisible",
+                        "Picking up, dropping, or selling items does not break the invisibility",
+                        "During the fade time, casting abilities or items does not break the invisibility",
+                        "The attack also applies Break on the target",
+                        "Does not affect Buildings or Ward-type units",
+                        "Shares cooldown with other invisibility items"
+                    ]
+                }
+            ],
+            "stats": {
+                "attackDamage": 70,
+                "attackSpeed": 35
+            },
+            "additionalInfo": [
+                "This item is shown as a Team Item in the shop window when purchased by an ally",
+                "Cannot be disassembled",
+                "Break mechanic has no effect on opponents' items",
+                "Consider purchasing against troubling passives like Immaterial, Berserker's Blood, Fury Swipes, Bristleback, Untouchable and Dispersion",
+                "Abilities using stacks are only prevented from gaining or placing new stacks, existing stacks can still function until they expire"
+            ],
+            "states": null
+        },
+        "Skull Basher": {
+            "name": "Skull Basher",
+            "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
+            "category": "Weapons",
+            "cost": 2875,
+            "sellValue": 1437.5,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Javelin",
+                    "Belt of Strength",
+                    "Recipe"
+                ],
+                "totalCost": 2875
+            },
+            "abilities": [
+                {
+                    "name": "Bash",
+                    "type": "passive",
+                    "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage.",
+                    "castAnimation": null,
+                    "castRange": null,
+                    "manaCost": null,
+                    "cooldown": 2.3,
+                    "effects": {
+                        "procChance": "25% (melee) / 10% (ranged)",
+                        "damage": 100,
+                        "stunDuration": 1.2,
+                        "damageType": "Physical"
+                    },
+                    "notes": [
+                        "Multiple instances of Skull Basher-based Bash do not stack",
+                        "Does not stack with Bash of the Deep, Greater Bash, and Time Lock. If any of these are present, this ability is inactive",
+                        "This ability is inactive on Clones",
+                        "Does not work against wards and buildings, but works against allied units",
+                        "Bash uses pseudo-random distribution",
+                        "The bonus damage is considered as a conditional attack damage bonus",
+                        "Goes through spell immunity",
+                        "Adds an average of 0.3 and 0.12 damage to every attack for melee and ranged heroes respectively"
+                    ]
+                }
+            ],
+            "stats": {
+                "strength": 10,
+                "attackDamage": 30,
+                "health": 220,
+                "healthRegeneration": 1,
+                "mainAttackDamageBonus": "10 (strength heroes) / 4.5 (universal heroes)"
+            },
+            "additionalInfo": [
+                "The item's attributes grant 220 health and 1 health regeneration",
+                "Grants 10 main attack damage to strength heroes",
+                "Grants 4.5 main attack damage to universal heroes",
+                "Since the Bash is a chance based ability, buying attack speed granting items increases the odds of a bash proccing",
+                "The Bash goes through spell immunity, making it effective against heroes with Black King Bar",
+                "Despite having a much lower chance to proc for ranged heroes, it still has a decent chance when coupled with high attack speed"
             ],
             "states": null
         },
@@ -40058,6 +42940,93 @@
                 ]
             }
         },
+        "Swift Blink": {
+            "name": "Swift Blink",
+            "description": "A cunning blade able to anticipate and enable its bearer's movements.",
+            "category": "Armaments",
+            "cost": 6800,
+            "sellValue": 3400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Blink Dagger",
+                    "Eaglesong",
+                    "Recipe"
+                ],
+                "totalCost": 6800
+            },
+            "abilities": [
+                {
+                    "name": "Swift Blink",
+                    "type": "active",
+                    "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, grants the caster phased movement, increased movement speed, and bonus agility for a while.",
+                    "castAnimation": "0 + 0",
+                    "castRange": "Global",
+                    "manaCost": 0,
+                    "cooldown": 15,
+                    "effects": {
+                        "maxBlinkDistance": 1200,
+                        "moveSpeedBonus": "40%",
+                        "agilityBonus": 35,
+                        "buffDuration": 6,
+                        "downtime": 3
+                    },
+                    "notes": [
+                        "Blink utilizes the teleport mechanic",
+                        "When targeting a point within 1200 distance, teleports directly onto the targeted point",
+                        "When targeting a point beyond 1200 distance, teleports 1200 distance towards the targeted point instead",
+                        "Incoming projectiles are disjointed upon teleporting",
+                        "Doubletap targets a point in front of the team's Fountain",
+                        "Grants the caster phased movement",
+                        "Taking more than 0 damage from any other player or Roshan puts the item on a fixed cooldown",
+                        "Cannot be reset with cooldown reset sources",
+                        "Shares cooldown with other Blink items"
+                    ]
+                }
+            ],
+            "stats": {
+                "agility": 25,
+                "attackSpeed": 25,
+                "mainArmor": 4.17,
+                "mainAttackDamageAgility": 25,
+                "mainAttackDamageUniversal": 11.25
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "25 attack speed and 4.17 main armor",
+                "25 main attack damage to agility heroes",
+                "11.25 main attack damage to universal heroes",
+                "Item can only be completed with items from the Secret Shop",
+                "Cannot be disassembled"
+            ],
+            "states": null
+        },
+        "Talisman of Evasion": {
+            "name": "Talisman of Evasion",
+            "description": "A necklace that allows you to anticipate enemy attacks.",
+            "category": "Secret Shop",
+            "cost": 1300,
+            "sellValue": 650,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 1300
+            },
+            "abilities": [],
+            "stats": {
+                "evasion": "15%"
+            },
+            "additionalInfo": [
+                "Evasion uses pseudo-random distribution",
+                "Stacks diminishingly with other evasion sources",
+                "Increases most heroes against physical attacks by 17.65%"
+            ],
+            "states": []
+        },
         "Tango": {
             "name": "Tango",
             "description": "Forage to survive on the battlefield.",
@@ -40130,6 +43099,30 @@
                     }
                 ]
             }
+        },
+        "Tiara of Selemene": {
+            "name": "Tiara of Selemene",
+            "description": "A symbol of favor bestowed upon the high priestess of Selemene.",
+            "category": "Secret Shop",
+            "cost": 1800,
+            "sellValue": 900,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 1800
+            },
+            "abilities": [],
+            "stats": {
+                "manaRegeneration": 6
+            },
+            "additionalInfo": [
+                "Builds into Khanda (as of version 7.38)",
+                "Previously built into Scythe of Vyse, Refresher Orb, and Octarine Core",
+                "Item was created in version 7.35 (2023-12-14)"
+            ],
+            "states": []
         },
         "Town Portal Scroll": {
             "name": "Town Portal Scroll",
@@ -40302,6 +43295,35 @@
                     }
                 ]
             }
+        },
+        "Ultimate Orb": {
+            "name": "Ultimate Orb",
+            "description": "A mystical orb containing the essence of life.",
+            "category": "Secret Shop",
+            "cost": 2800,
+            "sellValue": 1400,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [],
+                "totalCost": 2800
+            },
+            "abilities": [],
+            "stats": {
+                "strength": 15,
+                "agility": 15,
+                "intelligence": 15
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "330 health and 1.5 health regeneration",
+                "180 mana, 0.75 mana regeneration and 1.5% flat base magic resistance",
+                "15 attack speed and 2.5 main armor",
+                "15 main attack damage to all Strength/Agility/Intelligence heroes",
+                "20.25 main attack damage to universal heroes"
+            ],
+            "states": []
         },
         "Urn of Shadows": {
             "name": "Urn of Shadows",
@@ -40521,6 +43543,27 @@
                 "5.4 main attack damage to universal heroes"
             ],
             "states": null
+        },
+        "Vitality Booster": {
+            "name": "Vitality Booster",
+            "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
+            "category": "Secret Shop",
+            "cost": 1000,
+            "sellValue": 500,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": null,
+            "abilities": [],
+            "stats": {
+                "health": 250
+            },
+            "additionalInfo": [
+                "Purchasable at the Secret Shop",
+                "Previously built into Spirit Vessel (removed in version 7.39)",
+                "Currently builds into Eternal Shroud (since version 7.35)"
+            ],
+            "states": []
         },
         "Vladmir's Offering": {
             "name": "Vladmir's Offering",
@@ -40933,6 +43976,80 @@
                     }
                 ]
             }
+        },
+        "Yasha": {
+            "name": "Yasha",
+            "description": "Yasha is regarded as the swiftest weapon ever created.",
+            "category": "Armaments",
+            "cost": 2100,
+            "sellValue": 1050,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Blade of Alacrity",
+                    "Boots of Speed",
+                    "Recipe"
+                ],
+                "totalCost": 2100
+            },
+            "abilities": [],
+            "stats": {
+                "agility": 16,
+                "moveSpeed": "10%",
+                "attackSpeed": 15
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "16 attack speed and 2.67 main armor",
+                "16 main attack damage to agility heroes",
+                "7.2 main attack damage to universal heroes",
+                "For Yasha-based items:",
+                "Multiple sources of movement speed do not stack",
+                "Multiple sources of attack speed fully stack"
+            ],
+            "states": []
+        },
+        "Yasha and Kaya": {
+            "name": "Yasha and Kaya",
+            "description": "Yasha and Kaya when paired together share a natural resonance.",
+            "category": "Armaments",
+            "cost": 4200,
+            "sellValue": 2100,
+            "maxStacks": null,
+            "shareable": false,
+            "usageAlert": 0,
+            "recipe": {
+                "components": [
+                    "Yasha",
+                    "Kaya"
+                ],
+                "totalCost": 4200
+            },
+            "abilities": [],
+            "stats": {
+                "agility": 16,
+                "intelligence": 16,
+                "moveSpeed": "12%",
+                "spellDamageAmp": "12%",
+                "attackSpeed": 20,
+                "castSpeed": 25,
+                "manaRegenAmp": "50%",
+                "disassemble": true
+            },
+            "additionalInfo": [
+                "The item's attributes grant the following additional stats:",
+                "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance",
+                "16 attack speed and 2.67 main armor",
+                "16 main attack damage to agility/intelligence heroes",
+                "14.4 main attack damage to universal heroes",
+                "For Yasha-based items: Multiple sources of movement speed do not stack",
+                "For Yasha-based items: Multiple sources of attack speed fully stack",
+                "For Kaya-based items: Multiple sources of spell damage amplification do not stack",
+                "For Kaya-based items: Multiple sources of mana regeneration amplification do not stack"
+            ],
+            "states": []
         }
     },
     "neutrals": {

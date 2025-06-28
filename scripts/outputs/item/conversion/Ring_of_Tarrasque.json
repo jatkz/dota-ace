@@ -1,0 +1,24 @@
+{
+  "name": "Ring of Tarrasque",
+  "description": "An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component.",
+  "category": "Secret Shop",
+  "cost": 1800,
+  "sellValue": 900,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 1800
+  },
+  "abilities": [],
+  "stats": {
+    "healthRegeneration": 12
+  },
+  "additionalInfo": [
+    "This item was revealed first in Artifact",
+    "The name \"Tarrasque\" references the Tarrasque, an almost undefeatable monster in Dungeons & Dragons, which in return references the Tarasque, a mythological dragon-hybrid that was tamed by Saint Martha",
+    "Builds into Heart of Tarrasque, Pipe of Insight, and Refresher Orb"
+  ],
+  "states": []
+}

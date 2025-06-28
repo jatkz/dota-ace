@@ -1,0 +1,21 @@
+{
+  "name": "Vitality Booster",
+  "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
+  "category": "Secret Shop",
+  "cost": 1000,
+  "sellValue": 500,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": null,
+  "abilities": [],
+  "stats": {
+    "health": 250
+  },
+  "additionalInfo": [
+    "Purchasable at the Secret Shop",
+    "Previously built into Spirit Vessel (removed in version 7.39)",
+    "Currently builds into Eternal Shroud (since version 7.35)"
+  ],
+  "states": []
+}

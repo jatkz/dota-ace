@@ -1,0 +1,62 @@
+{
+  "name": "Eye of Skadi",
+  "description": "Extremely rare artifact, guarded by the azure dragons.",
+  "category": "Armor",
+  "cost": 5900,
+  "sellValue": 2950,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Ultimate Orb", "Ultimate Orb", "Orb of Frost"],
+    "totalCost": 5900
+  },
+  "abilities": [
+    {
+      "name": "Cold Attack",
+      "type": "passive",
+      "description": "The wielder's attacks apply a movement speed and attack speed slow on enemy units.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "moveSpeedSlow": "25%",
+        "attackSpeedSlow": "20%",
+        "duration": 3,
+        "healReduction": "40%",
+        "healthRestoreReduction": "40%",
+        "rangedMoveSpeedSlow": "50%"
+      },
+      "notes": [
+        "The frigid attacks also reduce the effectiveness of healing and health restoration on the targets",
+        "The movement speed slow is more effective against ranged enemies",
+        "Reapplying the debuff refreshes the duration",
+        "Does not affect Buildings or Ward-type units",
+        "Affects Ally units and Couriers",
+        "Weaker sources do not slow or reduce health restoration if a stronger source is present"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 35,
+    "agility": 35,
+    "intelligence": 35,
+    "health": 770,
+    "healthRegeneration": 3.5,
+    "mana": 420,
+    "manaRegeneration": 1.75,
+    "magicResistance": "3.5%",
+    "attackSpeed": 35,
+    "armor": 5.83,
+    "attackDamage": 35,
+    "universalAttackDamage": 47.25
+  },
+  "additionalInfo": [
+    "This item is shown as a Team Item in the shop window when purchased by an ally",
+    "The item's attributes grant additional health, mana, attack speed, armor, and attack damage bonuses",
+    "Item is purchasable at the Main Shop under Armor but assembled entirely with items from the Secret Shop",
+    "Cannot be disassembled"
+  ],
+  "states": null
+}

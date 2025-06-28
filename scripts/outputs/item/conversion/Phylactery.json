@@ -1,0 +1,56 @@
+{
+  "name": "Phylactery",
+  "description": "An amulet overflowing with powerful magics.",
+  "category": "Armaments",
+  "cost": 2600,
+  "sellValue": 1300,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Recipe components not clearly specified in HTML"],
+    "totalCost": 2600
+  },
+  "abilities": [
+    {
+      "name": "Empower Spell",
+      "type": "passive",
+      "description": "The next unit targeted ability the wielder casts deals additional magical damage in a separate instance, and debuffs the target, slowing their movement speed.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": 10,
+      "effects": {
+        "damage": 150,
+        "moveSpeedSlow": "30%",
+        "duration": 3,
+        "damageType": "Magical"
+      },
+      "notes": [
+        "Affects most offensive unit-targeted ability casts, except item abilities, Death Pact, Holy Persuasion, Ion Shell, Enchant, Devour, and Reflected abilities",
+        "If the ability's target turns invulnerable, or if Spell Block triggers, Empower Spell will not trigger",
+        "The order of damage and debuff application depends on the target health when receiving target spell",
+        "If the target's health is above 150, Empower Spell's effects get applied before the triggering ability's effects",
+        "If the target's health below or equal to 150, the triggering ability's effects get applied before Empower Spell's effects",
+        "Shares cooldowns with Khanda. If both items are present, the older one takes priority"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 7,
+    "agility": 7,
+    "intelligence": 7,
+    "health": 200,
+    "mana": 200,
+    "disassemble": false
+  },
+  "additionalInfo": [
+    "The item's attributes grant 154 health and 0.7 health regeneration",
+    "Grants 84 mana, 0.35 mana regeneration and 0.7% flat base magic resistance",
+    "Provides 7 attack speed and 1.17 main armor",
+    "Adds 7 main attack damage to all Strength/Agility/Intelligence heroes",
+    "Adds 9.45 main attack damage to universal heroes",
+    "Ganking heroes with low-cooldown unit-targeted abilities often benefit from Phylactery for a noticeable early boost to damage output"
+  ],
+  "states": null
+}

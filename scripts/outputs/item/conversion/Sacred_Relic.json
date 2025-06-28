@@ -1,0 +1,24 @@
+{
+  "name": "Sacred Relic",
+  "description": "An ancient weapon that often turns the tides of war.",
+  "category": "Secret Shop",
+  "cost": 3400,
+  "sellValue": 1700,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": [],
+    "totalCost": 3400
+  },
+  "abilities": [],
+  "stats": {
+    "attackDamage": 55
+  },
+  "additionalInfo": [
+    "Divine Rapier has a lower priority in item combining compared to Radiance and Nullifier",
+    "When having a Demon Edge and a Talisman of Evasion in the inventory, buying Sacred Relic results in a finished Radiance",
+    "When having a Demon Edge and a Helm of Iron Will, buying Sacred Relic results in a finished Nullifier"
+  ],
+  "states": []
+}

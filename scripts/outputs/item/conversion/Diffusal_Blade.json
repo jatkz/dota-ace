@@ -1,0 +1,84 @@
+{
+  "name": "Diffusal Blade",
+  "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+  "category": "Weapons",
+  "cost": 2500,
+  "sellValue": 1250,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Blade of Alacrity", "Robe of the Magi", "Recipe"],
+    "totalCost": 2500
+  },
+  "abilities": [
+    {
+      "name": "Inhibit",
+      "type": "active",
+      "description": "Greatly slows the target enemy's movement speed, which decays over the duration.",
+      "castAnimation": "0 + 0",
+      "castRange": 600,
+      "manaCost": 25,
+      "cooldown": 15,
+      "effects": {
+        "moveSpeedSlow": "100%",
+        "slowDecayRate": 0.8,
+        "duration": 4
+      },
+      "notes": [
+        "The slow decays evenly over the duration in 0.8-second intervals",
+        "Results in a slow of 100%/80%/60%/40%/20% at second 4/3.2/2.4/1.6/0.8/0",
+        "Can be cast on and fully affect invulnerable units",
+        "Can trigger an enemy's Linken's Sphere"
+      ]
+    },
+    {
+      "name": "Manabreak",
+      "type": "passive",
+      "description": "The wielder's attacks burn their target's mana and deal damage equal to a percentage of the mana burnt.",
+      "castAnimation": null,
+      "castRange": null,
+      "manaCost": null,
+      "cooldown": null,
+      "effects": {
+        "manaBurnPerHit": 40,
+        "manaBurnToDamageFactor": 1,
+        "illusionManaBurnPerHit": 8
+      },
+      "notes": [
+        "Mana Break is a conditional attack damage bonus",
+        "The bonus attack damage is directly added to the wielder's attack damage, but is not visible in the HUD",
+        "Does not interact with percentage-based bonus attack damage, lifesteal, critical strike, cleave, or damage block sources",
+        "Does nothing if the attack target has no mana",
+        "Does not work against allied units",
+        "Does not stack with Diffusal Blade-based abilities. Stacks additively with other sources of Mana Break"
+      ]
+    }
+  ],
+  "stats": {
+    "agility": 15,
+    "intelligence": 10,
+    "mana": 120,
+    "manaRegeneration": 0.5,
+    "magicResistance": "1%",
+    "attackSpeed": 15,
+    "armor": 2.5,
+    "attackDamageAgi": 15,
+    "attackDamageInt": 10,
+    "attackDamageUniversal": 11.25
+  },
+  "additionalInfo": [
+    "The item's attributes grant 120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
+    "Grants 15 attack speed and 2.5 main armor",
+    "Grants 15 and 10 main attack damage to agility/intelligence heroes respectively",
+    "Grants 11.25 main attack damage to universal heroes",
+    "Generally works well with illusion-based heroes",
+    "Heroes that can hit enemies with multiple attacks in quick succession can deal a lot of Manabreak damage",
+    "The bonus attributes and the Manabreak ability make Diffusal Blade a cost-effective damage item on agility and universal carries/heroes in general",
+    "Because of the way Manabreak interacts with illusions, Diffusal Blade is most common and most effective on heroes with easy access to them",
+    "Commonly seen together with Manta Style",
+    "The movement slow is an effective way to kite melee characters",
+    "The movement slow can help your illusions and/or summoned units stick to their attack target"
+  ],
+  "states": null
+}

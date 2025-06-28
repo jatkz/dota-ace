@@ -1,0 +1,65 @@
+{
+  "name": "Meteor Hammer",
+  "description": "An enchanted hammer forged of metals discovered in the ruins of a village destroyed by a great star storm.",
+  "category": "Magical",
+  "cost": 2850,
+  "sellValue": 1425,
+  "maxStacks": null,
+  "shareable": false,
+  "usageAlert": 0,
+  "recipe": {
+    "components": ["Ogre Axe", "Staff of Wizardry", "Sage's Mask"],
+    "totalCost": 2550
+  },
+  "abilities": [
+    {
+      "name": "Meteor Hammer",
+      "type": "active",
+      "description": "After a successful channel, summons a meteor that strikes down at the target area after a delay, stunning enemies and dealing impact damage. Slows movement speed and continues to deal damage over time to enemy units for a while.",
+      "castAnimation": "0 + 0",
+      "castRange": 600,
+      "manaCost": 75,
+      "cooldown": 24,
+      "effects": {
+        "channelTime": 2,
+        "impactRadius": 400,
+        "effectDelay": 0.5,
+        "impactDamage": 130,
+        "damagePerSecond": 50,
+        "moveSpeedSlow": "20%",
+        "burnDuration": 6,
+        "stunDuration": 0.5,
+        "buildingImpactDamage": 90
+      },
+      "notes": [
+        "Interrupting the channeling causes the ability to do nothing, consuming mana and going on cooldown",
+        "Provides flying vision within the targeted area for 2.8 seconds, starting upon channel beginning",
+        "The meteor takes 0.5 seconds to land",
+        "Upon landing, all enemies within the area, including buildings but excluding wards, get damaged, stunned, and receive a damaging debuff",
+        "The meteor first applies the debuffs, then the impact damage",
+        "Deals damage in 1-second intervals, starting 1 second after the debuff is placed, resulting in 7 total instances",
+        "Can deal a total of 430 damage (before reductions)",
+        "Multiple casts on the same targets do not stack but refresh the duration instead",
+        "Destroys trees within the radius upon impact",
+        "Does not share a cooldown with Fallen Sky"
+      ]
+    }
+  ],
+  "stats": {
+    "strength": 6,
+    "agility": 6,
+    "intelligence": 24,
+    "spellDamageAmp": "10%",
+    "manaRegenAmp": "40%"
+  },
+  "additionalInfo": [
+    "The item's attributes grant 132 health and 0.6 health regeneration",
+    "288 mana, 1.2 mana regeneration and 2.4% flat base magic resistance",
+    "6 attack speed and 1 main armor",
+    "6, 6 and 24 main attack damage to all Strength/Agility/Intelligence heroes respectively",
+    "16.2 main attack damage to universal heroes",
+    "Multiple sources of spell damage amplification do not stack",
+    "Multiple sources of mana regeneration amplification do not stack"
+  ],
+  "states": null
+}
