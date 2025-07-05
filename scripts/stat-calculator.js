@@ -1,5 +1,8 @@
 import fs, { stat } from 'fs';
 import path from 'path';
+import {
+    getHeroState
+} from './output-hero-state.js'
 
 
 function calculateHeroStats(heroState, level) {
@@ -64,6 +67,26 @@ function calculateHeroStats(heroState, level) {
     };
 }
 
+function calculateAutoAtkDps(input, levelStart, levelEnd) {
+
+    const heroState = getHeroState(input);
+
+    const levelRange = 1 + levelEnd - levelStart;
+
+    const arr = Array.from({length: levelRange}, (_, i) => levelStart + i);
+
+    const dataArr = [];
+    for (const l of arr) {
+        const data = calculateHeroStats(heroState, l);
+        dataArr.push(data);
+    }
+
+    return {
+        heroState,
+        autoDps: dataArr
+    }
+}
+
 // Main execution
 async function main() {
     console.log('🤖 Hero Output');
@@ -84,33 +107,8 @@ async function main() {
 
     try {
 
-        const dataset = JSON.parse(fs.readFileSync('./scripts/outputs/dataset.json', 'utf8'));
-
-        const output = {items:[]}
-
-        output['hero'] = dataset['heroes'][input['hero']]
-        output['hero']['name'] = input['hero']
-
-        output['items'][0] = dataset['items'][input['items'][0]]
-        output['items'][1] = dataset['items'][input['items'][1]]
-        output['items'][2] = dataset['items'][input['items'][2]]
-        output['items'][3] = dataset['items'][input['items'][3]]
-        output['items'][4] = dataset['items'][input['items'][4]]
-        output['items'][5] = dataset['items'][input['items'][5]]
-
-        output['neutral'] = dataset['neutrals'][input['neutral']]
-        output['enchantment'] = dataset['enchantments'][input['enchantment']]
-
-        const heroStat = output;
-
-        const arr = Array.from({length: 30}, (_, i) => i + 1);
-
-        const dataArr = [];
-        for (const l of arr) {
-            const data = calculateHeroStats(heroStat, l);
-            dataArr.push(data);
-        }
-
+        const state = calculateAutoAtkDps(input, 1, 30);
+        const dataArr = state.autoDps;
         fs.writeFileSync('./scripts/outputs/dps-sheet.json', JSON.stringify(dataArr, null , 4));
 
     } catch (error) {
@@ -120,4 +118,9 @@ async function main() {
 }
 
 
-main();
+// main();
+
+export {
+    calculateHeroStats,
+    calculateAutoAtkDps
+}
