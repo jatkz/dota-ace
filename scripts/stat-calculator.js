@@ -1,11 +1,10 @@
-import fs, { stat } from 'fs';
-import path from 'path';
+import fs from 'fs';
 import {
     getHeroState
 } from './output-hero-state.js'
 
 
-function calculateHeroStats(heroState, level) {
+function calculateHeroStats(heroState, level, misc_buffs = []) {
     // Validate level input (1-30)
     if (level < 1 || level > 30) {
         throw new Error('Hero level must be between 1 and 30');
@@ -20,40 +19,71 @@ function calculateHeroStats(heroState, level) {
     // console.log(enchantment)
     
     // Calculate base attributes at given level
-    const stats = {strength:0, agility:0, intelligence:0, attack_speed: 0,
-        attack_damage: 0,
+    const stats = {strength:0, agility:0, intelligence:0, attackSpeed: 0,
+        attackDamage: 0, health: 0, healthRegeneration: 0, manaRegeneration: 0, mana: 0,
+        healthRestoreAmp: 0, maxHPHealthRegen: 0
     };
-    stats['strength'] = general.strength + (general.strength_gain * (level - 1));
+    const str_gain = (general.strength_gain * (level - 1))
+    stats['strength'] = general.strength + str_gain;
     stats['agility'] = general.agility + (general.agility_gain * (level - 1));
     stats['intelligence'] = general.intelligence + (general.intelligence_gain * (level - 1));
-    stats['attack_speed'] = general.attack_speed;
-    stats['attack_damage'] = general.damage_avg;
+    stats['attackSpeed'] = general.attack_speed;
+    stats['attackDamage'] = general.damage_avg;
+    stats['health'] = general.health - (general.strength * 22);
+    stats['mana'] = general.mana - (general.intelligence * 12);
 
     for (const i of items) {
-        stats['strength'] = stats['strength'] + (i?.bonus?.strength || 0);
-        stats['agility'] = stats['agility'] + (i?.bonus?.agility || 0);
-        stats['intelligence'] = stats['intelligence'] + (i?.bonus?.intelligence || 0);
-        stats['attack_speed'] = stats['attack_speed'] + (i?.bonus?.attackSpeed || 0);
-        stats['attack_damage'] = stats['attack_damage'] + (i?.bonus?.attackDamage || 0);
+        const item_stats = i?.bonus;
+        stats['strength'] = stats['strength'] + (item_stats?.strength || 0);
+        stats['agility'] = stats['agility'] + (item_stats?.agility || 0);
+        stats['intelligence'] = stats['intelligence'] + (item_stats?.intelligence || 0);
+        stats['attackSpeed'] = stats['attackSpeed'] + (item_stats?.attackSpeed || 0);
+        stats['attackDamage'] = stats['attackDamage'] + (item_stats?.attackDamage || 0);
+        stats['health'] = stats['health'] + (item_stats?.health || 0);
+        stats['healthRegeneration'] = stats['healthRegeneration'] + (item_stats?.healthRegeneration || 0);
+        if (item_stats?.healthRestoreAmp) {
+            const percentString = item_stats?.healthRestoreAmp;
+            stats['healthRestoreAmp'] = stats['healthRestoreAmp'] + parseFloat(percentString.replace('%', '')) / 100;
+        }
+        if (item_stats?.maxHPHealthRegen) {
+            const percentString = item_stats?.maxHPHealthRegen;
+            stats['maxHPHealthRegen'] = stats['maxHPHealthRegen'] + parseFloat(percentString.replace('%', '')) / 100;
+        }
+        stats['mana'] = stats['mana'] + (item_stats?.mana || 0);
+        stats['manaRegeneration'] = stats['manaRegeneration'] + (item_stats?.manaRegeneration || 0);
     }
 
     stats['strength'] += (enchantment?.stats?.strength || 0);
     stats['agility'] += (enchantment?.stats?.agility || 0);
     stats['intelligence'] += (enchantment?.stats?.intelligence || 0);
-    stats['attack_speed'] += (enchantment?.stats?.attack_speed || 0);
-    stats['attack_damage'] += (enchantment?.stats?.attack_damage || 0);
+    stats['attackSpeed'] += (enchantment?.stats?.attack_speed || 0);
+    stats['attackDamage'] += (enchantment?.stats?.attack_damage || 0);
     if (general.primary_attribute == 'universal') {
-        stats.attack_damage += (stats.strength + stats.agility + stats.intelligence) * .45;
+        stats.attackDamage += (stats.strength + stats.agility + stats.intelligence) * .45;
     } else {
-        stats.attack_damage += stats[general.primary_attribute];
+        stats.attackDamage += stats[general.primary_attribute];
     }
 
-    const attackSpeedSum = (stats.attack_speed + stats.agility)
-    stats['attack_speed'] = attackSpeedSum;
-    const attackRate = (attackSpeedSum) / (general.attack_speed * general.bat);
+    for (const buff of misc_buffs) {
+        const fieldName = buff['key'];
+        const value = buff['value'];
+        const description = buff['description'];
+        stats[fieldName] += value;
+    }
+    stats['misc_buffs'] = misc_buffs;
+
+
+    // FINAL BEFORE END CALCS
+
+    const attackSpeedSum = (stats.attackSpeed + stats.agility)
+    stats['attackSpeed'] = attackSpeedSum;
+    const attackRate = (attackSpeedSum) / (general.attackSpeed * general.bat);
     const attacksPS = 1/attackRate;
-    const dps = attackRate * stats.attack_damage;
+    const dps = attackRate * stats.attackDamage;
     // Calculate other derived stats
+    stats['health'] = stats['health'] + (stats['strength'] * 22);
+    stats['healthRegeneration'] = stats['healthRegeneration'] + (0.1 * general.strength) + (stats['health'] * stats['maxHPHealthRegen']) * (1 + stats['healthRestoreAmp']);
+    stats['mana'] = stats['mana'] + (stats['mana'] * 12);
     // const health = general.health + (strength * 22); // Each strength point gives 22 HP
     // const mana = general.mana + (intelligence * 12); // Each intelligence point gives 12 mana
     // const armor = general.armor + (agility / 6); // Each 6 agility points give 1 armor
@@ -77,7 +107,7 @@ function calculateAutoAtkDps(input, levelStart, levelEnd) {
 
     const dataArr = [];
     for (const l of arr) {
-        const data = calculateHeroStats(heroState, l);
+        const data = calculateHeroStats(heroState, l, input.misc_buffs);
         dataArr.push(data);
     }
 
