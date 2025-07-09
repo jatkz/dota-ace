@@ -29,7 +29,7 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
     stats['intelligence'] = general.intelligence + (general.intelligence_gain * (level - 1));
     stats['attackSpeed'] = general.attack_speed;
     stats['attackDamage'] = general.damage_avg;
-    stats['health'] = general.health - (general.strength * 22);
+    stats['health'] = 120; // base hp pool of all heroes https://liquipedia.net/dota2/Health
     stats['mana'] = 75; // base mana pool of all heroes https://liquipedia.net/dota2/Mana
 
     for (const i of items) {
