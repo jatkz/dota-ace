@@ -1,4 +1,4 @@
-import { ClaudeMessageBatchClient } from './ClaudeBatchClient.js';
+import { ClaudeMessageBatchClient } from '../ClaudeBatchClient.js';
 import fs from 'fs';
 
 const itemsListPath = './scripts/outputs/neutral-item-gridLinks.json';

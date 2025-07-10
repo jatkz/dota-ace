@@ -1,4 +1,4 @@
-import { ClaudeMessageBatchClient } from './ClaudeBatchClient.js';
+import { ClaudeMessageBatchClient } from '../ClaudeBatchClient.js';
 import fs from 'fs';
 
 const DOTA2_HEROES = JSON.parse(fs.readFileSync('./scripts/heroes-list.json', 'utf8'));

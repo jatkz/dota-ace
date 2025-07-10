@@ -3,6 +3,10 @@ import * as cheerio from 'cheerio';
 
 import { optimizeItemGridHtmlForParsing, optimizeNeutralSingleHtmlForParsingV2 } from './html-parser.js';
 
+/**
+ * attempt to fetch all items using the item grid page
+ */
+
 // Wrap everything in an async function
 async function main() {
     try {

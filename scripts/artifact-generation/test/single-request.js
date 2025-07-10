@@ -1,6 +1,10 @@
 import fs from 'fs';
 
-import { optimizeHtmlForParsing, optimizeNeutralSingleHtmlForParsingV2 } from './html-parser.js';
+import { optimizeHtmlForParsing, optimizeNeutralSingleHtmlForParsingV2 } from '../html-parser.js';
+
+/**
+ * hardcoded example of pulling something from a site
+ */
 
 // Wrap everything in an async function
 async function main() {

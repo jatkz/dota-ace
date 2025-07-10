@@ -1,7 +1,7 @@
 import fs from 'fs';
 import {
     getHeroState
-} from './output-hero-state.js'
+} from './get-hero-state.js'
 
 
 function calculateHeroStats(heroState, level, misc_buffs = []) {
