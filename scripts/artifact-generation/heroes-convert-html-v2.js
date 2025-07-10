@@ -1,7 +1,7 @@
 import { ClaudeMessageBatchClient } from '../ClaudeBatchClient.js';
 import fs from 'fs';
 
-const DOTA2_HEROES = JSON.parse(fs.readFileSync('./scripts/heroes-list.json', 'utf8'));
+const DOTA2_HEROES = JSON.parse(fs.readFileSync('./scripts/outputs/heroes-list.json', 'utf8'));
 
 const API_KEY = process.env.CLAUDE_API_KEY;
 
@@ -34,7 +34,7 @@ async function main() {
             DOTA2_HEROES[index].runConversion = false;
         }
 
-        fs.writeFileSync('./scripts/heroes-list.json', JSON.stringify(DOTA2_HEROES, null, 4));
+        fs.writeFileSync('./scripts/outputs/heroes-list.json', JSON.stringify(DOTA2_HEROES, null, 4));
         
     } catch (error) {
         console.error('❌ Error running examples:', error.message);
