@@ -149,7 +149,7 @@ async function main() {
 }
 
 
-main();
+// main();
 
 export {
     calculateHeroStats,
