@@ -97,7 +97,7 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
     };
 }
 
-function calculateAutoAtkDps(input, levelStart, levelEnd) {
+function calculateStatsByLevel(input, levelStart, levelEnd) {
 
     const heroState = getHeroState(input);
 
@@ -137,9 +137,10 @@ async function main() {
 
     try {
 
-        const state = calculateAutoAtkDps(input, 1, 30);
+        const state = calculateStatsByLevel(input, 1, 30);
         const dataArr = state.autoDps;
         fs.writeFileSync('./scripts/outputs/dps-sheet.json', JSON.stringify(dataArr, null , 4));
+        console.log('Hero State Saved');
 
     } catch (error) {
         console.error('❌ Error running examples:', error.message);
@@ -148,9 +149,9 @@ async function main() {
 }
 
 
-// main();
+main();
 
 export {
     calculateHeroStats,
-    calculateAutoAtkDps
+    calculateStatsByLevel
 }
