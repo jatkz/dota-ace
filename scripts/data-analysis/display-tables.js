@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 function printStatsTable(data) {
   const headers = ['Lvl', 'STR', 'AGI', 'INT', 'AS', 'AD', 'AR', 'APS', 'DPS'];
   const colWidths = [3, 6, 6, 6, 5, 6, 6, 6, 7];
@@ -11,7 +13,7 @@ function printStatsTable(data) {
     console.log('-'.repeat(headerRow.length));
     
     // Print each level
-    group.data.forEach((item) => {
+    group.autoDps.forEach((item) => {
       const row = [
         item.level.toString().padEnd(colWidths[0]),
         item.stats.strength.toFixed(1).padEnd(colWidths[1]),
@@ -40,7 +42,7 @@ function printLevelComparison(data, level) {
   console.log('-'.repeat(headerRow.length));
   
   data.forEach((group) => {
-    const item = group.data.find(d => d.level === level);
+    const item = group.autoDps.find(d => d.level === level);
     if (item) {
       const row = [
         group.label.padEnd(colWidths[0]),
@@ -72,7 +74,7 @@ function printDPSComparison(data) {
     const row = [
       level.toString().padEnd(colWidths[0]),
       ...data.map((group, groupIndex) => {
-        const item = group.data.find(d => d.level === level);
+        const item = group.autoDps.find(d => d.level === level);
         return item ? item.dps.toFixed(1).padEnd(colWidths[groupIndex + 1]) : 'N/A'.padEnd(colWidths[groupIndex + 1]);
       })
     ].join(' | ');
@@ -85,10 +87,16 @@ function printDPSComparison(data) {
  * rewrite the displays if needed.
  * 
  */
+// TODO
+// FINISH THIS DPS
+// WRITE EHP 
+// WRITE SIMPLIFIED ABILITY DISPLAY
+// COMBINE ALL INTO ONE
+let data = JSON.parse(fs.readFileSync('./scripts/outputs/finalHeroState.json', 'utf-8'));
 
-// const data = 
-
+data = {...data, label: 'test'};
+console.log(Object.keys(data));
 // Usage:
-// printStatsTable(data);
-// printLevelComparison(data, 10);
-// printDPSComparison(data);
+printStatsTable([data]);
+printLevelComparison([data], 10);
+printDPSComparison([data]);
