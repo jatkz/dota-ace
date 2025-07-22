@@ -3,6 +3,17 @@ import {
     getHeroState
 } from './get-hero-state.js'
 
+function containsCloak(item) {
+  // Check if name contains "Cloak"
+  const nameContainsCloak = item.name.includes("Cloak");
+  
+  // Check if any recipe component contains "Cloak"
+  const recipeContainsCloak = item.recipe && 
+    item.recipe.components && 
+    item.recipe.components.some(component => component.includes("Cloak"));
+  
+  return nameContainsCloak || recipeContainsCloak;
+}
 
 function calculateHeroStats(heroState, level, misc_buffs = []) {
     // Validate level input (1-30)
@@ -21,7 +32,8 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
     // Calculate base attributes at given level
     const stats = {strength:0, agility:0, intelligence:0, attackSpeed: 0,
         attackDamage: 0, health: 0, healthRegeneration: 0, manaRegeneration: 0, mana: 0,
-        healthRestoreAmp: 0, maxHPHealthRegen: 0
+        healthRestoreAmp: 0, maxHPHealthRegen: 0, armor: 0, magicResistance: 0, baseMR: 0,
+        hoodMR: 0, otherMR: 0
     };
     const str_gain = (general.strength_gain * (level - 1))
     stats['strength'] = general.strength + str_gain;
@@ -31,6 +43,8 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
     stats['attackDamage'] = general.damage_avg;
     stats['health'] = 120; // base hp pool of all heroes https://liquipedia.net/dota2/Health
     stats['mana'] = 75; // base mana pool of all heroes https://liquipedia.net/dota2/Mana
+    stats['armor'] = general.armor - (general.agility / 6); // so you can see the base armor
+    stats['baseMR'] = .25;
 
     for (const i of items) {
         const item_stats = i?.bonus;
@@ -51,6 +65,8 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
         }
         stats['mana'] = stats['mana'] + (item_stats?.mana || 0);
         stats['manaRegeneration'] = stats['manaRegeneration'] + (item_stats?.manaRegeneration || 0);
+        stats['armor'] = stats['armor'] + (item_stats?.armor || 0);
+        stats['hoodMR'] = containsCloak(i) ? .20 : 0
     }
 
     stats['strength'] += (enchantment?.stats?.strength || 0);
@@ -84,16 +100,23 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
     stats['health'] = stats['health'] + (stats['strength'] * 22);
     stats['healthRegeneration'] = stats['healthRegeneration'] + (0.1 * general.strength) + (stats['health'] * stats['maxHPHealthRegen']) * (1 + stats['healthRestoreAmp']);
     stats['mana'] = stats['mana'] + (stats['mana'] * 12);
-    // const health = general.health + (strength * 22); // Each strength point gives 22 HP
-    // const mana = general.mana + (intelligence * 12); // Each intelligence point gives 12 mana
-    // const armor = general.armor + (agility / 6); // Each 6 agility points give 1 armor
+    stats['armor'] = stats['armor'] + (stats['agility'] / 6); // Each 6 agility points give 1 armor
+    stats['baseMR'] = stats['baseMR'] + ((stats['intelligence'] / 10) / 100);
+    const magicResistance = 1 - (1 - stats['baseMR']) * (1 - stats['hoodMR']) * (1 - stats['otherMR']);
+    const dmg_reduction = (0.06 * stats['armor']) / (1 + 0.06 * stats['armor']);
+    const ehp = Math.round((1+dmg_reduction) * stats['health']);
+    const mhp = Math.round((1+magicResistance) * stats['health']);
     
     return {
         level: level,
         stats: stats,
         attackRate,
         attacksPS,
-        dps
+        dps,
+        dmg_reduction,
+        ehp,
+        magicResistance,
+        mhp
     };
 }
 

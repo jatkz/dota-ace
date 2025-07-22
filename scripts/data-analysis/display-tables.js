@@ -90,8 +90,9 @@ function printDPSComparison(data) {
 // TODO
 // FINISH THIS DPS
 // WRITE EHP 
-// WRITE SIMPLIFIED ABILITY DISPLAY
+// WRITE SIMPLIFIED ABILITY DISPLAY TEMPLATE then pass for each hero
 // COMBINE ALL INTO ONE
+// VOICE FEATURE?
 let data = JSON.parse(fs.readFileSync('./scripts/outputs/finalHeroState.json', 'utf-8'));
 
 data = {...data, label: 'test'};

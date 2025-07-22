@@ -1,5 +1,5 @@
 import {
-    calculateAutoAtkDps
+    calculateStatsByLevel
 } from './stat-calculator.js'
 import fs from 'fs';
 
@@ -19,7 +19,7 @@ function main() {
             enchantment: "Audacious Enchantment"
         }
         
-        const state = calculateAutoAtkDps(input, 1, 30);
+        const state = calculateStatsByLevel(input, 1, 30);
         fs.writeFileSync('./scripts/outputs/finalHeroState.json', JSON.stringify(state, null , 4));
         
     } catch (error) {

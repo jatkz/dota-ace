@@ -13,11 +13,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 26.336666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6124331447174638
     },
     {
         "level": 2,
@@ -33,11 +35,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 26.753333333333334,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6161523107630892
     },
     {
         "level": 3,
@@ -53,11 +57,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 27.17,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6198007756064178
     },
     {
         "level": 4,
@@ -73,11 +79,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 27.586666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6233805363061163
     },
     {
         "level": 5,
@@ -93,11 +101,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 28.003333333333334,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6268935154092977
     },
     {
         "level": 6,
@@ -113,11 +123,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 28.42,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6303415643944995
     },
     {
         "level": 7,
@@ -133,11 +145,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 28.836666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6337264669254999
     },
     {
         "level": 8,
@@ -153,11 +167,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 29.253333333333334,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6370499419279907
     },
     {
         "level": 9,
@@ -173,11 +189,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 29.67,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6403136465002518
     },
     {
         "level": 10,
@@ -193,11 +211,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 30.086666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6435191786681876
     },
     {
         "level": 11,
@@ -213,11 +233,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 30.503333333333334,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6466680799943467
     },
     {
         "level": 12,
@@ -233,11 +255,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 30.92,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6497618380498739
     },
     {
         "level": 13,
@@ -253,11 +277,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 31.336666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6528018887577252
     },
     {
         "level": 14,
@@ -273,11 +299,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 31.753333333333334,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6557896186148975
     },
     {
         "level": 15,
@@ -293,11 +321,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 32.17,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.658726366800901
     },
     {
         "level": 16,
@@ -313,11 +343,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 32.586666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6616134271792096
     },
     {
         "level": 17,
@@ -333,11 +365,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 33.00333333333333,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6644520501979733
     },
     {
         "level": 18,
@@ -353,11 +387,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 33.42,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6672434446958605
     },
     {
         "level": 19,
@@ -373,11 +409,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 33.836666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.669988779618507
     },
     {
         "level": 20,
@@ -393,11 +431,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 34.25333333333333,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6726891856506939
     },
     {
         "level": 21,
@@ -413,11 +453,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 34.67,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.675345756769041
     },
     {
         "level": 22,
@@ -433,11 +475,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 35.086666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.677959551719696
     },
     {
         "level": 23,
@@ -453,11 +497,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 35.50333333333333,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6805315954252125
     },
     {
         "level": 24,
@@ -473,11 +519,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 35.92,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6830628803245437
     },
     {
         "level": 25,
@@ -493,11 +541,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 36.336666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6855543676498334
     },
     {
         "level": 26,
@@ -513,11 +563,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 36.75333333333333,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6880069886434543
     },
     {
         "level": 27,
@@ -533,11 +585,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 37.17,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6904216457185314
     },
     {
         "level": 28,
@@ -553,11 +607,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 37.586666666666666,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6927992135659867
     },
     {
         "level": 29,
@@ -573,11 +629,13 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 38.00333333333333,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6951405402109627
     },
     {
         "level": 30,
@@ -593,10 +651,12 @@
             "mana": 975,
             "healthRestoreAmp": 0.2,
             "maxHPHealthRegen": 0,
+            "armor": 38.42,
             "misc_buffs": []
         },
         "attackRate": null,
         "attacksPS": null,
-        "dps": null
+        "dps": null,
+        "dmg_reduction": 0.6974464480212997
     }
 ]
