@@ -32,3 +32,6 @@ out/
 *~
 .DS_Store
 Thumbs.db
+
+vosk-model-*/
+vosk-model-*
