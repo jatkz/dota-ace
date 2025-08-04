@@ -1,8 +1,3 @@
-// const vosk = require('vosk');
-// const { spawn } = require('child_process');
-// const fs = require('fs');
-
-
 import vosk from 'vosk';
 import { spawn } from 'child_process';
 import fs from 'fs';

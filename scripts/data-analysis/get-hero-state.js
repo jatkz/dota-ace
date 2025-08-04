@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 
 function getHeroState(input) {
     const dataset = JSON.parse(fs.readFileSync('./scripts/outputs/dataset.json', 'utf8'));

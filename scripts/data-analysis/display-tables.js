@@ -16,14 +16,14 @@ function printStatsTable(data) {
     group.autoDps.forEach((item) => {
       const row = [
         item.level.toString().padEnd(colWidths[0]),
-        item.stats.strength.toFixed(1).padEnd(colWidths[1]),
-        item.stats.agility.toFixed(1).padEnd(colWidths[2]),
-        item.stats.intelligence.toFixed(1).padEnd(colWidths[3]),
-        item.stats.attack_speed.toString().padEnd(colWidths[4]),
-        item.stats.attack_damage.toFixed(1).padEnd(colWidths[5]),
+        item.stats.strength.toFixed().padEnd(colWidths[1]),
+        item.stats.agility.toFixed().padEnd(colWidths[2]),
+        item.stats.intelligence.toFixed().padEnd(colWidths[3]),
+        item.stats.attackSpeed.toString().padEnd(colWidths[4]),
+        item.stats.attackDamage.toFixed().padEnd(colWidths[5]),
         item.attackRate.toFixed(2).padEnd(colWidths[6]),
         item.attacksPS.toFixed(2).padEnd(colWidths[7]),
-        item.dps.toFixed(1).padEnd(colWidths[8])
+        item.dps.toFixed().padEnd(colWidths[8])
       ].join(' | ');
       
       console.log(row);
@@ -46,14 +46,14 @@ function printLevelComparison(data, level) {
     if (item) {
       const row = [
         group.label.padEnd(colWidths[0]),
-        item.stats.strength.toFixed(1).padEnd(colWidths[1]),
-        item.stats.agility.toFixed(1).padEnd(colWidths[2]),
-        item.stats.intelligence.toFixed(1).padEnd(colWidths[3]),
-        item.stats.attack_speed.toString().padEnd(colWidths[4]),
-        item.stats.attack_damage.toFixed(1).padEnd(colWidths[5]),
+        item.stats.strength.toFixed().padEnd(colWidths[1]),
+        item.stats.agility.toFixed().padEnd(colWidths[2]),
+        item.stats.intelligence.toFixed().padEnd(colWidths[3]),
+        item.stats.attackSpeed.toFixed().padEnd(colWidths[4]),
+        item.stats.attackDamage.toFixed().padEnd(colWidths[5]),
         item.attackRate.toFixed(2).padEnd(colWidths[6]),
         item.attacksPS.toFixed(2).padEnd(colWidths[7]),
-        item.dps.toFixed(1).padEnd(colWidths[8])
+        item.dps.toFixed().padEnd(colWidths[8])
       ].join(' | ');
       
       console.log(row);
@@ -75,7 +75,7 @@ function printDPSComparison(data) {
       level.toString().padEnd(colWidths[0]),
       ...data.map((group, groupIndex) => {
         const item = group.autoDps.find(d => d.level === level);
-        return item ? item.dps.toFixed(1).padEnd(colWidths[groupIndex + 1]) : 'N/A'.padEnd(colWidths[groupIndex + 1]);
+        return item ? item.dps.toFixed().padEnd(colWidths[groupIndex + 1]) : 'N/A'.padEnd(colWidths[groupIndex + 1]);
       })
     ].join(' | ');
     

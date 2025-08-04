@@ -93,7 +93,7 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
 
     const attackSpeedSum = (stats.attackSpeed + stats.agility)
     stats['attackSpeed'] = attackSpeedSum;
-    const attackRate = (attackSpeedSum) / (general.attackSpeed * general.bat);
+    const attackRate = (attackSpeedSum) / (general.attack_speed * general.bat);
     const attacksPS = 1/attackRate;
     const dps = attackRate * stats.attackDamage;
     // Calculate other derived stats
@@ -103,7 +103,7 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
     stats['armor'] = stats['armor'] + (stats['agility'] / 6); // Each 6 agility points give 1 armor
     stats['baseMR'] = stats['baseMR'] + ((stats['intelligence'] / 10) / 100);
     const magicResistance = 1 - (1 - stats['baseMR']) * (1 - stats['hoodMR']) * (1 - stats['otherMR']);
-    const dmg_reduction = (0.06 * stats['armor']) / (1 + 0.06 * stats['armor']);
+    const dmg_reduction = calculateDamageReduction(stats['armor']);
     const ehp = Math.round((1+dmg_reduction) * stats['health']);
     const mhp = Math.round((1+magicResistance) * stats['health']);
     
@@ -118,6 +118,10 @@ function calculateHeroStats(heroState, level, misc_buffs = []) {
         magicResistance,
         mhp
     };
+}
+
+function calculateDamageReduction(armor) {
+    return (0.06 * armor) / (1 + 0.06 * armor);
 }
 
 function calculateStatsByLevel(input, levelStart, levelEnd) {
@@ -176,5 +180,6 @@ async function main() {
 
 export {
     calculateHeroStats,
-    calculateStatsByLevel
+    calculateStatsByLevel,
+    calculateDamageReduction
 }
