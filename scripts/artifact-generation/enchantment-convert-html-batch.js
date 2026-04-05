@@ -1,4 +1,4 @@
-import { ClaudeMessageBatchClient } from '../ClaudeBatchClient.js';
+import { createParserClient } from '../ParserClient.js';
 import fs from 'fs';
 
 const itemsListPath = './scripts/outputs/neutral-item-gridLinks.json';
@@ -12,7 +12,7 @@ async function main() {
     console.log('🤖 Claude API Starter Examples\n');
     
     try {
-        const claude = new ClaudeMessageBatchClient(API_KEY, './claude-templates/parse-enchantment-page.txt');
+        const parser = createParserClient('./claude-templates/parse-enchantment-page.txt');
 
         console.log('Total items ', DOTA2_ITEMS.length);
 
@@ -28,9 +28,27 @@ async function main() {
             }
         })
 
-        const response = await claude.batchAnalyzeFile(batchConfig);
+        const response = await parser.batchAnalyzeFile(batchConfig);
         
         console.log(response);
+
+        // Save results for Ollama backend
+        if (process.env.PARSER_BACKEND === 'ollama' && response.success && response.content) {
+            const conversionDir = './scripts/outputs/enchantment/conversion';
+            if (!fs.existsSync(conversionDir)) {
+                fs.mkdirSync(conversionDir, { recursive: true });
+            }
+
+            for (const result of response.content) {
+                const outputPath = `${conversionDir}/${result.custom_id}.json`;
+                try {
+                    fs.writeFileSync(outputPath, result.output);
+                    console.log(`✅ Saved ${result.custom_id} to ${outputPath}`);
+                } catch (saveError) {
+                    console.error(`❌ Failed to save ${result.custom_id}:`, saveError.message);
+                }
+            }
+        }
     } catch (error) {
         console.error('❌ Error running examples:', error.message);
         console.error(error);

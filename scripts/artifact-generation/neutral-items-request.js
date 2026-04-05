@@ -50,22 +50,22 @@ async function main() {
             const html = await itemResponse.text();
             console.log(`Downloaded ${html.length} characters - ${itemName}`);
             if (true) {
-                const dir = './scripts/outputs/neutrals/raw';
+                const dir = './scripts/outputs/neutral/raw';
                 if (!fs.existsSync(dir)) {
                     fs.mkdirSync(dir, { recursive: true });
                 }
-                fs.writeFileSync(`./scripts/outputs/neutrals/raw/${itemName}.html`, html, 'utf8');
+                fs.writeFileSync(`./scripts/outputs/neutral/raw/${itemName}.html`, html, 'utf8');
             }
 
             // 2. Clean the HTML
             const cleanItemHtml = optimizeNeutralSingleHtmlForParsing(html);
 
             // 3. Save to file
-            const cleanDir = './scripts/outputs/neutrals/clean';
+            const cleanDir = './scripts/outputs/neutral/clean';
             if (!fs.existsSync(cleanDir)) {
                 fs.mkdirSync(cleanDir, { recursive: true });
             }
-            const outputPath = `./scripts/outputs/neutrals/clean/${itemName}.html`;
+            const outputPath = `./scripts/outputs/neutral/clean/${itemName}.html`;
             fs.writeFileSync(outputPath, cleanItemHtml, 'utf8');
         }
 
@@ -82,22 +82,22 @@ async function main() {
             const html = await itemResponse.text();
             console.log(`Downloaded ${html.length} characters - ${itemName}`);
             if (true) {
-                const dir = './scripts/outputs/enchantments/raw';
+                const dir = './scripts/outputs/enchantment/raw';
                 if (!fs.existsSync(dir)) {
                     fs.mkdirSync(dir, { recursive: true });
                 }
-                fs.writeFileSync(`./scripts/outputs/enchantments/raw/${itemName}.html`, html, 'utf8');
+                fs.writeFileSync(`./scripts/outputs/enchantment/raw/${itemName}.html`, html, 'utf8');
             }
 
             // 2. Clean the HTML
             const cleanItemHtml = optimizeNeutralSingleHtmlForParsing(html);
 
             // 3. Save to file
-            const cleanDir = './scripts/outputs/enchantments/clean';
+            const cleanDir = './scripts/outputs/enchantment/clean';
             if (!fs.existsSync(cleanDir)) {
                 fs.mkdirSync(cleanDir, { recursive: true });
             }
-            const outputPath = `./scripts/outputs/enchantments/clean/${itemName}.html`;
+            const outputPath = `./scripts/outputs/enchantment/clean/${itemName}.html`;
             fs.writeFileSync(outputPath, cleanItemHtml, 'utf8');
         }
 

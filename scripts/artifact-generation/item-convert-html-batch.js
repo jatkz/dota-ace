@@ -1,4 +1,4 @@
-import { ClaudeMessageBatchClient } from '../ClaudeBatchClient.js';
+import { createParserClient } from '../ParserClient.js';
 import fs from 'fs';
 
 const itemsListPath = './scripts/outputs/itemGridLinks.json';
@@ -12,11 +12,11 @@ async function main() {
     console.log('🤖 Claude API Starter Examples\n');
     
     try {
-        const claude = new ClaudeMessageBatchClient(API_KEY, './claude-templates/parse-item-page.txt');
+        const parser = createParserClient('./claude-templates/parse-item-page.txt');
 
         console.log('Total items ', DOTA2_ITEMS.length);
 
-        // const items = DOTA2_ITEMS.slice(70, 71);
+        const items = DOTA2_ITEMS.slice(70, 71);
         // const items = DOTA2_ITEMS.filter(x => x.includes('Kaya_and_Sange'));
         console.log('items to handle....', items);
         const batchConfig = items.map(x => {
@@ -29,9 +29,28 @@ async function main() {
             }
         })
 
-        const response = await claude.batchAnalyzeFile(batchConfig);
+        const response = await parser.batchAnalyzeFile(batchConfig);
         
         console.log(response);
+
+        // Save results for Ollama backend
+        if (process.env.PARSER_BACKEND === 'ollama' && response.success && response.content) {
+            const conversionDir = './scripts/outputs/item/conversion';
+            if (!fs.existsSync(conversionDir)) {
+                fs.mkdirSync(conversionDir, { recursive: true });
+            }
+
+            for (const result of response.content) {
+                const outputPath = `${conversionDir}/${result.custom_id}.json`;
+                try {
+                    // The Ollama response should already be clean JSON
+                    fs.writeFileSync(outputPath, result.output);
+                    console.log(`✅ Saved ${result.custom_id} to ${outputPath}`);
+                } catch (saveError) {
+                    console.error(`❌ Failed to save ${result.custom_id}:`, saveError.message);
+                }
+            }
+        }
     } catch (error) {
         console.error('❌ Error running examples:', error.message);
         console.error(error);
