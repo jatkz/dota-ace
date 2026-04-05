@@ -1,78 +1,12 @@
 {
-  "name": "Heaven's Halberd",
-  "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
-  "category": "Armaments",
-  "cost": 2600,
-  "sellValue": 1300,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Vanguard", "Crown", "Recipe"],
-    "totalCost": 2600
+  "item_name": "Heaven's Halberd",
+  "image_url": "/images/thumb/4/46/Heavens_halberd.png/250px-Heavens_halberd.png",
+  "category": "Items",
+  "stats": {
+    "health_regen": 1.8,
+    "armor": 3,
+    "evasion": 20
   },
-  "abilities": [
-    {
-      "name": "Disarm",
-      "type": "active",
-      "description": "Disarms the targeted enemy unit, preventing them from attacking.",
-      "castAnimation": "0 + 0",
-      "castRange": 650,
-      "manaCost": 25,
-      "cooldown": 18,
-      "effects": {
-        "duration_melee": 3,
-        "duration_ranged": 4
-      },
-      "notes": [
-        "The effect lasts longer on ranged targets",
-        "Does not pierce Debuff Immunity sources",
-        "This ability is nullified by Spell Block sources",
-        "This ability is reflected by Spell Reflection sources",
-        "Dispellable by any Dispel sources"
-      ]
-    },
-    {
-      "name": "Damage Block",
-      "type": "passive",
-      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "proc_chance": "60%",
-        "blocked_damage_melee": 60,
-        "blocked_damage_ranged": 30
-      },
-      "notes": [
-        "Ranged wielders block less damage with the same proc chance",
-        "Uses pseudo-random distribution",
-        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
-        "Multiple sources of the same value stack multiplicatively",
-        "Does not work against damage from wards sources",
-        "Does not reduce physical damage from abilities, except for specific abilities",
-        "This ability can be bestowed by Illusions"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "strength": 5,
-    "agility": 5,
-    "intelligence": 5,
-    "health": 275,
-    "health_regeneration": 6
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "The item's attributes grant 110 health and 0.5 health regeneration",
-    "60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance",
-    "5 attack speed and 0.83 main armor",
-    "5 main attack damage to all Strength/Agility/Intelligence heroes",
-    "6.75 main attack damage to universal heroes",
-    "The proc chances of all sources of damage block work independently from each other",
-    "When multiple sources of damage block proc on the same attack, only the one with the highest blocked damage value takes effect"
-  ],
-  "states": null
+  "description": "Grants the user bonus Health regeneration, Armor, and Evasion.",
+  "shop_location": "Base Shop"
 }

@@ -1,44 +1,14 @@
 {
-  "name": "Wraith Band",
-  "description": "A circlet with faint whispers echoing about it.",
-  "category": "Accessories",
-  "cost": 505,
-  "sellValue": 252.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Circlet", "Slippers of Agility", "Recipe"],
-    "totalCost": 505
+  "title": "Wraith Band",
+  "description": "The Wraith Band is an item in Dota 2 that provides bonus attributes and a unique ability.",
+  "attributes": {
+    "bonus_strength": "+3",
+    "bonus_agility": "+3",
+    "bonus_intelligence": "+1",
+    "armor": "+2"
   },
-  "abilities": [],
-  "stats": {
-    "health": 44,
-    "healthRegeneration": 0.2,
-    "mana": 24,
-    "manaRegeneration": 0.1,
-    "magicResistance": 0.2,
-    "attackSpeed": 5,
-    "mainArmor": 0.83,
-    "mainAttackDamageStr": 2,
-    "mainAttackDamageAgi": 5,
-    "mainAttackDamageInt": 2,
-    "mainAttackDamageUniversal": 4.05
-  },
-  "bonus": {
-    "strength": 2,
-    "agility": 5,
-    "intelligence": 2,
-    "armor": 1.75,
-    "attackSpeed": 5
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "44 health and 0.2 health regeneration.",
-    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
-    "5 attack speed and 0.83 main armor.",
-    "2, 5 and 2 main attack damage to all Strength/Agility/Intelligence heroes respectively.",
-    "4.05 main attack damage to universal heroes."
-  ],
-  "states": []
+  "unique_ability": {
+    "name": "Frost Aura",
+    "description": "Reduces the movement speed of nearby enemies by 5%. This effect stacks with itself."
+  }
 }

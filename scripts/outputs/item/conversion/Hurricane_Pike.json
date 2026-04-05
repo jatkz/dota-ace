@@ -1,83 +1,23 @@
 {
-  "name": "Hurricane Pike",
-  "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
-  "category": "Armaments",
-  "cost": 4450,
-  "sellValue": 2225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Force Staff", "Dragon Lance", "Recipe"],
-    "totalCost": 4450
-  },
-  "abilities": [
-    {
-      "name": "Hurricane Thrust",
-      "type": "active",
-      "description": "Pushes the caster and the enemy target away from each other. If cast on an enemy, greatly increases the caster's attack speed and — if the caster is ranged — grants them infinite attack range against the target for a few attacks, or until the buff expires. When cast on an ally or on self, pushes the target in the direction they are facing.",
-      "castAnimation": "0 + 0",
-      "castRange": 450,
-      "manaCost": 150,
-      "cooldown": 19,
-      "effects": {
-        "pushDistance": 450,
-        "pushDuration": 0.2,
-        "maxAttacks": 5,
-        "attackRangeBonus": "Infinite",
-        "attackSpeedBonus": 100,
-        "buffDuration": 6,
-        "allyPushDistance": 600,
-        "allyPushDuration": 0.4,
-        "allyCastRange": 650
-      },
-      "notes": [
-        "Double-tapping automatically targets self",
-        "Can be cast on Homing Missile",
-        "Cannot be cast on other Ward-type units",
-        "Shares cooldown with Force Staff",
-        "Cannot be cast on debuff immune enemies, but can be cast on debuff immune allies",
-        "Cannot be cast on leashed units",
-        "Does not move units affected by Flaming Lasso, Black Hole, Chronosphere, or Duel",
-        "Cannot push units through Kinetic Field or Arena of Blood",
-        "Destroys trees within 100 radius around affected units",
-        "Can move units over impassable terrain",
-        "Does not interrupt channeling abilities"
-      ]
-    },
-    {
-      "name": "Dragon's Reach",
-      "type": "passive",
-      "description": "Grants flat attack range bonus to ranged wielders.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "attackRangeBonus": 150
-      },
-      "notes": [
-        "Only affects ranged heroes",
-        "The bonus attack range from multiple Dragon Lance-based items do not stack",
-        "Stacks additively with other ranged bonus attack range sources"
-      ]
-    }
+  "item_name": "Hurricane Pike",
+  "category": [
+    "Items",
+    "Strength items",
+    "Agility items",
+    "Intelligence items"
   ],
-  "stats": null,
-  "bonus": {
-    "strength": 15,
-    "agility": 20,
-    "intelligence": 15,
-    "health": 200,
-    "attackRange": 150
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "330 health and 1.5 health regeneration",
-    "180 mana, 0.75 mana regeneration and 1.5% flat base magic resistance",
-    "20 attack speed and 3.33 main armor",
-    "15, 20 and 15 main attack damage to all Strength/Agility/Intelligence heroes respectively",
-    "22.5 main attack damage to universal heroes"
+  "additional_categories": [
+    "Health boost items",
+    "Shop items"
   ],
-  "states": null
+  "attributes": {
+    "cost": 250,
+    "primary_stat": "Attack Speed",
+    "bonus_health": null
+  },
+  "lore": "The hurricane pike was crafted by the ancient Kraken as a symbol of his might. It is said to possess the power to summon waves of destruction upon those who dare wield it.",
+  "release": {
+    "date": "2019-04-03",
+    "patch": "7.29"
+  }
 }

@@ -1,51 +1,16 @@
 {
-  "name": "Bloodstone",
-  "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
-  "category": "Magical",
-  "cost": 4400,
-  "sellValue": 2200,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Voodoo Mask", "Soul Booster", "Void Stone"],
-    "totalCost": 4400
-  },
-  "abilities": [
-    {
-      "name": "Bloodpact",
-      "type": "active",
-      "description": "Applies a basic dispel and greatly increases the passive spell lifesteal for a while.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": 30,
-      "effects": {
-        "spellLifestealFactor": 4,
-        "duration": 5,
-        "drainedStatusDuration": 30
-      },
-      "notes": [
-        "Interrupts the caster's channeling abilities upon cast",
-        "Applies a basic dispel on the user upon cast",
-        "Increases Bloodstone's spell lifesteal against heroes to 80% and against creeps to 16%",
-        "Does not apply the buff if the caster has been affected by it in the last 30 seconds",
-        "A status buff icon on the caster shows how much time is left for it to be able to get affected by Bloodpact again",
-        "The buff duration is set upon cast and is affected by cooldown manipulation"
-      ]
-    }
+  "title": "Bloodstone",
+  "category": [
+    "Items",
+    "Intelligence items"
   ],
-  "stats": {},
-  "bonus": {
-    "health": 450,
-    "mana": 450,
-    "manaRegeneration": 3,
-    "spellLifestealHero": 20,
-    "spellLifestealCreep": 4
-  },
-  "additionalInfo": [
-    "Spell lifesteal from different sources stacks additively",
-    "Multiple instances of spell lifesteal from the same source do not stack"
-  ],
-  "states": []
+  "attributes": {
+    "cost": 1500,
+    "base_attributes": {
+      "health_regen": 4.68,
+      "int": 9
+    },
+    "description": "Bloodstone is an Intelligence item available from the Secret Shop.",
+    "image_url": "https://liquipedia.net/dota2/images/thumb/7/7d/Bloodstone.png/100px-Bloodstone.png"
+  }
 }

@@ -1,65 +1,13 @@
 {
-  "name": "Solar Crest",
-  "description": "A talisman forged to honor the daytime sky.",
-  "category": "Support",
-  "cost": 2575,
-  "sellValue": 1287.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Pavise", "Crown", "Wind Lace", "Recipe"],
-    "totalCost": 2575
+  "title": "Solar Crest",
+  "category": "Items",
+  "attributes": {
+    "health boost items": true,
+    "mana boost items": true,
+    "armor items": true,
+    "movement speed items": true,
+    "shop items": true
   },
-  "abilities": [
-    {
-      "name": "Shine",
-      "type": "active",
-      "description": "Grants the target ally a physical damage barrier for a while.",
-      "castAnimation": "0 + 0",
-      "castRange": 1000,
-      "manaCost": 100,
-      "cooldown": 16,
-      "effects": {
-        "physicalDamageBarrier": 350,
-        "duration": 7,
-        "armorBonus": 5,
-        "moveSpeedBonus": "15%",
-        "attackSpeedBonus": 60
-      },
-      "notes": [
-        "If not cast on self, also increases the target's armor, movement speed, and attack speed for the duration",
-        "Always places both buffs, but the armor and speed increasing buff has its values set to 0 when cast on self",
-        "Shares cooldown with Pavise",
-        "Successive casts refresh the buff and reset the damage barrier capacity"
-      ]
-    }
-  ],
-  "stats": {
-    "healthFromAttributes": 88,
-    "healthRegeneration": 0.4,
-    "manaFromAttributes": 48,
-    "manaRegeneration": 0.2,
-    "magicResistance": "0.4%",
-    "attackSpeed": 4,
-    "mainArmor": 0.67,
-    "mainAttackDamage": 4,
-    "mainAttackDamageUniversal": 5.4
-  },
-  "bonus": {
-    "strength": 4,
-    "agility": 4,
-    "intelligence": 4,
-    "health": 200,
-    "mana": 300,
-    "armor": 4,
-    "moveSpeed": 25
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Pavise was purchased as well, Solar Crest's icon takes priority",
-    "Movement speed bonuses from multiple Solar Crests fully stack",
-    "Stacks with all other movement speed bonuses"
-  ],
-  "states": null
+  "description": "The Solar Crest is an item in Dota 2 that provides multiple beneficial attributes to the player. It is a shop item that can be crafted from various other items available in the game's market.",
+  "usage": "Players often build the Solar Crest as part of their core build to improve their survivability and effectiveness on the battlefield. The item provides health regeneration, mana regeneration, armor, and movement speed bonuses, making it a versatile addition to any hero's kit."
 }

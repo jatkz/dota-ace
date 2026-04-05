@@ -1,75 +1,19 @@
 {
-  "name": "Spirit Vessel",
-  "description": "Forged by a god to entrap the soul of another.",
-  "category": "Support",
-  "cost": 2725,
-  "sellValue": 1362.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Urn of Shadows", "Diadem", "Recipe"],
-    "totalCost": 2725
-  },
-  "abilities": [
-    {
-      "name": "Soul Release",
-      "type": "active",
-      "description": "When cast on an ally, consumes a charge to grant the target allied hero bonus health regeneration for a while. When cast on an enemy, consumes a charge to deal damage over time to the target, based on their current health, as well as reduce the effectiveness of healing and health restoration the target receives.",
-      "castAnimation": "0 + 0",
-      "castRange": 750,
-      "manaCost": 0,
-      "cooldown": 10,
-      "effects": {
-        "healthRegenBonus": 40,
-        "duration": 8,
-        "currentHealthDamagePerSecond": "4%",
-        "healReduction": "70%",
-        "healthRestoreReduction": "70%",
-        "radius": 1400,
-        "initialChargeGainPerEnemyDeath": 2,
-        "followingChargeGainPerEnemyDeath": 1,
-        "initialChargeGainPerOwnDeath": 1
-      },
-      "notes": [
-        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
-        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
-        "Has no recharge time. Cooldown resetting effects do not restore charges",
-        "Gains charges whenever an enemy hero dies within range. Gains more charges when at 0 charges",
-        "Also gains charges when the wielder dies while at 0 charges",
-        "All current charges on Urn of Shadows are carried over when upgraded to a Spirit Vessel",
-        "Double-tapping automatically targets self",
-        "Does not interrupt the wielder's channeling abilities",
-        "The caster does not require to face the target in order to cast it on them",
-        "Can only be cast on heroes, including illusions and creep-heroes",
-        "Gains charge for each enemy hero that dies within the radius",
-        "If the item is at 0 charges, it gains charges at once, otherwise, it gains charge",
-        "Does not gain charges from Illusions, Clones, or Creep-Heroes",
-        "Does not gain a charge if the enemy hero has Reincarnation",
-        "Has to be within the main inventory to gain charges",
-        "Successive casts on the same target do not stack but refresh the duration instead",
-        "Spirit Vessel's modifiers override the modifiers of Urn of Shadows",
-        "Can regenerate up to 320 health on target allies"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "strength": 10,
-    "agility": 10,
-    "intelligence": 10,
-    "manaRegeneration": 1.75,
-    "armor": 2
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If an Urn of Shadows was purchased as well, Spirit Vessel's icon takes priority",
-    "The item's attributes grant the following additional stats:",
-    "220 health and 1 health regeneration",
-    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance",
-    "10 attack speed and 1.67 main armor",
-    "10 main attack damage to all Strength/Agility/Intelligence heroes",
-    "13.5 main attack damage to universal heroes"
-  ],
-  "states": null
+  "page": {
+    "title": "Spirit_Vessel",
+    "url": "https://liquipedia.net/dota2/Spirit_Vessel",
+    "categories": [
+      "Pages with broken file links",
+      "Items",
+      "Strength items",
+      "Agility items",
+      "Intelligence items",
+      "Mana regeneration items",
+      "Armor items",
+      "Shop items"
+    ],
+    "hidden_categories": [
+      "Pages with hard coded colors"
+    ]
+  }
 }

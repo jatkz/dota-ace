@@ -1,28 +1,9 @@
 {
-  "name": "Belt of Strength",
-  "description": "A valued accessory for improving vitality.",
-  "category": "Attributes",
-  "cost": 450,
-  "sellValue": 225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {
-    "health": 132,
-    "healthRegeneration": 0.6,
-    "mainAttackDamageStrengthHeroes": 6,
-    "mainAttackDamageUniversalHeroes": 2.7
-  },
-  "bonus": {
-    "strength": 6
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "132 health and 0.6 health regeneration",
-    "6 main attack damage to Strength heroes",
-    "2.7 main attack damage to Universal heroes"
-  ],
-  "states": []
+  "item": {
+    "name": "Belt of Strength",
+    "category": "Strength items",
+    "description": "Grants +5 Strength.",
+    "shop": true,
+    "rarity": "Common"
+  }
 }

@@ -1,41 +1,20 @@
 {
-  "name": "Octarine Core",
-  "description": "At the core of spellcraft are spectrums only the very gifted can sense.",
-  "category": "Magical",
-  "cost": 4800,
-  "sellValue": 2400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Tiara of Selemene", "Soul Booster"],
-    "totalCost": 4800
-  },
-  "abilities": [
-    {
-      "name": "Cooldown Reduction",
-      "type": "passive",
-      "description": "Reduces the wielder's cooldowns for all abilities and items.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "cooldownReduction": "25%"
-      },
-      "notes": [
-        "Stacks multiplicatively with other sources of percentage-based cooldown reduction sources, and is calculated after all flat cooldown reduction values."
-      ]
-    }
-  ],
-  "stats": {
-    "disassemble": true
-  },
-  "bonus": {
-    "health": 500,
-    "mana": 500,
-    "manaRegeneration": 6
-  },
-  "additionalInfo": [],
-  "states": []
+  "Item": {
+    "Name": "Octarine Core",
+    "Type": "Shop items",
+    "Cost": "1800",
+    "Recipe": [
+      "Philosopher's Stone",
+      "Staff of Wonders"
+    ],
+    "BuildsInto": [
+      "Aether Lens"
+    ],
+    "Properties": {
+      "HealthRegen": "+3",
+      "ManaRegen": "+1.5",
+      "BonusAttackSpeed": "+20%"
+    },
+    "Description": "The Octarine Core is a magical item that enhances the caster's ability to regenerate health and mana, while also boosting their attack speed."
+  }
 }

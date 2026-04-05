@@ -1,77 +1,21 @@
 {
-  "name": "Crimson Guard",
-  "description": "A cuirass originally built to protect against the dreaded Year Beast.",
-  "category": "Armor",
-  "cost": 3725,
-  "sellValue": 1862.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": 1,
-  "recipe": {
-    "components": ["Vanguard", "Helm of Iron Will", "Recipe"],
-    "totalCost": 3725
-  },
-  "abilities": [
-    {
-      "name": "Guard",
-      "type": "active",
-      "description": "Grants nearby allied heroes and buildings a guaranteed chance to block a fixed portion of physical attack damage, plus a portion based on the caster's max health.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": 75,
-      "cooldown": 40,
-      "effects": {
-        "radius": 1200,
-        "procChance": "100%",
-        "baseBlockedDamage": 75,
-        "maxHealthAsBlockedDamage": "2.2%",
-        "duration": 7,
-        "stackLimitDuration": 39
-      },
-      "notes": [
-        "Interrupts the caster's channeling abilities upon cast",
-        "Affects allied heroes, including illusions and buildings, invulnerable and hidden units",
-        "Does not affect creep-heroes",
-        "Does not affect units that have been affected by Guard in the last 39 seconds",
-        "Units may only be affected by Guard once in a while",
-        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
-        "Does not work against damage from wards sources",
-        "Does not reduce physical damage from abilities, except for specific abilities"
-      ]
+  "page_title": "Crimson Guard",
+  "description": "The Crimson Guard is an item in the Dota 2 game that provides health regeneration and armor.",
+  "attributes": {
+    "health_regeneration": {
+      "value": 3,
+      "unit": "per second"
     },
-    {
-      "name": "Damage Block",
-      "type": "passive",
-      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "procChance": "60%",
-        "blockedDamage": 75,
-        "rangedBlockedDamage": 50
-      },
-      "notes": [
-        "Uses pseudo-random distribution",
-        "When multiple different sources proc on the same attack, the one with a higher value takes priority",
-        "Multiple sources of the same value stack multiplicatively",
-        "Does not work against damage from wards sources",
-        "Does not reduce physical damage from abilities, except for specific abilities",
-        "Ranged wielders block less damage with the same proc chance"
-      ]
+    "armor": {
+      "value": 10,
+      "type": "bonus"
     }
-  ],
-  "stats": {},
-  "bonus": {
-    "health": 250,
-    "healthRegeneration": 12,
-    "armor": 8
   },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "The proc chances of all sources of Damage Block work independently from each other",
-    "When multiple sources of Damage Block proc on the same attack, only the one with the highest blocked damage value takes effect"
-  ],
-  "states": []
+  "categories": [
+    "Items",
+    "Health boost items",
+    "Health regeneration items",
+    "Armor items",
+    "Shop items"
+  ]
 }

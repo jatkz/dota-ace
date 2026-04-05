@@ -1,26 +1,14 @@
 {
-  "name": "Gauntlets of Strength",
-  "description": "Studded leather gloves that add brute strength.",
-  "category": "Attributes",
-  "cost": 140,
-  "sellValue": 70,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Bracer", "Soul Ring"],
-    "totalCost": null
+  "title": "Gauntlets of Strength",
+  "description": "Gauntlets of Strength is an item in Dota 2 that increases a hero's strength attribute.",
+  "attributes": {
+    "strength_bonus": "+5 Strength"
   },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "strength": 3
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "66 health and 0.3 health regeneration",
-    "3 main attack damage to Strength heroes",
-    "1.35 main attack damage to Universal heroes"
-  ],
-  "states": []
+  "crafting": {
+    "recipe": "Reagent Stone + 1x Ring of Protection + 600 Gold",
+    "ingredients": [
+      {"item": "Ring of Protection"},
+      {"resource": "600 Gold"}
+    ]
+  }
 }

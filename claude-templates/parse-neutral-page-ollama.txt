@@ -1,0 +1,16 @@
+# Dota 2 Neutral Item Extraction (Simplified for Ollama)
+
+Extract the following information from the HTML and return as JSON:
+
+{
+  "name": "item name",
+  "description": "what it does",
+  "tier": "tier level",
+  "cost": 0,
+  "effects": {
+    "primary": "description"
+  },
+  "notes": ["any special interactions"]
+}
+
+IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

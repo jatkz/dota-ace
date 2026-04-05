@@ -1,0 +1,16 @@
+{
+  "title": "Shawl",
+  "image": {
+    "source": "https://liquipedia.net/dota2/file/Shawl.png",
+    "alt_text": "Shawl"
+  },
+  "description": "The Shawl is an item in Dota 2. It increases the wearer's magic resistance by 10.",
+  "category": [
+    "Items",
+    "Magic resistance items",
+    "Shop items"
+  ],
+  "attributes": {
+    "magic_resistance": "+10"
+  }
+}

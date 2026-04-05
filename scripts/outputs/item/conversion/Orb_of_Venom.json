@@ -1,48 +1,10 @@
 {
-  "name": "Orb of Venom",
-  "description": "Envenoms your veapon with the venom of a venomous viper.",
-  "category": "Equipment",
-  "cost": 350,
-  "sellValue": 175,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 350
-  },
-  "abilities": [
-    {
-      "name": "Poison Attack",
-      "type": "passive",
-      "description": "The next attack poisons the target, dealing damage over time.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": 9,
-      "effects": {
-        "damagePerSecond": 10,
-        "duration": 3,
-        "damageType": "Spell / Magical / HP Removal"
-      },
-      "notes": [
-        "The effects are calculated upon reaching the attack point, not upon landing an attack. For ranged heroes, this is upon projectile launch.",
-        "Reapplying the debuff refreshes the duration.",
-        "Does not affect Buildings, Ward-type units, or Ally units",
-        "The attacks first apply the debuff, then their own attack damage",
-        "Deals damage in 1-second intervals, starting 1 second after the debuff is applied, resulting in 3 instances",
-        "Can deal up to 30 damage (before reductions)",
-        "The damage from Poison Attack is direct HP Removal, so it does not trigger any on-damage effects"
-      ]
-    }
+  "page_title": "Orb of Venom",
+  "categories": [
+    "Items",
+    "Shop items"
   ],
-  "stats": {},
-  "bonus": {},
-  "additionalInfo": [
-    "Generally picked up by melee heroes who intend to harass their opponents in the lane",
-    "Does not pierce Debuff Immunity sources",
-    "This ability is not bestowed by Illusions",
-    "Creates debuff modifier_item_orb_of_venom_slow that is dispellable by any Dispel sources"
-  ],
-  "states": []
+  "hidden_categories": [
+    "Pages_with_hard_coded_colors"
+  ]
 }

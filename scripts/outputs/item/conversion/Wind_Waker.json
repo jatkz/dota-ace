@@ -1,62 +1,14 @@
 {
-  "name": "Wind Waker",
-  "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
-  "category": "Magical",
-  "cost": 6800,
-  "sellValue": 3400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Eul's Scepter of Divinity", "Mystic Staff", "Recipe"],
-    "totalCost": 6800
+  "item_name": "Wind Waker",
+  "item_type": "Intelligence items",
+  "attributes": {
+    "intelligence_gain": 15,
+    "bonus_mana_regen": 0.6,
+    "bonus_movement_speed": 30
   },
-  "abilities": [
-    {
-      "name": "Cyclone",
-      "type": "active",
-      "description": "Sweeps the target up into a cyclone, applying a basic dispel, turning them invulnerable for a short while.",
-      "castAnimation": "0 + 0",
-      "castRange": 550,
-      "manaCost": 175,
-      "cooldown": 16,
-      "effects": {
-        "pathingBlockerSize": 24,
-        "duration": 2.5,
-        "enemyDamage": 50,
-        "selfSetSpeed": 300
-      },
-      "notes": [
-        "Double-tapping automatically targets self",
-        "Applies a basic dispel and Cyclone effect on the target upon cast, turning it invulnerable and fully disabled",
-        "The Cyclone duration is not affected by status resistance",
-        "If cast on self, silences, mutes, and disarms the caster, instead of fully disabling them",
-        "Cyclone first applies the dispel, then the cyclone modifier",
-        "While cycloned, the affected unit is moved upwards and has no collision",
-        "A 24-radius pathing blocker is created at the base of the affected unit while active",
-        "The damage is applied at the end of the duration. If the cyclone gets dispelled, it still applies the damage as soon as the target lands",
-        "The damage is only applied to enemy targets",
-        "If the target is an enemy, they also take damage upon landing",
-        "If the target is the wielder, they can move freely at a fixed speed, but are still unable to attack or cast abilities or items. Gains free pathing and ignores turn rates",
-        "Cannot lift up Roshan, instead, it instantly applies the damage",
-        "Shares cooldown with Eul's Scepter of Divinity"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "intelligence": 35,
-    "manaRegeneration": 3,
-    "moveSpeed": 30
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Eul's Scepter of Divinity was purchased as well, Wind Waker's icon takes priority",
-    "The item's attributes grant 420 mana, 1.75 mana regeneration and 3.5% flat base magic resistance",
-    "35 main attack damage to Intelligence heroes",
-    "15.75 main attack damage to universal heroes",
-    "Stacks with all other movement speed bonuses",
-    "Purges first, then applies Cyclone modifier"
-  ],
-  "states": null
+  "shop_availability": {
+    "secret_shop": true,
+    "side_shop": false,
+    "main_shop": false
+  }
 }

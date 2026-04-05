@@ -1,43 +1,9 @@
 {
-  "name": "Voodoo Mask",
-  "description": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
-  "category": "Miscellaneous",
-  "cost": 700,
-  "sellValue": 350,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [
-    {
-      "name": "Magic Lifesteal",
-      "type": "passive",
-      "description": "Restores the wielder's health for a portion of damage dealt by magical and physical spell damage.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "spellLifesteal": "12%",
-        "creepSpellLifesteal": "2.4%"
-      },
-      "notes": [
-        "Only works with magical and physical spell damage",
-        "Does not work with attack damage or any pure damage",
-        "Does not work with damage with the HP Removal or the no-reflection flags",
-        "Stacks additively with other spell lifesteal sources",
-        "Treats creep-heroes as heroes",
-        "Does not work on Allied units, Illusions, Buildings, Ward-type units, or Couriers",
-        "The lifesteal value is reduced by a factor of 0.2 against creeps",
-        "All ability effects are visible on illusions for camouflaging purposes"
-      ]
-    }
-  ],
-  "stats": {},
-  "bonus": {},
-  "additionalInfo": [
-    "Multiple instances of spell lifesteal from the same source do not stack",
-    "Spell lifesteal from different sources stacks additively"
-  ],
-  "states": []
+  "title": "Voodoo Mask",
+  "category": "Items",
+  "description": "The Voodoo Mask is an item in Dota 2 that grants a permanent damage aura to nearby enemies.",
+  "attributes": {
+    "damage_aura": true,
+    "nearby_enemies": true
+  }
 }

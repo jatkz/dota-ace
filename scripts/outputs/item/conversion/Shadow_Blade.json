@@ -1,54 +1,17 @@
 {
-  "name": "Shadow Blade",
-  "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
-  "category": "Weapons",
-  "cost": 3350,
-  "sellValue": 1675,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Shadow Amulet", "Blitz Knuckles", "Claymore"],
-    "totalCost": 3350
+  "page_title": "Shadow Blade",
+  "attributes": {
+    "item_type": "Attack speed items",
+    "damage_items": null,
+    "shop_items": null
   },
-  "abilities": [
-    {
-      "name": "Shadow Walk",
-      "type": "active",
-      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": 75,
-      "cooldown": 25,
-      "effects": {
-        "fadeTime": 0.3,
-        "moveSpeedBonus": "20%",
-        "duration": 17,
-        "attackDamageBonus": 175
-      },
-      "notes": [
-        "Does not interrupt the wielder's channeling abilities upon cast",
-        "Recasting the ability refreshes the buff duration",
-        "The caster gains phased movement while invisible",
-        "Picking up, dropping, or selling items does not break the invisibility",
-        "During the fade time, casting abilities or items does not break the invisibility",
-        "After the fade time, upon reaching the cast point of abilities or items breaks invisibility",
-        "At any time, upon reaching the attack point of an attack breaks invisibility, regardless of whether the attack lands or not",
-        "For ranged this is upon projectile launch",
-        "Adds physical conditional attack damage to the next attack while invisible",
-        "The damage is directly added to the wielder's attack damage, but is not displayed in the HUD",
-        "Does not interact with Critical strike or Percentage-based bonus attack damage",
-        "Interacts with Lifesteal, Cleave and Splash, Damage block",
-        "Does not affect Buildings or Ward-type units",
-        "Shares cooldown with Silver Edge"
-      ]
-    }
+  "categories": [
+    "Items",
+    "Attack speed items",
+    "Damage items",
+    "Shop items"
   ],
-  "stats": {},
-  "bonus": {
-    "attackDamage": 25,
-    "attackSpeed": 35
-  },
-  "additionalInfo": [],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

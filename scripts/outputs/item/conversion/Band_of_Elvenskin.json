@@ -1,28 +1,15 @@
 {
-  "name": "Band of Elvenskin",
-  "description": "A tensile fabric often used for its light weight and ease of movement.",
-  "category": "Attributes",
-  "cost": 450,
-  "sellValue": 225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 450
-  },
-  "abilities": [],
-  "stats": {
-    "agility": 6
-  },
-  "bonus": {
-    "agility": 6
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "6 attack speed and 1 main armor",
-    "6 main attack damage to Agility heroes",
-    "2.7 main attack damage to Universal heroes"
-  ],
-  "states": []
+  "title": "Band of Elvenskin",
+  "category": "Items",
+  "subcategories": ["Agility items", "Shop items"],
+  "description": "The Band of Elvenskin is an item in the Dota 2 game that provides agility and movement speed bonuses.",
+  "attributes": {
+    "bonus_attributes": {
+      "agility": "+6 Agility",
+      "movement_speed": "+10 Movement Speed"
+    },
+    "cost": "1450 gold",
+    "builds_from": ["Boots of Travel"],
+    "builds_into": ["Elven Tunic"]
+  }
 }

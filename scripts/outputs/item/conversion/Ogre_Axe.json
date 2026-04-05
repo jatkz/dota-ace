@@ -1,31 +1,22 @@
 {
-  "name": "Ogre Axe",
-  "description": "You grow stronger just by holding it.",
-  "category": "Attributes",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 1000
-  },
-  "abilities": [],
-  "stats": {
-    "health": 220,
-    "healthRegeneration": 1,
-    "mainAttackDamageStrength": 10,
-    "mainAttackDamageUniversal": 4.5
-  },
-  "bonus": {
-    "strength": 10
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "220 health and 1 health regeneration",
-    "10 main attack damage to Strength heroes",
-    "4.5 main attack damage to Universal heroes"
+  "page_title": "Ogre_Axe",
+  "categories": [
+    "Items",
+    "Strength items",
+    "Shop items"
   ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ],
+  "item_details": {
+    "name": "Ogre Axe",
+    "type": "Strength item",
+    "cost": 1200,
+    "attributes": {
+      "bonus_damage": "+35 damage",
+      "bonus_strength": "+6 strength per second",
+      "mana_cost_reduction": "-8% mana cost"
+    },
+    "description": "Grants bonus Strength and Damage based on how long it has been wielded."
+  }
 }

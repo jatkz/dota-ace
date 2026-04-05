@@ -1,46 +1,9 @@
 {
-  "name": "Orb of Blight",
-  "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
-  "category": "Equipment",
-  "cost": 300,
-  "sellValue": 150,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Desolator", "Orb of Corrosion"],
-    "totalCost": null
-  },
-  "abilities": [
-    {
-      "name": "Lesser Corruption",
-      "type": "passive",
-      "description": "The wielder's attacks apply an armor reducing debuff on enemy units.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "armorReduction": 2,
-        "duration": 3
-      },
-      "notes": [
-        "The bonus armor reduction value does not stack.",
-        "Reapplying the debuff refreshes the duration.",
-        "Affects allied units, buildings, and ward-type units.",
-        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other.",
-        "Pierces Debuff Immunity sources.",
-        "This ability is not bestowed by Illusions."
-      ]
-    }
-  ],
-  "stats": {},
-  "bonus": {},
-  "additionalInfo": [
-    "Available in the Base Shop",
-    "Full price refunded within 10s",
-    "Creates debuff modifier_blight_stone_buff that is dispellable by any Dispel sources",
-    "Part of Orb of Blight-based Items Priority system with Greater Corruption, Corruption, and Corrosion abilities"
-  ],
-  "states": []
+  "item_name": "Orb of Blight",
+  "image_url": "//liquipedia.net/dota2/images/thumb/0/06/Item_Orb_of_Blight.svg/18px-Item_Orb_of_Blight.svg.png",
+  "type": "Support",
+  "category": "Items",
+  "sub_category": "Shop items",
+  "description": "Increases nearby allied heroes' damage by 25%.",
+  "affects": "Allies within a radius of 1000 units."
 }

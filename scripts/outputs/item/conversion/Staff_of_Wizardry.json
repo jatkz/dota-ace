@@ -1,25 +1,11 @@
 {
-  "name": "Staff of Wizardry",
-  "description": "A staff of magical powers passed down from the eldest mages.",
-  "category": "Attributes",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {
-    "intelligence": 10
-  },
-  "bonus": {
-    "intelligence": 10
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "120 mana, 0.5 mana regeneration and 1% flat base magic resistance.",
-    "10 main attack damage to Intelligence heroes.",
-    "4.5 main attack damage to universal heroes."
-  ],
-  "states": []
+  "title": "Staff of Wizardry",
+  "category": "Items",
+  "subcategories": ["Intelligence items", "Shop items"],
+  "properties": {
+    "base_stats": {
+      "intelligence": "+10"
+    },
+    "stackability": "Unstackable"
+  }
 }

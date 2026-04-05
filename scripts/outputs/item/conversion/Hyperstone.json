@@ -1,25 +1,3 @@
 {
-  "name": "Hyperstone",
-  "description": "A mystical, carved stone that boosts the fervor of the holder.",
-  "category": "Secret Shop",
-  "cost": 2000,
-  "sellValue": 1000,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 2000
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "attackSpeed": 60
-  },
-  "additionalInfo": [
-    "Available in the Secret Shop",
-    "Full price refunded within 10s",
-    "Used as component in Assault Cuirass, Moon Shard, Mjollnir, and Bloodthorn"
-  ],
-  "states": []
+  "error": "The provided HTML content does not represent a JSON structure. It appears to be an HTML page for Liquipedia Dota2 about the Hyperstone item."
 }

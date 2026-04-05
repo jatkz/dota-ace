@@ -1,67 +1,9 @@
 {
-  "name": "Satanic",
-  "description": "Immense power at the cost of your soul.",
-  "category": "Armaments",
-  "cost": 5050,
-  "sellValue": 2525,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Morbid Mask", "Claymore", "Reaver"],
-    "totalCost": 5050
-  },
-  "abilities": [
-    {
-      "name": "Lifesteal",
-      "type": "passive",
-      "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "lifesteal": "30%",
-        "creepLifestealFactor": "0.6"
-      },
-      "notes": [
-        "Only works with physical attack damage, does not work with magical or pure attack damage",
-        "Does not work with physical or any other spell damage",
-        "Does not work with instant attacks that do not trigger attack modifier",
-        "Stacks additively with other lifesteal sources",
-        "Treats illusions and creep-heroes as heroes",
-        "Does not work on allied units, buildings, ward-type units, or couriers",
-        "All ability effects are visible on illusions for camouflaging purposes"
-      ]
-    },
-    {
-      "name": "Unholy Rage",
-      "type": "active",
-      "description": "Applies a basic dispel on the caster and greatly increases the lifesteal value for a short duration.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": 0,
-      "cooldown": 30,
-      "effects": {
-        "lifesteal": "175%",
-        "duration": "6",
-        "creepLifestealFactor": "0.6"
-      },
-      "notes": [
-        "Interrupts the caster's channeling abilities upon cast",
-        "Applies a basic dispel on the user upon cast"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "strength": 25,
-    "attackDamage": 25
-  },
-  "additionalInfo": [
-    "The item's attributes grant 550 health and 2.5 health regeneration",
-    "25 main attack damage to Strength heroes",
-    "11.25 main attack damage to Universal heroes"
-  ],
-  "states": null
+  "title": "Satanic",
+  "description": "A strength item that increases attack damage by 10 for each stack of +5 Strength.",
+  "attributes": {
+    "type": "strength",
+    "stat_increase": "+35 Strength, +10 Attack Damage",
+    "cost": "2400 gold"
+  }
 }

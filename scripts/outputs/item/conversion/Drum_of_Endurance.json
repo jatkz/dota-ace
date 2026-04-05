@@ -1,78 +1,11 @@
 {
-  "name": "Drum of Endurance",
-  "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
-  "category": "Support",
-  "cost": 1625,
-  "sellValue": 812.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Robe of the Magi", "Belt of Strength", "Wind Lace", "Recipe"],
-    "totalCost": 1625
-  },
-  "abilities": [
-    {
-      "name": "Endurance",
-      "type": "active",
-      "description": "Grants movement and attack speed to all nearby allies for a short while on cast.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": 45,
-      "effects": {
-        "radius": 1200,
-        "moveSpeedBonus": "13%",
-        "attackSpeedBonus": 35,
-        "duration": 6
-      },
-      "notes": [
-        "Does not interrupt the caster's channeling abilities upon cast.",
-        "The buff of successive Endurance casts does not stack but refreshes the duration instead.",
-        "Only affects player-controlled units, including invulnerable units, excluding wards.",
-        "Does not share cooldowns with Drum of Endurance.",
-        "Does not place the buff on units that are already affected by Boots of Bearing, and vice versa.",
-        "Cannot be cast by Meepo clones."
-      ]
-    },
-    {
-      "name": "Swiftness Aura",
-      "type": "passive",
-      "description": "Increases the movement speed of nearby allies by a flat amount.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "radius": 1200,
-        "moveSpeedBonus": 15,
-        "auraLingerDuration": 0.5
-      },
-      "notes": [
-        "Multiple identical instances of Swiftness Aura do not stack, regardless of source.",
-        "Stacks with all other movement speed bonuses.",
-        "Does not affect invulnerable units."
-      ]
-    }
+  "title": "Drum of Endurance",
+  "categories": [
+    "Items",
+    "Strength items",
+    "Shop items"
   ],
-  "stats": {
-    "health": 154,
-    "healthRegeneration": 0.7,
-    "mana": 84,
-    "manaRegeneration": 0.35,
-    "magicResistance": "0.7%",
-    "mainAttackDamageStrengthIntelligence": 7,
-    "mainAttackDamageUniversal": 6.3
-  },
-  "bonus": {
-    "strength": 7,
-    "intelligence": 7
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally.",
-    "If a Boots of Bearing was purchased as well, Boots of Bearing's icon takes priority.",
-    "Drum of Endurance is a permanent item, using up all charges does not make it disappear.",
-    "The sell value of the item does not depend on the remaining charges."
-  ],
-  "states": null
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

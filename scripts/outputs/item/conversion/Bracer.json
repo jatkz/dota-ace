@@ -1,32 +1,24 @@
 {
-  "name": "Bracer",
-  "description": "The bracer is a common choice to toughen up defenses and increase longevity.",
-  "category": "Accessories",
-  "cost": 505,
-  "sellValue": 252.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Circlet", "Gauntlets of Strength", "Recipe"],
-    "totalCost": 505
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "strength": 5,
-    "agility": 2,
-    "intelligence": 2,
-    "health": 50,
-    "healthRegeneration": 0.75
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "110 health and 0.5 health regeneration.",
-    "24 mana, 0.1 mana regeneration and 0.2% flat base magic resistance.",
-    "2 attack speed and 0.33 main armor.",
-    "5, 2 and 2 main attack damage to all Strength / Agility / Intelligence heroes respectively.",
-    "4.05 main attack damage to universal heroes."
+  "title": "Bracer",
+  "item_type": "Strength item",
+  "category": [
+    "Items",
+    "Strength items"
   ],
-  "states": []
+  "description": "The Bracer is a basic item that provides +20 Strength, +5 Agility, and +5 Intelligence. It also grants +1% Health Regen and stacks with other health regeneration items.",
+  "stats": {
+    "strength": 20,
+    "agility": 5,
+    "intelligence": 5,
+    "health_regen": 1
+  },
+  "components": [
+    "Claymore",
+    "Talisman of Evasion"
+  ],
+  "cost": 600,
+  "builds_into": [
+    "Belt of Strength",
+    "Mithril Hammer"
+  ]
 }

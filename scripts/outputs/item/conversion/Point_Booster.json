@@ -1,19 +1,12 @@
 {
-  "name": "Point Booster",
-  "description": "A perfectly formed amethyst that nourishes body and mind when held.",
-  "category": "Secret Shop",
-  "cost": 1200,
-  "sellValue": 600,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "health": 175,
-    "mana": 175
-  },
-  "additionalInfo": [],
-  "states": []
+  "item": {
+    "name": "Point Booster",
+    "description": "Gives a small boost to health and mana regeneration.",
+    "cost": 40,
+    "attributes": {
+      "health_regen": 1,
+      "mana_regen": 1.5
+    },
+    "category": "Shop items"
+  }
 }

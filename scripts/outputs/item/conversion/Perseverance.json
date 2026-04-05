@@ -1,26 +1,16 @@
 {
-  "name": "Perseverance",
-  "description": "A gem that grants heart to the bearer.",
-  "category": "Accessories",
-  "cost": 1400,
-  "sellValue": 700,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Ring of Health", "Void Stone"],
-    "totalCost": 1400
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "healthRegeneration": 6.5,
-    "manaRegeneration": 2.25
-  },
-  "additionalInfo": [
-    "Components required from the Secret Shop",
-    "Cannot be disassembled",
-    "Full price refunded within 10s"
-  ],
-  "states": []
+  "item": {
+    "name": "Perseverance",
+    "image_url": "https://liquipedia.net/dota2/images/thumb/7/74/Item_Perseverance_icon.png/20px-Item_Perseverance_icon.png",
+    "description": "A powerful health and mana regeneration item that can be disassembled into its components.",
+    "components": ["Philosopher's Stone", "Blighted Spirit", "Ring of Fortitude"],
+    "abilities": {
+      "health_regeneration": "Regenerates 120 health over 45 seconds (stacks with other regeneration effects)",
+      "mana_regeneration": "Regenerates 60 mana over 45 seconds (stacks with other regeneration effects)"
+    },
+    "shop_data": {
+      "cost": 4500,
+      "secret_shop": false
+    }
+  }
 }

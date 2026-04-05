@@ -1,18 +1,3 @@
 {
-  "name": "Energy Booster",
-  "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
-  "category": "Secret Shop",
-  "cost": 800,
-  "sellValue": 400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "mana": 250
-  },
-  "additionalInfo": [],
-  "states": []
+  "error": "The provided HTML does not contain the requested information."
 }

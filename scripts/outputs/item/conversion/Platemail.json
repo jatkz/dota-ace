@@ -1,21 +1,6 @@
 {
-  "name": "Platemail",
-  "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
-  "category": "Secret Shop",
-  "cost": 1400,
-  "sellValue": 700,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 1400
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "armor": 10
-  },
-  "additionalInfo": [],
-  "states": []
+  "armor_value": 4,
+  "cost": 500,
+  "builds_from": ["Cloak"],
+  "components": ["Cloak"]
 }

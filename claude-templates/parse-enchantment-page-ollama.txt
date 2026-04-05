@@ -1,0 +1,15 @@
+# Dota 2 Enchantment Extraction (Simplified for Ollama)
+
+Extract the following information from the HTML and return as JSON:
+
+{
+  "name": "enchantment name",
+  "description": "what it does",
+  "tier": "tier level",
+  "effects": {
+    "primary_effect": "description"
+  },
+  "notes": ["any important notes"]
+}
+
+IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

@@ -1,38 +1,42 @@
 {
-  "name": "Null Talisman",
-  "description": "A small gemstone attached to several chains.",
-  "category": "Accessories",
-  "cost": 505,
-  "sellValue": 252.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Circlet", "Mantle of Intelligence", "Recipe"],
-    "totalCost": 505
+  "title": "Null Talisman",
+  "item_type": "basic item",
+  "cost": 300,
+  "sell_value": 150,
+  "category": "Items",
+  "attributes": {
+    "bonus_attributes": [
+      {
+        "attribute": "Strength",
+        "value": "+2"
+      },
+      {
+        "attribute": "Agility",
+        "value": "+2"
+      },
+      {
+        "attribute": "Intelligence",
+        "value": "+2"
+      }
+    ],
+    "other_attributes": [
+      {
+        "attribute": "Mana boost",
+        "value": "60"
+      },
+      {
+        "attribute": "Mana regeneration",
+        "value": "1.5"
+      }
+    ]
   },
-  "abilities": [],
-  "stats": {
-    "levels": 2,
-    "autoUpgrade": "based on in-game clock"
-  },
-  "bonus": {
-    "strength": 2,
-    "agility": 2,
-    "intelligence": 5,
-    "manaPercentage": 3,
-    "manaRegeneration": 1
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "44 health and 0.2 health regeneration",
-    "60 mana, 0.25 mana regeneration and 0.5% flat base magic resistance",
-    "2 attack speed and 0.33 main armor",
-    "2, 2 and 5 main attack damage to all Strength/Agility/Intelligence heroes respectively",
-    "4.05 main attack damage to universal heroes",
-    "Has 2 levels and automatically upgrades based on the in-game clock",
-    "Heroes who need an early game stat boost often benefit from Null Talisman, spell-casters can also benefit from the additional mana and mana regeneration",
-    "For intelligence heroes, a Bracer grants almost as much main attack damage as a Null Talisman"
+  "drop_sources": [
+    "Creeps",
+    "Neutral Creeps",
+    "Courier Drops"
   ],
-  "states": []
+  "notes": [
+    "Provides a significant mana boost and regeneration, making it useful for spells-heavy heroes.",
+    "Can be upgraded into various other items."
+  ]
 }

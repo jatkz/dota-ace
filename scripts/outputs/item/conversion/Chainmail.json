@@ -1,18 +1,7 @@
 {
-  "name": "Chainmail",
-  "description": "A medium weave of metal chains.",
-  "category": "Equipment",
-  "cost": 550,
-  "sellValue": 275,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "armor": 4
-  },
-  "additionalInfo": [],
-  "states": []
+  "item_name": "Chainmail",
+  "category": "Armor items, Shop items",
+  "description": "Grants +100 armor.",
+  "price": 575,
+  "image_url": "/dota2/images/thumb/b/b3/Item_chainmail.png/96px-Item_chainmail.png"
 }

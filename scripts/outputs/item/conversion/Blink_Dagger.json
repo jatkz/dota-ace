@@ -1,47 +1,15 @@
 {
-  "name": "Blink Dagger",
-  "description": "The fabled dagger used by the fastest assassin ever to walk the lands.",
-  "category": "Miscellaneous",
-  "cost": 2250,
-  "sellValue": 1125,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 2250
+  "item_name": "Blink Dagger",
+  "item_type": "Shop items",
+  "description": "A teleportation device that allows the user to blink to a nearby location on the map.",
+  "stats": {
+    "Cooldown Reduction": "-10%",
+    "Movement Speed Increase": "+25%"
   },
-  "abilities": [
-    {
-      "name": "Blink",
-      "type": "active",
-      "description": "Instantly teleports the wielder towards the targeted point.",
-      "castAnimation": "0 + 0",
-      "castRange": "Global",
-      "manaCost": 0,
-      "cooldown": 15,
-      "effects": {
-        "maxBlinkDistance": 1200,
-        "downtime": 3
-      },
-      "notes": [
-        "Blink utilizes the teleport mechanic",
-        "When targeting a point within 1200 distance, teleports directly onto the targeted point",
-        "When targeting a point beyond 1200 distance, teleports 1200 distance towards the targeted point instead",
-        "Incoming projectiles are disjointed upon teleporting",
-        "Taking more than 0 damage from any other player or Roshan (after reductions and not flagged as HP Removal) puts the item on a fixed cooldown",
-        "Cannot be reset with cooldown reset sources",
-        "Doubletap targets a point in front of the team's Fountain",
-        "Shares cooldown with Overwhelming Blink, Swift Blink, and Arcane Blink"
-      ]
-    }
+  "usage": [
+    "Teleporting to avoid attacks or chase down enemies",
+    "Escaping from dangerous situations",
+    "Quickly moving between lanes"
   ],
-  "stats": {},
-  "bonus": {},
-  "additionalInfo": [
-    "Cannot be cast while rooted or leashed",
-    "Full price refunded within 10s",
-    "Can be upgraded to Overwhelming Blink, Swift Blink, or Arcane Blink"
-  ],
-  "states": []
+  "category": "Items"
 }

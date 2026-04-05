@@ -1,23 +1,8 @@
 {
-  "name": "Gloves of Haste",
-  "description": "A pair of magical gloves that seems to render weapons weightless.",
-  "category": "Equipment",
-  "cost": 450,
-  "sellValue": 225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 450
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "attackSpeed": 20
-  },
-  "additionalInfo": [
-    "Heroes who intend to build a Hand of Midas will sometimes purchase Gloves of Haste in the early game."
-  ],
-  "states": []
+  "Item": {
+    "Name": "Gloves of Haste",
+    "Category": "Attack speed items",
+    "Shop_Items": "Yes",
+    "Description": "Increases attack speed by 25%."
+  }
 }

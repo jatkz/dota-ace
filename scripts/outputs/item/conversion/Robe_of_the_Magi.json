@@ -1,29 +1,25 @@
 {
-  "name": "Robe of the Magi",
-  "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
-  "category": "Attributes",
-  "cost": 450,
-  "sellValue": 225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {
-    "mana": 72,
-    "manaRegeneration": 0.3,
-    "magicResistance": 0.6,
-    "mainAttackDamageIntelligence": 6,
-    "mainAttackDamageUniversal": 2.7
+  "title": "Robe of the Magi",
+  "image": null,
+  "infobox": {
+    "item_name": "Robe of the Magi",
+    "category": "Item",
+    "type": "Intelligence item",
+    "cost": "1200 gold",
+    "recipe": [
+      "Cloak of Agility",
+      "Staff of Wizardry"
+    ],
+    "components": {
+      "Cloak of Agility": 850,
+      "Staff of Wizardry": 650
+    },
+    "total_cost": 1500,
+    "bonus_attributes": {
+      "agi": 20,
+      "int": 37,
+      "move_speed": -4
+    }
   },
-  "bonus": {
-    "intelligence": 6
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance",
-    "6 main attack damage to Intelligence heroes",
-    "2.7 main attack damage to Universal heroes"
-  ],
-  "states": []
+  "description": "Increases Agility and Intelligence."
 }

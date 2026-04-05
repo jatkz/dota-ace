@@ -1,79 +1,23 @@
 {
-  "name": "Holy Locket",
-  "description": "A prized relic long thought lost forever in a failed crusade.",
-  "category": "Support",
-  "cost": 2250,
-  "sellValue": 1125,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Diadem", "Magic Wand", "Recipe"],
-    "totalCost": 2250
-  },
-  "abilities": [
-    {
-      "name": "Energy Charge",
-      "type": "active",
-      "description": "Instantly heals and and replenishes the target allied hero's health and mana per accumulated charge.",
-      "castAnimation": "0 + 0",
-      "castRange": 500,
-      "manaCost": 0,
-      "cooldown": 13,
-      "effects": {
-        "maxCharges": 20,
-        "healPerCharge": 17,
-        "manaRestorePerCharge": 17,
-        "chargeReplenishTime": 8,
-        "radius": 1200,
-        "chargeGainPerAbilityCast": 1
-      },
-      "notes": [
-        "Has a recharge time of 8 seconds, that is fully affected by cooldown reductions",
-        "Cooldown resetting effects restore all charges immediately",
-        "Additionally, also gains a charge whenever a visible enemy casts an ability nearby",
-        "All current charges on Magic Wand are carried over when upgraded to a Holy Locket",
-        "Double-tapping automatically targets self",
-        "Does not interrupt the wielder's channeling abilities",
-        "The caster does not require to face the target in order to cast it on them",
-        "Can only be cast on heroes, including illusions and creep-heroes",
-        "Gains 1 charge for each ability cast by an enemy",
-        "Does not gain charges from active attack modifiers, toggle-able abilities, other sources, active abilities that are procced passively, abilities cast out of invisibility",
-        "Can heal and mana restore up to 340 with max charges"
-      ]
+  "item_name": "Holy Locket",
+  "attributes": {
+    "stats": {
+      "strength": "+4",
+      "agility": "+2",
+      "intelligence": "+3"
     },
-    {
-      "name": "Holy Blessing",
-      "type": "passive",
-      "description": "Grants the wielder outgoing heal amplification, boosting all healing they provide.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "outgoingHealAmplification": "15%"
-      },
-      "notes": [
-        "Grants outgoing heal amplification",
-        "Stacks diminishingly with other sources of heal amplification",
-        "Neither grants health regen amplification, lifesteal amplification, nor spell lifesteal amplification",
-        "All healing provided by the wielder is amplified, regardless of the target",
-        "Multiple instances of Holy Blessing do not stack"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "strength": 9,
-    "agility": 9,
-    "intelligence": 9
+    "bonus_attributes": [
+      {
+        "attribute": "Attack Speed",
+        "value": "+8%"
+      }
+    ],
+    "description": "Increases the wearer's Strength, Agility, and Intelligence. Also increases Attack Speed."
   },
-  "additionalInfo": [
-    "The item's attributes grant 198 health and 0.9 health regeneration",
-    "108 mana, 0.45 mana regeneration and 0.9% flat base magic resistance",
-    "9 attack speed and 1.5 main armor",
-    "9 main attack damage to all Strength/Agility/Intelligence heroes",
-    "12.15 main attack damage to universal heroes"
-  ],
-  "states": null
+  "categories": [
+    "Items",
+    "Strength items",
+    "Agility items",
+    "Intelligence items"
+  ]
 }

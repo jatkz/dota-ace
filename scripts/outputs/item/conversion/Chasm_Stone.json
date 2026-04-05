@@ -1,0 +1,19 @@
+{
+  "title": "Chasm Stone",
+  "attributes": {
+    "Cost": 500,
+    "Recipe": [
+      {
+        "name": "Blighted Spirit"
+      },
+      {
+        "name": "Overflowing Elixir"
+      }
+    ],
+    "Components": null
+  },
+  "description": "Chasm Stone is a rare item that deals an additional 240 magic damage to all enemies in a small area each second.",
+  "drop_locations": [
+    "Neutral Camps (Tier 3)"
+  ]
+}

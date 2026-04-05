@@ -1,67 +1,16 @@
 {
-  "name": "Power Treads",
-  "description": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
-  "category": "Accessories",
-  "cost": 1400,
-  "sellValue": 700,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Boots of Speed", "Gloves of Haste", "Belt of Strength"],
-    "totalCost": 1400
-  },
-  "abilities": [
+  "title": "Power_Treads",
+  "categories": [
     {
-      "name": "Switch Attribute",
-      "type": "active",
-      "description": "Switches between granting strength, agility, and intelligence.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": 0,
-      "effects": {
-        "selectedAttributeBonus": 10
-      },
-      "notes": [
-        "Interrupts the wielder's channeling abilities upon cast",
-        "When wielding multiple Power Treads, each of them can be toggled individually. The attribute bonuses fully stack",
-        "Illusions copy the current toggle state",
-        "Does not change current health percentages",
-        "Does not change current mana percentages",
-        "Meepo Clones cannot cast this ability. However, the Clones instantly update their switched attribute whenever the Prime switches the item's attributes"
-      ]
+      "category_name": "Pseudo items"
+    },
+    {
+      "category_name": "Shop items"
     }
   ],
-  "stats": {
-    "moveSpeedMelee": 55,
-    "moveSpeedRanged": 45,
-    "attackSpeed": 25
-  },
-  "bonus": {
-    "moveSpeedMelee": 55,
-    "moveSpeedRanged": 45,
-    "attackSpeed": 25
-  },
-  "additionalInfo": [
-    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority",
-    "Stacks with all other movement speed bonus",
-    "There are three ways to assemble Power Treads. Based on which item is chosen, the boot's initial Strength / Agility / Intelligence attribute status is different. The status can be switched with Switch Attribute freely after purchase",
-    "When listed in quickbuy, the item's assembly components are based on the hero's primary attribute. For universal heroes, it shows the strength version",
-    "Disassembling Power Treads returns the items which were originally used to build it. It is not based on the currently selected attribute"
-  ],
-  "states": [
+  "hidden_categories": [
     {
-      "icon": "Power Treads (Strength)",
-      "contains": "220 health + 1 health regen, 25 attack speed"
-    },
-    {
-      "icon": "Power Treads (Agility)", 
-      "contains": "1.67 armor, 35 attack speed"
-    },
-    {
-      "icon": "Power Treads (Intelligence)",
-      "contains": "120 mana + 0.5 mana regen + 1% magic resistance, 25 attack speed"
+      "category_name": "Pages with hard coded colors"
     }
   ]
 }

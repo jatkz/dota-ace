@@ -1,60 +1,26 @@
 {
   "name": "Tranquil Boots",
-  "description": "While they increase the longevity of the wearer, this boot is not particularly reliable.",
-  "category": "Support",
-  "cost": 900,
-  "sellValue": 450,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Boots of Speed", "Wind Lace", "Ring of Regen"],
-    "totalCost": 900
+  "description": "A set of boots that increase a hero's movement speed and health regeneration rate.",
+  "cost": 1050,
+  "attributes": {
+    "bonus_movement_speed": 25,
+    "bonus_health_regen": 3.75
   },
-  "abilities": [
-    {
-      "name": "Break",
-      "type": "passive",
-      "description": "Whenever the wielder attacks a hero or is attacked by a any unit, the boots' passive health regeneration bonus is lost, and the movement speed bonus is reduced for a while.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": 13,
-      "effects": {
-        "moveSpeedLoss": 25,
-        "healthRegenLoss": 14,
-        "duration": 13,
-        "downtime": 13
+  "tier": "Neutral",
+  "category": [
+    "Health regeneration items",
+    "Movement speed items"
+  ],
+  "crafting": {
+    "materials": [
+      {
+        "item": "Boots of Speed",
+        "quantity": 1
       },
-      "notes": [
-        "Reduces Tranquil Boots' bonuses to 40 movement speed and 0 health regeneration",
-        "Only triggers when the wielder's attacks land, or when an attack lands on the wielder",
-        "Missed or disjointed attacks do not trigger Break",
-        "Also reacts on instant attacks that normally do not trigger on-attack effects",
-        "Does not break upon attacking non-hero units. Treats creep-heroes as creeps",
-        "The downtime is affected by cooldown reductions. However, although cooldown resetting effects visually reset the cooldown, they do not reset the broken state",
-        "Tranquil Boots are always in the broken state for illusions, and permanently appear broken on allied illusions. Do not appear broken on enemy illusions, until they attack or are attacked"
-      ]
-    }
-  ],
-  "stats": {},
-  "bonus": {
-    "healthRegeneration": 14,
-    "moveSpeed": 65
-  },
-  "additionalInfo": [
-    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack",
-    "Stacks with all other movement speed bonus",
-    "The health regeneration of multiple Tranquil Boots-based items fully stacks"
-  ],
-  "states": [
-    {
-      "icon": "Active state",
-      "contains": "Full bonuses: +14 Health Regeneration, +65 Move Speed"
-    },
-    {
-      "icon": "Inactive/Broken state", 
-      "contains": "Reduced bonuses: +0 Health Regeneration, +40 Move Speed"
-    }
-  ]
+      {
+        "item": "Mystic Staff",
+        "quantity": 1
+      }
+    ]
+  }
 }

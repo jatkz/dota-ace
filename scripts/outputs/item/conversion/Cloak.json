@@ -1,25 +1,19 @@
 {
-  "name": "Cloak",
-  "description": "A cloak made of a magical material that works to dispel any magic cast on it.",
-  "category": "Miscellaneous",
-  "cost": 800,
-  "sellValue": 400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 800
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "magicResistance": 20
-  },
-  "additionalInfo": [
-    "Stacks multiplicatively with other magic resistance sources",
-    "Increases most heroes' magic resistance to 40%",
-    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%"
-  ],
-  "states": []
+  "Cloak": {
+    "cost": 1600,
+    "attributes": {
+      "bonus_magic_resistance": "+25 magic resistance"
+    },
+    "lore": "A simple yet effective garment that provides a shield against the arcane. Worn by mages and warriors alike, it offers protection from spells and their destructive power.",
+    "crafted_from": [
+      {
+        "item_name": "Ring of Protection",
+        "quantity": 1
+      },
+      {
+        "item_name": "Veil of Discord",
+        "quantity": 1
+      }
+    ]
+  }
 }

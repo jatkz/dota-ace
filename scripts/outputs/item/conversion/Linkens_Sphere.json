@@ -1,69 +1,26 @@
 {
-  "name": "Linken's Sphere",
-  "description": "This magical sphere once protected one of the most famous heroes in history.",
-  "category": "Armor",
-  "cost": 4800,
-  "sellValue": 2400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Ultimate Orb", "Perseverance", "Recipe"],
-    "totalCost": 4800
+  "page_title": "Linken's Sphere",
+  "infobox_data": {
+    "itemtype": "Defensive item",
+    "cost": 150,
+    "image": "Linkens_Sphere.png",
+    "tooltip": "<i>Provides Linken's Barrier.</i>\n\n<i>Cooldown:</i> <b>6</b> seconds<br><br>Refund: <span class=\"currency\" style=\"font-size: 1.2em; color: #c0c030;\">28.5</span> gold"
   },
-  "abilities": [
+  "description": "<p>A defensive item that provides Linken's Barrier, a spell shield which blocks up to two spells from any source.</p>",
+  "ingredients": [
     {
-      "name": "Spellblock",
-      "type": "passive",
-      "description": "Blocks and completely negates most single-target abilities targeted at the wielder.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": 0,
-      "cooldown": 14,
-      "effects": {},
-      "notes": [
-        "Does not block abilities cast by allies.",
-        "For a list of blocked abilities and their interactions, see Spell Block page.",
-        "If stacked, Spell Block triggers in priority order: Counterspell → Counterspell Ally → Transfer Spellblock → Spellblock"
-      ]
+      "item": "Mystic Staff",
+      "amount": 1
     },
     {
-      "name": "Transfer Spellblock",
-      "type": "active",
-      "description": "Temporarily transfers the effects of Spellblock to the targeted allied hero.",
-      "castAnimation": "0 + 0",
-      "castRange": 700,
-      "manaCost": 0,
-      "cooldown": 14,
-      "effects": {
-        "duration": 14,
-        "downtime": 14
-      },
-      "notes": [
-        "The duration of the transfer matches the current cooldown of the item. Cooldown reductions are considered. However, resetting the item cooldown does not prematurely end the transfer.",
-        "Puts Spellblock on cooldown when transferred to an ally. If the transferred Spell Block gets triggered, the item goes on cooldown again.",
-        "Can be cast on allied heroes, Clones, and Creep-Heroes.",
-        "Can be cast on Illusions, but it does not block abilities for them.",
-        "Successive casts on the same target refresh the duration, the buff does not stack."
-      ]
+      "item": "Blitz Crank",
+      "amount": 1
     }
   ],
-  "stats": {},
-  "bonus": {
-    "strength": 16,
-    "agility": 16,
-    "intelligence": 16,
-    "healthRegeneration": 6.5,
-    "manaRegeneration": 4.25
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally.",
-    "The item's attributes grant the following additional stats:",
-    "352 health and 1.6 health regeneration.",
-    "192 mana, 0.8 mana regeneration and 1.6% flat base magic resistance.",
-    "16 attack speed and 2.67 main armor.",
-    "16 main attack damage to all Strength/Agility/Intelligence heroes.",
-    "21.6 main attack damage to universal heroes."
-  ],
-  "states": []
+  "builds_into": [],
+  "built_from": ["Mystic Staff", "Blitz Crank"],
+  "lore": "<p><b>Lore:</b> The legendary scepter of the ancient mages, used to protect their allies from dark sorcery. Only the most powerful magic can break its barrier.</p>",
+  "str_bonus": "+2 Strength",
+  "agi_bonus": "+2 Agility",
+  "int_bonus": "+2 Intelligence"
 }

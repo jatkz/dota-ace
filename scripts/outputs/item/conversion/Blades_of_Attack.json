@@ -1,21 +1,6 @@
 {
-  "name": "Blades of Attack",
-  "description": "The damage of these small, concealable blades should not be underestimated.",
-  "category": "Equipment",
+  "title": "Blades of Attack",
+  "image_url": "https://liquipedia.net/dota2/images/thumb/6/6c/Blade_of_Attack.svg/120px-Blade_of_Attack.svg.png",
   "cost": 450,
-  "sellValue": 225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 450
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "attackDamage": 9
-  },
-  "additionalInfo": [],
-  "states": []
+  "category": "Items"
 }

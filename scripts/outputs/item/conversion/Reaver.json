@@ -1,23 +1,13 @@
 {
-  "name": "Reaver",
-  "description": "A massive axe capable of tearing whole mountains down.",
-  "category": "Secret Shop",
-  "cost": 2800,
-  "sellValue": 1400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "strength": 25
+  "item_name": "Reaver",
+  "category": "Strength items",
+  "attributes": {
+    "bonus_strength": "+10 Strength",
+    "bonus_damage": "+20 Damage"
   },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "550 health and 2.5 health regeneration",
-    "25 main attack damage to Strength heroes",
-    "11.25 main attack damage to Universal heroes"
+  "builds_into": [
+    "Heart of Tarrasque"
   ],
-  "states": []
+  "requires": null,
+  "shop_location": "Secret Shop"
 }

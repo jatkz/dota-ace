@@ -1,21 +1,10 @@
 {
-  "name": "Ring of Protection",
-  "description": "A glimmering ring that defends its bearer.",
-  "category": "Equipment",
-  "cost": 175,
-  "sellValue": 87.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 175
+  "title": "Ring_of_Protection",
+  "item_type": "Armor items, Shop items",
+  "properties": {
+    "Cost": 450,
+    "Primary Attribute Bonus": "+1 Strength",
+    "Bonus Health Regeneration": "+2.5 Health regeneration"
   },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "armor": 2
-  },
-  "additionalInfo": [],
-  "states": []
+  "description": "A simple item that provides basic health regeneration and a small strength bonus."
 }

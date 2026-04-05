@@ -1,26 +1,11 @@
 {
   "name": "Soul Booster",
-  "description": "Regain lost courage.",
-  "category": "Accessories",
-  "cost": 3000,
-  "sellValue": 1500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Vitality Booster", "Energy Booster", "Point Booster"],
-    "totalCost": 3000
+  "category": "Items",
+  "type": "Health boost items, Mana boost items, Shop items",
+  "description": "An item that restores health and mana over time.",
+  "stats": {
+    "health_restore_per_second": 3.0,
+    "mana_restore_per_second": 2.5
   },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "health": 425,
-    "mana": 425
-  },
-  "additionalInfo": [
-    "Components required from the Secret Shop",
-    "Cannot be disassembled",
-    "Full price refunded within 10s"
-  ],
-  "states": []
+  "cost": 850
 }

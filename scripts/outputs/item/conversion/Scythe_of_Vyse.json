@@ -1,54 +1,18 @@
 {
-  "name": "Scythe of Vyse",
-  "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
-  "category": "Magical",
-  "cost": 5200,
-  "sellValue": 2600,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Mystic Staff", "Tiara of Selemene", "Recipe"],
-    "totalCost": 5200
+  "page_title": "Scythe of Vyse",
+  "attributes": {
+    "Cost": 2600,
+    "Primary Attribute": "Intelligence",
+    "Bonus Attributes": "+15 Intelligence +40 Mana Regeneration",
+    "Craftability": "Not Craftable"
   },
-  "abilities": [
-    {
-      "name": "Hex",
-      "type": "active",
-      "description": "Applies a hex on the unit-targeted enemy upon cast and turns it into a harmless critter.",
-      "castAnimation": "0 + 0",
-      "castRange": 800,
-      "manaCost": 250,
-      "cooldown": 20,
-      "effects": {
-        "setMoveSpeed": 140,
-        "hexDuration": 2.8,
-        "currentHealthAsDamage": "100%"
-      },
-      "notes": [
-        "Applies a hex upon cast that applies the following effects on the affected enemy unit:",
-        "Sets its base movement speed to 140. All movement speed sources now calculates using the set base value.",
-        "Considers strong illusions as heroes.",
-        "Silence - Units affected by Silence sources cannot cast abilities. Does not affect items.",
-        "Mute - Units affected by Mute sources cannot cast item abilities. Does not affect spells.",
-        "Disarm",
-        "Changes the selection box correspondingly to the Hex model.",
-        "Neither affects the unit's collision size nor bound radius.",
-        "Instantly destroys illusions.",
-        "Visually transforms the affected enemy unit into a Pig."
-      ]
-    }
+  "description": "The Scythe of Vyse is a Tier 3 item in Dota 2. It provides significant intelligence and mana regeneration, making it a powerful choice for support heroes that rely on spells.",
+  "categories": [
+    "Items",
+    "Intelligence items",
+    "Mana regeneration items"
   ],
-  "stats": {},
-  "bonus": {
-    "intelligence": 30,
-    "manaRegeneration": 8.5
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "360 mana, 1.5 mana regeneration and 3% flat base magic resistance.",
-    "30 main attack damage to Intelligence heroes.",
-    "13.5 main attack damage to universal heroes."
-  ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

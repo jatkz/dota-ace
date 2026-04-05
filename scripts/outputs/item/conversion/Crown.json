@@ -1,30 +1,13 @@
 {
-  "name": "Crown",
-  "description": "A stately crown created to ensure a well-meaning but ungifted heir could fend off usurpers and govern with a strong hand.",
-  "category": "Attributes",
-  "cost": 450,
-  "sellValue": 225,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Meteor Hammer", "Helm of the Dominator", "Veil of Discord", "Heaven's Halberd", "Solar Crest"],
-    "totalCost": null
-  },
-  "abilities": [],
-  "stats": null,
-  "bonus": {
-    "strength": 4,
-    "agility": 4,
-    "intelligence": 4
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "88 health and 0.4 health regeneration.",
-    "48 mana, 0.2 mana regeneration and 0.4% flat base magic resistance.",
-    "4 attack speed and 0.67 main armor.",
-    "4 main attack damage to all Strength/Agility/Intelligence heroes.",
-    "5.4 main attack damage to universal heroes."
+  "title": "Crown",
+  "categories": [
+    "Items",
+    "Strength items",
+    "Agility items",
+    "Intelligence items",
+    "Shop items"
   ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

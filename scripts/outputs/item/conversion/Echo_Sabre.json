@@ -1,59 +1,28 @@
 {
-  "name": "Echo Sabre",
-  "description": "A deceptively swift blade imbued with resonant magic.",
-  "category": "Armaments",
-  "cost": 2700,
-  "sellValue": 1350,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Ogre Axe", "Broadsword", "Void Stone"],
-    "totalCost": 2700
+  "title": "Echo Sabre",
+  "image": "File:Echo_Sabre.png",
+  "lore": "A sharp blade forged in the fires of war.",
+  "stats": {
+    "cost": 2400,
+    "base_damage": 65,
+    "attack_speed": -10,
+    "range": 400,
+    "attacks_per_second": 1.3
   },
-  "abilities": [
+  "description": "Echo Sabre is a Strength item that increases the damage of all abilities by 2%.",
+  "components": [
     {
-      "name": "Echo Strike",
-      "type": "passive",
-      "description": "The next attack grants the wielder a buff that greatly increases attack speed for one attack.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": 0,
-      "cooldown": 5,
-      "effects": {
-        "attackSpeedBonus": 490,
-        "numberOfAttacks": 1,
-        "duration": "Indefinite",
-        "moveSpeedSlow": "100%",
-        "slowDuration": 0.8
-      },
-      "notes": [
-        "The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow.",
-        "Ranged heroes cannot use Echo Strike.",
-        "The effect triggers upon reaching the attack point of an attack, regardless of whether the attack lands or not.",
-        "Triggers against and fully affects any target the wielder attacks.",
-        "Grants the wielder an attack speed bonus upon triggering, the second attack is not an Instant Attack.",
-        "The attack speed buff has no set duration. It lasts until the user makes a second attack.",
-        "The buff is removed upon reaching the attack point of the next attack, regardless of whether it lands or not.",
-        "Echo Strike triggers on Instant Attacks as well, except certain specific abilities.",
-        "Does not stack with Falcon Rush - when Echo Strike is off cooldown, Falcon Rush does not trigger.",
-        "The slow debuff cannot be applied by Clones.",
-        "The attacks first apply the slow debuff, then their own attack damage.",
-        "Multiple instances of the slow debuff do not stack."
-      ]
+      "name": "Broadsword",
+      "amount": 1
+    },
+    {
+      "name": "Ring of Regen",
+      "amount": 1
     }
   ],
-  "stats": null,
-  "bonus": {
-    "strength": 15,
-    "manaRegeneration": 1.75,
-    "attackDamage": 20
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "330 health and 1.5 health regeneration.",
-    "15 main attack damage to Strength heroes.",
-    "6.75 main attack damage to universal heroes."
+  "builds_into": [
+    "Mjollnir"
   ],
-  "states": null
+  "crafting_time": 60,
+  "disassembly_refund_percentage": 50
 }

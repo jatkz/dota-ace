@@ -1,47 +1,13 @@
 {
-  "name": "Javelin",
-  "description": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack.",
-  "category": "Equipment",
-  "cost": 900,
-  "sellValue": 450,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [
-    {
-      "name": "Pierce",
-      "type": "passive",
-      "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "procChance": "25%",
-        "bonusMagicalDamage": 60
-      },
-      "notes": [
-        "The bonus damage is considered as a conditional attack damage bonus and is magical damage",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to the unit's attack damage",
-        "It is not considered by lifesteal, crit or cleave",
-        "It can be reduced only by flat reductions (e.g. magical damage barrier)",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions",
-        "Pierce from Javelin-based items fully stack with another and themselves, except for multiple Monkey King Bars",
-        "Multiple sources can proc on the same attack",
-        "Illusions can use the accuracy, but do not apply the bonus magical attack damage",
-        "Does not work against buildings, but works against wards and allied units",
-        "Adds an average of 15 magical damage to every attack",
-        "Pierce uses pseudo-random distribution"
-      ]
-    }
+  "item_name": "Javelin",
+  "description": "The Javelin is a shop item in Dota 2 that can be purchased from the side shops.",
+  "category": ["Items", "Shop items"],
+  "color_codes": {
+    "border_color": "#30596B"
+  },
+  "related_items": [
+    "Neutral Items",
+    "Other Shop Items"
   ],
-  "stats": {},
-  "bonus": {},
-  "additionalInfo": [
-    "Available in the Base Shop under Equipment category",
-    "Used as a component in Monkey King Bar, Maelstrom, and Bloodthorn",
-    "Full price refunded within 10 seconds of purchase"
-  ],
-  "states": []
+  "purchase_location": "Side Shops"
 }

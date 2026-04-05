@@ -1,58 +1,22 @@
 {
-  "name": "Glimmer Cape",
-  "description": "The stolen cape of a master illusionist.",
-  "category": "Magical",
-  "cost": 2150,
-  "sellValue": 1075,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Shadow Amulet", "Cloak", "Recipe"],
-    "totalCost": 2150
-  },
-  "abilities": [
+  "page_title": "Glimmer Cape",
+  "oldid": "2364697",
+  "categories": [
     {
-      "name": "Glimmer",
-      "type": "active",
-      "description": "Applies a buff that periodically turns the target invisible and phased over the duration, even if the invisibility gets broken.",
-      "castAnimation": "0 + 0",
-      "castRange": 600,
-      "manaCost": 125,
-      "cooldown": 14,
-      "effects": {
-        "fadeDelay": 0.5,
-        "duration": 5,
-        "magicalDamageBarrier": 375,
-        "moveSpeedBonus": 20
-      },
-      "notes": [
-        "Double-tapping automatically targets self",
-        "Does not interrupt the wielder's channeling abilities",
-        "The caster does not require to face the target in order to cast it on them",
-        "Can only be cast on heroes, including illusions and creep-heroes",
-        "Recasting the ability refreshes the buff duration",
-        "Does not grant the target phased movement",
-        "Attacking or casting abilities or items during the fade delay resets the fade delay",
-        "Picking up, dropping, or selling items does not break the invisibility",
-        "Reaching the cast point of abilities or items breaks invisibility",
-        "Reaching the attack point of an attack breaks invisibility",
-        "Grants the target a magical damage barrier for the whole duration",
-        "Depleting the barrier does not prematurely end the ability",
-        "Increases the target's movement speed during the invisibility phases, but not during the fade delay",
-        "Does not share cooldowns with Glimmer Cape"
-      ]
+      "category": "Items"
+    },
+    {
+      "category": "Magic resistance items",
+      "exists": false
+    },
+    {
+      "category": "Shop items",
+      "exists": false
     }
   ],
-  "stats": {},
-  "bonus": {
-    "magicResistance": "20%"
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Stacks multiplicatively with other magic resistance sources",
-    "Increases most heroes' magic resistance to 40%",
-    "With the magic resistance bonus from this source, every 10 points of intelligence further increases the total magic resistance by 0.8%"
-  ],
-  "states": []
+  "hidden_categories": [
+    {
+      "category": "Pages with hard coded colors"
+    }
+  ]
 }

@@ -1,18 +1,8 @@
 {
-  "name": "Vitality Booster",
-  "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
-  "category": "Secret Shop",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "health": 250
-  },
-  "additionalInfo": [],
-  "states": []
+  "item": {
+    "name": "Vitality Booster",
+    "type": "Health boost item",
+    "category": "Shop items",
+    "description": "Restores 150 health over 2 seconds when used."
+  }
 }

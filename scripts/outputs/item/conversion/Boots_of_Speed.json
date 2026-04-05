@@ -1,21 +1,12 @@
 {
-  "name": "Boots of Speed",
-  "description": "Fleet footwear, increasing movement.",
-  "category": "Miscellaneous",
-  "cost": 500,
-  "sellValue": 250,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "moveSpeed": 45
-  },
-  "additionalInfo": [
-    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
-    "Stacks with all other movement speed bonus."
+  "title": "Boots_of_Speed",
+  "oldid": 2259061,
+  "categories": [
+    "Items",
+    "Movement speed items (page does not exist)",
+    "Shop items (page does not exist)"
   ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

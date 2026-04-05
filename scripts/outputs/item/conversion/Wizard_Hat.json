@@ -1,0 +1,8 @@
+{
+  "title": "Wizard Hat",
+  "category": "Items",
+  "attributes": {
+    "type": "Mana boost items",
+    "source": "Shop"
+  }
+}

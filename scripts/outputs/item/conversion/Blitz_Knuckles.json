@@ -1,21 +1,7 @@
 {
-  "name": "Blitz Knuckles",
-  "description": "An underground arcanist's update of a back-alley classic.",
-  "category": "Equipment",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Oblivion Staff", "Monkey King Bar", "Shadow Blade"],
-    "totalCost": null
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "attackSpeed": 35
-  },
-  "additionalInfo": [],
-  "states": []
+  "item": {
+    "name": "Blitz Knuckles",
+    "category": ["Items", "Attack speed items", "Shop items"],
+    "color": "hard-coded"
+  }
 }

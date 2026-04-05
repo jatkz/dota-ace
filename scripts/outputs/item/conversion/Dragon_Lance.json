@@ -1,52 +1,13 @@
 {
-  "name": "Dragon Lance",
-  "description": "The forward charge of the wyvern host grants no quarter.",
-  "category": "Armaments",
-  "cost": 1900,
-  "sellValue": 950,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Blade of Alacrity", "Belt of Strength", "Recipe"],
-    "totalCost": 1900
-  },
-  "abilities": [
-    {
-      "name": "Dragon's Reach",
-      "type": "passive",
-      "description": "Grants flat attack range bonus to ranged wielders.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "attackRangeBonus": 150
-      },
-      "notes": [
-        "The bonus attack range from multiple Dragon Lance-based items do not stack.",
-        "Stacks additively with other ranged bonus attack range sources."
-      ]
-    }
-  ],
-  "stats": {
-    "health": 220,
-    "healthRegeneration": 1,
-    "attackSpeed": 15,
-    "mainArmor": 2.5,
-    "mainAttackDamageStrength": 10,
-    "mainAttackDamageAgility": 15,
-    "mainAttackDamageUniversal": 11.25
-  },
-  "bonus": {
-    "strength": 10,
-    "agility": 15,
-    "attackRange": 150
-  },
-  "additionalInfo": [
-    "The attack range bonus works for ranged heroes only.",
-    "Stacks with all other attack range bonuses.",
-    "Affects the cast range of active attack modifiers as well."
-  ],
-  "states": null
+  "item": {
+    "name": "Dragon Lance",
+    "category": ["Items", "Strength items", "Agility items", "Shop items"],
+    "attributes": [
+      {"attribute": "+60 Strength"},
+      {"attribute": "+20 Agility"},
+      {"attribute": "1.5s Lifesteal"}
+    ],
+    "description": "Grants +60 Strength and +20 Agility. Attacks steal 1.5 seconds worth of health from the target.",
+    "image_url": "https://liquipedia.net/dota2/images/3/39/Dragon_Lance.png"
+  }
 }

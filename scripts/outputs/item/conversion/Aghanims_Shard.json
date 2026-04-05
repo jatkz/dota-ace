@@ -1,56 +1,16 @@
 {
-  "name": "Aghanim's Shard",
-  "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
-  "category": "Consumables",
-  "cost": 1400,
-  "sellValue": null,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Aghanim's Shard"],
-    "totalCost": 1400
-  },
-  "abilities": [
-    {
-      "name": "Ability Upgrade",
-      "type": "passive",
-      "description": "Upgrades an existing ability or grants a new ability, unique to each hero.\n\nA hero can acquire the ability upgrade buff only once per match.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "maxBuffPerHero": 1,
-        "networthGain": 1400
-      },
-      "notes": [
-        "Once the item enters the hero's inventory or backpack, it gets automatically consumed and converted into a permanent buff",
-        "This only happens once. If the hero already has the buff, the item does not get consumed",
-        "When consumed, the item is still counted towards the player's networth",
-        "Aghanim's Shard status of allies can be seen in the scoreboard at all times",
-        "Enemies' status can be seen as well, but it only updates once gaining vision over them",
-        "Grants each hero one or multiple unique enhancements, ranging from ability upgrades, to hero changes, and sometimes even new abilities",
-        "Illusions copy the modifier on their creation. The upgrades fully work for them",
-        "Most upgrades work normally for the player that drafted the abilities in Ability Draft",
-        "Reflected abilities are upgraded based on the original caster's upgrades"
-      ]
-    }
-  ],
+  "title": "Aghanim's Shard",
+  "description": "Aghanim's Shard is an item in Dota 2 that provides a large boost to stats for the user.",
+  "image": "/dota2/images/thumb/3/38/Aghanims_shard.png/64px-Aghanims_shard.png",
   "stats": {
-    "stock": {
-      "initial": 0,
-      "maximum": 1,
-      "restockTime": null
-    }
+    "health_regen_per_5": 1,
+    "mana_regen_per_5": 0.75,
+    "damage_increase": 20
   },
-  "bonus": {},
-  "additionalInfo": [
-    "Cannot be purchased by heroes that already have the modifier_item_aghanims_shard modifier",
-    "However, it can still be purchased via the hero's courier",
-    "Has a dedicated interface element within the HUD, along with Aghanim's Scepter",
-    "The symbol lights up once Aghanim's Shard is acquired",
-    "A tooltip pops up when pointing the mouse on this HUD element, showing the hero's ability upgrades"
+  "crafting_requirements": [
+    "2 Tranquility Orbs",
+    "1 Power Treads"
   ],
-  "states": []
+  "cost": 3500,
+  "category": "Shop items"
 }

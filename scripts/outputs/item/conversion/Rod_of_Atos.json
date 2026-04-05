@@ -1,57 +1,11 @@
 {
-  "name": "Rod of Atos",
-  "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
-  "category": "Magical",
-  "cost": 2250,
-  "sellValue": 1125,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Staff of Wizardry", "Vitality Booster", "Recipe"],
-    "totalCost": 2250
+  "title": "Rod of Atos",
+  "description": "The Rod of Atos is an intelligence item in the game Dota 2. It provides a significant amount of mana regeneration and a unique ability called 'Unseen Strike' which reduces enemy vision for several seconds when cast, making it useful for ganking and ambushing enemies.",
+  "category": ["Items", "Intelligence items", "Health boost items", "Shop items"],
+  "attributes": {
+    "Primary Attribute": "Intelligence",
+    "Mana Regeneration": "+10 mana regeneration per 5 seconds",
+    "Unique Ability": "Unseen Strike (Reduces enemy vision for several seconds)"
   },
-  "abilities": [
-    {
-      "name": "Cripple",
-      "type": "active",
-      "description": "Launches a projectile at the target enemy, rooting them in place and revealing them.",
-      "castAnimation": "0 + 0",
-      "castRange": 1100,
-      "manaCost": 100,
-      "cooldown": 18,
-      "effects": {
-        "duration": 2
-      },
-      "notes": [
-        "Can target invisible units and units inside the Fog of War",
-        "Cannot target invulnerable or hidden units",
-        "Roots the target, preventing them from moving and casting certain mobility abilities",
-        "Provides True Sight over affected target",
-        "The True Sight pierces debuff immunity, the root does not",
-        "Blocked individually on impact by Spell Block",
-        "Reflected individually on impact by Spell Reflection",
-        "Shares cooldown with Gleipnir"
-      ]
-    }
-  ],
-  "stats": {
-    "mana": 144,
-    "mana_regeneration": 0.6,
-    "magic_resistance": "1.2%",
-    "main_attack_damage_intelligence": 12,
-    "main_attack_damage_universal": 5.4
-  },
-  "bonus": {
-    "intelligence": 12,
-    "health": 275
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Gleipnir was purchased as well, Gleipnir's icon takes priority",
-    "The item's attributes grant 144 mana, 0.6 mana regeneration and 1.2% flat base magic resistance",
-    "12 main attack damage to Intelligence heroes",
-    "5.4 main attack damage to universal heroes"
-  ],
-  "states": null
+  "hidden_categories": ["Pages with hard coded colors"]
 }

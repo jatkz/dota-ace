@@ -1,55 +1,7 @@
 {
   "name": "Silver Edge",
-  "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
-  "category": "Weapons",
-  "cost": 5800,
-  "sellValue": 2900,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Shadow Blade", "Demon Edge", "Recipe"],
-    "totalCost": 5800
-  },
-  "abilities": [
-    {
-      "name": "Shadow Walk",
-      "type": "active",
-      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": 75,
-      "cooldown": 20,
-      "effects": {
-        "fadeTime": 0.3,
-        "moveSpeedBonus": "20%",
-        "duration": 17,
-        "attackDamageBonus": 300,
-        "breakDuration": 6
-      },
-      "notes": [
-        "Does not interrupt the wielder's channeling abilities upon cast",
-        "Recasting the ability refreshes the buff duration",
-        "The caster gains phased movement while invisible",
-        "Picking up, dropping, or selling items does not break the invisibility",
-        "During the fade time, casting abilities or items does not break the invisibility",
-        "The attack breaking invisibility has True Strike and deals physical spell damage bonus with the attack, and also breaks the target's passive abilities",
-        "Adds physical conditional attack damage to the next attack while invisible",
-        "Does not interact with Critical Strike or percentage-based bonus attack damage",
-        "Interacts with Lifesteal, Cleave and Splash, Damage Block",
-        "Does not affect Buildings or Ward-type units",
-        "The attack also applies Break on the target",
-        "Shares cooldown with Shadow Blade"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "attackDamage": 70,
-    "attackSpeed": 35
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally"
-  ],
-  "states": null
+  "rarity": "Common",
+  "cost": "250",
+  "description": "Grants +8% attack speed.",
+  "category": "Attack speed items"
 }

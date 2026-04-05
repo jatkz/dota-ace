@@ -1,43 +1,12 @@
 {
-  "name": "Ring of Basilius",
-  "description": "Ring given as a reward to the greatest mages.",
-  "category": "Support",
-  "cost": 425,
-  "sellValue": 212.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Sage's Mask", "Recipe"],
-    "totalCost": 425
-  },
-  "abilities": [
-    {
-      "name": "Basilius Aura",
-      "type": "passive",
-      "description": "Increases the mana regeneration of nearby allies.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "radius": 1200,
-        "manaRegenerationBonus": 1,
-        "auraLingerDuration": 0.5
-      },
-      "notes": [
-        "Multiple identical instances of Basilius Aura do not stack, regardless of source. Stacks with upgraded versions of the aura.",
-        "Can regenerate up to 60 mana in one minute.",
-        "Does not affect invulnerable units."
-      ]
-    }
+  "page_title": "Ring of Basilius",
+  "page_url": "https://liquipedia.net/dota2/Ring_of_Basilius",
+  "categories": [
+    "Items",
+    "Mana regeneration items",
+    "Shop items"
   ],
-  "stats": {},
-  "bonus": {
-    "manaRegeneration": 0.5
-  },
-  "additionalInfo": [
-    "With Basilius Aura, the item grants a total of 1.5 mana regeneration to the wielder."
-  ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

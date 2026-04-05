@@ -1,52 +1,13 @@
 {
-  "name": "Lotus Orb",
-  "description": "The jewel at its center still reflects a pale image of its creator.",
-  "category": "Armor",
-  "cost": 3850,
-  "sellValue": 1925,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Perseverance", "Platemail", "Energy Booster", "Recipe"],
-    "totalCost": 3850
+  "item_name": "Lotus Orb",
+  "category": ["Items", "Health regeneration items", "Mana boost items", "Mana regeneration items", "Armor items", "Shop items"],
+  "attributes": {
+    "cost": 130,
+    "health_regen": 5.75,
+    "mana_regen": 5.25,
+    "armor": 4,
+    "bonus_damage": 8
   },
-  "abilities": [
-    {
-      "name": "Echo Shell",
-      "type": "active",
-      "description": "Applies a basic dispel and a shield on the target ally for a while, which re-casts a copy of most single-target abilities targeted at the ally back at their casters. Does not protect the ally from the targeted abilities.",
-      "castAnimation": "0 + 0",
-      "castRange": 900,
-      "manaCost": 175,
-      "cooldown": 15,
-      "effects": {
-        "duration": 5,
-        "affects": "Allied Heroes"
-      },
-      "notes": [
-        "Can be cast on allied heroes, Clones, Illusions, and the Spirit Bear",
-        "Can be cast on Creep-heroes as well, but it does not reflect abilities for them",
-        "Double-tapping automatically targets self",
-        "Applies a Basic Dispel on the target upon cast",
-        "Spell Reflection triggers before Spell Block, so a blocked ability is still reflected normally",
-        "Does not block abilities cast by allies",
-        "Does not reflect abilities as a result of other sources of Spell Reflection",
-        "Projectile-based abilities are nearly always reflected upon impact",
-        "Successive casts on the same target refresh the duration, the buff does not stack"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "healthRegeneration": 6.5,
-    "mana": 250,
-    "manaRegeneration": 4,
-    "armor": 10
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "Can be disassembled"
-  ],
-  "states": null
+  "description": "A mystical orb that grants the user an increased regeneration of health and mana, enhanced armor, and bonus damage.",
+  "hidden_category": "Pages with hard coded colors"
 }

@@ -1,56 +1,10 @@
 {
-  "name": "Blood Grenade",
-  "description": "Both the hunter and the hunted must pay the blood price.",
-  "category": "Consumables",
-  "cost": 50,
-  "sellValue": 25,
-  "maxStacks": 2,
-  "shareable": true,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Blood Grenade"],
-    "totalCost": 50
-  },
-  "abilities": [
-    {
-      "name": "Throw Grenade",
-      "type": "active",
-      "description": "Throws a grenade at an area-targeted location that damages upon impact. Additionally applies a movement speed slow and damage per second debuff on all affected enemy units.",
-      "castAnimation": "0.2 + 0",
-      "castRange": 900,
-      "manaCost": 0,
-      "cooldown": 10,
-      "effects": {
-        "effectRadius": 300,
-        "firstDamage": 50,
-        "damagePerSecond": 15,
-        "moveSpeedSlow": "15%",
-        "duration": 5,
-        "healthCost": 75,
-        "projectileSpeed": 1100,
-        "totalDamage": 125
-      },
-      "notes": [
-        "Deals magical spell damage in 1-second intervals, starting 1 second after debuff application upon projectile impact, over 5 instances",
-        "Reapplying the debuff refreshes the duration, but does not change the damage intervals",
-        "The current health cost utilizes setting health and is non-lethal",
-        "Hence, this ability can be cast when the wielder has less than the required current health",
-        "The ability effects are applied as follows: 1. The item_blood_grenade_debuff, 2. The first magical spell damage, 3. The magical spell damage per second"
-      ]
-    }
+  "item_name": "Blood Grenade",
+  "category": "Items",
+  "subcategories": [
+    "Health boost items",
+    "Shop items"
   ],
-  "stats": {
-    "charges": 1,
-    "stock": "1 INIT / 2 MAX",
-    "stockCooldown": 180
-  },
-  "bonus": {
-    "health": 50
-  },
-  "additionalInfo": [
-    "Deals 125 magical spell damage (before reductions) for the entire duration",
-    "Has a 1100-projectile speed",
-    "Debuff is dispellable by any Dispel sources"
-  ],
-  "states": null
+  "description": "A throwable item that heals allied heroes in a small radius upon impact.",
+  "hidden_category": "Pages with hard coded colors"
 }

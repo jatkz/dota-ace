@@ -1,56 +1,21 @@
 {
-  "name": "Aeon Disk",
-  "description": "A powerful artifact long ago smuggled out of the Ivory Incubarium. Or so many believe.",
-  "category": "Armor",
-  "cost": 3000,
-  "sellValue": 1500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Vitality Booster", "Energy Booster", "Recipe"],
-    "totalCost": 3000
+  "title": "Aeon Disk",
+  "category": "Items",
+  "description": "The Aeon Disk is a powerful item in Dota 2 that provides both health and mana regeneration over time.",
+  "attributes": {
+    "cost": 400,
+    "health_regen": 15,
+    "mana_regen": 10
   },
-  "abilities": [
-    {
-      "name": "Combo Breaker",
-      "type": "passive",
-      "description": "When the wielder's health is below the threshold and they take player-based, applies a strong dispel and a buff on the wielder, that provides status resistance and negates all damage the wielder takes, but also negates any damage they deal while active.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": 0,
-      "cooldown": "105/125/145/165",
-      "effects": {
-        "healthThreshold": "70%",
-        "incomingDamageReduction": "100%",
-        "outgoingDamageReduction": "100%"
-      },
-      "notes": [
-        "Only triggers on player-based damage, including damage from allies and own units",
-        "Triggers upon taking damage greater than 0 (before reductions)",
-        "Does not trigger on self-inflicted damage, damage flagged as HP Removal, or on instant kill effects",
-        "The triggering damage instance is fully negated as well",
-        "Also triggers on damage that would drop the wielder below the threshold",
-        "The ability cooldown increases per trigger and is bound to the wielder",
-        "Rebuying the item does not reset the ability cooldown",
-        "Combo Breaker first applies the strong dispel, then the buff",
-        "Stacks multiplicatively with other sources of status resistance"
-      ]
-    }
+  "builds_into": [
+    "Ultimate Orb",
+    "Aghanim's Scepter"
   ],
-  "stats": {},
-  "bonus": {
-    "health": 250,
-    "mana": 300
-  },
-  "additionalInfo": [
-    "Can only be completed with items from the Secret Shop",
-    "Stacks additively with other sources of generic incoming damage manipulation",
-    "Stacks multiplicatively with all other sources of outgoing damage reduction",
-    "Summoned units are not affected by the outgoing damage negation",
-    "Can be dispelled by Nullifier which makes it less effective in the late game",
-    "Effective against heroes that rely on ambush and/or disables followed by quick bursts of damage",
-    "Good choice for tanks, initiators/counter-initiators or supports who have strong defensive abilities"
-  ],
-  "states": []
+  "used_by_heroes": [
+    "Invoker",
+    "Necrophos",
+    "Riki",
+    "Techies",
+    "Oracle"
+  ]
 }

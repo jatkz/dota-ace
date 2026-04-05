@@ -1,52 +1,8 @@
 {
-  "name": "Phase Boots",
-  "description": "Boots that allow the wearer to travel between the ether.",
-  "category": "Accessories",
-  "cost": 1500,
-  "sellValue": 750,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Boots of Speed", "Chainmail", "Blades of Attack"],
-    "totalCost": 1500
-  },
-  "abilities": [
-    {
-      "name": "Phase",
-      "type": "active",
-      "description": "Increases the wielder's movement speed, and grants them phased movement for a while.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": 0,
-      "cooldown": 8,
-      "effects": {
-        "moveSpeedBonus": "10%",
-        "duration": 3,
-        "meleeSpeedBonus": "20%",
-        "setTurnRate": 1
-      },
-      "notes": [
-        "Does not interrupt the caster's channeling abilities upon cast.",
-        "Grants the user phased movement.",
-        "Checks the caster's attack range type periodically and updates the movement speed and turn rate bonus immediately.",
-        "Turn rate slowing effects still affect the wielder normally.",
-        "For melee heroes, it increases the average movement speed by 7.5% and increases the caster base turn rate to 1 for its duration.",
-        "For ranged heroes, it increases the average movement speed by 3.75%.",
-        "The buff is immediately dispelled, if the item is removed from the main inventory in any way."
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "armor": 4,
-    "moveSpeed": 50,
-    "meleeAttackDamage": 18,
-    "rangedAttackDamage": 12
-  },
-  "additionalInfo": [
-    "Movement speed bonuses from multiple pairs of Boots of Speed-based items do not stack, the one with a higher value takes priority.",
-    "Stacks with all other movement speed bonus."
-  ],
-  "states": null
+  "Phase Boots": {
+    "Type": "Movement speed item",
+    "Description": "Grants +20 movement speed.",
+    "Passive Effect": "+20% attack speed",
+    "Cost": "1350 gold"
+  }
 }

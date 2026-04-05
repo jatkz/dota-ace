@@ -1,21 +1,44 @@
 {
-  "name": "Broadsword",
-  "description": "The classic weapon of choice for knights, this blade is sturdy and reliable for slaying enemies.",
-  "category": "Equipment",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 1000
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "attackDamage": 15
-  },
-  "additionalInfo": [],
-  "states": []
+  "page_title": "Broadsword",
+  "categories": [
+    "Items",
+    "Damage items",
+    "Shop items"
+  ],
+  "unreleased_items": [
+    "Ancient Perseverance",
+    "Arcane Scout",
+    "Assassin's Contract",
+    "Assassin's Dagger",
+    "Barricade",
+    "Blighted Spirit",
+    "Bottomless Chalice",
+    "Dimensional Doorway",
+    "Elusive Cloak",
+    "Gladiator Helm",
+    "Gloves of Travel",
+    "Greater Mango",
+    "Guardian Shell",
+    "Horizon",
+    "Horizon's Equilibrium",
+    "Icarus Wings",
+    "Light Robes",
+    "Manacles of Power",
+    "Mechanical Arm",
+    "Oakheart",
+    "Overflowing Elixir",
+    "Ring of Fortitude",
+    "Satchel",
+    "Shadow of Vengeance",
+    "Slime Vial",
+    "Star Mace",
+    "Tome of Omniscience",
+    "Tree Processor",
+    "Turtle Shell",
+    "Venom Gland",
+    "Wand of Sanctity",
+    "Wand of the Brine",
+    "Warhammer",
+    "Wizard Glass"
+  ]
 }

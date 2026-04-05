@@ -1,57 +1,7 @@
 {
-  "name": "Dust of Appearance",
-  "description": "One may hide visage, but never volume.",
-  "category": "Consumables",
-  "cost": 80,
-  "sellValue": 40,
-  "maxStacks": null,
-  "shareable": true,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 80
-  },
-  "abilities": [
-    {
-      "name": "Reveal",
-      "type": "active",
-      "description": "Creates an area centered around the wielder that reveals invisible units. Deals damage and applies a movement speed slow to revealed invisible units.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": 30,
-      "effects": {
-        "effectRadius": 1050,
-        "damage": 25,
-        "moveSpeedSlow": "20%",
-        "duration": 12,
-        "auraLingerDuration": 8
-      },
-      "notes": [
-        "Interrupts the wielder's channeling abilities upon cast",
-        "Creates an aura that applies all ability effects on all enemy units within the radius, including visible ones",
-        "Reapplying the debuff refreshes the duration",
-        "Applies the debuff but does not reveal Shadow Dance-based abilities or Smoke of Deceit-based items",
-        "Affects fogged units and invulnerable units",
-        "Does not affect hidden units or ward-type units",
-        "Multiple overlapping Reveal aura radii do not stack",
-        "Explicitly applies the movement speed slow on already invisible units",
-        "The debuff does not affect the enemy unit during its fade time or fade delay",
-        "The debuff applied on affected enemy units lingers after leaving the effect radius"
-      ]
-    }
-  ],
-  "stats": {
-    "charges": 1
-  },
-  "bonus": {},
-  "additionalInfo": [
-    "Pierces Debuff Immunity sources",
-    "Ability: No / Aura",
-    "Affects: Enemy Units",
-    "Damage: Magical",
-    "Debuff modifier: modifier_item_dustofappearance",
-    "Dispellable by any Dispel sources"
-  ],
-  "states": []
+  "dust_of_appearance": {
+    "tier": "Unreleased",
+    "description": "Reduces the cooldown of all abilities by 20 seconds.",
+    "image_url": "https://liquipedia.net/dota2/images/thumb/5/5e/Dust_of_Appearance.png/128px-Dust_of_Appearance.png"
+  }
 }

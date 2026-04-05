@@ -1,19 +1,20 @@
 {
-  "name": "Helm of Iron Will",
-  "description": "The helmet of a legendary warrior who fell in battle.",
-  "category": "Equipment",
-  "cost": 975,
-  "sellValue": 487.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "healthRegeneration": 4,
-    "armor": 4
+  "item_name": "Helm of Iron Will",
+  "item_type": "Shop items",
+  "cost": 1500,
+  "attributes": {
+    "bonus_armor": 7,
+    "bonus_health_regen": 4.5
   },
-  "additionalInfo": [],
-  "states": []
+  "lore": "A powerful helm that imbues the wearer with resilience and strength.",
+  "crafting_recipe": [
+    "3x Platemail",
+    "1x Ring of Protection",
+    "2000g"
+  ],
+  "categories": [
+    "Items",
+    "Health regeneration items",
+    "Armor items"
+  ]
 }

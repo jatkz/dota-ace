@@ -1,21 +1,15 @@
 {
-  "name": "Sage's Mask",
-  "description": "A mask commonly used by mages and warlocks for various rituals.",
-  "category": "Miscellaneous",
-  "cost": 175,
-  "sellValue": 87.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 175
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "manaRegeneration": 0.7
-  },
-  "additionalInfo": [],
-  "states": []
+  "title": "Sage's Mask",
+  "category": "Items",
+  "subcategories": [
+    {
+      "name": "Mana regeneration items",
+      "exists": false
+    },
+    {
+      "name": "Shop items",
+      "exists": false
+    }
+  ],
+  "hidden_category": "Pages with hard coded colors"
 }

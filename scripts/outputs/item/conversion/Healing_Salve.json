@@ -1,53 +1,11 @@
 {
-  "name": "Healing Salve",
-  "description": "A magical salve that can quickly mend even the deepest of wounds.",
-  "category": "Consumables",
+  "item_name": "Healing Salve",
+  "item_type": "Consumable",
+  "description": "Instantly restores 75 health.",
   "cost": 100,
-  "sellValue": 50,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 100
+  "attributes": {
+    "heal_amount": 75,
+    "duration": "instant"
   },
-  "abilities": [
-    {
-      "name": "Salve",
-      "type": "active",
-      "description": "Increases the target's health regeneration for a while.",
-      "castAnimation": "0 + 0",
-      "castRange": 250,
-      "manaCost": null,
-      "cooldown": 0,
-      "effects": {
-        "damageThreshold": 0,
-        "healthRegenBonus": 30,
-        "duration": 13,
-        "allyDuration": 6.5
-      },
-      "notes": [
-        "Salve is less effective when cast on allied heroes, including the wielder's own player-controlled units",
-        "Taking more than 0 damage from any other player (after reductions and not flagged as HP Removal) dispels the buff",
-        "Taking more than 0 damage from Roshan (after reductions) dispels the buff",
-        "Requires Ctrl to target an allied hero",
-        "Can be cast on untargetable units indirectly via portrait-casting",
-        "Doubletap casts the ability on the wielder",
-        "Reapplying the buff refreshes the duration",
-        "Does not dispel from self-damage sources or HP Removal sources"
-      ]
-    }
-  ],
-  "stats": {
-    "charges": 1,
-    "stock": "4 INIT / 4 MAX",
-    "stockCooldown": 120
-  },
-  "bonus": {},
-  "additionalInfo": [
-    "Healing Salves dug up with Trusty Shovel are fully shareable, but cannot be sold",
-    "Can regenerate 390 HP for the entire duration when used on self",
-    "Can regenerate 195 HP for the entire duration when used on allies"
-  ],
-  "states": []
+  "category": "Shop items"
 }

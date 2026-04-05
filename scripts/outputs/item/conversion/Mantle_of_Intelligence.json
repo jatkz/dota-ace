@@ -1,26 +1,19 @@
 {
-  "name": "Mantle of Intelligence",
-  "description": "A beautiful sapphire mantle worn by generations of queens.",
-  "category": "Attributes",
-  "cost": 140,
-  "sellValue": 70,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Null Talisman"],
-    "totalCost": null
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "intelligence": 3
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "36 mana, 0.15 mana regeneration and 0.3% flat base magic resistance.",
-    "3 main attack damage to Intelligence heroes.",
-    "1.35 main attack damage to Universal heroes."
+  "title": "Mantle of Intelligence",
+  "attributes": [
+    {
+      "attribute": "+150 intelligence",
+      "bonus": "150"
+    },
+    {
+      "attribute": "+6% magic resistance",
+      "bonus": "6%"
+    }
   ],
-  "states": []
+  "description": "Increases the wearer's intelligence and magic resistance.",
+  "categories": [
+    "Items",
+    "Intelligence items",
+    "Shop items"
+  ]
 }

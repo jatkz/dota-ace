@@ -1,56 +1,12 @@
 {
-  "name": "Iron Branch",
-  "description": "A seemingly ordinary branch, its ironlike qualities are bestowed upon the bearer.",
-  "category": "Attributes",
-  "cost": 50,
-  "sellValue": 25,
-  "maxStacks": 1,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Iron Branch"],
-    "totalCost": 50
+  "item_name": "Iron Branch",
+  "item_type": "Neutral item",
+  "category": ["Strength items", "Agility items", "Intelligence items"],
+  "description": "Grants +3 Strength and +4 Mana.",
+  "drop_locations": {
+    "Tier_1_River_Camps": true,
+    "Tier_2_Mid_Jungle": false
   },
-  "abilities": [
-    {
-      "name": "Plant Tree",
-      "type": "active",
-      "description": "Creates a temporarily planted-tree at the point-targeted location. The item is consumed upon cast.",
-      "castAnimation": "0 + 0",
-      "castRange": 400,
-      "manaCost": null,
-      "cooldown": 0,
-      "effects": {
-        "plantedTreePerCast": 1,
-        "duration": 20,
-        "abilityValuesFactor": 2
-      },
-      "notes": [
-        "Creates a planted tree at the point-targeted location",
-        "Interacts with all abilities and mechanics like a regular tree",
-        "Cannot be placed within the fountain area",
-        "Cannot be placed within Roshan's pit",
-        "Tangoes are more effective when consuming a happy Iron Branch planted tree",
-        "The Tempest Double clones this item despite being a consumable",
-        "The particles around the planted tree are visible to everyone"
-      ]
-    }
-  ],
-  "stats": {
-    "charges": 1
-  },
-  "bonus": {
-    "strength": 1,
-    "agility": 1,
-    "intelligence": 1
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "22 health and 0.1 health regeneration",
-    "12 mana, 0.05 mana regeneration and 0.1% flat base magic resistance",
-    "1 attack speed and 0.17 main armor",
-    "1 main attack damage to all Strength/Agility/Intelligence heroes",
-    "1.35 main attack damage to universal heroes"
-  ],
-  "states": null
+  "cost": 150,
+  "shop_availability": ["Secret shop", "Side shop"]
 }

@@ -1,29 +1,14 @@
 {
-  "name": "Eaglesong",
-  "description": "Capturing the majestic call of an eagle, this mystical horn brings limitless dexterity to those who hear it.",
-  "category": "Secret Shop",
-  "cost": 2800,
-  "sellValue": 1400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 2800
-  },
-  "abilities": [],
-  "stats": {
-    "attackSpeed": 25,
-    "mainArmor": 4.17
-  },
-  "bonus": {
-    "agility": 25
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "25 attack speed and 4.17 main armor",
-    "25 main attack damage to Agility heroes",
-    "11.25 main attack damage to Universal heroes"
+  "title": "Eaglesong",
+  "description": "Eaglesong is a consumable item that provides a permanent Agility boost and grants the ability to Recall.",
+  "image_url": "https://liquipedia.net/dota2/images/thumb/0/09/Eaglesong.png/120px-Eaglesong.png",
+  "category": [
+    "Items",
+    "Agility items",
+    "Shop items"
   ],
-  "states": []
+  "attributes": {
+    "Agility Boost": "+5 Agility (permanent)",
+    "Recall Ability": "Allows the player to recall to a specific point on the map"
+  }
 }

@@ -1,21 +1,10 @@
 {
-  "name": "Ring of Health",
-  "description": "A shiny ring found beneath a fat halfling's corpse.",
-  "category": "Miscellaneous",
-  "cost": 700,
-  "sellValue": 350,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "healthRegeneration": 4.5
-  },
-  "additionalInfo": [
-    "Heroes who need to farm continuously against lane harassment often purchase Ring of Health.",
-    "Resilient heroes who seek to dominate the lane will also do well with an early Ring of Health."
-  ],
-  "states": []
+  "ring_of_health": {
+    "description": "The Ring of Health is a shop item that grants the wearer +25 health regeneration per second and +200 starting mana.",
+    "category": ["Items", "Health regeneration items", "Shop items"],
+    "attributes": {
+      "health_regeneration_per_second": 25,
+      "starting_mana": 200
+    }
+  }
 }

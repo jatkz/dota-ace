@@ -1,18 +1,7 @@
 {
-  "name": "Demon Edge",
-  "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
-  "category": "Secret Shop",
-  "cost": 2200,
-  "sellValue": 1100,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "attackDamage": 40
-  },
-  "additionalInfo": [],
-  "states": []
+  "item_name": "Demon Edge",
+  "item_type": "Shop item",
+  "category": "Damage items",
+  "description": "A demonic weapon that grants the wielder increased attack speed and deals bonus damage to non-hero units.",
+  "source": "Are We Heroes Yet?, pp.12-13"
 }

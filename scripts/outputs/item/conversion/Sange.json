@@ -1,36 +1,13 @@
 {
-  "name": "Sange",
-  "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
-  "category": "Armaments",
-  "cost": 2100,
-  "sellValue": 1050,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Ogre Axe", "Belt of Strength", "Recipe"],
-    "totalCost": 2100
-  },
-  "abilities": [],
-  "stats": {
-    "health": 352,
-    "healthRegeneration": 1.6,
-    "mainAttackDamageStrength": 16,
-    "mainAttackDamageUniversal": 7.2
-  },
-  "bonus": {
-    "strength": 16,
-    "slowResistance": "20%",
-    "healthRestoreAmp": "16%"
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "352 health and 1.6 health regeneration",
-    "16 main attack damage to Strength heroes",
-    "7.2 main attack damage to Universal heroes",
-    "For Sange-based items:",
-    "Multiple sources of slow resistance do not stack",
-    "Multiple sources of health restoration amplification do not stack"
-  ],
-  "states": []
+  "item": {
+    "name": "Sange",
+    "category": ["Items", "Strength items", "Shop items"],
+    "properties": {
+      "bonus_attributes": {
+        "strength": "+8"
+      },
+      "effect": "Grants an attack speed bonus based on current strength.",
+      "unique_active_ability": "Bleeds the target for 12.5% of their maximum health as damage over 4 seconds and reduces their movement speed by 30%. The bleeding can stack up to 3 times."
+    }
+  }
 }

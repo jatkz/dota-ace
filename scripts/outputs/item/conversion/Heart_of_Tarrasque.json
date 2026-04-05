@@ -1,34 +1,5 @@
 {
-  "name": "Heart of Tarrasque",
-  "description": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
-  "category": "Armor",
-  "cost": 5200,
-  "sellValue": 2600,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Ring of Tarrasque", "Reaver", "Recipe"],
-    "totalCost": 5200
-  },
-  "abilities": [],
-  "stats": {
-    "health": 880,
-    "healthRegeneration": 4,
-    "mainAttackDamageStrength": 40,
-    "mainAttackDamageUniversal": 18
-  },
-  "bonus": {
-    "strength": 40,
-    "maxHPHealthRegen": "1.4%"
-  },
-  "additionalInfo": [
-    "The item's attributes grant 880 health and 4 health regeneration",
-    "40 main attack damage to strength heroes",
-    "18 main attack damage to universal heroes",
-    "The max-health health regeneration bonus from multiple Hearts of Tarrasque does not stack",
-    "Can regenerate up to 84% of the wielder's maximum health in one minute",
-    "Can fully regenerate the wielder's health within 71.43 seconds"
-  ],
-  "states": []
+  "title": "Heart of Tarrasque",
+  "description": "The Heart of Tarrasque is a unique item in the game Dota 2. It requires the items Bristleback and Point Booster to craft. The Heart of Tarrasque provides an increased health regeneration rate, which helps heroes recover their health faster during gameplay.",
+  "image_url": "https://liquipedia.net/dota2/images/thumb/9/93/Heart_of_Tarrasque.png/120px-Heart_of_Tarrasque.png"
 }

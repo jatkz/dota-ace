@@ -1,0 +1,19 @@
+{
+  "title": "Crella's Crozier",
+  "image": "/assets/crellas_crozier.png",
+  "category": "Items",
+  "attributes": {
+    "type": "Strength, Agility, Intelligence",
+    "bonus_attributes": {
+      "strength": "+5 Strength",
+      "agility": "+5 Agility",
+      "intelligence": "+5 Intelligence"
+    },
+    "additional_effects": [
+      "Health boost: +200 Health",
+      "Mana boost: +200 Mana",
+      "Cooldown reduction: -1 second"
+    ],
+    "item_type": "Shop item"
+  }
+}

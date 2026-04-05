@@ -1,28 +1,15 @@
 {
-  "name": "Blade of Alacrity",
-  "description": "A long blade imbued with time magic.",
-  "category": "Attributes",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": null,
-  "abilities": [],
-  "stats": {
-    "attackSpeed": 10,
-    "mainArmor": 1.67,
-    "mainAttackDamageAgility": 10,
-    "mainAttackDamageUniversal": 4.5
+  "title": "Blade of Alacrity",
+  "description": "An agility item that increases the wearer's attack speed.",
+  "properties": {
+    "Attack Speed Increase": "+30%"
   },
-  "bonus": {
-    "agility": 10
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "10 attack speed and 1.67 main armor.",
-    "10 main attack damage to Agility heroes.",
-    "4.5 main attack damage to universal heroes."
+  "category": [
+    "Items",
+    "Agility items"
   ],
-  "states": []
+  "attributes": {
+    "Cost": "1250 gold",
+    "Sell": "875 gold"
+  }
 }

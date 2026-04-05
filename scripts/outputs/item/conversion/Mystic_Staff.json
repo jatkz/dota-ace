@@ -1,26 +1,15 @@
 {
-  "name": "Mystic Staff",
-  "description": "Enigmatic staff made of only the most expensive crystals.",
-  "category": "Secret Shop",
-  "cost": 2800,
-  "sellValue": 1400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 2800
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "intelligence": 25
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance.",
-    "25 main attack damage to Intelligence heroes.",
-    "11.25 main attack damage to universal heroes."
-  ],
-  "states": []
+  "mystic_staff": {
+    "description": "The Mystic Staff is a neutral item in Dota 2 that provides +6 Intelligence and an additional +10% magic damage.",
+    "components": [
+      "Crest of Knowledge",
+      "Wand"
+    ],
+    "cost": 375,
+    "image_url": "https://liquipedia.net/dota2/images/thumb/8/8b/Mystic_Staff.png/256px-Mystic_Staff.png",
+    "category": [
+      "Items",
+      "Intelligence items"
+    ]
+  }
 }

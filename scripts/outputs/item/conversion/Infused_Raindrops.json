@@ -1,52 +1,10 @@
 {
-  "name": "Infused Raindrops",
-  "description": "Elemental protection from magical assaults.",
-  "category": "Equipment",
-  "cost": 225,
-  "sellValue": 18.8,
-  "maxStacks": 1,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": [],
-    "totalCost": 225
-  },
-  "abilities": [
-    {
-      "name": "Magical Damage Block",
-      "type": "passive",
-      "description": "Consumes a charge to block a fixed portion magical damage from damage instances over a certain value.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": 0,
-      "cooldown": 7,
-      "effects": {
-        "minDamageThreshold": 75,
-        "magicalDamageBlocked": 120,
-        "charges": 6
-      },
-      "notes": [
-        "Infused Raindrops has the highest priority in the group of damage negating abilities, blocking damage before any of them do.",
-        "When combined with other damage-negating effects (e.g. Aphotic Shield or Refraction), Infused Raindrops negate the damage while the others do not.",
-        "Has a higher priority than damage return effects (e.g. Dispersion and Blade Mail), meaning it first blocks damage before it.",
-        "Has a lower priority than Mana Shield, meaning Mana Shield first reduces damage before Infused Raindrop blocks it.",
-        "Only triggers on magical damage equal or greater than 75 (before reductions) coming from abilities and attacks, excluding self-inflicted damage and damage dealt by allies.",
-        "Ignores every form of incoming damage amplification, but does not ignore outgoing damage amplification.",
-        "Does not stack with other magical damage barriers.",
-        "If multiple sources of barriers are active on a unit, all of them lose capacity from the same absorbed damage instance.",
-        "However, if a damage instance is greater than the capacity of all barriers individually, the damage gets blocked as if the barriers were one barrier with combined capacity.",
-        "Neither consumes charges nor blocks any damage while on cooldown."
-      ]
-    }
-  ],
-  "stats": {
-    "charges": 6
-  },
-  "bonus": {
-    "manaRegeneration": 0.8
-  },
-  "additionalInfo": [
-    "When having multiple Infused Raindrops, all of them lose charges simultaneously, but only one of them blocks the damage."
-  ],
-  "states": null
+  "item_name": "Infused Raindrops",
+  "item_type": "Mana regeneration item",
+  "shop_item": true,
+  "attributes": {
+    "mana_regen_per_5": 18,
+    "bonus_intelligence": 7,
+    "duration": 25.0
+  }
 }

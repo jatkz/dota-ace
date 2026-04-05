@@ -9,15 +9,16 @@ const API_KEY = process.env.CLAUDE_API_KEY;
 
 // Main execution
 async function main() {
-    console.log('🤖 Claude API Starter Examples\n');
-    
     try {
         const parser = createParserClient('./claude-templates/parse-neutral-page.txt');
+        const backend = process.env.PARSER_BACKEND || 'claude';
 
-        console.log('Total items ', DOTA2_ITEMS.length);
+        console.log(`\n🎮 Dota 2 Neutral Items Conversion`);
+        console.log(`📊 Total neutral items: ${DOTA2_ITEMS.activeArtifacts.length}`);
+        console.log(`🔧 Backend: ${backend}`);
+        console.log(`⏳ Starting conversion...\n`);
 
-        const items = DOTA2_ITEMS.activeArtifacts.slice(0, 119);
-        console.log('items to handle....', items);
+        const items = DOTA2_ITEMS.activeArtifacts;
         const batchConfig = items.map(x => {
             const fileName = x.split('/').pop();
             const itemName = fileName.replace(/%27/g, '');
@@ -29,28 +30,46 @@ async function main() {
         })
 
         const response = await parser.batchAnalyzeFile(batchConfig);
-        
-        console.log(response);
 
-        // Save results for Ollama backend
-        if (process.env.PARSER_BACKEND === 'ollama' && response.success && response.content) {
+        // Save results
+        if (response.success && response.content) {
             const conversionDir = './scripts/outputs/neutral/conversion';
             if (!fs.existsSync(conversionDir)) {
                 fs.mkdirSync(conversionDir, { recursive: true });
             }
 
-            for (const result of response.content) {
+            let successCount = 0;
+            let errorCount = 0;
+
+            for (let i = 0; i < response.content.length; i++) {
+                const result = response.content[i];
                 const outputPath = `${conversionDir}/${result.custom_id}.json`;
+                
+                console.log(`  [${i + 1}/${response.content.length}] Saving ${result.custom_id}...`);
                 try {
-                    fs.writeFileSync(outputPath, result.output);
-                    console.log(`✅ Saved ${result.custom_id} to ${outputPath}`);
+                    // Clean up markdown code blocks if present
+                    let content = result.output;
+                    if (content.startsWith('```json')) {
+                        content = content.replace(/^```json\n/, '').replace(/\n```$/, '');
+                    } else if (content.startsWith('```')) {
+                        content = content.replace(/^```\n/, '').replace(/\n```$/, '');
+                    }
+                    
+                    fs.writeFileSync(outputPath, content);
+                    successCount++;
+                    console.log(`    ✅ Saved`);
                 } catch (saveError) {
-                    console.error(`❌ Failed to save ${result.custom_id}:`, saveError.message);
+                    console.error(`    ❌ Failed to save ${result.custom_id}:`, saveError.message);
+                    errorCount++;
                 }
             }
+
+            console.log(`\n✨ Conversion complete!`);
+            console.log(`   ✅ Successful: ${successCount}`);
+            console.log(`   ❌ Errors: ${errorCount}\n`);
         }
     } catch (error) {
-        console.error('❌ Error running examples:', error.message);
+        console.error('❌ Error during conversion:', error.message);
         console.error(error);
     }
 }

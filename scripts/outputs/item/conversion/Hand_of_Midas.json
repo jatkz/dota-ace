@@ -1,54 +1,17 @@
 {
-  "name": "Hand of Midas",
-  "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
-  "category": "Accessories",
-  "cost": 2200,
-  "sellValue": 1100,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Gloves of Haste", "Recipe"],
-    "totalCost": 2200
-  },
-  "abilities": [
-    {
-      "name": "Transmute",
-      "type": "active",
-      "description": "Instantly kills the target non-hero unit, transmuting it into gold and experience. Sets the target's gold bounty to a fixed value, while multiplying the experience bounty.",
-      "castAnimation": "0 + 0",
-      "castRange": 600,
-      "manaCost": 0,
-      "cooldown": "110 (charge replenish time)",
-      "effects": {
-        "setGoldBounty": 160,
-        "experienceBountyMultiplier": 2.1,
-        "charges": 2,
-        "initialCharges": 1,
-        "casterMadstoneAcquired": 2,
-        "casterMadstoneAcquiredTurbo": 3,
-        "numberOfRandomAllies": 1,
-        "numberOfRandomAlliesTurbo": 2
-      },
-      "notes": [
-        "If cast on a neutral creep, also grants a few Madstone to the caster, and one to random allies",
-        "Cannot be cast on Roshan, Creep-heroes, Ancient Creeps, and Necronomicon Warriors",
-        "A newly acquired Hand of Midas starts with 1 charge",
-        "Upon cast, Transmute instantly kills the target unit, dealing 100% × CurrentHP damage to kill the targeted creep, triggering most on-damage events",
-        "This damage fully ignores any form of damage manipulation",
-        "Grants the caster 160 unreliable gold and 2.1 × XPBounty",
-        "The target's default bounties are not granted. This means that no hero nearby gains the default gold and experience from death",
-        "Despite the visual effects, the gold and experience are granted instantly",
-        "If targeting a Flagbearer Creep, the aura gold bounty is still granted"
-      ]
-    }
-  ],
-  "stats": null,
-  "bonus": {
-    "attackSpeed": 35
-  },
-  "additionalInfo": [
-    "View the Transmute Efficiency table for Transmute gold acquired based on the target it is used on"
-  ],
-  "states": null
+  "hand_of_midas": {
+    "cost": 130,
+    "effect": {
+      "gold_bounty": "Grants a stack of gold bounty on the target hero that grants additional experience and gold when killed by this hero.",
+      "stacks": {
+        "max_stacks": 6,
+        "gold_per_stack": 25
+      }
+    },
+    "usage": {
+      "early_game": "Use to farm effectively in lane or push turrets.",
+      "team_fights": "Use on important heroes for a significant gold and experience gain."
+    },
+    "tier": "Tier 1"
+  }
 }

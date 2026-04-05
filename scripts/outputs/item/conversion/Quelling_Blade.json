@@ -1,63 +1,26 @@
 {
-  "name": "Quelling Blade",
-  "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
-  "category": "Equipment",
-  "cost": 100,
-  "sellValue": 50,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Quelling Blade"],
-    "totalCost": 100
+  "title": "Quelling Blade",
+  "description": "The Quelling Blade is an item in the game Dota 2 that serves as a starting item for melee heroes. It provides increased attack speed and reduces the attack speed of nearby enemies.",
+  "stats": {
+    "bonus_aspd": "+30% Attack Speed",
+    "debuff_aspd": "-15% Enemy Attack Speed within 600 range"
   },
-  "abilities": [
+  "cost": {
+    "base_gold": 75,
+    "total_cost": 200
+  },
+  "components": [
     {
-      "name": "Chop Tree",
-      "type": "active",
-      "description": "Instantly destroys the targeted tree.",
-      "castAnimation": "0 + 0",
-      "castRange": 350,
-      "manaCost": 0,
-      "cooldown": 4,
-      "effects": {
-        "affects": "Trees"
-      },
-      "notes": [
-        "Does not share cooldown with Chop Tree."
-      ]
+      "item_name": "Iron Talisman",
+      "quantity": 1
     },
     {
-      "name": "Quell",
-      "type": "passive",
-      "description": "Grants the wielder bonus attack damage against non-hero units.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "attackDamageBonus": 8,
-        "attackDamageBonusRanged": 4,
-        "affects": "Enemies",
-        "damageType": "Attack / Physical"
-      },
-      "notes": [
-        "Quell is considered as a conditional attack damage bonus.",
-        "Although the attack damage bonus values are not displayed in the HUD, it is still considered and directly added to wielder's attack damage.",
-        "The attack damage bonus values are considered by critical strike, cleave, splash, lifesteal and with certain abilities (e.g. Psi Blades and Moon Glaives)",
-        "It can be reduced only by flat reductions (e.g. damage block).",
-        "Since it is considered bonus attack damage, it is not affected by percentage-based attack damage bonuses or reductions.",
-        "The attack damage bonus adapts immediately depending on the wielder's range type (melee or ranged).",
-        "Stacks with the Quell of Battle Fury, but not with additional Quelling Blades.",
-        "Does not work against Buildings, Ward-type units, Illusions, Spirit Bear, Couriers, Allied units"
-      ]
+      "item_name": "Branch of Life",
+      "quantity": 1
     }
   ],
-  "stats": {},
-  "bonus": {},
-  "additionalInfo": [
-    "Quelling Blade is usually purchased by melee carries who need to ensure that they can get last hits in the lane.",
-    "Quell is less effective if its wielder is a ranged hero."
-  ],
-  "states": []
+  "builds_into": [
+    "Maelstrom",
+    "Power Treads"
+  ]
 }

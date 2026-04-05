@@ -1,48 +1,14 @@
 {
-  "name": "Pavise",
-  "description": "Devised by a wizard who made one too many enemies.",
-  "category": "Support",
-  "cost": 1400,
-  "sellValue": 700,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Energy Booster", "Ring of Protection", "Fluffy Hat", "Recipe"],
-    "totalCost": 1400
-  },
-  "abilities": [
-    {
-      "name": "Protect",
-      "type": "active",
-      "description": "Grants the target ally a physical damage barrier for a while.",
-      "castAnimation": "0 + 0",
-      "castRange": 1000,
-      "manaCost": 100,
-      "cooldown": 16,
-      "effects": {
-        "physicalDamageBarrier": 250,
-        "duration": 7
-      },
-      "notes": [
-        "Grants a physical damage barrier that absorbs physical damage values, causing several on-damage effects to not trigger within its capacity",
-        "Stacks additively with the same damage-type barrier sources, and independently with other damage-type barrier sources",
-        "Has a higher priority than universal damage barriers in the group of damage barriers",
-        "When combined with other higher-priority damage-negating sources (e.g. Templar Assassin Refraction), Protect does not absorb any damage until the damage-negation sources expire",
-        "Successive casts refresh the buff and reset the damage barrier capacity",
-        "Shares cooldown with Solar Crest"
-      ]
-    }
+  "page_title": "Pavise",
+  "page_id": 2364755,
+  "categories": [
+    "Items",
+    "Health boost items",
+    "Mana boost items",
+    "Armor items",
+    "Shop items"
   ],
-  "stats": {},
-  "bonus": {
-    "health": 175,
-    "mana": 250,
-    "armor": 2
-  },
-  "additionalInfo": [
-    "This item is shown as a Team Item in the shop window when purchased by an ally",
-    "If a Solar Crest was purchased as well, Solar Crest's icon takes priority"
-  ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

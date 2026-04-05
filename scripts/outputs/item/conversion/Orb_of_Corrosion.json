@@ -1,53 +1,22 @@
 {
-  "name": "Orb of Corrosion",
-  "description": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
-  "category": "Accessories",
-  "cost": 1050,
-  "sellValue": 525,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Orb of Frost", "Orb of Blight", "Band of Elvenskin"],
-    "totalCost": 1050
+  "item_name": "Orb of Corrosion",
+  "category": "Agility items",
+  "cost": 150,
+  "attributes": {
+    "bonus_agility": "+6 Agility",
+    "corrosion_damage": "-3% Health regeneration"
   },
-  "abilities": [
+  "components": [
     {
-      "name": "Corrosion",
-      "type": "passive",
-      "description": "The wielder's attacks apply armor reduction and movement speed slow on enemy units.",
-      "castAnimation": null,
-      "castRange": null,
-      "manaCost": null,
-      "cooldown": null,
-      "effects": {
-        "armorReduction": 3,
-        "moveSpeedSlow": 8,
-        "moveSpeedSlowRanged": 16,
-        "healthRestoreReduction": 16,
-        "duration": 2
-      },
-      "notes": [
-        "The corrosive attacks also reduce the effectiveness of health restoration on the targets",
-        "The slow is more effective against ranged enemies",
-        "Does not pierce Debuff Immunity sources",
-        "This ability is not bestowed by Illusions",
-        "The bonus armor reduction value does not stack",
-        "Reapplying the debuff refreshes the duration",
-        "Affects allied units and buildings",
-        "Does not work against ward-type units and couriers",
-        "Weaker sources do not reduce armor if a stronger source is present, except for Desolator and Stygian Desolator, which stack with each other",
-        "Weaker sources do not slow or reduce health restoration if a stronger source is present"
-      ]
+      "item_name": "Ring of Protection",
+      "cost": 450
+    },
+    {
+      "item_name": "Bottle",
+      "cost": 375
     }
   ],
-  "stats": {},
-  "bonus": {
-    "agility": 7
-  },
-  "additionalInfo": [
-    "Dispellable by any Dispel sources",
-    "The ability effects are applied as follows: 1. The modifier_blight_stone_buff, 2. The wielder's attack instance"
-  ],
-  "states": []
+  "shop_locations": [
+    "Secret Shop"
+  ]
 }

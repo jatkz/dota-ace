@@ -1,25 +1,17 @@
 {
-  "name": "Falcon Blade",
-  "description": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
-  "category": "Accessories",
-  "cost": 1125,
-  "sellValue": 562.5,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Fluffy Hat", "Sage's Mask", "Blades of Attack", "Recipe"],
-    "totalCost": 1125
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "health": 200,
-    "manaRegeneration": 1.8,
-    "attackDamage": 14
-  },
-  "additionalInfo": [
-    "Heroes who benefit from bonus stats that Falcon Blade provide in the early laning stage"
-  ],
-  "states": []
+  "item": {
+    "name": "Falcon Blade",
+    "category": "Items",
+    "type": [
+      "Health boost items",
+      "Mana regeneration items",
+      "Damage items"
+    ],
+    "shop_type": "Shop items",
+    "attributes": {
+      "health_boost": 30,
+      "mana_regeneration": 2,
+      "damage": 14
+    }
+  }
 }

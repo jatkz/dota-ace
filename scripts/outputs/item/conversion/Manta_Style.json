@@ -1,68 +1,7 @@
 {
+  "item_id": "manta",
   "name": "Manta Style",
-  "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
-  "category": "Armaments",
-  "cost": 4650,
-  "sellValue": 2325,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Yasha", "Diadem", "Recipe"],
-    "totalCost": 4650
-  },
-  "abilities": [
-    {
-      "name": "Mirror Image",
-      "type": "active",
-      "description": "Creates multiple mirrored illusions of the wielder that deals a portion of the wielder's damage and receives additional incoming damage.",
-      "castAnimation": "0 + 0",
-      "castRange": null,
-      "manaCost": 125,
-      "cooldown": 34,
-      "effects": {
-        "splitTime": 0.1,
-        "numberOfIllusions": 2,
-        "duration": 18,
-        "meleeDamageDealt": "33%",
-        "rangedDamageDealt": "28%",
-        "damageTaken": "300%"
-      },
-      "notes": [
-        "The wielder is hidden upon cast; this disjoints incoming projectiles",
-        "The 0.1-second split time",
-        "Issues the wielder a stop-command, canceling all queued orders, including orders to player-controlled units",
-        "Applies a basic dispel on the wielder",
-        "Creates the illusions based on the ability's cast position",
-        "Grants 400-radius flying vision centered around caster during split time",
-        "The wielder and created illusions reappear in random positions within fixed formations",
-        "Recasting the ability replaces all Mirror Image-based illusions of the current instance"
-      ]
-    }
-  ],
-  "stats": {
-    "health": 220,
-    "healthRegeneration": 1,
-    "mana": 120,
-    "manaRegeneration": 0.5,
-    "magicResistance": "1%",
-    "attackSpeed": 26,
-    "mainArmor": 4.33,
-    "strengthDamage": 10,
-    "agilityDamage": 26,
-    "intelligenceDamage": 10,
-    "universalDamage": 20.7
-  },
-  "bonus": {
-    "strength": 10,
-    "agility": 26,
-    "intelligence": 10,
-    "moveSpeed": "10%",
-    "attackSpeed": 15
-  },
-  "additionalInfo": [
-    "For Yasha-based items: Multiple sources of movement speed do not stack",
-    "For Yasha-based items: Multiple sources of attack speed fully stack"
-  ],
-  "states": null
+  "type": "Attack speed item",
+  "category": ["Items", "Strength items", "Agility items", "Intelligence items"],
+  "effect": "+10% Attack Speed and +25 Mana Regeneration per Second"
 }

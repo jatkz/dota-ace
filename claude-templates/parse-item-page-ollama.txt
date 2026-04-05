@@ -1,0 +1,9 @@
+From the HTML, extract:
+
+name: [item name]
+cost: [number]
+description: [text]
+abilities: [list of abilities with name, type, description]
+stats: [key-value pairs]
+
+Return as JSON only.

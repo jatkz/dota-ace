@@ -1,40 +1,13 @@
 {
-  "name": "Diadem",
-  "description": "A crown that can never be removed.",
-  "category": "Attributes",
-  "cost": 1000,
-  "sellValue": 500,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Phylactery", "Holy Locket", "Dagon", "Spirit Vessel", "Harpoon", "Manta Style"],
-    "totalCost": null
-  },
-  "abilities": [],
-  "stats": {
-    "health": 132,
-    "healthRegeneration": 0.6,
-    "mana": 72,
-    "manaRegeneration": 0.3,
-    "magicResistance": 0.6,
-    "attackSpeed": 6,
-    "mainArmor": 1,
-    "mainAttackDamage": 6,
-    "mainAttackDamageUniversal": 8.1
-  },
-  "bonus": {
-    "strength": 6,
-    "agility": 6,
-    "intelligence": 6
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "132 health and 0.6 health regeneration.",
-    "72 mana, 0.3 mana regeneration and 0.6% flat base magic resistance.",
-    "6 attack speed and 1 main armor.",
-    "6 main attack damage to all Strength/Agility/Intelligence heroes.",
-    "8.1 main attack damage to universal heroes."
+  "title": "Diadem",
+  "categories": [
+    "Items",
+    "Strength items",
+    "Agility items",
+    "Intelligence items",
+    "Shop items"
   ],
-  "states": []
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
 }

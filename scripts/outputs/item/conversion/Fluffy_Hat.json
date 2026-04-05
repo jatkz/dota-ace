@@ -1,21 +1,13 @@
 {
-  "name": "Fluffy Hat",
-  "description": "Fine and functional foppery for the fashion-forward fighter.",
-  "category": "Miscellaneous",
-  "cost": 250,
-  "sellValue": 125,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Force Staff", "Falcon Blade", "Pavise"],
-    "totalCost": null
-  },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "health": 125
-  },
-  "additionalInfo": [],
-  "states": []
+  "item_name": "Fluffy Hat",
+  "category": "Items",
+  "subcategories": [
+    "Health boost items",
+    "Shop items"
+  ],
+  "attributes": {
+    "cost": 100,
+    "sell_value": 25,
+    "bonus_health": 30
+  }
 }

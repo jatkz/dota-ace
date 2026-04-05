@@ -1,57 +1,18 @@
 {
-  "name": "Arcane Blink",
-  "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
-  "category": "Armaments",
-  "cost": 6800,
-  "sellValue": 3400,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Blink Dagger", "Mystic Staff", "Recipe"],
-    "totalCost": 6800
-  },
-  "abilities": [
-    {
-      "name": "Arcane Blink",
-      "type": "active",
-      "description": "Instantly teleports the wielder towards the targeted point. After the teleportation, heals and replenishes the caster's health and mana.",
-      "castAnimation": "0 + 0",
-      "castRange": "Global",
-      "manaCost": 0,
-      "cooldown": 9,
-      "effects": {
-        "maxBlinkDistance": 1400,
-        "heal": 250,
-        "replenish": 100,
-        "downtime": 3
-      },
-      "notes": [
-        "Blink utilizes the teleport mechanic",
-        "When targeting a point within 1400 distance, teleports directly onto the targeted point",
-        "When targeting a point beyond 1400 distance, teleports 1400 distance towards the targeted point instead",
-        "Incoming projectiles are disjointed upon teleporting",
-        "Taking more than 0 damage from any other player or Roshan (after reductions and not flagged as HP Removal) puts the item on a fixed cooldown",
-        "Cannot be reset with cooldown reset sources",
-        "Doubletap targets a point in front of the team's Fountain",
-        "Shares cooldown with Blink Dagger, Overwhelming Blink, Swift Blink, and Arcane Blink"
-      ]
-    }
+  "title": "Arcane Blink",
+  "type": "Intelligence items",
+  "categories": [
+    "Items",
+    "Intelligence items",
+    "Shop items"
   ],
-  "stats": {
-    "mana": 300,
-    "manaRegeneration": 1.25,
-    "magicResistance": "2.5%",
-    "mainAttackDamageIntelligence": 25,
-    "mainAttackDamageUniversal": 11.25
+  "description": "Arcane Blink is an Intelligence item available in the Dota 2 game. It provides a short-range blink ability to its user, allowing them to move quickly across the map or bypass obstacles.",
+  "attributes": {
+    "cost": 1800,
+    "required_intelligence": 45,
+    "blink_range": 475,
+    "cool_down": 3.2,
+    "mana_cost": 60
   },
-  "bonus": {
-    "intelligence": 25
-  },
-  "additionalInfo": [
-    "The item's attributes grant 300 mana, 1.25 mana regeneration and 2.5% flat base magic resistance",
-    "25 main attack damage to Intelligence heroes",
-    "11.25 main attack damage to Universal heroes"
-  ],
-  "states": null
+  "hidden_category": "Pages with hard coded colors"
 }

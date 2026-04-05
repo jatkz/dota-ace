@@ -1,0 +1,54 @@
+{
+  "page": {
+    "title": "Hydra's Breath",
+    "url": "https://liquipedia.net/dota2/Hydra%27s_Breath"
+  },
+  "content": {
+    "image": {
+      "src": "/dota2/images/1/1c/Hydramas_breath.png",
+      "alt": "Hydra's Breath image",
+      "width": "48px",
+      "height": "48px"
+    },
+    "item_type": "Strength, Agility, Damage",
+    "shop_type": "Shop item",
+    "passive_effect": {
+      "description": "Increases hero strength by 10 and agility by 10.",
+      "bonus_attributes": {
+        "strength": "+10",
+        "agility": "+10"
+      }
+    },
+    "active_effect": {
+      "description": "Emits a cone of fire that deals 50 fire damage to enemies in the path. Lasts for 2 seconds.",
+      "damage": {
+        "type": "fire",
+        "amount": "50",
+        "duration": "2 seconds"
+      }
+    },
+    "notes": [
+      "Hydra's Breath can be upgraded into a Dragon's Breath, which has increased damage and range."
+    ],
+    "categories": [
+      "Articles under construction",
+      "Items",
+      "Strength items",
+      "Agility items",
+      "Damage items",
+      "Shop items"
+    ]
+  },
+  "advertisements": [
+    {
+      "id": "dota2_970x250_BTF",
+      "size": "970x250"
+    }
+  ],
+  "footer": {
+    "retrieved_from": "https://liquipedia.net/dota2/index.php?title=Hydra%27s_Breath&oldid=2364615"
+  },
+  "hidden_categories": [
+    "Pages with hard coded colors"
+  ]
+}

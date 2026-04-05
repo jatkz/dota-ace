@@ -1,31 +1,12 @@
 {
-  "name": "Yasha",
-  "description": "Yasha is regarded as the swiftest weapon ever created.",
-  "category": "Armaments",
-  "cost": 2100,
-  "sellValue": 1050,
-  "maxStacks": null,
-  "shareable": false,
-  "usageAlert": false,
-  "recipe": {
-    "components": ["Blade of Alacrity", "Band of Elvenskin", "Recipe"],
-    "totalCost": 2100
+  "item_name": "Yasha",
+  "category": "Agility items",
+  "attributes": {
+    "bonus_agility": "+15 Agility",
+    "attack_speed": "+20% Attack Speed",
+    "movement_speed": "+40 Movement Speed"
   },
-  "abilities": [],
-  "stats": {},
-  "bonus": {
-    "agility": 16,
-    "moveSpeed": "10%",
-    "attackSpeed": 15
-  },
-  "additionalInfo": [
-    "The item's attributes grant the following additional stats:",
-    "16 attack speed and 2.67 main armor.",
-    "16 main attack damage to Agility heroes.",
-    "7.2 main attack damage to universal heroes.",
-    "For Yasha-based items:",
-    "Multiple sources of movement speed do not stack.",
-    "Multiple sources of attack speed fully stack."
-  ],
-  "states": []
+  "cost": {
+    "gold": 2000
+  }
 }

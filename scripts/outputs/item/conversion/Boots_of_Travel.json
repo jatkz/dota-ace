@@ -1,12 +1,4 @@
 {
-  "items": [
-    {
-      "tier": "Tier 5",
-      "name": "Boots of Travel"
-    },
-    {
-      "tier": "Unreleased",
-      "name": "Gloves of Travel"
-    }
-  ]
+  "title": "Boots of Travel",
+  "image": "https://liquipedia.net/dota2/images/thumb/0/0d/Boots_of_Travel.png/100px-Boots_of_Travel.png"
 }
