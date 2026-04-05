@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import * as cheerio from 'cheerio';
+import cheerio from 'cheerio';
 /**
  * Optimizes HTML content by removing styling, scripts, and other non-essential attributes
  * @param {string} html - The HTML content to optimize

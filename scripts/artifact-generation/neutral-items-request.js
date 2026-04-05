@@ -1,6 +1,6 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
-import * as cheerio from 'cheerio';
+import cheerio from 'cheerio';
 
 import { optimizeItemGridHtmlForParsing, optimizeItemSingleHtmlForParsing } from './html-parser.js';
 
@@ -61,6 +61,10 @@ async function main() {
             const cleanItemHtml = optimizeNeutralSingleHtmlForParsing(html);
 
             // 3. Save to file
+            const cleanDir = './scripts/outputs/neutrals/clean';
+            if (!fs.existsSync(cleanDir)) {
+                fs.mkdirSync(cleanDir, { recursive: true });
+            }
             const outputPath = `./scripts/outputs/neutrals/clean/${itemName}.html`;
             fs.writeFileSync(outputPath, cleanItemHtml, 'utf8');
         }
@@ -89,6 +93,10 @@ async function main() {
             const cleanItemHtml = optimizeNeutralSingleHtmlForParsing(html);
 
             // 3. Save to file
+            const cleanDir = './scripts/outputs/enchantments/clean';
+            if (!fs.existsSync(cleanDir)) {
+                fs.mkdirSync(cleanDir, { recursive: true });
+            }
             const outputPath = `./scripts/outputs/enchantments/clean/${itemName}.html`;
             fs.writeFileSync(outputPath, cleanItemHtml, 'utf8');
         }
