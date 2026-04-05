@@ -1,10 +1,11 @@
 import fs from 'fs';
+import fetch from 'node-fetch';
 import { optimizeHtmlForParsing } from './html-parser.js';
 /**
  * Fetch all heroes from website
  * 
  */
-const DOTA2_HEROES = JSON.parse(fs.readFileSync('heroes-list.json', 'utf8'));
+const DOTA2_HEROES = JSON.parse(fs.readFileSync('./scripts/outputs/heroes-list.json', 'utf8'));
 
 // Simple array for URL generation
 const DOTA2_HERO_URL_NAMES = DOTA2_HEROES.map(hero => hero.urlName);

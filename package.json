@@ -5,16 +5,18 @@
   "description": "",
   "main": "firstpart-1.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fetch-data": "node scripts/artifact-generation/fetch-all-data.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.53.0",
-    "cheerio": "^1.1.0",
-    "clipboardy": "^4.0.0",
+    "cheerio": "^0.22.0",
+    "clipboardy": "^2.3.0",
     "dotenv": "^16.5.0",
+    "node-fetch": "^2.7.0",
     "vosk": "^0.3.39"
   }
 }

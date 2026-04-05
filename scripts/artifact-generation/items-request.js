@@ -1,4 +1,5 @@
 import fs from 'fs';
+import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 
 import { optimizeItemGridHtmlForParsing, optimizeNeutralSingleHtmlForParsingV2 } from './html-parser.js';

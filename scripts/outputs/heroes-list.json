@@ -225,8 +225,18 @@
         "runConversion": false
     },
     {
+        "urlName": "Kez",
+        "displayName": "Kez",
+        "runConversion": false
+    },
+    {
         "urlName": "Kunkka",
         "displayName": "Kunkka",
+        "runConversion": false
+    },
+    {
+        "urlName": "Largo",
+        "displayName": "Largo",
         "runConversion": false
     },
     {
@@ -267,6 +277,11 @@
     {
         "urlName": "Luna",
         "displayName": "Luna",
+        "runConversion": false
+    },
+    {
+        "urlName": "Lycan",
+        "displayName": "Lycan",
         "runConversion": false
     },
     {
@@ -375,6 +390,11 @@
         "runConversion": false
     },
     {
+        "urlName": "Phoenix",
+        "displayName": "Phoenix",
+        "runConversion": false
+    },
+    {
         "urlName": "Primal_Beast",
         "displayName": "Primal Beast",
         "runConversion": false
@@ -460,6 +480,11 @@
         "runConversion": false
     },
     {
+        "urlName": "Snapfire",
+        "displayName": "Snapfire",
+        "runConversion": false
+    },
+    {
         "urlName": "Sniper",
         "displayName": "Sniper",
         "runConversion": false
@@ -467,6 +492,11 @@
     {
         "urlName": "Spectre",
         "displayName": "Spectre",
+        "runConversion": false
+    },
+    {
+        "urlName": "Spirit_Bear",
+        "displayName": "Spirit Bear",
         "runConversion": false
     },
     {
