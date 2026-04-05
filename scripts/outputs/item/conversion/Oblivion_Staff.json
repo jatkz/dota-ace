@@ -1,14 +1,9 @@
 {
-  "oblivion_staff": {
-    "info": {
-      "cost": "400",
-      "base_stats": {
-        "mana_regen": "+1.5"
-      },
-      "bonus_attributes": {
-        "intelligence": "+3"
-      }
-    },
-    "lore": "A staff of ancient power that whispers secrets of the past to those who wield it."
+  "name": "Oblivion Staff",
+  "cost": 1625,
+  "description": "Deceptively hidden as an ordinary quarterstaff, it is actually very powerful, much like the Eldritch who originally possessed it.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+10 Intelligence+1.25 Mana Regeneration+35 Attack Speed"
   }
 }

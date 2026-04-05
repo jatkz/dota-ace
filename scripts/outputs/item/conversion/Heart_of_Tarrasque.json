@@ -1,5 +1,16 @@
 {
-  "title": "Heart of Tarrasque",
-  "description": "The Heart of Tarrasque is a unique item in the game Dota 2. It requires the items Bristleback and Point Booster to craft. The Heart of Tarrasque provides an increased health regeneration rate, which helps heroes recover their health faster during gameplay.",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/9/93/Heart_of_Tarrasque.png/120px-Heart_of_Tarrasque.png"
+  "name": "Heart of Tarrasque",
+  "cost": 5100,
+  "description": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
+  "abilities": [
+    {
+      "name": "Behemoth's Blood",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+40",
+    "Max HP Health Regen": "+1%"
+  }
 }

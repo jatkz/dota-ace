@@ -1,0 +1,46 @@
+{
+  "name": "Spirit Bear",
+  "description": "The Spirit Bear will level up alongside Lone Druid, with its Gold & EXP Bounty scaling as it levels up.",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 0,
+    "agility": 0,
+    "intelligence": 0
+  },
+  "abilities": [
+    {
+      "name": "Demolish",
+      "type": "passive",
+      "description": "Grants the Spirit Bear bonus conditional attack damage on buildings."
+    },
+    {
+      "name": "Return",
+      "type": "active",
+      "description": "Channels a short duration then teleports the Spirit Bear back to Lone Druid."
+    },
+    {
+      "name": "Entangling Claws",
+      "type": "passive",
+      "description": "Allows Spirit Bear to Entangle enemy heroes once they gain 5 stacks. Entangled enemies are rooted and take damage overtime. The Spirit Bear's attacks are permanently empowered, a successful attack applies an Entangle stack on enemy heroes."
+    },
+    {
+      "name": "Savage Roar",
+      "type": "active",
+      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled."
+    },
+    {
+      "name": "Spirit Link",
+      "type": "passive",
+      "description": "Both the Lone Druid and the Spirit Bear shares a percentage of their lifesteal with each other. Grants the Spirit Bear a greater movement speed bonus."
+    },
+    {
+      "name": "Fetch",
+      "type": "active",
+      "description": "Grabs the Target Ally, Enemy or Rune, and uncontrollably drags them to Lone Druid for the duration. Enemies receive damage over time. When dragging a unit, they are rooted and the Spirit Bear is slowed."
+    }
+  ]
+}

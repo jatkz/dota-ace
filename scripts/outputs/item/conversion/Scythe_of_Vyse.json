@@ -1,18 +1,16 @@
 {
-  "page_title": "Scythe of Vyse",
-  "attributes": {
-    "Cost": 2600,
-    "Primary Attribute": "Intelligence",
-    "Bonus Attributes": "+15 Intelligence +40 Mana Regeneration",
-    "Craftability": "Not Craftable"
-  },
-  "description": "The Scythe of Vyse is a Tier 3 item in Dota 2. It provides significant intelligence and mana regeneration, making it a powerful choice for support heroes that rely on spells.",
-  "categories": [
-    "Items",
-    "Intelligence items",
-    "Mana regeneration items"
+  "name": "Scythe of Vyse",
+  "cost": 5200,
+  "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
+  "abilities": [
+    {
+      "name": "Hex",
+      "type": "active",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Intelligence": "+30",
+    "Mana Regeneration": "+8.5"
+  }
 }

@@ -1,14 +1,17 @@
 {
-  "item_name": "Wind Waker",
-  "item_type": "Intelligence items",
-  "attributes": {
-    "intelligence_gain": 15,
-    "bonus_mana_regen": 0.6,
-    "bonus_movement_speed": 30
-  },
-  "shop_availability": {
-    "secret_shop": true,
-    "side_shop": false,
-    "main_shop": false
+  "name": "Wind Waker",
+  "cost": 6800,
+  "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
+  "abilities": [
+    {
+      "name": "Cyclone",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+35",
+    "Mana Regeneration": "+3",
+    "Move Speed": "+30"
   }
 }

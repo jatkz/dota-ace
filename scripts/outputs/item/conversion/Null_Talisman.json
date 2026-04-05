@@ -1,42 +1,13 @@
 {
-  "title": "Null Talisman",
-  "item_type": "basic item",
-  "cost": 300,
-  "sell_value": 150,
-  "category": "Items",
-  "attributes": {
-    "bonus_attributes": [
-      {
-        "attribute": "Strength",
-        "value": "+2"
-      },
-      {
-        "attribute": "Agility",
-        "value": "+2"
-      },
-      {
-        "attribute": "Intelligence",
-        "value": "+2"
-      }
-    ],
-    "other_attributes": [
-      {
-        "attribute": "Mana boost",
-        "value": "60"
-      },
-      {
-        "attribute": "Mana regeneration",
-        "value": "1.5"
-      }
-    ]
-  },
-  "drop_sources": [
-    "Creeps",
-    "Neutral Creeps",
-    "Courier Drops"
-  ],
-  "notes": [
-    "Provides a significant mana boost and regeneration, making it useful for spells-heavy heroes.",
-    "Can be upgraded into various other items."
-  ]
+  "name": "Null Talisman",
+  "cost": 505,
+  "description": "A small gemstone attached to several chains.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+2",
+    "Agility": "+2",
+    "Intelligence": "+5",
+    "Mana": "+3%",
+    "Mana Regeneration": "+1"
+  }
 }

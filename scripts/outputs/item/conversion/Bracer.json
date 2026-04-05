@@ -1,24 +1,11 @@
 {
-  "title": "Bracer",
-  "item_type": "Strength item",
-  "category": [
-    "Items",
-    "Strength items"
-  ],
-  "description": "The Bracer is a basic item that provides +20 Strength, +5 Agility, and +5 Intelligence. It also grants +1% Health Regen and stacks with other health regeneration items.",
+  "name": "Bracer",
+  "cost": 505,
+  "description": "The bracer is a common choice to toughen up defenses and increase longevity.",
+  "abilities": [],
   "stats": {
-    "strength": 20,
-    "agility": 5,
-    "intelligence": 5,
-    "health_regen": 1
-  },
-  "components": [
-    "Claymore",
-    "Talisman of Evasion"
-  ],
-  "cost": 600,
-  "builds_into": [
-    "Belt of Strength",
-    "Mithril Hammer"
-  ]
+    "Cost": 505,
+    "Sell Value": 252.5,
+    "Bonus": "+5 Strength+2 Agility+2 Intelligence+50 Health+0.75 Health Regeneration"
+  }
 }

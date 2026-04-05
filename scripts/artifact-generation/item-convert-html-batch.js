@@ -1,4 +1,5 @@
 import { createParserClient } from '../ParserClient.js';
+import { normalizeFile } from './normalize-conversion-outputs.js';
 import fs from 'fs';
 
 const itemsListPath = './scripts/outputs/itemGridLinks.json';
@@ -54,6 +55,7 @@ async function main() {
                     }
                     
                     fs.writeFileSync(outputPath, content);
+                    normalizeFile('item', outputPath);
                     successCount++;
                     
                     // Log progress every 10 items

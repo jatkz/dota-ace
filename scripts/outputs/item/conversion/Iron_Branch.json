@@ -1,12 +1,18 @@
 {
-  "item_name": "Iron Branch",
-  "item_type": "Neutral item",
-  "category": ["Strength items", "Agility items", "Intelligence items"],
-  "description": "Grants +3 Strength and +4 Mana.",
-  "drop_locations": {
-    "Tier_1_River_Camps": true,
-    "Tier_2_Mid_Jungle": false
-  },
-  "cost": 150,
-  "shop_availability": ["Secret shop", "Side shop"]
+  "name": "Iron Branch",
+  "cost": 55,
+  "description": "A seemingly ordinary branch, its ironlike qualities are bestowed upon the bearer.",
+  "abilities": [
+    {
+      "name": "Plant Tree",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": 27.5,
+    "Stacks": "1 MAX / Inventory Slot",
+    "Charges": "1 INIT",
+    "Bonus": "+1 Strength+1 Agility+1 Intelligence"
+  }
 }

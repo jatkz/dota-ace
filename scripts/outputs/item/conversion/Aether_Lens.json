@@ -1,19 +1,17 @@
 {
-  "page_title": "Aether Lens",
-  "attributes": {
-    "Mana boost items": "",
-    "Mana regeneration items": "",
-    "Shop items": ""
-  },
-  "description": "The Aether Lens is a consumable item in Dota 2 that increases the caster's Intelligence by 10 for 60 seconds. It costs 50 gold and is available at the secret shop.",
-  "image_url": null,
-  "categories": [
-    "Items",
-    "Mana boost items",
-    "Mana regeneration items",
-    "Shop items"
+  "name": "Aether Lens",
+  "cost": 2275,
+  "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
+  "abilities": [
+    {
+      "name": "Aethereal Focus",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Mana": "+300",
+    "Mana Regeneration": "+2.5",
+    "Cast Range": "+225"
+  }
 }

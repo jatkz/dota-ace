@@ -1,7 +1,9 @@
 import { createParserClient } from '../ParserClient.js';
+import { normalizeFile } from './normalize-conversion-outputs.js';
 import fs from 'fs';
 
 const DOTA2_HEROES = JSON.parse(fs.readFileSync('./scripts/outputs/heroes-list.json', 'utf8'));
+const FORCE_ALL_HEROES = process.env.FORCE_ALL_HEROES === '1';
 
 // Main execution
 async function main() {
@@ -14,8 +16,10 @@ async function main() {
 
         const parser = createParserClient('./claude-templates/parse-hero-page.txt');
 
-        const heroes = DOTA2_HEROES.filter(x => x.runConversion);
-        console.log(`  Processing ${heroes.length} heroes marked for conversion...\n`);
+        const heroes = FORCE_ALL_HEROES
+            ? DOTA2_HEROES
+            : DOTA2_HEROES.filter(x => x.runConversion);
+        console.log(`  Processing ${heroes.length} heroes${FORCE_ALL_HEROES ? ' (forced full rerun)' : ' marked for conversion'}...\n`);
         
         const batchConfig = heroes.map(x => {
             return {
@@ -51,6 +55,7 @@ async function main() {
                     }
                     
                     fs.writeFileSync(outputPath, content);
+                    normalizeFile('hero', outputPath);
                     successCount++;
                     console.log(`    ✅ Saved`);
                 } catch (saveError) {
@@ -63,13 +68,15 @@ async function main() {
             console.log(`   ✅ Successful: ${successCount}`);
             console.log(`   ❌ Errors: ${errorCount}\n`);
 
-            // Mark heroes as converted
-            for (const hero of heroes) {
-                const index = DOTA2_HEROES.findIndex(x => x.displayName == hero.displayName);
-                DOTA2_HEROES[index].runConversion = false;
-            }
+            if (!FORCE_ALL_HEROES) {
+                // Mark heroes as converted
+                for (const hero of heroes) {
+                    const index = DOTA2_HEROES.findIndex(x => x.displayName == hero.displayName);
+                    DOTA2_HEROES[index].runConversion = false;
+                }
 
-            fs.writeFileSync('./scripts/outputs/heroes-list.json', JSON.stringify(DOTA2_HEROES, null, 4));
+                fs.writeFileSync('./scripts/outputs/heroes-list.json', JSON.stringify(DOTA2_HEROES, null, 4));
+            }
         }
         
     } catch (error) {

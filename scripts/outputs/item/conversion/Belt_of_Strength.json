@@ -1,9 +1,9 @@
 {
-  "item": {
-    "name": "Belt of Strength",
-    "category": "Strength items",
-    "description": "Grants +5 Strength.",
-    "shop": true,
-    "rarity": "Common"
+  "name": "Belt of Strength",
+  "cost": 450,
+  "description": "A valued accessory for improving vitality.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+6 Strength"
   }
 }

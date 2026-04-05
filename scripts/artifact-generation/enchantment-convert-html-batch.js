@@ -1,4 +1,5 @@
 import { createParserClient } from '../ParserClient.js';
+import { normalizeFile } from './normalize-conversion-outputs.js';
 import fs from 'fs';
 
 const itemsListPath = './scripts/outputs/neutral-item-gridLinks.json';
@@ -56,6 +57,7 @@ async function main() {
                     }
                     
                     fs.writeFileSync(outputPath, content);
+                    normalizeFile('enchantment', outputPath);
                     successCount++;
                     console.log(`    ✅ Saved`);
                 } catch (saveError) {

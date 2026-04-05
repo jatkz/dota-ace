@@ -1,10 +1,9 @@
 {
-  "title": "Ring_of_Protection",
-  "item_type": "Armor items, Shop items",
-  "properties": {
-    "Cost": 450,
-    "Primary Attribute Bonus": "+1 Strength",
-    "Bonus Health Regeneration": "+2.5 Health regeneration"
-  },
-  "description": "A simple item that provides basic health regeneration and a small strength bonus."
+  "name": "Ring of Protection",
+  "cost": 175,
+  "description": "A glimmering ring that defends its bearer.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+2 Armor"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "Forager's Kit",
+  "description": "A Tier 1 neutral item artifact that allows the user to forage.",
+  "tier": "1",
+  "effects": {
+    "primary": "Passive: Forage"
+  },
+  "notes": []
+}

@@ -1,38 +1,19 @@
 {
-  "item": {
-    "name": "Phylactery",
-    "type": "Item",
-    "category": [
-      "Items",
-      "Strength items",
-      "Agility items",
-      "Intelligence items"
-    ],
-    "attributes": {
-      "strength": "+8 Strength",
-      "health regeneration": "20 Health Regen",
-      "mana regeneration": "10 Mana Regen",
-      "cost": 2750
-    },
-    "components": [
-      "Ring of Basilius",
-      "Buckler",
-      "Wand of Lasso"
-    ],
-    "lore": "The Phylactery is a mystical artifact that channels arcane energies to strengthen the wearer. It is said to grant the user an immense boost in health and mana regeneration, making it invaluable on battlefields where survival depends on resilience.",
-    "builds_from": [
-      "Ring of Basilius",
-      "Buckler",
-      "Wand of Lasso"
-    ],
-    "builds_into": [
-      "Crimson Guard",
-      "Maelstrom"
-    ],
-    "provides": {
-      "strength": 8,
-      "health regeneration": 20,
-      "mana regeneration": 10
+  "name": "Phylactery",
+  "cost": 2600,
+  "description": "An amulet overflowing with powerful magics.",
+  "abilities": [
+    {
+      "name": "Empower Spell",
+      "type": "passive",
+      "description": ""
     }
+  ],
+  "stats": {
+    "Strength": "+6",
+    "Agility": "+6",
+    "Intelligence": "+6",
+    "Health Regeneration": "+5.5",
+    "Mana Regeneration": "+2.25"
   }
 }

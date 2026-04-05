@@ -1,19 +1,16 @@
 {
-  "title": "Mantle of Intelligence",
-  "attributes": [
+  "name": "Mantle of Intelligence",
+  "cost": 140,
+  "description": "A beautiful sapphire mantle worn by generations of queens.",
+  "abilities": [
     {
-      "attribute": "+150 intelligence",
-      "bonus": "150"
-    },
-    {
-      "attribute": "+6% magic resistance",
-      "bonus": "6%"
+      "name": "",
+      "type": "",
+      "description": ""
     }
   ],
-  "description": "Increases the wearer's intelligence and magic resistance.",
-  "categories": [
-    "Items",
-    "Intelligence items",
-    "Shop items"
-  ]
+  "stats": {
+    "Sell Value": 70,
+    "Bonus": "+3 Intelligence"
+  }
 }

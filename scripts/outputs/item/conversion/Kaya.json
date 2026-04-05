@@ -1,3 +1,9 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Kaya",
+  "cost": 2100,
+  "description": "The staff of a renowned sorceress, lost for countless millennia.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+16 Intelligence+10% Spell Damage Amp+30% Mana Regen Amp"
+  }
 }

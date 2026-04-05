@@ -1,9 +1,13 @@
 {
-  "title": "Voodoo Mask",
-  "category": "Items",
-  "description": "The Voodoo Mask is an item in Dota 2 that grants a permanent damage aura to nearby enemies.",
-  "attributes": {
-    "damage_aura": true,
-    "nearby_enemies": true
-  }
+  "name": "Voodoo Mask",
+  "cost": 650,
+  "description": "A mask tuned to sip the arcane bindings that pass between caster and foe.",
+  "abilities": [
+    {
+      "name": "Magic Lifesteal",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {}
 }

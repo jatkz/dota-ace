@@ -1,0 +1,9 @@
+{
+  "name": "Flayer's Bota",
+  "description": "A Tier 4 neutral item artifact.",
+  "tier": "4",
+  "effects": {
+    "primary": "Active: Bloodthirst, Passive: Bloodrush"
+  },
+  "notes": []
+}

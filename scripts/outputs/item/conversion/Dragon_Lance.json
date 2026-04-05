@@ -1,13 +1,17 @@
 {
-  "item": {
-    "name": "Dragon Lance",
-    "category": ["Items", "Strength items", "Agility items", "Shop items"],
-    "attributes": [
-      {"attribute": "+60 Strength"},
-      {"attribute": "+20 Agility"},
-      {"attribute": "1.5s Lifesteal"}
-    ],
-    "description": "Grants +60 Strength and +20 Agility. Attacks steal 1.5 seconds worth of health from the target.",
-    "image_url": "https://liquipedia.net/dota2/images/3/39/Dragon_Lance.png"
+  "name": "Dragon Lance",
+  "cost": 1900,
+  "description": "The forward charge of the wyvern host grants no quarter.",
+  "abilities": [
+    {
+      "name": "Dragon's Reach",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Bonus Strength": "+10",
+    "Bonus Agility": "+15",
+    "Attack Range": "+130"
   }
 }

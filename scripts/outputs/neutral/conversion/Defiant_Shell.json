@@ -1,0 +1,9 @@
+{
+  "name": "Defiant Shell",
+  "description": "A Tier 2 neutral item artifact.",
+  "tier": "2",
+  "effects": {
+    "primary": "Reciprocity"
+  },
+  "notes": []
+}

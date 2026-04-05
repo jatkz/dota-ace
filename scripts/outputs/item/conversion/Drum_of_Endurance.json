@@ -1,11 +1,20 @@
 {
-  "title": "Drum of Endurance",
-  "categories": [
-    "Items",
-    "Strength items",
-    "Shop items"
+  "name": "Drum of Endurance",
+  "cost": 1625,
+  "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
+  "abilities": [
+    {
+      "name": "Endurance",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Swiftness Aura",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Bonus Strength": "+8"
+  }
 }

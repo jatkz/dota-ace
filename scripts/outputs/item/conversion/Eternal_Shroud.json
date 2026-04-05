@@ -8,7 +8,12 @@
   "shareable": false,
   "usageAlert": false,
   "recipe": {
-    "components": ["Cloak", "Ogre Axe", "Vitality Booster", "Recipe"],
+    "components": [
+      "Cloak",
+      "Ogre Axe",
+      "Vitality Booster",
+      "Recipe"
+    ],
     "totalCost": 3700
   },
   "abilities": [

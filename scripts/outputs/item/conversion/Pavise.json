@@ -1,14 +1,15 @@
 {
-  "page_title": "Pavise",
-  "page_id": 2364755,
-  "categories": [
-    "Items",
-    "Health boost items",
-    "Mana boost items",
-    "Armor items",
-    "Shop items"
+  "name": "Pavise",
+  "cost": 1350,
+  "description": "Devised by a wizard who made one too many enemies.",
+  "abilities": [
+    {
+      "name": "Protect",
+      "type": "",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Bonus": "+175 Health+175 Mana+3 Armor"
+  }
 }

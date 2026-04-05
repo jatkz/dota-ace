@@ -1,29 +1,11 @@
 {
-  "void_stone": {
-    "type": "item",
-    "category": [
-      "items",
-      "mana regeneration items",
-      "shop items"
-    ],
-    "properties": {
-      "base_mana_regen": "+2.5 mana regen per 5 seconds",
-      "bonus_intelligence": "+10 intelligence",
-      "total_cost": "675 gold",
-      "attributes": {
-        "intelligence": {
-          "value": 10,
-          "description": "Grants bonus intelligence"
-        },
-        "mana_regen": {
-          "value": 2.5,
-          "interval": 5,
-          "description": "Grants mana regeneration every 5 seconds"
-        }
-      }
-    },
-    "lore": "A mystical stone imbued with the power of forgotten ancient spells.",
-    "image_url": "https://liquipedia.net/dota2/images/thumb/8/80/Void_Stone_item.png/100px-Void_Stone_item.png",
-    "description": "Void Stone is a mana regeneration item in Dota 2, which grants bonus intelligence and provides additional mana regeneration every 5 seconds. It costs 675 gold and has no hero restrictions."
+  "name": "Void Stone",
+  "cost": 700,
+  "description": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy.",
+  "abilities": [],
+  "stats": {
+    "Cost": 700,
+    "Sell Value": 350,
+    "Bonus": "+1.75 Mana Regeneration"
   }
 }

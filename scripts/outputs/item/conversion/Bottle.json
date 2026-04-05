@@ -1,8 +1,21 @@
 {
-  "title": "Bottle",
-  "category": "Items",
-  "type": "Shop items",
-  "color": "green",
-  "description": "An item that restores health and provides a regeneration aura to nearby allies.",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/f/fe/Bottle.png/180px-Bottle.png"
+  "name": "Bottle",
+  "cost": 675,
+  "description": "An old bottle that survived the ages, the contents placed inside become enchanted.",
+  "abilities": [
+    {
+      "name": "Regenerate",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Store Rune",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": 337.5,
+    "Stacks": "1 MAX / Inventory Slot"
+  }
 }

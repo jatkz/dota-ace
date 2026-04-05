@@ -1,3 +1,16 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Assault Cuirass",
+  "cost": 5125,
+  "description": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
+  "abilities": [
+    {
+      "name": "Assault Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Armor": "+10",
+    "Attack Speed": "+30"
+  }
 }

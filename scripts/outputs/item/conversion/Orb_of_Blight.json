@@ -1,9 +1,15 @@
 {
-  "item_name": "Orb of Blight",
-  "image_url": "//liquipedia.net/dota2/images/thumb/0/06/Item_Orb_of_Blight.svg/18px-Item_Orb_of_Blight.svg.png",
-  "type": "Support",
-  "category": "Items",
-  "sub_category": "Shop items",
-  "description": "Increases nearby allied heroes' damage by 25%.",
-  "affects": "Allies within a radius of 1000 units."
+  "name": "Orb of Blight",
+  "cost": 300,
+  "description": "An unnerving stone unearthed beneath the Fields of Endless Carnage.",
+  "abilities": [
+    {
+      "name": "Lesser Corruption",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": 150
+  }
 }

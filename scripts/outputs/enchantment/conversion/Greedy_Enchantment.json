@@ -1,19 +1,11 @@
 {
   "name": "Greedy Enchantment",
-  "description": null,
-  "tier": [2, 3],
-  "stats": {
-    "mana": "200/250",
-    "attackDamage": "-30/-60",
-    "goldPerMinute": "75/100"
+  "description": "A guaranteed Tier 2–3 neutral item enchantment for all heroes.",
+  "tier": "2",
+  "effects": {
+    "primary_effect": "+200/250 Mana, +30/60 Attack Damage, +75/100 Gold /min"
   },
-  "additionalInfo": [
-    "Grants reliable gold and works while dead as well",
-    "Increases gold gained to a total of 90.75 gold per minute while equipped",
-    "Fully stacks with other gold per minute increasing effects",
-    "Illusions and clones cannot utilize the passive gold gain",
-    "Acquired by crafting with Madstone",
-    "Not shareable",
-    "No usage alert"
+  "notes": [
+    "Tier 2–3"
   ]
 }

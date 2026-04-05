@@ -1,23 +1,17 @@
 {
-  "item": {
-    "name": "Eye of Skadi",
-    "type": "Neutral Item",
-    "category": "Shop items",
-    "requirements": [],
-    "components": [
-      {
-        "item": "Bottle"
-      },
-      {
-        "item": "Mystic Staff"
-      }
-    ],
-    "active_effect": {
-      "description": "Grants a burst of magic damage (10% of target's max health) over 3 seconds. Cooldown: 45 seconds.",
-      "mana_cost": 60
-    },
-    "passive_effect": {
-      "description": "Restores 20 mana per second."
+  "name": "Eye of Skadi",
+  "cost": 5900,
+  "description": "Extremely rare artifact, guarded by the azure dragons.",
+  "abilities": [
+    {
+      "name": "Cold Attack",
+      "type": "passive",
+      "description": ""
     }
+  ],
+  "stats": {
+    "Strength": "+35",
+    "Agility": "+35",
+    "Intelligence": "+35"
   }
 }

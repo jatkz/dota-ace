@@ -1,3 +1,22 @@
 {
-  "error": "The provided HTML content does not contain any JSON data. The HTML appears to be a webpage from Liquipedia about the Battle Fury item in Dota 2."
+  "name": "Battle Fury",
+  "cost": 3900,
+  "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
+  "abilities": [
+    {
+      "name": "Chop Tree",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Quell Cleave",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Health Regeneration": "+7.5",
+    "Mana Regeneration": "+2.75",
+    "Attack Damage": "+50"
+  }
 }

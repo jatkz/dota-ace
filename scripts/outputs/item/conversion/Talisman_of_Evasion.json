@@ -1,3 +1,9 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Talisman of Evasion",
+  "cost": 1300,
+  "description": "A necklace that allows you to anticipate enemy attacks.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+15% Evasion"
+  }
 }

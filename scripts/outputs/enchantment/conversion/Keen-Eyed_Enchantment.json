@@ -1,15 +1,11 @@
 {
   "name": "Keen-Eyed Enchantment",
-  "description": null,
-  "tier": [2, 3],
-  "stats": {
-    "mana": "-10%",
-    "manaRegeneration": "+1/1.5",
-    "castRange": "+125/135"
+  "description": "A guaranteed Tier 2–4 neutral item enchantment for Intelligence heroes only.",
+  "tier": "2",
+  "effects": {
+    "primary_effect": "-10%/-12%/-14% Mana Regeneration +1/1.5/2 Mana Regeneration +125/135/145 Cast Range"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Not shareable",
-    "No usage alert"
+  "notes": [
+    "For Intelligence heroes only"
   ]
 }

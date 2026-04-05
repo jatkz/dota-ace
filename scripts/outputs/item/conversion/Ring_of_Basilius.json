@@ -1,12 +1,17 @@
 {
-  "page_title": "Ring of Basilius",
-  "page_url": "https://liquipedia.net/dota2/Ring_of_Basilius",
-  "categories": [
-    "Items",
-    "Mana regeneration items",
-    "Shop items"
+  "name": "Ring of Basilius",
+  "cost": 425,
+  "description": "Ring given as a reward to the greatest mages.",
+  "abilities": [
+    {
+      "name": "Basilius Aura",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Cost": 425,
+    "Sell Value": 212.5,
+    "Bonus": "+0.5 Mana Regeneration"
+  }
 }

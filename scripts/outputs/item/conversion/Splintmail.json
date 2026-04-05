@@ -1,11 +1,9 @@
 {
-  "page_title": "Splintmail",
-  "content_categories": [
-    "Items",
-    "Armor items",
-    "Shop items"
-  ],
-  "hidden_category": [
-    "Pages with hard coded colors"
-  ]
+  "name": "Splintmail",
+  "cost": 950,
+  "description": "Splintmail is an item purchasable at the Base Shop, under Equipment.",
+  "abilities": [],
+  "stats": {
+    "Armor": "+7"
+  }
 }

@@ -1,22 +1,11 @@
 {
-  "page_title": "Ogre_Axe",
-  "categories": [
-    "Items",
-    "Strength items",
-    "Shop items"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ],
-  "item_details": {
-    "name": "Ogre Axe",
-    "type": "Strength item",
-    "cost": 1200,
-    "attributes": {
-      "bonus_damage": "+35 damage",
-      "bonus_strength": "+6 strength per second",
-      "mana_cost_reduction": "-8% mana cost"
-    },
-    "description": "Grants bonus Strength and Damage based on how long it has been wielded."
+  "name": "Ogre Axe",
+  "cost": 1000,
+  "description": "You grow stronger just by holding it.",
+  "abilities": [],
+  "stats": {
+    "Cost": 1000,
+    "Sell Value": 500,
+    "Bonus": "+10 Strength"
   }
 }

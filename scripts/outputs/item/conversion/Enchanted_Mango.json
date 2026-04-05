@@ -1,78 +1,14 @@
 {
-  "page_title": "Enchanted Mango",
-  "categories": [
-    "Items",
-    "Health regeneration items",
-    "Shop items"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ],
-  "external_links": [],
-  "internal_links": [
-    {
-      "title": "Apex",
-      "url": "/dota2/Apex"
-    },
-    {
-      "title": "Arcanist's Armor",
-      "url": "/dota2/Arcanist%27s_Armor"
-    },
-    {
-      "title": "Ballista",
-      "url": "/dota2/Ballista"
-    },
-    {
-      "title": "Book of Shadows",
-      "url": "/dota2/Book_of_Shadows"
-    },
-    {
-      "title": "Ex Machina",
-      "url": "/dota2/Ex_Machina"
-    },
-    {
-      "title": "Force Boots",
-      "url": "/dota2/Force_Boots"
-    },
-    {
-      "title": "Fusion Rune",
-      "url": "/dota2/Fusion_Rune"
-    },
-    {
-      "title": "Giant's Ring",
-      "url": "/dota2/Giant%27s_Ring"
-    },
-    {
-      "title": "Mirror Shield",
-      "url": "/dota2/Mirror_Shield"
-    },
-    {
-      "title": "Phoenix Ash",
-      "url": "/dota2/Phoenix_Ash"
-    },
-    {
-      "title": "Seer Stone",
-      "url": "/dota2/Seer_Stone"
-    },
-    {
-      "title": "Tier 5 Token",
-      "url": "/dota2/Tier_5_Token"
-    },
-    {
-      "title": "Trident",
-      "url": "/dota2/Trident"
-    },
-    {
-      "title": "Unwavering Condition",
-      "url": "/dota2/Unwavering_Condition"
-    },
-    {
-      "title": "Woodland Striders",
-      "url": "/dota2/Woodland_Striders"
-    }
-  ],
-  "content_ad_ids": [
-    "dota2_970x250_BTF",
-    "dota2_728x90_SATF"
-  ]
+  "name": "Enchanted Mango",
+  "cost": 65,
+  "description": "The bittersweet flavors of Jidi Isle are irresistible to amphibians.",
+  "abilities": [],
+  "stats": {
+    "Sell Value": 32.5,
+    "Stacks": "3 MAX / Inventory Slot",
+    "Stock": "4 INIT / 4 MAX",
+    "Active": "Eat Mango",
+    "Charges": "1 INIT",
+    "Bonus": "+0.4 Health Regeneration"
+  }
 }

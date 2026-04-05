@@ -1,25 +1,9 @@
 {
-  "title": "Robe of the Magi",
-  "image": null,
-  "infobox": {
-    "item_name": "Robe of the Magi",
-    "category": "Item",
-    "type": "Intelligence item",
-    "cost": "1200 gold",
-    "recipe": [
-      "Cloak of Agility",
-      "Staff of Wizardry"
-    ],
-    "components": {
-      "Cloak of Agility": 850,
-      "Staff of Wizardry": 650
-    },
-    "total_cost": 1500,
-    "bonus_attributes": {
-      "agi": 20,
-      "int": 37,
-      "move_speed": -4
-    }
-  },
-  "description": "Increases Agility and Intelligence."
+  "name": "Robe of the Magi",
+  "cost": 450,
+  "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+6 Intelligence"
+  }
 }

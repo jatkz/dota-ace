@@ -1,32 +1,12 @@
 {
-  "title": "Magic Wand",
-  "description": "A wand item in Dota 2 that grants health regeneration and mana regeneration.",
-  "properties": {
-    "regeneration": {
-      "health_per_second": 1,
-      "mana_per_second": 0.5
-    },
-    "duration": 60,
-    "cost": 90,
-    "effects": [
-      {
-        "name": "Health Regeneration",
-        "value": "+1 health regeneration per second"
-      },
-      {
-        "name": "Mana Regeneration",
-        "value": "+0.5 mana regeneration per second"
-      }
-    ]
-  },
-  "categories": [
-    "Items",
-    "Strength items",
-    "Agility items",
-    "Intelligence items",
-    "Shop items"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "name": "Magic Wand",
+  "cost": 460,
+  "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
+  "abilities": [],
+  "stats": {
+    "Cost": 460,
+    "Sell Value": 230,
+    "Active": "Energy Charge",
+    "Bonus": "+3 Strength+3 Agility+3 Intelligence"
+  }
 }

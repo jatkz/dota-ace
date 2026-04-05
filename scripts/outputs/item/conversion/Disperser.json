@@ -1,16 +1,21 @@
 {
-  "page_title": "Disperser",
-  "categories": [
-    "Items",
-    "Agility items",
-    "Intelligence items",
-    "Shop items"
+  "name": "Disperser",
+  "cost": 6100,
+  "description": "Once entrusted to an Apostle General of the Rumusque Faithful's expiditionary force.",
+  "abilities": [
+    {
+      "name": "Suppress",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Manabreak",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ],
-  "content_ads": [
-    "dota2_970x250_BTF",
-    "dota2_728x90_SATF"
-  ]
+  "stats": {
+    "Agility": "+40",
+    "Intelligence": "+10"
+  }
 }

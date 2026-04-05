@@ -1,0 +1,9 @@
+{
+  "name": "Harmonizer",
+  "description": "A Tier 4 artifact that balances team composition.",
+  "tier": "4",
+  "effects": {
+    "primary": "Balance"
+  },
+  "notes": []
+}

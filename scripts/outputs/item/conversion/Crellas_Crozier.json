@@ -1,19 +1,24 @@
 {
-  "title": "Crella's Crozier",
-  "image": "/assets/crellas_crozier.png",
-  "category": "Items",
-  "attributes": {
-    "type": "Strength, Agility, Intelligence",
-    "bonus_attributes": {
-      "strength": "+5 Strength",
-      "agility": "+5 Agility",
-      "intelligence": "+5 Intelligence"
+  "name": "Crella's Crozier",
+  "cost": 4800,
+  "description": "Crella's Crozier is an item purchasable at the Base Shop, under Support.",
+  "abilities": [
+    {
+      "name": "Rite of Rumusque",
+      "type": "active",
+      "description": ""
     },
-    "additional_effects": [
-      "Health boost: +200 Health",
-      "Mana boost: +200 Mana",
-      "Cooldown reduction: -1 second"
-    ],
-    "item_type": "Shop item"
+    {
+      "name": "Putrefaction Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": 6,
+    "Agility": 6,
+    "Intelligence": 6,
+    "Health": 450,
+    "Mana": 450
   }
 }

@@ -1,3 +1,15 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Crystalys",
+  "cost": 2000,
+  "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
+  "abilities": [
+    {
+      "name": "Critical Strike",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Attack Damage": "+32"
+  }
 }

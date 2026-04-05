@@ -1,15 +1,11 @@
 {
-  "mystic_staff": {
-    "description": "The Mystic Staff is a neutral item in Dota 2 that provides +6 Intelligence and an additional +10% magic damage.",
-    "components": [
-      "Crest of Knowledge",
-      "Wand"
-    ],
-    "cost": 375,
-    "image_url": "https://liquipedia.net/dota2/images/thumb/8/8b/Mystic_Staff.png/256px-Mystic_Staff.png",
-    "category": [
-      "Items",
-      "Intelligence items"
-    ]
+  "name": "Mystic Staff",
+  "cost": 2800,
+  "description": "Enigmatic staff made of only the most expensive crystals.",
+  "abilities": [],
+  "stats": {
+    "Cost": 2800,
+    "Sell Value": 1400,
+    "Bonus": "+25 Intelligence"
   }
 }

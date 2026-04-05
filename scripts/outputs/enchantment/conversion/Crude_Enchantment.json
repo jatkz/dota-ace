@@ -1,15 +1,9 @@
 {
   "name": "Crude Enchantment",
-  "description": null,
-  "tier": [4, 5],
-  "stats": {
-    "intelligence": "-5%",
-    "baseAttackTime": "-12/-18%",
-    "healthRestoreAmp": "+30/40%"
+  "description": "A guaranteed Tier 2-4 neutral item enchantment for Strength heroes only.",
+  "tier": "2",
+  "effects": {
+    "primary_effect": "-6% Intelligence, -6%/-9%/-12%% Base Attack Time, +10/15/20% Health Restore Amp"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Not shareable",
-    "No usage alert"
-  ]
+  "notes": []
 }

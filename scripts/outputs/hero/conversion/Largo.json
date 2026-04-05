@@ -1,0 +1,41 @@
+{
+  "name": "Largo",
+  "description": "You hear that? It's time to start the show.",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 14,
+    "intelligence": 21
+  },
+  "abilities": [
+    {
+      "name": "Encore",
+      "type": "passive",
+      "description": "Whenever Largo applies a unit-targeted buff to an allied hero, he also applies the buff to self. Doubletap applies the buff to the nearest allied hero within the cast range of the unit-targeted ability."
+    },
+    {
+      "name": "Catchy Lick",
+      "type": "active",
+      "description": "Pulls the targeted unit a short distance, and applies a basic dispel. Buff or debuffs dispelled from the targeted unit grants self health regeneration bonus. Deals damage to the pulled unit-targeted enemy. Has a lesser pull distance on enemy units."
+    },
+    {
+      "name": "Frogstomp",
+      "type": "active",
+      "description": "Tosses froglings to the area-targeted location. The froglings deals damage, stuns, and apply movement speed slow to all enemy units within the radius."
+    },
+    {
+      "name": "Croak of Genius",
+      "type": "active",
+      "description": "Spell damage applied to enemy heroes sourced to the buff-affected allied hero is reapplied as an additional magical spell damage per second."
+    },
+    {
+      "name": "Amphibian Rhapsody",
+      "type": "active",
+      "description": "Switches the ability bar switches to three song abilities, each with different ability effects. Largo can cast one Amphibian Rhapsody-based abilities at any given time. Gains a Groovin' stack per successful strum on beat, which grants bonus armor and reduces the mana cost of the song abilities. Largo loses a Groovin' stack whenever he misses a beat. Self-disarms upon casting any song abilities."
+    }
+  ]
+}

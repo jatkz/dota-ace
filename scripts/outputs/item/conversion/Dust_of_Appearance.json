@@ -1,7 +1,17 @@
 {
-  "dust_of_appearance": {
-    "tier": "Unreleased",
-    "description": "Reduces the cooldown of all abilities by 20 seconds.",
-    "image_url": "https://liquipedia.net/dota2/images/thumb/5/5e/Dust_of_Appearance.png/128px-Dust_of_Appearance.png"
+  "name": "Dust of Appearance",
+  "cost": 80,
+  "description": "One may hide visage, but never volume.",
+  "abilities": [
+    {
+      "name": "Reveal",
+      "type": null,
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": "40 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Charges": "1 INIT"
   }
 }

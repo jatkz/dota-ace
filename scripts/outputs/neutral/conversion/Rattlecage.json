@@ -1,0 +1,9 @@
+{
+  "name": "Rattlecage",
+  "description": "A Tier 4 neutral item artifact with a passive effect.",
+  "tier": "4",
+  "effects": {
+    "primary": "Reverberate"
+  },
+  "notes": []
+}

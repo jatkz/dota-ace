@@ -1,8 +1,11 @@
 {
-  "Phase Boots": {
-    "Type": "Movement speed item",
-    "Description": "Grants +20 movement speed.",
-    "Passive Effect": "+20% attack speed",
-    "Cost": "1350 gold"
+  "name": "Phase Boots",
+  "cost": 1450,
+  "description": "Boots that allow the wearer to travel between the ether.",
+  "abilities": [],
+  "stats": {
+    "Armor": "+4",
+    "Move Speed": "+50",
+    "Attack Damage": "+18"
   }
 }

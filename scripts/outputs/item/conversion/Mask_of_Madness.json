@@ -1,10 +1,20 @@
 {
-  "title": "Mask of Madness",
-  "category": "Items",
-  "attributes": {
-    "type": "Damage items",
-    "disassembly": "Can be disassembled",
-    "shop": "Shop items"
-  },
-  "color": "hard coded colors"
+  "name": "Mask of Madness",
+  "cost": 1900,
+  "description": "Once this mask is worn, its bearer becomes an uncontrollable aggressive force.",
+  "abilities": [
+    {
+      "name": "Berserk",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Lifesteal",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Attack Damage": "+20"
+  }
 }

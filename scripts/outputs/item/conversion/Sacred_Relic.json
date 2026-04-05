@@ -1,20 +1,9 @@
 {
-  "title": "Sacred Relic",
-  "summary": "The Sacred Relic is a neutral item in the game Dota 2. It provides mana regeneration and health regeneration.",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/5/57/Sacred_Relic_icon.png/32px-Sacred_Relic_icon.png",
-  "description": "The Sacred Relic is a neutral item in the game Dota 2. It provides mana regeneration and health regeneration. Players can purchase this item from the Neutral Creep shop by defeating Neutral Camps.",
-  "attributes": {
-    "mana_regeneration": "+60 mana regeneration per second",
-    "health_regeneration": "+15 health regeneration per second"
-  },
-  "categories": [
-    "Items",
-    "Damage items",
-    "Shop items"
-  ],
-  "related_items": [
-    "Mystic Staff",
-    "Orb of Dominance",
-    "Dust of Appearance"
-  ]
+  "name": "Sacred Relic",
+  "cost": 3400,
+  "description": "An ancient weapon that often turns the tides of war.",
+  "abilities": [],
+  "stats": {
+    "Attack Damage": "+55"
+  }
 }

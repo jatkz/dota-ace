@@ -1,23 +1,9 @@
 {
-  "item_name": "Butterfly",
-  "item_type": "Agility items",
-  "primary_attribute": "agility",
-  "attributes": {
-    "bonus_agility": "+20 Agility",
-    "attack_damage": "+30 Damage",
-    "attack_speed": "+15% Attack Speed"
-  },
-  "cost": 4900,
-  "shop_tags": [
-    "Evasion items",
-    "Attack speed items",
-    "Damage items",
-    "Shop items"
-  ],
-  "description": "A delicate butterfly-shaped item that grants significant agility, attack damage, and attack speed. Often used to boost the capabilities of agile heroes.",
-  "image_url": "/images/thumb/b/b6/Butterfly_item.png/30px-Butterfly_item.png",
-  "category": [
-    "Items",
-    "Agility items"
-  ]
+  "name": "Butterfly",
+  "cost": 5450,
+  "description": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+35 Agility+35% Evasion+25 Attack Damage+20% Base Attack Speed"
+  }
 }

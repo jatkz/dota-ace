@@ -1,3 +1,19 @@
 {
-  "html": "<table><tbody><tr><th>Item Name</th><td>Helm of the Overlord</td></tr><tr><th>Cost</th><td>2050</td></tr><tr><th>Components</th><td><ul><li>Poor Man's Shield</li><li>Blink Dagger</li></ul></td></tr><tr><th>Builds Into</th><td><ul><li>Skull Basher</li></ul></td></tr><tr><th>Description</th><td>A large helmet that increases the wearer's health and gives them a chance to stun their attacker when they take damage. It is often used by melee heroes to make them more tanky.</td></tr></tbody></table>"
+  "name": "Helm of the Overlord",
+  "cost": 5650,
+  "description": "The powerful headpiece of an undead necromancer.",
+  "abilities": [
+    {
+      "name": "Dominate",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+21",
+    "Agility": "+21",
+    "Intelligence": "+21",
+    "Health Regeneration": "+7",
+    "Armor": "+7"
+  }
 }

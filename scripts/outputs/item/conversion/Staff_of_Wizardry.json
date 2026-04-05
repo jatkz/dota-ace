@@ -1,11 +1,9 @@
 {
-  "title": "Staff of Wizardry",
-  "category": "Items",
-  "subcategories": ["Intelligence items", "Shop items"],
-  "properties": {
-    "base_stats": {
-      "intelligence": "+10"
-    },
-    "stackability": "Unstackable"
+  "name": "Staff of Wizardry",
+  "cost": 1000,
+  "description": "A staff of magical powers passed down from the eldest mages.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+10 Intelligence"
   }
 }

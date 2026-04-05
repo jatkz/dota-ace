@@ -1,13 +1,17 @@
 {
-  "title": "Swift Blink",
-  "item_type": "Agility items",
-  "shop_item": true,
-  "categories": [
-    "Items",
-    "Agility items",
-    "Shop items"
+  "name": "Swift Blink",
+  "cost": 6800,
+  "description": "A cunning blade able to anticipate and enable its bearer's movements.",
+  "abilities": [
+    {
+      "name": "Swift Blink",
+      "type": "",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Cost": 6800,
+    "Sell Value": 3400,
+    "Bonus Agility": 25
+  }
 }

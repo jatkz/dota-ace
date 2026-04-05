@@ -1,3 +1,19 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Aegis of the Immortal",
+  "cost": null,
+  "description": "The Immortal was said to own a shield that protected him from death itself.",
+  "abilities": [
+    {
+      "name": "Reincarnation",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": "0 Unsellable",
+    "Stacks": "1 MAX / Inventory Slot",
+    "Charges": "1 INIT",
+    "Droppable": "0",
+    "Destroyable": "1"
+  }
 }

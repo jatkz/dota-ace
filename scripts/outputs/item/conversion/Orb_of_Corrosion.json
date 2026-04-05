@@ -1,22 +1,15 @@
 {
-  "item_name": "Orb of Corrosion",
-  "category": "Agility items",
-  "cost": 150,
-  "attributes": {
-    "bonus_agility": "+6 Agility",
-    "corrosion_damage": "-3% Health regeneration"
-  },
-  "components": [
+  "name": "Orb of Corrosion",
+  "cost": 1050,
+  "description": "Seepage from the wounds of a warrior deity, sealed in an arcanist's orb following a campaign of vicious slaughter.",
+  "abilities": [
     {
-      "item_name": "Ring of Protection",
-      "cost": 450
-    },
-    {
-      "item_name": "Bottle",
-      "cost": 375
+      "name": "Corrosion",
+      "type": "passive",
+      "description": ""
     }
   ],
-  "shop_locations": [
-    "Secret Shop"
-  ]
+  "stats": {
+    "Bonus Agility": "+7"
+  }
 }

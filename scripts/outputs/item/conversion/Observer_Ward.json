@@ -1,3 +1,13 @@
 {
-  "response": "JSON response goes here"
+  "name": "Observer Ward",
+  "cost": 0,
+  "description": "A form of half-sentient plant, often cultivated by apprentice wizards.",
+  "abilities": [],
+  "stats": {
+    "Sell Value": "- / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Stock": "2 INIT / 4 MAX",
+    "Active": "Plant",
+    "Charges": "1 INIT"
+  }
 }

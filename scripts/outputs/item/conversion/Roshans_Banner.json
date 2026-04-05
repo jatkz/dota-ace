@@ -1,9 +1,14 @@
 {
-  "page_title": "Roshan's Banner",
-  "categories": [
-    "Items"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "name": "Roshan's Banner",
+  "cost": null,
+  "description": "Roshan's Banner is a Kill Reward item dropped by Roshan on his second death and onwards.",
+  "abilities": [],
+  "stats": {
+    "Sell Value": "0 Unsellable",
+    "Stacks": "1 MAX / Inventory Slot",
+    "Active": "Place Banner",
+    "Charges": "1 INIT",
+    "Droppable": "1",
+    "Destroyable": "1"
+  }
 }

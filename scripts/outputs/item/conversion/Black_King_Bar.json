@@ -1,24 +1,16 @@
 {
-  "title": "Black_King_Bar",
-  "categories": [
-    "Items",
-    "Strength_items",
-    "Damage_items",
-    "Shop_items"
+  "name": "Black King Bar",
+  "cost": 4050,
+  "description": "A powerful staff imbued with the strength of giants.",
+  "abilities": [
+    {
+      "name": "Avatar",
+      "type": "active",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages_with_hard_coded_colors"
-  ],
-  "related_items": [
-    "Blade_mail",
-    "Blink_dagger",
-    "Force_staff",
-    "Ghost_scepter",
-    "Manta_style",
-    "Phase_boots",
-    "Satanic",
-    "Shadow_blade",
-    "Soul_booster",
-    "Veil_of_discord"
-  ]
+  "stats": {
+    "Strength": "+10",
+    "Attack Damage": "+24"
+  }
 }

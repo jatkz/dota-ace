@@ -1,30 +1,13 @@
 {
-  "item_name": "Refresher Shard",
-  "item_type": "Consumable",
-  "base_cost": 300,
-  "ingredients": [
-    {
-      "item": "Circlet",
-      "quantity": 1
-    },
-    {
-      "item": "Talisman of Evasion",
-      "quantity": 1
-    }
-  ],
-  "properties": {
-    "regeneration": {
-      "health": 3,
-      "mana": 5
-    },
-    "damage": 10,
-    "duration": 180
-  },
-  "categories": [
-    "Items",
-    "Health regeneration items",
-    "Mana regeneration items",
-    "Damage items"
-  ],
-  "color_code": "#24a6e1"
+  "name": "Refresher Shard",
+  "cost": "-",
+  "description": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
+  "abilities": [],
+  "stats": {
+    "Sell Value": 500,
+    "Stacks": "1 MAX / Inventory Slot",
+    "Active": "Reset Cooldowns",
+    "Charges": "1 INIT",
+    "Bonus": "+12 Health Regeneration+6 Mana Regeneration+20 Attack Damage"
+  }
 }

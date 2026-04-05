@@ -1,17 +1,16 @@
 {
-  "page_title": "Shadow Blade",
-  "attributes": {
-    "item_type": "Attack speed items",
-    "damage_items": null,
-    "shop_items": null
-  },
-  "categories": [
-    "Items",
-    "Attack speed items",
-    "Damage items",
-    "Shop items"
+  "name": "Shadow Blade",
+  "cost": 3250,
+  "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
+  "abilities": [
+    {
+      "name": "Shadow Walk",
+      "type": "",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Attack Damage": "+25",
+    "Attack Speed": "+35"
+  }
 }

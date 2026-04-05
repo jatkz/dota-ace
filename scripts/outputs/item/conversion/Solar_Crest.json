@@ -1,13 +1,18 @@
 {
-  "title": "Solar Crest",
-  "category": "Items",
-  "attributes": {
-    "health boost items": true,
-    "mana boost items": true,
-    "armor items": true,
-    "movement speed items": true,
-    "shop items": true
-  },
-  "description": "The Solar Crest is an item in Dota 2 that provides multiple beneficial attributes to the player. It is a shop item that can be crafted from various other items available in the game's market.",
-  "usage": "Players often build the Solar Crest as part of their core build to improve their survivability and effectiveness on the battlefield. The item provides health regeneration, mana regeneration, armor, and movement speed bonuses, making it a versatile addition to any hero's kit."
+  "name": "Solar Crest",
+  "cost": 2575,
+  "description": "A talisman forged to honor the daytime sky.",
+  "abilities": [
+    {
+      "name": "Shine",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Health": "+200",
+    "Mana": "+200",
+    "Armor": "+7",
+    "Move Speed": "+25"
+  }
 }

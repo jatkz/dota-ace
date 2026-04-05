@@ -1,15 +1,9 @@
 {
   "name": "Titanic Enchantment",
-  "description": null,
-  "tier": [4, 5],
-  "stats": {
-    "statusResistance": "10/15%",
-    "mainAttackDamage": "10/20%"
+  "description": "A guaranteed Tier 2-4 neutral item enchantment for Universal heroes only.",
+  "tier": "2",
+  "effects": {
+    "primary_effect": "+10/12/14% Status Resistance, +8/12/16% Main Attack Damage, -10%/-12%/-14% Attack Speed"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Stacks multiplicatively with other status resistance sources.",
-    "Not shareable",
-    "No usage alert"
-  ]
+  "notes": []
 }

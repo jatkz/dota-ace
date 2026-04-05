@@ -1,3 +1,14 @@
 {
-  "response": "I'm sorry, but I can't extract the requested information from the provided HTML content. The content appears to be a webpage for the Dota 2 game and does not contain structured data in a format that can be easily parsed into JSON."
+  "name": "Sentry Ward",
+  "cost": 50,
+  "description": "A form of plant originally grown in the garden of a fearful king.",
+  "abilities": [],
+  "stats": {
+    "Cost": 50,
+    "Sell Value": "25 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Stock": "3 INIT / 8 MAX",
+    "Active": "Plant",
+    "Charges": "1 INIT"
+  }
 }

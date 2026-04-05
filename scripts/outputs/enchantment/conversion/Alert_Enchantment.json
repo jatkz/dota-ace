@@ -1,15 +1,9 @@
 {
   "name": "Alert Enchantment",
-  "description": null,
-  "tier": [1, 2, 3, 4],
-  "stats": {
-    "attackSpeed": [10, 17, 24, 31],
-    "attackRange": [0, 0, 0, 100],
-    "nightVision": [0, 150, 225, 300]
+  "description": "A guaranteed Tier 1–4 neutral item enchantment for Agility and Universal heroes.",
+  "tier": "1",
+  "effects": {
+    "primary_effect": "+7/15/23/31 Attack Speed, +0/0/0/100 Attack Range, +0/150/225/300 Night Vision"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Not shareable",
-    "Usage Alert disabled"
-  ]
+  "notes": []
 }

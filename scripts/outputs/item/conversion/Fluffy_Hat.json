@@ -1,13 +1,9 @@
 {
-  "item_name": "Fluffy Hat",
-  "category": "Items",
-  "subcategories": [
-    "Health boost items",
-    "Shop items"
-  ],
-  "attributes": {
-    "cost": 100,
-    "sell_value": 25,
-    "bonus_health": 30
+  "name": "Fluffy Hat",
+  "cost": 250,
+  "description": "Fine and functional foppery for the fashion-forward fighter.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+125 Health"
   }
 }

@@ -1,7 +1,19 @@
 {
-  "item_id": "manta",
   "name": "Manta Style",
-  "type": "Attack speed item",
-  "category": ["Items", "Strength items", "Agility items", "Intelligence items"],
-  "effect": "+10% Attack Speed and +25 Mana Regeneration per Second"
+  "cost": 4650,
+  "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
+  "abilities": [
+    {
+      "name": "Mirror Image",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+10",
+    "Agility": "+26",
+    "Intelligence": "+10",
+    "Move Speed": "+10%",
+    "Attack Speed": "+15"
+  }
 }

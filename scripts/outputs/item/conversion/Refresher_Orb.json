@@ -1,10 +1,16 @@
 {
-  "title": "Refresher Orb",
-  "category": "Items",
-  "attributes": {
-    "Health regeneration": true,
-    "Mana regeneration": true,
-    "Shop item": true
-  },
-  "color": "#ff0000"
+  "name": "Refresher Orb",
+  "cost": 5000,
+  "description": "A powerful artifact created for wizards.",
+  "abilities": [
+    {
+      "name": "Reset Cooldowns",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Health Regeneration": "+14",
+    "Mana Regeneration": "+7"
+  }
 }

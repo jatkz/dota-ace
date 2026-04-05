@@ -1,13 +1,16 @@
 {
-  "item_name": "Javelin",
-  "description": "The Javelin is a shop item in Dota 2 that can be purchased from the side shops.",
-  "category": ["Items", "Shop items"],
-  "color_codes": {
-    "border_color": "#30596B"
-  },
-  "related_items": [
-    "Neutral Items",
-    "Other Shop Items"
+  "name": "Javelin",
+  "cost": 900,
+  "description": "A rather typical spear that can sometimes pierce through an enemy's armor when used to attack.",
+  "abilities": [
+    {
+      "name": "Pierce",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "purchase_location": "Side Shops"
+  "stats": {
+    "Cost": 900,
+    "Sell Value": 450
+  }
 }

@@ -1,11 +1,16 @@
 {
-  "title": "Force Staff",
-  "category": "Items",
-  "subcategory": "Intelligence items",
-  "properties": {
-    "intelligence_bonus": 2,
-    "health_regen": 1,
-    "move_speed_boost": 40,
-    "cost": 1800
+  "name": "Force Staff",
+  "cost": 2200,
+  "description": "Allows you to manipulate others, for good or evil.",
+  "abilities": [
+    {
+      "name": "Force",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+10",
+    "Health": "+175"
   }
 }

@@ -1,11 +1,11 @@
 {
-  "Ring_of_Regen": {
-    "item_type": "Item",
-    "category": ["Health regeneration items", "Shop items"],
-    "attributes": {
-      "health_regen": 1,
-      "cost": 500,
-      "description": "Grants the wearer +1 health regeneration."
-    }
+  "name": "Ring of Regen",
+  "cost": 175,
+  "description": "This ring is considered a good luck charm among the Gnomes.",
+  "abilities": [],
+  "stats": {
+    "Cost": 175,
+    "Sell Value": 87.5,
+    "Bonus": "+1.25 Health Regeneration"
   }
 }

@@ -12,7 +12,7 @@
     {
       "name": "Ability Upgrade",
       "type": "active",
-      "description": "Consume to to gain upgrades to an existing ability or to gain a new ability, unique to each hero.\n\nA hero can acquire the ability upgrade buff only once per match.",
+      "description": "Consume to to gain upgrades to an existing ability or to gain a new ability, unique to each hero. A hero can acquire the ability upgrade buff only once per match.",
       "castAnimation": "0 + 0",
       "castRange": null,
       "manaCost": null,

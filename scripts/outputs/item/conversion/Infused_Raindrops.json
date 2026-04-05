@@ -1,10 +1,18 @@
 {
-  "item_name": "Infused Raindrops",
-  "item_type": "Mana regeneration item",
-  "shop_item": true,
-  "attributes": {
-    "mana_regen_per_5": 18,
-    "bonus_intelligence": 7,
-    "duration": 25.0
+  "name": "Infused Raindrops",
+  "cost": 225,
+  "description": "Elemental protection from magical assaults.",
+  "abilities": [
+    {
+      "name": "Magical Damage Block",
+      "type": "passive"
+    }
+  ],
+  "stats": {
+    "Sell Value": "18.8 / Count",
+    "Stacks": "1 MAX / Inventory Slot",
+    "Stock": "0 INIT / 1 MAX",
+    "Charges": "6 INIT",
+    "Bonus": "+0.8 Mana Regeneration"
   }
 }

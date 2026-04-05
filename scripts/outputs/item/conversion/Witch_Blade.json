@@ -1,17 +1,12 @@
 {
-  "title": "Witch Blade",
-  "base_gold": 205,
-  "sell_value": 41,
-  "category": "Intelligence items",
-  "effects": [
-    {
-      "attribute": "Mana regeneration",
-      "value": "+1.25"
-    },
-    {
-      "attribute": "Attack speed",
-      "value": "+3%"
-    }
-  ],
-  "lore": "Once wielded by the ancient mages of the Witch Kingdom, this enchanted blade grants its wielder a boost in mana regeneration and attack speed."
+  "name": "Witch Blade",
+  "cost": 2775,
+  "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
+  "abilities": [],
+  "stats": {
+    "Cost": 2775,
+    "Sell Value": 1387.5,
+    "Passive": "Witch Blade",
+    "Bonus": "+12 Intelligence+1.5 Mana Regeneration+5 Armor+40 Attack Speed+300 Projectile Speed"
+  }
 }

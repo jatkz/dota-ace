@@ -1,13 +1,9 @@
 {
-  "item_name": "Reaver",
-  "category": "Strength items",
-  "attributes": {
-    "bonus_strength": "+10 Strength",
-    "bonus_damage": "+20 Damage"
-  },
-  "builds_into": [
-    "Heart of Tarrasque"
-  ],
-  "requires": null,
-  "shop_location": "Secret Shop"
+  "name": "Reaver",
+  "cost": 2800,
+  "description": "A massive axe capable of tearing whole mountains down.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+25"
+  }
 }

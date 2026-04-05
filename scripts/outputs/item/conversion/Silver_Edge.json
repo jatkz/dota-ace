@@ -1,7 +1,16 @@
 {
   "name": "Silver Edge",
-  "rarity": "Common",
-  "cost": "250",
-  "description": "Grants +8% attack speed.",
-  "category": "Attack speed items"
+  "cost": 5700,
+  "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
+  "abilities": [
+    {
+      "name": "Shadow Walk",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Attack Damage": "+70",
+    "Attack Speed": "+35"
+  }
 }

@@ -1,19 +1,17 @@
 {
-  "page_title": "Eul's Scepter of Divinity",
-  "description": "Item in Dota 2 that provides intelligence and movement speed.",
-  "item_properties": {
-    "intelligence": "+15",
-    "movement_speed": "+30",
-    "mana_regen": "+3"
-  },
-  "categories": [
-    "Items",
-    "Intelligence items",
-    "Mana regeneration items",
-    "Movement speed items",
-    "Shop items"
+  "name": "Eul's Scepter of Divinity",
+  "cost": 2600,
+  "description": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil.",
+  "abilities": [
+    {
+      "name": "Cyclone",
+      "type": "active",
+      "description": ""
+    }
   ],
-  "colors": {
-    "background_color": "#f2f2f2"
+  "stats": {
+    "Intelligence": "+10",
+    "Mana Regeneration": "+2.5",
+    "Move Speed": "+20"
   }
 }

@@ -1,26 +1,23 @@
 {
-  "title": "Guardian Greaves",
-  "image": "Item Guardian Greaves.png",
-  "categories": [
-    "Items",
-    "Mana boost items",
-    "Mana regeneration items",
-    "Armor items",
-    "Movement speed items",
-    "Shop items"
+  "name": "Guardian Greaves",
+  "cost": 4450,
+  "description": "One of many holy instruments constructed to honor the Omniscience.",
+  "abilities": [
+    {
+      "name": "Mend",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Guardian Aura",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "attributes": {
-    "base_mana": 100,
-    "mana_regen_per_5_seconds": 2.8,
-    "move_speed_bonus": 20,
-    "bonus_armor": 3
-  },
-  "lore": "The greaves of a fallen hero, now imbued with the essence of nature and protection.",
-  "description": "+100 base mana\n+2.8 mana regeneration per 5 seconds\n+20% movement speed\n+3 armor",
-  "builds_from": [
-    "Ring of Protection"
-  ],
-  "used_in_builds": [
-    "Nature's Prophet Nature's Prophet build"
-  ]
+  "stats": {
+    "Mana": "+150",
+    "Mana Regeneration": "+1",
+    "Armor": "+5",
+    "Move Speed": "+50"
+  }
 }

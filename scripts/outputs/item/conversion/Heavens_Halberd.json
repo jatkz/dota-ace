@@ -1,12 +1,17 @@
 {
-  "item_name": "Heaven's Halberd",
-  "image_url": "/images/thumb/4/46/Heavens_halberd.png/250px-Heavens_halberd.png",
-  "category": "Items",
+  "name": "Heaven's Halberd",
+  "cost": 3400,
+  "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
+  "abilities": [
+    {
+      "name": "Disarm",
+      "type": "",
+      "description": ""
+    }
+  ],
   "stats": {
-    "health_regen": 1.8,
-    "armor": 3,
-    "evasion": 20
-  },
-  "description": "Grants the user bonus Health regeneration, Armor, and Evasion.",
-  "shop_location": "Base Shop"
+    "Health Regeneration": "+6",
+    "Armor": "+9",
+    "Evasion": "+25%"
+  }
 }

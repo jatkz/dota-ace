@@ -1,3 +1,11 @@
 {
-  "response": "JSON response goes here"
+  "name": "Ultimate Orb",
+  "cost": 2800,
+  "description": "A mystical orb containing the essence of life.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+15",
+    "Agility": "+15",
+    "Intelligence": "+15"
+  }
 }

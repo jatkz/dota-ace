@@ -1,17 +1,9 @@
 {
-  "hand_of_midas": {
-    "cost": 130,
-    "effect": {
-      "gold_bounty": "Grants a stack of gold bounty on the target hero that grants additional experience and gold when killed by this hero.",
-      "stacks": {
-        "max_stacks": 6,
-        "gold_per_stack": 25
-      }
-    },
-    "usage": {
-      "early_game": "Use to farm effectively in lane or push turrets.",
-      "team_fights": "Use on important heroes for a significant gold and experience gain."
-    },
-    "tier": "Tier 1"
+  "name": "Hand of Midas",
+  "cost": 2200,
+  "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
+  "abilities": [],
+  "stats": {
+    "Attack Speed": "+35"
   }
 }

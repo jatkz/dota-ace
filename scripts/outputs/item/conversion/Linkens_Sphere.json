@@ -1,26 +1,24 @@
 {
-  "page_title": "Linken's Sphere",
-  "infobox_data": {
-    "itemtype": "Defensive item",
-    "cost": 150,
-    "image": "Linkens_Sphere.png",
-    "tooltip": "<i>Provides Linken's Barrier.</i>\n\n<i>Cooldown:</i> <b>6</b> seconds<br><br>Refund: <span class=\"currency\" style=\"font-size: 1.2em; color: #c0c030;\">28.5</span> gold"
-  },
-  "description": "<p>A defensive item that provides Linken's Barrier, a spell shield which blocks up to two spells from any source.</p>",
-  "ingredients": [
+  "name": "Linken's Sphere",
+  "cost": 4800,
+  "description": "This magical sphere once protected one of the most famous heroes in history.",
+  "abilities": [
     {
-      "item": "Mystic Staff",
-      "amount": 1
+      "name": "Transfer Spellblock",
+      "type": "active",
+      "description": ""
     },
     {
-      "item": "Blitz Crank",
-      "amount": 1
+      "name": "Spellblock",
+      "type": "passive",
+      "description": ""
     }
   ],
-  "builds_into": [],
-  "built_from": ["Mystic Staff", "Blitz Crank"],
-  "lore": "<p><b>Lore:</b> The legendary scepter of the ancient mages, used to protect their allies from dark sorcery. Only the most powerful magic can break its barrier.</p>",
-  "str_bonus": "+2 Strength",
-  "agi_bonus": "+2 Agility",
-  "int_bonus": "+2 Intelligence"
+  "stats": {
+    "Strength": "+16",
+    "Agility": "+16",
+    "Intelligence": "+16",
+    "Health Regeneration": "+6.5",
+    "Mana Regeneration": "+4.25"
+  }
 }

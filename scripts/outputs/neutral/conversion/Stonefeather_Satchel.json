@@ -1,0 +1,9 @@
+{
+  "name": "Stonefeather Satchel",
+  "description": "A Tier 1 neutral item that allows for the transmutation of items.",
+  "tier": "1",
+  "effects": {
+    "primary": "Transmogrify"
+  },
+  "notes": []
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Lycan",
+  "description": "A wolf in man's clothing. Banehallow, the Lycan Bites and turns the affected allied hero into a ferocious Wolf Form of Shapeshift's corresponding level.",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Durable",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 28,
+    "agility": 18,
+    "intelligence": 23
+  },
+  "abilities": [
+    {
+      "name": "Apex Predator",
+      "type": "passive",
+      "description": "Lycan and his player-controlled units deal bonus conditional attack damage to neutral creeps per hero level."
+    },
+    {
+      "name": "Summon Wolves",
+      "type": "active",
+      "description": "Grants haste movement, phase movement, and bonus attack speed with an absolute evasion for a short period of time."
+    },
+    {
+      "name": "Howl",
+      "type": "active",
+      "description": "Strike fear while reducing their armor and attack damage of all enemy units within the radius of Lycan and his wolves."
+    },
+    {
+      "name": "Feral Impulse",
+      "type": "passive",
+      "description": "Grants bonus attack damage and bonus health regeneration to Lycan and all of his player-controlled units."
+    },
+    {
+      "name": "Wolf Bite",
+      "type": "active",
+      "description": "Bites and turns the affected allied hero into a ferocious Wolf Form of Shapeshift's corresponding level. Grants Lycan's attack lifesteal upon cast."
+    },
+    {
+      "name": "Shapeshift",
+      "type": "active",
+      "description": "Grants Lycan haste movement and critical strike. transforms into a smaller wolf form and grants all ability effects upon cast."
+    }
+  ]
+}

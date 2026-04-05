@@ -1,23 +1,19 @@
 {
-  "title": "Aghanim's Scepter",
-  "description": "Aghanim's Scepter is a tier 3 item available in Dota 2.",
-  "cost": 3000,
-  "stats": {
-    "bonus_damage": 15,
-    "movement_speed": 60,
-    "health_regen": 2
-  },
-  "components": [
-    "Mystic Staff",
-    "Ring of Regeneration"
+  "name": "Aghanim's Scepter",
+  "cost": 4200,
+  "description": "The scepter of a wizard with demigod-like powers.",
+  "abilities": [
+    {
+      "name": "Ability Upgrade",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "category": [
-    "Items",
-    "Strength items",
-    "Agility items",
-    "Intelligence items",
-    "Health boost items",
-    "Mana boost items",
-    "Shop items"
-  ]
+  "stats": {
+    "Strength": "+10",
+    "Agility": "+10",
+    "Intelligence": "+10",
+    "Health": "+175",
+    "Mana": "+175"
+  }
 }

@@ -1,16 +1,24 @@
 {
-  "title": "Bloodstone",
-  "category": [
-    "Items",
-    "Intelligence items"
-  ],
-  "attributes": {
-    "cost": 1500,
-    "base_attributes": {
-      "health_regen": 4.68,
-      "int": 9
+  "name": "Bloodstone",
+  "cost": 4700,
+  "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
+  "abilities": [
+    {
+      "name": "Bloodpact",
+      "type": "active",
+      "description": ""
     },
-    "description": "Bloodstone is an Intelligence item available from the Secret Shop.",
-    "image_url": "https://liquipedia.net/dota2/images/thumb/7/7d/Bloodstone.png/100px-Bloodstone.png"
+    {
+      "name": "Spell Weakness Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+15",
+    "Health": "+650",
+    "Mana": "+450",
+    "Spell Lifesteal (Hero)": "+20%",
+    "Spell Lifesteal (Creep)": "+4%"
   }
 }

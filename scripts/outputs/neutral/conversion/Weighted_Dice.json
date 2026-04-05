@@ -1,0 +1,9 @@
+{
+  "name": "Weighted Dice",
+  "description": "A Tier 1 neutral item artifact with a passive effect.",
+  "tier": "1",
+  "effects": {
+    "primary": "Loaded"
+  },
+  "notes": []
+}

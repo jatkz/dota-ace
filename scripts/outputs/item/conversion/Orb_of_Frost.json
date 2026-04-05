@@ -1,4 +1,13 @@
 {
-  "title": "Orb of Frost",
-  "category": "Items"
+  "name": "Orb of Frost",
+  "cost": 300,
+  "description": "Slowly growing since the universe began, it will envelop everything when it ends.",
+  "abilities": [
+    {
+      "name": "Frost",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {}
 }

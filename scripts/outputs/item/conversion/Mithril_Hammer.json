@@ -1,13 +1,9 @@
 {
-  "item_name": "Mithril Hammer",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/8/81/Mithril_Hammer.png/100px-Mithril_Hammer.png",
-  "item_details": {
-    "description": "Increases attack speed by +5% and grants +3 mana regeneration per second.",
-    "attributes": {
-      "Attack Speed": "+5%",
-      "Mana Regeneration": "+3"
-    },
-    "shop_tags": ["Common", "Damage"],
-    "drop_locations": ["Secret Shop", "Rarity: Common"]
+  "name": "Mithril Hammer",
+  "cost": 1600,
+  "description": "A hammer forged of pure mithril.",
+  "abilities": [],
+  "stats": {
+    "Attack Damage": "+24"
   }
 }

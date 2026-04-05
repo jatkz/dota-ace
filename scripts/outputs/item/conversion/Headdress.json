@@ -1,8 +1,17 @@
 {
-  "headdress": {
-    "item_name": "Headdress",
-    "cost": 300,
-    "lore": "A hat made of the skull of a lesser demon, used to harness its powers for protection and health regeneration.",
-    "category": "Items"
+  "name": "Headdress",
+  "cost": 425,
+  "description": "Creates a soothing aura that restores allies in battle.",
+  "abilities": [
+    {
+      "name": "Regeneration Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Cost": 425,
+    "Sell Value": 212.5,
+    "Bonus": "+0.5 Health Regeneration"
   }
 }

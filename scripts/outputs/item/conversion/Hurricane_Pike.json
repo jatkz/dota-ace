@@ -1,23 +1,24 @@
 {
-  "item_name": "Hurricane Pike",
-  "category": [
-    "Items",
-    "Strength items",
-    "Agility items",
-    "Intelligence items"
+  "name": "Hurricane Pike",
+  "cost": 4450,
+  "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
+  "abilities": [
+    {
+      "name": "Hurricane Thrust",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Dragon's Reach",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "additional_categories": [
-    "Health boost items",
-    "Shop items"
-  ],
-  "attributes": {
-    "cost": 250,
-    "primary_stat": "Attack Speed",
-    "bonus_health": null
-  },
-  "lore": "The hurricane pike was crafted by the ancient Kraken as a symbol of his might. It is said to possess the power to summon waves of destruction upon those who dare wield it.",
-  "release": {
-    "date": "2019-04-03",
-    "patch": "7.29"
+  "stats": {
+    "Strength": "+15",
+    "Agility": "+20",
+    "Intelligence": "+15",
+    "Health": "+200",
+    "Attack Range": "+130"
   }
 }

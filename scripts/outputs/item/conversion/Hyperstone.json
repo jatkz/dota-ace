@@ -1,3 +1,9 @@
 {
-  "error": "The provided HTML content does not represent a JSON structure. It appears to be an HTML page for Liquipedia Dota2 about the Hyperstone item."
+  "name": "Hyperstone",
+  "cost": 2000,
+  "description": "A mystical, carved stone that boosts the fervor of the holder.",
+  "abilities": [],
+  "stats": {
+    "Attack Speed": "+60"
+  }
 }

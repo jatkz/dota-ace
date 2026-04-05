@@ -8,7 +8,12 @@
   "shareable": false,
   "usageAlert": false,
   "recipe": {
-    "components": ["Orchid Malevolence", "Refresher Orb", "Battle Fury", "Mage Slayer"],
+    "components": [
+      "Orchid Malevolence",
+      "Refresher Orb",
+      "Battle Fury",
+      "Mage Slayer"
+    ],
     "totalCost": 16175
   },
   "abilities": [],

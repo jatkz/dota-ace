@@ -1,11 +1,16 @@
 {
-  "title": "Rod of Atos",
-  "description": "The Rod of Atos is an intelligence item in the game Dota 2. It provides a significant amount of mana regeneration and a unique ability called 'Unseen Strike' which reduces enemy vision for several seconds when cast, making it useful for ganking and ambushing enemies.",
-  "category": ["Items", "Intelligence items", "Health boost items", "Shop items"],
-  "attributes": {
-    "Primary Attribute": "Intelligence",
-    "Mana Regeneration": "+10 mana regeneration per 5 seconds",
-    "Unique Ability": "Unseen Strike (Reduces enemy vision for several seconds)"
-  },
-  "hidden_categories": ["Pages with hard coded colors"]
+  "name": "Rod of Atos",
+  "cost": 2250,
+  "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
+  "abilities": [
+    {
+      "name": "Cripple",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+12",
+    "Health": "+275"
+  }
 }

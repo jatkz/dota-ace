@@ -1,43 +1,19 @@
 {
-  "title": "Consecrated Wraps",
-  "image": "Consecrated_Wraps.png",
-  "item_class": "Boots",
-  "base_attributes": {
-    "health_regen": 1,
-    "movespeed": 30,
-    "bonus_armor": 5
-  },
-  "unique_modifier": {
-    "name": "modifier_item_consecrated_wraps",
-    "description": "Grants the wearer a shield that regenerates health over time and reduces incoming damage.",
-    "duration": 12.0,
-    "regeneration_amount": 10.0
-  },
-  "cost": 3500,
-  "category": [
-    "Boots",
-    "Strength_items",
-    "Agility_items",
-    "Intelligence_items"
+  "name": "Consecrated Wraps",
+  "cost": 2600,
+  "description": "Consecrated Wraps is an item purchasable at the Base Shop, under Support.",
+  "abilities": [
+    {
+      "name": "Hallowed",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "notes": {
-    "builds_from": ["Boots of Speed"],
-    "used_in_builds": [
-      "Anti-Mage",
-      "Invoker",
-      "Viper",
-      "Nature's Prophet",
-      "Io",
-      "Riki",
-      "Earth Spirit",
-      "Chen",
-      "Dawnbreaker",
-      "Disruptor",
-      "Puck",
-      "Tusk",
-      "Shadow Demon",
-      "Leshrac",
-      "Terrorblade"
-    ]
+  "stats": {
+    "Strength": 6,
+    "Agility": 6,
+    "Intelligence": 6,
+    "Health": 250,
+    "Magic Resistance": "12%"
   }
 }

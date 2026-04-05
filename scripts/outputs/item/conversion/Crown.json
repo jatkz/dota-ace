@@ -1,13 +1,11 @@
 {
-  "title": "Crown",
-  "categories": [
-    "Items",
-    "Strength items",
-    "Agility items",
-    "Intelligence items",
-    "Shop items"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "name": "Crown",
+  "cost": 450,
+  "description": "A stately crown created to ensure a well-meaning but ungifted heir could fend off usurpers and govern with a strong hand.",
+  "abilities": [],
+  "stats": {
+    "Strength": 4,
+    "Agility": 4,
+    "Intelligence": 4
+  }
 }

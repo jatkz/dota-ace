@@ -1,4 +1,21 @@
 {
   "name": "Mjollnir",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/b/be/Mjollnir.png/180px-Mjollnir.png"
+  "cost": 5500,
+  "description": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
+  "abilities": [
+    {
+      "name": "Static Charge",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Chain Lightning",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Attack Damage": "+25",
+    "Attack Speed": "+90"
+  }
 }

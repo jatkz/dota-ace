@@ -1,16 +1,15 @@
 {
-  "title": "Power_Treads",
-  "categories": [
+  "name": "Power Treads",
+  "cost": 1400,
+  "description": "A pair of tough-skinned boots that change to meet the demands of the wearer.",
+  "abilities": [
     {
-      "category_name": "Pseudo items"
-    },
-    {
-      "category_name": "Shop items"
+      "name": "Switch Attribute",
+      "type": "active",
+      "description": ""
     }
   ],
-  "hidden_categories": [
-    {
-      "category_name": "Pages with hard coded colors"
-    }
-  ]
+  "stats": {
+    "Bonus": "+55 Move Speed+45 Move Speed+25 Attack Speed"
+  }
 }

@@ -1,3 +1,19 @@
 {
-  "response": "The provided HTML content does not contain a structured table of items as JSON data. The HTML is a webpage containing information about various Dota 2 items, including a Moon Shard item. If you need the data in JSON format, you would have to manually extract and convert the relevant information from the HTML into JSON structure."
+  "name": "Moon Shard",
+  "cost": 4000,
+  "description": "Said to be a tear from the lunar goddess Selemene.",
+  "abilities": [
+    {
+      "name": "Shade Sight",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": 2000,
+    "Stacks": "1 MAX / Inventory Slot",
+    "Active": "Consume",
+    "Charges": "1 INIT",
+    "Bonus": "+140 Attack Speed"
+  }
 }

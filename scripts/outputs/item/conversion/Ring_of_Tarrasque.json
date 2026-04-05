@@ -1,12 +1,9 @@
 {
-  "title": "Ring of Tarrasque",
-  "description": "The Ring of Tarrasque is a Tier 1 Health regeneration item in Dota 2 that grants the user health regeneration based on damage dealt.",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/7/76/Ring_of_Tarrasque.png/150px-Ring_of_Tarrasque.png",
-  "price": {
-    "cost": 450,
-    "gems": 3
-  },
-  "attributes": {
-    "health_regeneration": "+10 health regeneration"
+  "name": "Ring of Tarrasque",
+  "cost": 1700,
+  "description": "An ageless ring forged with an otherwise simple blood magic amplified by the presumed source of its key component.",
+  "abilities": [],
+  "stats": {
+    "Health Regeneration": "+12"
   }
 }

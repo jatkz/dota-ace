@@ -1,19 +1,19 @@
 {
-  "page": {
-    "title": "Spirit_Vessel",
-    "url": "https://liquipedia.net/dota2/Spirit_Vessel",
-    "categories": [
-      "Pages with broken file links",
-      "Items",
-      "Strength items",
-      "Agility items",
-      "Intelligence items",
-      "Mana regeneration items",
-      "Armor items",
-      "Shop items"
-    ],
-    "hidden_categories": [
-      "Pages with hard coded colors"
-    ]
+  "name": "Spirit Vessel",
+  "cost": 2725,
+  "description": "Forged by a god to entrap the soul of another.",
+  "abilities": [
+    {
+      "name": "Soul Release",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+10",
+    "Agility": "+10",
+    "Intelligence": "+10",
+    "Mana Regeneration": "+1.75",
+    "Armor": "+2"
   }
 }

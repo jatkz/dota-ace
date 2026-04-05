@@ -1,14 +1,9 @@
 {
   "name": "Feverish Enchantment",
-  "description": null,
-  "tier": [5],
-  "stats": {
-    "cooldown_reduction": "15%",
-    "mana_loss_reduction": "-7%"
+  "description": "A guaranteed Tier 5 neutral item enchantment for Intelligence heroes only.",
+  "tier": "5",
+  "effects": {
+    "primary_effect": "+15% Cooldown Reduction, -7% Mana Loss Reduction"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Not shareable",
-    "No usage alert"
-  ]
+  "notes": []
 }

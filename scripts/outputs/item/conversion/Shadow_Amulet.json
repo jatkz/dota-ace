@@ -1,16 +1,16 @@
 {
-  "items": {
-    "Shadow_Amulet": {
-      "cost": 400,
-      "sell": 240,
-      "radius": 350,
-      "duration": 1.5,
-      "aura_radius": 800,
-      "stats": {
-        "bonus_intelligence": 1
-      },
-      "description": "Grants the target bonus intelligence and reduces its movement speed by 20%. While casting spells, enemies near the target gain a stacking damage reduction aura for 5 seconds.",
-      "lore": "In the shadowy depths of forgotten tombs and ancient ruins, the Shadow Amulet was created. It is said that only those who can master their fears and shadows may wield its power."
+  "name": "Shadow Amulet",
+  "cost": 900,
+  "description": "A small talisman that clouds the senses of one's enemies when held perfectly still.",
+  "abilities": [
+    {
+      "name": "Fade",
+      "type": "active",
+      "description": ""
     }
+  ],
+  "stats": {
+    "Cost": 900,
+    "Sell Value": 450
   }
 }

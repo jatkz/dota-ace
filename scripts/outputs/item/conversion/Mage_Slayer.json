@@ -1,68 +1,18 @@
 {
-  "page_title": "Mage Slayer",
-  "item_type": "Item",
-  "description": "An upgraded version of the Crystal Maiden's Frost Shard.",
-  "attributes": {
-    "cost": 2100,
-    "gold_cost": 2350,
-    "bonus_attributes": {
-      "health_regen_per_5": 4.6,
-      "mana_regen_per_5": 3.75,
-      "magic_resistance": -10,
-      "damage": 8
-    },
-    "components": [
-      "Crystal Shard",
-      "Mystic Staff"
-    ],
-    "drop_locations": {
-      "bosses": [],
-      "creeps": [],
-      "neutral_items": []
+  "name": "Mage Slayer",
+  "cost": 3100,
+  "description": "Forged by a secret order in The Third Age of Praxa'cia to fell the False King.",
+  "abilities": [
+    {
+      "name": "Mage Slayer",
+      "type": "passive",
+      "description": ""
     }
-  },
-  "categories": [
-    "Items",
-    "Health regeneration items",
-    "Mana regeneration items",
-    "Magic resistance items",
-    "Damage items",
-    "Shop items"
   ],
-  "unreleased_items": [
-    "Ancient Perseverance",
-    "Arcane Scout",
-    "Assassin's Contract",
-    "Assassin's Dagger",
-    "Barricade",
-    "Blighted Spirit",
-    "Bottomless Chalice",
-    "Dimensional Doorway",
-    "Elusive Cloak",
-    "Gladiator Helm",
-    "Gloves of Travel",
-    "Greater Mango",
-    "Guardian Shell",
-    "Horizon",
-    "Horizon's Equilibrium",
-    "Icarus Wings",
-    "Light Robes",
-    "Manacles of Power",
-    "Mechanical Arm",
-    "Oakheart",
-    "Overflowing Elixir",
-    "Ring of Fortitude",
-    "Satchel",
-    "Shadow of Vengeance",
-    "Slime Vial",
-    "Star Mace",
-    "Tome of Omniscience",
-    "Tree Processor",
-    "Turtle Shell",
-    "Venom Gland",
-    "Wand of Sanctity",
-    "Wand of the Brine",
-    "Warhammer",
-    "Wizard Glass"
-  ]
+  "stats": {
+    "Health Regeneration": "+6",
+    "Mana Regeneration": "+2.5",
+    "Magic Resistance": "+20%",
+    "Attack Damage": "+15"
+  }
 }

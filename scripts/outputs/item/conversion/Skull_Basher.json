@@ -1,4 +1,17 @@
 {
-  "status": "error",
-  "message": "The provided HTML content does not contain the requested information in a structured format suitable for extraction."
+  "name": "Skull Basher",
+  "cost": 2875,
+  "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
+  "abilities": [
+    {
+      "name": "Bash",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Cost": 2875,
+    "Sell Value": 1437.5,
+    "Bonus": "+10 Strength+30 Attack Damage"
+  }
 }

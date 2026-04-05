@@ -1,3 +1,15 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Overwhelming Blink",
+  "cost": 6800,
+  "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
+  "abilities": [
+    {
+      "name": "Overwhelming Blink",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+25"
+  }
 }

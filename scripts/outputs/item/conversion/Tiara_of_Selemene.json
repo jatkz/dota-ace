@@ -1,22 +1,9 @@
 {
-  "title": "Tiara of Selene",
-  "category": "Items",
-  "description": "The Tiara of Selene is a Tier 1 item in Dota 2 that restores 40 mana over 15 seconds to the user, which is refreshed upon use. It can be crafted using a Moonstone and a Circlet of Night.",
-  "effects": {
-    "mana_restore": 40,
-    "restore_time": 15,
-    "refresh_on_use": true
-  },
-  "crafting_costs": [
-    {
-      "item": "Moonstone",
-      "quantity": 1
-    },
-    {
-      "item": "Circlet of Night",
-      "quantity": 1
-    }
-  ],
-  "tier": 1,
-  "source": "Shop"
+  "name": "Tiara of Selemene",
+  "cost": 1700,
+  "description": "A symbol of favor bestowed upon the high priestess of Selemene.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+6 Mana Regeneration"
+  }
 }

@@ -1,5 +1,16 @@
 {
-  "item_name": "Vladmir's Offering",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/6/67/Vladimir%27s_Offering.png/120px-Vladimir%27s_Offering.png",
-  "color": "#d4a350"
+  "name": "Vladimir's Offering",
+  "cost": 2200,
+  "description": "An eerie mask that is haunted with the malice of a fallen vampire.",
+  "abilities": [
+    {
+      "name": "Vladmir's Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Mana Regeneration": "+0.75",
+    "Armor": "+1"
+  }
 }

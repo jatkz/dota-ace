@@ -12,4 +12,7 @@ Extract the following information from the HTML and return as JSON:
   "notes": ["any important notes"]
 }
 
+Ignore placeholder values like `?`, and ignore metadata-only fields unless they are clearly meaningful.
+Keep the main effect concise and prioritize the actual stat bonus or gameplay effect.
+
 IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

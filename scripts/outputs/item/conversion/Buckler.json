@@ -1,20 +1,15 @@
 {
-  "Buckler": {
-    "Category": "Items",
-    "Subcategory": "Armor items",
-    "Shop": "Shop items",
-    "Description": "Grants +10 Armor and reduces incoming physical damage by 5%.",
-    "Cost": 625,
-    "Recipe": [
-      {
-        "Item": "Iron Branch",
-        "Amount": 4
-      }
-    ],
-    "Attributes": {
-      "Armor": "+10",
-      "Physical Damage Reduction": "5%"
-    },
-    "Notes": "This item is no longer available in the game as of the latest update."
+  "name": "Buckler",
+  "cost": 425,
+  "description": "A powerful shield that imbues the bearer with the strength of heroes past, it is capable of protecting entire armies in battle.",
+  "abilities": [
+    {
+      "name": "Buckler Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Bonus Armor": "+1"
   }
 }

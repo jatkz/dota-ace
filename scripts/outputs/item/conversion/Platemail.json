@@ -1,6 +1,9 @@
 {
-  "armor_value": 4,
-  "cost": 500,
-  "builds_from": ["Cloak"],
-  "components": ["Cloak"]
+  "name": "Platemail",
+  "cost": 1400,
+  "description": "Thick metal plates that protect the entire upper body. Avoid dropping on feet.",
+  "abilities": [],
+  "stats": {
+    "Armor": "+10"
+  }
 }

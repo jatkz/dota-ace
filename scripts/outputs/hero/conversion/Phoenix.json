@@ -1,0 +1,43 @@
+{
+  "name": "Phoenix",
+  "description": "Enables allied hero targeting, deals damage per second based on health loss, and has various active abilities like Icarus Dive and Fire Spirits.",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Initiator",
+    "Escape",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 12,
+    "intelligence": 16
+  },
+  "abilities": [
+    {
+      "name": "Dying Light",
+      "type": "passive",
+      "description": "Deals damage per second to all enemy units centered around Phoenix based on its current health loss."
+    },
+    {
+      "name": "Icarus Dive",
+      "type": "active",
+      "description": "Dives forward to the point-targeted direction in an arc with a fixed distance, then orbiting back to its original position. Deals damage over time and applies a movement speed slow to all enemy units Phoenix come in contact with."
+    },
+    {
+      "name": "Fire Spirits",
+      "type": "active",
+      "description": "Summons a number of fire spirits orbiting around Phoenix at the cost of its health."
+    },
+    {
+      "name": "Sun Ray",
+      "type": "active",
+      "description": "Expels a light beam that damages enemy units at the cost of its own health. The longer the duration, the more the damage increases. Applies a movement speed slow. Casting Supernova no longer ends Sun Ray."
+    },
+    {
+      "name": "Supernova",
+      "type": "active",
+      "description": "Enables allied hero targeting. Phoenix and the affected allied hero are brought into the sun to be reborn together. Increases the Phoenix Sun hit count. This unit does not feel the effects from magical spell damage sources."
+    }
+  ]
+}

@@ -1,8 +1,22 @@
 {
-  "item_name": "Gem of True Sight",
-  "item_description": "Provides permanent true sight detection.",
-  "item_cost": 150,
-  "item_type": "Consumable",
-  "category": "Items",
-  "sub_category": "Shop items"
+  "name": "Gem of True Sight",
+  "cost": 900,
+  "description": "Not one thrall creature of the depths,Nor spirit bound in drowning's keep,Nor Maelrawn the Tentacular,Shall rest till seas, gem comes to sleep.",
+  "abilities": [
+    {
+      "name": "Reveal",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "True Sight Everlasting",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": "0 Unsellable",
+    "Stock": "1 INIT / 1 MAX",
+    "Destroyable": "0"
+  }
 }

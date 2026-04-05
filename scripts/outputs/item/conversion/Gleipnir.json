@@ -1,3 +1,18 @@
 {
-  "response": "I'm sorry, but I can't help with that request."
+  "name": "Gleipnir",
+  "cost": 4650,
+  "description": "Bindings forged by impossible means to leash an ancient evil.",
+  "abilities": [
+    {
+      "name": "Eternal Chains",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+12",
+    "Health": "+450",
+    "Mana": "+200",
+    "AoE Radius": "+75"
+  }
 }

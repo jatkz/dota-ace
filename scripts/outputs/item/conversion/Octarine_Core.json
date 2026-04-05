@@ -1,20 +1,17 @@
 {
-  "Item": {
-    "Name": "Octarine Core",
-    "Type": "Shop items",
-    "Cost": "1800",
-    "Recipe": [
-      "Philosopher's Stone",
-      "Staff of Wonders"
-    ],
-    "BuildsInto": [
-      "Aether Lens"
-    ],
-    "Properties": {
-      "HealthRegen": "+3",
-      "ManaRegen": "+1.5",
-      "BonusAttackSpeed": "+20%"
-    },
-    "Description": "The Octarine Core is a magical item that enhances the caster's ability to regenerate health and mana, while also boosting their attack speed."
+  "name": "Octarine Core",
+  "cost": 4900,
+  "description": "At the core of spellcraft are spectrums only the very gifted can sense.",
+  "abilities": [
+    {
+      "name": "Cooldown Reduction",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Health": "+450",
+    "Mana": "+450",
+    "Mana Regeneration": "+6"
   }
 }

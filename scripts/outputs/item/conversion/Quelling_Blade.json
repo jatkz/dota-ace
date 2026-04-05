@@ -1,26 +1,18 @@
 {
-  "title": "Quelling Blade",
-  "description": "The Quelling Blade is an item in the game Dota 2 that serves as a starting item for melee heroes. It provides increased attack speed and reduces the attack speed of nearby enemies.",
-  "stats": {
-    "bonus_aspd": "+30% Attack Speed",
-    "debuff_aspd": "-15% Enemy Attack Speed within 600 range"
-  },
-  "cost": {
-    "base_gold": 75,
-    "total_cost": 200
-  },
-  "components": [
+  "name": "Quelling Blade",
+  "cost": 100,
+  "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
+  "abilities": [
     {
-      "item_name": "Iron Talisman",
-      "quantity": 1
+      "name": "Chop Tree",
+      "type": "active",
+      "description": ""
     },
     {
-      "item_name": "Branch of Life",
-      "quantity": 1
+      "name": "Quell",
+      "type": "passive",
+      "description": ""
     }
   ],
-  "builds_into": [
-    "Maelstrom",
-    "Power Treads"
-  ]
+  "stats": {}
 }

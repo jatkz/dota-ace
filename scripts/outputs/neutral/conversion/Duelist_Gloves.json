@@ -1,0 +1,9 @@
+{
+  "name": "Duelist Gloves",
+  "description": "A Tier 1 neutral item artifact.",
+  "tier": "1",
+  "effects": {
+    "primary": "Boldness"
+  },
+  "notes": []
+}

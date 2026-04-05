@@ -1,22 +1,21 @@
 {
-  "item_name": "Khanda",
-  "type": "Heroic Item",
-  "base_cost": 1400,
-  "components": [
-    "Belt of Giant Strength",
-    "Blade of Alacrity"
+  "name": "Khanda",
+  "cost": 5600,
+  "description": "A blade sharp enough to slice through magic itself.",
+  "abilities": [
+    {
+      "name": "Empower Spell",
+      "type": "passive",
+      "description": ""
+    }
   ],
   "stats": {
-    "strength": "+25",
-    "agility": "+10",
-    "intelligence": "+15",
-    "health": "+600",
-    "damage": "+35 (+4 per level)"
-  },
-  "disassembly": [
-    "Belt of Giant Strength",
-    "Blade of Alacrity"
-  ],
-  "crafting_time": 1080,
-  "lore": "A powerful weapon wielded by ancient warriors. It grants immense strength and agility, making the wearer a formidable opponent on the battlefield."
+    "Strength": "+8",
+    "Agility": "+8",
+    "Intelligence": "+8",
+    "Health": "+450",
+    "Health Regeneration": "+7",
+    "Mana": "+450",
+    "Mana Regeneration": "+3"
+  }
 }

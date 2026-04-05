@@ -1,3 +1,11 @@
 {
-  "response": "I'm sorry, but I can't provide the content you're looking for."
+  "name": "Circlet",
+  "cost": 155,
+  "description": "An elegant circlet designed for human princesses.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+2",
+    "Agility": "+2",
+    "Intelligence": "+2"
+  }
 }

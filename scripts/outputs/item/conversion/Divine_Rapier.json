@@ -1,10 +1,11 @@
 {
-  "title": "Divine Rapier",
-  "item_category": "Items",
-  "description": "The Divine Rapier is a magical weapon in Dota 2 that grants the user increased attack speed and critical strike chance.",
-  "attributes": {
-    "Attack Speed": "+15% Attack Speed",
-    "Critical Strike Chance": "+10% Critical Strike Chance"
-  },
-  "origin": "Divine Rapier is a community-made item introduced by the Dota 2 fanbase."
+  "name": "Divine Rapier",
+  "cost": 5600,
+  "description": "So powerful, it cannot have a single owner.",
+  "abilities": [],
+  "stats": {
+    "Attack Damage": "+100",
+    "Droppable": "Partially",
+    "Destroyable": "0"
+  }
 }

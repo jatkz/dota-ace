@@ -1,7 +1,9 @@
 {
-  "item_name": "Demon Edge",
-  "item_type": "Shop item",
-  "category": "Damage items",
-  "description": "A demonic weapon that grants the wielder increased attack speed and deals bonus damage to non-hero units.",
-  "source": "Are We Heroes Yet?, pp.12-13"
+  "name": "Demon Edge",
+  "cost": 2200,
+  "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+40 Attack Damage"
+  }
 }

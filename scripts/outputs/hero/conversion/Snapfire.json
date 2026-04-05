@@ -1,0 +1,42 @@
+{
+  "name": "Snapfire",
+  "description": "Beatrix Snapfire Beatrix Snapfire and her dragon toad Mortimer are a welcome sight to the ragged folk who scratch out lives along the desert routes and oases scattered throughout Nanarak, the rain-forsaken gateway to the Outlands.",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 16,
+    "intelligence": 21
+  },
+  "abilities": [
+    {
+      "name": "Scatterblast",
+      "type": "active",
+      "description": "Unloads a blast that damages and applies a movement speed slow to enemy units within a cone. The blast is more effective at point-blank distance. Snapfire unloads with a wide blast, the point-blank distance is applied to enemy units closest to her."
+    },
+    {
+      "name": "Firesnap Cookie",
+      "type": "active",
+      "description": "Beatrix feeds a potent cookie to an allied unit, causing it to hop a short distance. The affected unit stuns and damages enemy units within the landing radius. The Firesnap Cookie now heals the affected allied unit while launching a singular, less potent Mortimer Kisses firespit to the landing destination."
+    },
+    {
+      "name": "Lil' Shredder",
+      "type": "active",
+      "description": "Heats up her mounted turret to rapidly fire a number of fixed-damage attacks while applying an armor reduction to the affected enemy unit. Grants self bonus attack range for the duration."
+    },
+    {
+      "name": "Gobble Up",
+      "type": "active",
+      "description": "Mortimer gobbles up an allied unit, which he can then spit toward enemy units. The unit stays in his belly for a fixed duration, and is released after the max duration if Spit Out is not cast."
+    },
+    {
+      "name": "Mortimer Kisses",
+      "type": "active",
+      "description": "These globs cause impact damage and create pools of firespit that applies a movement speed slow and damage over time. Each glob's landing location can be targeted with an attack order."
+    }
+  ]
+}

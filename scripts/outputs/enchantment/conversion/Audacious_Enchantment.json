@@ -1,13 +1,9 @@
 {
   "name": "Audacious Enchantment",
-  "description": null,
-  "tier": [5],
-  "stats": {
-    "attack_damage": 80,
-    "attack_speed": 100
+  "description": "A guaranteed Tier 5 neutral item enchantment for Agility heroes only.",
+  "tier": "5",
+  "effects": {
+    "primary_effect": "+80 Attack Damage, +100 Attack Speed, -10% Incoming Damage Reduction"
   },
-  "additionalInfo": [
-    "The attack damage bonus is magical damage",
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics"
-  ]
+  "notes": []
 }

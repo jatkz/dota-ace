@@ -1,12 +1,9 @@
 {
-  "title": "Boots_of_Speed",
-  "oldid": 2259061,
-  "categories": [
-    "Items",
-    "Movement speed items (page does not exist)",
-    "Shop items (page does not exist)"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "name": "Boots of Speed",
+  "cost": 500,
+  "description": "Fleet footwear, increasing movement.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+45 Move Speed"
+  }
 }

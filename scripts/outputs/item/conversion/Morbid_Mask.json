@@ -1,11 +1,16 @@
 {
-  "page_title": "Morbid_Mask",
-  "oldid": "2364938",
-  "categories": [
-    "Items",
-    "Shop items"
+  "name": "Morbid Mask",
+  "cost": 900,
+  "description": "A mask that drains the energy of those caught in its gaze.",
+  "abilities": [
+    {
+      "name": "Lifesteal",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Sell Value": 450,
+    "Bonus": "+18% Lifesteal (Hero) +10.8% Lifesteal (Creep)"
+  }
 }

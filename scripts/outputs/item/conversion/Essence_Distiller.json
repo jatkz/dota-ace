@@ -1,3 +1,20 @@
 {
-  "error": "The provided HTML content does not contain the requested information."
+  "name": "Essence Distiller",
+  "cost": 1775,
+  "description": "Essence Distiller is an item purchasable at the Base Shop, under Support.",
+  "abilities": [
+    {
+      "name": "Soul Release",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+3",
+    "Agility": "+3",
+    "Intelligence": "+3",
+    "Mana": "+150",
+    "Mana Regeneration": "+1.75",
+    "Armor": "+5"
+  }
 }

@@ -1,0 +1,11 @@
+{
+  "name": "Nimble Enchantment",
+  "description": "A guaranteed Tier 2-4 neutral item enchantment for Agility heroes only.",
+  "tier": "2",
+  "effects": {
+    "primary_effect": "-1.5/-2.25/-3 Health Regeneration, +6%/8%/10% Move Speed, +10/15/20 Attack Damage"
+  },
+  "notes": [
+    "Agility heroes only"
+  ]
+}

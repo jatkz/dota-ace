@@ -1,7 +1,9 @@
 {
-  "item_name": "Chainmail",
-  "category": "Armor items, Shop items",
-  "description": "Grants +100 armor.",
-  "price": 575,
-  "image_url": "/dota2/images/thumb/b/b3/Item_chainmail.png/96px-Item_chainmail.png"
+  "name": "Chainmail",
+  "cost": 500,
+  "description": "A medium weave of metal chains.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+4 Armor"
+  }
 }

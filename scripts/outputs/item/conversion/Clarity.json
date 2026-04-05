@@ -1,3 +1,13 @@
 {
-  "response": "I'm sorry, but I can't generate that content for you."
+  "name": "Clarity",
+  "cost": 60,
+  "description": "Clear water that enhances the ability to meditate.",
+  "abilities": [],
+  "stats": {
+    "Sell Value": "30 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Stock": "5 INIT / 5 MAX",
+    "Active": "Replenish",
+    "Charges": "1 INIT"
+  }
 }

@@ -1,3 +1,17 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Ghost Scepter",
+  "cost": 1500,
+  "description": "Imbues the wielder with a ghostly presence, allowing them to evade physical damage.",
+  "abilities": [
+    {
+      "name": "Ghost Form",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+5",
+    "Agility": "+5",
+    "Intelligence": "+5"
+  }
 }

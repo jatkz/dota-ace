@@ -1,14 +1,21 @@
 {
-  "title": "Blade Mail",
-  "attributes": {
-    "Cost": 1400,
-    "Sell": 350,
-    "Requires": ["Mithril Helmet"]
-  },
-  "lore": "A suit of enchanted armor forged from a rare metal that deflects physical attacks.",
-  "description": "Reduces incoming damage by 25% for each instance of damage dealt.",
-  "acquisition_methods": {
-    "shop_purchase": true,
-    "neutral_creep_drop": true
+  "name": "Blade Mail",
+  "cost": 2400,
+  "description": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
+  "abilities": [
+    {
+      "name": "Damage Return",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Damage Return (Passive)",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Armor": "+7",
+    "Attack Damage": "+15"
   }
 }

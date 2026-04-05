@@ -1,0 +1,9 @@
+{
+  "name": "Partisan's Brand",
+  "description": "A Tier 3 neutral item artifact.",
+  "tier": "3",
+  "effects": {
+    "primary": "Passive: Brand"
+  },
+  "notes": []
+}

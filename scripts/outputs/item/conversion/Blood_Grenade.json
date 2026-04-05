@@ -1,10 +1,15 @@
 {
-  "item_name": "Blood Grenade",
-  "category": "Items",
-  "subcategories": [
-    "Health boost items",
-    "Shop items"
-  ],
-  "description": "A throwable item that heals allied heroes in a small radius upon impact.",
-  "hidden_category": "Pages with hard coded colors"
+  "name": "Blood Grenade",
+  "cost": 50,
+  "description": "Both the hunter and the hunted must pay the blood price.",
+  "abilities": [],
+  "stats": {
+    "Cost": 50,
+    "Sell Value": "25 / Count",
+    "Stacks": "2 MAX / Inventory Slot",
+    "Stock": "1 INIT / 2 MAX",
+    "Active": "Throw Grenade",
+    "Charges": "1 INIT",
+    "Bonus": "+50 Health"
+  }
 }

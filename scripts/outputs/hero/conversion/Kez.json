@@ -1,0 +1,61 @@
+{
+  "name": "Kez",
+  "description": "Flightless fury! Heh, that's what they call me.",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 27,
+    "intelligence": 20
+  },
+  "abilities": [
+    {
+      "name": "Switch Discipline",
+      "type": "passive",
+      "description": "Switches between his weapons — the Kazurai Katana and the Shodo Sai. The higher Kez's level, the lower the cooldown. Has a greater attack range and sets base attack time while equipping the Kazurai Katana. Increases total attack damage."
+    },
+    {
+      "name": "Echo Slash",
+      "type": "active",
+      "description": "All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact. Cannot dash forward while being affected by sources. However, the Root source application does not prevent usage of ability."
+    },
+    {
+      "name": "Falcon Rush",
+      "type": "active",
+      "description": "Rushes toward enemy units within a distance with movement speed and slow resistance bonus. When attacking, echoes will be created, dealing secondary attacks. Applies the Kazurai Katana debuff of its corresponding level only if the first attack is a Katana-based attack. Additionally has a greater base attack time with the Katana Discipline."
+    },
+    {
+      "name": "Grappling Claw",
+      "type": "active",
+      "description": "Swings on a grappling hook toward the unit-targeted tree or enemy. Applies movement speed slow on the affected enemy until Kez reaches it. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact."
+    },
+    {
+      "name": "Talon Toss",
+      "type": "active",
+      "description": "Attack Damage / Physical Throws a Sai-based projectile that damages and silences the unit-targeted enemy."
+    },
+    {
+      "name": "Kazurai Katana",
+      "type": "passive",
+      "description": "Impales the affected enemy unit upon cast, preventing it from moving or turning, then deals physical spell damage bonus based on the debuff stack value, up to a maximum of 500 stacks. Increases Max Stacks to 1000 and stack as burst damage value. Stuns the target, if the impale comes from behind the target. Allows Kez to lifesteal off of the burst damage."
+    },
+    {
+      "name": "Shodo Sai",
+      "type": "passive",
+      "description": "The next attack or ability damage instance on the marked unit grants Kez's attacks True Strike, bashes, and applies a critical strike while consuming the buff. The Parry component sets Kez's turn rate while locking his facing angle, then applies a self-movement speed slow and self-disarms upon cast."
+    },
+    {
+      "name": "Raptor Dance",
+      "type": "active",
+      "description": "After its cast time completion, Kez performs a series of radial slashes centered around him, dealing the enemy unit's max health as damage, and spell lifesteals from the damage dealt. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact."
+    },
+    {
+      "name": "Raven's Veil",
+      "type": "active",
+      "description": "Applies a basic dispel upon cast. Kez becomes invisible until he attacks or uses an ability."
+    }
+  ]
+}

@@ -1,36 +1,19 @@
 {
-  "item": {
-    "name": "Urn of Shadows",
-    "cost": 450,
-    "attribute_bonus": {
-      "strength_gain": 2,
-      "intelligence_gain": 1.5,
-      "agility_gain": 1
-    },
-    "unique_modifier": {
-      "description": "Grants an additional charge for every 5 minutes of game time.",
-      "effect": "Additional charges are gained over time."
-    },
-    "usage_notes": [
-      "Grants a stack of bonus HP, which can be activated to deal damage and apply an Amplify Damage debuff.",
-      "Stacks grant health but do not affect the hero's current health pool.",
-      "The item also provides mana regeneration proportional to stacks."
-    ],
-    "drop_locations": {
-      "neutral_creeps": [
-        "Ancient Wyrm",
-        "Diretide Crab"
-      ]
-    },
-    "category": [
-      "Strength items",
-      "Agility items",
-      "Intelligence items"
-    ],
-    "image_url": "https://liquipedia.net/dota2/images/thumb/4/4a/Urn_of_Shadows.png/128px-Urn_of_Shadows.png",
-    "infobox_image": {
-      "width": "100%",
-      "alt": "Urn of Shadows item icon"
+  "name": "Urn of Shadows",
+  "cost": 825,
+  "description": "Contains the ashes of powerful demons.",
+  "abilities": [
+    {
+      "name": "Soul Release",
+      "type": "active",
+      "description": ""
     }
+  ],
+  "stats": {
+    "Strength": "+2",
+    "Agility": "+2",
+    "Intelligence": "+2",
+    "Mana Regeneration": "+1.25",
+    "Armor": "+2"
   }
 }

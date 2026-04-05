@@ -1,0 +1,9 @@
+{
+  "name": "Ash Legion Shield",
+  "description": "A Tier 1 neutral item artifact.",
+  "tier": "1",
+  "effects": {
+    "primary": "Active: Shield Wall"
+  },
+  "notes": []
+}

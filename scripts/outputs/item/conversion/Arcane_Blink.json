@@ -1,18 +1,11 @@
 {
-  "title": "Arcane Blink",
-  "type": "Intelligence items",
-  "categories": [
-    "Items",
-    "Intelligence items",
-    "Shop items"
-  ],
-  "description": "Arcane Blink is an Intelligence item available in the Dota 2 game. It provides a short-range blink ability to its user, allowing them to move quickly across the map or bypass obstacles.",
-  "attributes": {
-    "cost": 1800,
-    "required_intelligence": 45,
-    "blink_range": 475,
-    "cool_down": 3.2,
-    "mana_cost": 60
-  },
-  "hidden_category": "Pages with hard coded colors"
+  "name": "Arcane Blink",
+  "cost": 6800,
+  "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
+  "abilities": [],
+  "stats": {
+    "Sell Value": 3400,
+    "Active": "Arcane Blink",
+    "Bonus": "+25 Intelligence"
+  }
 }

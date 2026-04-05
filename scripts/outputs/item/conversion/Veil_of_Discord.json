@@ -1,21 +1,12 @@
 {
-  "title": "Veil of Discord",
-  "type": "item",
-  "attributes": {
-    "intelligence": 8,
-    "bonus_damage_reduction": 10,
-    "cast_range": "350",
-    "cooldown": "20"
-  },
-  "lore": "In the realm of shadow and illusion, the Veil of Discord hides its bearer from sight while striking fear into the hearts of their enemies.",
-  "category": [
-    "Intelligence items",
-    "Health boost items",
-    "Shop items"
-  ],
-  "usage_notes": {
-    "build_recommendations": [
-      "Build order: Start with a Tango, then upgrade to Veil of Discord and continue building as usual."
-    ]
+  "name": "Veil of Discord",
+  "cost": 1700,
+  "description": "The headwear of corrupt magi.",
+  "abilities": [],
+  "stats": {
+    "Cost": 1700,
+    "Sell Value": 850,
+    "Active": "Spell Weakness",
+    "Bonus": "+10 Intelligence+175 Health+18% Spell Lifesteal (Hero)+3.6% Spell Lifesteal (Creep)"
   }
 }

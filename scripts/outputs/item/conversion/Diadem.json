@@ -1,13 +1,11 @@
 {
-  "title": "Diadem",
-  "categories": [
-    "Items",
-    "Strength items",
-    "Agility items",
-    "Intelligence items",
-    "Shop items"
-  ],
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "name": "Diadem",
+  "cost": 1000,
+  "description": "A crown that can never be removed.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+6",
+    "Agility": "+6",
+    "Intelligence": "+6"
+  }
 }

@@ -1,23 +1,24 @@
 {
-  "item_name": "Harpoon",
-  "category": "Items",
-  "subcategories": [
-    "Strength items",
-    "Agility items",
-    "Intelligence items"
-  ],
-  "attributes": {
-    "primary_attribute": "All Attributes",
-    "stats": {
-      "bonus_damage": "+4 Damage",
-      "mana_regen": "+5 Mana Regeneration / 5 seconds",
-      "attack_speed": "-10% Attack Speed"
+  "name": "Harpoon",
+  "cost": 4700,
+  "description": "A perfect solution for the flight of foes.",
+  "abilities": [
+    {
+      "name": "Draw Forth",
+      "type": "active",
+      "description": ""
     },
-    "description": "Increases the attack speed of nearby allied units.",
-    "lore": "The Harpoon is a versatile weapon that provides its wielder with significant damage and mana regeneration. However, it comes at the cost of reduced attack speed."
-  },
-  "availability": {
-    "shop_type": "Shop",
-    "cost": "1500 gold"
+    {
+      "name": "Echo Strike",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+25",
+    "Agility": "+10",
+    "Intelligence": "+10",
+    "Mana Regeneration": "+2",
+    "Attack Damage": "+25"
   }
 }

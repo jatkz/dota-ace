@@ -1,14 +1,17 @@
 {
-  "page_title": "Revenant's Brooch",
-  "item_type": "Shop items",
-  "attributes": {
-    "cost": 150,
-    "bonus_damage": {
-      "type": "Physical",
-      "amount": "+2"
-    },
-    "shop_tags": [
-      "damage item"
-    ]
+  "name": "Revenant's Brooch",
+  "cost": 3300,
+  "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
+  "abilities": [
+    {
+      "name": "Phantom Critical",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "+Attack Damage": 35,
+    "+Spell Lifesteal (Hero)": 15,
+    "+Spell Lifesteal (Creep)": 3
   }
 }

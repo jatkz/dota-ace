@@ -1,16 +1,16 @@
 {
-  "title": "Aghanim's Shard",
-  "description": "Aghanim's Shard is an item in Dota 2 that provides a large boost to stats for the user.",
-  "image": "/dota2/images/thumb/3/38/Aghanims_shard.png/64px-Aghanims_shard.png",
-  "stats": {
-    "health_regen_per_5": 1,
-    "mana_regen_per_5": 0.75,
-    "damage_increase": 20
-  },
-  "crafting_requirements": [
-    "2 Tranquility Orbs",
-    "1 Power Treads"
+  "name": "Aghanim's Shard",
+  "cost": 1400,
+  "description": "With origins known only to a single wizard, fragments of this impossible crystal are nearly as coveted as the renowned scepter itself.",
+  "abilities": [
+    {
+      "name": "Ability Upgrade",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "cost": 3500,
-  "category": "Shop items"
+  "stats": {
+    "Sell Value": "0 Unsellable",
+    "Stock": "0 INIT / 1 MAX"
+  }
 }

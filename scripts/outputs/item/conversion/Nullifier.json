@@ -1,28 +1,16 @@
 {
-  "item_name": "Nullifier",
-  "item_type": "Armor items, Damage items, Shop items",
-  "category": [
-    "Items"
+  "name": "Nullifier",
+  "cost": 4350,
+  "description": "A dangerous weapon pilfered from an inverse dimension.",
+  "abilities": [
+    {
+      "name": "Nullify",
+      "type": "",
+      "description": ""
+    }
   ],
-  "description": "Reduces the damage taken by illusions and enemy heroes with illusions.",
-  "attributes": {
-    "Illusion Reduction": "Reduces the damage taken by illusions to 20% of normal.",
-    "Hero Illusion Reduction": "Reduces the damage taken by heroes with illusions to 20% of normal."
-  },
-  "components": [
-    "Mithril Hammer",
-    "Chainmail"
-  ],
-  "cost": 1600,
-  "crafting_time": 50,
-  "builds_from": [
-    "Mithril Hammer",
-    "Chainmail"
-  ],
-  "lore": "A weapon forged to counter the overwhelming strength of illusions.",
-  "image_url": "https://cdn.liquipedia.net/dota2/Nullifier.png",
-  "color": "#FF4500",
-  "hidden_categories": [
-    "Pages with hard coded colors"
-  ]
+  "stats": {
+    "Armor": "+10",
+    "Attack Damage": "+75"
+  }
 }

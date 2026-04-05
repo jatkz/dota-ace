@@ -1,3 +1,19 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Helm of the Dominator",
+  "cost": 2550,
+  "description": "The powerful headpiece of a dead necromancer.",
+  "abilities": [
+    {
+      "name": "Dominate",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+6",
+    "Agility": "+6",
+    "Intelligence": "+6",
+    "Health Regeneration": "+6",
+    "Armor": "+6"
+  }
 }

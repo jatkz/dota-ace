@@ -1,21 +1,22 @@
 {
-  "page_title": "Crimson Guard",
-  "description": "The Crimson Guard is an item in the Dota 2 game that provides health regeneration and armor.",
-  "attributes": {
-    "health_regeneration": {
-      "value": 3,
-      "unit": "per second"
+  "name": "Crimson Guard",
+  "cost": 3725,
+  "description": "A cuirass originally built to protect against the dreaded Year Beast.",
+  "abilities": [
+    {
+      "name": "Guard",
+      "type": "active",
+      "description": ""
     },
-    "armor": {
-      "value": 10,
-      "type": "bonus"
+    {
+      "name": "Damage Block",
+      "type": "passive",
+      "description": ""
     }
-  },
-  "categories": [
-    "Items",
-    "Health boost items",
-    "Health regeneration items",
-    "Armor items",
-    "Shop items"
-  ]
+  ],
+  "stats": {
+    "Health": "+250",
+    "Health Regeneration": "+12",
+    "Armor": "+6"
+  }
 }

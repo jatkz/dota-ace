@@ -1,3 +1,18 @@
 {
-  "response": "The provided HTML content does not contain a structured JSON object. It appears to be the source code of a webpage, likely from Liquipedia, detailing information about a Dota 2 item called 'Tango'. The HTML includes various tables listing different types of items (e.g., Shop items, Unreleased), their names, and links to more detailed pages. If you need specific data extracted from this HTML, please specify the details."
+  "name": "Tango",
+  "cost": 90,
+  "description": "Forage to survive on the battlefield.",
+  "abilities": [
+    {
+      "name": "Devour",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": "15 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Stock": "10 INIT / 10 MAX",
+    "Charges": "3 INIT"
+  }
 }

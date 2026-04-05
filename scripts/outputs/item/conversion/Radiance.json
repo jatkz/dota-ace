@@ -1,22 +1,16 @@
 {
-  "Radiance": {
-    "category": "Items",
-    "subcategories": [
-      "Evasion items",
-      "Damage items",
-      "Can be disassembled",
-      "Shop items"
-    ],
-    "properties": {
-      "type": "Legendary",
-      "color": "gold",
-      "price": 4800,
-      "components": [
-        "Mithril Hammer",
-        "Blade of Alacrity",
-        "Orb of Vengeance",
-        "Staff of Wizardry"
-      ]
+  "name": "Radiance",
+  "cost": 4700,
+  "description": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
+  "abilities": [
+    {
+      "name": "Burn",
+      "type": "passive",
+      "description": ""
     }
+  ],
+  "stats": {
+    "Evasion": "+25%",
+    "Attack Damage": "+55"
   }
 }

@@ -1,8 +1,9 @@
 {
-  "item": {
-    "name": "Vitality Booster",
-    "type": "Health boost item",
-    "category": "Shop items",
-    "description": "Restores 150 health over 2 seconds when used."
+  "name": "Vitality Booster",
+  "cost": 1000,
+  "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+250 Health"
   }
 }

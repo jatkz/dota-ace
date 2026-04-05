@@ -1,7 +1,21 @@
 {
-  "Shiva's Guard": {
-    "Description": "Reduces incoming damage by 20% for 5 seconds when equipped.",
-    "ImageURL": "/images/thumb/7/7a/ShivasGuard.png/64px-ShivasGuard.png",
-    "Category": "Armor items, Shop items"
+  "name": "Shiva's Guard",
+  "cost": 4500,
+  "description": "Said to have belonged to a goddess, today it retains much of its former power.",
+  "abilities": [
+    {
+      "name": "Arctic Blast",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Freezing Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Armor": "+17",
+    "AoE Radius": "+75"
   }
 }

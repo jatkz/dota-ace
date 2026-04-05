@@ -1,3 +1,17 @@
 {
-  "response": "I'm sorry, but the provided content is an HTML page and does not contain structured data that can be easily converted to JSON. If you need specific information from this HTML content in JSON format, please provide more details about what data you're interested in extracting."
+  "name": "Town Portal Scroll",
+  "cost": 100,
+  "description": "What a hero truly needs.",
+  "abilities": [
+    {
+      "name": "Teleport",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": "50 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Charges": "1 INIT"
+  }
 }

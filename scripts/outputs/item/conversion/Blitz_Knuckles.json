@@ -1,7 +1,9 @@
 {
-  "item": {
-    "name": "Blitz Knuckles",
-    "category": ["Items", "Attack speed items", "Shop items"],
-    "color": "hard-coded"
+  "name": "Blitz Knuckles",
+  "cost": 1000,
+  "description": "An underground arcanist's update of a back-alley classic.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+35 Attack Speed"
   }
 }

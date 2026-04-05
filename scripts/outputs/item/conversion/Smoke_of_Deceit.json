@@ -1,8 +1,18 @@
 {
-  "title": "Smoke of Deceit",
-  "categories": [
-    "Items",
-    "Shop items"
+  "name": "Smoke of Deceit",
+  "cost": 50,
+  "description": "The charlatan wizard Myrddin's only true contribution to the arcane arts.",
+  "abilities": [
+    {
+      "name": "Disguise",
+      "type": "",
+      "description": ""
+    }
   ],
-  "content": "<p>The <b>Smoke of Deceit</b> is a <span class=\"color-attribute\" style=\"background-color: #800000; color: white;\">consumable</span> item available in the Dota 2 Shop. It creates a <a href=\"/dota2/Dark_Pool\">Dark Pool</a> when cast on a target allied unit, which grants that hero <a href=\"/dota2/Smoke_of_Deceit#Attributes\" title=\"Smoke of Deceit\">30% evasion</a>, <span class=\"color-attribute\" style=\"background-color: #800000; color: white;\">300 armor</span>, and <span class=\"color-attribute\" style=\"background-color: #800000; color: white;\">10% magic resistance</a> for 15 seconds.</p>\n\n<table class=\"infobox\">\n<caption><b><a href=\"/dota2/Smoke_of_Deceit\">Smoke of Deceit</a></b></caption>\n<tbody>\n<tr>\n<td colspan=\"2\" style=\"text-align:center;\">\n<img alt=\"Item_smoke_of_deceit.png\" src=\"/dota2/images/thumb/e/eb/Item_smoke_of_deceit.png/64px-Item_smoke_of_deceit.png\" decoding=\"async\" loading=\"lazy\" width=\"64\" height=\"64\" class=\"thumbimage\" />\n<div class=\"thumbcaption\">\n<div class=\"magnify\"><a href=\"/dota2/File:Item_smoke_of_deceit.png\" class=\"internal\" title=\"Click to enlarge\"><img src=\"/skins/common/icons/magnify-clip.svg\" width=\"15\" height=\"11\" alt=\"Enlarge\" /></a></div>\nSmoke of Deceit\n</div>\n</td>\n</tr>\n<tr>\n<th><b>Cost:</b></th>\n<td>400 <a href=\"/dota2/Gold_(item)#Gold_per_min\" title=\"Gold (item)\">gold</a></td>\n</tr>\n<tr>\n<th><b>Shop Tags:</b></th>\n<td colspan=\"2\"><span class=\"shop-tag\">Consumable</span></td>\n</tr>\n<tr>\n<th><b>Behavior:</b></th>\n<td colspan=\"2\">No Target, No Cast Point, No Duration, No Cooldown</td>\n</tr>\n<tr>\n<th><b>Ability:</b></th>\n<td colspan=\"2\">Casts a Dark Pool on the target point, granting <a href=\"/dota2/Smoke_of_Deceit#Attributes\" title=\"Smoke of Deceit\">30% evasion</a>, <span class=\"color-attribute\" style=\"background-color: #800000; color: white;\">300 armor</span>, and <span class=\"color-attribute\" style=\"background-color: #800000; color: white;\">10% magic resistance</a> to all allied units within the area for 15 seconds.</td>\n</tr>\n</tbody>\n</table>\n\n<h2><span id=\"Attributes\"></span>Attributes</h2>\n<p>The <b>Smoke of Deceit</b> grants the following attributes:</p>\n<ul>\n<li><b>Evasion:</b> 30%</li>\n<li><b>Armor:</b> 300</li>\n<li><b>Magic Resistance:</b> 10%</li>\n<li><b>Duration:</b> 15 seconds</li>\n</ul>\n\n<h2><span id=\"Crafting\"></span>Crafting</h2>\n<p>The <b>Smoke of Deceit</b> can be crafted from the following components:</p>\n<ul>\n<li><a href=\"/dota2/Mystic_Skin\" title=\"Mystic Skin\">Mystic Skin</a></li>\n<li><a href=\"/dota2/Clarity\" title=\"Clarity\">Clarity</a> or <a href=\"/dota2/Enchanted_Mango\" title=\"Enchanted Mango\">Enchanted Mango</a></li>\n<li><a href=\"/dota2/Dewdrops\" title=\"Dewdrops\">Dewdrops</a></li>\n</ul>\n\n<p>Alternatively, it can be crafted from <a href=\"/dota2/Crystal_Mail\" title=\"Crystal Mail\">Crystal Mail</a>, <a href=\"/dota2/Enchanted_Mango\" title=\"Enchanted Mango\">Enchanted Mango</a>, and <a href=\"/dota2/Dewdrops\" title=\"Dewdrops\">Dewdrops</a>.</p>\n\n<h2><span id=\"Trivia\"></span>Trivia</h2>\n<ul>\n<li>The item was added in the 7.05 patch.</li>\n</ul>"
+  "stats": {
+    "Sell Value": "25 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Stock": "2 INIT / 3 MAX",
+    "Charges": "1 INIT"
+  }
 }

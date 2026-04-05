@@ -1,14 +1,21 @@
 {
-  "item_name": "Pipe of Insight",
-  "category": ["Items", "Health regeneration items", "Magic resistance items"],
-  "attributes": {
-    "health_regen": "+1.0 health regeneration per second",
-    "magic_resistance": "+25 magic resistance"
-  },
-  "description": "The Pipe of Insight is a basic item that provides health regeneration and increased magic resistance, making it useful for support heroes who need to sustain themselves and protect their allies.",
-  "image_url": "/dota2/images/item/pipe_of_insight.png",
-  "crafting_requirements": {
-    "item1": "Claymore",
-    "item2": "Ironwood Club"
+  "name": "Pipe of Insight",
+  "cost": 3725,
+  "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
+  "abilities": [
+    {
+      "name": "Barrier",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Insight Aura",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Health Regeneration": "+14",
+    "Magic Resistance": "+20%"
   }
 }

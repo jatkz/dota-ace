@@ -1,10 +1,9 @@
 {
-  "ring_of_health": {
-    "description": "The Ring of Health is a shop item that grants the wearer +25 health regeneration per second and +200 starting mana.",
-    "category": ["Items", "Health regeneration items", "Shop items"],
-    "attributes": {
-      "health_regeneration_per_second": 25,
-      "starting_mana": 200
-    }
+  "name": "Ring of Health",
+  "cost": 700,
+  "description": "A shiny ring found beneath a fat halfling’s corpse.",
+  "abilities": [],
+  "stats": {
+    "Health Regeneration": "+4.5"
   }
 }

@@ -1,20 +1,15 @@
 {
-  "item": {
-    "name": "Desolator",
-    "type": "Damage items",
-    "category": "Items",
-    "shop_category": "Shop items",
-    "description": "Inflicts burning damage to enemies that are attacked, reducing their attack speed.",
-    "effects": [
-      {
-        "effect": "Burning Damage",
-        "value": "10"
-      },
-      {
-        "effect": "Attack Speed Reduction",
-        "value": "-25%"
-      }
-    ],
-    "image_url": "https://liquipedia.net/dota2/images/thumb/d/de/Desolator.png/40px-Desolator.png"
+  "name": "Desolator",
+  "cost": 3500,
+  "description": "A wicked weapon, used in torturing political criminals.",
+  "abilities": [
+    {
+      "name": "Corruption Soul Stealer",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Attack Damage": "+55"
   }
 }

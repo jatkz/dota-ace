@@ -1,12 +1,9 @@
 {
-  "item": {
-    "name": "Point Booster",
-    "description": "Gives a small boost to health and mana regeneration.",
-    "cost": 40,
-    "attributes": {
-      "health_regen": 1,
-      "mana_regen": 1.5
-    },
-    "category": "Shop items"
+  "name": "Point Booster",
+  "cost": 1200,
+  "description": "A perfectly formed amethyst that nourishes body and mind when held.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+175 Health+175 Mana"
   }
 }

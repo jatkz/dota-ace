@@ -1,17 +1,11 @@
 {
-  "item": {
-    "name": "Falcon Blade",
-    "category": "Items",
-    "type": [
-      "Health boost items",
-      "Mana regeneration items",
-      "Damage items"
-    ],
-    "shop_type": "Shop items",
-    "attributes": {
-      "health_boost": 30,
-      "mana_regeneration": 2,
-      "damage": 14
-    }
+  "name": "Falcon Blade",
+  "cost": 1125,
+  "description": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
+  "abilities": [],
+  "stats": {
+    "Cost": 1125,
+    "Sell Value": 562.5,
+    "Bonus": "+200 Health+1.8 Mana Regeneration+14 Attack Damage"
   }
 }

@@ -1,25 +1,13 @@
 {
-  "title": "Parasma",
-  "url": "https://liquipedia.net/dota2/Parasma",
-  "image": {
-    "source": "https://liquipedia.net/dota2/images/thumb/f/f5/Parasma.png/180px-Parasma.png"
-  },
-  "description": "A basic item, Parasma provides a small amount of Intelligence and mana regeneration.",
-  "cost": 600,
-  "components": null,
-  "attributes": {
-    "intelligence": "+2",
-    "mana_regen_per_5": "+0.45"
-  },
-  "crafting_steps": [
-    {
-      "name": "1st Step",
-      "recipe": "Bottle + Broom + Circlet of Nabula",
-      "image": null
-    }
-  ],
-  "builds_into": [
-    "Mystic Staff"
-  ],
-  "used_by_heroes": []
+  "name": "Parasma",
+  "cost": 5975,
+  "description": "Warning: There is no antidote if picked up by the wrong end.",
+  "abilities": [],
+  "stats": {
+    "Intelligence": "+40",
+    "Mana Regeneration": "+1.5",
+    "Armor": "+7",
+    "Attack Speed": "+40",
+    "Projectile Speed": "+300"
+  }
 }

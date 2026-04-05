@@ -1,15 +1,15 @@
 {
-  "item_name": "Blink Dagger",
-  "item_type": "Shop items",
-  "description": "A teleportation device that allows the user to blink to a nearby location on the map.",
-  "stats": {
-    "Cooldown Reduction": "-10%",
-    "Movement Speed Increase": "+25%"
-  },
-  "usage": [
-    "Teleporting to avoid attacks or chase down enemies",
-    "Escaping from dangerous situations",
-    "Quickly moving between lanes"
+  "name": "Blink Dagger",
+  "cost": 2250,
+  "description": "The fabled dagger used by the fastest assassin ever to walk the lands.",
+  "abilities": [
+    {
+      "name": "Blink",
+      "type": "active",
+      "description": ""
+    }
   ],
-  "category": "Items"
+  "stats": {
+    "Sell Value": 1125
+  }
 }

@@ -1,14 +1,9 @@
 {
   "name": "Quickened Enchantment",
-  "description": null,
-  "tier": [1, 2, 3, 4],
-  "stats": {
-    "mana": [0, 100, 160, 220],
-    "evasion": [0, 0, 0, 15],
-    "moveSpeed": [15, 20, 25, 30]
+  "description": "A guaranteed Tier 1–4 neutral item enchantment for all heroes.",
+  "tier": "1",
+  "effects": {
+    "primary_effect": "+0/100/160/220 Mana, +0/0/0/15% Evasion, +15/20/25/30 Move Speed"
   },
-  "additionalInfo": [
-    "Fully stacks with other movement speed sources",
-    "Acquired by crafting with Madstone"
-  ]
+  "notes": []
 }

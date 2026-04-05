@@ -1,21 +1,16 @@
 {
-  "title": "Aeon Disk",
-  "category": "Items",
-  "description": "The Aeon Disk is a powerful item in Dota 2 that provides both health and mana regeneration over time.",
-  "attributes": {
-    "cost": 400,
-    "health_regen": 15,
-    "mana_regen": 10
-  },
-  "builds_into": [
-    "Ultimate Orb",
-    "Aghanim's Scepter"
+  "name": "Aeon Disk",
+  "cost": 3000,
+  "description": "A powerful artifact long ago smuggled out of the Ivory Incubarium. Or so many believe.",
+  "abilities": [
+    {
+      "name": "Combo Breaker",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "used_by_heroes": [
-    "Invoker",
-    "Necrophos",
-    "Riki",
-    "Techies",
-    "Oracle"
-  ]
+  "stats": {
+    "Health": "+250",
+    "Mana": "+300"
+  }
 }

@@ -1,22 +1,15 @@
 {
-  "page_title": "Glimmer Cape",
-  "oldid": "2364697",
-  "categories": [
+  "name": "Glimmer Cape",
+  "cost": 2150,
+  "description": "The stolen cape of a master illusionist.",
+  "abilities": [
     {
-      "category": "Items"
-    },
-    {
-      "category": "Magic resistance items",
-      "exists": false
-    },
-    {
-      "category": "Shop items",
-      "exists": false
+      "name": "Glimmer",
+      "type": "",
+      "description": ""
     }
   ],
-  "hidden_categories": [
-    {
-      "category": "Pages with hard coded colors"
-    }
-  ]
+  "stats": {
+    "Magic Resistance": "+20%"
+  }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "Possessed Mask",
+  "description": "A Tier 1 neutral item with lifesteal.",
+  "tier": "1",
+  "effects": {
+    "primary": "Lifesteal"
+  },
+  "notes": []
+}

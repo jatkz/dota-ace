@@ -1,3 +1,9 @@
 {
-  "error": "The provided HTML does not contain the requested information."
+  "name": "Energy Booster",
+  "cost": 800,
+  "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+250 Mana"
+  }
 }

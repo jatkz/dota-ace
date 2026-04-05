@@ -1,3 +1,17 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Cheese",
+  "cost": null,
+  "description": "Made from the milk of a long lost Furbolg vendor, it restores the vitality of those who taste it.",
+  "abilities": [
+    {
+      "name": "Fondue",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Sell Value": "500 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Charges": "1 INIT"
+  }
 }

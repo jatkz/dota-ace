@@ -1,9 +1,21 @@
 {
-  "title": "Satanic",
-  "description": "A strength item that increases attack damage by 10 for each stack of +5 Strength.",
-  "attributes": {
-    "type": "strength",
-    "stat_increase": "+35 Strength, +10 Attack Damage",
-    "cost": "2400 gold"
+  "name": "Satanic",
+  "cost": 5050,
+  "description": "Immense power at the cost of your soul.",
+  "abilities": [
+    {
+      "name": "Unholy Rage",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Lifesteal",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+25",
+    "Attack Damage": "+25"
   }
 }

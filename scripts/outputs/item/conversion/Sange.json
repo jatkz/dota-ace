@@ -1,13 +1,11 @@
 {
-  "item": {
-    "name": "Sange",
-    "category": ["Items", "Strength items", "Shop items"],
-    "properties": {
-      "bonus_attributes": {
-        "strength": "+8"
-      },
-      "effect": "Grants an attack speed bonus based on current strength.",
-      "unique_active_ability": "Bleeds the target for 12.5% of their maximum health as damage over 4 seconds and reduces their movement speed by 30%. The bleeding can stack up to 3 times."
-    }
+  "name": "Sange",
+  "cost": 2100,
+  "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+16",
+    "Slow Resistance": "+25%",
+    "Health Restore Amp": "+16%"
   }
 }

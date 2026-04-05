@@ -1,0 +1,9 @@
+{
+  "name": "Vital Enchantment",
+  "description": "A guaranteed Tier 1 neutral item enchantment for all heroes.",
+  "tier": "1",
+  "effects": {
+    "primary_effect": "+2 Health Regeneration"
+  },
+  "notes": []
+}

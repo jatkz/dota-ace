@@ -1,12 +1,11 @@
 {
-  "item_name": "Yasha",
-  "category": "Agility items",
-  "attributes": {
-    "bonus_agility": "+15 Agility",
-    "attack_speed": "+20% Attack Speed",
-    "movement_speed": "+40 Movement Speed"
-  },
-  "cost": {
-    "gold": 2000
+  "name": "Yasha",
+  "cost": 2100,
+  "description": "Yasha is regarded as the swiftest weapon ever created.",
+  "abilities": [],
+  "stats": {
+    "Agility": "+16",
+    "Move Speed": "+10%",
+    "Attack Speed": "+15"
   }
 }

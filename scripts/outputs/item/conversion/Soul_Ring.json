@@ -1,15 +1,16 @@
 {
-  "title": "Soul Ring",
-  "type": "Item",
-  "category": ["Items", "Strength items", "Armor items", "Shop items"],
-  "attributes": {
-    "damage": null,
-    "bonus_attributes": {
-      "strength": 4,
-      "armor": 1
-    },
-    "cost": 450,
-    "description": "+4 Strength\n+1 Armor",
-    "hidden_categories": ["Pages with hard coded colors"]
+  "name": "Soul Ring",
+  "cost": 805,
+  "description": "A ring that feeds on the souls of those who wear it.",
+  "abilities": [
+    {
+      "name": "Sacrifice",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+6",
+    "Armor": "+2"
   }
 }

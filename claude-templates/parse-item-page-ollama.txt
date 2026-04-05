@@ -6,4 +6,7 @@ description: [text]
 abilities: [list of abilities with name, type, description]
 stats: [key-value pairs]
 
+Ignore placeholder values like `?`, and ignore metadata-only fields like `Usage Alert` unless they contain meaningful content.
+If an ability description is unknown, prefer an empty string or omit that ability instead of returning `?`.
+
 Return as JSON only.

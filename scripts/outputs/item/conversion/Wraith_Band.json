@@ -1,14 +1,13 @@
 {
-  "title": "Wraith Band",
-  "description": "The Wraith Band is an item in Dota 2 that provides bonus attributes and a unique ability.",
-  "attributes": {
-    "bonus_strength": "+3",
-    "bonus_agility": "+3",
-    "bonus_intelligence": "+1",
-    "armor": "+2"
-  },
-  "unique_ability": {
-    "name": "Frost Aura",
-    "description": "Reduces the movement speed of nearby enemies by 5%. This effect stacks with itself."
+  "name": "Wraith Band",
+  "cost": 505,
+  "description": "A circlet with faint whispers echoing about it.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+2",
+    "Agility": "+5",
+    "Intelligence": "+2",
+    "Armor": "+1.75",
+    "Attack Speed": "+6"
   }
 }

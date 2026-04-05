@@ -1,28 +1,17 @@
 {
-  "title": "Echo Sabre",
-  "image": "File:Echo_Sabre.png",
-  "lore": "A sharp blade forged in the fires of war.",
-  "stats": {
-    "cost": 2400,
-    "base_damage": 65,
-    "attack_speed": -10,
-    "range": 400,
-    "attacks_per_second": 1.3
-  },
-  "description": "Echo Sabre is a Strength item that increases the damage of all abilities by 2%.",
-  "components": [
+  "name": "Echo Sabre",
+  "cost": 2700,
+  "description": "A deceptively swift blade imbued with resonant magic.",
+  "abilities": [
     {
-      "name": "Broadsword",
-      "amount": 1
-    },
-    {
-      "name": "Ring of Regen",
-      "amount": 1
+      "name": "Echo Strike",
+      "type": "passive",
+      "description": ""
     }
   ],
-  "builds_into": [
-    "Mjollnir"
-  ],
-  "crafting_time": 60,
-  "disassembly_refund_percentage": 50
+  "stats": {
+    "Strength": "+15",
+    "Mana Regeneration": "+1.75",
+    "Attack Damage": "+20"
+  }
 }

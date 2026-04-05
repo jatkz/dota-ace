@@ -1,13 +1,16 @@
 {
-  "title": "Vanguard",
-  "category": "Items",
-  "subcategories": [
-    "Health boost items",
-    "Health regeneration items",
-    "Can be disassembled",
-    "Shop items"
+  "name": "Vanguard",
+  "cost": 1700,
+  "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
+  "abilities": [
+    {
+      "name": "Damage Block",
+      "type": "passive",
+      "description": ""
+    }
   ],
-  "properties": {
-    "color": "hard coded colors"
+  "stats": {
+    "Health": "+250",
+    "Health Regeneration": "+4.5"
   }
 }

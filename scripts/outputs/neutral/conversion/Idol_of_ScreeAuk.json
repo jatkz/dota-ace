@@ -1,0 +1,9 @@
+{
+  "name": "Idol of Scree'Auk",
+  "description": "A Tier 4 neutral item artifact.",
+  "tier": "4",
+  "effects": {
+    "primary": "False Flight"
+  },
+  "notes": []
+}

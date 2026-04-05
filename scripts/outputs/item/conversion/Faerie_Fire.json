@@ -1,15 +1,18 @@
 {
-  "page_title": "Faerie Fire",
-  "item_categories": [
-    "Items",
-    "Damage items",
-    "Shop items"
+  "name": "Faerie Fire",
+  "cost": 65,
+  "description": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
+  "abilities": [
+    {
+      "name": "Imbue",
+      "type": "active",
+      "description": ""
+    }
   ],
-  "additional_info": {
-    "description": "A shop item that applies an ongoing burn effect to enemies.",
-    "cost": 60,
-    "shop_type": "consumable",
-    "duration": "7 seconds",
-    "damage_per_second": 2
+  "stats": {
+    "Sell Value": 32.5,
+    "Stacks": "1 MAX / Inventory Slot",
+    "Charges": "1 INIT",
+    "Bonus": "+2 Attack Damage"
   }
 }

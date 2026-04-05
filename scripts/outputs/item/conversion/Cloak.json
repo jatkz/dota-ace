@@ -1,19 +1,9 @@
 {
-  "Cloak": {
-    "cost": 1600,
-    "attributes": {
-      "bonus_magic_resistance": "+25 magic resistance"
-    },
-    "lore": "A simple yet effective garment that provides a shield against the arcane. Worn by mages and warriors alike, it offers protection from spells and their destructive power.",
-    "crafted_from": [
-      {
-        "item_name": "Ring of Protection",
-        "quantity": 1
-      },
-      {
-        "item_name": "Veil of Discord",
-        "quantity": 1
-      }
-    ]
+  "name": "Cloak",
+  "cost": 900,
+  "description": "A cloak made of a magical material that works to dispel any magic cast on it.",
+  "abilities": [],
+  "stats": {
+    "Magic Resistance": "+18%"
   }
 }

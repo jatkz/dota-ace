@@ -1,3 +1,18 @@
 {
-  "response": "JSON response goes here"
+  "name": "Orchid Malevolence",
+  "cost": 3275,
+  "description": "A garnet rod constructed from the essence of a fire demon.",
+  "abilities": [
+    {
+      "name": "Soul Burn",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+12",
+    "Mana Regeneration": "+2.5",
+    "Attack Damage": "+20",
+    "Attack Speed": "+35"
+  }
 }

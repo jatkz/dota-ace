@@ -1,0 +1,9 @@
+{
+  "name": "Manic Enchantment",
+  "description": "A guaranteed Tier 5 neutral item enchantment for Universal heroes only.",
+  "tier": "5",
+  "effects": {
+    "primary_effect": "-18% Base Attack Time +20% Cast Speed -20% Vision"
+  },
+  "notes": []
+}

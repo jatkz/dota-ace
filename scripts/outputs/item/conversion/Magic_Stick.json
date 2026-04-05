@@ -1,3 +1,9 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Magic Stick",
+  "cost": 200,
+  "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
+  "abilities": [],
+  "stats": {
+    "Active": "Energy Charge"
+  }
 }

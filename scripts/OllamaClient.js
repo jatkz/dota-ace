@@ -9,9 +9,38 @@ class OllamaClient {
         this.temperature = temperature ?? parseFloat(process.env.OLLAMA_TEMPERATURE || '0.4');
         this.maxTokens = maxTokens ?? 5000;
         this.stream = false;
+        this.category = this.inferCategory(templatePath);
+        this.promptLabel = this.getPromptLabel(this.category);
 
         if (templatePath && fs.existsSync(templatePath)) {
             this.system = fs.readFileSync(templatePath, 'utf8');
+        }
+    }
+
+    inferCategory(templatePath = '') {
+        if (templatePath.includes('parse-hero-page')) {
+            return 'hero';
+        }
+        if (templatePath.includes('parse-neutral-page')) {
+            return 'neutral';
+        }
+        if (templatePath.includes('parse-enchantment-page')) {
+            return 'enchantment';
+        }
+        return 'item';
+    }
+
+    getPromptLabel(category) {
+        switch (category) {
+            case 'hero':
+                return 'hero';
+            case 'neutral':
+                return 'neutral item';
+            case 'enchantment':
+                return 'enchantment';
+            case 'item':
+            default:
+                return 'item';
         }
     }
 
@@ -145,9 +174,9 @@ class OllamaClient {
             try {
                 const rawHtml = fs.readFileSync(item.filePath, 'utf8');
                 // Clean the HTML for better Ollama processing
-                const cleanedContent = optimizeHtmlForOllama(rawHtml);
+                const cleanedContent = optimizeHtmlForOllama(rawHtml, this.category);
                 
-                const prompt = `Parse this item data into JSON:\n${cleanedContent}\n\nIMPORTANT: Return ONLY valid JSON, no extra text.`;
+                const prompt = `Parse this ${this.promptLabel} data into JSON:\n${cleanedContent}\n\nIMPORTANT: Return ONLY valid JSON, no extra text.`;
                 
                 console.log(`    → Sending to Ollama (${cleanedContent.length} chars)...`);
                 const text = await this.generate(prompt, this.system);

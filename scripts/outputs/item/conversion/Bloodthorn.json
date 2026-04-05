@@ -1,3 +1,23 @@
 {
-  "response": "The provided HTML content is a webpage from Liquipedia about the Bloodthorn item in Dota 2. It contains various details such as the item's image, description, stats, build paths, and related items. The page also includes categories and hidden categories for classification."
+  "name": "Bloodthorn",
+  "cost": 6400,
+  "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
+  "abilities": [
+    {
+      "name": "Soul Rend",
+      "type": "active",
+      "description": ""
+    },
+    {
+      "name": "Pierce",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Intelligence": "+25",
+    "Mana Regeneration": "+4",
+    "Attack Damage": "+20",
+    "Attack Speed": "+70"
+  }
 }

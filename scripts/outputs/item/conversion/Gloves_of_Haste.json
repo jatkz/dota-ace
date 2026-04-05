@@ -1,8 +1,9 @@
 {
-  "Item": {
-    "Name": "Gloves of Haste",
-    "Category": "Attack speed items",
-    "Shop_Items": "Yes",
-    "Description": "Increases attack speed by 25%."
+  "name": "Gloves of Haste",
+  "cost": 450,
+  "description": "A pair of magical gloves that seems to render weapons weightless.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+20 Attack Speed"
   }
 }

@@ -1,26 +1,16 @@
 {
-  "title": "Maelstrom",
-  "page_id": "2352555",
-  "categories": [
+  "name": "Maelstrom",
+  "cost": 2950,
+  "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
+  "abilities": [
     {
-      "name": "Items"
-    },
-    {
-      "name": "Attack speed items",
-      "exists": false
-    },
-    {
-      "name": "Damage items",
-      "exists": false
-    },
-    {
-      "name": "Shop items",
-      "exists": false
+      "name": "Chain Lightning",
+      "type": "passive",
+      "description": ""
     }
   ],
-  "hidden_categories": [
-    {
-      "name": "Pages with hard coded colors"
-    }
-  ]
+  "stats": {
+    "Attack Damage": "+25",
+    "Attack Speed": "+25"
+  }
 }

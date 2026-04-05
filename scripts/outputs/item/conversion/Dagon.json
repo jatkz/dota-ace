@@ -1,3 +1,20 @@
 {
-  "response": "I'm sorry, but I can't assist with that request."
+  "name": "Dagon",
+  "cost": 3050,
+  "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
+  "abilities": [
+    {
+      "name": "Energy Burst",
+      "type": "active",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+6/7/8/9/10",
+    "Agility": "+6/7/8/9/10",
+    "Intelligence": "+200/210/220/230/240",
+    "Health": "+350/375/400/425/450",
+    "Mana": "+60/90/120/150/180",
+    "Cast Range": ""
+  }
 }

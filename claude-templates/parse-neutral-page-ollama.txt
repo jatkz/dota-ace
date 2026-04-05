@@ -6,11 +6,13 @@ Extract the following information from the HTML and return as JSON:
   "name": "item name",
   "description": "what it does",
   "tier": "tier level",
-  "cost": 0,
   "effects": {
     "primary": "description"
   },
   "notes": ["any special interactions"]
 }
+
+Ignore placeholder values like `?`, and ignore metadata-only fields such as `Usage Alert` or `Shareable` unless they are genuinely important.
+Keep the primary effect concise and focused on what the neutral item itself does.
 
 IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

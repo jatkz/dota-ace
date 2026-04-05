@@ -1,11 +1,14 @@
 {
-  "item_name": "Healing Salve",
-  "item_type": "Consumable",
-  "description": "Instantly restores 75 health.",
+  "name": "Healing Salve",
   "cost": 100,
-  "attributes": {
-    "heal_amount": 75,
-    "duration": "instant"
-  },
-  "category": "Shop items"
+  "description": "A magical salve that can quickly mend even the deepest of wounds.",
+  "abilities": [],
+  "stats": {
+    "Cost": 100,
+    "Sell Value": "50 / Count",
+    "Stacks": "NO LIMIT / Inventory Slot",
+    "Stock": "5 INIT / 5 MAX",
+    "Active": "Salve",
+    "Charges": "1 INIT"
+  }
 }

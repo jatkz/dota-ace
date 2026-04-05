@@ -1,11 +1,15 @@
 {
-  "title": "Kaya and Sange",
-  "description": "Kaya and Sange is a Dota 2 item consisting of Kaya (a staff that provides mana regeneration) and Sange (a club that increases attack speed). Combining them results in increased attack speed and mana regeneration, making it useful for high-damage heroes.",
-  "components": ["Kaya", "Sange"],
-  "benefits": {
-    "attack_speed_increase": "15%",
-    "mana_regen_increase": "0.6"
-  },
-  "usage_notes": "The combined effects of Kaya and Sange make it a powerful item for heroes that rely on spells and sustained attacks.",
-  "builds_into": ["Monkey King Bar"]
+  "name": "Kaya and Sange",
+  "cost": 4200,
+  "description": "Two of three known items of unimaginable power that many believe were crafted at the same enchanter's forge.",
+  "abilities": [],
+  "stats": {
+    "Strength": "+16",
+    "Intelligence": "+16",
+    "Slow Resistance": "+25%",
+    "Mana Loss Reduction": "+25%",
+    "Spell Damage Amp": "+12%",
+    "Health Restore Amp": "+20%",
+    "Mana Regen Amp": "+40%"
+  }
 }

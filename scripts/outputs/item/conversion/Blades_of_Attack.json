@@ -1,6 +1,9 @@
 {
-  "title": "Blades of Attack",
-  "image_url": "https://liquipedia.net/dota2/images/thumb/6/6c/Blade_of_Attack.svg/120px-Blade_of_Attack.svg.png",
+  "name": "Blades of Attack",
   "cost": 450,
-  "category": "Items"
+  "description": "The damage of these small, concealable blades should not be underestimated.",
+  "abilities": [],
+  "stats": {
+    "Attack Damage": "+9"
+  }
 }

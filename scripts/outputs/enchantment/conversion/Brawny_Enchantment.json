@@ -1,15 +1,9 @@
 {
   "name": "Brawny Enchantment",
-  "description": null,
-  "tier": [1, 2, 3, 4],
-  "stats": {
-    "health": [110, 150, 190, 230],
-    "health_regeneration": [0, 4, 18, 12],
-    "slow_resistance": [0, 0, 0, 25]
+  "description": "A guaranteed Tier 1–4 neutral item enchantment for Strength and Agility heroes.",
+  "tier": "1",
+  "effects": {
+    "primary_effect": "+110/150/190/230 Health+0/3/6/9 Health Regeneration+0/0/0/25% Slow Resistance"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Not shareable",
-    "No usage alert"
-  ]
+  "notes": []
 }

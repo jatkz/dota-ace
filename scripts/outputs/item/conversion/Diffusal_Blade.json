@@ -1,70 +1,21 @@
 {
-  "title": "Diffusal Blade",
-  "item_type": "Utility",
-  "primary_attribute": "Agility",
-  "base_attributes": {
-    "Strength": 1,
-    "Agility": 10,
-    "Intelligence": 1,
-    "Damage": "+15 (+2 per level)"
-  },
-  "components": [
+  "name": "Diffusal Blade",
+  "cost": 2500,
+  "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
+  "abilities": [
     {
-      "item_name": "Blade of Alacrity",
-      "quantity": 1
+      "name": "Inhibit",
+      "type": "active",
+      "description": ""
     },
     {
-      "item_name": "Maelstrom",
-      "quantity": 1
+      "name": "Manabreak",
+      "type": "passive",
+      "description": ""
     }
   ],
-  "crafting_time": "45 seconds",
-  "cost": 3000,
-  "description": "Grants +2% movement speed and deals 25 damage over 1 second to nearby enemies. Grants a charge every 30 seconds that can be used to cast an ultimate ability.",
-  "ultimate_ability": {
-    "name": "Diffusal Pulse",
-    "description": "Summons a pulse around the target, dealing 90 magic damage and stunning enemies for 1 second."
-  },
-  "unreleased_items": [
-    "Ancient Perseverance",
-    "Arcane Scout",
-    "Assassin's Contract",
-    "Assassin's Dagger",
-    "Barricade",
-    "Blighted Spirit",
-    "Bottomless Chalice",
-    "Dimensional Doorway",
-    "Elusive Cloak",
-    "Gladiator Helm",
-    "Gloves of Travel",
-    "Greater Mango",
-    "Guardian Shell",
-    "Horizon",
-    "Horizon's Equilibrium",
-    "Icarus Wings",
-    "Light Robes",
-    "Manacles of Power",
-    "Mechanical Arm",
-    "Oakheart",
-    "Overflowing Elixir",
-    "Ring of Fortitude",
-    "Satchel",
-    "Shadow of Vengeance",
-    "Slime Vial",
-    "Star Mace",
-    "Tome of Omniscience",
-    "Tree Processor",
-    "Turtle Shell",
-    "Venom Gland",
-    "Wand of Sanctity",
-    "Wand of the Brine",
-    "Warhammer",
-    "Wizard Glass"
-  ],
-  "categories": [
-    "Items",
-    "Agility items",
-    "Intelligence items",
-    "Shop items"
-  ]
+  "stats": {
+    "Agility": "+15",
+    "Intelligence": "+10"
+  }
 }

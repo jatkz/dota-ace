@@ -1,16 +1,12 @@
 {
-  "title": "Meteor Hammer",
-  "description": "A magical hammer that rains meteorites from the sky.",
-  "cost": 4000,
-  "attributes": {
-    "Damage": "+15 (+2 per level)",
-    "Attack Speed": "-3.5%",
-    "Range": "700",
-    "Cooldown Reduction": "25",
-    "Projectile Speed": "900"
-  },
+  "name": "Meteor Hammer",
+  "cost": 2850,
+  "description": "An enchanted hammer forged of metals discovered in the ruins of a village destroyed by a great star storm.",
+  "abilities": [],
   "stats": {
-    "Physical Damage": "+15 (+2 per level)"
-  },
-  "usage": "Use it to rain down meteorites on your enemies, dealing physical damage and slowing them."
+    "Cost": 2850,
+    "Sell Value": 1425,
+    "Active": "Meteor Hammer",
+    "Bonus": "+6 Strength+6 Agility+24 Intelligence+10% Spell Damage Amp+35% Mana Regen Amp"
+  }
 }

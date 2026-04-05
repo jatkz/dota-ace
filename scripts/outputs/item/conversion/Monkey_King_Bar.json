@@ -1,35 +1,17 @@
 {
-  "title": "Monkey King Bar",
-  "attributes": {
-    "cost": 3200,
-    "sell": 1600,
-    "lore": "Forged by a band of rangers to aid them in their battle against the treacherous White Tiger, Monkey King Bar has been passed down through generations and is now sought after by many. It allows the wielder to summon the spirit of the Monkey King, granting immense strength but at the cost of the user's life force.",
-    "movement_speed": 0,
-    "bonus_damage": 45,
-    "bonus_attack_speed": 15,
-    "bonus_strength": 23,
-    "bonus_health_regen": 0.7,
-    "bonus_mana": 350,
-    "mana_regen_per_5": 30
-  },
-  "components": {
-    "recipe": "Monkey King Bar",
-    "ingredients": [
-      {"item_name": "Blade of Despair", "quantity": 1},
-      {"item_name": "Orb of Venom", "quantity": 1},
-      {"item_name": "Sange and Yasha", "quantity": 1}
-    ]
-  },
-  "drops_from": {
-    "npc_monsters": [
-      "npc_dota_creature_boss_treant",
-      "npc_dota_boss_lone_druid_bear",
-      "npc_dota_creature_grymalkin",
-      "npc_dota_boss_beastmaster_axe"
-    ]
-  },
-  "game_mode_suggestions": {
-    "team_fight": true,
-    "carry": true
+  "name": "Monkey King Bar",
+  "cost": 5000,
+  "description": "A powerful staff used by a master warrior.",
+  "abilities": [
+    {
+      "name": "Pierce",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Attack Damage": 50,
+    "Attack Speed": 50,
+    "Attack Range": 50
   }
 }

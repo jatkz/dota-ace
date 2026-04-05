@@ -1,17 +1,15 @@
 {
-  "title": "Yasha and Kaya",
-  "description": "Yasha and Kaya is a legendary item in Dota 2 that grants agility and intelligence bonuses, attack speed increase, spell damage boost, movement speed enhancement, and can be disassembled into other items.",
-  "categories": [
-    "Items",
-    "Agility items",
-    "Intelligence items",
-    "Attack speed items",
-    "Spell damage items",
-    "Movement speed items",
-    "Can be disassembled",
-    "Shop items"
-  ],
-  "page_attributes": {
-    "hard_coded_colors": true
+  "name": "Yasha and Kaya",
+  "cost": 4200,
+  "description": "Yasha and Kaya when paired together share a natural resonance.",
+  "abilities": [],
+  "stats": {
+    "Agility": "+16",
+    "Intelligence": "+16",
+    "Move Speed": "+12%",
+    "Spell Damage Amp": "+12%",
+    "Attack Speed": "+20",
+    "Cast Speed": "+25%",
+    "Mana Regen Amp": "+40%"
   }
 }

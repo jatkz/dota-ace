@@ -20,4 +20,10 @@ Extract the following information from the HTML and return as JSON:
   ]
 }
 
+Use the base attribute values as plain numbers for `strength`, `agility`, and `intelligence`.
+Ignore attribute gain lines unless they help you identify the correct base values.
+For `roles`, only use canonical Dota role names with this capitalization: `Carry`, `Support`, `Nuker`, `Disabler`, `Initiator`, `Durable`, `Escape`, `Pusher`, `Jungler`.
+For each ability `type`, use a single simple label such as `active` or `passive`. Do not return mixed labels like `active/passive`.
+If an ability line already includes a type hint like `[active]` or `[passive]`, trust that hint.
+
 IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

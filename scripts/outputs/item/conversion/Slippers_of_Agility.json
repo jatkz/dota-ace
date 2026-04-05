@@ -1,9 +1,9 @@
 {
-  "item_name": "Slippers of Agility",
-  "category": "Agility items",
-  "shop_item": true,
-  "attributes": {
-    "bonus_agility": "+10 Agility",
-    "move_speed": "+5% Movement Speed"
+  "name": "Slippers of Agility",
+  "cost": 140,
+  "description": "Light boots made from spider skin that tingles your senses.",
+  "abilities": [],
+  "stats": {
+    "Bonus": "+3 Agility"
   }
 }

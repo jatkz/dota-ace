@@ -1,23 +1,22 @@
 {
-  "item_name": "Holy Locket",
-  "attributes": {
-    "stats": {
-      "strength": "+4",
-      "agility": "+2",
-      "intelligence": "+3"
+  "name": "Holy Locket",
+  "cost": 2250,
+  "description": "A prized relic long thought lost forever in a failed crusade.",
+  "abilities": [
+    {
+      "name": "Energy Charge",
+      "type": "active",
+      "description": ""
     },
-    "bonus_attributes": [
-      {
-        "attribute": "Attack Speed",
-        "value": "+8%"
-      }
-    ],
-    "description": "Increases the wearer's Strength, Agility, and Intelligence. Also increases Attack Speed."
-  },
-  "categories": [
-    "Items",
-    "Strength items",
-    "Agility items",
-    "Intelligence items"
-  ]
+    {
+      "name": "Holy Blessing",
+      "type": "passive",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Strength": "+7",
+    "Agility": "+7",
+    "Intelligence": "+7"
+  }
 }

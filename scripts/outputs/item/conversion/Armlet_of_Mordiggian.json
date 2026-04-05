@@ -1,4 +1,18 @@
 {
-  "title": "Armlet of Mordiggian",
-  "category": "Items"
+  "name": "Armlet of Mordiggian",
+  "cost": 2500,
+  "description": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
+  "abilities": [
+    {
+      "name": "Unholy Strength",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "stats": {
+    "Health Regeneration": "+5",
+    "Armor": "+6",
+    "Attack Damage": "+15",
+    "Attack Speed": "+25"
+  }
 }

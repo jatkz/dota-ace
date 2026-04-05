@@ -1,26 +1,12 @@
 {
   "name": "Tranquil Boots",
-  "description": "A set of boots that increase a hero's movement speed and health regeneration rate.",
-  "cost": 1050,
-  "attributes": {
-    "bonus_movement_speed": 25,
-    "bonus_health_regen": 3.75
-  },
-  "tier": "Neutral",
-  "category": [
-    "Health regeneration items",
-    "Movement speed items"
-  ],
-  "crafting": {
-    "materials": [
-      {
-        "item": "Boots of Speed",
-        "quantity": 1
-      },
-      {
-        "item": "Mystic Staff",
-        "quantity": 1
-      }
-    ]
+  "cost": 900,
+  "description": "While they increase the longevity of the wearer, this boot is not particularly reliable.",
+  "abilities": [],
+  "stats": {
+    "Cost": 900,
+    "Sell Value": 450,
+    "Passive": "Break",
+    "Bonus": "+14 Health Regeneration+65 Move Speed"
   }
 }

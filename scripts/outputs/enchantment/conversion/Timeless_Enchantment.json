@@ -1,14 +1,9 @@
 {
   "name": "Timeless Enchantment",
-  "description": null,
-  "tier": [4, 5],
-  "stats": {
-    "debuffDurationAmp": "10/15%",
-    "spellDamageAmp": "8/16%"
+  "description": "A guaranteed Tier 4–5 neutral item enchantment for all heroes.",
+  "tier": "4",
+  "effects": {
+    "primary_effect": "+8/15% Debuff Duration Amp, +6/16% Spell Damage Amp"
   },
-  "additionalInfo": [
-    "Acquired by crafting with Madstone. See the Madstone article for crafting mechanics.",
-    "Not shareable",
-    "No usage alert"
-  ]
+  "notes": []
 }
