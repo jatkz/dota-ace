@@ -1,0 +1,71 @@
+{
+  "name": "Juggernaut",
+  "description": "By the Visage of Vengeance, which drowned in the Isle of Masks, I will carry on the rites of the Faceless Ones.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 32,
+    "intelligence": 14
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.8,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.5,
+    "mana": 243,
+    "manaRegen": 0.7,
+    "armor": 5.33,
+    "magicResistance": 26.4,
+    "damageMin": 54,
+    "damageMax": 56,
+    "damageAverage": 55,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 142,
+    "bat": 1.4,
+    "animationPoint": 0.33,
+    "animationBackswing": 0.84,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "Left talent description",
+      "right": "Right talent description"
+    },
+    "15": {
+      "left": "Left talent description",
+      "right": "Right talent description"
+    },
+    "20": {
+      "left": "Left talent description",
+      "right": "Right talent description"
+    },
+    "25": {
+      "left": "Left talent description",
+      "right": "Right talent description"
+    }
+  }
+}

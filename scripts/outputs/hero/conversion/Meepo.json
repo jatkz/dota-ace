@@ -58,32 +58,32 @@
     {
       "name": "Earthbind",
       "type": "active",
-      "description": "Mega Meepo throws out multiple nets at the same time. Cast Range: 750/900/1050/1200. Radius: 220. Duration: 2. Net Bonus per Meepo Stacked: (1). Cooldown: 16/14/12/10 (13.5/11.5/9.5/7.5). Mana Cost: 70/80/90/100."
+      "description": "Mega Meepo throws out multiple nets at the same time. Cast Range: 750/900/1050/1200. Radius: 220. Duration: 2. Net Bonus per Meepo Stacked: (1). Cooldown: 16/14/12/10. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Poof",
       "type": "active",
-      "description": "A Meepo can teleport to another Meepo or itself after its cast point, dealing damage in both the departure and arrival locations. Poof deals bonus damage corresponding to the amount of Meepo stacked. Damage: 50/80/110/140 (90/120/150/180). Damage Factor per Meepo Stacked: (0.5). Cooldown: 12/10/8/6. Mana Cost: 80."
+      "description": "A Meepo can teleport to another Meepo or itself after its cast point, dealing damage in both the departure and arrival locations. Poof deals bonus damage corresponding to the amount of Meepo stacked. Cast Range: Global. Radius: 400. Damage: 50/80/110/140 (90/120/150/180). Damage Factor per Meepo Stacked: (0.5). Cooldown: 12/10/8/6. Mana Cost: 80."
     },
     {
       "name": "Ransack",
       "type": "passive",
-      "description": "Steals health from the attacked enemy target per strike and heals all other Meepos for a fixed amount. Lifesteal: 9/12/15/18 (16/19/22/25). Creep Lifesteal Factor: 0.6."
+      "description": "Steals health from the attacked enemy target per strike and heals all other Meepos for a fixed amount. Effect Radius: Global Damage: 9/12/15/18 (16/19/22/25). Lifesteal: 9/12/15/18 (16/19/22/25). Effect Radius: Global. Damage: 9/12/15/18 (16/19/22/25). Creep Lifesteal Factor: 0.6."
     },
     {
       "name": "Dig",
       "type": "active",
-      "description": "Dispels Meepo, becomes invulnerable and hidden shortly, while restoring its health. Max Health Restore: 25%. Duration: 3. Cooldown: 50. Mana Cost: 125."
+      "description": "Dispels Meepo, becomes invulnerable and hidden shortly, while restoring its health. Max Health Restore: 25%. Duration: 3. Mana Cost: 50."
     },
     {
       "name": "Mega Meepo",
       "type": "active",
-      "description": "Mega Meepo throws out multiple nets at the same time. Poof deals bonus damage corresponding to the amount of Meepo stacked. Meepo Search Radius: 600. Shared Attribute Factor: 0.5. Duration: 25. Net Bonus per Meepo Stacked: 1. Damage Factor per Meepo Stacked: 0.5. Cooldown: 60."
+      "description": "Mega Meepo throws out multiple nets at the same time. Poof deals bonus damage corresponding to the amount of Meepo stacked. Meepo Search Radius: 600. Shared Attribute Factor: 0.5. Duration: 25. Net Bonus per Meepo Stacked: 1. Damage Factor per Meepo Stacked: 0.5. Mana Cost: 60."
     },
     {
       "name": "Divided We Stand",
       "type": "passive",
-      "description": "Summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience like Meepo. Number of Clones: 1/2/3/4. Current Health as Damage: 100%."
+      "description": "Summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does Number of Clones: 1/2/3/4. Current Health as Damage: 100%."
     },
     {
       "name": "Clone Model",
@@ -93,7 +93,7 @@
     {
       "name": "Clone Inventory",
       "type": "passive",
-      "description": "The Clones recognize and copy Boots of Speed-based items with a certain priority. However, they still cannot utilize active item abilities by design."
+      "description": "The Clones recognizes and copy Boots of Speed-based items with a certain priority. However, they still cannot utilize active item abilities by design."
     }
   ]
 }

@@ -1,0 +1,73 @@
+{
+  "name": "Bane",
+  "description": "I dreamt a field of war…and woke to find myself upon it.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Nuker",
+    "Durable",
+    "Carry"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 23,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 2.5,
+    "intelligence": 2.5
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 30,
+    "manaRegen": 0.125,
+    "armor": 0.42,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.38
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 4.83,
+    "magicResistance": 27.3,
+    "damageMin": 55,
+    "damageMax": 61,
+    "damageAverage": 58.05,
+    "projectileSpeed": 900,
+    "attackRange": 425,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 1200
+  },
+  "talents": {
+    "10": {
+      "left": "",
+      "right": ""
+    },
+    "15": {
+      "left": "",
+      "right": ""
+    },
+    "20": {
+      "left": "",
+      "right": ""
+    },
+    "25": {
+      "left": "",
+      "right": ""
+    }
+  }
+}

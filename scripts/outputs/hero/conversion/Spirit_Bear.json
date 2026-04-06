@@ -55,32 +55,32 @@
     {
       "name": "Demolish",
       "type": "passive",
-      "description": "Grants the Spirit Bear bonus conditional attack damage on buildings."
+      "description": "Grants the Spirit Bear bonus conditional attack damage on buildings. Building Attack Damage Bonus: 30% (50%)."
     },
     {
       "name": "Return",
       "type": "active",
-      "description": "Channels a short duration then teleports the Spirit Bear back to Lone Druid."
+      "description": "Channels a short duration then teleports the Spirit Bear back to Lone Druid. Channel Time: 3 (2.5). Max Distance: Global. Current Health as Damage: 100%. Attack Proximity Range: 1100 (Global). Mana Cost: 30."
     },
     {
       "name": "Entangling Claws",
       "type": "passive",
-      "description": "Allows Spirit Bear to Entangle enemy heroes once they gain 5 stacks. Entangled enemies are rooted and take damage overtime. The Spirit Bear's attacks are permanently empowered, a successful attack applies an Entangle stack on enemy heroes."
+      "description": "Allows Spirit Bear to Entangle enemy heroes once they gain 5 stacks. Entangled enemies are rooted and take damage overtime. The Spirit Bear's attacks are permanently empowered, a successful attack applies an Entangle stack on enemy heroes. Other ability notes apply. Damage per Second: 90 (110). Duration: 1.2/1.6/2/2.4 (1.8/2.2/2.6/3). Stack per Attack: 1. Damage Amp: 15%."
     },
     {
       "name": "Savage Roar",
       "type": "active",
-      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled."
+      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled. Enemy Radius: 350. Fear Move Speed Bonus: 20%. Debuff Duration: 0.8/1.2/1.6/2. Ally Radius: (700). Move Speed Bonus: (15%). Attack Speed Bonus: (40). Cooldown: 29/26/23/20. Mana Cost: 50."
     },
     {
       "name": "Spirit Link",
       "type": "passive",
-      "description": "Both the Lone Druid and the Spirit Bear shares a percentage of their lifesteal with each other. Grants the Spirit Bear a greater movement speed bonus."
+      "description": "Both the Lone Druid and the Spirit Bear shares a percentage of their lifesteal with each other. Grants the Spirit Bear a greater movement speed bonus. Shared Lifesteal: 15%/30%/45%/60%. Move Speed Bonus: 20/40/60/80."
     },
     {
       "name": "Fetch",
       "type": "active",
-      "description": "Grabs the Target Ally, Enemy or Rune, and uncontrollably drags them to Lone Druid for the duration. Enemies receive damage over time. When dragging a unit, they are rooted and the Spirit Bear is slowed."
+      "description": "Grabs the Target Ally, Enemy or Rune, and uncontrollably drags them to Lone Druid for the duration. Enemies receive damage over time. When dragging a unit, they are rooted and the Spirit Bear is slowed. Cast Range: 200. Break Distance: 425. Total Damage: 300. Debuff Duration: 2.5. Max Disarm Duration: 2.5. Mana Cost: 30."
     }
   ]
 }

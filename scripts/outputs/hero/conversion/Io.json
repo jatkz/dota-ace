@@ -20,10 +20,10 @@
   "statGains": {
     "health": 66,
     "healthRegen": 0.3,
-    "mana": 20.4,
-    "manaRegen": 0.085,
     "armor": 0.27,
     "attackSpeed": 1.6,
+    "mana": 20.4,
+    "manaRegen": 0.085,
     "magicResistance": 0.1,
     "mainAttackDamage": 2.84
   },
@@ -55,27 +55,27 @@
     {
       "name": "Equilibrium",
       "type": "passive",
-      "description": "Grants a greater outgoing damage amplification the closer Io is to full health. Additionally grants a greater health restore amplification and heal amplification the closer Io is to zero health."
+      "description": "Grants a greater outgoing damage amplification the closer Io is to full health. Additionally grants a greater health restore amplification and heal amplification the closer Io is to zero health. Max Health to Max Damage Amp Threshold: 100%. Max Damage Amp: 4%. Max Health to Max Heal Amp Threshold: 1%. Max Heal Amp: 4%. Max Health Restore Amp: 4%. Max Damage Amp Increase: 0.4%."
     },
     {
       "name": "Tether",
       "type": "active",
-      "description": "Grants bonus movement speed to both Io and the tethered-ally while active. Whenever Io restores health or mana, the tethered-ally gains a bonus portion of the restoration. The link between Io and the affected allied unit applies a brief slow to enemy units coming in contact."
+      "description": "Grants bonus movement speed to both Io and the tethered-ally while active. Whenever Io restores health or mana, the tethered-ally gains a bonus portion of the restoration. The link between Io and the affected allied unit applies a brief slow to enemy units coming in contact. Cast Range: 1600. Break Distance: 1000. Pull Distance: 700. Break Distance During Pull: 2150 Tether Duration:. Break Distance During Pull: 2150. Ally Heal Factor: 0.6/0.8/1/1.2. Mana Cost: 12."
     },
     {
       "name": "Spirits",
       "type": "active",
-      "description": "The particles' damage is less effective on creeps, but they do not explode upon collision. Replaces by both and upon cast. These 3 abilities share a single ability slot. Right-click toggles between both sub-abilities."
+      "description": "The particles' damage is less effective on creeps, but they do not explode upon collision. Spirits now passively spawn, orbits and replenishes itself around Io constantly. Applies movement speed slow to enemy heroes coming in contact with. Reduces cooldown, and now causes Spirits to immediately explode upon cast. Number of Spirits: 5. Hero Search Radius: 110. Explosion Radius: 360. Explosion Damage: 30/50/70/90 (1500/2500/3500/4500). Duration: 15. Move Speed Slow: (25%). Cooldown: 90/100/110/120."
     },
     {
       "name": "Overcharge",
       "type": "active",
-      "description": "Grants self max health as bonus health regeneration, attack speed bonus, and outgoing spell damage amplification. Grants the tethered allied unit all Overcharges' ability effects as well."
+      "description": "Grants self max health as bonus health regeneration, attack speed bonus, and outgoing spell damage amplification. Grants the tethered allied unit all Overcharges' ability effects as well. Max Health as Health Regen Bonus: 0.5%/0.6%/0.7%/0.8% (0.7%/0.8%/0.9%/1%). Attack Speed Bonus: 35/60/85/110. Spell Damage Amp: 8%/10%/12%/14%. Duration: 8 (9.5). Cooldown: 25/22/19/16. Mana Cost: 40/60/80/100."
     },
     {
       "name": "Relocate",
       "type": "active",
-      "description": "Teleports Io to any location globally. Upon the duration expires, Io will return to the original ability cast location. Teleports the tethered allied unit alongside with Io. Upon the duration expiring, Io and the tethered allied unit will return to the original ability cast location."
+      "description": "Teleports Io to any location globally. Upon the duration expires, Io will return to the original ability cast location. Teleports the tethered allied unit alongside with Io. Upon the duration expiring, Io and the tethered allied unit will return to the original ability cast location. Cast Range: Global. Duration: 12. Cooldown: 90/80/70. Mana Cost: 175."
     }
   ]
 }

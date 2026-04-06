@@ -1,6 +1,6 @@
 {
   "name": "Lone Druid",
-  "description": "I wonder what awaits me at the end of everything… Sylla, the Lone Druid Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps.",
+  "description": "Sylla, the Lone Druid Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps. However, the ability cast instantly applies all ability effects on enemy creeps.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -20,12 +20,12 @@
   "statGains": {
     "health": 55,
     "healthRegen": 0.25,
-    "mana": 16.8,
-    "manaRegen": 0.07,
     "armor": 0.47,
     "attackSpeed": 2.8,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.8
+    "mainAttackDamage": 2.8,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 516,
@@ -65,7 +65,7 @@
     {
       "name": "Savage Roar",
       "type": "active",
-      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled. Enemy Radius: 350. Fear Move Speed Bonus: 20%. Debuff Duration: 1.1/1.4/1.7/2.2. Ally Radius: (700). Move Speed Bonus: (15%). Attack Speed Bonus: (40). Cooldown: 29/26/23/20 (24/21/18/15). Mana Cost: 50."
+      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled. Enemy Radius: 350. Fear Move Speed Bonus: 20%. Debuff Duration: 1.1/1.4/1.7/2.2. Ally Radius: (700). Move Speed Bonus: (15%). Attack Speed Bonus: (40). Cooldown: 29/26/23/20. Mana Cost: 50."
     },
     {
       "name": "True Form",

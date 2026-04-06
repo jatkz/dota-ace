@@ -1,0 +1,76 @@
+{
+  "name": "Alchemist",
+  "description": "Failure is just another kind of success.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Support",
+    "Durable",
+    "Disabler",
+    "Initiator",
+    "Nuker",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 22,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.7,
+    "agility": 1.5,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 59.4,
+    "healthRegen": 0.27,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.7
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3.67,
+    "magicResistance": 27.5,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 132,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.65,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+150 Unstable Concoction Radius",
+      "right": "+1 Acid Spray Armor Reduction"
+    },
+    "15": {
+      "left": "+3 Attack Damage Bonus per Greevil's Greed Stack",
+      "right": "+1% Corrosive Weaponry Move Speed Slow/Base Damage Reduction per Stack"
+    },
+    "20": {
+      "left": "+400 Unstable Concoction Max Damage",
+      "right": "-0.1s Chemical Rage Base Attack Time"
+    },
+    "25": {
+      "left": "+50 Chemical Rage Health Regen",
+      "right": "+50 Chemical Rage Move Speed"
+    }
+  }
+}

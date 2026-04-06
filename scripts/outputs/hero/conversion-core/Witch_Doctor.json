@@ -1,0 +1,72 @@
+{
+  "name": "Witch Doctor",
+  "description": "Malpractice makes perfect.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 13,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.1,
+    "agility": 1.4,
+    "intelligence": 3.1
+  },
+  "statGains": {
+    "health": 46.2,
+    "healthRegen": 0.21,
+    "mana": 37.2,
+    "manaRegen": 0.155,
+    "armor": 0.23,
+    "attackSpeed": 1.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 2.17,
+    "magicResistance": 27.2,
+    "damageMin": 48,
+    "damageMax": 58,
+    "damageAverage": 53,
+    "projectileSpeed": 1200,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 113,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.5,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+200 Health",
+      "right": "-25% Voodoo Restoration Mana per Second"
+    },
+    "15": {
+      "left": "+4s Maledict Duration +1 Maledict Intervals",
+      "right": "-3s Paralyzing Cask Cooldown"
+    },
+    "20": {
+      "left": "+1% Voodoo Restoration Max Health as Heal",
+      "right": "Maledict bursts deal 75% damage in a 800 Ao E"
+    },
+    "25": {
+      "left": "+40 Death Ward Damage",
+      "right": "+6 Paralyzing Cask Bounces"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "Tidehunter",
-  "description": "You can't hide from the tide. Leviathan, the Tidehunter The Anchor is always created 50-distance next to Tidehunter, and travels to the unit-targeted enemy unit.",
+  "description": "You can't hide from the tide.",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -24,6 +24,7 @@
     "healthRegen": 0.35,
     "mana": 20.4,
     "manaRegen": 0.085,
+    "mainAttackDamage": 3.5,
     "armor": 0.25,
     "attackSpeed": 1.5,
     "magicResistance": 0.1
@@ -56,27 +57,27 @@
     {
       "name": "Gush",
       "type": "active",
-      "description": "Damages the unit-targeted enemy, and reduces its movement speed and armor. Gush becomes a ground-targeted wave ability that affects enemy units in a line. Reduces cooldown."
+      "description": "Damages the unit-targeted enemy, and reduces its movement speed and armor. Gush becomes a ground-targeted wave ability that affects enemy units in a line. Reduces cooldown. Cast Range: 700 (2200). Damage: 100/160/220/280 (200/260/320/380). Armor Reduction: 3/4/5/6 (7/8/9/10). Move Speed Slow: 40% (60%). Duration: 4.5. Wave Travel Distance: (2200). Mana Cost: 12."
     },
     {
       "name": "Kraken Shell",
       "type": "passive",
-      "description": "Temporarily hardens Tidehunter's hide further, reducing even more physical attack damage with a trade-off. grants Tidehunter permanent flat bonus damage block per enemy hero kill with the Anchor Smash debuff applied. Not Breakable."
+      "description": "Passively damage block a portion of any incoming physical attack damage. Temporarily hardens Tidehunter's hide further, reducing even more physical attack damage with a trade-off. Proc Chance: 100%. Blocked Damage: 15/35/55/75. Blocked Damage Factor: 2. Self Move Speed Slow: 40%. Duration: 4. Creep Blocked Damage Factor: 0.5. Mana Cost: 30."
     },
     {
       "name": "Anchor Smash",
       "type": "active",
-      "description": "Instantly attacks and reduces all enemy units' main attack damage within the radius."
+      "description": "Instantly attacks and reduces all enemy units' main attack damage within the radius. Radius: 375. Instant Attack Factor: 1. Instant Attack Damage Bonus: 50/100/150/200. Attack Damage Reduction: 25%/30%/35%/40% (35%/40%/45%/50%). Duration: 6. Cooldown: 7/6/5/4. Mana Cost: 40/45/50/55."
     },
     {
       "name": "Dead in the Water",
       "type": "active",
-      "description": "Attaches and leashes a heavy anchor to an enemy hero. Attempting to move a certain distance from the anchor sets its movement speed value and forces the affected unit to drag the Anchor behind them. This unit does not feel the effects from magical spell damage sources."
+      "description": "Attaches and leashes a heavy anchor to an enemy hero. Attempting to move a certain distance from the anchor sets its movement speed value and forces the affected unit to drag the Anchor behind them. Cast Range: 350. Chain Length: 350. Set Max Move Speed: 100. Hit Count: 4. Debuff Duration: 10. Hit Count: 40. Mana Cost: 25."
     },
     {
       "name": "Ravage",
       "type": "active",
-      "description": "Damages and stuns all enemy units within the radius."
+      "description": "Damages and stuns all enemy units within the radius. Max Effect Radius: 1250. Effect Width: 250. Damage: 275/375/475. Stun Duration: 2/2.2/2.4 (3/3.2/3.4). Cooldown: 150/145/140. Mana Cost: 125/225/325."
     }
   ]
 }

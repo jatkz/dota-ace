@@ -21,12 +21,11 @@
   "statGains": {
     "health": 55,
     "healthRegen": 0.25,
-    "armor": 0.55,
-    "attackSpeed": 3.3,
-    "mainAttackDamage": 3.3,
     "mana": 12,
     "manaRegen": 0.05,
-    "magicResistance": 0.1
+    "armor": 0.55,
+    "attackSpeed": 3.3,
+    "mainAttackDamage": 3.3
   },
   "stats": {
     "health": 582,
@@ -56,32 +55,32 @@
     {
       "name": "Battle Stance",
       "type": "active",
-      "description": "Toggle On swaps to Melee Form. Reduces Troll's base attack time and base attack range in Melee Form. Berserker's Rage grants the Troll's attacks different bonus correspondingly to the toggled Form."
+      "description": "Toggle On swaps to Melee Form. Reduces Troll's base attack time and base attack range in Melee Form. Berserker's Rage grants the Troll's attacks different bonus correspondingly to the toggled Form. Attack Range Loss: 350. Set Base Attack Time: 1.4. Min Attack Range: 150."
     },
     {
       "name": "Whirling Axes (Ranged)",
       "type": "active",
-      "description": "Now applies all ability effects normally on debuff immune units. The ranged Whirling Axes now dispel affected enemy units. Reduces cooldown and mana cost."
+      "description": "Now applies all ability effects normally on debuff immune units. The ranged Whirling Axes now dispel affected enemy units. Reduces cooldown and mana cost. Cast Range: 950. Axes Travel Distance: 950. Axes Radius: 100. Number of Axes: 5. Damage: 60/80/100/120 (220/240/260/280). Move Speed Slow: 40%. Mana Cost: 9."
     },
     {
       "name": "Whirling Axes (Melee)",
       "type": "active",
-      "description": "Now applies all ability effects normally on debuff immune units. The melee Whirling Axes now self-dispels. Reduces cooldown and mana cost."
+      "description": "Now applies all ability effects normally on debuff immune units. The melee Whirling Axes now self-dispels. Reduces cooldown and mana cost. Max Effect Radius: 350. Axe Collision Radius: 100. Number of Axes: 2. Damage: 50/100/150/200 (210/260/310/360). Miss Chance: 60%. Blind Duration: 5 (7.5). Mana Cost: 9."
     },
     {
       "name": "Fervor",
       "type": "passive",
-      "description": "grants bonus armor per stack while in Melee Form."
+      "description": "Grants a chance with additional chance per stack to throw a ranged-based instant attack at another enemy unit within the search radius. Attack Speed Bonus per Stack: 15/20/25/30 (19/24/29/34). Proc Chance: (16%). Proc Chance Bonus per Stack: (3%). Search Radius: (675). Bonus Attack Targets: (1). Instant Attack Factor: (1)."
     },
     {
       "name": "Berserker’s Rage",
       "type": "passive",
-      "description": "Attacks in Ranged Form on the affected enemy unit have a chance to additionally slow and deal bonus physical spell damage. Melee Form passively grants Troll bonus armor and bonus movement speed."
+      "description": "Attacks in Ranged Form on the affected enemy unit have a chance to additionally slow and deal bonus physical spell damage. Melee Form passively grants Troll bonus armor and bonus movement speed. Proc Chance: 20%. Spell Damage: 10/15/20/25. Move Speed Slow: 8%/16%/24%/32%. Attack Speed Slow: 8/16/24/32. Slow Duration: 0.8/1.2/1.6/2. Root Duration: 0.8/1.2/1.6/2."
     },
     {
       "name": "Battle Trance",
       "type": "active",
-      "description": "Battle Trance can now be cast while disabled. The ability additionally applies a self-strong dispel upon cast. Additionally grants allied heroes bonus attack speed bonus while active."
+      "description": "Battle Trance can now be cast while disabled. The ability additionally applies a self-strong dispel upon cast. Enemy Search Radius: 900. Lifesteal: 40%/60%/80%. Attack Speed Bonus: 140/170/200. Move Speed Bonus: 25%/30%/35%. Duration: 6.5 (7.5). Lifesteal Factor: 0.6. Cooldown: 90/80/70. Mana Cost: 150."
     }
   ]
 }

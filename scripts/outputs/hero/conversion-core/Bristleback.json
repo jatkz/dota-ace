@@ -1,0 +1,72 @@
+{
+  "name": "Bristleback",
+  "description": "It was a barkeep that got me into this mess. Yeah, I think I'll pay em a visit when this is done.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Durable",
+    "Initiator",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 17,
+    "intelligence": 14
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 1.8,
+    "intelligence": 2.8
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "mana": 33.6,
+    "manaRegen": 0.14,
+    "armor": 0.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 243,
+    "manaRegen": 1.1,
+    "armor": 3.83,
+    "magicResistance": 26.4,
+    "damageMin": 53,
+    "damageMax": 59,
+    "damageAverage": 56,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.8,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 295,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1.5 Mana Regen",
+      "right": "+25 Attack Speed"
+    },
+    "15": {
+      "left": "+8% Bristleback Back Damage Reduction +4% Bristleback Side Damage Reduction",
+      "right": "+250 Viscous Nasal Goo Cast Range"
+    },
+    "20": {
+      "left": "+20 Quill Stack Damage",
+      "right": "+25 Health Regen"
+    },
+    "25": {
+      "left": "+18 Warpath Attack Damage Bonus per Stack",
+      "right": "-25 Bristleback Damage Threshold"
+    }
+  }
+}

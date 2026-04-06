@@ -1,0 +1,73 @@
+{
+  "name": "Spirit Breaker",
+  "description": "I'm the beast of many parts; I part enemies from their lives.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Initiator",
+    "Disabler",
+    "Durable",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 28,
+    "agility": 17,
+    "intelligence": 14
+  },
+  "attributeGains": {
+    "strength": 3.3,
+    "agility": 1.7,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 72.6,
+    "healthRegen": 0.33,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 736,
+    "healthRegen": 4.05,
+    "mana": 243,
+    "manaRegen": 1.2,
+    "armor": 3.83,
+    "magicResistance": 26.4,
+    "damageMin": 62,
+    "damageMax": 72,
+    "damageAverage": 67,
+    "projectileSpeed": "Instant",
+    "attackRange": 170,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.9,
+    "animationPoint": 0.6,
+    "animationBackswing": 0.3,
+    "moveSpeed": 295,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+4 Armor",
+      "right": "+500 Night Vision"
+    },
+    "15": {
+      "left": "+60 Charge of Darkness Bonus Speed",
+      "right": "-3s Bulldoze Cooldown"
+    },
+    "20": {
+      "left": "+375 Bulldoze Barrier",
+      "right": "+8%/+2% Empowering Haste Movespeed Bonus"
+    },
+    "25": {
+      "left": "-4s Charge of Darkness Cooldown",
+      "right": "+20% Greater Bash Damage"
+    }
+  }
+}

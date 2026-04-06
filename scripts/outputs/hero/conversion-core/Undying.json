@@ -1,0 +1,72 @@
+{
+  "name": "Undying",
+  "description": "Where go the living, the dead soon follow.",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Durable",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 10,
+    "intelligence": 27
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1.2,
+    "intelligence": 2.8
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 33.6,
+    "manaRegen": 0.14,
+    "armor": 0.2,
+    "attackSpeed": 1.2,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 1.95,
+    "mana": 399,
+    "manaRegen": 1.6,
+    "armor": 2.67,
+    "magicResistance": 27.7,
+    "damageMin": 55,
+    "damageMax": 63,
+    "damageAverage": 59,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 110,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-15s Tombstone Cooldown",
+      "right": "+30 Decay Damage"
+    },
+    "15": {
+      "left": "+20 Zombie Base Attack Damage",
+      "right": "+12 Soul Rip Damage/Heal"
+    },
+    "20": {
+      "left": "+4 Tombstone Hit Count",
+      "right": "-2s Decay Cooldown"
+    },
+    "25": {
+      "left": "Tombstone On Death",
+      "right": "+50% Flesh Golem Strength Bonus"
+    }
+  }
+}

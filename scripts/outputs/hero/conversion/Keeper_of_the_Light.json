@@ -1,6 +1,6 @@
 {
   "name": "Keeper of the Light",
-  "description": "They say twas I who carried the first light into the universe. They might be right, I can't quite recall. Ezalor, the Keeper of the Light Upon a pale horse he rides, this spark of endless suns, this Keeper of the Light.",
+  "description": "Ezalor, the Keeper of the Light Upon a pale horse he rides, this spark of endless suns, this Keeper of the Light.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -55,37 +55,37 @@
     {
       "name": "Bright Speed",
       "type": "passive",
-      "description": "Grants the Fundamental bonus movement speed per amount of. While in Spirit Form, grants a greater self bonus movement speed per amount of."
+      "description": "Grants the Fundamental bonus movement speed per amount of. While in Spirit Form, grants a greater self bonus movement speed per amount of. Int to Move Speed Bonus Factor: 2.5. Move Speed Bonus: 1. Move Speed Bonus Factor: 1.5 (1.8). Moved Distance Threshold: 300. Vision Radius: 400. Vision Linger Duration: 3."
     },
     {
       "name": "Illuminate",
       "type": "active",
-      "description": "While cast in Spirit Form, an image of Ezalor is projected at his location, which channels the Illuminate for him. Ezalor can act freely during this. Illuminate also heals Ezalor's allied units while dealing damage. Increases the damage to heal factor."
+      "description": "While cast in Spirit Form, an image of Ezalor is projected at his location, which channels the Illuminate for him. Ezalor can act freely during this. Illuminate also heals Ezalor's allied units while dealing damage. Increases the damage to heal factor. Cast Range: 1800. Travel Distance: 1550. Wave Radius: 400. Vision Radius: 400. Max Channel Time: 3. Vision Distance Increment per Second: 150/180/210/240. Cooldown: 100/125/150/175."
     },
     {
       "name": "Blinding Light",
       "type": "active",
-      "description": "The Primordial power grants Ezalor's abilities bonus cast range while in Spirit Form."
+      "description": "The Primordial power grants Ezalor's abilities bonus cast range while in Spirit Form. Cast Range: 500/575/650/725. Radius: 425/450/475/500. Knock Distance: 400. Damage: 85/130/175/220 (175/220/265/310). Miss Chance: 45% (85%). Push Duration: 0.6. Cooldown: 24/21/18/15. Mana Cost: 120/130/140/150."
     },
     {
       "name": "Chakra Magic",
       "type": "active",
-      "description": "Restores mana and reduces all basic abilities' current cooldown by a fixed amount."
+      "description": "Restores mana and reduces all basic abilities' current cooldown by a fixed amount. Cast Range: 900. Mana Restore: 105/170/235/300. Current Cooldowns Reduction: 3/4/5/6. Mana Restore: 136/221/305/390. Cast Range: 940/945/950. Cooldown: 19/16/13/10."
     },
     {
       "name": "Solar Bind",
       "type": "active",
-      "description": "Reduces unit-targeted enemy's magic resistance, and applies a movement speed slow that intensifies the more the debuff-affected enemy unit moves. Solar Bind is now a charged-based ability with a restore time corresponding to the the ability's current cooldown."
+      "description": "Reduces unit-targeted enemy's magic resistance, and applies a movement speed slow that intensifies the more the debuff-affected enemy unit moves. Solar Bind is now a charged-based ability with a restore time corresponding to the the ability's current cooldown. Cast Range: 890/895/900. Moved Distance Threshold: 100. Total Magic Resist Reduction: 20%/30%/40% (30%/40%/50%). Move Speed Slow per Distance Threshold: 10%. Duration: 6. Mana Cost: 14."
     },
     {
       "name": "Will-O-Wisp",
       "type": "active",
-      "description": "Summons Ignis Fatuus at the targeted area. As it alternates on and off, enemies are drawn closer with its mesmerising flicker. Applies the following ability effects when the Ignis Fatuus turns off."
+      "description": "Summons Ignis Fatuus at the targeted area. As it alternates on and off, enemies are drawn closer with its mesmerising flicker. Applies the following ability effects when the Ignis Fatuus turns off. Cast Range: 800. Radius: 725. Number of Flickers: 5. Hit Count: 7. Wisp Duration: 13.4. Pull Speed: 60. Mana Cost: 60."
     },
     {
       "name": "Spirit Form",
       "type": "active",
-      "description": "The Spirit Form grants Ezalor bonus cast range, along with the Solar Bind ability. While cast in Spirit Form, an image of Ezalor is projected at his location, which channels the Illuminate for him. Ezalor can act freely during this. Illuminate also heals Ezalor's allied units while dealing damage."
+      "description": "The Spirit Form grants Ezalor bonus cast range, along with the Solar Bind ability. While cast in Spirit Form, an image of Ezalor is projected at his location, which channels the Illuminate for him. Ezalor can act freely during this. Illuminate also heals Ezalor's allied units while dealing damage. Cast Range Bonus: 100/200/300. Duration: 40/45/50 (55/60/65). Cooldown: 85/80/75. Mana Cost: 75/125/175."
     }
   ]
 }

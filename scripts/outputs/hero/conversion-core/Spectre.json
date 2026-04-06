@@ -1,0 +1,72 @@
+{
+  "name": "Spectre",
+  "description": "Among the Transcendencies, you would be thought ignoble.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Durable",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 26,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.4,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.4,
+    "attackSpeed": 2.4,
+    "mainAttackDamage": 2.4,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.1,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 4.33,
+    "magicResistance": 26.6,
+    "damageMin": 49,
+    "damageMax": 53,
+    "damageAverage": 51,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 136,
+    "bat": 1.8,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+12 Desolate Damage",
+      "right": "-4s Spectral Dagger Cooldown"
+    },
+    "15": {
+      "left": "+80 Spectral Dagger Damage",
+      "right": "+1s Shadow Step Duration"
+    },
+    "20": {
+      "left": "+15% Spectral Dagger Slow/Bonus",
+      "right": "+300 Health"
+    },
+    "25": {
+      "left": "+4% Dispersion Reflection/Reduction",
+      "right": "+15% All Spectre Illusions Damage Dealt"
+    }
+  }
+}

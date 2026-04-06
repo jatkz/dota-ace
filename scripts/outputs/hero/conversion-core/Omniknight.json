@@ -1,0 +1,71 @@
+{
+  "name": "Omniknight",
+  "description": "I have gazed into the Omniscience, and it has gazed into me.",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Durable",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 15,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 3.1,
+    "agility": 2,
+    "intelligence": 2.1
+  },
+  "statGains": {
+    "health": 68.2,
+    "healthRegen": 0.31,
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "armor": 0.33,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 5.5,
+    "magicResistance": 26.6,
+    "damageMin": 53,
+    "damageMax": 63,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.433,
+    "animationBackswing": 0.567,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Base Attack Damage",
+      "right": "+200 Repel Cast Range"
+    },
+    "15": {
+      "left": "-20s Guardian Angel Cooldown",
+      "right": "-0.5s Hammer of Purity Cooldown"
+    },
+    "20": {
+      "left": "-3s Purification Cooldown",
+      "right": "+125 Degen Aura Radius"
+    },
+    "25": {
+      "left": "+75% Hammer of Purity Bonus Base Damage",
+      "right": "+160 Purification Damage/Heal"
+    }
+  }
+}

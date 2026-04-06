@@ -1,0 +1,75 @@
+{
+  "name": "Naga Siren",
+  "description": "I sing the Siren song of war.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Support",
+    "Pusher",
+    "Disabler",
+    "Initiator",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 22,
+    "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 3.4,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.1,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 4.67,
+    "magicResistance": 26.9,
+    "damageMin": 45,
+    "damageMax": 47,
+    "damageAverage": 46,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 132,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 330,
+    "turnRate": 0.6,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+30% Rip Tide Damage",
+      "right": "+125 Reel In Move Speed"
+    },
+    "15": {
+      "left": "-75% Mirror Image Illusion Damage Taken",
+      "right": "+10% Mirror Image Damage"
+    },
+    "20": {
+      "left": "+1 Mirror Image Illusion",
+      "right": "-25s Song of the Siren Cooldown"
+    },
+    "25": {
+      "left": "+25 Agility",
+      "right": "-10s Mirror Image Cooldown"
+    }
+  }
+}

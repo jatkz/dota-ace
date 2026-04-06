@@ -1,0 +1,72 @@
+{
+  "name": "Anti-Mage",
+  "description": "They who live by the wand shall die by my blade.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 24,
+    "intelligence": 12
+  },
+  "attributeGains": {
+    "strength": 1.6,
+    "agility": 2.8,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 35.2,
+    "healthRegen": 0.16,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "mainAttackDamage": 2.8,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.6,
+    "mana": 219,
+    "manaRegen": 0.6,
+    "armor": 6,
+    "magicResistance": 26.2,
+    "damageMin": 53,
+    "damageMax": 57,
+    "damageAverage": 55,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.4,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+200 Mana Void Radius",
+      "right": "+3 Health Regen"
+    },
+    "15": {
+      "left": "+0.2 Mana Void Damage Multiplier",
+      "right": "+9% Persecutor Min Slow +18% Persecutor Max Slow"
+    },
+    "20": {
+      "left": "+0.8s Mana Void Stun Duration",
+      "right": "+150 Blink Cast Range"
+    },
+    "25": {
+      "left": "-50s Mana Void Cooldown",
+      "right": "-1s Blink Cooldown"
+    }
+  }
+}

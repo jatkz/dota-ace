@@ -1,6 +1,6 @@
 {
   "name": "Juggernaut",
-  "description": "By the Visage of Vengeance, which drowned in the Isle of Masks, I will carry on the rites of the Faceless Ones.",
+  "description": "By the Visage of Vengeance, which drowned in the Isle of Masks, I will carry on the rites of the Faceless Ones. Yurnero, the Juggernaut No one has ever seen the face hidden beneath the mask of Yurnero the Juggernaut.",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -55,32 +55,32 @@
     {
       "name": "Bladeform",
       "type": "passive",
-      "description": "Grants self bonus base and bonus movement speed when Juggernaut is not taking damage. Dispels the Bladeform buff upon taking a damage instance greater than the damage threshold."
+      "description": "Grants self bonus base and bonus movement speed when Juggernaut is not taking damage. Dispels the Bladeform buff upon taking a damage instance greater than the damage threshold. Stack Gain Interval: 2 (1). Base Agi Bonus per Stack: 2.5%. Move Speed Bonus per Stack: 1%. Damage Timer: 2. Damage Threshold: 0. Buff Linger Duration: 2."
     },
     {
       "name": "Blade Fury",
       "type": "active",
-      "description": "Becomes debuff immune and deals damage to nearby enemy units within a fixed interval. Applies a strong dispel at the end of the spin."
+      "description": "Becomes debuff immune and deals damage to nearby enemy units within a fixed interval. Applies a strong dispel at the end of the spin. Radius: 260. Damage Interval: 0.2. Damage per Second: 80/110/140/170 (180/210/240/270). Duration: 5. Move Speed Bonus: (45). Attack Damage Reduction: 100%. Cooldown: 30/26/22/18. Mana Cost: 120."
     },
     {
       "name": "Healing Ward",
-      "type": "passive",
-      "description": "Summons a Healing Ward which heals nearby allied units a portion of their max health. Increases ward hit count and the max health as health regeneration bonus."
+      "type": "active",
+      "description": "Summons a Healing Ward which heals nearby allied units a portion of their max health. Increases ward hit count and the max health as health regeneration bonus. Cast Range: 350. Aura Radius: 400. Hit Count: 1 (2). Max Health as Health Regen Bonus: 2%/3%/4%/5% (3.5%/4.5%/5.5%/6.5%). Ward Duration: 25. Aura Linger Duration: 2.5. Cooldown: 18/20/22/24. Mana Cost: 120."
     },
     {
       "name": "Blade Dance",
       "type": "passive",
-      "description": "Grants Juggernaut a chance to deal critical damage on each attack. Grants attacks that proc Blade Dance lifesteal. Lifesteal is less effective when attacking creeps."
+      "description": "Grants Juggernaut a chance to deal critical damage on each attack. Grants attacks that proc Blade Dance lifesteal. Lifesteal is less effective when attacking creeps. Proc Chance: 35%. Crit Damage: 140%/160%/180%/200% (155%/175%/195%/215%). Lifesteal: 40%. Creep Lifesteal Factor: 0.6."
     },
     {
       "name": "Swiftslash",
       "type": "active",
-      "description": "Blocks only the first damage instance."
+      "description": "A briefer onslaught for those less deserving of the honor. Cast Range: 450. Duration: 1. Mana Cost: 25."
     },
     {
       "name": "Omnislash",
       "type": "active",
-      "description": "sources procs on and blocks only the first damage instance."
+      "description": "Applies a basic dispel upon cast, leaps toward the unit-targeted enemy. Juggernaut then slashes the target and other nearby enemy units at an increased attack rate, while being invulnerable for the duration. Cast Range: 450. Search Radius: 425. Attack Rate Divisor: 1.4. Instant Attack Factor: 1. Attack Damage Bonus: 25/30/35. Attack Speed Bonus: 40. Cooldown: 200/275/350."
     }
   ]
 }

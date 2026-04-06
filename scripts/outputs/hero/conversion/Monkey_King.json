@@ -56,7 +56,7 @@
     {
       "name": "Mischief",
       "type": "active",
-      "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming. Within Roshan's pit and while it is dead, Mischief disguises the Monkey King as himself. The same applies to the. Damage Negation Duration: 0.1. Damage Threshold: 0. Move Speed Bonus: 8%. Rune Search Radius: 300. Creep Search Radius: 200. Tree Search Radius: 350. Cooldown: 24.5."
+      "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming. Within Roshan's pit and while it is dead, Mischief disguises the Monkey King as himself. The same applies to the. Damage Negation Duration: 0.1. Damage Threshold: 0. Move Speed Bonus: 8%. Rune Search Radius: 300. Creep Search Radius: 200. Tree Search Radius: 350. Mana Cost: 24.5."
     },
     {
       "name": "Boundless Strike",
@@ -71,7 +71,7 @@
     {
       "name": "Primal Spring",
       "type": "active",
-      "description": "Springs out from his tree perch, damaging and slowing enemy units in proportion to the channel duration toward the landing area. Cast Range: Global. Max Leap Distance: 800. Radius: 375. Max Channel Time: 1.75. Max Damage: 110/200/290/380 (460/550/640/730). Max Move Speed Slow: 20%/40%/60%/80%. Cooldown: 18/16/14/12 (0). Mana Cost: 100."
+      "description": "Springs out from his tree perch, damaging and slowing enemy units in proprotion to the channel duration toward the landing area. Cast Range: Global. Max Leap Distance: 800. Radius: 375. Max Channel Time: 1.75. Max Damage: 110/200/290/380 (460/550/640/730). Max Move Speed Slow: 20%/40%/60%/80%. Cooldown: 18/16/14/12. Mana Cost: 100."
     },
     {
       "name": "Jingu Mastery",
@@ -79,7 +79,7 @@
       "description": "Grants bonus attack damage and lifesteal for a number of subsequent attacks to its master. Counter Duration: 5.5/7/8.5/10. Max Attack Charges: 4. Attack Damage Bonus: 30/80/130/180 (140/190/240/290). Lifesteal: 20%/40%/60%/80%. Buff Duration: 35. Creep Lifesteal Factor: 0.6."
     },
     {
-      "name": "Wukong's Command",
+      "name": "Wukong’s Command",
       "type": "active",
       "description": "Creates a circular formation of soldiers that spread out from his position. Grants Monkey King bonus armor for its duration. Cast Range: 625 (975). Ring Radius: 300 2nd. Ring Radius: 750 3rd. Ring Radius: (1100). Soldier Attack Interval: 1.1. Self Armor Bonus: 15/20/25. Cooldown: 100/90/80. Mana Cost: 100."
     },

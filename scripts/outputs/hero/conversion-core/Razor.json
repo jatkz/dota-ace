@@ -1,0 +1,73 @@
+{
+  "name": "Razor",
+  "description": "I bring my lightning whip not to punish souls, but only to hasten them toward the inevitable exit.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Durable",
+    "Nuker",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 24,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 2.8,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4,
+    "magicResistance": 27.1,
+    "damageMin": 47,
+    "damageMax": 49,
+    "damageAverage": 48,
+    "projectileSpeed": 2000,
+    "attackRange": 475,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.4,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+4 Armor",
+      "right": "+0.75s Plasma Field Slow Duration"
+    },
+    "15": {
+      "left": "+12 Strength",
+      "right": "+5 Static Link Damage Change"
+    },
+    "20": {
+      "left": "-0.1s Eye of the Storm Strike Interval",
+      "right": "+30% Storm Surge Damage/Slow"
+    },
+    "25": {
+      "left": "Static Link Steals Attack Speed",
+      "right": "Secondary Plasma Field"
+    }
+  }
+}

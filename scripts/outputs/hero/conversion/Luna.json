@@ -23,7 +23,7 @@
     "mana": 22.8,
     "manaRegen": 0.095,
     "armor": 0.57,
-    "attackSpeed": 3.4,
+    "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },
   "stats": {
@@ -54,27 +54,27 @@
     {
       "name": "Lunar Blessing",
       "type": "passive",
-      "description": "At nighttime, the Lunar Blessing is Global, and additionally grants Luna bonus night vision. The higher Luna's level, the greater the attack damage bonus and self night vision bonus value."
+      "description": "At nighttime, the Lunar Blessing is Global, and additionally grants Luna bonus night vision. The higher Luna's level, the greater the attack damage bonus and self night vision bonus value. Aura Radius: 1200. Attack Damage Bonus: 1. Self Bonus Factor: 2. Aura Linger Duration: 0.5. Flat Attack Damage Bonus: (25). Aura Radius: Global Self."
     },
     {
       "name": "Lucent Beam",
       "type": "active",
-      "description": "Lucent Damage: Attack damage increased by x."
+      "description": "Calls a beam of lunar energy down upon an enemy, damaging and briefly stunning them. Cast Range: 800. Number of Targets: 1 (2). Damage: 75/150/225/300 (155/230/305/380). Stun Duration: 0.6 (1.1). Secondary Target Search Radius: 500. Cooldown: 9/8/7/6. Mana Cost: 90/100/110/120."
     },
     {
       "name": "Lunar Orbit",
       "type": "active",
-      "description": "Luna's glaive spirals out, rotates around her, and instantly attacks collided enemy units for a portion of her attack damage. Grants bonus movement speed and increases damage reduction while active."
+      "description": "Luna's glaive spirals out, rotates around her, and instantly attacks collided enemy units for a portion of her attack damage. Grants bonus movement speed and increases damage reduction while active. Orbit Radius: 225. Number of Glaives: 4 (5). Orbital Speed: 160 (240). Collision Radius: 200. Instant Attack Factor: 0.28/0.32/0.36/0.4 (0.42/0.48/0.54/0.6). Duration: 5/6/7/8. Cooldown: 40/35/30/25. Mana Cost: 65/70/75/80."
     },
     {
       "name": "Moon Glaives",
       "type": "passive",
-      "description": "Luna's attacks bounce between enemy units, and deals lesser damage per bounce."
+      "description": "Luna's attacks bounce between enemy units, and deals lesser damage per bounce. Search Radius: 500. Number of Bounces: 3/4/5/6. Bounce Speed: 900. Damage Factor per Bounce: 0.5/0.55/0.6/0.65 (0.55/0.6/0.65/0.7)."
     },
     {
       "name": "Eclipse",
       "type": "active",
-      "description": "These lucent strikes are of the corresponding level of Lucent Beam. The beams do not stun their target. Applies of 's corresponding ability level when acquired."
+      "description": "These lucent strikes are of the corresponding level of Lucent Beam. The beams do not stun their target. Search Radius: 675. Number of Beams: 6/9/12 (6/12/18). Beam Interval: 0.6 (0.3). Eclipse Duration: 2.4/4.2/6 (1.8/3.6/5.4). Set Nighttime Duration: 10. Damage Factor: 1. Cooldown: 150/200/250."
     }
   ]
 }

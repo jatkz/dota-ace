@@ -1,0 +1,73 @@
+{
+  "name": "Earthshaker",
+  "description": "There may be many earths, but there's only one Earthshaker.",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Initiator",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 12,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.7,
+    "agility": 1.4,
+    "intelligence": 2.1
+  },
+  "statGains": {
+    "health": 81.4,
+    "healthRegen": 0.37,
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "armor": 0.23,
+    "attackSpeed": 1.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.7
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 4,
+    "magicResistance": 26.8,
+    "damageMin": 49,
+    "damageMax": 59,
+    "damageAverage": 54,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 112,
+    "bat": 1.7,
+    "animationPoint": 0.467,
+    "animationBackswing": 0.863,
+    "moveSpeed": 315,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+75 Fissure Damage",
+      "right": "+25 Base Damage"
+    },
+    "15": {
+      "left": "+50 Aftershock Damage",
+      "right": "+200 Fissure Range"
+    },
+    "20": {
+      "left": "+65% Enchant Totem Attack Damage",
+      "right": "+50 Echo Slam Damage"
+    },
+    "25": {
+      "left": "-1.5s Enchant Totem Cooldown",
+      "right": "-50% Echo Slam Cooldown"
+    }
+  }
+}

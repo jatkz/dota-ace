@@ -1,6 +1,6 @@
 {
   "name": "Ember Spirit",
-  "description": "Balance in all things.",
+  "description": "Balance in all things. Xin, the Ember Spirit.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -67,22 +67,22 @@
     {
       "name": "Sleight of Fist",
       "type": "active",
-      "description": "The Sleight of Fist is more effective and deals more damage on enemy heroes. Cast Range: 650. Mark Radius: 250/350/450/550. Interval: 0.25. Instant Attack Factor: 1. Jump Interval: 0.25. Dash Duration: Varies. Cooldown: 13/11/9/7 (0). Mana Cost: 60/65/70/75."
+      "description": "The Sleight of Fist is more effective and deals more damage on enemy heroes. Cast Range: 650. Mark Radius: 250/350/450/550. Interval: 0.25. Instant Attack Factor: 1. Jump Interval: 0.25. Dash Duration: Varies. Cooldown: 13/11/9/7. Mana Cost: 60/65/70/75."
     },
     {
       "name": "Flame Guard",
       "type": "active",
-      "description": "Surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken. Damage to Barrier Factor: 0.7. Duration: 12/14/16/18. Damage Radius: 500. Damage per Second: 20/30/40/50 (40/60/80/100). Damage Duration: 12/14/16/18. Aura Linger Duration: 0.5. Cooldown: 32. Mana Cost: 65/80/95/110."
+      "description": "Surrounds himself with a ring of fire that consumes incoming magic damage, absorbing a percentage of the damage taken. Damage to Barrier Factor: 0.7. Duration: 12/14/16/18. Damage Radius: 500. Damage per Second: 20/30/40/50 (40/60/80/100). Damage Duration: 12/14/16/18. Aura Linger Duration: 0.5. Cooldown: 65/80/95/110."
     },
     {
       "name": "Activate Fire Remnant",
       "type": "active",
-      "description": "Dashes out to all active Fire Remnants, destroying them and dealing damage in an area, and then moving to the next nearest Remnant. Cast Range: Global. Max Travel Speed: 1300. Min Travel Time: 0.4. Travel Damage Radius: 225. Landing Damage Radius: 450. Damage: 100/200/300. Cooldown: 0. Mana Cost: 100/125/150."
+      "description": "Dashes out to all active Fire Remnants, destroying them and dealing damage in an area, and then moving to the next nearest Remnant. Cast Range: Global. Max Travel Speed: 1300. Min Travel Time: 0.4. Travel Damage Radius: 225. Landing Damage Radius: 450. Damage: 100/200/300. Cooldown: 100/125/150."
     },
     {
       "name": "Fire Remnant",
       "type": "active",
-      "description": "Increases cast range, remnant travel speed, and max charges. Cast Range: 1400 (3000). Move Speed to Remnant Speed Factor: 2.5 (5). Remnant Duration: 45. Enemy Death Radius: (400). Number of Remnants on Self-Death: (1). Cooldown: 0.5."
+      "description": "Increases cast range, remnant travel speed, and max charges. Cast Range: 1400 (3000). Move Speed to Remnant Speed Factor: 2.5 (5). Remnant Duration: 45. Enemy Death Radius: (400). Number of Remnants on Self-Death: (1). Mana Cost: 35."
     }
   ]
 }

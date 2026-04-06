@@ -20,10 +20,10 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "mana": 37.2,
-    "manaRegen": 0.155,
     "armor": 0.17,
     "attackSpeed": 1,
+    "mana": 37.2,
+    "manaRegen": 0.155,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.1
   },
@@ -55,27 +55,27 @@
     {
       "name": "Eldritch Summoning",
       "type": "passive",
-      "description": "Shortly after dying, a burst of magic damage is dealth to all enemies in a small area. This ability is less effective on creeps. The unit instant kills itself when it reaches its chased target. Eldritch Explosion procs cannot further spawn Minor Imps. Increases Eldritch Explosion's current and max ability level."
+      "description": "Increases both Eldritch Summoning's current and max ability level. Increases the summoned Minor Imps' level. Attack Search Radius: 1200. Health Bonus: 0/80/160/240/320. Attack Damage Bonus: 0/4/8/12/16. Move Speed Bonus: 0/15/30/45/60. Duration: 15."
     },
     {
       "name": "Fatal Bonds",
       "type": "active",
-      "description": "Binds several enemy units together, causing a portion of the damage taken to one of them to be felt by the others."
+      "description": "Binds several enemy units together, causing a portion of the damage taken to one of them to be felt by the others. Cast Range: 1000. Bounce Distance: 700. Number of Bounces: 6 (6.04). Damage Shared: 15%/18%/21%/24% (19%/22%/25%/28%). Duration: 18. Cooldown: 42/34/26/18. Mana Cost: 120/130/140/150."
     },
     {
       "name": "Shadow Word",
       "type": "active",
-      "description": "Heals allied units and damages enemy units within the radius over time."
+      "description": "Heals allied units and damages enemy units within the radius over time. Cast Range: 650/700/750/800. Radius: 225 (375). Damage per Second: 15/25/35/45. Heal per Second: 15/25/35/45. Duration: 10. Cooldown: 15/14/13/12. Mana Cost: 110/120/130/140."
     },
     {
       "name": "Upheaval",
       "type": "active",
-      "description": "As Warlock channels up to a certain time, Upheaval reaches its max power and its ability values no longer increases. All ability values stop increasing at the last 0.1-second of the channeling. Creates uncontrollable Minor Imps of the current Eldritch Summoning ability level per certain Upheaval channeling interval."
+      "description": "As Warlock channels up to a certain time, Upheaval reaches its max power and its ability values no longer increases. All ability values stop increasing at the last 0.1-second of the channeling. Creates uncontrollable Minor Imps of the current Eldritch Summoning ability level per certain Upheaval channeling interval. Cast Range: 800. Effect Radius: 575/600/625/650 (625/650/675/700). Max Channel Time: 10/12/14/16. Damage Increment per Second: 10 (55). Move Speed Slow Increment per Second: 11%/14%/17%/20%. Linger Duration: 1. Cooldown: 60/50/40/30. Mana Cost: 100."
     },
     {
       "name": "Chaotic Offering",
-      "type": "passive",
-      "description": "The conjured Golem is partially immune to movement speed slow sources. Passively summons a Golem of its corresponding level on Warlock's death location, excluding Reincarnation sources."
+      "type": "active",
+      "description": "The conjured Golem is partially immune to movement speed slow sources. Passively summons a Golem of its corresponding level on Warlock's death location, excluding Reincarnation sources. Cast Range: 900. Stun Radius: 600. Stun Duration: 0.8. Golem Spawn Interval: (0.5). Number of Golems: 1 (2). Slow Resistance: 60%. Cooldown: 200/400/600."
     }
   ]
 }

@@ -56,32 +56,32 @@
     {
       "name": "Mana Burn",
       "type": "passive",
-      "description": "Offensively removes the affected enemy unit's mana per Nyx's ability cast and item ability casts."
+      "description": "Offensively removes the affected enemy unit's mana per Nyx's ability cast and item ability casts. Min Damage Threshold: 0. Damage Dealt to Mana Burn Factor: 0.12."
     },
     {
       "name": "Impale",
       "type": "active",
-      "description": "Rock spike burst from the earth along a straight path. Immediately damages and stuns enemy units while being hurled into the air."
+      "description": "Rock spike burst from the earth along a straight path. Immediately damages and stuns enemy units while being hurled into the air. Cast Range: 750. Spikes Travel Distance: 750. Effect Radius: 140. Damage: 100/160/220/280 (240/300/360/420). Stun Duration: 1.1/1.4/1.7/2 (1.3/1.6/1.9/2.2). Cast Range: (1250). Cooldown: 17/15/13/11. Mana Cost: 90/100/110/120."
     },
     {
       "name": "Mind Flare",
-      "type": "passive",
-      "description": "Deals a base damage based on the affected enemy unit's max mana, and additional damage equal to a percentage of the damage taken from Nyx previously."
+      "type": "active",
+      "description": "Deals a base damage based on the affected enemy unit's max mana, and additional damage equal to a percentage of the damage taken from Nyx previously. Cast Range: 800. Min Damage: 0. Enemy Max Mana to Damage Factor: 0.25/0.3/0.35/0.4. Accumulated Damage Factor: 0.15. Damage Timer: 15. Enemy Max Mana Burn Factor: 0.9/0.12/0.15/0.18. Cooldown: 11/9.5/8/6.5. Mana Cost: 100/105/110/115."
     },
     {
       "name": "Spiked Carapace",
       "type": "active",
-      "description": "While above ground, Spiked Carapace reflects, negates one damage instance per damage source, and stuns the damage source as well. Spiked Carapace under the scarab's hood is akin to wielding a Blade Mail. Damage reflected from the item's active ability deals 0-damage instances while Spiked Carapace is active."
+      "description": "While above ground, Spiked Carapace reflects, negates one damage instance per damage source, and stuns the damage source as well. Spiked Carapace under the scarab's hood is akin to wielding a Blade Mail. Damage reflected from the item's active ability deals 0-damage instances while Spiked Carapace is active. Reflect Radius: Global Reflect. Damage Factor: 1.4 (1.65). Carapace Duration: 2. Stun Duration: 0.7/1.0/1.3/1.6 (1.3/1.6/1.9/2.2). Reflect Radius: Global. Reflect Damage Factor: 1.4 (1.65). Cooldown: 20/16/12/8. Mana Cost: 40."
     },
     {
       "name": "Burrow",
       "type": "active",
-      "description": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey."
+      "description": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey. Cast Range Bonus: 500. Max Health as Health Regen Bonus: 1%. Max Mana as Mana Regen Bonus: 1%. Damage Reduction: 40%. Cooldown Reduction: 25%. Stun Radius: 400. Mana Cost: 0."
     },
     {
       "name": "Vendetta",
       "type": "active",
-      "description": "Grants the next attack a faster attack animation with attack range bonus. The attack breaking invisibility applies a Break, and deals pure spell damage bonus with the attack. Applies a secondary self-buff that grants unobstructed pathing and movement speed bonus upon cast. Reduces cooldown."
+      "description": "Grants the next attack a faster attack animation with attack range bonus. The attack breaking invisibility applies a Break, and deals pure spell damage bonus with the attack. Applies a secondary self-buff that grants unobstructed pathing and movement speed bonus upon cast. Reduces cooldown. Fade Time: 0. Move Speed Bonus: 16%/18%/20%. Vendetta Duration: 60. Attack Range Bonus: 75. Attack Animation Factor: 0.3. Spell Damage Bonus: 300/400/500 (350/450/550). Cooldown: 80/70/60. Mana Cost: 180/240/300."
     }
   ]
 }

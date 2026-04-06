@@ -55,27 +55,27 @@
     {
       "name": "Backstab",
       "type": "passive",
-      "description": "Successful attacks apply an -based spell damage bonus to enemy units from behind."
+      "description": "Successful attacks apply an -based spell damage bonus to enemy units from behind. Agi to Spell Damage: 0.6 (0.9). Agi to Spell Damage Bonus per Hero Level: 0.05. Allied Unit Factor: 0.25."
     },
     {
       "name": "Smoke Screen",
       "type": "active",
-      "description": "Throws down a smoke bomb that blinds and silences enemy units."
+      "description": "Throws down a smoke bomb that blinds and silences enemy units. Cast Range: 550. Effect Radius: 425 (475). Miss Chance: 30%/45%/60%/75%. Silence Duration: 6. Aura Linger Duration: 0.05. Armor Reduction: (5). Cooldown: 17/15/13/11. Mana Cost: 65/70/75/80."
     },
     {
       "name": "Blink Strike",
       "type": "active",
-      "description": "Instant attacks and applies Backstab of the corresponding level on the unit-targeted enemy, regardless of the enemy's facing angle. Applies the component on the secondary target when unit-targeted on the primary target. Other ability effects are applied to both the primary and the secondary target. Riki then appears behind the primary target."
+      "description": "Teleports behind the target unit, momentarily slowing and striking them with attack damage bonus if it is an enemy. Instant attacks and applies Backstab of the corresponding level on the unit-targeted enemy, regardless of the enemy's facing angle. Cast Range: 600/700/800/900 (1100/1200/1300/1400). Move Speed Slow: 100%. Slow Duration: 0.5. Instant Attack Factor: 1. Attack Damage Bonus: 15/30/45/60. Buff Duration: 0.1. Cooldown: 13/10/7/4. Mana Cost: 50/55/60/65."
     },
     {
       "name": "Tricks of the Trade",
-      "type": "passive",
-      "description": "Applies an ensured Backstab bonus attack damage, regardless of the enemy's facing angle."
+      "type": "active",
+      "description": "Applies an ensured Backstab bonus attack damage, regardless of the enemy's facing angle. Cast Range: 400 (700). Effect Radius: 425. Max Attack Targets: 2. Max Channel Time: 2. Max Instant Attacks: 4. Set Attack Damage: 25/50/75/100. Cooldown: 21/18/15/12. Mana Cost: 65."
     },
     {
       "name": "Cloak and Dagger",
       "type": "passive",
-      "description": "Enemy hero kills and assists grants Riki additional experience."
+      "description": "Enemy hero kills and assists grants Riki additional experience. Move Speed Bonus: (10%). Kill XP Bonus: 130/260/390. Assist XP Bonus: 100."
     }
   ]
 }

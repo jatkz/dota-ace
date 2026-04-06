@@ -1,0 +1,72 @@
+{
+  "name": "Abaddon",
+  "description": "The fog of war is no match for the mist of fate.",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Carry",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 22,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 1.5,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.75
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.1,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 2.67,
+    "magicResistance": 26.8,
+    "damageMin": 49,
+    "damageMax": 59,
+    "damageAverage": 54.45,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 95,
+    "totalAttackSpeed": 117,
+    "bat": 1.5,
+    "animationPoint": 0.56,
+    "animationBackswing": 0.41,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+8 Aphotic Shield Health Regen",
+      "right": "+25 Curse of Avernus Damage per Second"
+    },
+    "15": {
+      "left": "+35 Mist Coil Heal/Damage",
+      "right": "-10s Borrowed Time Cooldown"
+    },
+    "20": {
+      "left": "+100 Borrowed Time Immolation Damage per Second",
+      "right": "+80 Aphotic Shield Barrier/Damage"
+    },
+    "25": {
+      "left": "+350 Mist Coil Radius",
+      "right": "+65 Curse of Avernus Attack Speed Bonus"
+    }
+  }
+}

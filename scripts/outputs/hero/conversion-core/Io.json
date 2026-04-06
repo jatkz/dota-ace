@@ -1,0 +1,72 @@
+{
+  "name": "Io",
+  "description": "Beep Boop Link Io, the Wisp Io is everywhere, and in all things.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Escape",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 14,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 3,
+    "agility": 1.6,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 66,
+    "healthRegen": 0.3,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.84
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 3.33,
+    "magicResistance": 27.1,
+    "damageMin": 45,
+    "damageMax": 51,
+    "damageAverage": 48.3,
+    "projectileSpeed": 1200,
+    "attackRange": 500,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.4,
+    "moveSpeed": 320,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+8 Strength",
+      "right": "+1.5s Overcharge Duration"
+    },
+    "15": {
+      "left": "+50 Spirits Hero Damage",
+      "right": "+5% Tether Movement Speed"
+    },
+    "20": {
+      "left": "-30s Relocate Cooldown",
+      "right": "+0.2% Overcharge Max Health as Health Regen Bonus"
+    },
+    "25": {
+      "left": "x0.5 Tethered Ally Instant Attack Factor",
+      "right": "-2s Relocate Cast Delay"
+    }
+  }
+}

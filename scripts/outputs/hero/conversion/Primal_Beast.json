@@ -1,6 +1,6 @@
 {
   "name": "Primal Beast",
-  "description": "RAAWR Primal Beast Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast. A creature hatched into an existence devoid of all feeling but hunger and pain, aeons of carnage shaped the Primal Beast into the apex predator on a planet filled with violent terrors.",
+  "description": "RAAAW Primal Beast Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast. A creature hatched into an existence devoid of all feeling but hunger and pain, aeons of carnage shaped the Primal Beast into the apex predator on a planet filled with violent terrors. Desperately banished by would-be masters with failed hopes to control him, the beast was cast into a new world — one where he could ascend from mere hungry predator into an invasive killing machine with nothing able to stand in his way. For thousands of years, the Mistwood served as massive stomping ground for the beast's destructive play — and even the feared durana beasts made for tasty snacks. Indeed, there could be no rivals for the beast's territory, only minor annoyances. Until one such tiny annoyance employed vile trickery to trap the unstoppable Beast in the Gleipnir. There he might have remained subdued for eternity, were it not for the unpredictable powers of the Continuum Device. Now, freed from both Gleipnir and Vault, far afield from the Mistwood, and much closer to inhabited lands, the beast sets his snout towards new slaughters and the delights of savage destruction — and the paltry fires of civilization will do little to keep this ageless monster at bay.",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -23,6 +23,7 @@
     "mana": 16.8,
     "manaRegen": 0.07,
     "armor": 0.17,
+    "attackSpeed": 1,
     "magicResistance": 0.1,
     "mainAttackDamage": 4.3
   },
@@ -54,32 +55,32 @@
     {
       "name": "Colossal",
       "type": "passive",
-      "description": "Grants the Beast outgoing damage amplification on buildings."
+      "description": "Grants the Beast outgoing damage amplification on buildings. Damage Amp: 40%."
     },
     {
       "name": "Onslaught",
       "type": "active",
-      "description": "The Beast charges through in chosen direction with a limited turn rate. Knocking both allies and enemies alike."
+      "description": "The Beast charges through in chosen direction with a limited turn rate. Knocking both allies and enemies alike. Cast Range: Global. Max Charge Duration: 1.7. Min Charge Distance: 100. Max Charge Distance: 2000. Effect Radius: 190. Damage: 75/170/265/360. Cooldown: 25/22/19/16. Mana Cost: 120."
     },
     {
       "name": "Trample",
       "type": "active",
-      "description": "The Beast cannot be slowed and ignores root sources applied to him while trampling!"
+      "description": "The Beast cannot be slowed and ignores root sources applied to him while trampling! Radius: 230. Distance Threshold per Stomp: 140. Distance Cap: 500. Base Damage: 15/30/45/60. Attack Damage to Spell Damage Factor: 0.35 (0.55). Duration: 5.5. Cooldown: 30/27/24/21. Mana Cost: 100."
     },
     {
       "name": "Uproar",
       "type": "passive",
-      "description": "The Beast accumulates Uproar stacks for every offensive damage instance it takes. When activated, the Beast releases a roar that slows enemy units within the radius, while granting self additional bonus attack damage and bonus armor based on the current stack amount."
+      "description": "The Beast accumulates Uproar stacks for every offensive damage instance it takes. When activated, the Beast releases a roar that slows enemy units within the radius, while granting self additional bonus attack damage and bonus armor based on the current stack amount. Damage Threshold per Stack: 50. Min Damage Instance: 20. Max Damage Instance: 2000. Damage Timer: 20. Effect Radius: 900. Attack Damage Bonus per Stack: 10/20/30/40. Mana Cost: 0."
     },
     {
       "name": "Rock Throw",
       "type": "active",
-      "description": "The Beast throws a rock at the target location that stuns and damages enemies. Grants stacks as long as component is applied on an enemy hero."
+      "description": "The Beast throws a rock at the target location that stuns and damages enemies. Cast Range: 1800. Min Distance: 550. First Impact Radius: 225. Damage: 325. Stun Duration: 1.4. Number of Fragments: 3. Mana Cost: 20."
     },
     {
       "name": "Pulverize",
       "type": "active",
-      "description": "The Beast grabs the target enemy and slams them into the ground repeatedly. Damages and stuns other enemy units within the radius. Each consecutive slam increases the damage dealt. Each successful slam instantly grants Primal Beast a stackable general area-of-effect bonus for a short duration."
+      "description": "The Beast grabs the target enemy and slams them into the ground repeatedly. Damages and stuns other enemy units within the radius. Each consecutive slam increases the damage dealt. Cast Range: 200. Slam Radius: 600. Max Channel Time: 2.3 (3.84). Slam Interval: 0.75. Base Damage: 100/175/250. Damage Increment per Slam: 20/40/60. Cooldown: 40/35/30. Mana Cost: 100."
     }
   ]
 }

@@ -20,11 +20,11 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
+    "mana": 26.4,
+    "manaRegen": 0.11,
     "armor": 0.45,
     "attackSpeed": 2.7,
     "mainAttackDamage": 2.7,
-    "mana": 26.4,
-    "manaRegen": 0.11,
     "magicResistance": 0.1
   },
   "stats": {
@@ -51,41 +51,59 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "-4s Skeleton Walk Cooldown",
+      "right": "+0.75s Strafe Duration"
+    },
+    "15": {
+      "left": "-10s Death Pact Restore Time",
+      "right": "+50 Attack Range"
+    },
+    "20": {
+      "left": "+400 Death Pact Health",
+      "right": "+40 Strafe Attack Speed"
+    },
+    "25": {
+      "left": "Searing Arrows Multishot",
+      "right": "-9s Strafe Cooldown"
+    }
+  },
   "abilities": [
     {
       "name": "Infernal Shred",
       "type": "passive",
-      "description": "Attacks now apply an armor piercing stacking debuff that affects the armor damage factor. Only affects attack damage sourced to Clinkz' and his Skeleton Archers."
+      "description": "Attacks now apply an armor piercing stacking debuff that affects the armor damage factor. Only affects attack damage sourced to Clinkz' and his Skeleton Archers Max Armor Piercing Bonus: 20%. Armor Piercing per Attack: 3%. Duration: 5. Armor Piercing per Attack: 1%."
     },
     {
       "name": "Strafe",
       "type": "active",
-      "description": "The buff grants a portion of the bonus attack speed to all ignited Archers."
+      "description": "The buff grants a portion of the bonus attack speed to all ignited Archers Effect Radius: 1200. Attack Speed Bonus: 120/160/200/240 (520/560/600/640). Attack Range Bonus: 200. Duration: 3.5 (4.25). Archer Attack Speed Bonus Factor: 0.4. Cooldown: 30/25/20/15 (21/16/11/6). Mana Cost: 60/70/80/90."
     },
     {
       "name": "Searing Arrows",
       "type": "active",
-      "description": "Imbues Clinkz' and his Skeleton Archers' arrows with spell damage bonus. The spell damage bonus fully affects buildings."
+      "description": "Imbues Clinkz' and his Skeleton Archers' arrows with spell damage bonus. The spell damage bonus fully affects buildings. Cast Range: 600 (650). Max Attack Targets: 1 (2). Spell Damage Bonus: 20/35/50/65. Building Damage Factor: 1. Max Attack Targets: 1. Attack Order Radius: 4000. Cooldown: 10."
     },
     {
       "name": "Death Pact",
       "type": "active",
-      "description": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings."
+      "description": "Sutherex' bond of life and death has become a part of Clinkz, and his old bones are refreshed with repetition of the pact on lesser beings. Cast Range: 700. Self Max Health Bonus: 175/250/325/400 (215/290/365/440). Health Bonus as Self Heal: 100%. Cooldown: 0. Mana Cost: 60."
     },
     {
       "name": "Burning Army",
       "type": "active",
-      "description": "Summons an array of fiery Skeleton Archers toward the point-targeted direction."
+      "description": "Summons an array of fiery Skeleton Archers toward the point-targeted direction. Cast Range: 600. Total Distance: 900. Number of Archers per Cast: 6. Archers Spawn Interval: 0.1. Total Spawn Time: 0.5. Cooldown: 70. Mana Cost: 150."
     },
     {
       "name": "Burning Barrage",
       "type": "active",
-      "description": "Channels and shoots multiple piercing arrows in the target direction that hit all enemy units for a portion of Clinkz' attack damage while applying attack modifiers."
+      "description": "Channels and shoots multiple piercing arrows in the target direction that hit all enemy units for a portion of Clinkz' attack damage while applying attack modifiers. Cast Range: 850 (900). Arrow Travel Distance: 850 (900). Arrow Collision Radius: 200. Max Channel Time: 2. Number of Arrows: 6. Instant Attack Damage Factor: 0.75. Cooldown: 17. Mana Cost: 40."
     },
     {
       "name": "Skeleton Walk",
       "type": "active",
-      "description": "The archers deal a portion of Clinkz' damage, with their attack range set equal to Clinkz'. They automatically attack nearby enemy heroes upon spawn, regardless of auto-attack settings. All ' properties correspond to 's attributes. The Archers apply of Clinkz' corresponding ability level when acquired. Creates a Skeleton Archer of the corresponding level upon death at Rubick's current location."
+      "description": "Summons Skeleton Archers upon leaving Skeleton Walk. There can only be one pack of Skeleton Walk-based Skeleton Archers at any given time. The Skeleton Archers levels up with this ability. Some of Clinkz' abilities, including Clinkz' death, can summon these immobile and uncontrollable Skeleton Archers to attack enemy units. Certain Archers' attributes corresponds to Clinkz' current attributes. Fade Time: 0.6. Move Speed Bonus: 25%/35%/45%. Invisibility Duration: 30/40/45. Current Hit Count as Damage: 100%. Hero Hit Count: 2. Attack Interval: 1.6. Cooldown: 24/21/18 (20/17/14). Mana Cost: 80/105/130."
     }
   ]
 }

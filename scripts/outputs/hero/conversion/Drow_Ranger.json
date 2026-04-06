@@ -1,6 +1,6 @@
 {
   "name": "Drow Ranger",
-  "description": "The Drow Ranger is the epitome of archery prowess.",
+  "description": "I walk alone, but the shadows are company enough.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -20,12 +20,11 @@
   "statGains": {
     "health": 41.8,
     "healthRegen": 0.19,
-    "armor": 0.47,
-    "attackSpeed": 2.8,
-    "mainAttackDamage": 2.8,
     "mana": 16.8,
     "manaRegen": 0.07,
-    "magicResistance": 0.1
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "mainAttackDamage": 2.8
   },
   "stats": {
     "health": 472,
@@ -51,36 +50,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+1 Multishot Arrow per Wave",
+      "right": "x0.82 Frost Arrows Mana Cost"
+    },
+    "15": {
+      "left": "-6s Multishot Cooldown",
+      "right": "+75 Attack Range"
+    },
+    "20": {
+      "left": "+25% Multishot Damage",
+      "right": "50% Gust Self Move Speed"
+    },
+    "25": {
+      "left": "+1 Multishot Waves",
+      "right": "+8% Marksmanship Chance"
+    }
+  },
   "abilities": [
     {
       "name": "Precision Aura",
       "type": "passive",
-      "description": "Grants Drow bonus corresponding to her current. Grants nearby ranged allied units a lesser bonus."
+      "description": "Grants Drow bonus corresponding to her current agility, granting nearby ranged allied units a lesser bonus. Self Agi Bonus Factor: 0.1. Agi Bonus Increase: 0.01. Aura Radius: 1200. Ally Agi Bonus Factor: 0.5. Aura Linger Duration: 0.5."
     },
     {
       "name": "Frost Arrows",
       "type": "active",
-      "description": "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Applies an additional stackable hypothermia debuff that increases damage per stack and reduces the values of health restoration sources of the debuff-affected enemy unit."
+      "description": "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Applies an additional stackable hypothermia debuff that increases damage per stack and reduces the values of health restoration sources of the debuff-affected enemy unit. Cast Range: 625 (700). Attack Damage Bonus: 10/15/20/25. Move Speed Slow: 15%/25%/35%/45%. Slow Duration: 1.5. Attack Damage Bonus per Stack: (18). Health Restore Reduction per Stack: (10%). Cooldown: 9/10/11/12."
     },
     {
       "name": "Gust",
       "type": "active",
-      "description": "Releases a wave that applies True Sight, silences, and knocks enemy units back relative to how close they are to the Drow. Grants self bonus movement speed upon cast while repulsing assailants who venture too close."
+      "description": "Releases a wave that applies True Sight, silences, and knocks enemy units back relative to how close they are to the Drow. Grants self bonus movement speed upon cast while repulsing assailants who venture too close. Cast Range: 900. Travel Distance: 900. Effect Radius: 250. Min Knock Distance: 1. Max Knock Distance: 450. Min Knock Duration: 0.4. Cooldown: 19/17/15/13. Mana Cost: 70."
     },
     {
       "name": "Multishot",
       "type": "active",
-      "description": "Applies of 's corresponding ability level when acquired."
+      "description": "In the ranger's youth, learning to fire multiple arrows at once was considered a distracting frivolity. In the war of the Ancients, such technique has become strange necessity. Max Channel Time: 1.75. Number of Waves: 3 (4). Waves Interval: 0.55 (0.41). Total Multishot Duration: 1.3 (1.02). Cooldown: 24/21/18/15 (18/15/12/9). Mana Cost: 50/70/90/110."
     },
     {
       "name": "Glacier",
       "type": "active",
-      "description": "Drow creates a hill of ice beneath her, knocking away nearby enemies. Units on the hill gain flying vision and Drow and her ranged allies gain bonus attack range. Drow gains additional damage while on the Glacier and attacking targets below her. The front of the hill obscures vision and cannot be moved through except by Drow. Does not interrupt Multishot when cast."
+      "description": "Drow creates a hill of ice beneath her, knocking away nearby enemies. Units on the hill gain flying vision and Drow and her ranged allies gain bonus attack range. Drow gains additional damage while on the Glacier and attacking targets below her. The front of the hill obscures vision and cannot be moved through except by Drow. Does not interrupt Multishot when cast. Cast Range: 400. Glacier Radius: 180. Number of Shards: 5. Ramp Radius: 150. Shard Spawn Radius: 125. Ally Attack Range Bonus: 200. Cooldown: 25. Mana Cost: 50."
     },
     {
       "name": "Marksmanship",
       "type": "passive",
-      "description": "Drow's attacks have a chance to ignore the enemy unit's base armor. Enemy heroes too close to Drow automatically disables this effect."
+      "description": "Drow's attacks have a chance to ignore the enemy unit's base armor. Enemy heroes too close to Drow automatically disable this effect. Enemy Search Radius: 325. Proc Chance: 20%/30%/40% (28%/38%/48%). Attack Damage Bonus: 50/70/90."
     }
   ]
 }

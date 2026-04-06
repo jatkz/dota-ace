@@ -1,0 +1,73 @@
+{
+  "name": "Kunkka",
+  "description": "Step lively now, your Admiral is on board!",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Support",
+    "Disabler",
+    "Initiator",
+    "Durable",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 14,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.6,
+    "agility": 1.6,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 79.2,
+    "healthRegen": 0.36,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.27,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 3.15,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 4.33,
+    "magicResistance": 26.8,
+    "damageMin": 54,
+    "damageMax": 60,
+    "damageAverage": 57,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1s Admiral's Rum Buff Duration",
+      "right": "+1s Tidebringer 60% Move Speed Slow"
+    },
+    "15": {
+      "left": "+75 Tidebringer Damage",
+      "right": "x1.25 Torrent Damage/Stun Duration"
+    },
+    "20": {
+      "left": "+80% Tidebringer Cleave",
+      "right": "-4s Torrent Cooldown"
+    },
+    "25": {
+      "left": "+25% Tidebringer Armor Piercing",
+      "right": "+100 Spell Area-of-Effect Bonus"
+    }
+  }
+}

@@ -56,32 +56,32 @@
     {
       "name": "Ink Trail",
       "type": "passive",
-      "description": "Both attack damage and spell damage sourced to Grimstroke applies a debuff on enemy heroes that exposes them. The debuff causes affected enemy units to deal less damage to Grimstroke. The higher Grimstroke's level, the greater the incoming damage reduction value."
+      "description": "Both attack damage and spell damage sourced to Grimstroke applies a debuff on enemy heroes that exposes them. The debuff causes affected enemy units to deal less damage to Grimstroke. The higher Grimstroke's level, the greater the incoming damage reduction value. Incoming Damage Reduction: 5%. Expose Duration: 4. Incoming Damage Reduction Increase: 0.5%."
     },
     {
       "name": "Stroke of Fate",
       "type": "active",
-      "description": "Paints a path of ink with his brush, damaging and slowing enemies. The damage is increased with each enemy the ink hits. The damage increment is reduced when the enemy unit hit is a creep."
+      "description": "Paints a path of ink with his brush, damaging and slowing enemies. The damage is increased with each enemy the ink hits. The damage increment is reduced when the enemy unit hit is a creep. Cast Range: 1400 (2380). Travel Distance: 1400 (2380). First Radius: 120. End Radius: 160. Base Damage: 100/160/220/280 (180/288/396/504). Damage Increment per Hero Hit: 20/40/60/80 (36/72/108/144). Cooldown: 11/9/7/5. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Phantom's Embrace",
       "type": "active",
-      "description": "Summons a phantom that moves quickly towards the unit-targeted enemy. Once the phantom latches on the unit, she deals damage over time while silencing it."
+      "description": "Summons a phantom that moves quickly towards the unit-targeted enemy. Once the phantom latches on the unit, she deals damage over time while silencing it. Cast Range: 900. Damage per Second: 10/20/30/40 (75/85/95/105). Attacks to Destroy: 2/2/3/3 (3/3/4/4). Max Silence Duration: 5. Latch Duration: 5. Latch Distance: 130. Cooldown: 30/26/22/18. Mana Cost: 80/100/120/140."
     },
     {
       "name": "Ink Swell",
       "type": "active",
-      "description": "Applies a basic dispel on the target upon cast. Ink Swell tendrils now heal the affected allied unit based on the damage dealt, and spell lifesteals from the ink explosion damage. Increases damage. The heal and spell lifesteal component is less effective when affecting creeps."
+      "description": "Applies a basic dispel on the target upon cast. Ink Swell tendrils now heal the affected allied unit based on the damage dealt, and spell lifesteals from the ink explosion damage. Increases damage. The heal and spell lifesteal component is less effective when affecting creeps. Cast Range: 650/700/750/800. Effect Radius: 375 (525). Move Speed Bonus: 20% (35%). Radius Damage per Second: 30/45/60/75 (42/63/84/105). Duration: 3. Max Power Duration: 2.5. Cooldown: 27/24/21/18. Mana Cost: 120/130/140/150."
     },
     {
       "name": "Dark Portrait",
       "type": "active",
-      "description": "Masterfully creates an illusion of the affected enemy hero. The ink illusion is a strong illusion, has bonus movement speed, deals additional damage based on the affected enemy's main attack damage and receives additional incoming damage."
+      "description": "Masterfully creates an illusion of the affected enemy hero. The ink illusion is a strong illusion, has bonus movement speed, deals additional damage based on the affected enemy's main attack damage and receives additional incoming damage. Cast Range: 1200. Number of Illusions: 1. Damage Dealt: 125%. Damage Taken: 275%. Move Speed Bonus: 30%. Duration: 25. Mana Cost: 35."
     },
     {
       "name": "Soulbind",
       "type": "active",
-      "description": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals..."
+      "description": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals.. Cast Range: 700/800/900. Search Radius: 600. Break Distance: 700. Duration: 6/7/8. Spell Damage Amp: (25%). Cooldown: 70/65/60. Mana Cost: 150/200/250."
     }
   ]
 }

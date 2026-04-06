@@ -56,32 +56,32 @@
     {
       "name": "Spirit of the Forest",
       "type": "passive",
-      "description": "The Prophet's Treants are considered as valid trees. Additionally grants the same bonuses to the summoned Treants."
+      "description": "The Prophet's Treants are considered as valid trees. Additionally grants the same bonuses to the summoned Treants. Tree Proximity Radius: 300. Base Attack Damage Bonus per Tree: 2%. Treant Search Radius: 1200. Tree Proximity Radius Increase: 10."
     },
     {
       "name": "Sprout",
       "type": "active",
-      "description": "Deals damage within the radius upon cast."
+      "description": "Deals damage within the radius upon cast. Cast Range: 625/700/775/850. Tree Spawn Radius: 150. Vision Radius: 400. Number of Trees: 8. Duration: 2.5/3/3.5/4. Aura Linger Duration: 0.5. Cooldown: 14/12/10/8. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Teleportation",
       "type": "active",
-      "description": "The Prophet may globally teleport to any point on the map. Grants the Prophet an all damage barrier upon a successful teleportation."
+      "description": "The Prophet may globally teleport to any point on the map. Grants the Prophet an all damage barrier upon a successful teleportation. Cast Range: Global. Duration: 15. Cooldown: 65/50/35/20. Mana Cost: 50/60/70/80."
     },
     {
       "name": "Nature's Call",
       "type": "active",
-      "description": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild. The Prophet can only summon as much sentient treants as there are trees in the area-targeted location."
+      "description": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild. Cast Range: 750. Tree Search Radius: 150/225/300/375. Max Number of Treants: 2/3/4/5. Treant Duration: 50. Cooldown: 45/40/35/30. Mana Cost: 100."
     },
     {
       "name": "Curse of the Oldgrowth",
       "type": "active",
-      "description": "Unit is visible in fog, slowed and taking damage over time."
+      "description": "Applies an exposing debuff on all enemy heroes within the radius and slowing them. The debuff also deals damage over time based on the number of trees surrounding the affected enemy hero. Effect Radius: 900. Tree Search Radius: 250. Damage per Second per Tree: 15. Move Speed Slow per Tree: 7%. Debuff Duration: 7. Mana Cost: 18."
     },
     {
       "name": "Wrath of Nature",
       "type": "active",
-      "description": "A damaging energy that bounces around globally, striking enemy units close to the point-targeted location within the Prophet's vision radius. The damage increases incrementally per bounce. Applies a debuff that prohibits movement and attack on affected enemy units. The bind duration increases incrementally per affected enemy unit. Reduces cooldown."
+      "description": "A damaging energy that bounces around globally, striking enemy units close to the point-targeted location within the Prophet's vision radius. The damage increases incrementally per bounce. Applies a debuff that prohibits movement and attack on affected enemy units. The bind duration increases incrementally per affected enemy unit. Reduces cooldown. Cast Range: Global. Bounce Radius: Global. Number of Bounces to Max Damage: 16. Base Damage: 90/130/170 (115/155/195). Damage Factor per Bounce: 1.1. Cooldown: 130/160/190."
     }
   ]
 }

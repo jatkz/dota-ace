@@ -1,6 +1,6 @@
 {
   "name": "Sniper",
-  "description": "Now that's what I call stopping power. Kardel Sharpeye, the Sniper Locks onto a unit-targeted enemy. After a short aiming duration, Sniper fires a devastating shot at long range and mini-stuns the target.",
+  "description": "Kardel Sharpeye, the Sniper Locks onto a unit-targeted enemy. After a short aiming duration, Sniper fires a devastating shot at long range and mini-stuns the target.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -19,11 +19,12 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "mana": 31.2,
-    "manaRegen": 0.13,
     "armor": 0.53,
     "attackSpeed": 3.2,
-    "mainAttackDamage": 3.2
+    "mainAttackDamage": 3.2,
+    "mana": 31.2,
+    "manaRegen": 0.13,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 538,
@@ -58,27 +59,27 @@
     {
       "name": "Shrapnel",
       "type": "active",
-      "description": "Grants all immediately upon acquiring the ability. Subsequent ability re-acquisition only grants the remaining charges."
+      "description": "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations. Cast Range: 1800. Effect Radius: 400/425/450/475. Damage per Second: 30/45/60/75 (39/58/78/97). Move Speed Slow: 12%/18%/24%/30%. Shrapnel Duration: 10. Aura Linger Duration: 0.5. Mana Cost: 35."
     },
     {
       "name": "Headshot",
       "type": "passive",
-      "description": "Grants Sniper a chance to deal extra damage and briefly knocks back the attacked enemy unit."
+      "description": "Grants Sniper a chance to deal extra damage and briefly knocks back the attacked enemy unit. Proc Chance: 40%. Damage: 20/50/80/110 (50/80/110/140). Max Knock Distance: 50 (100). Knock Duration: 0.033. Move Speed Slow: 100%. Attack Speed Slow: 100."
     },
     {
       "name": "Take Aim",
       "type": "passive",
-      "description": "Passively increases Sniper's attack range."
+      "description": "Passively increases Sniper's attack range. Attack Range Bonus: 100/150/200/250 (150/200/250/300). Move Speed Slow: 45%/40%/35%/30%. Set Vision Radius: 140°. Vision Bonus: 500/750/1000/1250. Duration: 3 (5). Attack Speed Bonus: (45). Cooldown: 20/18/16/14. Mana Cost: 50."
     },
     {
       "name": "Concussive Grenade",
       "type": "active",
-      "description": "Damages, stuns, and applies a knockback to all affected enemy units within the area-targeted location. Disarms, and applies a movement speed slow to affected enemy units after the knockback."
+      "description": "Damages, stuns, and applies a knockback to all affected enemy units within the area-targeted location. Disarms, and applies a movement speed slow to affected enemy units after the knockback. Cast Range: 600. Effect Radius: 375. Damage: 200. Knock Distance: 475. Knock Duration: 0.4. Stun Duration: 0.4. Mana Cost: 10."
     },
     {
       "name": "Assassinate",
       "type": "active",
-      "description": "Assassinate now fires quicker and stuns the enemy target. Reduces cast point. applies a visual indicator above the unit-targeted enemy."
+      "description": "Locks onto a unit-targeted enemy. After a short aiming duration, Sniper fires a devastating shot at long range and mini-stuns the target. Assassinate now fires quicker and stuns the enemy target. Reduces cast point. Cast Range: 3000. Cast Range Buffer: 600. Spell Damage: 300/400/500 (450/550/650). Stun Duration: 0.033 (0.8/1/1.2). Vision Max Duration: 4. Cooldown on Kill: 0. Cooldown: 20/15/10. Mana Cost: 175."
     }
   ]
 }

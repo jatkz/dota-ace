@@ -1,0 +1,73 @@
+{
+  "name": "Lifestealer",
+  "description": "Oh Master, behold all these lives for the taking! N'aix, the Lifestealer.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Durable",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 15,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1.9,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.32,
+    "attackSpeed": 1.9,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.4
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 3.5,
+    "magicResistance": 26.5,
+    "damageMin": 46,
+    "damageMax": 52,
+    "damageAverage": 49,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 120,
+    "totalAttackSpeed": 135,
+    "bat": 1.7,
+    "animationPoint": 0.39,
+    "animationBackswing": 0.44,
+    "moveSpeed": 320,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+20 Move Speed",
+      "right": "+4 all stats"
+    },
+    "15": {
+      "left": "+50 Attack Speed On Open Wounds -affected Units",
+      "right": "+175 Consume Damage"
+    },
+    "20": {
+      "left": "+25% Open Wounds Lifesteal",
+      "right": "+12% Infest Ally Move Speed/Health"
+    },
+    "25": {
+      "left": "+1s Rage Duration",
+      "right": "+1% Feast Lifesteal/Damage"
+    }
+  }
+}

@@ -51,6 +51,24 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+200 Health",
+      "right": "+200 Flux Cast Range"
+    },
+    "15": {
+      "left": "+25 Magnetic Field Attack Speed",
+      "right": "+20% Flux Slow"
+    },
+    "20": {
+      "left": "-5s Magnetic Field Cooldown",
+      "right": "+200 Spark Wraith Damage"
+    },
+    "25": {
+      "left": "+30s Spark Wraith Duration",
+      "right": "+1.5 Runic Infusion All Attributes Bonus"
+    }
+  },
   "abilities": [
     {
       "name": "Runic Infusion",
@@ -76,11 +94,6 @@
       "name": "Tempest Double",
       "type": "active",
       "description": "Arc Warden creates a perfect duplication of itself which is considered a hero by most abilities. The Double can use all of Arc Warden's current items and non-ultimate spells, except most consumables and items that would drop on death. The Double has a separate and independent item and ability cooldowns. Increases the Double's gold and experience bounty value per Arc Warden's level. Cast Range: 700. Number of Clones: 1. Duration: 18/21/24. Max Move Speed Slow: 35%. Max Miss Chance: 35%. Buff Duration: 12. Cooldown: 60/55/50."
-    },
-    {
-      "name": "Clone Inventory",
-      "type": "passive",
-      "description": "'s ability cooldown increases per proc and is bound independently to the Double."
     }
   ]
 }

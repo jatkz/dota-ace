@@ -1,6 +1,6 @@
 {
   "name": "Dark Seer",
-  "description": "If your enemy is equal, prepare for him. If greater, elude him. If weaker, crush him. Ish'Kafel, the Dark Seer Raises a wall of light that slows and creates replicas of any enemy hero who crosses it. These replicas serve at the Dark Seer's will, they last until destroyed or until the wall duration ends.",
+  "description": "If your enemy is equal, prepare for him.",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -51,36 +51,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+65 Ion Shell Radius",
+      "right": "+15% Wall of Replica -based Illusion Damage"
+    },
+    "15": {
+      "left": "-1.5s Surge Cooldown",
+      "right": "+75 Vacuum Radius"
+    },
+    "20": {
+      "left": "+50 Ion Shell Damage",
+      "right": "-40s Wall of Replica Cooldown"
+    },
+    "25": {
+      "left": "+350 Surge Radius",
+      "right": "2 Ion Shell Charges"
+    }
+  },
   "abilities": [
     {
       "name": "Quick Wit",
       "type": "passive",
-      "description": "Grants self flat bonus attack speed per current. Both the max health as heal and max mana as mana restore is non-functional for created."
+      "description": "Grants self flat bonus attack speed per current. Attack Speed Bonus per Int: 1. Max Health as Heal: 10%. Max Health as Heal Increase: 1.5%. Max Mana as Mana Restore: 10%. Max Mana as Mana Restore Increase: 1.5%."
     },
     {
       "name": "Vacuum",
       "type": "active",
-      "description": "Creates a vacuum within the area-targeted location that sucks in all enemy units within the radius, interrupting and dealing damage."
+      "description": "Creates a vacuum within the area-targeted location that sucks in all enemy units within the radius, interrupting and dealing damage. Cast Range: 450/500/550/600. Effect Radius: 325/400/475/550 (400/475/550/625). Damage: 70/130/190/250. Pull Duration: 0.3/0.4/0.5/0.6. Cooldown: 60/50/40/30. Mana Cost: 60/90/120/150."
     },
     {
       "name": "Ion Shell",
       "type": "active",
-      "description": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it."
+      "description": "Surrounds the target unit with a bristling shield that damages enemy units in an area around it. Cast Range: 800. Damage Radius: 275 (340). Damage per Second: 30/50/70/90 (80/100/120/140). Duration: 20/22/24/26. Cooldown: 9 (0). Mana Cost: 100/110/120/130."
     },
     {
       "name": "Surge",
       "type": "active",
-      "description": "The charged-up allied unit leave behind a trail that damages and slows enemy units around it. Does not create the Surge trail with Alt-Cast toggled on."
+      "description": "The charged-up allied unit leave behind a trail that damages and slows enemy units around it. Does not create the Surge trail with Alt-Cast toggled on. Cast Range: 600. Haste Speed: 550. Duration: 3/4/5/6. Trail Width: (150). Damage Interval: (0.5). Damage per Second: (40). Cooldown: 24/19/14/9 (22.5/17.5/12.5/7.5). Mana Cost: 50."
     },
     {
       "name": "Normal Punch",
       "type": "passive",
-      "description": "The next attack on an enemy hero has True Strike, damages, and stuns based on Dark Seer's recently moved distance. The punch knocks a replica of the affected enemy hero that deals additional damage and receives additional incoming damage."
+      "description": "The next attack on an enemy hero has True Strike, damages, and stuns based on Dark Seer's recently moved distance. The punch knocks a replica of the affected enemy hero that deals additional damage and receives additional incoming damage. Movement Timer: 3. Max Values Distance: 1100. Min Knock Distance: 10. Max Knock Distance: 350. Min Damage: 10. Max Damage: 400. Cooldown: 10."
     },
     {
       "name": "Wall of Replica",
       "type": "active",
-      "description": "These replicas deals additional damage and also receives additional incoming damage. The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks."
+      "description": "These replicas deals additional damage and also receives additional incoming damage. The Dark Seer, while unable to return to his natural realm, can channel part of the prismatic wall with powerful strength of mind, sowing confusion amongst enemy ranks. Cast Range: 1000. Number of Walls: 1. Wall Length: 1300. Wall Width: 50. Damage Upon Illusion Creation: 25/40/55. Move Speed Slow: 40%. Cooldown: 100 (60). Mana Cost: 125/250/375."
     }
   ]
 }

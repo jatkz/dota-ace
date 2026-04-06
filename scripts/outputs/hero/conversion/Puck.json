@@ -66,7 +66,7 @@
     {
       "name": "Waning Rift",
       "type": "active",
-      "description": "Teleports to the area-targeted location, deals damage, and silences enemy units within the radius. Cast Range: Global. Max Distance: 350 (700). Effect Radius: 400 (750). Damage: 60/120/180/240 (120/180/240/300). Silence Duration: 2/2.5/3/3.5 (3.25/3.75/4.25/4.75). Cooldown: 16/15/14/13 (13.5/12.5/11.5/10.5). Mana Cost: 100/110/120/130."
+      "description": "Teleports to the area-targeted location, deals damage, and silences enemy units within the radius. Cast Range: Global. Max Distance: 350 (700). Effect Radius: 400 (750). Damage: 60/120/180/240 (120/180/240/300). Silence Duration: 2/2.5/3/3.5 (3.25/3.75/4.25/4.75). Cooldown: 16/15/14/13. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Phase Shift",
@@ -76,7 +76,7 @@
     {
       "name": "Dream Coil",
       "type": "active",
-      "description": "Creates a coil of volatile magic that latches, damages and leashes onto enemy heroes. The coil snaps if any of the affected enemy heroes stretch the link by moving too far away, stunning and dealing additional damage. Cast Range: 750. Latch Radius: 375. First Damage: 175/250/325 (375/450/525). Coil Duration: 5/5.5/6. Break Distance: 600. Break Damage: 200/300/400 (400/500/600). Cooldown: 75 (60). Mana Cost: 125/175/225."
+      "description": "Creates a coil of volatile magic that latches, damages and leashes onto enemy heroes. The coil snaps if any of the affected enemy heroes stretch the link by moving too far away, stunning and dealing additional damage. Cast Range: 750. Latch Radius: 375. First Damage: 175/250/325 (375/450/525). Coil Duration: 5/5.5/6. Break Distance: 600. Break Damage: 200/300/400 (400/500/600). Cooldown: 125/175/225."
     }
   ]
 }

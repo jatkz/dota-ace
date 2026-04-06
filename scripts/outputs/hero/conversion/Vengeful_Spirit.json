@@ -26,8 +26,8 @@
     "manaRegen": 0.075,
     "armor": 0.5,
     "attackSpeed": 3,
-    "mainAttackDamage": 3,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3
   },
   "stats": {
     "health": 560,
@@ -57,32 +57,32 @@
     {
       "name": "Retribution",
       "type": "passive",
-      "description": "Applies a unique enemy incoming damage amplification debuff on the enemy hero who kills Vengeful Spirit that lasts until its next death. The debuff amplifies all incoming damage sourced to Vengeful Spirit on the affected enemy. Applies the debuff to units who killed Shen's illusions."
+      "description": "Applies a unique enemy incoming damage amplification debuff on the enemy hero who kills Vengeful Spirit that lasts until its next death. Damage Amp: 20%."
     },
     {
       "name": "Soul Strike",
       "type": "passive",
-      "description": "Attacks now fire traces of her soul that punch the enemy on contact, making Vengeful Spirit akin to a melee unit with her attacks also having melee behavior."
+      "description": "Attacks now fire traces of her soul that punch the enemy on contact, making Vengeful Spirit akin to a melee unit with her attacks also having melee behavior. Set Base Attack Time: 1.5."
     },
     {
       "name": "Magic Missile",
       "type": "active",
-      "description": "Fires a magic missile at an enemy unit, stunning and dealing damage. Deals additional damage corresponding to the number of creeps the affected enemy has killed and denied."
+      "description": "Fires a magic missile at an enemy unit, stunning and dealing damage. Cast Range: 650 (750). Damage: 85/170/255/340. Stun Duration: 1.2/1.4/1.6/1.8 (1.5/1.7/1.9/2.1). Number of Bounces: (1). Search Radius: (487.5) (562.5). Cooldown: 14/13/12/11. Mana Cost: 90/95/100/105."
     },
     {
       "name": "Wave of Terror",
       "type": "active",
-      "description": "Grants self a factor of the total amount of armor reduced and attack damage reduced as bonuses."
+      "description": "Grants self a factor of the total amount of armor reduced and attack damage reduced as bonuses. Cast Range: 1400. Max Travel Distance: 1400. Effect Radius: 325. Damage: 60/80/100/120. Armor Reduction: 3/4/5/6 (6/7/8/9). Attack Damage Reduction: 10%/15%/20%/25%. Cooldown: 16/14/12/10. Mana Cost: 40."
     },
     {
       "name": "Vengeance Aura",
       "type": "passive",
-      "description": "The Vengeance Illusion is a strong illusion that deals as much damage as Vengeful Spirit. Has full health and mana upon creation. Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat."
+      "description": "The Vengeance Illusion is a strong illusion that deals as much damage as Vengeful Spirit. Has full health and mana upon creation. Radius: 1200. Attack Damage Bonus: 10%/15%/20%/25% (26%/31%/36%/41%). Aura Linger Duration: 0.5. Base Respawn Time to Max Duration Factor: (1). Number of Illusions on Death: (1). Damage Dealt: (100%)."
     },
     {
       "name": "Nether Swap",
       "type": "active",
-      "description": "Instantaneously swaps positions with either a targeted allied unit or targeted enemy unit, and interrupts their channeling abilities. If the swapped unit is an enemy unit, the reposition deals damage to the affected enemy unit. If the swapped unit is an allied unit, the instant reposition grants both Vengeful Spirit and her allied unit a temporary shield."
+      "description": "Instantaneously swaps positions with either a targeted allied unit or targeted enemy unit, and interrupts their channeling abilities. If the swapped unit is an enemy unit, the reposition deals damage to the affected enemy unit. If the swapped unit is an allied unit, the instant reposition grants both Vengeful Spirit and her allied unit a temporary shield. Cast Range: 800/950/1100. Damage: 150/300/450 (300/450/600). Duration: 10. Cooldown: 46/38/30. Mana Cost: 100/150/200."
     }
   ]
 }

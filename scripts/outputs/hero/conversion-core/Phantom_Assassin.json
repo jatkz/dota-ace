@@ -1,0 +1,70 @@
+{
+  "name": "Phantom Assassin",
+  "description": "I'm here to blur the line between life and death.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 21,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 3.4,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.9,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 4.5,
+    "magicResistance": 26.5,
+    "damageMin": 56,
+    "damageMax": 58,
+    "damageAverage": 57,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 131,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 310,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-2s Stifling Dagger Cooldown",
+      "right": "+0.6s Phantom Strike Duration"
+    },
+    "15": {
+      "left": "+15% Stifling Dagger Instant Attack Damage",
+      "right": "+20% Immaterial Evasion"
+    },
+    "20": {
+      "left": "+60 Phantom Strike Attack Speed",
+      "right": "+200 Phantom Strike Cast Range"
+    },
+    "25": {
+      "left": "Triple Stifling Dagger Strikes",
+      "right": "+10% Coup de Grace Chance"
+    }
+  }
+}

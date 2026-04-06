@@ -1,0 +1,71 @@
+{
+  "name": "Riki",
+  "description": "There are none so stabbed as those who will not see.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Escape",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 30,
+    "intelligence": 14
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.4,
+    "intelligence": 1.3
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 15.6,
+    "manaRegen": 0.065,
+    "armor": 0.4,
+    "attackSpeed": 2.4,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 4.3,
+    "mana": 243,
+    "manaRegen": 0.7,
+    "armor": 5,
+    "magicResistance": 26.4,
+    "damageMin": 52,
+    "damageMax": 56,
+    "damageAverage": 54,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 120,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+10% Cloak and Dagger Move Speed",
+      "right": "+50 Smoke Screen Radius"
+    },
+    "15": {
+      "left": "-3s Smoke Screen Cooldown",
+      "right": "x0.15 Tricks of the Trade Instant Attack Damage Bonus Factor"
+    },
+    "20": {
+      "left": "-1s Blink Strike Cooldown",
+      "right": "+0.3 Backstab Agility Factor"
+    },
+    "25": {
+      "left": "+500 Blink Strike Cast Range",
+      "right": "-4s Tricks of the Trade Cooldown"
+    }
+  }
+}

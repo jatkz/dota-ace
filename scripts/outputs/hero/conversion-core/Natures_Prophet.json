@@ -1,0 +1,73 @@
+{
+  "name": "Nature's Prophet",
+  "description": "I woke within the seed and saw my destiny, and many were its branches.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Escape",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 14,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 2.6,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "armor": 0.43,
+    "attackSpeed": 2.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.92
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 2.33,
+    "magicResistance": 27.2,
+    "damageMin": 44,
+    "damageMax": 50,
+    "damageAverage": 47.75,
+    "projectileSpeed": 1125,
+    "attackRange": 620,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.5,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.6,
+    "moveSpeed": 295,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+25 Wrath of Nature Base Damage",
+      "right": "-10s Nature's Call Cooldown"
+    },
+    "15": {
+      "left": "+100 Teleportation Damage Barrier",
+      "right": "+50 Treant Move Speed"
+    },
+    "20": {
+      "left": "+170 Sprout Damage",
+      "right": "-15s Wrath of Nature Cooldown"
+    },
+    "25": {
+      "left": "×3 Treant Health/Damage",
+      "right": "No Teleportation Cooldown"
+    }
+  }
+}

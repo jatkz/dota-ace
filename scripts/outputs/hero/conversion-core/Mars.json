@@ -1,0 +1,73 @@
+{
+  "name": "Mars",
+  "description": "To those behind, rally! To those ahead, kneel.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Initiator",
+    "Disabler",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 18,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 3.7,
+    "agility": 1.7,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 81.4,
+    "healthRegen": 0.37,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.7
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 327,
+    "manaRegen": 1.55,
+    "armor": 2,
+    "magicResistance": 27.1,
+    "damageMin": 49,
+    "damageMax": 57,
+    "damageAverage": 53,
+    "projectileSpeed": "Instant",
+    "attackRange": 250,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.8,
+    "animationPoint": 0.4,
+    "animationBackswing": 1.38,
+    "moveSpeed": 310,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1.5 Mana Regen",
+      "right": "+100 God's Rebuke Cast Range/Effect Radius"
+    },
+    "15": {
+      "left": "+100 Spear of Mars Damage",
+      "right": "-2.5s God's Rebuke Cooldown"
+    },
+    "20": {
+      "left": "+0.5s Spear of Mars Stun",
+      "right": "+70 Arena of Blood Spear Damage"
+    },
+    "25": {
+      "left": "+180 Arena of Blood Ally Health Regen",
+      "right": "+65% God's Rebuke Critical Damage"
+    }
+  }
+}

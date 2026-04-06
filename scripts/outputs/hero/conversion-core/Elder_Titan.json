@@ -1,0 +1,72 @@
+{
+  "name": "Elder Titan",
+  "description": "It is only right that I am cast into this world, for I had a hand in breaking it.",
+  "attackType": "Melee",
+  "roles": [
+    "Initiator",
+    "Disabler",
+    "Nuker",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 26,
+    "agility": 16,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 3,
+    "agility": 1.8,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 66,
+    "healthRegen": 0.3,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "armor": 0.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3
+  },
+  "stats": {
+    "health": 692,
+    "healthRegen": 3.35,
+    "mana": 351,
+    "manaRegen": 1.4,
+    "armor": 2.67,
+    "magicResistance": 27.3,
+    "damageMin": 49,
+    "damageMax": 59,
+    "damageAverage": 54,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.97,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+150 Echo Stomp Wake Damage",
+      "right": "+2.5% Astral Spirit Move Speed per Hero"
+    },
+    "15": {
+      "left": "x0.2 Momentum Move Speed to Attack Speed Factor",
+      "right": "+75 Echo Stomp Damage"
+    },
+    "20": {
+      "left": "+150 Natural Order Radius",
+      "right": "+30 Astral Spirit Bonus Damage per Hero"
+    },
+    "25": {
+      "left": "+100% Cleave",
+      "right": "-60s Earth Splitter Cooldown"
+    }
+  }
+}

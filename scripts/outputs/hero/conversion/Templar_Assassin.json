@@ -19,12 +19,11 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "armor": 0.53,
-    "attackSpeed": 3.2,
-    "mainAttackDamage": 3.2,
     "mana": 24,
     "manaRegen": 0.1,
-    "magicResistance": 0.1
+    "armor": 0.53,
+    "attackSpeed": 3.2,
+    "mainAttackDamage": 3.2
   },
   "stats": {
     "health": 582,
@@ -54,27 +53,27 @@
     {
       "name": "Refraction",
       "type": "active",
-      "description": "Grants all damage barrier instances that negates damage. Both the damage negation component and the bonus attack damage component have a limited number of instances and are independent of each other. Gains an additional bonus attack damage charge every time a barrier instance is depleted."
+      "description": "Grants all damage barrier instances that negates damage. Both the damage negation component and the bonus attack damage component have a limited number of instances and are independent of each other. Grants Lanaya bonus attack damage while refracting. Damage Negation Threshold: 30. Duration: 17. Max Attack Charges: 3/4/5/6 (7/8/9/10). Duration: 30. Attack Damage Bonus: 15/30/45/60 (19/34/49/64). Mana Cost: 14."
     },
     {
       "name": "Meld",
       "type": "active",
-      "description": "Applies both of Meld's bonus attack damage component and the debuff to -affected enemy units. The attack damage instance applied by the can be."
+      "description": "Attack Damage / Physical Meld now applies a self-basic dispel upon cast. Fade Time: 0 Invisibility Duration:. Fade Time: 0. Attack Damage Instance: 50/100/150/200. Armor Reduction: 2/4/6/8 (5/7/9/11). Debuff Duration: 6 (7.5). Bash Duration: (0.8). Cooldown: 11/9/7/5. Mana Cost: 35/40/45/50."
     },
     {
       "name": "Psi Blades",
       "type": "passive",
-      "description": "Grants self bonus attack range."
+      "description": "Grants self bonus attack range. Area Width: 90. Spill Length: 400/500/600/700. Attack Damage to Spill Damage Factor: 0.7/0.8/0.9/1. Attack Range Bonus: 50/100/150/200."
     },
     {
       "name": "Psionic Projection",
       "type": "active",
-      "description": "Teleports Lanaya to the nearest Psionic Trap after channeling and detonates it upon arrival, damaging and slowing enemy units around it. Sources does not prevent the ability cast. However, it immediately stops the ability while the debuff is active. The ability neither goes into nor consumes. Does not interrupt while already, but prevents the component from being applied to Lanaya once the channel completes."
+      "description": "Teleports Lanaya to the nearest Psionic Trap after channeling and detonates it upon arrival, damaging and slowing enemy units around it. Cast Range: Global. Channel Time: 2. Effect Radius: 400. Damage: 400. Move Speed Slow: 50% (60%). Slow Duration: 5. Mana Cost: 10."
     },
     {
       "name": "Psionic Trap",
       "type": "active",
-      "description": "The Psionic Trap can only be denied by Lanaya anytime, and applies all Psi Blades ability effects of its corresponding level if applicable. Destroys this unit in one punch. Specifically does not grant vision within Roshan's pit."
+      "description": "Increases max Psionic Trap count and its vision radius. Cast Range: 1800. Fade Time: 2. Hit Count: 1. Hit Count: 2. Vision Radius: 250 (375) Duration:. Vision Radius: 250 (375). Cooldown: 11/8/5. Mana Cost: 15."
     }
   ]
 }

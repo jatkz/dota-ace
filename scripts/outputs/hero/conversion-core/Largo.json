@@ -1,0 +1,70 @@
+{
+  "name": "Largo",
+  "description": "You hear that?",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 14,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 3.6,
+    "agility": 1.3,
+    "intelligence": 2.6
+  },
+  "statGains": {
+    "health": 79.2,
+    "healthRegen": 0.36,
+    "mana": 31.2,
+    "manaRegen": 0.13,
+    "armor": 0.22,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.65,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4.33,
+    "magicResistance": 27.1,
+    "damageMin": 63,
+    "damageMax": 69,
+    "damageAverage": 66,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.95,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "x2.5 Catchy Lick Health Regen",
+      "right": "+15 Frogstomp Damage"
+    },
+    "15": {
+      "left": "+100 Catchy Lick Cast Range +50 Catchy Lick Pull Distance",
+      "right": "+1% Croak of Genius Max Health as Damage per Second"
+    },
+    "20": {
+      "left": "x0.5 Groovin' Allied Armor Aura",
+      "right": "+170 Catchy Lick Damage"
+    },
+    "25": {
+      "left": "2 Catchy Lick Charges",
+      "right": "x1.3 Amphibian Rhapsody Ability Effects Factor"
+    }
+  }
+}

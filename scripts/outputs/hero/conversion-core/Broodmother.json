@@ -1,0 +1,75 @@
+{
+  "name": "Broodmother",
+  "description": "I've promised you to my children.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Escape",
+    "Nuker",
+    "Support",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 18,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.9,
+    "agility": 3.4,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 63.8,
+    "healthRegen": 0.29,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 2,
+    "magicResistance": 26.8,
+    "damageMin": 45,
+    "damageMax": 51,
+    "damageAverage": 48,
+    "projectileSpeed": "Instant",
+    "attackRange": 175,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 125,
+    "totalAttackSpeed": 143,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.5,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+20% Insatiable Hunger Lifesteal",
+      "right": "+80 Spawn Spiderlings Damage"
+    },
+    "15": {
+      "left": "+175 Spiderlings Health",
+      "right": "+5 Incapacitating Bite Attack Damage"
+    },
+    "20": {
+      "left": "+20% Incapacitating Bite Slow/Miss Chance",
+      "right": "-6s Spin Web Restore Time"
+    },
+    "25": {
+      "left": "+7% Spin Web Move Speed Unlocks Max Move Speed",
+      "right": "-0.15s Insatiable Hunger Base Attack Time"
+    }
+  }
+}

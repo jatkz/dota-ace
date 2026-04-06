@@ -1,0 +1,74 @@
+{
+  "name": "Viper",
+  "description": "You've failed the acid test.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Durable",
+    "Initiator",
+    "Disabler",
+    "Support"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 21,
+    "intelligence": 17
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.7,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.45,
+    "attackSpeed": 2.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.7
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 1.5,
+    "magicResistance": 26.7,
+    "damageMin": 48,
+    "damageMax": 50,
+    "damageAverage": 49,
+    "projectileSpeed": 1200,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 120,
+    "totalAttackSpeed": 141,
+    "bat": 1.7,
+    "animationPoint": 0.33,
+    "animationBackswing": 1,
+    "moveSpeed": 275,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+15 Corrosive Skin Damage Per Second",
+      "right": "+1s Viper Strike Duration"
+    },
+    "15": {
+      "left": "+15% Poison Attack Slow/Damage",
+      "right": "+20/+40 Nethertoxin Min/Max Damage"
+    },
+    "20": {
+      "left": "+0.35 Predator Health Loss to Damage Factor",
+      "right": "+70 Viper Strike Damage per Second"
+    },
+    "25": {
+      "left": "-50% Viper Strike Mana Cost/Cooldown",
+      "right": "+25 Nethertoxin Radius per 0.5s Intervals"
+    }
+  }
+}

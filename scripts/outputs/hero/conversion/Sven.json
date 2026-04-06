@@ -57,22 +57,22 @@
     {
       "name": "Storm Hammer",
       "type": "active",
-      "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target. Does not travel with the Storm Hammer with Alt-Cast toggled off. The ability deals lesser damage upon projectile impact."
+      "description": "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target. Does not travel with the Storm Hammer with Alt-Cast toggled off. The ability deals lesser damage upon projectile impact. Cast Range: 600 (750). Effect Radius: 250/270/290/310. Damage: 80/160/240/320. Stun Duration: 1/1.2/1.4/1.6 (2/2.2/2.4/2.6). Max Dash Distance: (1900). Projectile Speed Factor: (1.25). Cooldown: 21/18/15/12. Mana Cost: 110/115/120/125."
     },
     {
       "name": "Great Cleave",
       "type": "passive",
-      "description": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors."
+      "description": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors. First Width: 150. Distance: 400/500/600/700. End Width: 270/300/330/360. Cleave Damage: 60%/70%/80%/90% (85%/95%/105%/115%)."
     },
     {
       "name": "Warcry",
       "type": "active",
-      "description": "Additionally grants a physical damage barrier to all affected allied units upon cast."
+      "description": "Warcry now passively grants armor to allied units within the radius. Effect Radius: 700. Move Speed Bonus: 6%/9%/12%/15% (9%/12%/15%/18%). Armor Bonus: 5/8/11/14 (13/16/19/22). Duration: 8 (13). Aura Radius: (1200). Armor Bonus: (6). Cooldown: 36/32/28/24. Mana Cost: 30/35/40/45."
     },
     {
       "name": "God's Strength",
       "type": "active",
-      "description": "The rough strength grants bonus attack damage and slow resistance for the duration."
+      "description": "The rough strength grants bonus attack damage and slow resistance for the duration. Attack Damage Bonus: 110%/150%/190% (160%/200%/240%). Slow Resist Bonus: 30% (55%). Duration: 30. Cooldown: 110/105/100. Mana Cost: 100/125/150."
     }
   ]
 }

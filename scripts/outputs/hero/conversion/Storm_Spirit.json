@@ -1,6 +1,6 @@
 {
   "name": "Storm Spirit",
-  "description": "Everyone complains about the weather…well, I'm doing something about it!",
+  "description": "Everyone complains about the weather…well, I'm doing something about it! Raijin Thunderkeg, the Storm Spirit.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,10 +22,10 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "mana": 44.4,
-    "manaRegen": 0.185,
     "armor": 0.43,
     "attackSpeed": 2.6,
+    "mana": 44.4,
+    "manaRegen": 0.185,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.7
   },
@@ -62,7 +62,7 @@
     {
       "name": "Static Remnant",
       "type": "active",
-      "description": "After an activation delay, the remnant detonates and deals damage if an enemy unit comes near it. When activated, the ability creates an explosively charged remnant of Raijin that gives vision for a period of time at his current location. The remnant does not move. Cast Range: 800. Vision Radius: 100. Remnant Speed: 300. Remnant Duration: 12. Proc Radius: 235. Damage Radius: 300. Cooldown: 3.5 (2.25). Mana Cost: 70/80/90/100."
+      "description": "After an activation delay, the remnant detonates and deals damage if an enemy unit comes near it. When activated, the ability creates an explosively charged remnant of Raijin that gives vision for a period of time at his current location. The remnant does not move. Cast Range: 800. Vision Radius: 100. Remnant Speed: 300. Remnant Duration: 12. Proc Radius: 235. Damage Radius: 300. Cooldown: 70/80/90/100."
     },
     {
       "name": "Electric Vortex",
@@ -77,7 +77,7 @@
     {
       "name": "Ball Lightning",
       "type": "active",
-      "description": "Charging across the battlefield until he depletes his mana or reaches his target. The damage increases linearly as Raijin travels, starting from the cast location. Cast Range: Global. Damage Radius: 200. Travel Speed: 1400/1850/2300. Distance Interval: 100. Distance to Damage: 6/10/14. Distance Counter: (450). Cooldown: 0."
+      "description": "Charging across the battlefield until he depletes his mana or reaches his target. The damage increases linearly as Raijin travels, starting from the cast location. Cast Range: Global. Damage Radius: 200. Travel Speed: 1400/1850/2300. Distance Interval: 100. Distance to Damage: 6/10/14. Distance Counter: (450). Mana Cost: 0."
     }
   ]
 }

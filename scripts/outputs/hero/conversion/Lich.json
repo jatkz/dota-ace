@@ -19,10 +19,10 @@
   "statGains": {
     "health": 46.2,
     "healthRegen": 0.21,
-    "armor": 0.28,
-    "attackSpeed": 1.7,
     "mana": 40.8,
     "manaRegen": 0.17,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },
@@ -54,32 +54,32 @@
     {
       "name": "Sacrifice",
       "type": "active",
-      "description": "Sacrifices an allied unit and converts its current health to mana restore Lich. The higher Lich's level, the greater the health to mana restore and experience value."
+      "description": "Sacrifices an allied unit and converts its current health to mana restore Lich. The higher Lich's level, the greater the health to mana restore and experience value. Cast Range: 700. Current Health as Damage: 100%. Current Health to Mana Restore Factor: 0.42. XP Factor: 0.69. Initial Cooldown: 120. Mana Restore Factor Increase: 0.03. Mana Cost: 120."
     },
     {
       "name": "Frost Blast",
-      "type": "passive",
-      "description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack speed for a duration. The primary target receives both base and area damage."
+      "type": "active",
+      "description": "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack speed for a duration. The primary target receives both base and area damage. Cast Range: 575/600/625/650. Effect Radius: 200 (325). Base Damage: 40/80/120/160. Area Damage: 80/120/160/200 (205/245/285/325). Move Speed Slow: 25%. Attack Speed Slow: 30/40/50/60. Cooldown: 110/120/130/140."
     },
     {
       "name": "Frost Shield",
       "type": "active",
-      "description": "Applies a shield around the unit-targeted ally. Deals damage per second and slowing the enemy's movement speed centered around the buff-affected allied unit. Applies all effects of Frost Shield around the Ice Spire and regenerating its health while the ice magic pulsates."
+      "description": "Applies a shield around the unit-targeted ally. Deals damage per second and slowing the enemy's movement speed centered around the buff-affected allied unit. Applies all effects of Frost Shield around the Ice Spire and regenerating its health while the ice magic pulsates. Cast Range: 800. Pulse Radius: 600. Damage per Second: 18/32/46/60. Move Speed Slow: 20%/25%/30%/35%. Slow Duration: 0.5. Shield Duration: 4/5/6/7. Cooldown: 30/25/20/15. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Sinister Gaze",
-      "type": "passive",
-      "description": "Hypnotizes an enemy unit, causing it to move towards a point between the Lich and the enemy unit while draining a percentage of its current mana."
+      "type": "active",
+      "description": "Hypnotizes an enemy unit, causing it to move towards a point between the Lich and the enemy unit while draining a percentage of its current mana. Cast Range: 600. Max Channel Time: 1.1/1.4/1.7/2 (1.4/1.7/2/2.3). Distance Moved: 32%/38%/44%/50%. Current Mana Loss per Second: 20%. Mana Restore Factor: 1. Radius: (400). Cooldown: 24/22/20/18. Mana Cost: 25."
     },
     {
       "name": "Ice Spire",
       "type": "active",
-      "description": "The Frog grants the Lich a frozen, pointy, immobile permafrost to aid the Lich's rituals. Does this help the Lich? You be creative about it. This unit does not feel the effects from magical spell damage sources."
+      "description": "Applies all effects of Frost Shield around the Ice Spire and regenerating its health while the ice magic pulsates. Cast Range: 750. Effect Radius: 550. Move Speed Slow: 25%. Hit Count: 4. Duration: 15. Aura Linger Duration: 0.5. Mana Cost: 25."
     },
     {
       "name": "Chain Frost",
       "type": "active",
-      "description": "Releases an orb of frost that bounces between nearby enemy units, slowing and subsequently increasing its damage each time it bounces. sources blocks the first damage instance upon impact, this blocked instance is still counted toward the number of bounces. The projectile does not stop bouncing, and continues to increase in damage per projectile impact."
+      "description": "Releases an orb of frost that bounces between nearby enemy units, slowing and subsequently increasing its damage each time it bounces. Cast Range: 750. Bounce Radius: 550. Number of Bounces: 10. First Damage: 250/400/550. Damage Increment per Bounce: 15/20/25. Move Speed Slow: 65%. Cooldown: 100/80/60. Mana Cost: 180/300/420."
     }
   ]
 }

@@ -21,9 +21,10 @@
   "statGains": {
     "health": 63.8,
     "healthRegen": 0.29,
+    "armor": 0.33,
+    "attackSpeed": 2,
     "mana": 22.8,
     "manaRegen": 0.095,
-    "armor": 0.33,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.06
   },
@@ -51,36 +52,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+2% Wild Axes Damage Amp per Stack",
+      "right": "+5 Armor"
+    },
+    "15": {
+      "left": "+200 Primal Roar Cast Range",
+      "right": "+15 Move Speed to Beastmaster and His Units"
+    },
+    "20": {
+      "left": "+250 Max Health to Beastmaster and His Units",
+      "right": "+30 Damage to Beastmaster and His Units"
+    },
+    "25": {
+      "left": "-25s Primal Roar Cooldown",
+      "right": "No Wild Axes Cooldown"
+    }
+  },
   "abilities": [
     {
       "name": "Inner Beast",
       "type": "passive",
-      "description": "Grants Beastmaster and his player-controlled units within the radius bonus attack speed."
+      "description": "Grants Beastmaster and his player-controlled units within the radius bonus attack speed. Radius: 1200. Attack Speed Bonus: 7. Aura Linger Duration: 0.5. Attack Speed Bonus Increase: 3."
     },
     {
       "name": "Wild Axes",
       "type": "active",
-      "description": "Sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can only affect the same enemy units once, and amplifies subsequent damage from Beastmaster and his units."
+      "description": "Sends his axes flying and calls them home again, slicing through enemy units and trees along their path. Each axe can only affect the same enemy units once, and amplifies subsequent damage from Beastmaster and his units. Cast Range: 1500. Axes Radius: 175. Max Travel Distance: 1500. Spread Distance: 450. Damage per Axe: 40/80/120/160. Damage Amp per Stack: 5%/6%/7%/8% (7%/8%/9%/10%). Cooldown: 8 (0). Mana Cost: 50/55/60/65."
     },
     {
       "name": "Summon Razorback",
       "type": "active",
-      "description": "The Boar's attacks inflict a poison that slows the affected enemy unit's movement speed and attack speed."
+      "description": "The Boar's attacks inflict a poison that slows the affected enemy unit's movement speed and attack speed. Number of Boars: 1. Spawn Radius: 100. Duration: 60. Move Speed Slow: 10%/18%/26%/34%. Attack Speed Slow: 10/20/30/40. Duration: 3. Cooldown: 30 (25). Mana Cost: 60."
     },
     {
       "name": "Summon Raptors",
       "type": "active",
-      "description": "Summons a hawk that orbits around Beastmaster. The Hawk dive towards the enemy unit, prioritizing heroes, dealing damage and rooting it. The dive interval corresponds to the Hawk's current attack speed and base attack time."
+      "description": "Summons a hawk that orbits around Beastmaster. The Hawk dive towards the enemy unit, prioritizing heroes, dealing damage and rooting it. The dive interval corresponds to the Hawk's current attack speed and base attack time. Number of Hawks: 2. Orbital Radius: 280. Hawk Duration: 25. Current Health to Damage: 100%. Cooldown: 30 (25). Mana Cost: 50."
     },
     {
       "name": "Drums of Slom",
       "type": "passive",
-      "description": "Grants an aura that causes successful attacks of Beastmaster and his player-controlled units to strike the drum. Every successful attack grants a stack that reduces the drum strike interval. If no attacks are made, the drum strikes gradually increases. Grants a number of Drum of Slom stacks upon a Primal Roar cast."
+      "description": "Grants an aura that causes successful attacks of Beastmaster and his player-controlled units to strike the drum. Every successful attack grants a stack that reduces the drum strike interval. If no attacks are made, the drum strikes gradually increases. Grants a number of Drum of Slom stacks upon a Primal Roar cast. Effect Radius: 600. Stack per Attack: 1. Min Interval: 0.5. Max Interval: 3. Stack Decay Time: 1. Aura Radius: 1200."
     },
     {
       "name": "Primal Roar",
       "type": "active",
-      "description": "All shoved secondary enemy units are also stunned and damaged. Both the knockback and movement speed slow area width are dynamic, and corresponds to the distance between Beastmaster and the unit-targeted enemy. The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies."
+      "description": "All shoved secondary enemy units are also stunned and damaged. Both the knockback and movement speed slow area width are dynamic, and corresponds to the distance between Beastmaster and the unit-targeted enemy. The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies. Cast Range: 600 (800). Damage: 150/225/300. Stun Duration: 3/3.5/4. Area Width: 300. Push Distance: 450. Move Speed Slow: 60%. Cooldown: 90/75/60 (65/50/35). Mana Cost: 100/125/150."
     }
   ]
 }

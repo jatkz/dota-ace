@@ -1,0 +1,74 @@
+{
+  "name": "Shadow Shaman",
+  "description": "I am the intermediary between life and death.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Pusher",
+    "Disabler",
+    "Nuker",
+    "Initiator"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 16,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.3,
+    "agility": 1.6,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 50.6,
+    "healthRegen": 0.23,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.5
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 3.3,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 4.67,
+    "magicResistance": 27.3,
+    "damageMin": 63,
+    "damageMax": 70,
+    "damageAverage": 66.5,
+    "projectileSpeed": 900,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.5,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1.75 Mana Regen",
+      "right": "+170 Shackles Total Damage"
+    },
+    "15": {
+      "left": "Hex Applies Break",
+      "right": "+160 Serpent Ward Attack Range"
+    },
+    "20": {
+      "left": "x1.5 Serpent Ward Hit Count",
+      "right": "+1.5s Shackles Duration"
+    },
+    "25": {
+      "left": "+1 Serpent Ward Attack Target",
+      "right": "+250 Ether Shock Damage"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "Broodmother",
-  "description": "I've promised you to my children. Black Arachnia, the Broodmother For centuries, Black Arachnia the Broodmother lurked in the dark lava tubes beneath the smoldering caldera of Mount Pyrotheos, raising millions of spiderlings in safety before sending them to find prey in the wide world above.",
+  "description": "I've promised you to my children.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -27,7 +27,6 @@
     "manaRegen": 0.1,
     "armor": 0.57,
     "attackSpeed": 3.4,
-    "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },
   "stats": {
@@ -54,36 +53,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+20% Insatiable Hunger Lifesteal",
+      "right": "+80 Spawn Spiderlings Damage"
+    },
+    "15": {
+      "left": "+175 Spiderlings Health",
+      "right": "+5 Incapacitating Bite Attack Damage"
+    },
+    "20": {
+      "left": "+20% Incapacitating Bite Slow/Miss Chance",
+      "right": "-6s Spin Web Restore Time"
+    },
+    "25": {
+      "left": "+7% Spin Web Move Speed Unlocks Max Move Speed",
+      "right": "-0.15s Insatiable Hunger Base Attack Time"
+    }
+  },
   "abilities": [
     {
       "name": "Spider's Milk",
       "type": "passive",
-      "description": "The applied lifesteal-based heal is less effective from deny sources. Only denies from Broodmother may proc the heal component. The higher Broodmother's level, the greater the enemy max health as heal value."
+      "description": "The applied lifesteal-based heal is less effective from deny sources. Only denies from Broodmother may proc the heal component. The higher Broodmother's level, the greater the enemy max health as heal value. Radius: 600. Enemy Max Health as Heal per Instance: 1.9%. Duration: 3. Creep Lifesteal Factor: 0.6. Deny Factor: 0.5. Enemy Max Health as Heal Increase: 0.1%."
     },
     {
       "name": "Insatiable Hunger",
       "type": "active",
-      "description": "Grants a flat base attack damage increment per second."
+      "description": "Grants a flat base attack damage increment per second. Aura Radius: 800. Base Attack Damage Factor: 1.4/1.5/1.6/1.7. Lifesteal: 40%/60%/80%/100% (60%/80%/100%/120%). Duration: 8/10/12/14. Aura Linger Duration: 0.5. Base Attack Time Reduction: (0.15). Cooldown: 45/40/35/30. Mana Cost: 80."
     },
     {
       "name": "Spin Web",
-      "type": "passive",
-      "description": "This unit does not feel the effects from any damage sources. It cannot be targeted by attacks or abilities and have its health bar temporarily hidden."
+      "type": "active",
+      "description": "Spins a large web that grants Arachnia a bonus movement speed and bonus health regeneration within its radius. These webs do not expire until the max amount of webs are reached, destroying the oldest spun web. Cast Range: 1200. Web Radius: 1200. Turn Rate Bonus: 0.2. Move Speed Bonus: 10%/22%/34%/46% (17%/29%/41%/53%). Aura Linger Duration: 0.2. Mana Cost: 40."
     },
     {
       "name": "Incapacitating Bite",
       "type": "passive",
-      "description": "Applies a movement speed slow and blind debuff per successful attack. The debuff-affected units have a chance to miss their attacks. Paralytic toxins come from Black Arachnia's fangs, causing a slow and painful death to those who intrude on her webs."
+      "description": "Applies a movement speed slow and blind debuff per successful attack. The debuff-affected units have a chance to miss their attacks. Paralytic toxins come from Black Arachnia's fangs, causing a slow and painful death to those who intrude on her webs. Move Speed Slow: 20%/30%/40%/50% (40%/50%/60%/70%). Miss Chance: 15%/20%/25%/30% (35%/40%/45%/50%). Debuff Duration: 2. Attack Damage Bonus: 3/6/9/12 (8/11/14/17)."
     },
     {
       "name": "Spinner's Snare",
       "type": "active",
-      "description": "Creates invisible web-snares next to any current webs that acts as a trap. The snares have an activation delay. Enemy heroes crossing the web will spring the trap — rooting, exposing them in the Fog of War while dealing damage over time."
+      "description": "Creates invisible web-snares next to any current webs that acts as a trap. The snares have an activation delay. Enemy heroes crossing the web will spring the trap — rooting, exposing them in the Fog of War while dealing damage over time. Cast Range: 600. Line Length: 900. Line Width: 50. Damage per Second: 100. Move Speed Slow: 100%. Debuff Duration: 3. Cooldown: 0. Mana Cost: 100."
     },
     {
       "name": "Spawn Spiderlings",
       "type": "active",
-      "description": "Broodmother injects her young into an enemy unit and dealing damage. Upon the affected unit's death, her babies mature, hatching young Spiderlings to aid her in the battlefield. Multiple debuff instances on the affected enemy unit work independently of each other. The ability no longer applies its ability effect on the affected enemy upon exceeding the max debuff stack."
+      "description": "Broodmother injects her young into an enemy unit and dealing damage. Upon the affected unit's death, her babies mature, hatching young Spiderlings to aid her in the battlefield. Multiple debuff instances on the affected enemy unit work independently of each other. The ability no longer applies its ability effect on the affected enemy upon exceeding the max debuff stack. Cast Range: 900. Damage: 220/320/420 (300/400/500). Move Speed Slow: 25%/35%/45%. Number of Spiderlings per Stack: 4/5/6. Spiderling Duration: 40. Debuff Duration: 20. Cooldown: 9/8/7. Mana Cost: 100."
     }
   ]
 }

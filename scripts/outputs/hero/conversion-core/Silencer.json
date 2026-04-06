@@ -1,0 +1,74 @@
+{
+  "name": "Silencer",
+  "description": "Enemies should be seen and not heard.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Support",
+    "Disabler",
+    "Initiator",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 22,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 2.2,
+    "intelligence": 2.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 34.8,
+    "manaRegen": 0.145,
+    "armor": 0.37,
+    "attackSpeed": 2.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.9
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3.67,
+    "magicResistance": 27.5,
+    "damageMin": 43,
+    "damageMax": 57,
+    "damageAverage": 50,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 132,
+    "bat": 1.6,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+300 mana.",
+      "right": "+15 Magic Resistance to enemies Silencer has silenced."
+    },
+    "15": {
+      "left": "+20 Mana Regen",
+      "right": "-40% Physical Resistance to enemies in Silence."
+    },
+    "20": {
+      "left": "Gives enemies affected by Silencer an additional -10% Magic Resistance for 3 seconds when he uses Global Silence.",
+      "right": "Reduces the cooldown of Lockdown and Global Silence by 8 seconds."
+    },
+    "25": {
+      "left": "Increased the duration of Silencer's silence by +4 seconds.",
+      "right": "Increases the damage reduction from Silence by 25%."
+    }
+  }
+}

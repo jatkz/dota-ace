@@ -20,18 +20,16 @@
   "statGains": {
     "health": 72.6,
     "healthRegen": 0.33,
-    "mana": 0,
-    "manaRegen": 0,
+    "mainAttackDamage": 3.3,
     "armor": 0.25,
     "attackSpeed": 1.5,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.3
+    "mana": 0,
+    "manaRegen": 0,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
     "healthRegen": 2.55,
-    "mana": 0,
-    "manaRegen": 0,
     "armor": 1.67,
     "magicResistance": 26.8,
     "damageMin": 44,
@@ -55,27 +53,27 @@
     {
       "name": "Blood Magic",
       "type": "passive",
-      "description": "Huskar does not have mana. Mana cost of all sources are converted to health cost for the Sacred Warrior."
+      "description": "Huskar does not have mana. Mana cost of all sources are converted to health cost for the Sacred Warrior. Set Max Mana: 0. Mana Cost to Self Spell Damage Factor: 1."
     },
     {
       "name": "Inner Fire",
       "type": "active",
-      "description": "In a fiery rage, Huskar pushes all nearby enemy units away to a fixed distance, silences and damages them. Radius: 500. Damage: 110/180/250/320. Silence Duration: 1.5/2/2.5/3 (2.25/2.75/3.25/3.75). Max Knockback Distance: 400. Min Knockback Duration: 0.4. Cooldown: 17/15/13/11."
+      "description": "In a fiery rage, Huskar pushes all nearby enemy units away to a fixed distance, silences and damages them. Radius: 500. Damage: 110/180/250/320. Silence Duration: 1.5/2/2.5/3 (2.25/2.75/3.25/3.75). Max Knockback Distance: 400. Min Knockback Duration: 0.4. Cooldown: 17/15/13/11. Mana Cost: 0."
     },
     {
       "name": "Burning Spear",
       "type": "active",
-      "description": "Ignites his spears aflame with his health, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Grants additional range when manually casting the ability. Cast Range: 400. Damage per Second: 5/10/15/20 (10/15/20/25). Max Health as Damage per Second: 0.5%. Duration: 9 (31). Active Cast Range: 450. Cooldown: 0."
+      "description": "Ignites his spears aflame with his health, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Grants additional range when manually casting the ability. Cast Range: 400. Damage per Second: 5/10/15/20 (10/15/20/25). Max Health as Damage per Second: 0.5%. Duration: 9 (31). Active Cast Range: 450. Mana Cost: 0."
     },
     {
       "name": "Berserker's Blood",
       "type": "passive",
-      "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's strength. Applies a Basic Dispel on Huskar. After a short delay, the ability health cost is applied as a heal, along with a bonus for each debuff dispelled this way."
+      "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's. Applies a Basic Dispel on Huskar. After a short delay, the ability health cost is applied as a heal, along with a bonus for each debuff dispelled this way. Max Bonus Health Threshold: 10%. Max Attack Speed Bonus: 170/220/270/320. Max Magic Resistance Bonus: 15%/20%/25%/30%. Strength as Max Health Regen Bonus Factor: 0.25/0.4/0.55/0.7 (0.55/0.7/0.85/1). Linger Duration: 0.5. Health Cost Heal Delay: (2)."
     },
     {
       "name": "Life Break",
       "type": "active",
-      "description": "Applies all ability effects on target, but does not damage it. Taunts the affected enemy unit to attack Huskar. Increases cast range. Cast Range: 550 (800). Current Health as Damage: 32%/38%/44% (38%/44%/50%). Move Speed Slow: 60%. Attack Speed Slow: 60/100/140. Slow Duration: 3/4/5 (5/6/7). Taunt Duration: (3). Cooldown: 16/14/12 (11/9/7)."
+      "description": "Applies all ability effects on, but does not damage it. Taunts the affected enemy unit to attack Huskar. Increases cast range. Cast Range: 550 (800). Current Health as Damage: 32%/38%/44% (38%/44%/50%). Move Speed Slow: 60%. Attack Speed Slow: 60/100/140. Slow Duration: 3/4/5 (5/6/7). Taunt Duration: (3). Cooldown: 16/14/12."
     }
   ]
 }

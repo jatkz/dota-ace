@@ -1,0 +1,72 @@
+{
+  "name": "Drow Ranger",
+  "description": "I walk alone, but the shadows are company enough.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Disabler",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 16,
+    "agility": 22,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 1.9,
+    "agility": 2.8,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 41.8,
+    "healthRegen": 0.19,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 472,
+    "healthRegen": 1.85,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 3.67,
+    "magicResistance": 26.5,
+    "damageMin": 49,
+    "damageMax": 56,
+    "damageAverage": 52.5,
+    "projectileSpeed": 1250,
+    "attackRange": 625,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.3,
+    "moveSpeed": 310,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1 Multishot Arrow per Wave",
+      "right": "x0.82 Frost Arrows Mana Cost"
+    },
+    "15": {
+      "left": "-6s Multishot Cooldown",
+      "right": "+75 Attack Range"
+    },
+    "20": {
+      "left": "+25% Multishot Damage",
+      "right": "50% Gust Self Move Speed"
+    },
+    "25": {
+      "left": "+1 Multishot Waves",
+      "right": "+8% Marksmanship Chance"
+    }
+  }
+}

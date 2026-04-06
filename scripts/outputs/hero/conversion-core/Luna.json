@@ -1,0 +1,71 @@
+{
+  "name": "Luna",
+  "description": "I was once the scourge of the plains, a terror on the wind.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Nuker",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 24,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 3.4,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.6,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 6,
+    "magicResistance": 27.3,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": 900,
+    "attackRange": 330,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.54,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+0.5s Lucent Beam Stun Duration",
+      "right": "-5% Moon Glaives Damage Reduction"
+    },
+    "15": {
+      "left": "+80 Lucent Beam Damage",
+      "right": "+1 Lunar Orbit Glaives"
+    },
+    "20": {
+      "left": "1.5x Lunar Orbit Orbit Speed/Instant Attack Damage",
+      "right": "-40s Eclipse Cooldown"
+    },
+    "25": {
+      "left": "Lucent Beam Multicast",
+      "right": "+25 Lunar Blessing Flat Attack Damage Bonus"
+    }
+  }
+}

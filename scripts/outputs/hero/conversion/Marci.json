@@ -1,6 +1,6 @@
 {
   "name": "Marci",
-  "description": "Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it, granting the targeted ally a short duration movement speed bonus.",
+  "description": "Whistle Link Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Grants the targeted ally a short duration movement speed bonus. Upon reaching the unit, Marci leaps to her final destination, damaging and stunning enemies in the area.",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -57,27 +57,27 @@
     {
       "name": "Special Delivery",
       "type": "active",
-      "description": "Marci whistles and instantly teleports her to her."
+      "description": "Marci whistles and instantly teleports her to her. Effect Radius: Global Teleport. Aura Linger Duration: 0.5. Effect Radius: Global. Courier Level Bonus: 3. Hit Count Bonus: 1. Creeps Hit Count Bonus: 2. Mana Cost: 240."
     },
     {
       "name": "Dispose",
       "type": "active",
-      "description": "Grabs the unit-targeted ally or enemy unit and throws it effortlessly behind her, damaging and slowing the unit if it's an enemy. Additionally damages and applies a movement speed slow to all enemy units within the landing radius."
+      "description": "Grabs the unit-targeted ally or enemy unit and throws it effortlessly behind her, damaging and slowing the unit if it's an enemy. Additionally damages and applies a movement speed slow to all enemy units within the landing radius. Cast Range: 175. Landing Radius: 300. Throw Distance: 250. Landing Damage: 60/150/240/330 (160/250/340/430). Throw Duration: 0.5. Move Speed Slow: 20%/30%/40%/50%. Cooldown: 16/14/12/10. Mana Cost: 80."
     },
     {
       "name": "Rebound",
       "type": "active",
-      "description": "Adds enemy targeting functionality, and Marci applies the movement speed boost on herself upon cast. Increases damage. Cannot cast ability while being affected by sources. However, the Root source application does not nullify the ability once it is cast."
+      "description": "Adds enemy targeting functionality, and Marci applies the movement speed boost on herself upon cast. Increases damage. Cast Range: 450/550/650/750. Max Leap Distance: 450/550/650/750. Leap Distance Buffer: 700. Ally Move Speed Bonus: 15%/20%/25%/30% (27%/32%/37%/42%). Landing Radius: 300 (350). Damage: 75/150/225/300 (90/180/270/360). Cooldown: 24/20/16/12. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Bodyguard",
       "type": "passive",
-      "description": "Grants the unit-targeted ally a damage barrier, and a portion of Marci's lifesteal and attack damage bonuses. The barrier depletes either upon Marci or upon the unit-targeted ally receiving damage. Although the barrier depletes either upon Marci or upon the unit-targeted ally receiving damage, the barrier value restores corresponding to Marci's attack damage dealt on enemy heroes."
+      "description": "Grants the unit-targeted ally a damage barrier, and a portion of Marci's lifesteal and attack damage bonuses. The barrier depletes either upon Marci or upon the unit-targeted ally receiving damage. Although the barrier depletes either upon Marci or upon the unit-targeted ally receiving damage, the barrier value restores corresponding to Marci's attack damage dealt on enemy heroes. Base Attack Damage Bonus: 12%/18%/24%/30%. Lifesteal: 12%/18%/24%/30%. Cast Range: 500. Base Attack Damage Bonus: 9%/13.5%/18%/22.5%. Lifesteal: 9%/13.5%/18%/22.5%. Duration: 7. Cooldown: 60/65/70/75."
     },
     {
       "name": "Unleash",
       "type": "active",
-      "description": "The last strike in every flurry combo unleashes a damaging pulse around the target, and slows the target's movement speed and its base attack speed."
+      "description": "The last strike in every flurry combo unleashes a damaging pulse around the target, and slows the target's movement speed and its base attack speed. Max Attack Charges per Flurry: 5. Move Speed Bonus: 15% (30%). Duration: 16. Duration Increase per Kill: (6). Self Attack Speed Bonus: 700/925/1150. Combo Time Window: 1. Cooldown: 80/70/60. Mana Cost: 100/125/150."
     }
   ]
 }

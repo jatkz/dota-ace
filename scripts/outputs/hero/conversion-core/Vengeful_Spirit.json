@@ -1,0 +1,73 @@
+{
+  "name": "Vengeful Spirit",
+  "description": "The road of revenge is long, but what awaits me at the end makes it worthwhile.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Initiator",
+    "Disabler",
+    "Nuker",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 23,
+    "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 3,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "armor": 0.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 3.83,
+    "magicResistance": 26.9,
+    "damageMin": 51,
+    "damageMax": 57,
+    "damageAverage": 54,
+    "projectileSpeed": 1500,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.7,
+    "animationPoint": 0.33,
+    "animationBackswing": 0.64,
+    "moveSpeed": 295,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+100 Magic Missile Cast Range",
+      "right": "+150 Nether Swap Damage/Barrier"
+    },
+    "15": {
+      "left": "+0.3s Magic Missile Stun",
+      "right": "-3 Wave of Terror Armor"
+    },
+    "20": {
+      "left": "-2s Magic Missile Cooldown",
+      "right": "Wave of Terror Steals 25% of Reduced Damage/Armor"
+    },
+    "25": {
+      "left": "-18s Nether Swap Cooldown",
+      "right": "+16% Vengeance Aura Attack Damage Bonus"
+    }
+  }
+}

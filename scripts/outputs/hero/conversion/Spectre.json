@@ -20,11 +20,11 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
+    "mana": 20.4,
+    "manaRegen": 0.085,
     "armor": 0.4,
     "attackSpeed": 2.4,
     "mainAttackDamage": 2.4,
-    "mana": 20.4,
-    "manaRegen": 0.085,
     "magicResistance": 0.1
   },
   "stats": {
@@ -55,27 +55,27 @@
     {
       "name": "Desolate",
       "type": "passive",
-      "description": "Grants all created illusions with this ability outgoing damage bonus."
+      "description": "Grants all created illusions with this ability outgoing damage bonus. Search Radius: 350. Damage: 25 (37). Damage Bonus per Hero Level: 2. Damage Dealt: (15%)."
     },
     {
       "name": "Spectral Dagger",
       "type": "active",
-      "description": "Flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of all enemy units along the trail. Grants Spectre unobstructed movement while on the Spectral Path."
+      "description": "Flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of all enemy units along the trail. Grants Spectre unobstructed movement while on the Spectral Path. Cast Range: 1800. Effect Radius: 125. Damage: 70/120/170/220 (150/200/250/300). Move Speed Slow: 10%/14%/18%/22% (25%/29%/33%/37%). Speed Linger Duration: 4. Path Radius: 175. Cooldown: 22/20/18/16. Mana Cost: 110/120/130/140."
     },
     {
       "name": "Shadow Step",
       "type": "active",
-      "description": "The Shadow Step-illusion refreshes its duration upon reaching the target. The illusion has deals a portion of Spectre's damage and receives additional incoming damage."
+      "description": "The Shadow Step-illusion refreshes its duration upon reaching the target. The illusion deals a portion of Spectre's damage and receives additional incoming damage. Cast Range: 750/900/1050/1200. Number of Illusions: 1. Set Move Speed: 900. First Illusion Duration: 7/8/9/10 (9/10/11/12). Damage Dealt: 32%/38%/44%/50%. Damage Taken: 200%. Cooldown: 30/26/22/18. Mana Cost: 60/65/70/75."
     },
     {
       "name": "Dispersion",
       "type": "passive",
-      "description": "Increases both the current damage reflected and current damage reduction upon cast."
+      "description": "Increases both the current damage reflected and current damage reduction upon cast. Min Radius: 350. Max Radius: 800. Damage Reflected: 8%/12%/16%/20% (12%/16%/20%/24%). Damage Reduction: 8%/12%/16%/20% (12%/16%/20%/24%). Damage Reflected Factor: (1.5). Damage Reduction Factor: (1.5)."
     },
     {
       "name": "Haunt",
       "type": "active",
-      "description": "The illusion deals a portion of Spectre's damage and receives additional incoming damage. The illusion is uncontrollable, has unobstructed movement Grants the upon acquiring ability."
+      "description": "The illusion deals a portion of Spectre's damage and receives additional incoming damage. The illusion is uncontrollable, has unobstructed movement Effect Radius: Global. Number of Illusions per Hero: 1. Damage Dealt: 30%/55%/80%. Damage Taken: 200%. Duration: 5/6/7. Cooldown: 180/160/140. Mana Cost: 125/150/175."
     }
   ]
 }

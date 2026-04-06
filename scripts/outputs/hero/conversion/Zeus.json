@@ -19,10 +19,10 @@
   "statGains": {
     "health": 46.2,
     "healthRegen": 0.21,
-    "mana": 39.6,
-    "manaRegen": 0.165,
     "armor": 0.2,
     "attackSpeed": 1.2,
+    "mana": 39.6,
+    "manaRegen": 0.165,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.3
   },
@@ -54,37 +54,37 @@
     {
       "name": "Static Field",
       "type": "passive",
-      "description": "All of the Zeus' abilities, and his attacks, excluding item abilities, deals damage equal to a percentage of the affected enemy units' current health."
+      "description": "All of the Zeus' abilities, and his attacks, excluding item abilities, deals damage equal to a percentage of the affected enemy units' current health. Effect Radius: Global Current. Health as Damage: 2.5%/3.25%/4%/4.75% (5.5%/6.25%/7%/7.75%). Effect Radius: Global. Current Health as Damage: 2.5%/3.25%/4%/4.75% (5.5%/6.25%/7%/7.75%)."
     },
     {
       "name": "Arc Lightning",
       "type": "active",
-      "description": "Hurls a bolt of lightning that bounce through nearby enemy units that deals damage."
+      "description": "Hurls a bolt of lightning that bounce through nearby enemy units that deals damage. Cast Range: 800. Bounce Radius: 450. Number of Bounces: 5/7/9/11. Bounce Interval: 0.25. Damage: 90/120/150/180 (150/180/210/240). Cooldown: 75/85/95/105."
     },
     {
       "name": "Lightning Bolt",
       "type": "active",
-      "description": "Calls down a bolt of lightning to strike an enemy unit, causing damage and applies a stun. Can be cast on the ground, affecting the closest enemy hero within the search radius."
+      "description": "Calls down a bolt of lightning to strike an enemy unit, causing damage and applies a stun. Can be cast on the ground, affecting the closest enemy hero within the search radius. Cast Range: 700/750/800/850. Search Radius: 325 (0). Damage: 140/220/300/380. Stun Duration: 0.35 (0.85). Vision Radius: 500. Duration: 5. Cooldown: 120/125/130/135."
     },
     {
       "name": "Heavenly Jump",
       "type": "active",
-      "description": "Leaps forward and shocks the closest visible nearby enemy unit, prioritizing heroes, dealing damage as well as reducing their movement and attack speed. Cannot cast ability while being affected by sources. However, the Root source application does not nullify the ability once it is cast."
+      "description": "Leaps forward and shocks the closest visible nearby enemy unit, prioritizing heroes, dealing damage as well as reducing their movement and attack speed. Search Radius: 700/800/900/1000. Number of Targets: 1 (2). Damage: 25/50/75/100. Move Speed Slow: 80%. Attack Speed Slow: 100. Debuff Duration: 1.4. Cooldown: 26/22/18/14. Mana Cost: 50/60/70/80."
     },
     {
       "name": "Nimbus",
       "type": "active",
-      "description": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemy units."
+      "description": "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemy units. Cast Range: Global. Radius: 450. Hit Count: 4. Hit Count: 8. Duration: 30. Creeps Hit Count: 16. Mana Cost: 45."
     },
     {
       "name": "Lightning Hands",
-      "type": "passive",
-      "description": "Attacks now create Arc Lightning that deal a percentage of its damage. Can be toggled off to stop this effect. Grants bonus attack speed."
+      "type": "active",
+      "description": "Attacks now create Arc Lightning that deal a percentage of its damage. Can be toggled off to stop this effect. Grants bonus attack speed. Proc Radius: 380. Damage: 45/60/75/90 (75/90/105/120). Attack Speed Bonus: 30."
     },
     {
       "name": "Thundergod's Wrath",
       "type": "active",
-      "description": "Briefly provides True Sight when cast, centered around the target within the radius. If an enemy hero is invisible, it takes no damage, but the True Sight radius is still created at that hero's location. The ability component is granted by an aura and is independent of the vision radius."
+      "description": "Briefly provides True Sight when cast, centered around the target within the radius. If an enemy hero is invisible, it takes no damage, but the True Sight radius is still created at that hero's location. The ability component is granted by an aura and is independent of the vision radius. Effect Radius: Global Damage: 300/475/650 (375/550/725). Effect Radius: Global. Damage: 300/475/650 (375/550/725). Vision Radius: 500. Duration: 3. True Sight Radius: 550. Cooldown: 250/375/500."
     }
   ]
 }

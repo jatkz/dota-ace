@@ -75,7 +75,7 @@
     {
       "name": "Black Hole",
       "type": "active",
-      "description": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds. Cast Range: 275. Max Channel Time: 4. Inner Effect Radius: 420. Inner Pull Speed: 30. Damage per Second: 100/150/200 (150/200/250). Max Silence Duration: 4. Cooldown: 180/170/160. Mana Cost: 300/400/500."
+      "description": "Roshan is not affected by the max health as damage per second. Other ability effects still apply. The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds. Cast Range: 275. Max Channel Time: 4. Inner Effect Radius: 420. Inner Pull Speed: 30. Damage per Second: 100/150/200 (150/200/250). Max Silence Duration: 4. Cooldown: 180/170/160. Mana Cost: 300/400/500."
     }
   ]
 }

@@ -21,10 +21,10 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "mana": 48,
-    "manaRegen": 0.2,
     "armor": 0.4,
     "attackSpeed": 2.4,
+    "mana": 48,
+    "manaRegen": 0.2,
     "magicResistance": 0.1,
     "mainAttackDamage": 4
   },
@@ -56,32 +56,32 @@
     {
       "name": "Slow Burn",
       "type": "passive",
-      "description": "All Lina's spells now applies a portion of the impact damage as damage per second debuff."
+      "description": "All Lina's spells now applies a portion of the impact damage as damage per second debuff. Impact Damage to Damage per Second: 0.64. Debuff Duration: 4. Crit Damage: 150%. Debuff Duration: 3."
     },
     {
       "name": "Dragon Slave",
       "type": "active",
-      "description": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment."
+      "description": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment. Cast Range: 800. First Radius: 275. Travel Distance: 1075. End Radius: 200. Damage: 65/125/185/245. Cooldown: 11/10/9/8. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Light Strike Array",
       "type": "active",
-      "description": "Summons a column of flames that damages and stuns enemies."
+      "description": "Summons a column of flames that damages and stuns enemies. Cast Range: 700. Effect Radius: 250. Damage: 80/120/160/200 (190/230/270/310). Stun Duration: 1.2/1.6/2/2.4. Cooldown: 13/11/9/7. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Fiery Soul",
       "type": "passive",
-      "description": "Grants a stack of bonus attack speed and bonus movement speed per enemy unit affected per ability cast. Grants stacks per unit hit per ability cast as per normal, not limited to 's abilities."
+      "description": "Grants a stack of bonus attack speed and bonus movement speed per enemy unit affected per ability cast. Move Speed Bonus per Stack: 1%/1.5%/2%/2.5% (2%/2.5%/3%/3.5%). Attack Speed Bonus per Stack: 8/16/24/32 (18/26/34/42). Stack Duration: 18. Magic Resist per Stack: (5%)."
     },
     {
       "name": "Flame Cloak",
       "type": "active",
-      "description": "Lina ascends and grants herself unobstructed movement, spell damage amplification and bonus magic resistance. Acquiring while drafting unlocks this ability. Grants all ability effects to the drafting hero's model in this game-mode."
+      "description": "Lina ascends and grants herself unobstructed movement, spell damage amplification and bonus magic resistance. Magic Resist Bonus: 35%. Spell Amp Bonus: 35%. Duration: 7. Set Stack Count: 7. Mana Cost: 25."
     },
     {
       "name": "Laguna Blade",
       "type": "active",
-      "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage."
+      "description": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage. Cast Range: 750. Damage: 380/565/750. Buff Duration: (5). Cooldown: 70/60/50. Mana Cost: 150/300/450."
     }
   ]
 }

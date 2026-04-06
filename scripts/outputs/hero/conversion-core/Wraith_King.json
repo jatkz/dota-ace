@@ -1,0 +1,73 @@
+{
+  "name": "Wraith King",
+  "description": "Purer than flesh, stronger than bone, imperishable is the essence of the wraith.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Support",
+    "Durable",
+    "Disabler",
+    "Initiator"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 16,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 1.7,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "armor": 0.28,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.7,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 3.67,
+    "magicResistance": 26.6,
+    "damageMin": 60,
+    "damageMax": 62,
+    "damageAverage": 61,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.56,
+    "animationBackswing": 0.44,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+2s Wraithfire Blast Slow Duration",
+      "right": "+10% Vampiric Spirit Lifesteal"
+    },
+    "15": {
+      "left": "+300 Health",
+      "right": "+0.75s Wraithfire Blast Stun Duration"
+    },
+    "20": {
+      "left": "+5 Bone Guard Skeletons Spawned",
+      "right": "+50 Attack Speed"
+    },
+    "25": {
+      "left": "Reincarnation Casts Wraithfire Blast",
+      "right": "-2s Mortal Strike Cooldown"
+    }
+  }
+}

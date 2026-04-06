@@ -1,6 +1,6 @@
 {
   "name": "Razor",
-  "description": "I bring my lightning whip not to punish souls, but only to hasten them toward the inevitable exit.",
+  "description": "I bring my lightning whip not to punish souls, but only to hasten them toward the inevitable exit. Razor, the Lightning Revenant When attacked by an enemy, Razor has a chance to release a Forked Lightning that strikes the attacking source, prioritizing the attacker's unit-type.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -56,32 +56,32 @@
     {
       "name": "Unstable Current",
       "type": "passive",
-      "description": "Grants movement speed bonus per hero level."
+      "description": "Grants movement speed bonus per hero level. Move Speed Bonus per Level: 1%."
     },
     {
       "name": "Dynamo",
       "type": "passive",
-      "description": "Grants bonus spell amplification per current total attack damage."
+      "description": "Grants bonus spell amplification per current total attack damage. Attack Damage to Spell Damage Amp: 0.0625%."
     },
     {
       "name": "Plasma Field",
       "type": "active",
-      "description": "Releases a plasma wave that grows in power as it expands, but also zaps on contraction, slowing and dealing damage to enemy units caught in its path. Each enemy unit can be hit twice, once each upon expanding and contracting. The further the distance, the stronger the effect."
+      "description": "Releases a plasma wave that grows in power as it expands, but also zaps on contraction, slowing and dealing damage to enemy units caught in its path. Each enemy unit can be hit twice, once each upon expanding and contracting. The further the distance, the stronger the effect. Max Effect Radius: 700. Damage Width: 100. Min Damage: 35/40/45/50. Max Damage: 80/115/150/185. Min Move Speed Slow: 5%. Max Move Speed Slow: 25%/30%/35%/40%. Cooldown: 13/12/11/10. Mana Cost: 125."
     },
     {
       "name": "Static Link",
       "type": "active",
-      "description": "Allows Razor to attack while moving with the link active. Grants Razor bonus attack damage incrementally while being linked to the enemy unit. Applies the ability to both the primary and secondary targets. If any of link instances are broken, attacks the currently linked enemy unit. Can be cast multiple times on the primary unit-targeted enemy, but not on the secondary affected unit."
+      "description": "Creates a charged link between Razor and an enemy unit, the enemy unit loses attack damage incrementally while being linked to Razor. Allows Razor to attack while moving with the link active. Grants Razor bonus attack damage incrementally while being linked to the enemy unit. Cast Range: 550 (700). Break Distance: 800 (950). Attack Damage Loss per Second: 5/10/15/20 (10/15/20/25). Debuff Duration: 12/14/16/18. Max Duration: 10. Attack Damage Bonus per Second: 5/10/15/20 (10/15/20/25). Cooldown: 44/36/28/20. Mana Cost: 65."
     },
     {
       "name": "Storm Surge",
       "type": "passive",
-      "description": "Forked Lightning always searches for additional targets centered around the primary target, damaging and applying its movement speed slow independently to both the primary target and secondary targets. Additionally reduces the downtime."
+      "description": "Forked Lightning always searches for additional targets centered around the primary target, damaging and applying its movement speed slow independently to both the primary target and secondary targets. Proc Chance: 20%. Effect Radius: 700. Proc Chance: 100%. Proc Radius: Global. Damage: 50/90/130/170 (65/117/169/221). Move Speed Slow: 20%/25%/30%/35% (26%/32.5%/39%/45.5%)."
     },
     {
       "name": "Eye of the Storm",
       "type": "active",
-      "description": "A powerful lightning storm strikes out at enemy units with the lowest health, dealing damage and reducing their armor. Creates two eyes within the storm to strike two different units at the same time. Enables damaging buildings. The jolts will only target towers, barracks, and the Ancient."
+      "description": "A powerful lightning storm strikes out at enemy units with the lowest health, dealing damage and reducing their armor. Creates two eyes within the storm to strike two different units at the same time. Enables damaging buildings. The jolts will only target towers, barracks, and the Ancient. Effect Radius: 500. Number of Targets: 1 (2). Strike Interval: 0.7/0.6/0.5 (0.6/0.5/0.4). Damage per Strike: 60/75/90. Armor Reduction per Strike: 1. Duration: 30. Cooldown: 80/70/60. Mana Cost: 100/150/200."
     }
   ]
 }

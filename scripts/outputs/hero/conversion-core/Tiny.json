@@ -1,0 +1,74 @@
+{
+  "name": "Tiny",
+  "description": "My enemies break upon me like surf upon the stone.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Nuker",
+    "Pusher",
+    "Initiator",
+    "Durable",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 30,
+    "agility": 0,
+    "intelligence": 17
+  },
+  "attributeGains": {
+    "strength": 4.2,
+    "agility": 0,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 92.4,
+    "healthRegen": 0.42,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.2
+  },
+  "stats": {
+    "health": 780,
+    "healthRegen": 5,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 0,
+    "magicResistance": 26.7,
+    "damageMin": 61,
+    "damageMax": 67,
+    "damageAverage": 64,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 90,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.7,
+    "moveSpeed": 275,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+8 Strength",
+      "right": "+150 Avalanche Cast Range"
+    },
+    "15": {
+      "left": "+90 Avalanche Damage",
+      "right": "-8% Grow Attack Speed Reduction"
+    },
+    "20": {
+      "left": "Toss Requires no Target",
+      "right": "+60 Tree Grab Base Damage"
+    },
+    "25": {
+      "left": "2 Toss Charges",
+      "right": "-8s Avalanche Cooldown"
+    }
+  }
+}

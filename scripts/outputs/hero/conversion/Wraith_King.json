@@ -1,6 +1,6 @@
 {
   "name": "Wraith King",
-  "description": "Purer than flesh, stronger than bone, imperishable is the essence of the wraith. Ostarion, the Wraith King For untold years, King Ostarion built a kingdom from the remains of his enemies. It was an obsessive's errand, done to pass the long eternities of a monarchy that seemed fated never to end. He believed that as long as he built up the towers of his palace, he could not die. But eventually he learned that he had been deluded... that bone itself could perish.",
+  "description": "Purer than flesh, stronger than bone, imperishable is the essence of the wraith.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -22,12 +22,12 @@
   "statGains": {
     "health": 61.6,
     "healthRegen": 0.28,
-    "mainAttackDamage": 2.8,
-    "armor": 0.28,
-    "attackSpeed": 1.7,
     "mana": 19.2,
     "manaRegen": 0.08,
-    "magicResistance": 0.1
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
   },
   "stats": {
     "health": 604,
@@ -57,27 +57,32 @@
     {
       "name": "Vampiric Spirit",
       "type": "passive",
-      "description": "Grants Wraith King and his Skeleton Warriors' attacks lifesteal. Wraithfire Blast of the corresponding level fully replaces the slow component upon a Reincarnation proc, with a slower projectile speed when off-cooldown."
+      "description": "Grants Wraith King and his Skeleton Warriors' attacks lifesteal. Wraithfire Blast of the corresponding level fully replaces the slow component upon a Reincarnation proc, with a slower projectile speed when off-cooldown. Aura Radius: 0 (1200). Move Speed Bonus: 10%/15%/20%/25%. Attack Speed Bonus: 30/45/60/75. Wraith Form Duration: 3.5/4/4.5/5 (4.5/5/5.5/6). Self Respawn Time Reduction: 3.5/4/4.5/5 (4.5/5/5.5/6). Aura Linger Duration: 0.5."
     },
     {
       "name": "Wraithfire Blast",
       "type": "active",
-      "description": "Sears an enemy unit with a spectral fire projectile that stuns and damages on hit, then slows and damages over time. Wraithfire Blast of the corresponding level fully replaces the Reincarnation ability slow component upon proc, with a slower projectile speed."
+      "description": "Sears an enemy unit with a spectral fire projectile that stuns and damages on hit, then slows and damages over time. Wraithfire Blast of the corresponding level fully replaces the Reincarnation ability slow component upon proc, with a slower projectile speed. Cast Range: 525. First Damage: 80/100/120/140. Damage per Second: 20/40/60/80. Move Speed Slow: 20%. Slow Duration: 2. Stun Duration: 1/1.2/1.4/1.6 (1.75/1.95/2.15/2.35). Cooldown: 14/12/10/8. Mana Cost: 95/110/125/140."
     },
     {
       "name": "Bone Guard",
       "type": "active",
-      "description": "Wraith King's blade drains his enemy's essence to feed his aura. This unit's attacks are less effective on units. Affects the total attack damage value."
+      "description": "The King can summon skeletons to fight for him. Wraith King's blade drains his enemy's essence to feed his aura. Summon Radius: 300. Max Charges: 2/4/6/8. Base Number of Skeletons: 0 (5). Skeleton Duration: 46. Building Damage Factor: 0.39. Hero Damage Factor: 1.25. Cooldown: 70/80/90/100."
+    },
+    {
+      "name": "Spectral Blade",
+      "type": "active",
+      "description": "Grants self outgoing attack damage bonus while Wraith Form is active, and while Mortal Strike is off cooldown. Wraithfire Blast of the corresponding level fully replaces the slow component upon a Reincarnation proc, with a slower projectile speed when off-cooldown. Damage: 10/25/40/55. Lifesteal Factor: 1. Effect Radius: 600. Crit Damage: 160%/200%/240%/280%. Outgoing Attack Damage Amp: (150%). Move Speed Slow: 75% (0). Cooldown: 5.5/5/4.5/4. Mana Cost: 180/150/120."
     },
     {
       "name": "Mortal Strike",
       "type": "passive",
-      "description": "Passively deals critical damage on an attack with a cooldown. Grants self outgoing attack damage bonus while Wraith Form is active, and while Mortal Strike is off cooldown."
+      "description": "Passively deals critical damage on an attack with a cooldown. Grants self outgoing attack damage bonus while Wraith Form is active, and while Mortal Strike is off cooldown. Crit Damage: 160%/200%/240%/280%. Outgoing Attack Damage Amp: (150%). Cooldown: 5.5/5/4.5/4."
     },
     {
       "name": "Reincarnation",
       "type": "passive",
-      "description": "The Wraith King reforms after death, allowing him to resurrect when killed in battle. Applies a movement speed slow and an attack speed slow upon death to enemy heroes within the radius when off-cooldown. Wraithfire Blast of the corresponding level fully replaces the slow component upon a Reincarnation proc, with a slower projectile speed when off-cooldown."
+      "description": "The Wraith King reforms after death, allowing him to resurrect when killed in battle. Applies a movement speed slow and an attack speed slow upon death to enemy heroes within the radius when off-cooldown. Wraithfire Blast of the corresponding level fully replaces the slow component upon a Reincarnation proc, with a slower projectile speed when off-cooldown. Effect Radius: 600. Move Speed Slow: 75% (0). Attack Speed Slow: 75 (0). Slow Duration: 4 (0). Current Health as Self Damage: 100%. Mana Cost as Mana Restore: 100%. Cooldown: 180/150/120. Mana Cost: 200."
     }
   ]
 }

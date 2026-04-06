@@ -1,0 +1,74 @@
+{
+  "name": "Chaos Knight",
+  "description": "The light shall be blackened, and chaos shall reign.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Disabler",
+    "Durable",
+    "Pusher",
+    "Initiator"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 18,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.1,
+    "agility": 1.8,
+    "intelligence": 1.2
+  },
+  "statGains": {
+    "health": 68.2,
+    "healthRegen": 0.31,
+    "mana": 14.4,
+    "manaRegen": 0.06,
+    "armor": 0.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.65,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 5,
+    "magicResistance": 26.8,
+    "damageMin": 56,
+    "damageMax": 76,
+    "damageAverage": 66,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+225 Reality Rift Pull Distance",
+      "right": "+30% Chaos Strike Lifesteal"
+    },
+    "15": {
+      "left": "+10 Strength",
+      "right": "-3s Chaos Bolt Cooldown"
+    },
+    "20": {
+      "left": "Reality Rift Pierces Spell Immunity",
+      "right": "+0.6 Min/Max Chaos Bolt Duration"
+    },
+    "25": {
+      "left": "-125% Phantasm Damage Taken",
+      "right": "+10% Chaos Strike Chance"
+    }
+  }
+}

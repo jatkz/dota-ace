@@ -58,22 +58,27 @@
     {
       "name": "Eelskin",
       "type": "passive",
-      "description": "Grants the Naga Siren bonus evasion."
+      "description": "Grants the Naga Siren bonus evasion. Evasion Bonus: 4.9% The higher Naga's level, the greater the bonus evasion. Evasion. Bonus Increase: 0.1%. Evasion Bonus: 4.9%. Evasion Bonus Increase: 0.1%."
     },
     {
       "name": "Mirror Image",
       "type": "active",
-      "description": "Creates multiple images of herself under Slithice's control. These illusions deals a portion of Naga Siren's damage and receives additional incoming damage."
+      "description": "Creates multiple images of herself under Slithice's control. These illusions deals a portion of Naga Siren's damage and receives additional incoming damage. Split Time: 0.5. Number of Illusions: 3 (4). Damage Dealt: 25%/30%/35%/40% (35%/40%/45%/50%). Damage Taken: 350% (275%). Duration: 26. Cooldown: 40/35/30/25. Mana Cost: 75/90/105/120."
     },
     {
       "name": "Ensnare",
       "type": "active",
-      "description": "Increases cast range and net projectile speed. Applies Break upon projectile impact, and enables unit-targeting and affecting debuff immune units."
+      "description": "Increases cast range and net projectile speed. Applies Break upon projectile impact, and enables unit-targeting and affecting debuff immune units. Cast Range: 500/525/550/575 (800/840/880/920). Projectile Speed: 1500 (2400). Duration: 2.75/3.5/4.25/5. Break Duration: (2.75/3.5/4.25/5). Enemy Distance: 900. Ensnare Factor: (1.6). Cooldown: 21/18/15/12. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Rip Tide",
       "type": "passive",
-      "description": "Each successful attack performed by the Siren's images applies the attack counter buff on Slithice."
+      "description": "Each successful attack performed by the Siren's images applies the attack counter buff on Slithice. Required Attacks: 6. Effect Radius: 300. Damage: 30/40/50/60 (39/52/65/78). Armor Reduction: 2/4/6/8. Duration: 4. Illusion Attack Counter: 1."
+    },
+    {
+      "name": "Song of the Siren",
+      "type": "active",
+      "description": "Grants max mana as bonus mana regeneration bonus to allied units within the radius. Increases max health as bonus health regeneration. Radius: 900/1150/1400. Duration: 7. Aura Linger Duration: 0.4. Max Health as Health Regen Bonus: 1%/2%/3% (2%/3%/4%). Max Mana as Mana Regen Bonus: (4%). Cooldown: 160/130/100. Mana Cost: 150/250/350."
     }
   ]
 }

@@ -1,0 +1,72 @@
+{
+  "name": "Chen",
+  "description": "You can learn faith at the end of a sword.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Pusher",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 15,
+    "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.1,
+    "intelligence": 3.2
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "mana": 38.4,
+    "manaRegen": 0.16,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.2
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 303,
+    "manaRegen": 1.45,
+    "armor": 1.5,
+    "magicResistance": 26.9,
+    "damageMin": 48,
+    "damageMax": 58,
+    "damageAverage": 53,
+    "projectileSpeed": 1100,
+    "attackRange": 650,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+25% Zealot Health/Damage",
+      "right": "+75 Penitence Damage"
+    },
+    "15": {
+      "left": "+15% Penitence Slow",
+      "right": "+12% Persuaded Unit Attack Damage"
+    },
+    "20": {
+      "left": "+1300 Persuaded Unit Min Health",
+      "right": "+15% Divine Favor Heal Amp"
+    },
+    "25": {
+      "left": "Hand of God Full Health Restore for Chen and all of his Summons",
+      "right": "Hand of God Strong Dispels"
+    }
+  }
+}

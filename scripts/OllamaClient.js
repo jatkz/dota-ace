@@ -1,6 +1,6 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
-import { optimizeHtmlForOllama } from './ollama-html-cleaner.js';
+import { optimizeHtmlForOllama, extractHeroCoreData, extractHeroAbilityPayloads } from './ollama-html-cleaner.js';
 
 class OllamaClient {
     constructor({ model, baseUrl, temperature, maxTokens } = {}, templatePath = '') {
@@ -11,9 +11,23 @@ class OllamaClient {
         this.stream = false;
         this.category = this.inferCategory(templatePath);
         this.promptLabel = this.getPromptLabel(this.category);
+        this.enableHeroSplitPass = this.category === 'hero' && process.env.OLLAMA_HERO_SPLIT_PASS !== '0';
 
         if (templatePath && fs.existsSync(templatePath)) {
             this.system = fs.readFileSync(templatePath, 'utf8');
+        }
+
+        if (this.enableHeroSplitPass && templatePath.includes('parse-hero-page-ollama.txt')) {
+            const heroCoreTemplatePath = templatePath.replace('parse-hero-page-ollama.txt', 'parse-hero-core-ollama.txt');
+            const heroAbilityTemplatePath = templatePath.replace('parse-hero-page-ollama.txt', 'parse-hero-ability-ollama.txt');
+
+            if (fs.existsSync(heroCoreTemplatePath)) {
+                this.heroCoreSystem = fs.readFileSync(heroCoreTemplatePath, 'utf8');
+            }
+
+            if (fs.existsSync(heroAbilityTemplatePath)) {
+                this.heroAbilitySystem = fs.readFileSync(heroAbilityTemplatePath, 'utf8');
+            }
         }
     }
 
@@ -164,6 +178,87 @@ class OllamaClient {
         fs.writeFileSync(outputPath, jsonString);
     }
 
+    cleanJsonText(text = '') {
+        let content = String(text || '').trim();
+
+        if (content.startsWith('```json')) {
+            content = content.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+        } else if (content.startsWith('```')) {
+            content = content.replace(/^```\s*/, '').replace(/\s*```$/, '');
+        }
+
+        const firstBrace = content.indexOf('{');
+        const lastBrace = content.lastIndexOf('}');
+        if (firstBrace !== -1 && lastBrace !== -1 && lastBrace > firstBrace) {
+            content = content.slice(firstBrace, lastBrace + 1);
+        }
+
+        return content.trim();
+    }
+
+    parseJsonResponse(text = '', label = 'response') {
+        const cleaned = this.cleanJsonText(text);
+
+        try {
+            return JSON.parse(cleaned);
+        } catch (error) {
+            throw new Error(`Invalid JSON from ${label}: ${error.message}`);
+        }
+    }
+
+    normalizeHeroAbilityResult(parsedAbility = {}, fallback = {}) {
+        const name = String(parsedAbility?.name || fallback.name || '').trim();
+        const rawType = String(parsedAbility?.type || fallback.typeHint || '').trim().toLowerCase();
+        const type = rawType.includes('passive') && !rawType.includes('active')
+            ? 'passive'
+            : rawType
+                ? 'active'
+                : (fallback.typeHint || '');
+        const description = String(parsedAbility?.description || fallback.description || '').trim();
+
+        return {
+            name,
+            type,
+            description
+        };
+    }
+
+    async analyzeHeroWithSplit(rawHtml, item) {
+        const heroCoreContent = extractHeroCoreData(rawHtml);
+        const heroAbilityPayloads = extractHeroAbilityPayloads(rawHtml);
+
+        console.log(`    → Sending hero core to Ollama (${heroCoreContent.length} chars)...`);
+        const coreText = await this.generate(
+            `Parse this hero core data into JSON:\n${heroCoreContent}\n\nIMPORTANT: Return ONLY valid JSON, no extra text.`,
+            this.heroCoreSystem || this.system
+        );
+        console.log(`    → Received hero core (${coreText.length} chars)`);
+        const coreData = this.parseJsonResponse(coreText, `${item.custom_id} core`);
+
+        const abilities = [];
+        for (let abilityIndex = 0; abilityIndex < heroAbilityPayloads.length; abilityIndex++) {
+            const abilityPayload = heroAbilityPayloads[abilityIndex];
+            console.log(`      → Ability ${abilityIndex + 1}/${heroAbilityPayloads.length}: ${abilityPayload.name} (${abilityPayload.prompt.length} chars)...`);
+
+            try {
+                const abilityText = await this.generate(
+                    `Parse this single hero ability into JSON:\n${abilityPayload.prompt}\n\nIMPORTANT: Return ONLY valid JSON, no extra text.`,
+                    this.heroAbilitySystem || this.system
+                );
+                const parsedAbility = this.parseJsonResponse(abilityText, `${item.custom_id} ability ${abilityPayload.name}`);
+                abilities.push(this.normalizeHeroAbilityResult(parsedAbility, abilityPayload));
+            } catch (error) {
+                console.error(`      ✗ Ability fallback for ${abilityPayload.name}:`, error.message);
+                abilities.push(this.normalizeHeroAbilityResult({}, abilityPayload));
+            }
+        }
+
+        return JSON.stringify({
+            ...coreData,
+            abilities
+        }, null, 2);
+    }
+
     async batchAnalyzeFile(batchConfig) {
         const results = [];
 
@@ -173,14 +268,24 @@ class OllamaClient {
             
             try {
                 const rawHtml = fs.readFileSync(item.filePath, 'utf8');
-                // Clean the HTML for better Ollama processing
-                const cleanedContent = optimizeHtmlForOllama(rawHtml, this.category);
-                
-                const prompt = `Parse this ${this.promptLabel} data into JSON:\n${cleanedContent}\n\nIMPORTANT: Return ONLY valid JSON, no extra text.`;
-                
-                console.log(`    → Sending to Ollama (${cleanedContent.length} chars)...`);
-                const text = await this.generate(prompt, this.system);
-                console.log(`    → Received response (${text.length} chars)`);
+                let text = '';
+
+                if (this.enableHeroSplitPass && this.heroCoreSystem && this.heroAbilitySystem) {
+                    try {
+                        text = await this.analyzeHeroWithSplit(rawHtml, item);
+                    } catch (heroSplitError) {
+                        console.error(`      [hero split] Falling back to single pass:`, heroSplitError.message);
+                    }
+                }
+
+                if (!text) {
+                    const cleanedContent = optimizeHtmlForOllama(rawHtml, this.category);
+                    const prompt = `Parse this ${this.promptLabel} data into JSON:\n${cleanedContent}\n\nIMPORTANT: Return ONLY valid JSON, no extra text.`;
+
+                    console.log(`    → Sending to Ollama (${cleanedContent.length} chars)...`);
+                    text = await this.generate(prompt, this.system);
+                    console.log(`    → Received response (${text.length} chars)`);
+                }
                 
                 results.push({ custom_id: item.custom_id, output: text });
             } catch (error) {

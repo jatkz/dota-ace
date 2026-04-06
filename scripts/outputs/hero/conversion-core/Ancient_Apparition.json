@@ -1,0 +1,71 @@
+{
+  "name": "Ancient Apparition",
+  "description": "One day, ice will cover these lands, and it will be as if this war never happened.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 20,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 1.9,
+    "agility": 2,
+    "intelligence": 3.1
+  },
+  "statGains": {
+    "health": 41.8,
+    "healthRegen": 0.19,
+    "mana": 37.2,
+    "manaRegen": 0.155,
+    "armor": 0.33,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 2.33,
+    "magicResistance": 27.3,
+    "damageMin": 44,
+    "damageMax": 54,
+    "damageAverage": 49,
+    "projectileSpeed": 1250,
+    "attackRange": 675,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 120,
+    "bat": 1.7,
+    "animationPoint": 0.45,
+    "animationBackswing": 0.3,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Cold Feet Damage per Second",
+      "right": "+300 Chilling Touch Attack Range"
+    },
+    "15": {
+      "left": "+250 Cold Feet Break Radius",
+      "right": "-2s Ice Vortex Cooldown"
+    },
+    "20": {
+      "left": "+80 Chilling Touch Damage",
+      "right": "+4s Ice Blast Duration"
+    },
+    "25": {
+      "left": "+4% Ice Blast Health Kill Threshold",
+      "right": "450 Radius Cold Feet"
+    }
+  }
+}

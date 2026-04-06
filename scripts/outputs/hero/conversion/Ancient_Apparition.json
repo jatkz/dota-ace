@@ -1,6 +1,6 @@
 {
   "name": "Ancient Apparition",
-  "description": "Kaldr, the Ancient Apparition, is an image projected from outside time. He brings all matter to a stop with his grip of ice.",
+  "description": "One day, ice will cover these lands, and it will be as if this war never happened.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -51,31 +51,49 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+30 Cold Feet Damage per Second",
+      "right": "+300 Chilling Touch Attack Range"
+    },
+    "15": {
+      "left": "+250 Cold Feet Break Radius",
+      "right": "-2s Ice Vortex Cooldown"
+    },
+    "20": {
+      "left": "+80 Chilling Touch Damage",
+      "right": "+4s Ice Blast Duration"
+    },
+    "25": {
+      "left": "+4% Ice Blast Health Kill Threshold",
+      "right": "450 Radius Cold Feet"
+    }
+  },
   "abilities": [
     {
       "name": "Bone Chill",
       "type": "passive",
-      "description": "Applies a movement speed slow debuff to all enemy units affected by Kaldr's abilities. Additionally reduces the debuff-affected enemy hero's."
+      "description": "Applies a movement speed slow debuff to all enemy units affected by Kaldr's abilities. Additionally reduces the debuff-affected enemy hero's Strength per Stack: 2%. Duration: 4."
     },
     {
       "name": "Cold Feet",
       "type": "active",
-      "description": "The upgrade applies all ability effects to enemy units within the radius around both unit-targeted enemies."
+      "description": "Cold Feet is now an area-targeted ability and applies the debuff to all enemy units within the radius upon cast. Cast Range: 700/800/900/1000. Break Radius: 725/750/775/800 (975/1000/1025/1050). Damage per Second: 20/40/60/80 (50/70/90/110). Damage Duration: 4. Stun Duration: 1.8/2.2/2.6/3. Effect Radius: 450. Cooldown: 15/13/11/9. Mana Cost: 125."
     },
     {
       "name": "Ice Vortex",
       "type": "active",
-      "description": "Applies a movement speed slow and magic resistance reduction to enemy units within its radius. Grants flying vision centered around the effect radius."
+      "description": "Applies a movement speed slow and magic resistance reduction to enemy units within its radius. Grants flying vision centered around the effect radius. Cast Range: 1200. Effect Radius: 275. Move Speed Slow: 8%. Damage per Second: 10/20/30/40. Magic Resist Reduction: 16%/19%/22%/25%. Duration: 6/8/10/12. Cooldown: 10/8/6/4 (8/6/4/2). Mana Cost: 40/55/70/85."
     },
     {
       "name": "Chilling Touch",
       "type": "active",
-      "description": "Enhances Kaldr's attack with increased attack range, heavy magic damage, and movement speed slow."
+      "description": "Enhances Kaldr's attack with increased attack range, heavy magic damage, and movement speed slow. Cast Range: 735/765/795/825 (1035/1065/1095/1125). Damage: 30/60/90/120 (110/140/170/200). Move Speed Slow: 100%. Slow Duration: 0.7/0.8/0.9/1. Cooldown: 12/9/6/3 (0). Mana Cost: 35."
     },
     {
       "name": "Ice Blast",
       "type": "active",
-      "description": "Enemy units caught in the explosion, or came in contact of the ice projectile as it travels, take damage over time with heal and health regeneration sources no longer working for them. If an enemy hero's current health drops below a certain threshold, they instantly shatter. Applies of 's corresponding ability level when acquired."
+      "description": "Enemy units caught in the explosion, or came in contact of the ice projectile as it travels, take damage over time with heal and health regeneration sources no longer working for them. If an enemy hero's current health drops below a certain threshold, they instantly shatter. Min Impact Radius: 275. Max Impact Radius: 1000. Radius Increment per Second: 50. First Damage: 250/325/400. Cooldown: 60/50/40. Mana Cost: 175."
     }
   ]
 }

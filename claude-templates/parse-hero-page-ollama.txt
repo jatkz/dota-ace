@@ -51,6 +51,24 @@ Extract the following information from the HTML and return as JSON:
     "visionDay": 0,
     "visionNight": 0
   },
+  "talents": {
+    "25": {
+      "left": "talent text",
+      "right": "talent text"
+    },
+    "20": {
+      "left": "talent text",
+      "right": "talent text"
+    },
+    "15": {
+      "left": "talent text",
+      "right": "talent text"
+    },
+    "10": {
+      "left": "talent text",
+      "right": "talent text"
+    }
+  },
   "abilities": [
     {
       "name": "ability name",
@@ -71,6 +89,9 @@ When damage is shown as a range plus average, split it into `damageMin`, `damage
 When attack speed is shown as `95 (117)`, use the first number for `attackSpeed` and the number in parentheses for `totalAttackSpeed`.
 When animation is shown as `0.56 + 0.41`, use `animationPoint` and `animationBackswing`.
 When vision is shown as `1800 / 800`, use `visionDay` and `visionNight`.
+Use the `TALENTS` section to populate `talents` with exact string values for levels `25`, `20`, `15`, and `10`, preserving important numeric values and ability names.
+For each talent level, map the `Left` text to `left` and the `Right` text to `right`.
+Ignore the generic center `+2 All Attributes` row.
 For `roles`, only use canonical Dota role names with this capitalization: `Carry`, `Support`, `Nuker`, `Disabler`, `Initiator`, `Durable`, `Escape`, `Pusher`, `Jungler`.
 For each ability `type`, use a single simple label such as `active` or `passive`. Do not return mixed labels like `active/passive`.
 If an ability line already includes a type hint like `[active]` or `[passive]`, trust that hint.

@@ -24,6 +24,7 @@
     "mana": 25.2,
     "manaRegen": 0.105,
     "armor": 0.33,
+    "attackSpeed": 2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.24
   },
@@ -55,32 +56,32 @@
     {
       "name": "Solid Core",
       "type": "passive",
-      "description": "The Solid Core causes knockback sources to be less effective on Magnus and grants him slow resistance bonus. The higher Magnus' level, the greater the slow resistance bonus value."
+      "description": "The Solid Core causes knockback sources to be less effective on Magnus and grants him slow resistance bonus. The higher Magnus' level, the greater the slow resistance bonus value. Knockback Distance Factor: 0.5. Slow Resistance Bonus: 24%. Slow Resistance Increase: 1%."
     },
     {
       "name": "Shockwave",
       "type": "active",
-      "description": "Launches two projectiles when unit-targeted."
+      "description": "The Shockwave returns towards Magnus' location after reaching max length, damaging enemy units a second time for the full damage. Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations. Cast Range: 1200. Wave Distance: 1200 (1400). Wave Radius: 200. Wave Speed: 1200. Damage: 75/150/225/300 (200/275/350/425). Knock Distance: 150. Cooldown: 13/12/11/10/10. Mana Cost: 85/90/95/100/100."
     },
     {
       "name": "Empower",
       "type": "active",
-      "description": "Grants the affected attack damage bonus for the duration. Additionally grants cleave damage if the affected allied unit is a melee unit."
+      "description": "Grants the affected attack damage bonus for the duration. Additionally grants cleave damage if the affected allied unit is a melee unit. Cast Range: 800. First Radius: 150. Distance: 650. End Radius: 360. Cleave Damage: 16%/24%/32%/40%. Attack Damage Bonus: 16%/24%/32%/40%. Cooldown: 45/55/65/75."
     },
     {
       "name": "Skewer",
       "type": "active",
-      "description": "Rushes forward, damages, and drags all affected enemy heroes along the way. Applies a movement speed slow to affected enemy heroes at the destination. Deals additional damage when Skewering enemy units into trees or cliffs. Increases the max skewer distance."
+      "description": "Rushes forward, damages, and drags all affected enemy heroes along the way. Applies a movement speed slow to affected enemy heroes at the destination. Deals additional damage when Skewering enemy units into trees or cliffs. Increases the max skewer distance. Cast Range: Global. Skewer Radius: 145. Max Skewer Distance: 800/900/1000/1100 (1100/1200/1300/1400). Base Damage: 80/160/240/320. Distance to Damage Factor: 0.06/0.09/0.12/0.15 (0.21/0.24/0.27/0.3). Move Speed Slow: 20%/30%/40%/50%. Cooldown: 22/20/18/16. Mana Cost: 80."
     },
     {
       "name": "Horn Toss",
       "type": "active",
-      "description": "Tosses any enemy units in front of Magnus, launching them upward and to his rear. Applies a stun and deals damage to all affected enemy units upon landing."
+      "description": "Tosses any enemy units in front of Magnus, launching them upward and to his rear. Applies a stun and deals damage to all affected enemy units upon landing. Search Radius: 325. Search Area Offset: 75. Damage: 300. Toss Duration: 0.6. Landing Stun Duration: 0.75. Mana Cost: 30."
     },
     {
       "name": "Reverse Polarity",
       "type": "active",
-      "description": "is innately immune to the offensive teleport component. Other ability effects still apply."
+      "description": "is innately immune to the offensive teleport component. Other ability effects still apply. Pull Radius: 430. Damage: 100/200/300. Stun Duration: 2.5/3/3.5 (3.3/3.8/4.3). All Attribute Bonus per Hero: 12. Duration: 20. Cooldown: 150/225/300."
     }
   ]
 }

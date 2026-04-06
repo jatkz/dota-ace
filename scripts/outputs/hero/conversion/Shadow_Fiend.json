@@ -1,6 +1,6 @@
 {
   "name": "Shadow Fiend",
-  "description": "Nevermore, the Shadow Fiend.",
+  "description": "So, you're curious where I come from? There's one easy way to find out for yourself. Nevermore, the Shadow Fiend.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -19,12 +19,12 @@
   "statGains": {
     "health": 59.4,
     "healthRegen": 0.27,
-    "mana": 26.4,
-    "manaRegen": 0.11,
     "armor": 0.6,
     "attackSpeed": 3.6,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.6
+    "mainAttackDamage": 3.6,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 538,
@@ -54,27 +54,27 @@
     {
       "name": "Necromastery",
       "type": "passive",
-      "description": "Grants bonus attack damage per stack from unit kills, and loses a portion of stacks upon death. Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection."
+      "description": "Grants bonus attack damage per stack from unit kills, and loses a portion of stacks upon death. Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection. Stacks Lost on Death Factor: 0.7. Attack Damage Bonus per Stack: 1/2/3/4 (6/7/8/9)."
     },
     {
       "name": "Shadowraze",
       "type": "active",
-      "description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area."
+      "description": "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Effect Radius: 250. Base Damage: 90/160/230/300 (92/162/232/302). Damage Increase per Stack: 35/50/65/80 (65/80/95/110). Stack Duration: 7. Instant Attack Factor: (1). Distance: 200. Mana Cost: 9."
     },
     {
       "name": "Feast of Souls",
       "type": "active",
-      "description": "Grants self bonus attack speed for an amount of time. The frenzy state increases the Necromastery stack limit but consumes some at the end of the process."
+      "description": "Grants self bonus attack speed for an amount of time. The frenzy state increases the Necromastery stack limit but consumes some at the end of the process. Move Speed Bonus: 5%/7%/9%/11%. Attack Speed Bonus: 40/55/70/85 (70/85/100/115). Duration: 8. Cast Animation Factor: 0.7. Cooldown: 60/65/70/75."
     },
     {
       "name": "Presence of the Dark Lord",
       "type": "passive",
-      "description": "The presence itself reduces the armor of enemy units within the radius."
+      "description": "The presence itself reduces the armor of enemy units within the radius. Aura Radius: 1200. Armor Reduction: 3/4/5/6 (5/6/7/8). Aura Linger Duration: 0.5."
     },
     {
       "name": "Requiem of Souls",
       "type": "active",
-      "description": "Creates a damaging line projectile per Necromastery stack."
+      "description": "Creates a damaging line projectile per Necromastery stack. Max Travel Radius: 1000. Lines Starting Width: 125. Lines End Radius: 300. Damage per Line: 80/120/160. Move Speed Slow: 20%/25%/30%. Magic Resist Reduction: 10%. Cooldown: 120/110/100. Mana Cost: 150/175/200."
     }
   ]
 }

@@ -1,0 +1,72 @@
+{
+  "name": "Terrorblade",
+  "description": "The self-righteous shall choke on their sanctimony.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 23,
+    "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 4,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "armor": 0.67,
+    "attackSpeed": 4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.3,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 8.83,
+    "magicResistance": 26.9,
+    "damageMin": 49,
+    "damageMax": 55,
+    "damageAverage": 52,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 133,
+    "bat": 1.5,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.8,
+    "moveSpeed": 315,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-2s Conjure Image Cooldown",
+      "right": "+1s Reflection Duration"
+    },
+    "15": {
+      "left": "-25% Sunder Minimum HP Swap",
+      "right": "-10s Metamorphosis Cooldown"
+    },
+    "20": {
+      "left": "+10s Conjure Image Duration",
+      "right": "+10 all stats"
+    },
+    "25": {
+      "left": "+30s Metamorphosis Duration",
+      "right": "-30s Sunder Cooldown"
+    }
+  }
+}

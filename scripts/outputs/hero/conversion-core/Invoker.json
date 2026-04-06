@@ -1,0 +1,74 @@
+{
+  "name": "Invoker",
+  "description": "I am a beacon of knowledge blazing out across a black sea of ignorance.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Nuker",
+    "Disabler",
+    "Escape",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 14,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 2,
+    "intelligence": 4
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "mana": 48,
+    "manaRegen": 0.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 1.33,
+    "magicResistance": 27.2,
+    "damageMin": 41,
+    "damageMax": 47,
+    "damageAverage": 44,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.7,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-5s Tornado Cooldown",
+      "right": "+50 Ice Wall DPS"
+    },
+    "15": {
+      "left": "-6s Cold Snap Cooldown",
+      "right": "+25 Alacrity Damage/Speed"
+    },
+    "20": {
+      "left": "+1 Orb Levels",
+      "right": "+2 Chaos Meteors"
+    },
+    "25": {
+      "left": "2x Quas/Wex/Exort Active Bonuses",
+      "right": "Radial Deafening Blast"
+    }
+  }
+}

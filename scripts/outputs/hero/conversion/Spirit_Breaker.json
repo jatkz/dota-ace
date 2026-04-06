@@ -22,12 +22,12 @@
   "statGains": {
     "health": 72.6,
     "healthRegen": 0.33,
-    "mana": 21.6,
-    "manaRegen": 0.09,
+    "mainAttackDamage": 3.3,
     "armor": 0.28,
     "attackSpeed": 1.7,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.3
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 736,
@@ -57,27 +57,27 @@
     {
       "name": "Charge of Darkness",
       "type": "active",
-      "description": "Increases the bonus movement speed."
+      "description": "Increases the bonus movement speed. Cast Range: Global. Min Move Speed Bonus: 68.75/81.25/93.75/106.25 (90/102.5/115/127.5). Max Move Speed Bonus: 275/325/375/425 (360/410/460/510). Wind-up Time: 1.5. Stun Duration: 1.3/1.6/1.9/2.2. Effect Radius: 300. Cooldown: 22/19/16/13. Mana Cost: 90/100/110/120."
     },
     {
       "name": "Bulldoze",
       "type": "active",
-      "description": "Grants Barathrum bonus movement speed and status resistance to ram through enemy units."
+      "description": "Grants Barathrum bonus movement speed and status resistance to ram through enemy units. Move Speed Bonus: 8%/12%/16%/20%. Status Resist Bonus: 40%/50%/60%/70%. Duration: 8. Cooldown: 22/20/18/16. Mana Cost: 30/40/50/60."
     },
     {
       "name": "Greater Bash",
       "type": "passive",
-      "description": "Has a chance to stun and knockback an enemy unit on an attack that deals a portion of Barathrum's current movement speed as damage. Roshan is innately immune to all forced movement sources. However, the damage component still applies."
+      "description": "Has a chance to stun and knockback an enemy unit on an attack that deals a portion of Barathrum's current movement speed as damage. Roshan is innately immune to all forced movement sources. However, the damage component still applies. Proc Chance: 17%. Move Speed to Damage: 25%/30%/35%/40% (45%/50%/55%/60%). Knock Distance: 143/152/158/162. Knock Duration: 0.5. Stun Duration: 0.9/1.1/1.3/1.5. Mana Cost: 1.2."
     },
     {
       "name": "Planar Pocket",
       "type": "active",
-      "description": "Increases self magic resistance and redirects spells cast by enemy heroes at the target towards him."
+      "description": "Increases self magic resistance and redirects spells cast by enemy heroes at the target towards him. Cast Range: 700. Duration: 6. Magic Resist Bonus: 75%. Mana Cost: 25."
     },
     {
       "name": "Nether Strike",
       "type": "active",
-      "description": "Barathrum temporarily returns to the realm from where he came, bringing with him the retribution of both worlds."
+      "description": "Barathrum temporarily returns to the realm from where he came, bringing with him the retribution of both worlds. Cast Range: 700. Cast Range Buffer: 500. Damage: 150/250/350. Knock Distance: 286/304/316/324. Knock Duration: 0.5. Cooldown: 75/55/35. Mana Cost: 125/150/175."
     }
   ]
 }

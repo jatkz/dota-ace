@@ -1,0 +1,71 @@
+{
+  "name": "Sniper",
+  "description": "Now that's what I call stopping power.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 27,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 3.2,
+    "intelligence": 2.6
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 31.2,
+    "manaRegen": 0.13,
+    "armor": 0.53,
+    "attackSpeed": 3.2,
+    "mainAttackDamage": 3.2,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 4.5,
+    "magicResistance": 26.5,
+    "damageMin": 40,
+    "damageMax": 46,
+    "damageAverage": 43,
+    "projectileSpeed": 3000,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 127,
+    "bat": 1.7,
+    "animationPoint": 0.17,
+    "animationBackswing": 0.7,
+    "moveSpeed": 285,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 1400
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Headshot Damage",
+      "right": "+50 Take Aim Passive Attack Range"
+    },
+    "15": {
+      "left": "+150 Assassinate Damage",
+      "right": "+45 Attack Speed During Take Aim"
+    },
+    "20": {
+      "left": "+30% Shrapnel Damage",
+      "right": "+2s Take Aim Duration"
+    },
+    "25": {
+      "left": "+50 Max Headshot Knock Distance",
+      "right": "-30s Shrapnel Restore Time"
+    }
+  }
+}

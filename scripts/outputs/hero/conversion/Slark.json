@@ -21,12 +21,11 @@
   "statGains": {
     "health": 46.2,
     "healthRegen": 0.21,
-    "armor": 0.25,
-    "attackSpeed": 1.5,
-    "mainAttackDamage": 1.5,
     "mana": 22.8,
     "manaRegen": 0.095,
-    "magicResistance": 0.1
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "mainAttackDamage": 1.5
   },
   "stats": {
     "health": 560,
@@ -54,32 +53,32 @@
     {
       "name": "Essence Shift",
       "type": "passive",
-      "description": "Each successful attack grants Slark bonus."
+      "description": "Each successful attack grants Slark bonus. Str Loss per Attack: 1. Enemy Agi Loss per Attack: 1. Enemy Int Loss per Attack: 1. Enemy Str Loss per Attack: 1. Agi Gain per Attack: 3 (28). Base Duration: 15 (16)."
     },
     {
       "name": "Dark Pact",
       "type": "active",
-      "description": "After a short delay, Slark dispels most negative debuffs while dealing damage to enemy units around him and to himself. The damage on self is less effective."
+      "description": "After a short delay, Slark dispels most negative debuffs while dealing damage to enemy units around him and to himself. The damage on self is less effective. Damage Radius: 325. Damage Intervals: 0.1. Total Damage: 75/150/225/300 (145/220/295/370). Duration: 1. Self Damage Factor: 0.3. Cooldown: 9/8/7/6. Mana Cost: 65."
     },
     {
       "name": "Pounce",
       "type": "active",
-      "description": "Increases leap distance, and replaces its cooldown with a charge restore time. Does not affect units. Since the ability has no max leash distance, the ability reapplies the debuff when the enemy unit is no longer debuff immune regardless of distance."
+      "description": "Increases leap distance, and replaces its cooldown with a charge restore time. Leap Distance: 700 (900). Latch Radius: 120. Duration: 2.5/2.75/3/3.25 (3/3.25/3.5/3.75). Leash Radius: 400. Max Downtime: 0.75. Cooldown: 22/18/14/10. Mana Cost: 75."
     },
     {
       "name": "Saltwater Shiv",
       "type": "active",
-      "description": "A successful attack now steals a poriton of the target's health restoration, health regeneration, and movement speed for Slark."
+      "description": "A successful attack now steals a portion of the target's health restoration, health regeneration, and movement speed for Slark. Cast Range: 150. Restoration Change per Attack: 2%/4%/6%/8%. Health Regen Change per Attack: 2/6/4/8. Move Speed Change per Attack: 2/4/6/8. Duration: 12. Health Restoration Change per Attack: 2%/4%/6%/8%. Cooldown: 10/8/6/4. Mana Cost: 20."
     },
     {
       "name": "Depth Shroud",
       "type": "active",
-      "description": "Creates a dark cloud at the area-targeted location. All allied units within the radius are affected by Shadow Dance of its corresponding level."
+      "description": "Creates a dark cloud at the area-targeted location. All allied units within the radius are affected by Shadow Dance of its corresponding level. Cast Range: 400. Aura Radius: 225. Duration: 3. Aura Linger Duration: 0.033. Attack Speed Bonus: (100). Mana Cost: 75."
     },
     {
       "name": "Shadow Dance",
       "type": "active",
-      "description": "Grants all allied units under Shadow Dance attack speed bonus. This ability has a fixed downtime and does not grant its bonuses when Slark is damaged by neutral creeps. Depth Shroud bonuses and attack speed bonus are not affected."
+      "description": "Grants all allied units under Shadow Dance attack speed bonus. This ability has a fixed downtime and does not grant its bonuses when Slark is damaged by neutral creeps. Depth Shroud bonuses and attack speed bonus are not affected. Aura Radius: 0. Fade Time: 0. Duration: 4/4.25/4.5 (5.5/5.75/6). Aura Linger Duration: 0.033. Move Speed Bonus: 24%/36%/48%. Health Regen Bonus: 70/100/130 (100/130/160). Cooldown: 50/40/30. Mana Cost: 100."
     }
   ]
 }

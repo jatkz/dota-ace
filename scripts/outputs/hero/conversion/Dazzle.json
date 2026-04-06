@@ -20,10 +20,10 @@
   "statGains": {
     "health": 50.6,
     "healthRegen": 0.23,
-    "mana": 42,
-    "manaRegen": 0.175,
     "armor": 0.28,
     "attackSpeed": 1.7,
+    "mana": 42,
+    "manaRegen": 0.175,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.38
   },
@@ -51,31 +51,49 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+1.75 Mana Regen",
+      "right": "+200 Poison Touch Attack Range"
+    },
+    "15": {
+      "left": "+5s Nothl Projection Duration",
+      "right": "+45 Shadow Wave Heal/Damage"
+    },
+    "20": {
+      "left": "+75 Poison Touch Damage per Second",
+      "right": "-3s Shallow Grave Cooldown"
+    },
+    "25": {
+      "left": "+1 Weave Armor Reduction/Bonus",
+      "right": "+40% Poison Touch Slow"
+    }
+  },
   "abilities": [
     {
       "name": "Weave",
       "type": "passive",
-      "description": "Applying a Weave stack now heals the buff-affected allied unit corresponding to the stack count."
+      "description": "Applying a Weave stack now heals the buff-affected allied unit corresponding to the stack count. Armor Change per Stack: 1 (2). Stack Duration: 6.9. Heal per Stack: (60). Duration Increase: 0.1."
     },
     {
       "name": "Poison Touch",
       "type": "active",
-      "description": "The poisonous rite deals damage over time and applies a movement speed slow. Anytime the affected enemy units are attacked by Dazzle, all debuff effects are refreshed with an increased movement speed slow. Grants bonus attack range while attacking enemy units affected by the debuff."
+      "description": "The poisonous rite deals damage over time and applies a movement speed slow. Anytime the affected enemy units are attacked by Dazzle, all debuff effects are refreshed with an increased movement speed slow. Grants bonus attack range while attacking enemy units affected by the debuff. Cast Range: 500/600/700/800. First Radius: 200. Max Distance: 600/700/800/900. End Radius: 300. Number of Targets: 2/4/6/8. Damage per Second: 16/28/40/52 (91/103/115/127). Cooldown: 27/23/19/15. Mana Cost: 125/130/135/140."
     },
     {
       "name": "Shallow Grave",
       "type": "active",
-      "description": "Blesses an allied hero with Shallow Grave. The allied hero cannot die while under its protection, no matter how close to death. Grants bonus heal amplification corresponding to its health percentage. Heals upon expiration while the projection is active."
+      "description": "Blesses an allied hero with Shallow Grave. The allied hero cannot die while under its protection, no matter how close to death. Grants bonus heal amplification corresponding to its health percentage. Heals upon expiration while the projection is active. This ability component levels up with. Cast Range: 900. Set Min Health: 1. Health Threshold: 10%. Heal Amp per Max Health Threshold: 3%/5%/7%/9%. Duration: 4/4.5/5/5.5. End Heal: 225/300/375. Cooldown: 36/30/24/18 (33/27/21/15). Mana Cost: 90/100/110/120."
     },
     {
       "name": "Shadow Wave",
       "type": "active",
-      "description": "Sends a wave of power that bounces between and heals all affected allied units. Shadow Wave always heals the Shadow Priest, without counting toward the number of bounces upon cast. Deals damage to enemy units within the radius of the wave."
+      "description": "Sends a wave of power that bounces between and heals all affected allied units. Shadow Wave always heals the Shadow Priest, without counting toward the number of bounces upon cast. Deals damage to enemy units within the radius of the wave. Cast Range: 800. Ally Bounce Distance: 475. Number of Bounces: 3/4/5/6. Heal: 85/105/125/145 (130/150/170/190). Damage Radius: 185. Damage: 85/105/125/145 (130/150/170/190). Cooldown: 12/11/10/9. Mana Cost: 90."
     },
     {
       "name": "Nothl Projection",
       "type": "active",
-      "description": "Heals the affected allied unit upon losing the Shallow Grave buff in any way."
+      "description": "Heals the affected allied unit upon losing the Shallow Grave buff in any way. Cast Range: 450. Min Duration: 5. Max Duration: 12 (17). Max Clone to Hero Distance: 1800. Set Move Speed: 100. Illusion Current Health as Damage: 100%. Cooldown: 70/60/50. Mana Cost: 100/150/200."
     }
   ]
 }

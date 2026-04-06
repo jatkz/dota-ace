@@ -1,0 +1,70 @@
+{
+  "name": "Shadow Fiend",
+  "description": "So, you're curious where I come from? There's one easy way to find out for yourself. Nevermore, the Shadow Fiend.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 25,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.7,
+    "agility": 3.6,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 59.4,
+    "healthRegen": 0.27,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.6,
+    "attackSpeed": 3.6,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 291,
+    "manaRegen": 1.2,
+    "armor": 4.17,
+    "magicResistance": 26.8,
+    "damageMin": 41,
+    "damageMax": 47,
+    "damageAverage": 44,
+    "projectileSpeed": 1200,
+    "attackRange": 525,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 125,
+    "bat": 1.6,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.54,
+    "moveSpeed": 305,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Feast of Souls Attack Speed",
+      "right": "+30 Shadowraze Stack Damage"
+    },
+    "15": {
+      "left": "+2 Feast of Souls Souls Collected Per Hero",
+      "right": "+2 Presence of the Dark Lord Armor Reduction"
+    },
+    "20": {
+      "left": "+0.2s Requiem of Souls Debuff Duration per Line",
+      "right": "+5 Necromastery Max Souls"
+    },
+    "25": {
+      "left": "Shadowraze Instant Attacks",
+      "right": "+30% Feast of Souls Cast Animation Speed"
+    }
+  }
+}

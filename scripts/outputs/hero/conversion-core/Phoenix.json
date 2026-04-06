@@ -1,0 +1,73 @@
+{
+  "name": "Phoenix",
+  "description": "Chirp!",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Initiator",
+    "Escape",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 12,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 3.3,
+    "agility": 1.5,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 72.6,
+    "healthRegen": 0.33,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.25,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 4.3,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 1,
+    "magicResistance": 26.6,
+    "damageMin": 44,
+    "damageMax": 54,
+    "damageAverage": 49,
+    "projectileSpeed": 1100,
+    "attackRange": 525,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 112,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.633,
+    "moveSpeed": 280,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1% Dying Light Missing Health as Damage",
+      "right": "+25% Icarus Dive Slow"
+    },
+    "15": {
+      "left": "+25 Health Regen",
+      "right": "+20 Fire Spirits Damage per Second"
+    },
+    "20": {
+      "left": "+0.6s Supernova Stun Duration",
+      "right": "+1.5% Sun Ray Max Health to Damage"
+    },
+    "25": {
+      "left": "+1000 Icarus Dive Cast Range",
+      "right": "+2 Supernova Hit Count"
+    }
+  }
+}

@@ -21,12 +21,12 @@
   "statGains": {
     "health": 59.4,
     "healthRegen": 0.27,
-    "armor": 0.52,
-    "attackSpeed": 3.1,
-    "mainAttackDamage": 3.1,
     "mana": 24,
     "manaRegen": 0.1,
-    "magicResistance": 0.1
+    "armor": 0.52,
+    "attackSpeed": 3.1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
   },
   "stats": {
     "health": 648,
@@ -52,31 +52,49 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+30 Bloodrage Attack Speed",
+      "right": "+200 Health"
+    },
+    "15": {
+      "left": "+100 Blood Rite Damage",
+      "right": "-0.7% Bloodrage Max Health Damage per Second"
+    },
+    "20": {
+      "left": "+15 Agility",
+      "right": "+400 Rupture Cast Range"
+    },
+    "25": {
+      "left": "+18% Thirst Max Move Speed",
+      "right": "+3s Blood Rite Silence Duration"
+    }
+  },
   "abilities": [
     {
       "name": "Sanguivore",
       "type": "passive",
-      "description": "The seeker applies a lifesteal-based heal on itself corresponding to the max health of the killed unit. Denying allied heroes heal for the same amount. The self-heal is even less effective when killing creeps."
+      "description": "The seeker applies a lifesteal-based heal on itself corresponding to the max health of the killed unit. Denying allied heroes heal for the same amount. The self-heal is even less effective when killing creeps. Base Lifesteal: 30. Hero Max Health as Lifesteal: 1.5%. Deny Factor: 1. Enemy Hero Death Heal Radius: 300. Ally Kill Heal Factor: 0.5. Creep Lifesteal Factor: 0.6."
     },
     {
       "name": "Bloodrage",
       "type": "active",
-      "description": "Causes the affected unit to attack faster and deal more spell damage at the cost of a percentage of its health per second. Deals pure damage for a percentage of the attacked target's max health."
+      "description": "Causes the affected unit to attack faster and deal more spell damage at the cost of a percentage of its health per second. Deals pure damage for a percentage of the attacked target's max health. Cast Range: 800. Max Health as Self-Damage per Second: 1.2% (0.5%). Attack Speed Bonus: 27/40/52/65 (57/70/82/95). Spell Damage Amp: 15%/20%/25%/30%. Duration: 8. Self Attack Speed Bonus: 55/80/105/130 (85/110/135/160). Cooldown: 14/12/10/8."
     },
     {
       "name": "Blood Rite",
       "type": "active",
-      "description": "The ritual completes after a delay, applying silence while damaging any enemy units within the radius."
+      "description": "The ritual completes after a delay, applying silence while damaging any enemy units within the radius. Cast Range: 1500. Radius: 600. Damage: 100/155/210/265 (200/255/310/365). Silence Duration: 3/4/5/6 (6/7/8/9). Cooldown: 15/14/13/12. Mana Cost: 90/100/110/120."
     },
     {
       "name": "Thirst",
       "type": "passive",
-      "description": "Sensing blood of the mortally wounded, Bloodseeker gains bonus movement speed when an enemy hero's health falls below a certain threshold, with the bonuses increasing as their health falls further. These insatiable bonuses stack per hero."
+      "description": "Sensing blood of the mortally wounded, Bloodseeker gains bonus movement speed when an enemy hero's health falls below a certain threshold, with the bonuses increasing as their health falls further. These insatiable bonuses stack per hero. Effect Radius: Global. Enemy Max Health for Min Bonus: 99%. Enemy Max Health for Max Bonus: 25%. Max Move Speed Bonus per Enemy: 16%/24%/32%/40% (34%/42%/50%/58%). Speed Linger Duration: 4. Detection Radius: Global Visibility."
     },
     {
       "name": "Rupture",
       "type": "active",
-      "description": "Deals an initial damage based on the unit-targeted enemy's current health. If the unit moves, it additionally takes damage based on the distance moved. Attacks on the affected unit now applies a non-disabling forced movement toward the direction Bloodseeker is facing."
+      "description": "Deals an initial damage based on the unit-targeted enemy's current health. If the unit moves, it additionally takes damage based on the distance moved. Replaces the ability's cooldown with charges. Increases initial damage. Cast Range: 800 (1200). Current Health as First Damage: 10% (13%). Moved Distance to Damage Factor: 0.35/0.45/0.55. Distance Threshold: 1300. Duration: 9/10/11. Cooldown: 75/70/65 (0.25). Mana Cost: 100/150/200."
     }
   ]
 }

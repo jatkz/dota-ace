@@ -1,6 +1,6 @@
 {
   "name": "Death Prophet",
-  "description": "Krobelus, the Death Prophet Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+  "description": "What I've seen goes far beyond death.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -21,9 +21,10 @@
   "statGains": {
     "health": 63.8,
     "healthRegen": 0.29,
+    "armor": 0.33,
+    "attackSpeed": 2,
     "mana": 36,
     "manaRegen": 0.15,
-    "armor": 0.33,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.56
   },
@@ -51,31 +52,49 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+200 Health",
+      "right": "+75 Silence Ao E"
+    },
+    "15": {
+      "left": "-2.5s Crypt Swarm Cooldown",
+      "right": "+50 Attack Speed"
+    },
+    "20": {
+      "left": "+30 Spirit Siphon Damage/Heal",
+      "right": "+6 Exorcism Spirits"
+    },
+    "25": {
+      "left": "Deaths During Exorcism Extend Duration by +8s",
+      "right": "-22s Spirit Siphon Restore Time"
+    }
+  },
   "abilities": [
     {
       "name": "Witchcraft",
       "type": "passive",
-      "description": "Grants self bonus movement speed and cooldown reduction. The bonus component is functional. do not create spirits on attack."
+      "description": "Grants self bonus movement speed and cooldown reduction. Move Speed Bonus: 0.5%. Cooldown Reduction: 0.75%. Move Speed Bonus Increase: 0.75%. Cooldown Reduction Increase: 0.75%. Spirits per Attack: (1)."
     },
     {
       "name": "Crypt Swarm",
       "type": "active",
-      "description": "Unleashes evil spirit of Exorcism's corresponding level per enemy unit affected."
+      "description": "Unleashes evil spirit of Exorcism's corresponding level per enemy unit affected. Cast Range: 900. First Radius: 110. Travel Distance: 900. End Radius: 300. Damage: 100/175/250/325. Cooldown: 9/8/7/6 (6.5/5.5/4.5/3.5). Mana Cost: 80/90/100/110."
     },
     {
       "name": "Silence",
       "type": "active",
-      "description": "Summons an exorcised banshee of its corresponding level per affected enemy unit."
+      "description": "Summons an exorcised banshee of its corresponding level per affected enemy unit. Cast Range: 900. Radius: 450 (525). Damage per Instance: 0. Silence Duration: 3.5/4/4.5/5. Cooldown: 15/14/13/12. Mana Cost: 80/90/100/110."
     },
     {
       "name": "Spirit Siphon",
       "type": "active",
-      "description": "Applies a caster-fear if the affected enemy target is siphoned for a certain amount of time consecutively. Increases max charges. Grants all immediately upon acquiring the ability. Subsequent ability acquisition only grants the remaining charges."
+      "description": "Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy. Applies a caster-fear if the affected enemy target is siphoned for a certain amount of time consecutively. Increases max charges. Cast Range: 500. Break Distance: 750. Damage per Second: 25/50/75/100 (55/80/105/130). Self Heal per Second: 25/50/75/100 (55/80/105/130). Drain Duration: 6. Fear Duration: (1). Cooldown: 0. Mana Cost: 60."
     },
     {
       "name": "Exorcism",
       "type": "active",
-      "description": "The banshees' damage is less effective on buildings. These Exorcism spirits released via Death Prophet's attacks or abilities deals additional damage compared to its active cast."
+      "description": "The banshees' damage is less effective on buildings. These Exorcism spirits released via Death Prophet's attacks or abilities deals additional damage compared to its active cast. Number of Spirits: 10/18/26 (16/24/32). Exorcism Duration: 40. Bonus Duration per Hero Death: (8). Acquisition Radius: 700. Max Radius: 1200. Spirits Move Speed: 525. Cooldown: 150. Mana Cost: 200/300/400."
     }
   ]
 }

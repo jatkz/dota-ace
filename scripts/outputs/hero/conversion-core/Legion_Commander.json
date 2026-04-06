@@ -1,0 +1,74 @@
+{
+  "name": "Legion Commander",
+  "description": "If they want war, then we shall give it to them!",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Disabler",
+    "Initiator",
+    "Durable",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 18,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.1,
+    "agility": 1.7,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 68.2,
+    "healthRegen": 0.31,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.65,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 2,
+    "magicResistance": 27,
+    "damageMin": 57,
+    "damageMax": 61,
+    "damageAverage": 59,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.46,
+    "animationBackswing": 0.64,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1 Outfight Them! Armor",
+      "right": "-2s Overwhelming Odds Cooldown"
+    },
+    "15": {
+      "left": "+35 Overwhelming Odds Damage per Hero",
+      "right": "+40 Press the Attack Health Regen"
+    },
+    "20": {
+      "left": "-1 Moment of Courage Attacks To Trigger",
+      "right": "+0.75s Duel Duration"
+    },
+    "25": {
+      "left": "Duel Refreshes Cooldown on Victory",
+      "right": "+100% Moment of Courage Lifesteal"
+    }
+  }
+}

@@ -22,6 +22,7 @@
     "mana": 62.4,
     "manaRegen": 0.26,
     "armor": 0.22,
+    "attackSpeed": 1.3,
     "magicResistance": 0.1,
     "mainAttackDamage": 5.2
   },
@@ -53,27 +54,27 @@
     {
       "name": "Oblivion Savant",
       "type": "passive",
-      "description": "Grants self outgoing spell damage amplification per Tower destroyed in the game."
+      "description": "Grants self outgoing spell damage amplification per Tower destroyed in the game. Spell Damage Amp per Tower Destroyed: 1.5%."
     },
     {
       "name": "Nether Blast",
       "type": "active",
-      "description": "An exploding pulse that deals damage to enemy units in the area."
+      "description": "An exploding pulse that deals damage to enemy units in the area. Cast Range: 600. Effect Radius: 400. Damage: 95/170/245/320 (295/370/445/520). Damage Factor: 0.65. Cooldown: 100/115/130/145."
     },
     {
       "name": "Decrepify",
       "type": "active",
-      "description": "Slows an enemy unit and reduces its magic resistance while rendering it ethereal. For affected allied units, Pugna grants them incoming heal amplification without slowing their movement speed."
+      "description": "Slows an enemy unit and reduces its magic resistance while rendering it ethereal. For affected allied units, Pugna grants them incoming heal amplification without slowing their movement speed. Cast Range: 550/600/650/700. Move Speed Slow: 45%/50%/55%/60%. Magic Resist Reduction: 20%/30%/40%/50%. Debuff Duration: 3.5 (5). Heal Amp: 10%/15%/20%/25%. Buff Duration: 3.5 (5). Cooldown: 16/13/10/7. Mana Cost: 80."
     },
     {
       "name": "Nether Ward",
       "type": "active",
-      "description": "Increases cast range. The self spell damage amplification and enemy reduction via the Nether Ward refraction is less effective to Pugna and all affected enemy heroes respectively."
+      "description": "Increases cast range. The self spell damage amplification and enemy reduction via the Nether Ward refraction is less effective to Pugna and all affected enemy heroes respectively. Cast Range: 150 (350). Hit Count: 4 (6). Duration: 21/24/27/30. Effect Radius: 1400. Base Damage: 50/70/90/110. Enemy Used Mana to Damage Factor: 1/1.2/1.4/1.6 (2.9/3.1/3.3/3.5). Mana Cost: 40."
     },
     {
       "name": "Life Drain",
       "type": "active",
-      "description": "When cast on an enemy unit, Life Drain damages the enemy unit and self-heals. When casting on an allied unit, Life Drain succors the allied unit while damaging Pugna. Applies a debuff that reduces the affected enemy hero's outgoing spell damage while channeling. Reduces cooldown."
+      "description": "When cast on an enemy unit, Life Drain damages the enemy unit and self-heals. When casting on an allied unit, Life Drain succors the allied unit while damaging Pugna. Applies a debuff that reduces the affected enemy hero's outgoing spell damage while channeling. Reduces cooldown. Cast Range: 700. Break Distance: 900. Max Channel Time: 10. Damage per Second: 150/250/350. Heal per Second: 150/250/350 (172.5/287.5/402.5). Current Health as Damage: 100%. Cooldown: 115/160/205."
     }
   ]
 }

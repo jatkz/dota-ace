@@ -19,11 +19,12 @@
   "statGains": {
     "health": 55,
     "healthRegen": 0.25,
-    "mana": 22.8,
-    "manaRegen": 0.095,
     "armor": 0.43,
     "attackSpeed": 2.6,
-    "mainAttackDamage": 2.6
+    "mainAttackDamage": 2.6,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 538,
@@ -49,36 +50,54 @@
     "visionDay": 1800,
     "visionNight": 1000
   },
+  "talents": {
+    "10": {
+      "left": "+30 Attack Damage",
+      "right": "+0.6s Shuriken Toss Slow"
+    },
+    "15": {
+      "left": "+50 Track Gold",
+      "right": "-30% Shadow Walk Incoming Damage"
+    },
+    "20": {
+      "left": "+50 Jinada Gold Steal",
+      "right": "Track Grants Shared Vision"
+    },
+    "25": {
+      "left": "No Jinada Cooldown",
+      "right": "+250 Shuriken Toss Damage"
+    }
+  },
   "abilities": [
     {
       "name": "Big Game Hunter",
       "type": "passive",
-      "description": "Applies a debuff to certain top networth enemy heroes. Grants Gondar a kill gold bonus or an assist gold bonus upon killing the debuff-affected enemy hero."
+      "description": "Applies a debuff to certain top networth enemy heroes. Grants Gondar a kill gold bonus or an assist gold bonus upon killing the debuff-affected enemy hero. Kill Gold Factor: 1.15. Assist Gold Factor: 1.15."
     },
     {
       "name": "Shuriken Toss",
       "type": "active",
-      "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and slowing the target. While the shuriken may be small, Gondar's precise aim can cause critical damage."
+      "description": "Hurls a deadly shuriken at an enemy unit, dealing damage and slowing the target. While the shuriken may be small, Gondar's precise aim can cause critical damage. Cast Range: 375/425/475/525 (600). Damage: 100/170/240/310 (350/420/490/560). Move Speed Slow: 100%. Slow Duration: 0.35 (0.95). Bounce Search Radius: 1200. Attack Damage Bonus to Spell Damage Factor: (1). Cooldown: 5. Mana Cost: 75/80/85/90."
     },
     {
       "name": "Jinada",
       "type": "active",
-      "description": "Deals bonus damage and stealing some unreliable gold when off-cooldown."
+      "description": "Deals bonus damage and stealing some unreliable gold when off-cooldown. Cast Range: 150. Attack Damage Bonus: 70/105/140/175. Cooldown: 9/7/5/3 (0)."
     },
     {
       "name": "Shadow Walk",
       "type": "active",
-      "description": "The attack breaking invisibility will stun the attacked enemy unit for a short duration."
+      "description": "The attack breaking invisibility will stun the attacked enemy unit for a short duration. Fade Time: 1/0.75/0.5/0.25. Move Speed Bonus: 8%/12%/16%/20%. Invisibility Duration: 20/25/30/35. Damage Reduction: (30%). Stun Duration: 1/1.2/1.4/1.6. Cooldown: 18/17/16/15 (13/12/11/10). Mana Cost: 50."
     },
     {
       "name": "Friendly Shadow",
       "type": "active",
-      "description": "Applies an invisibility buff based on Shadow Walk of the corresponding level. Has a slightly longer fade time duration for allied heroes. The attack breaking invisibility will stun the attacked enemy unit for a short duration."
+      "description": "Applies an invisibility buff based on Shadow Walk of the corresponding level. Has a slightly longer fade time duration for allied heroes. The attack breaking invisibility will stun the attacked enemy unit for a short duration. Cast Range: 650. Fade Time: 0.5. Cooldown: 13/12/11/10. Mana Cost: 50."
     },
     {
       "name": "Track",
       "type": "active",
-      "description": "Grants True Sight, applies an incoming damage amplification debuff, and information on how much gold the affected enemy unit is carrying. If the Tracked enemy unit dies, Gondar collects a bonus gold bounty. Track does not break Gondar's Shadow Walk upon cast. The debuff applied additionally grants shared vision to Gondar's allied units."
+      "description": "Grants True Sight, applies an incoming damage amplification debuff, and information on how much gold the affected enemy unit is carrying. If the Tracked enemy unit dies, Gondar collects a bonus gold bounty. Track does not break Gondar's Shadow Walk upon cast. The debuff applied additionally grants shared vision to Gondar's allied units. Cast Range: 1000. Damage Amp: 8%/12%/16%. Debuff Duration: 25. Mana Cost: 60."
     }
   ]
 }

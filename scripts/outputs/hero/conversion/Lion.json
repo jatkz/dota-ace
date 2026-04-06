@@ -1,6 +1,6 @@
 {
   "name": "Lion",
-  "description": "All hells broken loose, and I hold the pieces. Lion, the Demon Witch.",
+  "description": "All hells broken loose, and I hold the pieces.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -61,22 +61,22 @@
     {
       "name": "Earth Spike",
       "type": "active",
-      "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall."
+      "description": "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall. Cast Range: 650 (900). Travel Distance: 925 (1175). Spikes Radius: 140. Number of Spikes: 1 (3). Damage: 105/170/235/300. Stun Duration: 1.3/1.6/1.9/2.2. Cooldown: 14/13/12/11. Mana Cost: 90/110/130/150."
     },
     {
       "name": "Hex",
       "type": "active",
-      "description": "Lion is compelled to share his transfiguration, twisting the essence of those who oppose him."
+      "description": "Lion is compelled to share his transfiguration, twisting the essence of those who oppose him. Cast Range: 575/600/625/650. Set Move Speed: 120. Duration: 2/2.4/2.8/3.2. Current Health as Damage: 100%. Radius: 600. Cooldown: 24/20/16/12. Mana Cost: 110/140/170/200."
     },
     {
       "name": "Mana Drain",
       "type": "active",
-      "description": "Channels and draws mana for the affected unit for Lion himself, while applying a movement speed slow. Can target allied units with mana to transfer mana to them and grants bonus movement speed at a lower rate."
+      "description": "Channels and draws mana for the affected unit for Lion himself, while applying a movement speed slow. Can target allied units with mana to transfer mana to them and grants bonus movement speed at a lower rate. Cast Range: 850. Break Distance: 1000 (1500). Max Channel Time: 5. Mana Transfer: 20/40/60/120. Move Speed Slow: 15%/20%/25%/30% (25%/30%/35%/40%). Current Mana Threshold: 0. Cooldown: 15/12/9/6."
     },
     {
       "name": "Finger of Death",
       "type": "active",
-      "description": "The Finger of Death now hits all enemy units within the radius. Increases damage and reduces cooldown."
+      "description": "The Finger of Death now hits all enemy units within the radius. Increases damage and reduces cooldown. Cast Range: 900. Damage: 600/725/850 (700/825/950). Kill Grace Duration: 3. Damage Bonus per Kill: 30 (50). Effect Radius: (325). Cooldown: 110/70/30. Mana Cost: 200/400/600."
     }
   ]
 }

@@ -27,7 +27,8 @@
     "manaRegen": 0.08,
     "armor": 0.37,
     "attackSpeed": 2.2,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3
   },
   "stats": {
     "health": 626,
@@ -57,27 +58,27 @@
     {
       "name": "Hunter in the Night",
       "type": "passive",
-      "description": "The higher Balanar's level, the greater the bonus movement speed and bonus attack speed increase. Increases both the base bonus movement speed and base bonus attack speed values."
+      "description": "The higher Balanar's level, the greater the bonus movement speed and bonus attack speed increase. Increases both the base bonus movement speed and base bonus attack speed values. Move Speed Bonus: 24% (39%). Attack Speed Bonus: 38 (88). Status Resist Bonus: (20%). Lvl per Move Speed Bonus: 3. Move Speed Bonus Increase: 2%/4%/6%/8%/10%/12%/14%/16%/18%/20%. Attack Speed Bonus Increase: 2."
     },
     {
       "name": "Void",
       "type": "active",
-      "description": "Damages and applies a movement speed slow on the unit-targeted enemy. Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was."
+      "description": "Damages and applies a movement speed slow on the unit-targeted enemy. Balanar creates a vortex of infinite night, tearing opponents violently into the eternal darkness that once was. Cast Range: 525. Damage: 80/160/240/320. Move Speed Slow: 50%. Attack Speed Slow: 50. Slow Duration: 1.25. Slow Duration: 1.6/2.2/2.8/3.4. Cooldown: 11/10/9/8. Mana Cost: 90/95/100/105."
     },
     {
       "name": "Crippling Fear",
       "type": "active",
-      "description": "Silences and applies damage over time while near the Night Stalker for the duration."
+      "description": "Silences and applies damage over time while near the Night Stalker for the duration. Radius: 375 (450). Damage per Second: 25/30/35/40 (35/40/45/50). Damage Duration: 3. Silence Duration: 3. Aura Linger Duration: 0.5. Damage Duration: 4.5/5/5.5/6. Cooldown: 30/25/20/15. Mana Cost: 50."
     },
     {
       "name": "Midnight Feast",
       "type": "passive",
-      "description": "Self-heals utilizing lifesteal when attacking enemy units."
+      "description": "Self-heals utilizing lifesteal when attacking enemy units. Lifesteal: 12/16/20/24 (112/116/120/124). Creep Lifesteal Factor: 0.6. Cast Range: 125. Current Health as Damage: 100%. Max Health as Health Restore: 10%/15%/20%/25%. Max Mana as Mana Restore: 10%/12%/14%/16%. Cooldown: 39/36/33/30."
     },
     {
       "name": "Dark Ascension",
       "type": "active",
-      "description": "Grants Night Stalker flying movement, unobstructed vision and bonus attack damage during his ascension."
+      "description": "Grants Night Stalker flying movement, unobstructed vision and bonus attack damage during his ascension. Attack Damage Bonus: 50/100/150 (75/125/175). Flying Vision Factor: 1. Duration: 30. Cooldown: 140/135/130. Mana Cost: 125/175/225."
     }
   ]
 }

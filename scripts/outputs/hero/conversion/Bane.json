@@ -1,6 +1,6 @@
 {
   "name": "Bane",
-  "description": "I dreamt a field of war...and woke to find myself upon it. Atropos, the Bane When the gods have nightmares, it is Bane Elemental who brings them.",
+  "description": "I dreamt a field of war…and woke to find myself upon it.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -22,10 +22,9 @@
   "statGains": {
     "health": 55,
     "healthRegen": 0.25,
-    "armor": 0.42,
-    "attackSpeed": 2.5,
     "mana": 30,
     "manaRegen": 0.125,
+    "armor": 0.42,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.38
   },
@@ -53,31 +52,49 @@
     "visionDay": 1800,
     "visionNight": 1200
   },
+  "talents": {
+    "10": {
+      "left": "Increases the damage dealt by Brain Sap by 50%.",
+      "right": "Nightmare now deals additional magic damage equal to 30% of the target's maximum health."
+    },
+    "15": {
+      "left": "Grants a 30% chance to stun the target for 1 second when using Nightmare.",
+      "right": "Reduces the cooldown of Fiend's Grip by 20 seconds."
+    },
+    "20": {
+      "left": "Ichor of Nyctasha now applies status resistance reduction to all debuffs, not just Bane's. Status Resist Reduction: 5%. Duration:.",
+      "right": "Increases the number of tendrils used by Enfeeble by 1."
+    },
+    "25": {
+      "left": "Increases the amount of health gained from Brain Sap by 30%.",
+      "right": "Reduces the cooldown of Enfeeble by 6 seconds."
+    }
+  },
   "abilities": [
     {
       "name": "Ichor of Nyctasha",
       "type": "passive",
-      "description": "Applies a permanent status resistance reduction debuff stack on the dying enemy hero. The status resistance reduction is only applied to debuff sourced to Bane."
+      "description": "Applies a permanent status resistance reduction debuff stack on the dying enemy hero. The status resistance reduction is only applied to debuff sourced to Bane Status Resist Reduction: 5% Duration: Status Resist Reduction: 5%."
     },
     {
       "name": "Enfeeble",
       "type": "active",
-      "description": "Deals damage per second while reducing the affected enemy unit's total attack damage and cast range. Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts."
+      "description": "Deals damage per second while reducing the affected enemy unit's total attack damage and cast range. Each tendril of fear that Atropos weaves increases the vulnerability of his victims to arcane and unknown arts. Cast Range: 700/800/900/1000. Damage per Second: 12/18/24/30 (25/31/37/43). Attack Damage Reduction: 55%/60%/65%/70%. Cast Range Factor: 0.7 (0.5). Duration: 9. Cooldown: 22/17/12/7. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Brain Sap",
       "type": "active",
-      "description": "Feasts on the vital energies of an enemy unit, self-heals and deals pure damage. Atropos finds no greater pleasure than to harvest the fear he creates."
+      "description": "Feasts on the vital energies of an enemy unit, self-heals and deals pure damage. Atropos finds no greater pleasure than to harvest the fear he creates. Cast Range: 625 (750). Damage: 90/160/230/300. Damage to Heal Factor: 1. Secondary Damage to Heal Factor: (0.3). Radius: (550). Cooldown: 17/15/13/11 (14/12/10/8). Mana Cost: 120/130/140/150."
     },
     {
       "name": "Nightmare",
       "type": "active",
-      "description": "Grants a brief invulnerability moment to the affected unit both upon debuff application and per debuff application."
+      "description": "Grants a brief invulnerability moment to the affected unit both upon debuff application and per debuff application. Cast Range: 550/600/650/700. Set Vision Range: 200. Push Speed: 110. Sleep Duration: 3.5/4.5/5.5/6.5. Invulnerablity Duration: 1. Cooldown: 25/22/19/16 (22/19/16/13). Mana Cost: 120/130/140/150."
     },
     {
       "name": "Fiend's Grip",
       "type": "active",
-      "description": "Grants a brief invulnerability moment to the affected unit both upon debuff application and per debuff application. These illusions are uncontrollable, receives additional incoming damage, and are instant killed upon being interrupted."
+      "description": "Grants a brief invulnerability moment to the affected unit both upon debuff application and per debuff application. These illusions are uncontrollable, receives additional incoming damage, and are instant killed upon being interrupted. Cast Range: 625. Max Channel Time: 4.75/5.25/5.75 (7.75/8.25/8.75). Damage Interval: 0.5. Damage per Instance: 35/55/75. Max Mana Loss per Instance: 2.5% (5%). Damage to Heal Factor: 1. Cooldown: 120/110/100 (75/65/55). Mana Cost: 200/300/400."
     }
   ]
 }

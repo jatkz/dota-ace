@@ -1,6 +1,6 @@
 {
   "name": "Skywrath Mage",
-  "description": "Even on this fallen field, I dedicate my powers to the lofty Skywrath.",
+  "description": "A high-born mage dedicated to protecting the Skywrath scion, even if it means serving a vengeful queen.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -23,7 +23,6 @@
     "mana": 49.2,
     "manaRegen": 0.205,
     "armor": 0.13,
-    "attackSpeed": 0.8,
     "magicResistance": 0.1,
     "mainAttackDamage": 4.1
   },
@@ -55,27 +54,27 @@
     {
       "name": "Shield of the Scion",
       "type": "passive",
-      "description": "Encloses Dragonus in a magical damage barrier per spell damage instance applied to enemy heroes. The barrier scales correspondingly to Dragonus' current hero level."
+      "description": "Encloses Dragonus in a magical damage barrier per spell damage instance applied to enemy heroes. The barrier scales correspondingly to Dragonus' current hero level. Stack per Damage Instance: 1. Barrier Bonus per Hero Level: 1. Stack Duration: 12."
     },
     {
       "name": "Arcane Bolt",
       "type": "active",
-      "description": "Launches a slow-moving bolt to the unit-targeted enemy that deals bonus damage based on current. Launches additional Arcane Bolts upon cast toward other units centered around the unit-targeted enemy, prioritizing heroes."
+      "description": "Launches a slow-moving bolt to the unit-targeted enemy that deals bonus damage based on current intelligence. Launches additional Arcane Bolts upon cast toward other units centered around the unit-targeted enemy, prioritizing heroes. Cast Range: 875 (1000). Number of Targets: 1 (3). Base Damage: 60/90/120/150. Int Damage Bonus Factor: 1.5 (3). Secondary Targets Search Radius: (500). Cooldown: 5/4/3/2. Mana Cost: 70."
     },
     {
       "name": "Concussive Shot",
       "type": "active",
-      "description": "Sets a long range shot that hits the closest hero. Upon impact, the projectile deals damage and slows all affected enemy units within the radius. Launches additional Concussive Shots toward other units centered around the debuff-affected enemy, prioritizing heroes."
+      "description": "Sets a long range shot that hits the closest hero. Upon impact, the projectile deals damage and slows all affected enemy units within the radius. Launches additional Concussive Shots toward other units centered around the debuff-affected enemy, prioritizing heroes. Search Radius: 1600 (0). Effect Radius: 250. Number of Targets: 1 (2). Area Damage: 120/180/240/300. Move Speed Slow: 40% (60%). Slow Duration: 4. Cooldown: 15/14/13/12. Mana Cost: 80/85/90/95."
     },
     {
       "name": "Ancient Seal",
       "type": "active",
-      "description": "Reduces the unit-targeted enemy's magic resistance. A holy incantation, whosoever finds themselves touched by Avilliva's sigil must suffer in penitent silence."
+      "description": "Reduces the unit-targeted enemy's magic resistance. A holy incantation, whosoever finds themselves touched by Avilliva's sigil must suffer in penitent silence. Cast Range: 700/750/800/850. Number of Targets: 1 (2). Magic Resist Reduction: 20%/25%/30%/35% (30%/35%/40%/45%). Debuff Duration: 3/4/5/6. Silence Duration: 3/4/5/6. Secondary Targets Search Radius: (500). Cooldown: 80/90/100/110."
     },
     {
       "name": "Mystic Flare",
       "type": "active",
-      "description": "Deals massive damage that is distributed evenly among all enemy heroes within the radius."
+      "description": "Deals massive damage that is distributed evenly among all enemy heroes within the radius. Cast Range: 1200. Damage Radius: 170. Number of Flares: 1 (2). Damage Interval: 0.1. Total Damage: 800/1200/1600 (1200/1600/2000). Flare Duration: 2.2. Cooldown: 60/40/20. Mana Cost: 300/550/800."
     }
   ]
 }

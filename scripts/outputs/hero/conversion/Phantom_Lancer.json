@@ -21,11 +21,11 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
+    "mana": 21.6,
+    "manaRegen": 0.09,
     "armor": 0.57,
     "attackSpeed": 3.4,
     "mainAttackDamage": 3.4,
-    "mana": 21.6,
-    "manaRegen": 0.09,
     "magicResistance": 0.1
   },
   "stats": {
@@ -56,27 +56,27 @@
     {
       "name": "Illusory Armaments",
       "type": "passive",
-      "description": "Azwraith's illusion has a min illusion damage dealt factor corresponding to the hero's attack damage value upon creation, for a duration."
+      "description": "Azwraith's illusion has a min illusion damage dealt factor corresponding to the hero's attack damage value upon creation, for a duration. Min Illusion Damage Dealt: 17%. Ability Level Up Interval: 3. Min Illusion Damage Dealt Bonus: 2%. Duration: 3 (5)."
     },
     {
       "name": "Spirit Lance",
       "type": "active",
-      "description": "Sends a magical spirit lance to a target enemy unit that damages and slows its movement speed."
+      "description": "Sends a magical spirit lance to a target enemy unit that damages and slows its movement speed. Cast Range: 600/650/700/750. Damage: 100/160/220/280 (200/260/320/380). Move Speed Slow: 14%/21%/28%/35%. Slow Duration: 3.75 (4.75). Number of Illusions: 1. Damage Dealt: 20% (70%). Cooldown: 10/9/8/7. Mana Cost: 120."
     },
     {
       "name": "Doppelganger",
       "type": "active",
-      "description": "Nummer Eins deals no damage and does not receive additional incoming damage. This illusion's duration is not extended. Nummer Zwei deals a portion of Phantom Lancer's damage and receive additional incoming damage. This illusion's duration is not extended."
+      "description": "Nummer Eins deals no damage and does not receive additional incoming damage. This illusion's duration is not extended. Nummer Zwei deals a portion of Phantom Lancer's damage and receive additional incoming damage. This illusion's duration is not extended. Cast Range: 575 (700). Illusion Gather Radius: 900. Reappear Radius: 325. Reappear Time: 1. Gathered Illusion Bonus Duration: 2. Number of Illusion One: 1. Cooldown: 22/18/14/10. Mana Cost: 70."
     },
     {
       "name": "Phantom Rush",
       "type": "active",
-      "description": "Grants Azwraith and his illusions both haste and phase movement upon proc. Creates Juxtapose-based illusions that automatically attacks the enemy units Azwraith rushes through. Additionally creates an illusion after a certain distance is rushed."
+      "description": "Grants Azwraith and his illusions both haste and phase movement upon proc. Creates Juxtapose-based illusions that automatically attacks the enemy units Azwraith rushes through. Additionally creates an illusions after a certain distance is rushed. Min Proc Distance: 200. Max Proc Distance: 600/675/750/825 (1225/1300/1375/1450). Haste Speed: 800. Max Haste Duration: 5. Collision Radius: 125. Distance Counter: 600. Cooldown: 13/10/7/4."
     },
     {
       "name": "Juxtapose",
       "type": "passive",
-      "description": "Has a chance to create an illusion of himself per attack."
+      "description": "Has a chance to create an illusion of himself per attack. Proc Chance: 40%/45%/50%. Duration from Hero: 8. Illusion Proc Chance: 9% (12%). Duration from Illusions: 4. Damage Dealt: 15%. Damage Taken: 600% (530%)."
     }
   ]
 }

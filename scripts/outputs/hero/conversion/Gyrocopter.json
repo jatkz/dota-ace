@@ -25,8 +25,8 @@
     "manaRegen": 0.12,
     "armor": 0.57,
     "attackSpeed": 3.4,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.4
+    "mainAttackDamage": 3.4,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -56,27 +56,27 @@
     {
       "name": "Afterburner",
       "type": "passive",
-      "description": "Both attack damage and spell damage instance sourced to Gyrocopter grants self a movement speed bonus stack per affected enemy hero for a certain duration."
+      "description": "Both attack damage and spell damage instance sourced to Gyrocopter grants self a movement speed bonus stack per affected enemy hero for a certain duration. Speed Bonus per Stack: 1. Duration: 3.9. Move Speed Bonus per Stack: 1. Creep Speed Factor: 0.5. Duration Increase: 0.1."
     },
     {
       "name": "Rocket Barrage",
       "type": "active",
-      "description": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter."
+      "description": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter. Search Radius: 400. Number of Targets: 1. Damage per Rocket: 8/14/20/26 (22/28/34/40). Barrage Duration: 3. Cooldown: 7/6.5/6/5.5. Mana Cost: 85."
     },
     {
       "name": "Homing Missile",
       "type": "active",
-      "description": "Applies of Gyrocopter's corresponding ability level when acquired. Launches the second upon the first missile's impact, or upon the first missile being destroyed."
+      "description": "Fires a homing missile to seek the unit-targeted enemy. Dealing damage and stunning when it reaches the target. Enemy units can destroy the missile before it reaches its target. Cast Range: 1050. Hit Count: 3. Damage: 90/180/270/360 (112.5/225/337.5/450). Stun Duration: 1.3/1.7/2.1/2.5 (1.6/2/2.4/2.8). Missile Move Speed: 500. Tower Hit Count: 6. Cooldown: 30/24/18/12. Mana Cost: 120/130/140/150."
     },
     {
       "name": "Flak Cannon",
-      "type": "passive",
-      "description": "Attack modifiers only affects the primary attacked target."
+      "type": "active",
+      "description": "Attack modifiers only affects the primary attacked target. Vision Bonus: 200. Search Radius: 1250. Number of Attacks: 4/5/6/7 (7/8/9/10). Max Attack Targets: Instant. Attack Factor: 1. Duration: 12. Cooldown: 26/24/22/20. Mana Cost: 50/60/70/80."
     },
     {
       "name": "Call Down",
       "type": "active",
-      "description": "Call down a series of aerial missile strikes that slow and damage enemy units in a target area."
+      "description": "Call down a series of aerial missile strikes that slow and damage enemy units in a target area. Cast Range: 1000. Missile Effect Radius: 400. Strike Distance: 500. Number of Strikes: 3. Damage: 200/350/500. Move Speed Slow: 50%. Cooldown: 90/75/60. Mana Cost: 150/200/250."
     }
   ]
 }

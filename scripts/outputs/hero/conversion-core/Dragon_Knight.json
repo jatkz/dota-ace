@@ -1,0 +1,74 @@
+{
+  "name": "Dragon Knight",
+  "description": "The Dragon Slyrak sleeps within this armor, and the knight within the Dragon waits. Beware you do not wake them both.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Durable",
+    "Disabler",
+    "Initiator",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 14,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.2,
+    "agility": 2,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 70.4,
+    "healthRegen": 0.32,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.33,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.2
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 2.33,
+    "magicResistance": 26.8,
+    "damageMin": 55,
+    "damageMax": 61,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.6,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-2s Breathe Fire Cooldown",
+      "right": "+15 Attack Damage"
+    },
+    "15": {
+      "left": "+300 Health",
+      "right": "+0.4s Dragon Tail Stun"
+    },
+    "20": {
+      "left": "+200 Breathe Fire Damage",
+      "right": "+150 Elder Dragon Form Attack Range"
+    },
+    "25": {
+      "left": "+50% Wyrm's Wrath Bonuses",
+      "right": "+12 Dragon Blood Health Regen/Armor"
+    }
+  }
+}

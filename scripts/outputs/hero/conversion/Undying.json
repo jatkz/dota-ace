@@ -21,10 +21,11 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "mana": 33.6,
-    "manaRegen": 0.14,
+    "mainAttackDamage": 2.4,
     "armor": 0.2,
     "attackSpeed": 1.2,
+    "mana": 33.6,
+    "manaRegen": 0.14,
     "magicResistance": 0.1
   },
   "stats": {
@@ -55,27 +56,27 @@
     {
       "name": "Ceaseless Dirge",
       "type": "passive",
-      "description": "Only when the Dirge of the Dead God ceases will this soldier's march finally end."
+      "description": "Only when the Dirge of the Dead God ceases will this soldier's march finally end. Init Cooldown: 479. Mana Cost: 480."
     },
     {
       "name": "Decay",
       "type": "active",
-      "description": "Grants self bonus per affected enemy hero. Increases the steal."
+      "description": "Grants self bonus per affected enemy hero. Increases the steal. Cast Range: 650. Radius: 325. Damage: 20/60/100/140 (50/90/130/170). Debuff Duration: 35. Buff Duration: 35. Creep Damage Factor: 2. Cooldown: 13/10/7/4. Mana Cost: 100."
     },
     {
       "name": "Soul Rip",
       "type": "active",
-      "description": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Casting on allied heroes temporarily grants them bonus based on Undying's current strength."
+      "description": "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Cast Range: 750. Search Radius: 1300. Damage per Unit: 14/26/38/50 (34/46/58/70). Heal per Unit: 14/26/38/50 (34/46/58/70). Hit Count Restore: 4/8/12/16. Cooldown: 15/12/9/6. Mana Cost: 80/90/100/110."
     },
     {
       "name": "Tombstone",
-      "type": "passive",
-      "description": "This unit does not feel the effects from magical spell damage sources. Zombies are spell immune and their attacks slow the affected enemy unit."
+      "type": "active",
+      "description": "Summons a Tombstone at the targeted point. Zombies will frequently spawn next to every enemy unit in the area around the Tombstone, and attack them. Tombstone can now be cast on allied heroes, entombing them temporarily in the process. An empty Tombstone can be right-clicked by Undying or his allies to enter it manually. Stuns the allied hero if the Tombstone is destroyed with the ally inside. Cast Range: 500. Zombie Spawn Radius: 1200. Zombie Spawn Interval: 4/3.6/3.2/2.8. Hit Count: 5/6/7/8 (7/8/9/10). Tombstone Duration: 30. Creep Hit Count: 20/24/28/32 (28/32/36/40). Cooldown: 120/140/160/180."
     },
     {
       "name": "Flesh Golem",
       "type": "active",
-      "description": "Undying transforms into a horrifying flesh golem that grants a percentage increase with flat bonus movement speed. The Flesh Golem imbues Undying's attacks with a movement speed slow and damage amplification on affected enemy units."
+      "description": "Undying transforms into a horrifying flesh golem that grants a percentage increase with flat bonus movement speed. The Flesh Golem imbues Undying's attacks with a movement speed slow and damage amplification on affected enemy units. Str Bonus Factor: 1.4/1.5/1.6 (1.9/2/2.1). Move Speed Bonus: 20. Flesh Golem Duration: 40. Move Speed Slow: 30%/35%/40%. Damage Amp: 25%/30%/35%. Debuff Duration: 3. Cooldown: 100/125/150."
     }
   ]
 }

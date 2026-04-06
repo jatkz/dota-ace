@@ -1,0 +1,73 @@
+{
+  "name": "Oracle",
+  "description": "I have an end in mind for you.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 15,
+    "intelligence": 26
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 1.7,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 387,
+    "manaRegen": 1.8,
+    "armor": 3.5,
+    "magicResistance": 27.6,
+    "damageMin": 39,
+    "damageMax": 45,
+    "damageAverage": 42,
+    "projectileSpeed": 900,
+    "attackRange": 625,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 295,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+8 False Promise Armor",
+      "right": "+0.5s Fortune's End Duration"
+    },
+    "15": {
+      "left": "+25% Purifying Flames Enemy Damage",
+      "right": "+100 Fortune's End Radius"
+    },
+    "20": {
+      "left": "-1s Purifying Flames Cooldown",
+      "right": "-20s False Promise Cooldown"
+    },
+    "25": {
+      "left": "+1.5s False Promise Duration",
+      "right": "Fortune's End Constantly Basic Dispels"
+    }
+  }
+}

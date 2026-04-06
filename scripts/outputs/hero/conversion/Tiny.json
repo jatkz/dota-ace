@@ -27,8 +27,7 @@
     "manaRegen": 0.11,
     "armor": 0,
     "attackSpeed": 0,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 4.2
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 780,
@@ -58,32 +57,32 @@
     {
       "name": "Insurmountable",
       "type": "passive",
-      "description": "Grants bonus status resistance and bonus slow resistance per current."
+      "description": "Grants bonus status resistance and bonus slow resistance per current Strength. Total Str to Status Resist Factor: 0.1. Total Str to Slow Resist Factor: 0.2."
     },
     {
       "name": "Avalanche",
       "type": "active",
-      "description": "Stuns and deals damage over time to enemy units within the radius."
+      "description": "Stuns and deals damage over time to enemy units within the radius. Cast Range: 600. Effect Radius: 325/340/355/370. Number of Damage Instances: 5. Instances Interval: 0.3. Total Damage: 100/190/280/370 (190/280/370/460). Stun Duration: 1.5. Cooldown: 23/20/17/14. Mana Cost: 95/110/125/140."
     },
     {
       "name": "Toss",
       "type": "active",
-      "description": "Grants flat bonus Toss spell damage per Grow level. The Toss bonus spell damage from is not affected by the landing damage factor."
+      "description": "Toss damage is less effective on buildings. Grants flat bonus Toss spell damage per Grow level. Cast Range: 800/900/1000/1100. Grab Radius: 300. Damage Radius: 275. Damage: 90/180/270/360. Toss Duration: 1.25. Damage Factor: 0.33. Cooldown: 20/17/14/11. Mana Cost: 110/125/140/155."
     },
     {
       "name": "Tree Grab",
       "type": "active",
-      "description": "Wields a tree as a weapon for a limited number of attacks. Grants Tiny bonus attack range, and a pseudo-cleave attack effect until the tree is thrown. Wielding the tree grants a flat attack damage bonus while attacking enemy units."
+      "description": "Wields a tree as a weapon for a limited number of attacks. Grants Tiny bonus attack range, and a pseudo-cleave attack effect until the tree is thrown. Wielding the tree grants a flat attack damage bonus while attacking enemy units. Cast Range: 165. Area Damage Length: 400. Area Damage Radius: 200. Number of Attacks: 5. Set Base Attack Range: 300. Attack Damage to Area Damage Factor: 0.7/0.8/0.9/1 Buff Duration:. Cooldown: 22/19/16/13. Mana Cost: 40."
     },
     {
       "name": "Tree Volley",
       "type": "active",
-      "description": "Tiny channels to throw random trees within the radius towards the area-targeted location. Deals damage correspondingly to Tiny's attack damage upon per tree impact while applying various attack effects."
+      "description": "Tiny channels to throw random trees within the radius towards the area-targeted location. Deals damage correspondingly to Tiny's attack damage upon per tree impact while applying various attack effects. Cast Range: 1200. Tree Search Radius: 700. Damage Radius: 400. Max Channel Time: 2.5. Instant Attack Factor: 1. Move Speed Slow: 25%. Mana Cost: 17."
     },
     {
       "name": "Grow",
       "type": "passive",
-      "description": "Gains craggy mass, increasing his attack damage, and armor while slowing his total attack speed. Grants flat bonus Toss spell damage per level."
+      "description": "Gains craggy mass, increasing his attack damage, and armor while slowing his total attack speed. Grants flat bonus Toss spell damage per level. Base Attack Damage Bonus: 55/110/165. Armor Bonus: 5/10/15. Move Speed Bonus: 10/15/20. Total Attack Speed Factor: 0.65 (0.73). Toss Damage Bonus: 50/175/300."
     }
   ]
 }

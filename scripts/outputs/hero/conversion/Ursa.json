@@ -20,12 +20,12 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "mana": 18,
-    "manaRegen": 0.075,
     "armor": 0.47,
     "attackSpeed": 2.8,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.8
+    "mainAttackDamage": 2.8,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 670,
@@ -55,27 +55,27 @@
     {
       "name": "Maul",
       "type": "passive",
-      "description": "Grants bonus attack damage based on Ursa's current health."
+      "description": "Grants bonus attack damage based on Ursa's current health. Current Health to Attack Damage Bonus: 1.25% (1.75%)."
     },
     {
       "name": "Earthshock",
       "type": "active",
-      "description": "Applies stacks of Fury Swipes to all enemy units within the radius upon landing."
+      "description": "Applies stacks of Fury Swipes to all enemy units within the radius upon landing. Radius: 385 (685). Leap Distance: 250. Damage: 75/125/175/225. Move Speed Slow: 22%/28%/34%/40%. Slow Duration: 4. Leap Duration: 0.25. Cooldown: 15/13/11/9. Mana Cost: 95."
     },
     {
       "name": "Overpower",
       "type": "active",
-      "description": "Grants Ursa attack speed bonus and slow resistance bonus for a number of subsequent attacks."
+      "description": "Grants Ursa attack speed bonus and slow resistance bonus for a number of subsequent attacks. Attack Speed Bonus: 400. Number of Attacks: 3/4/5/6 (6/7/8/9). Slow Resist Bonus: 25%. Duration: 20. Cooldown: 12/11/10/9. Mana Cost: 45/50/55/60."
     },
     {
       "name": "Fury Swipes",
       "type": "passive",
-      "description": "Consecutive attacks to the same enemy deals more damage. If the same target is not attacked after a period of time, the bonus damage is lost."
+      "description": "Consecutive attacks to the same enemy deals more damage. If the same target is not attacked after a period of time, the bonus damage is lost. Damage Bonus per Stack: 12/20/28/36 (18/26/34/42). Debuff Duration: 8/12/16/20 (17/21/25/29). Attack Damage Bonus per Stack: 12/20/28/36 (18/26/34/42). Debuff Duration: 8."
     },
     {
       "name": "Enrage",
       "type": "active",
-      "description": "Goes into a frenzy, removing all existing debuffs while providing damage reduction and status resistance. Enables Ursa to Enrage at his will, even while being disabled. Reduces cooldown."
+      "description": "Goes into a frenzy, removing all existing debuffs while providing damage reduction and status resistance. Enables Ursa to Enrage at his will, even while being disabled. Reduces cooldown. Damage Reduction: 80%. Status Resist Bonus: 50% (75%). Duration: 4/4.5/5. Cooldown: 60/45/30."
     }
   ]
 }

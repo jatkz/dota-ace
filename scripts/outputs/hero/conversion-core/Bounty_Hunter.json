@@ -1,0 +1,71 @@
+{
+  "name": "Bounty Hunter",
+  "description": "No job is too big; no fee is too big.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 21,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 2.6,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.43,
+    "attackSpeed": 2.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.6
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.65,
+    "mana": 315,
+    "manaRegen": 1.5,
+    "armor": 8.5,
+    "magicResistance": 27,
+    "damageMin": 54,
+    "damageMax": 62,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 121,
+    "bat": 1.5,
+    "animationPoint": 0.59,
+    "animationBackswing": 0.59,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 1000
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Attack Damage",
+      "right": "+0.6s Shuriken Toss Slow"
+    },
+    "15": {
+      "left": "+50 Track Gold",
+      "right": "-30% Shadow Walk Incoming Damage"
+    },
+    "20": {
+      "left": "+50 Jinada Gold Steal",
+      "right": "Track Grants Shared Vision"
+    },
+    "25": {
+      "left": "No Jinada Cooldown",
+      "right": "+250 Shuriken Toss Damage"
+    }
+  }
+}

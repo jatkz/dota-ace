@@ -1,0 +1,73 @@
+{
+  "name": "Ember Spirit",
+  "description": "Balance in all things.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Escape",
+    "Nuker",
+    "Disabler",
+    "Initiator"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 22,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 3.2,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.53,
+    "attackSpeed": 3.2,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.7,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 3.67,
+    "magicResistance": 27,
+    "damageMin": 55,
+    "damageMax": 59,
+    "damageAverage": 57,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+165 Flame Guard Barrier",
+      "right": "+12 Attack Damage"
+    },
+    "15": {
+      "left": "+0.8s Searing Chains Duration",
+      "right": "2x Flame Guard Damage per Second"
+    },
+    "20": {
+      "left": "+50 Searing Chains Damage",
+      "right": "+50 Sleight of Fist Hero Damage"
+    },
+    "25": {
+      "left": "-12s Fire Remnant Restore Time",
+      "right": "+2 Sleight of Fist Charges"
+    }
+  }
+}

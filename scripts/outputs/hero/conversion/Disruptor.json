@@ -1,6 +1,6 @@
 {
   "name": "Disruptor",
-  "description": "By stormcraft, I shall lay my enemies low. Disruptor, the Stormcrafter High on the wind-ravaged steppes of Druud, a gifted young stormcrafter called Disruptor was the first to unlock the secrets of the summer squalls.",
+  "description": "By stormcraft, I shall lay my enemies low.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -52,36 +52,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+15 Thunder Strike Damage per Strike",
+      "right": "+20 Move Speed"
+    },
+    "15": {
+      "left": "+60 Static Storm Damage per Second",
+      "right": "+15% Glimpse Distance to Damage +300 Glimpse Max Damage"
+    },
+    "20": {
+      "left": "+75 Static Storm Radius",
+      "right": "+1s Kinetic Field Duration +1s Kinetic Fence Duration"
+    },
+    "25": {
+      "left": "+6 Thunder Strike Strikes x0.5 Thunder Strike Strike Interval",
+      "right": "2 Glimpse Charges"
+    }
+  },
   "abilities": [
     {
       "name": "Electromagnetic Repulsion",
       "type": "passive",
-      "description": "Damages and knocks all enemy units back within the radius, whenever the Stormcrafter accumulates a certain amount of damage taken."
+      "description": "Damages and knocks all enemy units back within the radius, whenever the Stormcrafter accumulates a certain amount of damage taken. Effect Radius: 400. Damage Threshold: 250. Knock Distance: 400. Int to Damage: 1.5. Knock Duration: 0.2. Damage Timer: 7. Cooldown: 5."
     },
     {
       "name": "Thunder Strike",
       "type": "active",
-      "description": "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result."
+      "description": "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result. Cast Range: 800. Strike Radius: 260. Number of Strikes: 4 (10). Damage per Strike: 25/55/85/115. Move Speed Slow: 100%. Attack Speed Slow: 100. Cooldown: 18/15/12/9. Mana Cost: 125/130/135/140."
     },
     {
       "name": "Glimpse",
       "type": "active",
-      "description": "Teleports the target hero back to where it was a few seconds ago. Deals damage to the affected enemy hero corresponding to its teleported distance as soon as it appears at the marked location."
+      "description": "Teleports the target hero back to where it was a few seconds ago. Deals damage to the affected enemy hero corresponding to its teleported distance as soon as it appears at the marked location. Cast Range: 600/1000/1400/1800. Lapsed Time: 4. Max Teleport Time: 1.8. Max Silence Duration: 1.8. Min Distance to Damage: 0. Max Distance to Damage: 1400. Cooldown: 24/22/20/18 (0). Mana Cost: 70/85/100/115."
     },
     {
       "name": "Kinetic Field",
       "type": "active",
-      "description": "After a short formation time, creates a circular barrier of kinetic energy that manipulates affected enemy's movement speed to point where they cannot pass."
+      "description": "After a short formation time, creates a circular barrier of kinetic energy that manipulates affected enemy's movement speed to point where they cannot pass. Cast Range: 900. Barrier Radius: 350. Aura Width: 70. Aura Radius: 420. Damage per Second: 0. Duration: 2.6/3.2/3.8/4.4 (3.6/4.2/4.8/5.4). Cooldown: 20/18/16/14. Mana Cost: 70."
     },
     {
       "name": "Kinetic Fence",
       "type": "active",
-      "description": "After a short formation time, creates a wall-barrier of kinetic energy that slows enemy units down to the point where they cannot pass through it. Immediately removes the debuff and does not reapply the debuff on enemy units."
+      "description": "After a short formation time, creates a wall-barrier of kinetic energy that slows enemy units down to the point where they cannot pass through it. Cast Range: 1200. Wall Length: 1200. Wall Width: 350. Damage per Second: 0. Duration: 4.4 (5.4). Aura Linger Duration: 0.5. Cooldown: 14. Mana Cost: 50."
     },
     {
       "name": "Static Storm",
       "type": "active",
-      "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but gradually increases in power over the duration."
+      "description": "Creates a damaging static storm that also silences all enemy units in the area for the duration. The damage starts off weak, but gradually increases in power over the duration. Cast Range: 800. Effect Radius: 550 (625). Number of Intervals: 20. Max Damage per Second: 200/275/350 (260/335/410). Duration: 6. Aura Linger Duration: 0.033. Cooldown: 90/80/70. Mana Cost: 125/175/225."
     }
   ]
 }

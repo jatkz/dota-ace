@@ -1,0 +1,89 @@
+# Dota 2 Hero Core Extraction for Ollama
+
+Extract the following hero-level information and return as JSON:
+
+{
+  "name": "hero name",
+  "description": "one-line summary",
+  "attackType": "Melee",
+  "roles": ["role1", "role2"],
+  "attributes": {
+    "strength": 0,
+    "agility": 0,
+    "intelligence": 0
+  },
+  "attributeGains": {
+    "strength": 0,
+    "agility": 0,
+    "intelligence": 0
+  },
+  "statGains": {
+    "health": 0,
+    "healthRegen": 0,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 0,
+    "attackSpeed": 0,
+    "magicResistance": 0,
+    "mainAttackDamage": 0
+  },
+  "stats": {
+    "health": 0,
+    "healthRegen": 0,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 0,
+    "magicResistance": 0,
+    "damageMin": 0,
+    "damageMax": 0,
+    "damageAverage": 0,
+    "projectileSpeed": 0,
+    "attackRange": 0,
+    "attackAcquisitionRange": 0,
+    "attackSpeed": 0,
+    "totalAttackSpeed": 0,
+    "bat": 0,
+    "animationPoint": 0,
+    "animationBackswing": 0,
+    "moveSpeed": 0,
+    "turnRate": 0,
+    "collisionSize": 0,
+    "visionDay": 0,
+    "visionNight": 0
+  },
+  "talents": {
+    "25": {
+      "left": "talent text",
+      "right": "talent text"
+    },
+    "20": {
+      "left": "talent text",
+      "right": "talent text"
+    },
+    "15": {
+      "left": "talent text",
+      "right": "talent text"
+    },
+    "10": {
+      "left": "talent text",
+      "right": "talent text"
+    }
+  }
+}
+
+Rules:
+- Return only hero-level data. Do not include an `abilities` field.
+- Use plain numbers for numeric fields.
+- For `attackType`, only use `Melee` or `Ranged`.
+- For `roles`, only use canonical Dota role names with this capitalization: `Carry`, `Support`, `Nuker`, `Disabler`, `Initiator`, `Durable`, `Escape`, `Pusher`, `Jungler`.
+- For percentage fields like magic resistance, return plain numbers without `%`.
+- For `projectileSpeed`, return a number when numeric, or a string like `\"Instant\"` if the source shows a non-numeric value.
+- When damage is shown as a range plus average, split it into `damageMin`, `damageMax`, and `damageAverage`.
+- When attack speed is shown as `95 (117)`, use the first number for `attackSpeed` and the number in parentheses for `totalAttackSpeed`.
+- When animation is shown as `0.56 + 0.41`, use `animationPoint` and `animationBackswing`.
+- When vision is shown as `1800 / 800`, use `visionDay` and `visionNight`.
+- Use the `TALENTS` section to populate `talents` with exact string values for levels `25`, `20`, `15`, and `10`.
+- Map `Left` to `left` and `Right` to `right`.
+- Ignore the generic center `+2 All Attributes` row.
+
+IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

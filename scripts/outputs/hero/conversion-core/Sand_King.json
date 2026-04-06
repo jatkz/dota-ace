@@ -1,0 +1,74 @@
+{
+  "name": "Sand King",
+  "description": "I will show you fear in a handful of sand… Crixalis, the Sand King The sands of the Scintillant Waste are alive and sentient — the whole vast desert speaks to itself, thinking thoughts only such a vastness can conceive.",
+  "attackType": "Melee",
+  "roles": [
+    "Initiator",
+    "Disabler",
+    "Support",
+    "Nuker",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 19,
+    "intelligence": 17
+  },
+  "attributeGains": {
+    "strength": 2.3,
+    "agility": 2,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 50.6,
+    "healthRegen": 0.23,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.84
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 4.17,
+    "magicResistance": 26.7,
+    "damageMin": 45,
+    "damageMax": 55,
+    "damageAverage": 50.55,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 129,
+    "bat": 1.7,
+    "animationPoint": 0.53,
+    "animationBackswing": 0.47,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+100 Caustic Finale Radius",
+      "right": "+12% Stinger Slow"
+    },
+    "15": {
+      "left": "+200 Burrowstrike Cast Range",
+      "right": "+25 Sand Storm Damage per Second"
+    },
+    "20": {
+      "left": "+6 Epicenter Pulses",
+      "right": "-3s Burrowstrike Cooldown"
+    },
+    "25": {
+      "left": "+35% Sand Storm Slow and Blind",
+      "right": "+125 Stinger Damage"
+    }
+  }
+}

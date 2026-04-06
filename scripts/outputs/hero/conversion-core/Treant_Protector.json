@@ -1,0 +1,72 @@
+{
+  "name": "Treant Protector",
+  "description": "Life becomes death becomes new life. As it should be. Rooftrellen, the Treant Protector.",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Initiator",
+    "Durable",
+    "Disabler",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 25,
+    "agility": 15,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 1.8,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.3,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 2.75,
+    "mana": 315,
+    "manaRegen": 1.25,
+    "armor": 3.5,
+    "magicResistance": 27,
+    "damageMin": 85,
+    "damageMax": 93,
+    "damageAverage": 89,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.9,
+    "animationPoint": 0.6,
+    "animationBackswing": 0.4,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+50 Base Damage",
+      "right": "+4 Living Armor Heal per Second"
+    },
+    "15": {
+      "left": "+25 Nature's Grasp Damage",
+      "right": "+10% Leech Seed Damage to Healing"
+    },
+    "20": {
+      "left": "+80 Leech Seed Damage/Heal",
+      "right": "+20 Living Armor Damage Block"
+    },
+    "25": {
+      "left": "+450 Living Armor Radius",
+      "right": "-3s Leech Seed Cooldown"
+    }
+  }
+}

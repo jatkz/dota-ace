@@ -1173,6 +1173,31 @@ function getHeroCardSecondaryText(row, $) {
     return normalizeText(card.children('div').eq(1).text());
 }
 
+function extractTalentCellText(cell, $) {
+    if (!cell || !cell.length) {
+        return '';
+    }
+
+    const clone = $(cell).clone();
+    clone.find('img').replaceWith(' ');
+
+    const parts = [];
+    clone.contents().each((_, node) => {
+        if (node.type === 'text') {
+            parts.push(node.data || '');
+            return;
+        }
+
+        if (node.type === 'tag') {
+            parts.push($(node).text());
+        }
+    });
+
+    return normalizeText(parts.join(' '))
+        .replace(/\s*\/\s*/g, '/')
+        .replace(/([A-Za-z])\/([A-Za-z])/g, '$1/$2');
+}
+
 function extractFirstNumber(text = '') {
     const match = String(text || '').match(/-?\d+(?:\.\d+)?/);
     return match ? match[0] : '';
@@ -1340,8 +1365,90 @@ function extractHeroDetailedStats($) {
     return uniqueTexts(stats);
 }
 
-function extractHeroData(html) {
-    const $ = cheerio.load(html);
+function extractHeroTalents($) {
+    const talentHeader = getContentRoot($)
+        .find('h3')
+        .filter((_, el) => /^Talents$/i.test(normalizeText($(el).text())))
+        .first();
+
+    if (!talentHeader.length) {
+        return [];
+    }
+
+    const talentContainer = talentHeader.parent().next();
+    const table = talentContainer.is('table') ? talentContainer : talentContainer.find('table').first();
+    if (!table.length) {
+        return [];
+    }
+
+    const talents = [];
+
+    table.find('tr').each((_, row) => {
+        const cells = $(row).children();
+        if (cells.length !== 3) {
+            return;
+        }
+
+        const level = normalizeText($(cells[1]).text());
+        if (!/^(25|20|15|10)$/.test(level)) {
+            return;
+        }
+
+        const left = extractTalentCellText($(cells[0]), $);
+        const right = extractTalentCellText($(cells[2]), $);
+
+        if (left) {
+            talents.push(`Level ${level} Left: ${left}`);
+        }
+
+        if (right) {
+            talents.push(`Level ${level} Right: ${right}`);
+        }
+    });
+
+    return talents;
+}
+
+function getHeroAbilityEntries($) {
+    const abilities = [];
+
+    getContentRoot($).find('h3').each((_, header) => {
+        const name = normalizeText($(header).text());
+        if (!name || /^(Aghanim's|Talents|Hero Model|The International)$/i.test(name)) {
+            return;
+        }
+
+        const mainCard = getHeroAbilityMainCard($, header);
+        const block = mainCard.length ? mainCard : getAbilityContentScope($, header);
+        const description = getAbilityDescription($, header);
+        const typeHint = getHeroAbilityType($, header);
+        const narratives = getHeroAbilityNarrativeTexts($, block, name)
+            .map((text, index) => ({ text, index, score: scoreAbilityText(text, name) }))
+            .filter(candidate => candidate.score > -2)
+            .sort((a, b) => b.score - a.score || b.text.length - a.text.length)
+            .slice(0, 4)
+            .sort((a, b) => a.index - b.index)
+            .map(candidate => candidate.text);
+        const traits = uniqueTexts([
+            ...getHeroAbilityTraits($, mainCard).slice(0, 10),
+            ...getHeroAbilityCostTraits($, mainCard)
+        ]);
+
+        if (description || narratives.length > 0 || traits.length > 0) {
+            abilities.push({
+                name,
+                typeHint,
+                description,
+                narratives,
+                traits
+            });
+        }
+    });
+
+    return abilities;
+}
+
+function buildHeroCoreLines($) {
     const lines = [];
     const title = getTitle($);
     const contentText = normalizeText(getContentRoot($).text());
@@ -1416,20 +1523,45 @@ function extractHeroData(html) {
         descriptionParts.push(fallbackDescription);
     }
     appendSection(lines, 'DESCRIPTION', sanitizeNarrativeText(descriptionParts.filter(Boolean).join(' ')));
+    appendSection(lines, 'TALENTS', extractHeroTalents($));
 
-    const abilities = [];
-    getContentRoot($).find('h3').each((_, header) => {
-        const name = normalizeText($(header).text());
-        if (!name || /^(Aghanim's|Talents|Hero Model|The International)$/i.test(name)) {
-            return;
-        }
+    return lines;
+}
 
-        const description = getAbilityDescription($, header);
-        const type = getHeroAbilityType($, header);
-        if (description) {
-            abilities.push(type ? `${name} [${type}]: ${description}` : `${name}: ${description}`);
-        }
-    });
+function formatHeroAbilityPayload(entry, heroName = '') {
+    const lines = [];
+
+    appendSection(lines, 'HERO NAME', heroName);
+    appendSection(lines, 'ABILITY NAME', entry.name);
+    appendSection(lines, 'TYPE HINT', entry.typeHint);
+    appendSection(lines, 'EXTRACTED SUMMARY', entry.description);
+    appendSection(lines, 'NARRATIVE LINES', entry.narratives);
+    appendSection(lines, 'TRAITS', entry.traits);
+
+    return lines.join('\n').trim();
+}
+
+function extractHeroCoreData(html) {
+    const $ = cheerio.load(html);
+    return buildHeroCoreLines($).join('\n').trim();
+}
+
+function extractHeroAbilityPayloads(html) {
+    const $ = cheerio.load(html);
+    const heroName = getTitle($);
+
+    return getHeroAbilityEntries($).map(entry => ({
+        ...entry,
+        prompt: formatHeroAbilityPayload(entry, heroName)
+    }));
+}
+
+function extractHeroData(html) {
+    const $ = cheerio.load(html);
+    const lines = buildHeroCoreLines($);
+    const abilities = getHeroAbilityEntries($)
+        .filter(entry => entry.description)
+        .map(entry => entry.typeHint ? `${entry.name} [${entry.typeHint}]: ${entry.description}` : `${entry.name}: ${entry.description}`);
     appendSection(lines, 'ABILITIES', abilities);
 
     return lines.join('\n').trim();
@@ -1576,4 +1708,4 @@ function optimizeHtmlForOllama(html, category = 'auto') {
     }
 }
 
-export { optimizeHtmlForOllama };
+export { optimizeHtmlForOllama, extractHeroCoreData, extractHeroAbilityPayloads };

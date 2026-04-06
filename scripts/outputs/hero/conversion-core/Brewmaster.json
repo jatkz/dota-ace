@@ -1,0 +1,73 @@
+{
+  "name": "Brewmaster",
+  "description": "Shall we call this off and have a friendly round?",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Initiator",
+    "Durable",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 19,
+    "intelligence": 17
+  },
+  "attributeGains": {
+    "strength": 3.2,
+    "agility": 2,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 70.4,
+    "healthRegen": 0.32,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.33,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.2
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.9,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 4.17,
+    "magicResistance": 26.7,
+    "damageMin": 53,
+    "damageMax": 60,
+    "damageAverage": 56.5,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 119,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.65,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "",
+      "right": ""
+    },
+    "15": {
+      "left": "",
+      "right": ""
+    },
+    "20": {
+      "left": "",
+      "right": ""
+    },
+    "25": {
+      "left": "",
+      "right": ""
+    }
+  }
+}

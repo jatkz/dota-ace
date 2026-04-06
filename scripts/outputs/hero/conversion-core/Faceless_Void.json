@@ -1,0 +1,74 @@
+{
+  "name": "Faceless Void",
+  "description": "From a place beyond time, and time beyond counting.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Initiator",
+    "Disabler",
+    "Escape",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 24,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 3.3,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "armor": 0.55,
+    "attackSpeed": 3.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 4,
+    "magicResistance": 26.5,
+    "damageMin": 58,
+    "damageMax": 64,
+    "damageAverage": 61,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.56,
+    "moveSpeed": 300,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+0.5s Time Walk Damage Timer",
+      "right": "+6 Time Dilation Damage per Second"
+    },
+    "15": {
+      "left": "+125 Time Walk Max Travel Distance",
+      "right": "+35 Time Lock Damage"
+    },
+    "20": {
+      "left": "-1.25s Time Walk Cooldown",
+      "right": "+100 Attack Speed During Chronosphere"
+    },
+    "25": {
+      "left": "+140 Chronosphere Radius",
+      "right": "+20% Backtrack Chance"
+    }
+  }
+}

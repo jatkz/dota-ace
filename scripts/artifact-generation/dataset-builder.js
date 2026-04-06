@@ -7,8 +7,9 @@ async function main() {
 
     try {
 
-        const dataset = { heroes: {}, items: {}, neutrals: {}, enchantments: {} }
+        const dataset = { heroes: {}, heroesCore: {}, items: {}, neutrals: {}, enchantments: {} }
 
+        /*
         const heroDir = './scripts/outputs/hero/conversion';
 
         let dir = heroDir
@@ -28,6 +29,27 @@ async function main() {
             const { recent_changes, ...cleanedData } = content;
 
             dataset['heroes'][name] = cleanedData;
+        }
+        */
+
+        const heroCoreDir = './scripts/outputs/hero/conversion-core';
+
+        let dir = heroCoreDir
+        let files = fs.readdirSync(dir);
+        for (const file of files) {
+            console.log('file', file);
+            const filePath = path.join(dir, file);
+
+            const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+            const name = data['name'];
+            const content = data;
+
+            // Temporarily source dataset.heroes from conversion-core
+            // so downstream consumers keep working while the old hero
+            // conversion format is disabled.
+            // dataset['heroes'][name] = content;
+            dataset['heroesCore'][name] = content;
         }
 
 

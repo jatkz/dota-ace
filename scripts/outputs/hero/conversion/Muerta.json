@@ -55,32 +55,32 @@
     {
       "name": "Supernatural",
       "type": "passive",
-      "description": "Grants bonus spell damage amplification stacks each time Muerta kills an enemy hero or within the death radius, and loses a portion of stacks upon death."
+      "description": "Grants bonus spell damage amplification stacks each time Muerta kills an enemy hero or within the death radius, and loses a portion of stacks upon death. Enemy Death Radius: 925. Stacks Lost on Death Factor: 0.5. Spell Damage Amp: 1%."
     },
     {
       "name": "Dead Shot",
       "type": "active",
-      "description": "Fires a ghostly trickshot at an enemy unit or tree. When the bullet strikes, it damages and briefly slows, then ricochets in the targeted direction. The ricochet damages all units that it passes through, stopping when it hits an enemy hero. The enemy hero hit by the ricochet is feared away from the impact."
+      "description": "Fires a ghostly trickshot at an enemy unit or tree. When the bullet strikes, it damages and briefly slows, then ricochets in the targeted direction. The ricochet damages all units that it passes through, stopping when it hits an enemy hero. The enemy hero hit by the ricochet is feared away from the impact. Cast Range: 1000 (1300). Initial Bullet Distance: 1000 (1300). Initial Bullet Damage: 100/175/250/325 (225/300/375/450). Move Speed Slow: 100%. Slow Duration: 1. Ricochet Distance Factor: 1.5. Cooldown: 16/14/12/10. Mana Cost: 100/120/140/160."
     },
     {
       "name": "The Calling",
       "type": "active",
-      "description": "These otherworldly revenants deal damage and silence enemies as they pass through them. Muerta's family are forever beyond the spirit veil, but her deal with Death allows her to briefly call on them in times of want or need."
+      "description": "These otherworldly revenants deal damage and silence enemies as they pass through them. Muerta's family are forever beyond the spirit veil, but her deal with Death allows her to briefly call on them in times of want or need. Cast Range: 600. Aura Radius: 340. Number of Revenants: 4 (6). Revenant Spawn Distance: 320. Move Speed Slow: 20%. Aura Duration: 5/6/7/8. Cooldown: 30/28/26/24. Mana Cost: 135/150/165/180."
     },
     {
       "name": "Gunslinger",
       "type": "active",
-      "description": "When activated, Muerta's attacks have a chance to fire a second shot at another target."
+      "description": "When activated, Muerta's attacks have a chance to fire a second shot at another target. Proc Chance: 18%/27%/36%/45% (38%/47%/56%/65%). Instant Attack Radius: 750. Bonus Attack Targets: 1. Mana Cost: 0."
     },
     {
       "name": "Spectral Slug",
       "type": "active",
-      "description": "Damages, applies a knockback, and turns the unit-targeted enemy Ethereal. Applies a movement speed slow to the debuff-affected enemy."
+      "description": "Damages, applies a knockback, and turns the unit-targeted enemy Ethereal. Applies a movement speed slow to the debuff-affected enemy. Cast Range: 500. Damage: 225. Magic Resist Reduction: 20%. Knockback Distance: 250. Move Speed Slow: 30%. Debuff Duration: 3. Mana Cost: 12."
     },
     {
       "name": "Pierce the Veil",
       "type": "active",
-      "description": "When either Muerta or the enemy unit she attacks is Ethereal, all her attack damage is now dealt as magical attack damage, and deals no damage to magic immune units. Additionally converts all her physical lifesteal values as spell lifesteal. Does not have his a custom model for this ability. Turns into a miniature Muerta. Upon losing the ability, it is not canceled. However, Rubick's deals immediately."
+      "description": "Muerta transforms into her Corporeal Form, she is now Ethereal and is immune to all physical damage instances. Grants bonus base attack damage and phase movement. When either Muerta or the enemy unit she attacks is Ethereal, all her attack damage is now dealt as magical attack damage, and deals no damage to magic immune units. Additionally converts all her physical lifesteal values as spell lifesteal. Transform Time: 0.35. Base Attack Damage Bonus Factor: 1.7/1.85/2. Duration: 8 (10). Magical Attack Damage Factor: 1. Physical Attack Damage Factor: 0. Lifesteal to Spell Lifesteal Factor: 1. Cooldown: 75/60/45. Mana Cost: 150/250/350."
     }
   ]
 }

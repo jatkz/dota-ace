@@ -1,0 +1,74 @@
+{
+  "name": "Shadow Demon",
+  "description": "Who toys with demons will find himself toyed with.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Initiator",
+    "Nuker",
+    "Carry"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 18,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 2.2,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "armor": 0.37,
+    "attackSpeed": 2.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 3,
+    "magicResistance": 27.2,
+    "damageMin": 51,
+    "damageMax": 55,
+    "damageAverage": 53,
+    "projectileSpeed": 900,
+    "attackRange": 500,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.5,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+8 Strength",
+      "right": "+15% Shadow Poison Damage"
+    },
+    "15": {
+      "left": "-1s Shadow Poison Cooldown",
+      "right": "+25 Move Speed"
+    },
+    "20": {
+      "left": "-20s Demonic Purge Cooldown",
+      "right": "+15% Disseminate Shared Damage"
+    },
+    "25": {
+      "left": "2 Disruption Charges",
+      "right": "Demonic Purge Applies Shadow Poison"
+    }
+  }
+}

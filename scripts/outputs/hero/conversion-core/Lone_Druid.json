@@ -1,0 +1,71 @@
+{
+  "name": "Lone Druid",
+  "description": "I wonder what awaits me at the end of everything… Sylla, the Lone Druid Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 22,
+    "intelligence": 13
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 2.8,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 231,
+    "manaRegen": 0.65,
+    "armor": 3.67,
+    "magicResistance": 26.3,
+    "damageMin": 44,
+    "damageMax": 48,
+    "damageAverage": 46,
+    "projectileSpeed": 1125,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.6,
+    "animationPoint": 0.33,
+    "animationBackswing": 0.53,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+20 Entangle Damage per Second",
+      "right": "-25 Summon Spirit Bear Cooldown"
+    },
+    "15": {
+      "left": "+12 Agility",
+      "right": "-5s Savage Roar Cooldown"
+    },
+    "20": {
+      "left": "+55 Attack Speed",
+      "right": "+150 Savage Roar Radius"
+    },
+    "25": {
+      "left": "+0.6s Entangle Root Duration",
+      "right": "+70% True Form Slow Resist Bonus"
+    }
+  }
+}

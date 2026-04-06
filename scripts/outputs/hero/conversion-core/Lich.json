@@ -1,0 +1,70 @@
+{
+  "name": "Lich",
+  "description": "And so the dead will bury the dead.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 17,
+    "intelligence": 28
+  },
+  "attributeGains": {
+    "strength": 2.1,
+    "agility": 1.7,
+    "intelligence": 3.4
+  },
+  "statGains": {
+    "health": 46.2,
+    "healthRegen": 0.21,
+    "mana": 40.8,
+    "manaRegen": 0.17,
+    "armor": 0.28,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.5,
+    "mana": 411,
+    "manaRegen": 0.4,
+    "armor": 1.83,
+    "magicResistance": 27.8,
+    "damageMin": 52,
+    "damageMax": 61,
+    "damageAverage": 56.5,
+    "projectileSpeed": 900,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.46,
+    "animationBackswing": 0.54,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+125 Frost Blast Radius/Damage",
+      "right": "+10% Frost Shield Damage Reduction"
+    },
+    "15": {
+      "left": "-3.5s Frost Blast Cooldown",
+      "right": "+0.3s Sinister Gaze Duration"
+    },
+    "20": {
+      "left": "Chain Frost Upon Death",
+      "right": "2 Frost Shield Charges"
+    },
+    "25": {
+      "left": "Unlimited Chain Frost Bounces",
+      "right": "+50 Frost Shield Health Regen"
+    }
+  }
+}

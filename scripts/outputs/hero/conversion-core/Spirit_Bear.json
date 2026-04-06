@@ -1,0 +1,72 @@
+{
+  "name": "Spirit Bear",
+  "description": "The Spirit Bear will level up alongside Lone Druid, with its Gold & EXP Bounty scaling as it levels up. Most spells and units interact with the Spirit Bear as if it was a Melee Hero.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 0,
+    "agility": 0,
+    "intelligence": 0
+  },
+  "attributeGains": {
+    "strength": 4.5,
+    "agility": 4.5,
+    "intelligence": 0.5
+  },
+  "statGains": {
+    "health": 99,
+    "healthRegen": 0.45,
+    "mana": 6,
+    "manaRegen": 0.025,
+    "armor": 0.75,
+    "attackSpeed": 4.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.28
+  },
+  "stats": {
+    "health": 1500,
+    "healthRegen": 3,
+    "mana": 300,
+    "manaRegen": 0.5,
+    "armor": 0,
+    "magicResistance": 25,
+    "damageMin": 28,
+    "damageMax": 28,
+    "damageAverage": 28,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 500,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 110,
+    "bat": 1.5,
+    "animationPoint": 0.43,
+    "animationBackswing": 0.4,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+10% Magic Resist",
+      "right": "+20 Move Speed"
+    },
+    "15": {
+      "left": "+4 Armor",
+      "right": "No Return Cooldown -0.5 Return Channel Time"
+    },
+    "20": {
+      "left": "+500 Health",
+      "right": "+30 Attack Damage"
+    },
+    "25": {
+      "left": "Entangling Claws grants +15% Damage Amp against Entangled units",
+      "right": "+20% Demolish Bonus Building Damage"
+    }
+  }
+}

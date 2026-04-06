@@ -1,0 +1,72 @@
+{
+  "name": "Jakiro",
+  "description": "Two sides of the same coin.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Pusher",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 25,
+    "agility": 15,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 1.2,
+    "intelligence": 3
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 36,
+    "manaRegen": 0.15,
+    "armor": 0.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 2.75,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3.5,
+    "magicResistance": 27.5,
+    "damageMin": 52,
+    "damageMax": 60,
+    "damageAverage": 56,
+    "projectileSpeed": 1100,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 290,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+75 Ice Path First Damage",
+      "right": "+30 Liquid Fire Attack Speed Slow"
+    },
+    "15": {
+      "left": "-3.5s Dual Breath Cooldown",
+      "right": "+175 Attack Range"
+    },
+    "20": {
+      "left": "+20 Macropyre Damage",
+      "right": "+0.4s Ice Path Duration/Stun Duration"
+    },
+    "25": {
+      "left": "+3% Liquid Fire/Liquid Frost Max Health as Damage",
+      "right": "2x Dual Breath Damage/Range"
+    }
+  }
+}

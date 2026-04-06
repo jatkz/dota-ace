@@ -1,6 +1,6 @@
 {
   "name": "Doom",
-  "description": "Hehm ehme meh heh heh, speak of me, and I shall appear. Face me and face the furnace!",
+  "description": "Hehm ehme meh heh heh, speak of me, and I shall appear.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -26,7 +26,8 @@
     "manaRegen": 0.085,
     "armor": 0.25,
     "attackSpeed": 1.5,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
   },
   "stats": {
     "health": 648,
@@ -52,6 +53,24 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+0.2 Infernal Blade Stun Duration",
+      "right": "+15% Devour Self Magic Resistance"
+    },
+    "15": {
+      "left": "+66 Attack Damage",
+      "right": "+7% Scorched Earth Move Speed"
+    },
+    "20": {
+      "left": "+2.5% Infernal Blade Max Health to Damage",
+      "right": "-10s Doom Cooldown"
+    },
+    "25": {
+      "left": "Permanent Scorched Earth",
+      "right": "Doom Applies Mute"
+    }
+  },
   "abilities": [
     {
       "name": "Lvl Pain",
@@ -61,22 +80,22 @@
     {
       "name": "Devour",
       "type": "active",
-      "description": "Devour is now a charged-based ability with a restore time corresponding to the the ability's current cooldown. Enables ancient creeps targeting."
+      "description": "Enables ancient creeps targeting. Cast Range: 300. Gold Bonus: 35/70/105/140. XP Factor: 1. Digest Duration: 70. Magic Resist Bonus: (15%). Current Health as Damage: 100%. Cooldown: 66. Mana Cost: 40/50/60/70."
     },
     {
       "name": "Scorched Earth",
       "type": "active",
-      "description": "Carpets the nearby earth in flames which damage enemies, while also granting Doom increased movement speed."
+      "description": "Carpets the nearby earth in flames which damage enemies, while also granting Doom increased movement speed. Radius: 666. Damage per Second: 20/35/50/65. Move Speed Bonus: 7%/8%/9%/10% (14%/15%/16%/17%). Duration: 10/12/14/16. Aura Linger Duration: 0.5. Health Regen Bonus: 7/8/9/10. Cooldown: 41/39/37/35 (2.5). Mana Cost: 60/70/80/90 (0)."
     },
     {
       "name": "Infernal Blade",
       "type": "active",
-      "description": "Applies a bash and burns for a base damage plus a percentage of the target's max health as damage per second. Lucifer shares the fire branding bestowed upon him at the time of his exile."
+      "description": "Applies a bash and burns for a base damage plus a percentage of the target's max health as damage per second. Cast Range: 200. Base Damage per Second: 15/30/45/60. Max Health as Damage per Second: 1%/2%/3%/4% (3.5%/4.5%/5.5%/6.5%). Damage Duration: 4. Bash Duration: 0.66 (0.86). Cooldown: 13/10/7/4. Mana Cost: 35."
     },
     {
       "name": "Doom",
       "type": "active",
-      "description": "Inflicts a curse that dispels an enemy hero, prevents them from casting spells or healing in any way, while taking damage over time."
+      "description": "Inflicts a curse that dispels an enemy hero, prevents them from casting spells or healing in any way, while taking damage over time. Cast Range: 400. Aura Radius: 0. Damage per Second: 25/45/66. Duration: 12/14/16. Break Duration: (12/14/16). Mute Duration: (12/14/16). Cooldown: 140/130/120. Mana Cost: 150/200/250."
     }
   ]
 }

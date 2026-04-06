@@ -1,6 +1,6 @@
 {
   "name": "Dark Willow",
-  "description": "Mireska Sunbreeze, the Dark Willow Attacking no longer takes Dark Willow out of Shadow Realm. Each attack now applies the bonus spell damage corresponding to the buff duration.",
+  "description": "Let's have some fun, shall we?",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -21,10 +21,9 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "armor": 0.27,
-    "attackSpeed": 1.6,
     "mana": 42,
     "manaRegen": 0.175,
+    "armor": 0.27,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.5
   },
@@ -51,6 +50,24 @@
     "collisionSize": 27,
     "visionDay": 1800,
     "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+12 Intelligence",
+      "right": "+1s Bedlam Duration"
+    },
+    "15": {
+      "left": "-20s Terrorize Cooldown",
+      "right": "+30 Bedlam Damage"
+    },
+    "20": {
+      "left": "-7s Bramble Maze Cooldown",
+      "right": "+1.5s Shadow Realm Duration"
+    },
+    "25": {
+      "left": "+500 Terrorize Impact Damage",
+      "right": "+2 Bedlam Attack Targets"
+    }
   },
   "abilities": [
     {

@@ -1,0 +1,71 @@
+{
+  "name": "Winter Wyvern",
+  "description": "Some breathe fire. I breathe ice. Auroth, the Winter Wyvern.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 16,
+    "intelligence": 26
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 1.7,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "armor": 0.28,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 387,
+    "manaRegen": 1.55,
+    "armor": 3.67,
+    "magicResistance": 27.6,
+    "damageMin": 42,
+    "damageMax": 49,
+    "damageAverage": 45.5,
+    "projectileSpeed": 700,
+    "attackRange": 450,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.25,
+    "animationBackswing": 0.8,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 1200
+  },
+  "talents": {
+    "10": {
+      "left": "",
+      "right": ""
+    },
+    "15": {
+      "left": "",
+      "right": ""
+    },
+    "20": {
+      "left": "",
+      "right": ""
+    },
+    "25": {
+      "left": "",
+      "right": ""
+    }
+  }
+}

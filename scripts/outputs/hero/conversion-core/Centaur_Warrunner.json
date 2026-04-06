@@ -1,0 +1,73 @@
+{
+  "name": "Centaur Warrunner",
+  "description": "It is not pride I take in my own power, it is passion.",
+  "attackType": "Melee",
+  "roles": [
+    "Durable",
+    "Initiator",
+    "Disabler",
+    "Nuker",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 27,
+    "agility": 15,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 4.2,
+    "agility": 1,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 92.4,
+    "healthRegen": 0.42,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "armor": 0.17,
+    "attackSpeed": 1,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 714,
+    "healthRegen": 5.7,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 0.5,
+    "magicResistance": 26.5,
+    "damageMin": 63,
+    "damageMax": 65,
+    "damageAverage": 64,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 105,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+15 Move Speed",
+      "right": "+4 Health Regen"
+    },
+    "15": {
+      "left": "+30% Double Edge Strength as Damage",
+      "right": "+10 Strength"
+    },
+    "20": {
+      "left": "-25s Stampede Cooldown",
+      "right": "+45 Retaliate Damage"
+    },
+    "25": {
+      "left": "+0.8s Hoof Stomp Duration",
+      "right": "Grants Retaliate Aura"
+    }
+  }
+}

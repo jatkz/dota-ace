@@ -1,6 +1,6 @@
 {
   "name": "Mirana",
-  "description": "Princess of the Moon, Mirana dedicates herself to the service of Selemene, Goddess of the Moon. She prowls the Nightsilver Woods searching for poachers and uses her celestial powers to protect the luminous lotus.",
+  "description": "Princess of the Moon, Mirana prowls the Nightsilver Woods searching for poachers and uses her celestial abilities to protect Selemene's preserve.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,12 +22,11 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
-    "armor": 0.52,
-    "attackSpeed": 3.1,
-    "mainAttackDamage": 3.1,
     "mana": 22.8,
     "manaRegen": 0.095,
-    "magicResistance": 0.1
+    "armor": 0.52,
+    "attackSpeed": 3.1,
+    "mainAttackDamage": 3.1
   },
   "stats": {
     "health": 560,
@@ -57,27 +56,27 @@
     {
       "name": "Celestial Quiver",
       "type": "passive",
-      "description": "Infuses the next successful attack with magical attack damage bonus. Grants temporary Celestial Quiver charges upon landing with Leap."
+      "description": "Infuses the next successful attack with magical attack damage bonus. Grants temporary Celestial Quiver charges upon landing with Leap. Cast Range: 630. Magical Attack Damage Bonus: 5 (45). Magical Attack Damage Bonus Increase: 3. Additional Charges: (2). Cooldown: 2/3/4/5/6. Mana Cost: 0."
     },
     {
       "name": "Starstorm",
       "type": "active",
-      "description": "Calls down a meteor wave to damage all enemy units within the radius. The nearest enemy unit to Mirana within the secondary radius will be stuck a second time for a portion of the damage."
+      "description": "Calls down a meteor wave to damage all enemy units within the radius. The nearest enemy unit to Mirana within the secondary radius will be stuck a second time for a portion of the damage. Effect Radius: 675. Damage: 75/150/225/300 (275/350/425/500). Search Radius: 675. Secondary Meteor Damage Factor: 0.7. Cooldown: 80/90/100/110."
     },
     {
       "name": "Sacred Arrow",
-      "type": "passive",
-      "description": "Fires a long-range arrow that stuns and damages the first enemy unit it impacts. Applies of Mirana's corresponding ability level when acquired."
+      "type": "active",
+      "description": "Fires a long-range arrow that stuns and damages the first enemy unit it impacts. The launched primary Sacred Arrow calls forth a Starstorm meteor projectiles of its corresponding level on all enemy units along the travel path. Upon impact, it calls a secondary meteor that deals a portion of its damage to the impacted enemy unit. Cast Range: 3000. Max Travel Distance: 3067. Arrow Collision Radius: 96. Number of Arrows: 1 (3). Base Damage: 60/150/240/330. Max Ability Power Distance: 1500. Cooldown: 19/18/17/16. Mana Cost: 90."
     },
     {
       "name": "Leap",
-      "type": "passive",
-      "description": "None can fail to recognize Mirana's iconic white beast in the heat of battle."
+      "type": "active",
+      "description": "None can fail to recognize Mirana's iconic white beast in the heat of battle. Leap Distance: 650 (800). Move Speed Bonus: 6%/12%/18%/24%. Attack Speed Bonus: 25/50/75/100 (115/140/165/190). Duration: 5. Crit Damage: (150%). Cooldown: 45/35/25/15. Mana Cost: 2."
     },
     {
       "name": "Moonlight Shadow",
       "type": "active",
-      "description": "The buff additionally and independently grants evasion bonus."
+      "description": "The buff additionally and independently grants evasion bonus. Radius: Global Fade. Damage Amp: 9%/12%/15%. Move Speed Bonus: 9%/12%/15%. Duration: 18. Radius: Global. Cooldown: 140/120/100. Mana Cost: 125."
     }
   ]
 }

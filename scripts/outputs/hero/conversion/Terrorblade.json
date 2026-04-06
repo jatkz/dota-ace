@@ -20,12 +20,12 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "mana": 19.2,
-    "manaRegen": 0.08,
     "armor": 0.67,
     "attackSpeed": 4,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 4
+    "mainAttackDamage": 4,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 516,
@@ -55,37 +55,37 @@
     {
       "name": "Dark Unity",
       "type": "passive",
-      "description": "Grants Terrorblade's images within the aura radius outgoing damage bonus."
+      "description": "Grants Terrorblade's images within the aura radius outgoing damage bonus. Proximity Radius: 1200. Damage Dealt Bonus: 60%. Aura Linger Duration: 0.5."
     },
     {
       "name": "Reflection",
       "type": "active",
-      "description": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy. Now it is a lesson he teaches others."
+      "description": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy. Now it is a lesson he teaches others. Cast Range: 700. Radius: 400. Move Speed Slow: 15%/20%/25%/30% (40%/45%/50%/55%). Attack Speed Slow: 15/20/25/30 (40/45/50/55). Debuff Duration: 5 (6). Damage Dealt: 30%/45%/60%/75% (55%/70%/85%/100%). Cooldown: 23/20/17/14. Mana Cost: 60/65/70/75."
     },
     {
       "name": "Conjure Image",
       "type": "active",
-      "description": "illusions are now created at full health for a current health cost that replaces the mana cost."
+      "description": "There's only one thing more dangerous than facing Terrorblade. Facing MORE Terrorblades! Number of Illusions: 1. Damage Dealt: 20%/25%/35%/40%. Damage Taken: 250%. Duration: 34 (44). Cooldown: 50/60/70/80."
     },
     {
       "name": "Metamorphosis",
       "type": "active",
-      "description": "Transform into a lesser Demon Form, and does not grant the bonus. Does not retain Demon Form upon losing the ability."
+      "description": "Temper, temper. The rage rises up and takes control. Meet Terrorblade's own worst self. Transform Time: 0.35. Set Base Attack Time: 1.5. Attack Damage Bonus: 20/40/60/80. Attack Range Bonus: 450/500/550/600. Duration: 35/40/45/50 (65/70/75/80). Aura Radius: 1200. Cooldown: 145/140/135/130. Mana Cost: 100."
     },
     {
       "name": "Demon Zeal",
       "type": "active",
-      "description": "Grants bonus health regeneration, bonus movement speed, and bonus attack speed within the radius to all affected illusions."
+      "description": "Grants bonus health regeneration, bonus movement speed, and bonus attack speed within the radius to all affected illusions. Health Regen Bonus: 20. Move Speed Bonus: 60. Attack Speed Bonus: 100. Duration: 30. Radius: 1200. Aura Linger Duration: 0.1. Mana Cost: 60."
     },
     {
       "name": "Terror Wave",
       "type": "active",
-      "description": "Transform into a lesser Demon Form, and does not grant the bonus. Does not retain Demon Form upon losing the ability."
+      "description": "Causes a wave to travel outwards in all directions fearing all enemy units upon impact. Max Effect Radius: 1600. Fear Duration: 2. Demon Form Duration: 15. Aura Radius: 1200. Mana Cost: 90."
     },
     {
       "name": "Sunder",
       "type": "active",
-      "description": "Severing the life from both Terrorblade and a target hero, exchanging a percentage of both units' current health. Some health points must remain after the exchange."
+      "description": "Severing the life from both Terrorblade and a target hero, exchanging a percentage of both units' current health. Some health points must remain after the exchange. Cast Range: 475. Current Health Percentage Change: 100%. Min Current Health: 35%/30%/25%. Cooldown: 110/75/40. Mana Cost: 100/75/50."
     }
   ]
 }

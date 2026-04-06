@@ -22,10 +22,10 @@
   "statGains": {
     "health": 46.2,
     "healthRegen": 0.21,
-    "mana": 21.6,
-    "manaRegen": 0.09,
     "armor": 0.47,
     "attackSpeed": 2.8,
+    "mana": 21.6,
+    "manaRegen": 0.09,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.02
   },
@@ -57,22 +57,22 @@
     {
       "name": "Venomous Gale",
       "type": "active",
-      "description": "Launches a ball of venom in a line. The venom-spit deals an initial damage, then applies a damage over time poison with movement speed slow to all affected enemy units. Units affected regain their movement speed gradually. Creates per enemy hero hit along the projectile trajectory."
+      "description": "Launches a ball of venom in a line. The venom-spit deals an initial damage, then applies a damage over time poison with movement speed slow to all affected enemy units. Units affected regain their movement speed gradually. Dispelling the Venomous Gale debuff now deals damage and stuns the unit. Cast Range: 800. Max Travel Distance: 850. Gale Radius: 125. First Damage: 25/50/75/100. Number of Instance: 5. Damage per Instance: 10/40/70/100. Cooldown: 21/20/19/18. Mana Cost: 95/105/115/125."
     },
     {
       "name": "Poison Sting",
       "type": "passive",
-      "description": "Imbues Venomancer's attack with poison damage and applies a movement speed slow. Plague Ward's attacks apply all ability effects, albeit with reduced damage. Both Venomancer's and the Plague Ward's instances of Poison Sting are independent of each other."
+      "description": "Imbues Venomancer's attack with poison damage and applies a movement speed slow. Plague Ward's attacks apply all ability effects, albeit with reduced damage. Both Venomancer's and the Plague Ward's instances of Poison Sting are independent of each other. Damage per Second: 8/16/24/32. Move Speed Slow: 8%/10%/12%/14% (15%/17%/19%/21%). Duration: 6/9/12/15. Health Regen Reduction: (15%). Ward Spell Damage Factor: 0.5."
     },
     {
       "name": "Plague Ward",
       "type": "active",
-      "description": "Although the ward's attacks are physical attack damage by nature, it is not affected by damage block sources. A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague."
+      "description": "Although the ward's attacks are physical attack damage by nature, it is not affected by damage block sources. A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague. Cast Range: 850. Ward Duration: 40. Cooldown: 21/24/27/30."
     },
     {
       "name": "Noxious Plague",
       "type": "active",
-      "description": "Infects an enemy unit with a deadly plague that applies impact damage and additional damage over time based on the unit's max health. When the affected enemy unit dies or the debuff expires, all other enemy units within the radius are infected with a non-contagious plague. The plague applies a movement speed slow aura centered on the affected unit, affecting all enemy units within the radius centered around the first affected enemy unit."
+      "description": "Infects an enemy unit with a deadly plague that applies impact damage and additional damage over time based on the unit's max health. When the affected enemy unit dies or the debuff expires, all other enemy units within the radius are infected with a non-contagious plague. The plague applies a movement speed slow aura centered on the affected unit, affecting all enemy units within the radius centered around the first affected enemy unit. Cast Range: 900. Spread Radius: 800. Number of Spreads: 1. Impact Damage: 200/300/400. Max Health as Damage per Second: 3%/4%/5% (43%/44%/45%). Debuff Duration: 5. Cooldown: 100/90/80. Mana Cost: 200/300/400."
     }
   ]
 }

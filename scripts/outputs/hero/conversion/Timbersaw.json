@@ -1,6 +1,6 @@
 {
   "name": "Timbersaw",
-  "description": "I'm not a lumberjack. This. This is personal.",
+  "description": "I'm not a lumberjack. This. This is personal. Rizzrack, the Timbersaw The shatters the tree it latched upon Timbersaw reaching it. The tree splinters in all directions, damaging and applying a movement speed slow to affected enemy units.",
   "attackType": "Melee",
   "roles": [
     "Nuker",
@@ -23,6 +23,7 @@
     "mana": 32.4,
     "manaRegen": 0.135,
     "armor": 0.27,
+    "attackSpeed": 1.6,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.6
   },
@@ -64,7 +65,7 @@
     {
       "name": "Timber Chain",
       "type": "active",
-      "description": "Fires a chain that embeds itself in the first tree it hits, pulling Timbersaw towards it. Deals damage to enemy units within Timbersaw's travel path. Cast Range: 750/900/1050/1200. Max Travel Distance: 750/900/1050/1200. Travel Speed: 2200/2400/2600/2800. Tree Search Radius: 90. Damage Radius: 225. Damage: 45/100/155/210. Cooldown: 4. Mana Cost: 60/70/80/90."
+      "description": "Fires a chain that embeds itself in the first tree it hits, pulling Timbersaw towards it. Deals damage to enemy units within Timbersaw's travel path. Cast Range: 750/900/1050/1200 (56250/67500/78750/90000). Max Travel Distance: 750/900/1050/1200 (56250/67500/78750/90000). Travel Speed: 2200/2400/2600/2800 (165000/180000/195000/210000). Tree Search Radius: 90. Damage Radius: 225. Damage: 45/100/155/210. Cooldown: 60/70/80/90."
     },
     {
       "name": "Reactive Armor",
@@ -79,12 +80,12 @@
     {
       "name": "Flamethrower",
       "type": "active",
-      "description": "Releases a destructive flame in the direction Timbersaw is facing. Deals damage per second, applies a movement speed slow and destroys trees within an area. First Radius: 0. Flame Length: 400. End Radius: 275. Damage per Second: 70. Move Speed Slow: 30%. Debuff Duration: 2. Cooldown: 20. Mana Cost: 100."
+      "description": "Releases a destructive flame in the direction Timbersaw is facing. Deals damage per second, applies a movement speed slow and destroys trees within an area. First Radius: 0. Flame Length: 400. End Radius: 275. Damage per Second: 70. Move Speed Slow: 30%. Debuff Duration: 2. Mana Cost: 20."
     },
     {
       "name": "Chakram",
       "type": "active",
-      "description": "Launches a saw-blade that deals damage, applies a movement speed slow, and cuts down trees in its path when launched and retracted. The saw-blade spins in place, deals damage over time, and applies a movement speed slow to enemy units based on their current health within its proximity once it reaches its area-targeted location. Cast Range: 1200. Effect Radius: 200. Max Distance: 2000. Contact Damage: 100/150/200. Contact Slow Duration: 0.5. Aura Linger Duration: 0.5. Cooldown: 8. Mana Cost: 100/140/180."
+      "description": "Launches a saw-blade that deals damage, applies a movement speed slow, and cuts down trees in its path when launched and retracted. The saw-blade spins in place, deals damage over time, and applies a movement speed slow to enemy units based on their current health within its proximity once it reaches its area-targeted location. Cast Range: 1200. Effect Radius: 200. Max Distance: 2000. Contact Damage: 100/150/200. Contact Slow Duration: 0.5. Aura Linger Duration: 0.5. Cooldown: 100/140/180. Mana Cost: 14/22/30."
     }
   ]
 }

@@ -1,0 +1,72 @@
+{
+  "name": "Warlock",
+  "description": "Chaos comes at my command!",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Initiator",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 10,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1,
+    "intelligence": 3.1
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "armor": 0.17,
+    "attackSpeed": 1,
+    "mana": 37.2,
+    "manaRegen": 0.155,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 2.67,
+    "magicResistance": 27.5,
+    "damageMin": 52,
+    "damageMax": 62,
+    "damageAverage": 57,
+    "projectileSpeed": 1200,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 100,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+50 Upheaval Radius",
+      "right": "+4% Fatal Bonds Damage"
+    },
+    "15": {
+      "left": "+150 Shadow Word Radius",
+      "right": "+8 Upheaval Attack Speed per Second +70 Upheaval Max Attack Speed"
+    },
+    "20": {
+      "left": "+45 Upheaval Damage Increment +45 Upheaval Max Damage",
+      "right": "+25% Warlock Golem Incoming Damage Reduction"
+    },
+    "25": {
+      "left": "+4 Fatal Bonds Targets",
+      "right": "Chaotic Offering on Death"
+    }
+  }
+}

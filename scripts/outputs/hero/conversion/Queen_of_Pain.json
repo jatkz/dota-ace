@@ -20,10 +20,10 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "mana": 40.8,
-    "manaRegen": 0.17,
     "armor": 0.42,
     "attackSpeed": 2.5,
+    "mana": 40.8,
+    "manaRegen": 0.17,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },

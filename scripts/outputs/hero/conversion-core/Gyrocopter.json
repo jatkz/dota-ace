@@ -1,0 +1,72 @@
+{
+  "name": "Gyrocopter",
+  "description": "So much for being retired… Aurel, the Gyrocopter.",
+  "attackType": "Ranged",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 22,
+    "agility": 25,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 3.4,
+    "intelligence": 2.4
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 28.8,
+    "manaRegen": 0.12,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 5.17,
+    "magicResistance": 27.1,
+    "damageMin": 43,
+    "damageMax": 49,
+    "damageAverage": 46,
+    "projectileSpeed": 3000,
+    "attackRange": 365,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 140,
+    "bat": 1.7,
+    "animationPoint": 0.2,
+    "animationBackswing": 0.1,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+150 Health",
+      "right": "+25% Homing Missile Damage"
+    },
+    "15": {
+      "left": "+25 Flak Cannon Damage",
+      "right": "+0.3s Homing Missile Stun Duration"
+    },
+    "20": {
+      "left": "+14 Rocket Barrage Damage",
+      "right": "+3 Flak Cannon Attacks"
+    },
+    "25": {
+      "left": "-40s Call Down Cooldown",
+      "right": "-4s Flak Cannon Cooldown"
+    }
+  }
+}

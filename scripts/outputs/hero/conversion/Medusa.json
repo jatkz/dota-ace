@@ -1,6 +1,6 @@
 {
   "name": "Medusa",
-  "description": "The only real beauty is power.",
+  "description": "The only real beauty is power. Medusa, the Gorgon.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -24,8 +24,8 @@
     "manaRegen": 0.18,
     "armor": 0.6,
     "attackSpeed": 3.6,
-    "mainAttackDamage": 3.6,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
   },
   "stats": {
     "health": 120,
@@ -55,27 +55,27 @@
     {
       "name": "Mana Shield",
       "type": "passive",
-      "description": "Creates a shield that absorbs incoming damage in exchange for Medusa's mana. Illusions absorb less damage per point of mana."
+      "description": "Creates a shield that absorbs incoming damage in exchange for Medusa's mana. Illusions absorb less damage per point of mana. Damage Reduction: 98%. Damage Taken to Mana Base Factor: 2. Damage Taken to Mana Factor Bonus per Hero Level: 0.1. Damage Reduction: 100%. Damage Taken to Mana Total Factor: 0.6."
     },
     {
       "name": "Split Shot",
       "type": "active",
-      "description": "Magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage. Enables Split Shot to utilize attack modifiers. Increases the bonus attack targets."
+      "description": "Magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage. Enables Split Shot to utilize attack modifiers. Increases the bonus attack targets. Search Radius: 750. Bonus Attack Targets: 4 (5). Self Attack Damage Factor: 0.5/0.6/0.7/0.8 (0.62/0.72/0.82/0.92). Mana Cost: 0."
     },
     {
       "name": "Mystic Snake",
       "type": "active",
-      "description": "Fires an energy bolt that jumps from target to target dealing damage. After it reaches its last target, it returns and replenishes Medusa's mana. Procs sources upon impact on each individual enemy hero per hit. The stops bouncing and immediately returns and applies the component."
+      "description": "Fires an energy bolt that jumps from target to target dealing damage. After it reaches its last target, it returns and replenishes Medusa's mana. The projectile travels faster and deals more damage per successful bounce. Cast Range: 750. Bounce Radius: 450. Number of Bounces: 3/4/5/6. Projectile Speed: 800. First Damage: 90/140/190/240 (126/196/266/336). Enemy Max Mana as Self Mana Restore: 15% (0.21). Cooldown: 15/14/13/12. Mana Cost: 80/100/120/140."
     },
     {
       "name": "Gorgon's Grasp",
       "type": "active",
-      "description": "Applies root, True Sight, turn rate slow, and a damage per second debuff on affected enemy units within each radius."
+      "description": "Applies root, True Sight, turn rate slow, and a damage per second debuff on affected enemy units within each radius. Cast Range: 625. Arrow Impact Delay: 0.25. First Radius: 150 (180). Radius Increase per Volley: 50 (60). Distance Factor per Volley: 1.7. Impact Damage: 30/70/110/150. Cooldown: 30/27/24/21. Mana Cost: 65/85/105/125."
     },
     {
       "name": "Stone Gaze",
       "type": "active",
-      "description": "If a certain amount of time is accumulated looking at Medusa while Stone Gaze is active, that unit will be petrified. Petrified units are stunned, and take bonus incoming physical damage. Grants self bonus movement speed while active."
+      "description": "If a certain amount of time is accumulated looking at Medusa while Stone Gaze is active, that unit will be petrified. Petrified units are stunned, and take bonus incoming physical damage. Grants self bonus movement speed while active. Effect Radius: 1200. Move Speed Slow: 35%. Attack Speed Slow: 35. Turn Rate Slow: 35%. Gaze Duration: 5/5.5/6 (7.5/8/8.5). Facing Timer: 2. Mana Cost: 90."
     }
   ]
 }

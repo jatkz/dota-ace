@@ -1,0 +1,72 @@
+{
+  "name": "Dark Seer",
+  "description": "If your enemy is equal, prepare for him.",
+  "attackType": "Melee",
+  "roles": [
+    "Initiator",
+    "Escape",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 19,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 1.5,
+    "intelligence": 2.7
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 32.4,
+    "manaRegen": 0.135,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.7
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 5.17,
+    "magicResistance": 27.2,
+    "damageMin": 53,
+    "damageMax": 59,
+    "damageAverage": 56,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 119,
+    "bat": 1.7,
+    "animationPoint": 0.59,
+    "animationBackswing": 0.58,
+    "moveSpeed": 295,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+65 Ion Shell Radius",
+      "right": "+15% Wall of Replica -based Illusion Damage"
+    },
+    "15": {
+      "left": "-1.5s Surge Cooldown",
+      "right": "+75 Vacuum Radius"
+    },
+    "20": {
+      "left": "+50 Ion Shell Damage",
+      "right": "-40s Wall of Replica Cooldown"
+    },
+    "25": {
+      "left": "+350 Surge Radius",
+      "right": "2 Ion Shell Charges"
+    }
+  }
+}

@@ -57,22 +57,32 @@
     {
       "name": "Predator",
       "type": "passive",
-      "description": "Attacks apply an additional physical spell damage instance based on the target's current health and Viper's level."
+      "description": "Attacks apply an additional physical spell damage instance based on the target's current health and Viper's level. Health Loss Factor: 0.15 (0.5). Factor Increase per Hero Level: 0.05."
     },
     {
       "name": "Poison Attack",
       "type": "active",
-      "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance reduction while dealing damage over time. Now applies armor reduction per stack with its debuff affecting buildings. The damage per second component is less effective on buildings. Increases max stacks."
+      "description": "Intensifies Viper's venom, adding an effect to his normal attack that applies a stacking movement speed slow and magic resistance reduction while dealing damage over time. Now applies armor reduction per stack with its debuff affecting buildings. The damage per second component is less effective on buildings. Increases max stacks. Cast Range: 600. Damage per Second per Stack: 4/8/12/16 (60/120/180/240). Move Speed Slow per Stack: 3%/6%/9%/12% (45%/90%/135%/180%). Magic Resist Reduction per Stack: 4%/6%/8%/10%. Debuff Duration: 4. Armor Reduction per Stack: (1). Mana Cost: 20."
     },
     {
       "name": "Nethertoxin",
       "type": "active",
-      "description": "The effect radius increases within fixed intervals over the entire duration. Grants Viper a positive aura within the radius. The longer Viper stays within the, the greater the Corrosive Skin properties. The ability values reach max values based on the same increment intervals over the entire duration."
+      "description": "The effect radius increases within fixed intervals over the entire duration. Cast Range: 900. Effect Radius: 400. Damage Interval: 0.5. Min Damage per Instance: 7.5/12.5/17.5/22.5 (7.75/12.75/17.75/22.75). Max Damage per Instance: 17.5/32.5/47.5/62.5 (17.75/32.75/47.75/62.75). Attack Speed Slow: 30/40/50/60. Mana Cost: 14."
+    },
+    {
+      "name": "Corrosive Skin",
+      "type": "active",
+      "description": "Increases Viper's magic resistance. Applies a more noxious Corrosive Skin that further slows enemy units' attack speed that damages Viper within proximity. Radius: 1400. Damage per Second: 10/15/20/25 (25/30/35/40). Attack Speed Slow: 9/18/27/36. Duration: 4. Magic Resist Bonus: 10%/15%/20%/25%. Proximity Radius: (500)."
+    },
+    {
+      "name": "Nosedive",
+      "type": "active",
+      "description": "It was thought that Netherdrake wings touch ground only in death, but some surmise that those who've witnessed more intentional landings merely haven't survived to tell the tale. Cast Range: 700. Effect Radius: 500. Damage per Second: 10/15/20/25 (25/30/35/40). Attack Speed Slow: 36/72/108/144. Debuff Duration: 4. Mana Cost: 20."
     },
     {
       "name": "Viper Strike",
       "type": "active",
-      "description": "Breaks the targeted enemy unit's passive abilities, slows its movement speed and attack speed, while dealing damage over time. The slowing effect reduces incrementally over the duration of the ability."
+      "description": "Breaks the targeted enemy unit's passive abilities, slows its movement speed and attack speed, while dealing damage over time. The slowing effect reduces incrementally over the duration of the ability. Cast Range: 700/800/900. Damage per Second: 70/100/150 (140/170/220). Move Speed Slow: 60%/70%/80%. Attack Speed Slow: 100/140/180. Break Duration: 6 (7). Debuff Duration: 6 (7). Cooldown: 50/40/30. Mana Cost: 100/150/200."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Centaur Warrunner",
-  "description": "It is not pride I take in my own power, it is passion. Bradwarden, the Centaur Warrunner.",
+  "description": "It is not pride I take in my own power, it is passion.",
   "attackType": "Melee",
   "roles": [
     "Durable",
@@ -26,8 +26,7 @@
     "manaRegen": 0.08,
     "armor": 0.17,
     "attackSpeed": 1,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 4.2
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 714,
@@ -53,36 +52,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+15 Move Speed",
+      "right": "+4 Health Regen"
+    },
+    "15": {
+      "left": "+30% Double Edge Strength as Damage",
+      "right": "+10 Strength"
+    },
+    "20": {
+      "left": "-25s Stampede Cooldown",
+      "right": "+45 Retaliate Damage"
+    },
+    "25": {
+      "left": "+0.8s Hoof Stomp Duration",
+      "right": "Grants Retaliate Aura"
+    }
+  },
   "abilities": [
     {
       "name": "Horsepower",
       "type": "passive",
-      "description": "Grants flat bonus movement speed per current and increases the self max movement speed cap."
+      "description": "Grants flat bonus movement speed per current and increases the self max movement speed cap. Str to Move Speed Bonus: 0.4. Set Max Move Speed Cap: 575."
     },
     {
       "name": "Hoof Stomp",
       "type": "active",
-      "description": "After a brief windup, Centaur slams the ground, stunning and damaging nearby enemy units. Centaur can move and is not disarmed during the delay."
+      "description": "After a brief windup, Centaur slams the ground, stunning and damaging nearby enemy units. Centaur can move and is not disarmed during the delay. Radius: 325. Wind-Up Time: 0.5. Damage: 90/160/230/300. Enemy Stun Duration: 1.6/1.8/2/2.2 (2.4/2.6/2.8/3). Cooldown: 18/16/14/12. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Double Edge",
       "type": "active",
-      "description": "Strikes a mighty blow at melee range, damaging both himself and a small area around the target. Deals extra damage based on Centaur's. deals additional damage equal to a percentage of the incoming damage taken previously. The damage counter resets upon cast."
+      "description": "Strikes a mighty blow at melee range, damaging both himself and a small area around the target. Deals extra damage based on Centaur's. In the spurs of combat, Bradwarden's vicious strikes sometimes cause self-inflicted collateral damage. Cast Range: 175. Damage Radius: 220. Base Damage: 120/180/240/300. Current Str to Damage Factor: 0.6/0.9/1.2/1.5 (0.9/1.2/1.5/1.8). Self Damage Factor: 1. Self Str Bonus per Enemy: (15%). Cooldown: 3.5."
     },
     {
       "name": "Retaliate",
       "type": "passive",
-      "description": "Counters all attacks, and returns a fixed damage amount plus a percentage based on Centaur's. Applies its ability effects on the attack before the source disables the ability."
+      "description": "Counters all attacks, and returns a fixed damage amount plus a percentage based on Centaur's Aura Radius: 0. Base Damage: 15/25/35/45 (60/70/80/90). Enemy Str to Bonus Damage Factor: 0.16/0.24/0.32/0.4. Aura Linger Duration: 0.5. Damage Factor: 0.5."
     },
     {
       "name": "Work Horse",
       "type": "active",
-      "description": "Acquiring this ability does not grant the."
+      "description": "It is a great honor to be offered a ride by Centaur Warrunner and a grave mistake to refuse it. Cart Distance: 150. Cart Duration: 6. Haste Speed: 550. Duration: 3.5/4/4.5. Cooldown: 35. Mana Cost: 75."
     },
     {
       "name": "Stampede",
       "type": "active",
-      "description": "Trampled enemies take damage based on Centaur's. Each enemy can be trampled and slowed once."
+      "description": "Trampled enemies take damage based on Centaur's. Each enemy can be trampled and slowed once. Buff Duration: 3.5/4/4.5. Damage Radius: 105. Cooldown: 90 (65). Mana Cost: 150/200/250."
     }
   ]
 }

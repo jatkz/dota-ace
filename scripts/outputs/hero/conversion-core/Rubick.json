@@ -1,0 +1,72 @@
+{
+  "name": "Rubick",
+  "description": "No sorcery lies beyond my grasp.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 23,
+    "intelligence": 24
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.5,
+    "intelligence": 3.7
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 44.4,
+    "manaRegen": 0.185,
+    "armor": 0.42,
+    "attackSpeed": 2.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.7
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 363,
+    "manaRegen": 1.7,
+    "armor": 4.83,
+    "magicResistance": 27.4,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": 1125,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.77,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+200 Health",
+      "right": "-2s Telekinesis Land Cooldown"
+    },
+    "15": {
+      "left": "-3s Fade Bolt Cooldown",
+      "right": "-50% Stolen Spells Mana Cost"
+    },
+    "20": {
+      "left": "Telekinesis Landing Deals 325 Damage",
+      "right": "+12% Fade Bolt Damage Reduction"
+    },
+    "25": {
+      "left": "+40% Stolen Spells Spell Damage Amp",
+      "right": "2x Module: Ability_ID:31: Could not find Lpdb data for \"Curiosity\" on \"Rubick\" (stack trace logged) Bonuses"
+    }
+  }
+}

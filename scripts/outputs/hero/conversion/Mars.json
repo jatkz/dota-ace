@@ -21,12 +21,12 @@
   "statGains": {
     "health": 81.4,
     "healthRegen": 0.37,
-    "mana": 26.4,
-    "manaRegen": 0.11,
+    "mainAttackDamage": 3.7,
     "armor": 0.28,
     "attackSpeed": 1.7,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.7
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -56,27 +56,27 @@
     {
       "name": "Dauntless",
       "type": "passive",
-      "description": "Grants Mars additional health regeneration amplification based on the total difference between enemy heroes and Mars within the radius."
+      "description": "Grants Mars additional health regeneration amplification based on the total difference between enemy heroes and Mars within the radius. Radius: 700. Regen Amp per Enemy: 70% (71.5%). Aura Linger Duration: 0.5. Health Regen Amp per Enemy: 70% (71.5%)."
     },
     {
       "name": "Spear of Mars",
       "type": "active",
-      "description": "Throws his spear and damages each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned. The spear damages, but does not impale creeps."
+      "description": "Throws his spear and damages each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned. The spear damages, but does not impale creeps. Cast Range: Global. Max Travel Distance: 900/1000/1100/1200. Impale Search Radius: 125. Number of Impaled Units: 1 (2). Damage: 100/175/250/325 (200/275/350/425). Knock Distance: 75. Cooldown: 14/13/12/11. Mana Cost: 100/110/120/130."
     },
     {
       "name": "God's Rebuke",
       "type": "active",
-      "description": "Applies a knockback with a critical strike-based instant attack to all enemy units in front of Mars."
+      "description": "Applies a knockback with a critical strike-based instant attack to all enemy units in front of Mars. Cast Range: 500 (600). Effect Radius: 500 (600). Crit Damage: 150%/200%/250%/300% (215%/265%/315%/365%). Knock Distance: 150. Knock Duration: 0.3. Move Speed Slow: 40%. Cooldown: 16/14/12/10. Mana Cost: 90."
     },
     {
       "name": "Bulwark",
       "type": "passive",
-      "description": "When activated, Bulwark self-disarms, and locks the direction Mars is facing. Reduces Mars' movement speed and redirects a percentage of the attack projectiles aimed at allied units toward Mars instead. When activated, Bulwark creates invulnerable soldiers on both sides of Mars. These soldiers move alongside Mars, deal damage based on Mars' attack damage, knockback, and slow affected enemies' movement speed. An enemy can only be attacked by one soldier at a time."
+      "description": "When activated, Bulwark self-disarms, and locks the direction Mars is facing. Reduces Mars' movement speed and redirects a percentage of the attack projectiles aimed at allied units toward Mars instead. When activated, Bulwark creates invulnerable soldiers on both sides of Mars. These soldiers move alongside Mars, deal damage based on Mars' attack damage, knockback, and slow affected enemies' movement speed. An enemy can only be attacked by one soldier at a time. Front Damage Reduction: 40%/50%/60%/70%. Side Damage Reduction: 20%/25%/30%/35%. Attack Redirect Proc Chance: 70%. Front Redirect Range: 200. Back Redirect Range: 900. Self Move Speed Slow: 18%. Mana Cost: 0.2."
     },
     {
       "name": "Arena of Blood",
       "type": "active",
-      "description": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who blocks enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears of his undead warriors, dealing damage and knocking them back."
+      "description": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who blocks enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears of his undead warriors, dealing damage and knocking them back. Cast Range: 400. Arena Radius: 550. Wall Width: 100. Arena Duration: 5.5. Aura Linger Duration: 0.5. Health Regen Bonus: (180). Cooldown: 150/200/250."
     }
   ]
 }

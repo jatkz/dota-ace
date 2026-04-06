@@ -22,10 +22,10 @@
   "statGains": {
     "health": 70.4,
     "healthRegen": 0.32,
-    "armor": 0.33,
-    "attackSpeed": 2,
     "mana": 22.8,
     "manaRegen": 0.095,
+    "armor": 0.33,
+    "attackSpeed": 2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.2
   },
@@ -52,6 +52,24 @@
     "collisionSize": 27,
     "visionDay": 1800,
     "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "",
+      "right": ""
+    },
+    "15": {
+      "left": "",
+      "right": ""
+    },
+    "20": {
+      "left": "",
+      "right": ""
+    },
+    "25": {
+      "left": "",
+      "right": ""
+    }
   },
   "abilities": [
     {

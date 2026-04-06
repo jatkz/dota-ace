@@ -1,6 +1,6 @@
 {
   "name": "Shadow Shaman",
-  "description": "I am the intermediary between life and death.",
+  "description": "Rhasta, the Shadow Shaman Born in the Bleeding Hills, uses his powers to curse and manipulate enemies.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -25,7 +25,6 @@
     "mana": 42,
     "manaRegen": 0.175,
     "armor": 0.27,
-    "attackSpeed": 1.6,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.5
   },
@@ -57,32 +56,32 @@
     {
       "name": "Fowl Play",
       "type": "passive",
-      "description": "Applies Hex on himself, without the set movement speed component, whenever Shadow Shaman takes lethal damage. Prevents all incoming damage utilizing damage manipulation."
+      "description": "Applies Hex on himself, without the set movement speed component, whenever Shadow Shaman takes lethal damage. Prevents all incoming damage utilizing damage manipulation. Set Current Health: 1. Disarm Duration: 3. Silence Duration: 3. Mute Duration: 3. Damage Reduction: 100%. Duration: 1 (1.5). Mana Cost: 120."
     },
     {
       "name": "Ether Shock",
       "type": "active",
-      "description": "Creates a cone of ethereal energy that strikes multiple enemy units."
+      "description": "Creates a cone of ethereal energy that strikes multiple enemy units. Cast Range: 600. First Radius: 200. Max Distance: 600. End Radius: 300. Number of Targets: 3/5/7/9. Damage: 125/190/255/320 (375/440/505/570). Cooldown: 14/12/10/8. Mana Cost: 90/105/120/135."
     },
     {
       "name": "Hex",
       "type": "active",
-      "description": "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared."
+      "description": "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared. Cast Range: 550. Set Move Speed: 100. Duration: 2/2.3/2.6/2.9. Break Duration: (2/2.3/2.6/2.9). Current Health as Damage: 100%. Cooldown: 24/20/16/12. Mana Cost: 130/150/170/190."
     },
     {
       "name": "Shackles",
       "type": "active",
-      "description": "Magically binds an enemy unit so that it cannot move or attack, dealing damage over time. Both the base damage and damage increase per interval are dealt in one single damage instance in the combat log."
+      "description": "Magically binds an enemy unit so that it cannot move or attack, dealing damage over time. Both the base damage and damage increase per interval are dealt in one single damage instance in the combat log. Cast Range: 450 (600). Max Channel Time: 2.4/3/3.6/4.2 (3.9/4.5/5.1/5.7). Damage Interval: 0.1. Base Damage per Instance: 4.17/5.33/6.11/6.67. Damage to Heal Factor: 1. Damage Bonus per Interval: 7.08/5.67/4.72/4.05. Cooldown: 14/13/12/11. Mana Cost: 125/140/155/170."
     },
     {
       "name": "Chicken Fingers",
       "type": "passive",
-      "description": "Applies Hex on the attacked enemy unit upon the Shaman's successful attack."
+      "description": "Applies Hex on the attacked enemy unit upon the Shaman's successful attack. Set Enemy Move Speed: 100. Duration: 1. Break Duration: (1). Current Health as Damage: 100%. Mana Cost: 15."
     },
     {
       "name": "Mass Serpent Ward",
       "type": "active",
-      "description": "Summons a number of Serpent Wards to attack enemy units and enemy buildings. Summons a single, massive Serpent Ward with various increased traits to attack enemy units and enemy buildings."
+      "description": "Summons a number of Serpent Wards to attack enemy units and enemy buildings. Serpent Wards' now instant attacks an additional enemy unit for full damage. Cast Range: 550. Spawn Radius: 150. Number of Serpent Wards: 10. Hit Count: 2 (3). Duration: 45. Creeps Hit Count: 4 (6). Cooldown: 110/105/100. Mana Cost: 200/350/550."
     }
   ]
 }

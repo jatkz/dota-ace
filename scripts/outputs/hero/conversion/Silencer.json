@@ -1,6 +1,6 @@
 {
   "name": "Silencer",
-  "description": "Enemies should be seen and not heard. Nortrom, the Silencer Enchants an enemy unit while granting vision over it. Deals damage corresponding to the difference between Silencer and the affected unit.",
+  "description": "Enemies should be seen and not heard.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,10 +22,10 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
-    "mana": 34.8,
-    "manaRegen": 0.145,
     "armor": 0.37,
     "attackSpeed": 2.2,
+    "mana": 34.8,
+    "manaRegen": 0.145,
     "magicResistance": 0.1,
     "mainAttackDamage": 2.9
   },
@@ -57,32 +57,32 @@
     {
       "name": "Brain Drain",
       "type": "passive",
-      "description": "Increases both the self gain and enemy loss."
+      "description": "Increases both the self gain and enemy loss. Enemy Death Radius: 925."
     },
     {
       "name": "Suffer In Silence",
       "type": "passive",
-      "description": "Grants Silencer outgoing damage amplification against silenced units. Damage sources from silenced units are less effective on Silencer."
+      "description": "Grants Silencer outgoing damage amplification against silenced units. Damage sources from silenced units are less effective on Silencer. Damage Amp: 8%/12%/16%/20%. Damage Reduction: 8%/12%/16%/20%."
     },
     {
       "name": "Arcane Curse",
       "type": "active",
-      "description": "Applies a curse on affected enemy units within the radius, dealing damage over time and slowing their movement speed."
+      "description": "Applies a curse on affected enemy units within the radius, dealing damage over time and slowing their movement speed. Cast Range: 850. Effect Radius: 350. First Damage: 20/40/60/80. Damage per Second: 16/24/32/40. Move Speed Slow: 16%/19%/22%/25%. Silenced Factor: 1.25 (26.25). Cooldown: 22/20/18/16. Mana Cost: 120/130/140/150."
     },
     {
       "name": "Glaives of Wisdom",
       "type": "active",
-      "description": "Grants self bonus per attack projectile impact. The attack deals additional damage corresponding to Silencer's current intelligence. Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat."
+      "description": "Grants self bonus per attack projectile impact. The attack deals additional damage corresponding to Silencer's current intelligence. Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat. Cast Range: 600. Enemy Int Loss per Attack: 2/3/4/5/5. Duration: 10/20/30/40/40 (50/60/70/80/80). Self Int Gain per Attack: 2/3/4/5/5. Int Damage Factor: 0.35/0.5/0.65/0.8/0.8 (0.65/0.8/0.95/1.1/1.1). Cooldown: 14/16/18/20."
     },
     {
       "name": "Last Word",
       "type": "active",
-      "description": "Enchants an enemy unit while granting vision over it. Deals damage corresponding to the difference between Silencer and the affected unit."
+      "description": "Enchants an enemy unit while granting vision over it. Deals damage corresponding to the difference between Silencer and the affected unit. Cast Range: 900. Base Damage: 120/160/200/240. Int Difference Damage Factor: 1/1.5/2/2.5. First Debuff Duration: 4. Silence Duration: 3/4/5/6. Radius: 250. Cooldown: 22/18/14/10. Mana Cost: 100/105/110/115."
     },
     {
       "name": "Global Silence",
       "type": "active",
-      "description": "Applies Arcane Curse of its corresponding level to all silence-affected enemy heroes. The debuff has the same duration as the applied Global Silence debuff."
+      "description": "Applies Arcane Curse of its corresponding level to all silence-affected enemy heroes. The debuff has the same duration as the applied Global Silence debuff. Radius: Global Duration: 4.5/5.25/6. Radius: Global. Duration: 4.5/5.25/6. Curse Duration Factor: (4.5/5.25/6). Cooldown: 300/450/600."
     }
   ]
 }

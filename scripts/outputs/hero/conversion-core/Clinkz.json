@@ -1,0 +1,71 @@
+{
+  "name": "Clinkz",
+  "description": "Better to run than curse the road.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Escape",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 17,
+    "agility": 25,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.7,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.45,
+    "attackSpeed": 2.7,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 1.95,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4.17,
+    "magicResistance": 27.1,
+    "damageMin": 44,
+    "damageMax": 50,
+    "damageAverage": 47,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 125,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-4s Skeleton Walk Cooldown",
+      "right": "+0.75s Strafe Duration"
+    },
+    "15": {
+      "left": "-10s Death Pact Restore Time",
+      "right": "+50 Attack Range"
+    },
+    "20": {
+      "left": "+400 Death Pact Health",
+      "right": "+40 Strafe Attack Speed"
+    },
+    "25": {
+      "left": "Searing Arrows Multishot",
+      "right": "-9s Strafe Cooldown"
+    }
+  }
+}

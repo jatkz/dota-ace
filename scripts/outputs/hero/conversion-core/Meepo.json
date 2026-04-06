@@ -1,0 +1,74 @@
+{
+  "name": "Meepo",
+  "description": "All these fancy knights and scary monsters.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Escape",
+    "Nuker",
+    "Disabler",
+    "Initiator",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 24,
+    "agility": 17,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 2.1,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.65,
+    "mana": 291,
+    "manaRegen": 1.15,
+    "armor": 5.83,
+    "magicResistance": 26.8,
+    "damageMin": 46,
+    "damageMax": 52,
+    "damageAverage": 49,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.38,
+    "animationBackswing": 0.6,
+    "moveSpeed": 320,
+    "turnRate": 0.9,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+40 Poof Damage",
+      "right": "+7 Strength"
+    },
+    "15": {
+      "left": "-2.5s Earthbind Cooldown",
+      "right": "+15% Evasion"
+    },
+    "20": {
+      "left": "+7 Ransack Health Steal",
+      "right": "Earthbind True Strike"
+    },
+    "25": {
+      "left": "-0.75s Poof Cast Point",
+      "right": "+400 Health"
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "name": "Mirana",
+  "description": "How long must we ride before we're summoned again to the Nightsilver Woods?",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Support",
+    "Escape",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 26,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 3.1,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.52,
+    "attackSpeed": 3.1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 339,
+    "manaRegen": 1.5,
+    "armor": 2.33,
+    "magicResistance": 27.2,
+    "damageMin": 48,
+    "damageMax": 54,
+    "damageAverage": 51,
+    "projectileSpeed": 900,
+    "attackRange": 630,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 126,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.7,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+150 Leap Distance",
+      "right": "-2s Starstorm Cooldown"
+    },
+    "15": {
+      "left": "+90 Leap Attack Speed",
+      "right": "+20% Moonlight Shadow Evasion"
+    },
+    "20": {
+      "left": "+40 Celestial Quiver Damage",
+      "right": "+200 Starstorm Damage"
+    },
+    "25": {
+      "left": "-30s Moonlight Shadow Cooldown",
+      "right": "Sacred Arrow Multishot"
+    }
+  }
+}

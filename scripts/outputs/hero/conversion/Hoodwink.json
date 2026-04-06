@@ -1,6 +1,6 @@
 {
   "name": "Hoodwink",
-  "description": "Who said you could stroll in my woods? Hoodwink Fires an acorn attack on the unit-targeted enemy. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.",
+  "description": "Who said you could stroll in my woods? Hoodwink Fires an acorn attack on the unit-targeted enemy.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -21,11 +21,11 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
+    "mana": 34.8,
+    "manaRegen": 0.145,
     "armor": 0.6,
     "attackSpeed": 3.6,
     "mainAttackDamage": 3.6,
-    "mana": 34.8,
-    "manaRegen": 0.145,
     "magicResistance": 0.1
   },
   "stats": {
@@ -56,37 +56,37 @@
     {
       "name": "Mistwoods Wayfarer",
       "type": "passive",
-      "description": "The higher Hoodwink's level, the greater the incoming attack redirect proc chance."
+      "description": "The higher Hoodwink's level, the greater the incoming attack redirect proc chance. Tree Search Radius: 275. Redirect Proc Chance: 14%. Proc Chance Increase: 1%. Proc Chance Factor: 2."
     },
     {
       "name": "Acorn Shot",
       "type": "active",
-      "description": "Fires an acorn attack on the unit-targeted enemy. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage."
+      "description": "Fires an acorn attack on the unit-targeted enemy. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage. Cast Range: 675/700/725/750. Bounce Search Radius: 525. Number of Bounces: 3/4/5/6 (13/14/15/16). Instant Attack Factor: 0.8. Instant Attack Damage Bonus: 45/90/135/180. Move Speed Slow: 100%. Cooldown: 16/14/12/10. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Bushwhack",
       "type": "active",
-      "description": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area-targeted location. Applies damage over time to all debuff-affected enemy units."
+      "description": "Tosses a net trap that stuns enemy heroes if they are near a tree in the area-targeted location. Applies damage over time to all debuff-affected enemy units. Cast Range: 1100. Effect Radius: 265. Total Damage: 90/180/270/360 (140/230/320/410). Stun Duration: 1.5/1.7/1.9/2.1. Enemy Pull Speed: 1000. Set Vision Range: 0. Cooldown: 15/14/13/12. Mana Cost: 90/100/110/120."
     },
     {
       "name": "Scurry",
       "type": "active",
-      "description": "When activated, Hoodwink gains bonus movement speed, evasion, attack and cast range, phased movement, and tree-walking for a brief time."
+      "description": "When activated, Hoodwink gains bonus movement speed, evasion, attack and cast range, phased movement, and tree-walking for a brief time. Move Speed Bonus: 20%/25%/30%/35%. Duration: 3/3.5/4/4.5. Redirect Factor: 2. Redirect Chance Factor: 2. Tree Search Radius: 275. Cooldown: 30/24/18/12. Mana Cost: 2."
     },
     {
       "name": "Decoy",
       "type": "active",
-      "description": "If the Decoy-based illusion is attacked or hit by a unit-targeted ability, it is destroyed and throws a lesser Bushwhack toward the enemy. Requires acquiring in order for the to channel Sharpshooter, else the illusion runs toward the nearest enemy unit."
+      "description": "Creates a Decoy-based strong illusion that starts winding up Sharpshooter at the nearest enemy hero. If the Decoy-based illusion is attacked or hit by a unit-targeted ability, it is destroyed and throws a lesser Bushwhack toward the enemy. Cast Range: Global. Fade Time: 0. Move Speed Bonus: 15%. Invisibility Duration: 6. Number of Illusions: 1. Damage Taken: 200%. Mana Cost: 30."
     },
     {
       "name": "Hunter's Boomerang",
       "type": "active",
-      "description": "Tosses a boomerang in an arc that deals damage as it pass through enemy units. The Hunter's mark applied slows the affected enemy units' movement speed and be more vulnerable to spell damage. The boomerang then returns to Hoodwink at the tip of the arc."
+      "description": "Tosses a boomerang in an arc that deals damage as it pass through enemy units. The Hunter's mark applied slows the affected enemy units' movement speed and be more vulnerable to spell damage. The boomerang then returns to Hoodwink at the tip of the arc. Cast Range: 1100. Boomerang Radius: 150. Min Travel Distance: 400. Min Boomerang Duration: 0.5. Max Boomerang Duration: 1.2. Damage: 250. Mana Cost: 18."
     },
     {
       "name": "Sharpshooter",
       "type": "active",
-      "description": "The bolt flies through creeps and damages them, albeit the damage being less effective. Increases the bolt projectile speed and the movement speed slow applied."
+      "description": "The bolt flies through creeps and damages them, albeit the damage being less effective. Increases the bolt projectile speed and the movement speed slow applied. Cast Range: 3000. Travel Distance: 3000. Projectile Speed: 2200 (2750). Collision Radius: 125. Max Wind-up Time: 3. Max Aim Time: 5. Cooldown: 100/150/200."
     }
   ]
 }

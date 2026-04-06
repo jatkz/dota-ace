@@ -1,0 +1,73 @@
+{
+  "name": "Hoodwink",
+  "description": "Who said you could stroll in my woods?",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Escape",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 17,
+    "agility": 25,
+    "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 3.6,
+    "intelligence": 2.9
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 34.8,
+    "manaRegen": 0.145,
+    "armor": 0.6,
+    "attackSpeed": 3.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 1.95,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4.17,
+    "magicResistance": 27.1,
+    "damageMin": 47,
+    "damageMax": 54,
+    "damageAverage": 50.5,
+    "projectileSpeed": 1800,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 125,
+    "bat": 2,
+    "animationPoint": 0.4,
+    "animationBackswing": 1.5,
+    "moveSpeed": 315,
+    "turnRate": 0.9,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+175 Health",
+      "right": "+50 Bushwhack Damage"
+    },
+    "15": {
+      "left": "+10 Agility",
+      "right": "+1 Scurry Ability Charge"
+    },
+    "20": {
+      "left": "+2 Acorn Shot Bounces",
+      "right": "Sharpshooter Grants Vision and True Sight During Wind-up"
+    },
+    "25": {
+      "left": "2 Acorn Shot Charges",
+      "right": "+400 Sharpshooter Max Damage"
+    }
+  }
+}

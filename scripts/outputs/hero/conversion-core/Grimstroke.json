@@ -1,0 +1,71 @@
+{
+  "name": "Grimstroke",
+  "description": "I'll paint this world as I see fit.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 18,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1.9,
+    "intelligence": 3.8
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 45.6,
+    "manaRegen": 0.19,
+    "armor": 0.32,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3,
+    "magicResistance": 27.5,
+    "damageMin": 47,
+    "damageMax": 51,
+    "damageAverage": 49,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.85,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-4s Ink Swell Cooldown",
+      "right": "+65 Phantom's Embrace Damage per Second"
+    },
+    "15": {
+      "left": "+15% Ink Swell Move Speed",
+      "right": "+25% Soulbind Spell Damage Amp"
+    },
+    "20": {
+      "left": "+3 Phantom Hit Count",
+      "right": "+80% Stroke of Fate Damage"
+    },
+    "25": {
+      "left": "+70% Stroke of Fate Speed/Travel Range",
+      "right": "+150 Ink Swell Radius"
+    }
+  }
+}

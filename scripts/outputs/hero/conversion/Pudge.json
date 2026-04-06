@@ -1,6 +1,6 @@
 {
   "name": "Pudge",
-  "description": "When I'm through with these vermin, they'll be fit for a pie!",
+  "description": "When I'm through with these vermin, they'll be fit for a pie! Pudge, the Butcher Disables the unit-targeted enemy, and deals damage over time based on Pudge's current.",
   "attackType": "Melee",
   "roles": [
     "Disabler",
@@ -62,12 +62,12 @@
     {
       "name": "Meat Hook",
       "type": "active",
-      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage. Deals additional damage to the hooked enemy unit corresponding to the dragged distance. Cast Range: 1300. Max Travel Distance: 1300. Hook Search Radius: 100. Damage: 150/220/290/360 (300/370/440/510). Followthrough Duration: 0.53. Current Health as Damage: 100%. Cooldown: 18/16/14/12 (14/12/10/8). Mana Cost: 120."
+      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage. Deals additional damage to the hooked enemy unit corresponding to the dragged distance. Cast Range: 1300. Max Travel Distance: 1300. Hook Search Radius: 100. Damage: 150/220/290/360 (300/370/440/510). Followthrough Duration: 0.53. Current Health as Damage: 100%. Cooldown: 18/16/14/12. Mana Cost: 120."
     },
     {
       "name": "Rot",
       "type": "active",
-      "description": "A toxic cloud that deals intense damage and slows movement — harming not only enemy units but Pudge himself. Radius: 250 (450). Damage per Second: 30/60/90/120 (120/150/180/210). Move Speed Slow: 14%/20%/26%/32% (24%/30%/36%/42%). Aura Linger Duration: 0.5. Health Restore Reduction: (20%). Cooldown: 0."
+      "description": "A toxic cloud that deals intense damage and slows movement — harming not only enemy units but Pudge himself. Radius: 250 (450). Damage per Second: 30/60/90/120 (120/150/180/210). Move Speed Slow: 14%/20%/26%/32% (24%/30%/36%/42%). Aura Linger Duration: 0.5. Health Restore Reduction: (20%). Mana Cost: 0."
     },
     {
       "name": "Meat Shield",

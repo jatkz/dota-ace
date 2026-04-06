@@ -1,0 +1,71 @@
+{
+  "name": "Slark",
+  "description": "If I'd known I'd end up here, I'd have stayed in Dark Reef Prison.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Disabler",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 21,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.1,
+    "agility": 1.5,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 46.2,
+    "healthRegen": 0.21,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "mainAttackDamage": 1.5,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 3.5,
+    "magicResistance": 26.6,
+    "damageMin": 58,
+    "damageMax": 64,
+    "damageAverage": 61,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 120,
+    "totalAttackSpeed": 141,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.7,
+    "collisionSize": 27
+  },
+  "talents": {
+    "10": {
+      "left": "+0.5s Pounce Leash",
+      "right": "-0.75s Dark Pact Cooldown"
+    },
+    "15": {
+      "left": "+30 Shadow Dance Regen",
+      "right": "+70 Dark Pact Damage"
+    },
+    "20": {
+      "left": "+100 Shadow Dance Attack Speed",
+      "right": "+25s Essence Shift Duration"
+    },
+    "25": {
+      "left": "+1 Agility gain/steal per Essence Shift Stack",
+      "right": "+1.5s Shadow Dance Duration"
+    }
+  }
+}

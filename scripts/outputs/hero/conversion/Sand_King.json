@@ -57,22 +57,27 @@
     {
       "name": "Caustic Finale",
       "type": "passive",
-      "description": "An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise."
+      "description": "An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise. Effect Radius: 400 (500). Base Damage: 20/40/60/80. Max Health as Damage Bonus: 3%/7%/11%/15%. Duration: 4.5/5/5.5/6."
     },
     {
       "name": "Burrowstrike",
       "type": "active",
-      "description": "Applies a Caustic Finale debuff of its corresponding level on all affected enemy units upon resurfacing. Applies of Sand King corresponding ability level when acquired."
+      "description": "Applies a Caustic Finale debuff of its corresponding level on all affected enemy units upon resurfacing. Cast Range: 525/600/675/750 (725/800/875/950). Spine Radius: 150. Damage: 80/150/220/290. Stun Duration: 1.2/1.4/1.6/1.8. Travel Distance: 525/600/675/750 (550/625/700/775). Cooldown: 14/13/12/11. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Sand Storm",
       "type": "active",
-      "description": "Creates a sandstorm that damages enemy units within the radius. The sandstorm immediately dissipates upon leaving the effect radius. Successful attacks now applies a blind debuff to the attacked enemy unit within the radius while active."
+      "description": "Creates a sandstorm that damages enemy units within the radius. The sandstorm immediately dissipates upon leaving the effect radius. Radius: 475/550/625/700. Damage per Second: 30/50/70/90 (55/75/95/115). Duration: 16/20/24/28. Aura Linger Duration: 0.5. Move Speed Slow: 35%. Cooldown: 40/34/28/22. Mana Cost: 85."
     },
     {
       "name": "Stinger",
       "type": "active",
-      "description": "Applies of Sand King's corresponding ability level when acquired."
+      "description": "Attacks and strikes an area with bonus spell damage. The strike additionally applies a movement speed slow to all enemy units within the radius. Deals additional damage to units within the proximity radius. Cast Range: 200. Effect Radius: 230/250/270/290. Instant Attack Factor: 1. Spell Damage Bonus: 50/75/100/125. Move Speed Slow: 10%/12%/14%/16% (22%/24%/26%/28%). Slow Duration: 4/5/6/7. Cooldown: 15/12/9/6. Mana Cost: 35/40/45/50."
+    },
+    {
+      "name": "Epicenter",
+      "type": "active",
+      "description": "Damage while Invisible Stuns leading to kills Base Radius: 500 (506). Number of Pulses: 12/16/20 (137/141/145). Damage per Pulse: 60/70/80 (70/80/90). Move Speed Slow: 30%/40%/50%. Attack Speed Slow: 50/55/60. Slow Duration: 3. Cooldown: 120/110/100. Mana Cost: 150/225/300."
     }
   ]
 }

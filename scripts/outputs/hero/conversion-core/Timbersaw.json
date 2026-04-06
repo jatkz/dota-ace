@@ -1,0 +1,70 @@
+{
+  "name": "Timbersaw",
+  "description": "I'm not a lumberjack. This. This is personal.",
+  "attackType": "Melee",
+  "roles": [
+    "Nuker",
+    "Durable",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 23,
+    "agility": 16,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 3.6,
+    "agility": 1.6,
+    "intelligence": 2.7
+  },
+  "statGains": {
+    "health": 79.2,
+    "healthRegen": 0.36,
+    "mana": 32.4,
+    "manaRegen": 0.135,
+    "armor": 0.27,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 351,
+    "manaRegen": 1.65,
+    "armor": 2.67,
+    "magicResistance": 27.3,
+    "damageMin": 46,
+    "damageMax": 50,
+    "damageAverage": 48,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.36,
+    "animationBackswing": 0.64,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1.5 Mana Regen",
+      "right": "+0.25 Reactive Armor Health Regen per Stack"
+    },
+    "15": {
+      "left": "+6 Reactive Armor Max Stacks +1 Reactive Armor Stack per Hero Attack",
+      "right": "+2% Whirling Death Attributes Reduction"
+    },
+    "20": {
+      "left": "+5% Chakram Slow",
+      "right": "+10 Exposure Therapy Heal per Tree Destroyed"
+    },
+    "25": {
+      "left": "75% Timber Chain Range/Projectile Speed",
+      "right": "+75 Whirling Death Tree Bonus Damage"
+    }
+  }
+}

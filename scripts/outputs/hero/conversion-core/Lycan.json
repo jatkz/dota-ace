@@ -1,0 +1,72 @@
+{
+  "name": "Lycan",
+  "description": "A wolf in man's clothing.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Pusher",
+    "Durable",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 28,
+    "agility": 18,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 1.7,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 736,
+    "healthRegen": 3.05,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 3,
+    "magicResistance": 27.3,
+    "damageMin": 52,
+    "damageMax": 57,
+    "damageAverage": 54.5,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 128,
+    "bat": 1.7,
+    "animationPoint": 0.55,
+    "animationBackswing": 0.25,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+10 Summon Wolves Damage",
+      "right": "+3 Howl Armor Reduction"
+    },
+    "15": {
+      "left": "-15s Shapeshift Cooldown",
+      "right": "+350 Summon Wolves Health"
+    },
+    "20": {
+      "left": "+25% Feral Impulse Damage",
+      "right": "+7s Shapeshift Duration"
+    },
+    "25": {
+      "left": "-25% Summon Wolves BAT",
+      "right": "Howl Reduces Total Attack Damage"
+    }
+  }
+}

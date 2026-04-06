@@ -1,0 +1,72 @@
+{
+  "name": "Muerta",
+  "description": "What fable of Muerta were YOU told? Whatever cruelties you've heard... the truth is far worse.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 21,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.7,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "armor": 0.45,
+    "attackSpeed": 2.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 3.5,
+    "magicResistance": 27.3,
+    "damageMin": 47,
+    "damageMax": 55,
+    "damageAverage": 51,
+    "projectileSpeed": 3000,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 136,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 1.1,
+    "moveSpeed": 295,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+20 Attack Speed",
+      "right": "+300 Dead Shot Cast Range"
+    },
+    "15": {
+      "left": "+15 Intelligence",
+      "right": "+3% The Calling Self Max Health Regen"
+    },
+    "20": {
+      "left": "+2 The Calling Revenants",
+      "right": "+2 Pierce the Veil Duration"
+    },
+    "25": {
+      "left": "2 Dead Shot Charges",
+      "right": "+20% Gunslinger Proc Chance"
+    }
+  }
+}

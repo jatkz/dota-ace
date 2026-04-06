@@ -25,10 +25,9 @@
     "healthRegen": 0.32,
     "mana": 20.4,
     "manaRegen": 0.085,
+    "mainAttackDamage": 3.2,
     "armor": 0.33,
-    "attackSpeed": 2,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.2
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 582,
@@ -54,36 +53,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "-2s Breathe Fire Cooldown",
+      "right": "+15 Attack Damage"
+    },
+    "15": {
+      "left": "+300 Health",
+      "right": "+0.4s Dragon Tail Stun"
+    },
+    "20": {
+      "left": "+200 Breathe Fire Damage",
+      "right": "+150 Elder Dragon Form Attack Range"
+    },
+    "25": {
+      "left": "+50% Wyrm's Wrath Bonuses",
+      "right": "+12 Dragon Blood Health Regen/Armor"
+    }
+  },
   "abilities": [
     {
       "name": "Dragon Blood",
       "type": "passive",
-      "description": "The Eldwurm-blood infused knight in dragon form has nigh impenetrable armor and health regeneration."
+      "description": "The Eldwurm-blood infused knight in dragon form has nigh impenetrable armor and health regeneration. Base Health Regen Bonus: 2 (14). Health Regen Bonus per Level: 0.5. Base Armor Bonus: 2 (14). Armor Bonus per Level: 0.5. Health Regen Bonus Factor: 1.5. Armor Bonus Factor: 1.5."
     },
     {
       "name": "Breathe Fire",
       "type": "active",
-      "description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal."
+      "description": "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal. Cast Range: 1000. First Radius: 150. Travel Distance: 750. End Radius: 250. Damage: 80/160/240/320 (280/360/440/520). Attack Damage Reduction: 20%/24%/28%/32%. Cooldown: 14/13/12/11 (12/11/10/9). Mana Cost: 90/95/100/105."
     },
     {
       "name": "Dragon Tail",
       "type": "active",
-      "description": "Smites an enemy unit in melee range with his shield, stunning it while dealing minor damage."
+      "description": "Smites an enemy unit in melee range with his shield, stunning it while dealing minor damage. Cast Range: 150. Projectile Speed: 0. Damage: 60/90/120/150. Stun Duration: 1.8/2/2.2/2.4 (2.2/2.4/2.6/2.8). Cooldown: 16/14/12/10. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Wyrm's Wrath",
       "type": "passive",
-      "description": "The life blood of the Dragon improves Dragon Knight's abilities and items to have increased Ao E and causes his attacks to deal additional magic damage to enemy units."
+      "description": "The life blood of the Dragon improves Dragon Knight's abilities and items to have increased Ao E and causes his attacks to deal additional magic damage to enemy units. Magic Damage Bonus: 10/20/30/40 (15/30/45/60). Ao E Bonus: 25/50/75/100 (37.5/75/112.5/150)."
     },
     {
       "name": "Fireball",
       "type": "active",
-      "description": "Dealing damage over time within the radius. Has reduced cast range in human form."
+      "description": "Dealing damage over time within the radius. Has reduced cast range in human form. Cast Range: 600. Radius: 275. Damage per Second: 85. Duration: 6. Aura Linger Duration: 2. Cast Range: 1400. Cooldown: 20. Mana Cost: 80."
     },
     {
       "name": "Elder Dragon Form",
       "type": "active",
-      "description": "Increases the current level of Dragon Form by one. Adds a Level 4 Black Dragon that has free pathing, bonus magic resistance, and increased other bonuses. Grants bonus according to the caster's attack range type."
+      "description": "Increases the current level of Dragon Form by one. Adds a Level 4 Black Dragon that has free pathing, bonus magic resistance, and increased other bonuses. Attack Range Bonus: 350 (500). Ability Range Bonus: 350. Damage per Second: 25/25/25/35. Debuff Duration: 3. Radius: 0/375/375/450. Splash Attack Damage: 0%/75%/75%/100%. Cooldown: 100. Mana Cost: 50."
     }
   ]
 }

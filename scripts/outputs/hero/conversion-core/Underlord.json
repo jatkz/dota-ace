@@ -1,0 +1,73 @@
+{
+  "name": "Underlord",
+  "description": "Nothing can stop us. Nothing can slow our march. And when we have arrived, all will burn.",
+  "attackType": "Melee",
+  "roles": [
+    "Support",
+    "Durable",
+    "Nuker",
+    "Disabler",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 25,
+    "agility": 12,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.2,
+    "agility": 1.6,
+    "intelligence": 2.3
+  },
+  "statGains": {
+    "health": 70.4,
+    "healthRegen": 0.32,
+    "mana": 27.6,
+    "manaRegen": 0.115,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 2.75,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 5,
+    "magicResistance": 26.8,
+    "damageMin": 62,
+    "damageMax": 68,
+    "damageAverage": 65,
+    "projectileSpeed": "Instant",
+    "attackRange": 200,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 112,
+    "bat": 1.7,
+    "animationPoint": 0.45,
+    "animationBackswing": 0.7,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+15s Atrophy Aura Duration",
+      "right": "+5% Invading Force Move Speed/Damage Reduction"
+    },
+    "15": {
+      "left": "-5s Firestorm Cooldown",
+      "right": "+20% Pit of Malice Slow"
+    },
+    "20": {
+      "left": "+10% Atrophy Aura Damage Reduction/Bonus",
+      "right": "+0.6% Firestorm Burn Damage"
+    },
+    "25": {
+      "left": "+160 DPS in 700 Radius Around Fiend's Gate",
+      "right": "+0.4s Pit of Malice Root"
+    }
+  }
+}

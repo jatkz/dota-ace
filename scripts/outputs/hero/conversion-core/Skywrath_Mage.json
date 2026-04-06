@@ -1,0 +1,72 @@
+{
+  "name": "Skywrath Mage",
+  "description": "A highly placed mage in the court of the Ghastly Eyrie who serves as the sworn protector of the Skywrath scion.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 13,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 0.8,
+    "intelligence": 4.1
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.13,
+    "attackSpeed": 0.8,
+    "mana": 49.2,
+    "manaRegen": 0.205,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 375,
+    "manaRegen": 1.5,
+    "armor": 0.17,
+    "magicResistance": 27.5,
+    "damageMin": 41,
+    "damageMax": 51,
+    "damageAverage": 46,
+    "projectileSpeed": 1000,
+    "attackRange": 625,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 103,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.78,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+125 Arcane Bolt Cast Range",
+      "right": "+1.5 Mana Regen"
+    },
+    "15": {
+      "left": "+20% Concussive Shot Slow",
+      "right": "-6s Ancient Seal Cooldown"
+    },
+    "20": {
+      "left": "+10% Ancient Seal Magic Resist Reduction",
+      "right": "Global Concussive Shot"
+    },
+    "25": {
+      "left": "+400 Mystic Flare Damage",
+      "right": "+1.5x Arcane Bolt Intelligence Factor"
+    }
+  }
+}

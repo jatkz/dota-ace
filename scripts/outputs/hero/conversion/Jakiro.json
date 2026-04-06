@@ -25,7 +25,6 @@
     "manaRegen": 0.15,
     "armor": 0.2,
     "magicResistance": 0.1,
-    "attackSpeed": 1.2,
     "mainAttackDamage": 3
   },
   "stats": {
@@ -56,32 +55,32 @@
     {
       "name": "Double Trouble",
       "type": "passive",
-      "description": "Jakiro's attack launches two projectiles at the target, but deals less damage. The Ice Head always attacks first. The Fire Head applies an instant attack after the Ice Head's attack at a fixed interval. This attack ignores the melee heroes' damage block innate ability."
+      "description": "Jakiro's attack launches two projectiles at the target, but deals less damage. The Ice Head always attacks first. The Fire Head applies an instant attack after the Ice Head's attack at a fixed interval. This attack ignores the melee heroes' damage block innate ability. Attacks per Attack Point: 1. Total Attack Damage Reduction: 51%. Instant Attack Interval: 0.2. Total Attack Damage Increase: 1%."
     },
     {
       "name": "Dual Breath",
       "type": "active",
-      "description": "An icy blast followed by a wave of fire launches out in a path in front of Jakiro. The ice head applies an attack speed slow and a movement speed slow to affected enemy units."
+      "description": "An icy blast followed by a wave of fire launches out in a path in front of Jakiro. The ice head applies an attack speed slow and a movement speed slow to affected enemy units. Cast Range: 850 (1700). First Radius: 150. Travel Distance: 750 (1500). End Radius: 275. First Damage: 0. Move Speed Slow: 25%/30%/35%/40%. Cooldown: 135/150/165/180."
     },
     {
       "name": "Ice Path",
       "type": "active",
-      "description": "Creates a path of ice that stuns and damages enemy units that touch it."
+      "description": "Creates a path of ice that stuns and damages enemy units that touch it. Cast Range: 1100. Path Distance: 1100. Path Radius: 150. First Damage: 50 (125). Stun Duration: 1.25/1.5/1.75/2 (1.65/1.9/2.15/2.4). Path Duration: 2.6/3.1/3.6/4.1 (3/3.5/4/4.5). Cooldown: 20/17/14/11. Mana Cost: 100."
     },
     {
       "name": "Liquid Fire",
-      "type": "passive",
-      "description": "Grants additional range when manually casting the ability."
+      "type": "active",
+      "description": "Grants additional range when manually casting the ability. Cast Range: 400 (575). Effect Radius: 300. Attack Speed Slow: 30/40/50/60 (60/70/80/90). Base Damage per Second: 15/25/35/45. Debuff Duration: 5. Max Health as Damage per Second: (3%). Cooldown: 13/10/7/4. Mana Cost: 20."
     },
     {
       "name": "Liquid Frost",
-      "type": "passive",
-      "description": "Grants additional range when manually casting the ability."
+      "type": "active",
+      "description": "Grants additional range when manually casting the ability. Cast Range: 400 (575). First Damage: 8/16/24/32. Proc Damage: 15/20/25/30. Move Speed Slow: 15%/20%/25%/30%. Debuff Duration: 5. Max Health as Damage per Second: (3%). Cooldown: 13/10/7/4. Mana Cost: 20."
     },
     {
       "name": "Macropyre",
       "type": "active",
-      "description": "Exhales a wide line of lasting flames, which deals damage per second to any enemy units caught in the fire. Emits two ice walls along the edges of Macropyre that slow any enemy units trying to cross them."
+      "description": "Exhales a wide line of lasting flames, which deals damage per second to any enemy units caught in the fire. Emits two ice walls along the edges of Macropyre that slow any enemy units trying to cross them. Cast Range: 1400. Path Width: 500. Path Distance: 1400. Damage per Second: 100/150/200 (120/170/220). Damage Linger Duration: 1. Path Duration: 10 (15). Cooldown: 90/80/70. Mana Cost: 300/400/500."
     }
   ]
 }

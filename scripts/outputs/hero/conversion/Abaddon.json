@@ -51,31 +51,49 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+8 Aphotic Shield Health Regen",
+      "right": "+25 Curse of Avernus Damage per Second"
+    },
+    "15": {
+      "left": "+35 Mist Coil Heal/Damage",
+      "right": "-10s Borrowed Time Cooldown"
+    },
+    "20": {
+      "left": "+100 Borrowed Time Immolation Damage per Second",
+      "right": "+80 Aphotic Shield Barrier/Damage"
+    },
+    "25": {
+      "left": "+350 Mist Coil Radius",
+      "right": "+65 Curse of Avernus Attack Speed Bonus"
+    }
+  },
   "abilities": [
     {
       "name": "Withering Mist",
       "type": "passive",
-      "description": "Damage instances applied by Abaddon applies a dormant debuff that activates when the affected enemy unit is below the max health threshold. The higher the Abaddon's level, the greater the applied health restore reduction value. Max Health Threshold: 40%. Debuff Duration: 5. Health Restore Reduction: 24.5%. Health Restore Reduction Increase: 0.5%."
+      "description": "Damage instances applied by Abaddon apply a dormant debuff that activates when the affected enemy unit is below 40% max health, reducing their health restoration value by 24.5% + 0.5% per level for 5 seconds."
     },
     {
       "name": "Mist Coil",
       "type": "active",
-      "description": "Damages an enemy unit or heals an allied unit, at the cost of some of Abaddon's health. Deals a non-lethal self pure damage instance per ability cast. Cast Range: 625. Damage: 95/170/245/320 (130/205/280/355). Ally Heal: 95/170/245/320 (130/205/280/355). Self Damage Factor: 0.4. Radius: 350. Cooldown: 8/7/6/5. Mana Cost: 50/55/60/65."
+      "description": "Damages an enemy unit or heals an allied unit within a 350 radius for 95/170/245/320 (130/205/280/355) damage/heal, respectively. Abaddon takes non-lethal self pure damage equal to 0.4 of the dealt amount. Cast range is 625. Cooldown is 8/7/6/5 and mana cost is 50/55/60/65."
     },
     {
       "name": "Aphotic Shield",
       "type": "active",
-      "description": "Applies a strong dispel, and creates a barrier to absorbs a set amount of damage before expiring on the affected allied unit. Cast Range: 550. Duration: 12. Health Regen Bonus: (8). Damage Radius: 675. Damage: 120/150/180/210 (200/230/260/290). Reflect Radius: (675). Cooldown: 12/10/8/6. Mana Cost: 110/120/130/140."
+      "description": "Applies a strong dispel and creates a barrier that absorbs damage before expiring. Deals additional damage equal to the absorbed amount within radius when destroyed. Reflects 75% of absorbed damage within radius. Cast Range: 550. Duration: 12. Damage: 120/150/180/210 (200/230/260/290). Cooldown: 12/10/8/6. Mana Cost: 110/120/130/140."
     },
     {
       "name": "Curse of Avernus",
       "type": "passive",
-      "description": "Applies a debuff that damages over time and slows the movement speed slow of the affected enemy unit. Grants all allied units bonus attack speed upon attacking the affected enemy unit. Move Speed Slow: 10%/15%/20%/25%. Damage per Second: 15/25/35/45 (40/50/60/70). Debuff Duration: 2. Attack Speed Bonus: 10/20/30/40 (75/85/95/105). Buff Duration: 2."
+      "description": "Applies a debuff that damages over time and slows the movement speed by 10%/15%/20%/25% of the affected enemy unit. Grants all allied units bonus attack speed upon attacking the affected enemy unit, with a 10/20/30/40 (75/85/95/105) attack speed bonus lasting 2 seconds."
     },
     {
       "name": "Borrowed Time",
-      "type": "passive",
-      "description": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew. Damage Received to Heal: 100%. Duration: 4/5/6 (7/8/9). Current Health Threshold: 400. Damage Radius: 400. Damage per Second: 100. Self Damage Factor: 1. Cooldown: 85/75/65."
+      "type": "active",
+      "description": "Removes most debuffs and heals damage taken for 4/5/6 (7/8/9) seconds when activated. Self-heal is 100% of damage received, with a health threshold of 400. Damage radius is 400, dealing 100 damage per second to nearby enemies."
     }
   ]
 }

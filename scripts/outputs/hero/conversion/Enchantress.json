@@ -56,37 +56,37 @@
     {
       "name": "Rabble-Rouser",
       "type": "passive",
-      "description": "All neutral creeps conditionally deals more damage to Enchantress' enemy units. The higher Enchantress' level, the greater the outgoing damage amplification value. All Enchantress' player-controlled units are affected by Rabble-Rouser as well."
+      "description": "All neutral creeps conditionally deals more damage to Enchantress' enemy units. The higher Enchantress' level, the greater the outgoing damage amplification value. All Enchantress' player-controlled units are affected by Rabble-Rouser as well. Effect Radius: Global Damage. Amp: 4%. Buff Duration: Buff. Linger Duration: 0.5. Effect Radius: Global. Damage Amp: 4%."
     },
     {
       "name": "Impetus",
       "type": "active",
-      "description": "Enchants her own attack while activated, causing it to deal additional distance-based damage between Enchantress and the enemy target. The farther the target, the greater the damage."
+      "description": "Enchants her own attack while activated, causing it to deal additional distance-based damage between Enchantress and the enemy target. The farther the target, the greater the damage. Cast Range: 575. Distance Cap: 1750. Distance to Damage Factor: 0.05/0.1/0.15/0.2 (0.115/0.165/0.215/0.265). Illusion Damage Factor: 2. Cooldown: 6/4/2/0. Mana Cost: 40/45/50/55."
     },
     {
       "name": "Enchant",
       "type": "active",
-      "description": "If the targeted unit is an enemy or a neutral creep, Enchantress brings it under her control and receives a portion of its experience bounty. Enchanted creeps have increased attack damage and max health. There is a certain limit of creeps that she can control. Grants Enchantress and her player-controlled units bonus attack range when attacking the debuff-affected enemy hero."
+      "description": "If the targeted unit is an enemy or a neutral creep, Enchantress brings it under her control and receives a portion of its experience bounty. Enchanted creeps have increased attack damage and max health. There is a certain limit of creeps that she can control. Grants Enchantress and her player-controlled units bonus attack range when attacking the debuff-affected enemy hero. Cast Range: 500/600/700/800. Move Speed Slow: 30%/40%/50%/60%. Debuff Duration: 3.5/4/4.5/5. Max Health Bonus: 150/250/350/450. Attack Damage Bonus: 0/20/40/60. XP Factor: 0.4. Cooldown: 30/24/18/12. Mana Cost: 70."
     },
     {
       "name": "Nature’s Attendants",
       "type": "active",
-      "description": "A cloud of wisps heals Enchantress and allied units nearby."
+      "description": "A cloud of wisps heals Enchantress and allied units nearby. Search Radius: 275. Number of Wisps: 9 (18). Heal per Second per Wisp: 4/8/12/16 (12/16/20/24). Duration: 7/9/11/13. Move Speed Bonus: (30). Mana Cost: 35."
     },
     {
       "name": "Sproink",
       "type": "active",
-      "description": "Enchantress then launches Impetus of its corresponding level on a number of furthest enemy units. Applies of its corresponding ability level when acquired."
+      "description": "Enchantress then launches Impetus of its corresponding level on a number of furthest enemy units. Leap Distance: 500. Leap Duration: 0.4. Impetus Search Radius: 675. Number of Impetus Attacks: 2. Instant Attack Factor: 1. Mana Cost: 10."
     },
     {
       "name": "Little Friends",
       "type": "active",
-      "description": "Grants True Sight over the unit-targeted enemy upon cast. The ability component is granted by an aura and is independent of the root component."
+      "description": "Grants True Sight over the unit-targeted enemy upon cast. The ability component is granted by an aura and is independent of the root component. Cast Range: 750. Search Radius: 1200. Base Root Duration: 2. Root Duration Increase per Creep: 0.5. Max Root Duration: 5. Move Speed Bonus: 100%. Mana Cost: 20."
     },
     {
       "name": "Untouchable",
       "type": "passive",
-      "description": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty."
+      "description": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty. Effect Radius: Global Attack. Speed Slow: 110/160/210 (190/240/290). Backswing as Slow Duration Factor: 1. Effect Radius: Global. Attack Speed Slow: 110/160/210 (190/240/290)."
     }
   ]
 }

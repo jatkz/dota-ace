@@ -1,0 +1,72 @@
+{
+  "name": "Puck",
+  "description": "I find myself strangely drawn to this odd configuration of activity.",
+  "attackType": "Ranged",
+  "roles": [
+    "Initiator",
+    "Disabler",
+    "Escape",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 17,
+    "agility": 14,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.3,
+    "intelligence": 3.8
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 45.6,
+    "manaRegen": 0.19,
+    "armor": 0.38,
+    "attackSpeed": 2.3,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 2.2,
+    "mana": 351,
+    "manaRegen": 1.65,
+    "armor": 2.33,
+    "magicResistance": 27.3,
+    "damageMin": 45,
+    "damageMax": 53,
+    "damageAverage": 49,
+    "projectileSpeed": 900,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.8,
+    "moveSpeed": 290,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1.25s Waning Rift Silence Duration",
+      "right": "+40 Illusory Orb Damage"
+    },
+    "15": {
+      "left": "+60 Waning Rift Damage",
+      "right": "-15s Dream Coil Cooldown"
+    },
+    "20": {
+      "left": "+200 Dream Coil Initial/Break Damage",
+      "right": "-2.5s Waning Rift Cooldown"
+    },
+    "25": {
+      "left": "+350 Waning Rift Radius/Max Distance",
+      "right": "Dream Coil Pierces Debuff Immunity"
+    }
+  }
+}

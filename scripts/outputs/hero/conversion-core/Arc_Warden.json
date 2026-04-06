@@ -1,0 +1,71 @@
+{
+  "name": "Arc Warden",
+  "description": "It is not to aid the Ancients that this war is joined, but to destroy them both. This disunity must end.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Escape",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 20,
+    "intelligence": 24
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 2.7,
+    "intelligence": 2.6
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 31.2,
+    "manaRegen": 0.13,
+    "armor": 0.45,
+    "attackSpeed": 2.7,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 363,
+    "manaRegen": 1.2,
+    "armor": 3.33,
+    "magicResistance": 27.4,
+    "damageMin": 51,
+    "damageMax": 57,
+    "damageAverage": 54.8,
+    "projectileSpeed": 900,
+    "attackRange": 625,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 130,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 300,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+200 Health",
+      "right": "+200 Flux Cast Range"
+    },
+    "15": {
+      "left": "+25 Magnetic Field Attack Speed",
+      "right": "+20% Flux Slow"
+    },
+    "20": {
+      "left": "-5s Magnetic Field Cooldown",
+      "right": "+200 Spark Wraith Damage"
+    },
+    "25": {
+      "left": "+30s Spark Wraith Duration",
+      "right": "+1.5 Runic Infusion All Attributes Bonus"
+    }
+  }
+}

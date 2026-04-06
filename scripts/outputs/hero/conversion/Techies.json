@@ -1,6 +1,6 @@
 {
   "name": "Techies",
-  "description": "Measurements made. Bombs built. Powder's dry. Okay, let's blow something up! Squee, Spleen, and Spoon, the Techies.",
+  "description": "Bombs built.",
   "attackType": "Ranged",
   "roles": [
     "Nuker",
@@ -54,27 +54,27 @@
     {
       "name": "Minefield Sign",
       "type": "active",
-      "description": "Teleport sources may only add a certain distance to the distance counter, regardless of the teleport distance, and only proc one explosion."
+      "description": "Teleport sources may only add a certain distance to the distance counter, regardless of the teleport distance, and only proc one explosion. Cast Range: 150. Effect Radius: 500 (1000). Duration: 60 (240). Aura Linger Duration: 0.5. Damage Factor: 1.15. Proximity Radius: (200). Mana Cost: 60."
     },
     {
       "name": "Sticky Bomb",
       "type": "active",
-      "description": "Lobs a Sticky Bomb toward the area-targeted location. Once the bomb latches itself to an enemy hero within proximity, it applies a movement speed slow. This unit does not feel the effects from any damage sources. It cannot be targeted by attacks or abilities and have its health bar temporarily hidden."
+      "description": "Lobs a Sticky Bomb toward the area-targeted location. Once the bomb latches itself to an enemy hero within proximity, it applies a movement speed slow. After an effect delay, the latched bomb explodes and deals damage within the radius, applying a secondary movement speed slow. Cast Range: 1000. Latch Radius: 300. Latch Move Speed Slow: 25%/35%/45%/55%. Explosion Radius: 350. Damage: 95/170/245/320 (255/330/405/480). Move Speed Slow: 15%/25%/35%/45%. Cooldown: 16/13/10/7. Mana Cost: 100/115/130/145."
     },
     {
       "name": "Reactive Tazer",
       "type": "passive",
-      "description": "Applies an offensive basic dispel and disarms enemy units attacking the Techies team. After the buff duration ends, the charge explodes, applying all negative effects onto enemy units within the radius. Enables casting Reactive Tazer on allied units, with all ability effects centering and following the targeted ally around. The ability now also deals damage to enemy units it disarms."
+      "description": "Applies an offensive basic dispel and disarms enemy units attacking the Techies team. After the buff duration ends, the charge explodes, applying all negative effects onto enemy units within the radius. Enables casting Reactive Tazer on allied units, with all ability effects centering and following the targeted ally around. The ability now also deals damage to enemy units it disarms. Move Speed Bonus: 18%/22%/26%/30%. Buff Duration: 6. Proc Distance: Global Effect. Radius: 450. Disarm Duration: 2.4/2.7/3/3.3. Proc Distance: Global. Cooldown: 26/22/18/14. Mana Cost: 60."
     },
     {
       "name": "Blast Off!",
       "type": "active",
-      "description": "The detonation upon landing also applies a non-lethal self-damage on Techies corresponding to a portion of their current health. The recipe for Spleen's Secret Sauce is sacrificing more health for more damage."
+      "description": "The detonation upon landing also applies a non-lethal self-damage on Techies corresponding to a portion of their current health. Cast Range: 1000. Landing Radius: 400. Damage: 200/300/400/500 (400/500/600/700). Leap Duration: 0.75. Stun Duration: 0.8/1/1.2/1.4. Current Health as Self Damage Factor: 0.2. Cooldown: 40/35/30/25. Mana Cost: 100/125/150/175."
     },
     {
       "name": "Proximity Mines",
       "type": "active",
-      "description": "The mines reduce the affected enemy unit's magic resistance while dealing damage. The explosions deal more damage the closer the affected unit to the proximity radius."
+      "description": "The mines reduces the affected enemy unit's magic resistance while dealing damage. The explosions deals more damage the closer the affected unit to the proximity radius. Cast Range: 450. Min Plant Distance: 350. Proc Radius: 500. Hit Count: 1 Ward Duration:. Hit Count: 1. Min Damage Radius: 500. Cooldown: 110/140/170."
     }
   ]
 }

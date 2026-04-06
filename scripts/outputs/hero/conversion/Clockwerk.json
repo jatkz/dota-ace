@@ -1,6 +1,6 @@
 {
   "name": "Clockwerk",
-  "description": "I've a mind like a steel trap, and the physique to go with it! Rattletrap, the Clockwerk Rattletrap descends from the same far-flung kindred as Sniper and Tinker, and like many of the Keen Folk, has offset his diminutive stature through the application of gadgetry and wit.",
+  "description": "I've a mind like a steel trap, and the physique to go with it!",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -23,9 +23,8 @@
     "healthRegen": 0.32,
     "mana": 20.4,
     "manaRegen": 0.085,
-    "armor": 0.38,
-    "attackSpeed": 2.3,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.2
   },
   "stats": {
     "health": 692,
@@ -51,41 +50,59 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+75 Hookshot Damage",
+      "right": "+1.5 Mana Regen"
+    },
+    "15": {
+      "left": "+25 Battery Assault Damage",
+      "right": "-10s Hookshot Cooldown"
+    },
+    "20": {
+      "left": "+80 Power Cogs Mana Shock",
+      "right": "Rocket Flare Applies True Sight"
+    },
+    "25": {
+      "left": "-0.25s Battery Assault Interval",
+      "right": "3 Rocket Flare Charges"
+    }
+  },
   "abilities": [
     {
       "name": "Armor Power",
       "type": "active",
-      "description": "Consumes a Chain Mail in Clockwerk's inventory and grants himself armor bonus. Grants bonus flat-percentage outgoing damage amplification per armor."
+      "description": "Consumes a Chain Mail in Clockwerk's inventory and grants himself armor bonus. Grants bonus flat-percentage outgoing damage amplification per armor. Bonus: 4. Armor Bonus: 4. Damage Amp per Armor: 0.25%."
     },
     {
       "name": "Battery Assault",
       "type": "active",
-      "description": "Discharges high-powered shrapnel toward one random nearby enemy unit at a time, dealing damage and stunning the affected enemy unit."
+      "description": "Discharges high-powered shrapnel toward one random nearby enemy unit at a time, dealing damage and stunning the affected enemy unit. Search Radius: 275. Number of Targets: 1. Shrapnel Interval: 0.7 (0.45). Damage per Interval: 20/45/70/95 (45/70/95/120). Stun Duration: 0.1. Active Duration: 10.5. Cooldown: 24/22/20/18. Mana Cost: 75/80/85/90."
     },
     {
       "name": "Power Cogs",
       "type": "active",
-      "description": "While Overclocking, the entire Power Cogs forms a greater aura radius, and grants Clockwerk armor bonus within proximity of any Power Cog."
+      "description": "While Overclocking, the entire Power Cogs forms a greater aura radius, and grants Clockwerk armor bonus within proximity of any Power Cog Cogs Spawn Distance: 215. Number of Cogs: 8. Hit Count: 2. Cogs Duration: 5/6/7/8. Aura Radius: 225. Duration: 5/6/7/8. Cooldown: 21/19/17/15. Mana Cost: 60/65/70/75."
     },
     {
       "name": "Rocket Flare",
       "type": "active",
-      "description": "While Overclocking, Clockwerk launches multiple rockets upon cast with increased damage and movement speed slow duration. This additionally increases the granted flying vision upon impact."
+      "description": "While Overclocking, Clockwerk launches multiple rockets upon cast with increased damage and movement speed slow duration. This additionally increases the granted flying vision upon impact. Damage: 80/120/160/200. Move Speed Slow: 100%. Slow Duration: 0.4. True Sight Duration: 10. Cooldown: 20/18/16/14. Mana Cost: 35/40/45/50."
     },
     {
       "name": "Overclocking",
       "type": "active",
-      "description": "Applies a self-debuff that allows Clockwerk to increase the power of all his abilities' values. Applies a movement speed and attack speed slow once the duration runs out. While Overclocking, Jetpack grants additional movement speed and turn rate."
+      "description": "Applies a self-debuff that allows Clockwerk to increase the power of all his abilities' values. Applies a movement speed and attack speed slow once the duration runs out. While Overclocking, Jetpack grants additional movement speed and turn rate. Debuff Duration: 18. Move Speed Slow: 100%. Attack Speed Slow: 100. End Slow Duration: 3. Cooldown: 50. Mana Cost: 90."
     },
     {
       "name": "Jetpack",
       "type": "active",
-      "description": "Grants unobstructed movement, flying vision, and bonus movement speed. However, this self-disarms and severely limits his turn rate. While Overclocking, Jetpack grants additional movement speed and turn rate."
+      "description": "Grants unobstructed movement, flying vision, and bonus movement speed. However, this self-disarms and severely limits his turn rate. While Overclocking, Jetpack grants additional movement speed and turn rate. Move Speed Bonus: 20%. Disarm Duration: 6. Duration: 6. Move Speed Bonus: (40%). Cooldown: 16. Mana Cost: 75."
     },
     {
       "name": "Hookshot",
       "type": "active",
-      "description": "Fires a rapid grappling device at the point-targeted location. If it latches on a unit, Clockwerk launches himself toward the unit, stunning and dealing damage."
+      "description": "Fires a rapid grappling device at the point-targeted location. If it latches on a unit, Clockwerk launches himself toward the unit, stunning and dealing damage. Cast Range: 2000/2500/3000. Max Travel Distance: 2000/2500/3000. Hook Speed: 4000/5000/6000. Hook Latch Radius: 125. Stun Radius: 175. Damage Radius: 175. Cooldown: 60/45/30 (50/35/20). Mana Cost: 100/125/150."
     }
   ]
 }

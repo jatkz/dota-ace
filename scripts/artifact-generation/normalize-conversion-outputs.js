@@ -654,6 +654,42 @@ function normalizeHeroAttackType(attackType) {
     return normalizeText(attackType);
 }
 
+function normalizeHeroTalents(talents) {
+    if (!talents || typeof talents !== 'object' || Array.isArray(talents)) {
+        return talents;
+    }
+
+    const normalized = {};
+
+    for (const level of ['25', '20', '15', '10']) {
+        const entry = talents[level];
+        if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+            continue;
+        }
+
+        const left = typeof entry.left === 'string'
+            ? normalizeText(entry.left).replace(/\s*\/\s*/g, '/')
+            : entry.left;
+        const right = typeof entry.right === 'string'
+            ? normalizeText(entry.right).replace(/\s*\/\s*/g, '/')
+            : entry.right;
+
+        if (left || right) {
+            normalized[level] = {};
+
+            if (left) {
+                normalized[level].left = left;
+            }
+
+            if (right) {
+                normalized[level].right = right;
+            }
+        }
+    }
+
+    return Object.keys(normalized).length > 0 ? normalized : talents;
+}
+
 function normalizeNumericObject(objectValue) {
     if (!objectValue || typeof objectValue !== 'object' || Array.isArray(objectValue)) {
         return objectValue;
@@ -685,6 +721,7 @@ function normalizeSimpleHero(data) {
     normalized.attributeGains = normalizeNumericObject(normalized.attributeGains);
     normalized.statGains = normalizeNumericObject(normalized.statGains);
     normalized.stats = normalizeNumericObject(normalized.stats);
+    normalized.talents = normalizeHeroTalents(normalized.talents);
 
     if (Array.isArray(normalized.abilities)) {
         normalized.abilities = normalized.abilities.map(ability => ({
@@ -694,6 +731,23 @@ function normalizeSimpleHero(data) {
             description: cleanupHeroAbilityDescription(ability.description, normalized)
         }));
     }
+
+    return normalized;
+}
+
+function normalizeHeroCore(data) {
+    const normalized = { ...data };
+
+    normalized.name = normalizeText(normalized.name);
+    normalized.description = normalizeHeroDescription(normalized.description, normalized.name);
+    normalized.attackType = normalizeHeroAttackType(normalized.attackType);
+    normalized.roles = normalizeHeroRoles(normalized.roles);
+
+    normalized.attributes = normalizeNumericObject(normalized.attributes);
+    normalized.attributeGains = normalizeNumericObject(normalized.attributeGains);
+    normalized.statGains = normalizeNumericObject(normalized.statGains);
+    normalized.stats = normalizeNumericObject(normalized.stats);
+    normalized.talents = normalizeHeroTalents(normalized.talents);
 
     return normalized;
 }
@@ -736,6 +790,14 @@ function shouldNormalizeAsSimpleHero(data) {
         Array.isArray(data.abilities);
 }
 
+function shouldNormalizeAsHeroCore(data) {
+    return !('converted' in data) &&
+        typeof data.name === 'string' &&
+        Array.isArray(data.roles) &&
+        data.attributes &&
+        !Array.isArray(data.abilities);
+}
+
 function normalizeData(category, data) {
     const normalized = normalizeRecursive(data);
 
@@ -749,6 +811,10 @@ function normalizeData(category, data) {
         case 'hero':
             if (shouldNormalizeAsSimpleHero(normalized)) {
                 return normalizeSimpleHero(normalized);
+            }
+
+            if (shouldNormalizeAsHeroCore(normalized)) {
+                return normalizeHeroCore(normalized);
             }
 
             if (normalized.converted?.sections?.general?.roles) {

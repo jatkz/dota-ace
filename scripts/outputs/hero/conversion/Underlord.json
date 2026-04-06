@@ -56,7 +56,7 @@
     {
       "name": "Invading Force",
       "type": "passive",
-      "description": "Grants his allied heroes movement speed bonus and incoming damage reduction once their teleportation completes. Damage Reduction: 4%/6%/8%/10% (9%/11%/13%/15%). Duration: 5. Effect Radius: Global."
+      "description": "Grants his allied heroes movement speed bonus and incoming damage reduction once their teleportation completes. Grants allied heroes a greater bonus upon warping through the Fiend's Gate. Effect Radius: Global Move. Speed Bonus: 11%/14%/17%/20% (16%/19%/22%/25%). Damage Reduction: 4%/6%/8%/10% (9%/11%/13%/15%). Duration: 5. Effect Radius: Global. Move Speed Bonus: 11%/14%/17%/20% (16%/19%/22%/25%)."
     },
     {
       "name": "Abyssal Horde",
@@ -66,7 +66,7 @@
     {
       "name": "Firestorm",
       "type": "active",
-      "description": "Applies a debuff per interval that deals additional damage over time corresponding to the debuff-affected units' max health. However, other ability effects still apply. Cast Range: 675. Effect Radius: 425. Number of Instances: 6 (9). Instance Interval: 1 (0.75). Damage per Instance: 30/50/70/90. Burn Interval: 1 (0.75). Cooldown: 16/15/14/13 (11/10/9/8). Mana Cost: 110/125/140/155."
+      "description": "Applies a debuff per interval that deals additional damage over time corresponding to the debuff-affected units' max health. Both and the are immune to the max health as damage component. However, other ability effects still apply. Cast Range: 675. Effect Radius: 425. Number of Instances: 6 (9). Instance Interval: 1 (0.75). Damage per Instance: 30/50/70/90. Burn Interval: 1 (0.75). Cooldown: 16/15/14/13. Mana Cost: 110/125/140/155."
     },
     {
       "name": "Pit of Malice",
@@ -81,7 +81,7 @@
     {
       "name": "Fiend's Gate",
       "type": "active",
-      "description": "Opens one portal next to Underlord and another portal in the target location. Both portals have to be at least a certain distance away from each other. Heroes can channel a portal to teleport to the other side. Gate Min Distance: 1500. Duration: 20. Fountain to Gate Distance: 1425. Effect Radius: 700. Cooldown: 110/105/100 (100/95/90). Mana Cost: 175."
+      "description": "Opens one portal next to Underlord and another portal in the target location. Both portals have to be at least a certain distance away from each other. Heroes can channel a portal to teleport to the other side. Cast Range: Global. Number of Portals: 2. Gate Min Distance: 1500. Duration: 20. Fountain to Gate Distance: 1425. Effect Radius: 700. Cooldown: 110/105/100. Mana Cost: 175."
     }
   ]
 }

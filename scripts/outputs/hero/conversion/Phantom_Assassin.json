@@ -19,12 +19,12 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "mana": 20.4,
-    "manaRegen": 0.085,
     "armor": 0.57,
     "attackSpeed": 3.4,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.4
+    "mainAttackDamage": 3.4,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 538,
@@ -54,17 +54,17 @@
     {
       "name": "Blur",
       "type": "active",
-      "description": "Applies a basic dispel with an instant cast time upon cast. Grants cooldown advancement to all of her other basic abilities, except Blur, any time Phantom Assassin gets a hero kill. Reduces Blur's cooldown."
+      "description": "Applies a basic dispel with an instant cast time upon cast. Grants cooldown advancement to all of her other basic abilities, except Blur, any time Phantom Assassin gets a hero kill. Reduces Blur's cooldown. Dispel Radius: 625/550/475/400. Move Speed Bonus: 6%/9%/12%/15%. Untargetable Duration: 30. Current Cooldowns Advance on Kill: (0.6). Mana Cost: 45."
     },
     {
       "name": "Stifling Dagger",
       "type": "active",
-      "description": "Throws a dagger slowing the enemy unit's movement speed, dealing a portion of Mortred's attack damage as instant attack and applying attack modifiers. Applies a stackable debuff on enemy units."
+      "description": "Throws a dagger slowing the enemy unit's movement speed, dealing a portion of Mortred's attack damage as instant attack and applying attack modifiers. Launches additional Stifling Daggers upon cast toward other random enemy units centered around the unit-targeted enemy. Cast Range: 700/850/1000/1150. Number of Targets: 1 (3). Instant Attack Factor: 0.3/0.45/0.6/0.75 (0.45/0.6/0.75/0.9). Attack Damage Bonus: 65/70/75/80. Move Speed Slow: 50%. Slow Duration: 2.1/2.4/2.7/3. Mana Cost: 6."
     },
     {
       "name": "Phantom Strike",
       "type": "active",
-      "description": "Grants bonus attack speed while attacking if the targeted unit is an enemy. Upon source proc, Mortred first next to the target, then the target teleports next to Mortred."
+      "description": "Teleports next to the targeted unit upon cast. Grants bonus attack speed while attacking if the targeted unit is an enemy. Cast Range: 650/750/850/950 (850/950/1050/1150). Attack Speed Bonus: 100/130/160/190 (160/190/220/250). Duration: 2.5 (3.1). Cooldown: 21/18/15/12. Mana Cost: 2."
     },
     {
       "name": "Immaterial",
@@ -74,7 +74,12 @@
     {
       "name": "Fan of Knives",
       "type": "active",
-      "description": "A sister is generally given a single name, but powerful names often have plentiful allies."
+      "description": "A sister is generally given a single name, but powerful names often have plentiful allies. Radius: 550. Max Health as Damage: 28%. Break Duration: 3. Mana Cost: 20."
+    },
+    {
+      "name": "Coup de Grace",
+      "type": "passive",
+      "description": "Mortred's attacks have a chance to proc the Deadly Focus buff, causing her next attack to be an ensured critical strike. Proc Chance: 17% (27%). Crit Damage: 200%/300%/400%. Buff Duration: 6/8/10. Proc Chance: 34% (44%)."
     }
   ]
 }

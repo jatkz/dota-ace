@@ -1,0 +1,71 @@
+{
+  "name": "Pugna",
+  "description": "Who needs a blade when you have oblivion?",
+  "attackType": "Ranged",
+  "roles": [
+    "Nuker",
+    "Pusher"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 21,
+    "intelligence": 26
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 1.3,
+    "intelligence": 5.2
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 62.4,
+    "manaRegen": 0.26,
+    "armor": 0.22,
+    "attackSpeed": 1.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 5.2
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 387,
+    "manaRegen": 1.8,
+    "armor": 3.5,
+    "magicResistance": 27.6,
+    "damageMin": 47,
+    "damageMax": 54,
+    "damageAverage": 50.5,
+    "projectileSpeed": 900,
+    "attackRange": 630,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 121,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+2 Nether Ward Hit Count",
+      "right": "-1s Nether Blast Cooldown"
+    },
+    "15": {
+      "left": "+250 Health",
+      "right": "+30% Decrepify Ally Speed"
+    },
+    "20": {
+      "left": "+1.5s Decrepify Duration",
+      "right": "+15% Life Drain Heal"
+    },
+    "25": {
+      "left": "+1.9 Mana Flare Mana to Damage Factor",
+      "right": "+200 Nether Blast Damage"
+    }
+  }
+}

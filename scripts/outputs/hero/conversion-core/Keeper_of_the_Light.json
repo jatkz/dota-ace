@@ -1,0 +1,71 @@
+{
+  "name": "Keeper of the Light",
+  "description": "They say twas I who carried the first light into the universe.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 15,
+    "intelligence": 24
+  },
+  "attributeGains": {
+    "strength": 2.3,
+    "agility": 1.6,
+    "intelligence": 3.3
+  },
+  "statGains": {
+    "health": 50.6,
+    "healthRegen": 0.23,
+    "mana": 39.6,
+    "manaRegen": 0.165,
+    "armor": 0.27,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 363,
+    "manaRegen": 1.2,
+    "armor": 2.5,
+    "magicResistance": 27.4,
+    "damageMin": 44,
+    "damageMax": 51,
+    "damageAverage": 47.5,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.85,
+    "moveSpeed": 315,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "-2s Illuminate Cooldown",
+      "right": "+40% Blinding Light Miss"
+    },
+    "15": {
+      "left": "+90 Blinding Light Damage",
+      "right": "+0.3x Bright Speed (Spirit Form) Move Speed Factor"
+    },
+    "20": {
+      "left": "+10% Solar Bind Magic Resistance Reduction",
+      "right": "+15s Spirit Form Duration"
+    },
+    "25": {
+      "left": "+200 Illuminate Damage",
+      "right": "Chakra Magic Applies Strong Dispel"
+    }
+  }
+}

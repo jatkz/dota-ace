@@ -1,6 +1,6 @@
 {
   "name": "Shadow Demon",
-  "description": "Who toys with demons will find himself toyed with. Shadow Demon Upon returning, Shadow Demon creates illusions of the banished hero under his control. These illusion deals a portion of the affected hero's damage and receive additional incoming damage. Grants the created illusions base attack damage bonus.",
+  "description": "Who toys with demons will find himself toyed with.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -22,10 +22,9 @@
   "statGains": {
     "health": 57.2,
     "healthRegen": 0.26,
-    "armor": 0.37,
-    "attackSpeed": 2.2,
     "mana": 43.2,
     "manaRegen": 0.18,
+    "armor": 0.37,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.6
   },
@@ -57,32 +56,37 @@
     {
       "name": "Menace",
       "type": "passive",
-      "description": "Imbues attacks with an offensive stacking debuff that amplifies incoming damage taken by the affected enemy unit."
+      "description": "Imbues attacks with an offensive stacking debuff that amplifies incoming damage taken by the affected enemy unit. Amp per Stack: 2.5%. Duration: 8. Damage Amp per Stack: 2.5%."
     },
     {
       "name": "Shadow Servant",
       "type": "passive",
-      "description": "These servants are illusions that deals a portion of dying enemy hero's damage and receives additional incoming damage."
+      "description": "These servants are illusions that deals a portion of dying enemy hero's damage and receives additional incoming damage. Aura Radius: 1500. Number of Illusions: 1. Aura Linger Duration: 0.5. Damage Dealt: 20%/25%/30%/35%/40%. Damage Taken: 200%. Enemy Respawn Time to Duration Factor: 1."
     },
     {
       "name": "Disruption",
       "type": "active",
-      "description": "Upon returning, Shadow Demon creates illusions of the banished hero under his control. These illusion deals a portion of the affected hero's damage and receive additional incoming damage. Grants the created illusions base attack damage bonus."
+      "description": "Upon returning, Shadow Demon creates illusions of the banished hero under his control. These illusion deals a portion of the affected hero's damage and receive additional incoming damage. Grants the created illusions base attack damage bonus. Cast Range: 675. Hidden Duration: 2.75. Number of Illusions: 2. Base Attack Damage Bonus: 20/35/50/65. Damage Dealt: 20%/30%/40%/50%. Damage Taken: 300%. Cooldown: 26/24/22/20. Mana Cost: 120."
     },
     {
       "name": "Disseminate",
       "type": "active",
-      "description": "Whenever the affected unit takes damage, all enemy units, including the target itself if it is an enemy, also receive a portion of that damage. Since the primary unit-targeted enemy is affected by the damage shared, this effectively amplifies the damage applied to it."
+      "description": "Whenever the affected unit takes damage, all enemy units, including the target itself if it is an enemy, also receive a portion of that damage. Since the primary unit-targeted enemy is affected by the damage shared, this effectively amplifies the damage applied to it. Cast Range: 700/775/850/925. Radius: 675. Damage Shared: 20%/25%/30%/35% (35%/40%/45%/50%). Duration: 6. Enemy Damage Amp: 20%/25%/30%/35% (35%/40%/45%/50%). Cooldown: 30/25/20/15. Mana Cost: 100."
     },
     {
       "name": "Shadow Poison",
       "type": "active",
-      "description": "Deals damage in a straight line and applies additional stack damage if the debuff is present. The first component of poison damage scales exponentially for the first five stacks on the enemy unit."
+      "description": "Deals damage in a straight line and applies additional stack damage if the debuff is present. The first component of poison damage scales exponentially for the first five stacks on the enemy unit. Cast Range: 1500. Travel Distance: 1500. Effect Radius: 200. Base Damage: 24/36/48/60 (360/540/720/900). Stack Duration: 10. Multiplied Final Damage: 24/36/48/60 (360/540/720/900). Mana Cost: 2.5."
     },
     {
       "name": "Demonic Cleanse",
       "type": "active",
-      "description": "Dispels debuffs continuously on the affected allied unit, then heals it at the end of the duration."
+      "description": "Dispels debuffs continuously on the affected allied unit, then heals it at the end of the duration. Cast Range: 800. Min Heal: 0. Max Heal: 450. Dispel Duration: 5. Mana Cost: 60."
+    },
+    {
+      "name": "Demonic Purge",
+      "type": "active",
+      "description": "Demonic Purge is now a charged-based ability with a restore time corresponding to the the ability's current cooldown. Applies Break. Tower Damage with Illusions Cast Range: 800. Min Damage: 0. Max Damage: 300/450/600 (320/470/620). Min Move Speed Slow: 20%. Max Move Speed Slow: 100%. Duration: 5. Cooldown: 150/175/200."
     }
   ]
 }

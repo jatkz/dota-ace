@@ -1,0 +1,74 @@
+{
+  "name": "Windranger",
+  "description": "If at first you don't succeed, stand closer, shoot again.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Support",
+    "Disabler",
+    "Escape",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 18,
+    "agility": 17,
+    "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 2.1,
+    "intelligence": 3.2
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 38.4,
+    "manaRegen": 0.16,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.56
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 291,
+    "manaRegen": 1.15,
+    "armor": 2.83,
+    "magicResistance": 26.8,
+    "damageMin": 47,
+    "damageMax": 59,
+    "damageAverage": 53.85,
+    "projectileSpeed": 1250,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 107,
+    "bat": 1.5,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 290,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+0.75s Windrun Cooldown",
+      "right": "+1s Powershot Slow Duration"
+    },
+    "15": {
+      "left": "-15% Powershot Damage Reduction",
+      "right": "+40 Module: Ability_ID:31: Could not find Lpdb data for \"Tailwind\" on \"Windranger\" (stack trace logged) Max Movespeed"
+    },
+    "20": {
+      "left": "-10% Focus Fire Damage Reduction",
+      "right": "+0.75s Shackleshot Duration"
+    },
+    "25": {
+      "left": "-18s Focus Fire Cooldown per Kill",
+      "right": "Powershot Executes Enemy Heroes Under 15% Max HP"
+    }
+  }
+}

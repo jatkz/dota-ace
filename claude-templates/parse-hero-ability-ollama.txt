@@ -1,0 +1,20 @@
+# Dota 2 Hero Ability Extraction for Ollama
+
+Extract exactly one hero ability and return as JSON:
+
+{
+  "name": "ability name",
+  "type": "active",
+  "description": "brief gameplay description with important quantitative details"
+}
+
+Rules:
+- This input is for a single ability only.
+- Use the `ABILITY NAME` as the canonical `name`.
+- For `type`, use a single simple label such as `active` or `passive`.
+- If a `TYPE HINT` is present, trust it unless the input clearly contradicts it.
+- For `description`, preserve meaningful quantitative gameplay details when present, such as damage, heal, duration, cooldown, mana cost, cast range, radius, slows, stuns, attack count, thresholds, charges, or bonus values.
+- Prefer a concise gameplay-focused description, but do not drop important numbers.
+- Do not include hero-level biography or unrelated page text.
+
+IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

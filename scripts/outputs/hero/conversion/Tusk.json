@@ -1,6 +1,6 @@
 {
   "name": "Tusk",
-  "description": "After a bar brawl it's customary, as a courtesy, to buy everyone who's still standing a round of drinks. Ymir, the Tusk Reaches out to tag an allied unit and pulls them closer. Grants both Tusk and the tagged ally bonus movement speed and bonus armor once tagged.",
+  "description": "Grants both Tusk and the tagged ally bonus movement speed and bonus armor once tagged.",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -24,7 +24,8 @@
     "manaRegen": 0.085,
     "armor": 0.32,
     "attackSpeed": 1.9,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.9
   },
   "stats": {
     "health": 626,
@@ -54,37 +55,37 @@
     {
       "name": "Bitter Chill",
       "type": "passive",
-      "description": "The higher Tusk's level, the greater the attack speed slow applied."
+      "description": "The higher Tusk's level, the greater the attack speed slow applied. Radius: 350. Attack Speed Slow: 17. Aura Linger Duration: 0.5. Attack Speed Slow Increase: 3."
     },
     {
       "name": "Ice Shards",
       "type": "active",
-      "description": "Throws a ball of frozen energy that damages all enemy units it comes in contact with. When the ball its point-targeted location, the shards are released, creating a temporary path blocker."
+      "description": "Throws a ball of frozen energy that damages all enemy units it comes in contact with. When the ball its point-targeted location, the shards are released, creating a temporary path blocker. Cast Range: 1400. Max Travel Distance: 1400. Damage Radius: 200. Shards Spawn Radius: 200. Number of Shards: 7. Damage: 75/150/225/300. Cooldown: 23/20/17/14. Mana Cost: 100."
     },
     {
       "name": "Snowball",
       "type": "active",
-      "description": "Procs sources upon impact. Regardless if either or the unit-targeted enemy is affected by,, or sources."
+      "description": "Tales are still told of the wild feat that ended the grand brawl at White Fields. Cast Range: 1150. Max Hold Duration: 3. Ally Gather Radius: 325. Ally Jump-in Radius: 110. Cooldown: 21/19/17/15. Mana Cost: 75."
     },
     {
       "name": "Tag Team",
       "type": "active",
-      "description": "Creates a negative debuff aura around Tusk, causing enemy units that are attacked under it to have reduced movement speed. Conditionally grants allied units attacking the debuffed enemy unit bonus physical attack damage."
+      "description": "Creates a negative debuff aura around Tusk, causing enemy units that are attacked under it to have reduced movement speed. Conditionally grants allied units attacking the debuffed enemy unit bonus physical attack damage. Radius: 350. Move Speed Slow: 75%. Slow Duration: 0.5. Aura Duration: 6 (8). Aura Linger Duration: 0.5. Attack Damage Bonus: 25/50/75/100. Cooldown: 24/21/18/15. Mana Cost: 70."
     },
     {
       "name": "Drinking Buddies",
       "type": "active",
-      "description": "Reaches out to tag an allied unit and pulls them closer. Grants both Tusk and the tagged ally bonus movement speed and bonus armor once tagged. Pulls only Tusk toward the affected ally with Alt-Cast toggled on."
+      "description": "Reaches out to tag an allied unit and pulls them closer. Grants both Tusk and the tagged ally bonus movement speed and bonus armor once tagged. Pulls only Tusk toward the affected ally with Alt-Cast toggled on. Cast Range: 1000. Min Tag Distance: 250. Max Tag Distance: 1200. Pull Duration: 0.2. Move Speed Bonus: 25%. Armor Bonus: 10. Mana Cost: 14."
     },
     {
       "name": "Walrus Kick",
       "type": "active",
-      "description": "Kicks the closest enemy unit in a targeted direction, stunning, damaging, and slowing them. Upon the affected unit landing, Tusk deals damage to all enemy heroes within the landing radius."
+      "description": "Kicks the closest enemy unit in a targeted direction, stunning, damaging, and slowing them. Upon the affected unit landing, Tusk deals damage to all enemy heroes within the landing radius. Cast Range: 250. Damage Radius: 250. Push Distance: 1200. Damage: 550. Move Speed Slow: 40%. Slow Duration: 2. Mana Cost: 12."
     },
     {
       "name": "Walrus PUNCH!",
       "type": "active",
-      "description": "Applies a critical strike so powerful it launches its victim into the air. Launches a based on 's hero model and spins toward the target. Displays an alternate ability animation () when used on, displays on other unit-targeted enemies."
+      "description": "Applies a critical strike so powerful it launches its victim into the air. It never matters who throws the first punch, only who throws the last. Cast Range: 150. Attack Damage Bonus: 60/90/120. Crit Damage: 250%/325%/400% (325%/400%/475%). Stun Duration: 1 (1.75). Self Attack Point Factor: 0.6. Proc Chance: 12%. Cooldown: 16/13/10. Mana Cost: 75."
     }
   ]
 }

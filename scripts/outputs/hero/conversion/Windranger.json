@@ -22,10 +22,9 @@
   "statGains": {
     "health": 57.2,
     "healthRegen": 0.26,
-    "armor": 0.35,
-    "attackSpeed": 2.1,
     "mana": 38.4,
     "manaRegen": 0.16,
+    "armor": 0.35,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.56
   },
@@ -57,27 +56,27 @@
     {
       "name": "Shackleshot",
       "type": "active",
-      "description": "Windranger's variety of bow skills includes an arrow with thick ropes attached to encumber any escaping target."
+      "description": "Windranger's variety of bow skills includes an arrow with thick ropes attached to encumber any escaping target. Cast Range: 800. Shackle Search Range: 575. Shackle Search Angle: 46°. Stun Duration: 1.75/2.25/2.75/3.25 (2.5/3/3.5/4). Fail Stun Duration: 0.6. Cooldown: 16/14/12/10. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Powershot",
       "type": "active",
-      "description": "Charges her bow up briefly for a single powerful shot. The longer the charge, the potent the arrow fired. The arrow damages and slows all enemy units along its path. Reduces damage by a factor per enemy unit hit."
+      "description": "Charges her bow up briefly for a single powerful shot. The longer the charge, the potent the arrow fired. The arrow damages and slows all enemy units along its path. Reduces damage by a factor per enemy unit hit. Cast Range: 3000. Travel Distance: 3000. Damage Radius: 125. Max Channel Time: 1. Max Damage: 170/270/370/470. Damage Factor per Hit: 0.85 (1). Cooldown: 12/11/10/9. Mana Cost: 100."
     },
     {
       "name": "Windrun",
       "type": "active",
-      "description": "Grants self movement speed bonus and absolute evasion, evading all incoming physical attacks. Grants Lyralei an invisibility that does not break by attacking or casting any abilities, and reduces incoming physical attack damage taken while active."
+      "description": "Grants self movement speed bonus and absolute evasion, evading all incoming physical attacks. Grants Lyralei an invisibility that does not break by attacking or casting any abilities, and reduces incoming physical attack damage taken while active. Move Speed Bonus: 60%. Duration: 3/4/5/6. Fade Time: (0.2). Damage Reduction: (35%). Invisibility Duration: (3/4/5/6). Cooldown: 15/14/13/12. Mana Cost: 50."
     },
     {
       "name": "Gale Force",
       "type": "active",
-      "description": "Summons a strong wind that pulls all enemies in the area-targeted location toward the vector-targeted direction."
+      "description": "Summons a strong wind that pulls all enemies in the area-targeted location toward the vector-targeted direction. Cast Range: 1200. Radius: 900. Push Speed: 240. Duration: 3. Aura Linger Duration: 0.5. Mana Cost: 30."
     },
     {
       "name": "Focus Fire",
       "type": "active",
-      "description": "Grants self a massive attack speed bonus against a single enemy unit or enemy building, while sacrificing a portion of her own attack damage. Does not reduce the potency of attack modifier sources or on-hit effects."
+      "description": "Grants self a massive attack speed bonus against a single enemy unit or enemy building, while sacrificing a portion of her own attack damage. Does not reduce the potency of attack modifier sources or on-hit effects. Cast Range: 600. Attack Speed Bonus: 350/425/500. Self Attack Damage: 0.75 (0.85). Duration: 20. Cooldown Skip on Target Death: (18). Cooldown: 70/50/30. Mana Cost: 75/100/125."
     }
   ]
 }

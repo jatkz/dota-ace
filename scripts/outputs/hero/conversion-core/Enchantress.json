@@ -1,0 +1,73 @@
+{
+  "name": "Enchantress",
+  "description": "You know what I love? Everything!",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Pusher",
+    "Durable",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 17,
+    "agility": 19,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.1,
+    "intelligence": 4
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 48,
+    "manaRegen": 0.2,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 1.95,
+    "mana": 339,
+    "manaRegen": 1.6,
+    "armor": 4.17,
+    "magicResistance": 27.2,
+    "damageMin": 43,
+    "damageMax": 53,
+    "damageAverage": 48,
+    "projectileSpeed": 900,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 119,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 320,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Nature's Attendants Self Move Speed",
+      "right": "+5 Armor Aura"
+    },
+    "15": {
+      "left": "+8 Nature's Attendants Heal per Wisp",
+      "right": "+30 Attack Speed Aura"
+    },
+    "20": {
+      "left": "+150 Health Aura +25 Attack Damage Aura",
+      "right": "+9 Nature's Attendants Wisps"
+    },
+    "25": {
+      "left": "+80 Untouchable Attack Speed Slow",
+      "right": "+6.5% Impetus Damage"
+    }
+  }
+}

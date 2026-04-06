@@ -25,8 +25,7 @@
     "manaRegen": 0.14,
     "armor": 0.3,
     "attackSpeed": 1.8,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.8
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -52,36 +51,54 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+1.5 Mana Regen",
+      "right": "+25 Attack Speed"
+    },
+    "15": {
+      "left": "+8% Bristleback Back Damage Reduction +4% Bristleback Side Damage Reduction",
+      "right": "+250 Viscous Nasal Goo Cast Range"
+    },
+    "20": {
+      "left": "+20 Quill Stack Damage",
+      "right": "+25 Health Regen"
+    },
+    "25": {
+      "left": "+18 Warpath Attack Damage Bonus per Stack",
+      "right": "-25 Bristleback Damage Threshold"
+    }
+  },
   "abilities": [
     {
       "name": "Prickly",
       "type": "passive",
-      "description": "Grants both outgoing damage amplification and debuff duration amplification against enemy units behind Bristleback."
+      "description": "Grants both outgoing damage amplification and debuff duration amplification against enemy units behind Bristleback Damage Amp: 1.045 0.005. Debuff Duration Factor: 1.045 0.005."
     },
     {
       "name": "Viscous Nasal Goo",
       "type": "active",
-      "description": "Grants stack upon ability cast and does not rely on the impact."
+      "description": "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage. Cast Range: 650 (900). Projectile Speed: 1000. Base Armor Reduction: 1.5/2/2.5/3. Armor Reduction per Stack: 2/2.5/3/3.5. Base Move Speed Slow: 12%. Move Speed Slow per Stack: 3%/6%/9%/12%. Cooldown: 1.75. Mana Cost: 12/16/20/24."
     },
     {
       "name": "Quill Spray",
       "type": "active",
-      "description": "Sprays enemy units with quills dealing damage in an area of effect around Rigwarl. Deals additional bonus damage per current stack on the debuff-affected enemy unit."
+      "description": "Sprays enemy units with quills dealing damage in an area of effect around Rigwarl. Deals additional bonus damage per current stack on the debuff-affected enemy unit. Radius: 700. Projectile Speed: 2400. Max Damage: 500. Base Damage: 25/45/65/85. Stack Damage: 30 (50). Duration: 14. Cooldown: 3. Mana Cost: 35."
     },
     {
       "name": "Bristleback",
       "type": "passive",
-      "description": "If Rigwarl takes up to a certain amount of damage from the rear, he releases a Quill Spray of its corresponding level. While active, he is disarmed, applies a self movement speed slow, with his facing angle locked, and cannot turn."
+      "description": "If Rigwarl takes up to a certain amount of damage from the rear, he releases a Quill Spray of its corresponding level. While active, he is disarmed, applies a self movement speed slow, with his facing angle locked, and cannot turn. Rear Damage Reduction: 16%/24%/32%/40% (24%/32%/40%/48%). Side Damage Reduction: 8%/12%/16%/20% (12%/16%/20%/24%). Damage Threshold: 275/250/225/200 (250/225/200/175). Min Release Interval: 0.1 Counter Duration: Min Release Interval: 0.1. Cast Range: Global."
     },
     {
       "name": "Hairball",
       "type": "active",
-      "description": "Applies Viscous Nasal Goo stacks of its corresponding level. Grants stack upon ability cast and does not rely on any impacts."
+      "description": "Applies Viscous Nasal Goo stacks of its corresponding level. Cast Range: 750. Radius: 700. Projectile Speed: 2400. Projectile Speed: 1000. Cooldown: 13. Mana Cost: 60."
     },
     {
       "name": "Warpath",
       "type": "passive",
-      "description": "Grants self flat bonus attack damage and bonus movement speed every time Rigwarl casts a spell. Does not bestow current stacks. However, the ability grants all created whenever gains one. Other ability components are fully functional with all illusion-mechanic notes apply."
+      "description": "Grants self flat bonus attack damage and bonus movement speed every time Rigwarl casts a spell. Attack Damage Bonus per Stack: 15/20/25 (33/38/43). Move Speed Bonus per Stack: 2%/2.5%/3%. Stack Duration: 16/18/20."
     }
   ]
 }

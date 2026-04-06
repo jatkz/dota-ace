@@ -1,0 +1,72 @@
+{
+  "name": "Dazzle",
+  "description": "Where my shadow falls, there falls my foe.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Nuker",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 20,
+    "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.3,
+    "agility": 1.7,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 50.6,
+    "healthRegen": 0.23,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.38
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 375,
+    "manaRegen": 1.55,
+    "armor": 3.33,
+    "magicResistance": 27.5,
+    "damageMin": 47,
+    "damageMax": 53,
+    "damageAverage": 50.8,
+    "projectileSpeed": 1200,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 120,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 305,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+1.75 Mana Regen",
+      "right": "+200 Poison Touch Attack Range"
+    },
+    "15": {
+      "left": "+5s Nothl Projection Duration",
+      "right": "+45 Shadow Wave Heal/Damage"
+    },
+    "20": {
+      "left": "+75 Poison Touch Damage per Second",
+      "right": "-3s Shallow Grave Cooldown"
+    },
+    "25": {
+      "left": "+1 Weave Armor Reduction/Bonus",
+      "right": "+40% Poison Touch Slow"
+    }
+  }
+}

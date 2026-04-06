@@ -20,12 +20,12 @@
   "statGains": {
     "health": 68.2,
     "healthRegen": 0.31,
-    "mana": 25.2,
-    "manaRegen": 0.105,
+    "mainAttackDamage": 3.1,
     "armor": 0.33,
     "attackSpeed": 2,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.1
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -55,32 +55,32 @@
     {
       "name": "Degen Aura",
       "type": "passive",
-      "description": "Additionally applies an enemy unique incoming damage amplification on affected enemy units. This affects all enemy incoming damage sourced to Omniknight."
+      "description": "Grants self an aura that applies movement speed slow to enemy units within the radius. Radius: 325. Move Speed Slow: 10%/20%/30%/40%. Aura Linger Duration: 1."
     },
     {
       "name": "Healing Hammer",
       "type": "passive",
-      "description": "The All Seeing One converts all spell damage dealt into self heal per second."
+      "description": "The All Seeing One converts all spell damage dealt into self heal per second. Spell Damage to Heal per Second Factor: 0.2. Damage Threshold: 0. Damage Timer: 1. Duration: 5."
     },
     {
       "name": "Purification",
       "type": "active",
-      "description": "Instantly heals a friendly unit and damages all nearby enemy units. Applies a secondary, less effective Purification instance after a short delay."
+      "description": "Instantly heals a friendly unit and damages all nearby enemy units. Applies a secondary, less effective Purification instance after a short delay. Cast Range: 700. Damage Radius: 260. Damage: 90/160/230/300 (250/320/390/460). Heal: 90/160/230/300 (250/320/390/460). Damage Factor: (0.65). Heal Factor: (0.65). Cooldown: 15/14/13/12. Mana Cost: 90/105/120/135."
     },
     {
       "name": "Repel",
       "type": "active",
-      "description": "Grants debuff immunity to the targeted allied hero. The buff additionally grants bonus and health regeneration corresponding to the amount of current active debuffs on them."
+      "description": "Grants debuff immunity to the targeted allied hero. The buff additionally grants bonus and health regeneration corresponding to the amount of current active debuffs on them. Cast Range: 700. Base Str Bonus: 6/12/18/24. Base Health Regen Bonus: 8/12/16/20. Str Bonus per Debuff: 3/4/5/6 (3.5/4.5/5.5/6.5). Health Regen Bonus per Debuff: 3/4/5/6 (3.5/4.5/5.5/6.5). Magic Resist Bonus: 60%. Cooldown: 50/45/40/35. Mana Cost: 90/105/120/135."
     },
     {
       "name": "Hammer of Purity",
       "type": "active",
-      "description": "Grants bonus attack range while dealing additional pure spell damage corresponding to a portion of Omniknight's main attack damage for one attack."
+      "description": "Grants bonus attack range while dealing additional pure spell damage corresponding to a portion of Omniknight's main attack damage for one attack. Cast Range: 225. Base Damage: 25/50/75/100. Main Attack Damage to Damage Factor: 1.55/1.7/1.85/2 (2.3/2.45/2.6/2.75). Move Speed Slow: 75%. Slow Duration: 0.2. Cooldown: 20/15/10/5."
     },
     {
       "name": "Guardian Angel",
       "type": "active",
-      "description": "Grants allied units within the area-targeted location physical damage immunity."
+      "description": "Grants allied units within the area-targeted location physical damage immunity. Cast Range: 600 (Global). Radius: 400 (700). Duration: 5/6/7 (130/131/132). Building Factor: (1). Heal Amp: (150%). Health Regen Amp: (150%). Cooldown: 100/90/80. Mana Cost: 125/175/225."
     }
   ]
 }

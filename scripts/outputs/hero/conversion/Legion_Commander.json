@@ -22,10 +22,11 @@
   "statGains": {
     "health": 68.2,
     "healthRegen": 0.31,
-    "mana": 26.4,
-    "manaRegen": 0.11,
+    "mainAttackDamage": 3.1,
     "armor": 0.28,
     "attackSpeed": 1.7,
+    "mana": 26.4,
+    "manaRegen": 0.11,
     "magicResistance": 0.1
   },
   "stats": {
@@ -56,27 +57,27 @@
     {
       "name": "Outfight Them!",
       "type": "passive",
-      "description": "When Legion commander or an allied Hero within 1200 range casts an ability, they gain bonus armor for 6s; allies gain 50% of the value. This bonus stacks independently."
+      "description": "When Legion commander or an allied Hero within 1200 range casts an ability, they gain bonus armor for 6s; allies gain 50% of the value. This bonus stacks independently. Base Armor Bonus: 1. Additional Armor Bonus per Level: 0.1. Duration: 6. Radius: 1200. Ally Bonus Armor: 50%."
     },
     {
       "name": "Overwhelming Odds",
       "type": "active",
-      "description": "Grants Legion Commander bonus attack speed upon cast."
+      "description": "Grants Legion Commander bonus attack speed upon cast. Radius: 600 (700). Base Damage: 35/65/95/125. Damage Bonus per Hero: 35/65/95/125 (70/100/130/160). Damage Bonus per Creep: 14/16/18/20. Move Speed Slow: 100%. Slow Duration: 0.3. Cooldown: 90/105/120/135."
     },
     {
       "name": "Press the Attack",
       "type": "active",
-      "description": "Applies a Strong Dispel on the unit-targeted ally while granting bonus movement speed and bonus health regeneration for a short time."
+      "description": "Applies a Strong Dispel on the unit-targeted ally while granting bonus movement speed and bonus health regeneration for a short time. Cast Range: 700. Health Regen Bonus: 24/36/48/60 (64/76/88/100). Move Speed Bonus: 10%/14%/18%/22% (25%/29%/33%/37%). Duration: 5. Radius: (500). Additional Movement Speed Bonus: (15%). Cooldown: 16/15/14/13. Mana Cost: 90."
     },
     {
       "name": "Moment of Courage",
       "type": "passive",
-      "description": "After a set number of incoming attacks, Tresdin counter-attacks with bonus lifesteal immediately."
+      "description": "After a set number of incoming attacks, Tresdin counter-attacks with bonus lifesteal immediately. Required Incoming Attacks: 7/6/5/4 (6/5/4/3). Lifesteal: 55%/65%/75%/85% (155%/165%/175%/185%). Attack Speed Bonus: 1000. Duration: 1. Instant Attack Factor: 1. Creep Lifesteal Factor: 0.6. Mana Cost: 0.3."
     },
     {
       "name": "Duel",
       "type": "active",
-      "description": "Grants 2 stacks of the current ability values to the victor."
+      "description": "Tresdin and the target enemy hero are forced to attack each other for a short duration. She can cast her abilities while Dueling, but not use items. Grants permanent bonus attack damage to the victor during the Duel duration. Cast Range: 200. Victor Attack Damage Bonus: 10/20/30. Duration: 4/4.5/5 (4.75/5.25/5.75). Cooldown: 60/55/50. Mana Cost: 75."
     }
   ]
 }

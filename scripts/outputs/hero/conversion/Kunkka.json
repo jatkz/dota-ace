@@ -1,6 +1,6 @@
 {
   "name": "Kunkka",
-  "description": "Step lively now, your Admiral is on board!",
+  "description": "Step lively now, your Admiral is on board! Kunkka, the Admiral As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -58,7 +58,7 @@
     {
       "name": "Admiral's Rum",
       "type": "passive",
-      "description": "Douses himself with the Admiral's signature rum upon taking additional player-based damage instances when reaching a certain health threshold. The Rum buff grants bonus movement speed and damage reduction for a period of time. Health Threshold: 65%. Move Speed Bonus: 7.75%. Damage Reduction: 18%. Damage Timer: 6. Rum Buff Duration: 6 (7). Move Speed Bonus Increase: 0.25%. Cooldown: 60.5."
+      "description": "Douses himself with the Admiral's signature rum upon taking additional player-based damage instances when reaching a certain health threshold. The Rum buff grants bonus movement speed and damage reduction for a period of time. Health Threshold: 65%. Move Speed Bonus: 7.75%. Damage Reduction: 18%. Damage Timer: 6. Rum Buff Duration: 6 (7). Move Speed Bonus Increase: 0.25%. Mana Cost: 60.5."
     },
     {
       "name": "Torrent",
@@ -78,7 +78,7 @@
     {
       "name": "Tidal Wave",
       "type": "active",
-      "description": "Calls upon a tidal wave from behind Kunkka that deals damage, disarms, and drags enemy units along it. Cast Range: 1050. Travel Distance: 1800. Radius: 750 (850). Damage: 180. Knock Distance: 600. Knock Duration: 1. Cooldown: 12. Mana Cost: 75."
+      "description": "Calls upon a tidal wave from behind Kunkka that deals damage, disarms, and drags enemy units along it. Cast Range: 1050. Travel Distance: 1800. Radius: 750 (850). Damage: 180. Knock Distance: 600. Knock Duration: 1. Mana Cost: 12."
     },
     {
       "name": "Ghostship",

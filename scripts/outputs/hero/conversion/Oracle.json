@@ -21,10 +21,10 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
-    "armor": 0.28,
-    "attackSpeed": 1.7,
     "mana": 43.2,
     "manaRegen": 0.18,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.6
   },
@@ -61,37 +61,37 @@
     {
       "name": "Clairvoyant Curse",
       "type": "passive",
-      "description": "Grants Oracle bonus outgoing spell damage amplification per hero level."
+      "description": "Grants Oracle bonus outgoing spell damage amplification per hero level. Spell Damage Amp per Hero Level: 1%."
     },
     {
       "name": "Clairvoyant Cure",
       "type": "passive",
-      "description": "Grants Oracle bonus outgoing heal amplification per hero level."
+      "description": "Grants Oracle bonus outgoing heal amplification per hero level. Heal Amp per Hero Level: 0.75% This ability levels up with Oracle. Heal Amp per Hero Level: 0.75%."
     },
     {
       "name": "Fortune's End",
       "type": "active",
-      "description": "Applies a basic dispel only on the unit-targeted allied unit upon projectile impact. Applies a buff that continously basic dispels corresponding to the max channel time."
+      "description": "Applies a basic dispel only on the unit-targeted allied unit upon projectile impact. Applies a buff that continously basic dispels corresponding to the max channel time. Cast Range: 850. Effect Radius: 350. Max Channel Time: 2.5. Min Root Duration: 0.75 (1.25). Max Root Duration: 2.75 (3.25). Damage: 100/160/220/280 (200/260/320/380). Cooldown: 18/14/10/6. Mana Cost: 100."
     },
     {
       "name": "Fate's Edict",
       "type": "active",
-      "description": "Enraptures the affected unit, disarms and set its magic resistance to the max value."
+      "description": "Enraptures the affected unit, disarms and set its magic resistance to the max value. Cast Range: 700. Set Magic Resist: 100%. Duration: 3.5/4/4.5/5. Disarm Duration: 3.5/4/4.5/5. An unbreakable prophecy resounds: a chosen ally shall briefly suffer no magics. Other kinds of suffering however.. Cooldown: 17/14/11/8. Mana Cost: 70."
     },
     {
       "name": "Purifying Flames",
       "type": "active",
-      "description": "Deals damage to the affected unit before causing them to heal over time. The damage increasing talent does not increase the damage applied to allied units."
+      "description": "Deals damage to the affected unit before causing them to heal over time. The damage increasing talent does not increase the damage applied to allied units. Cast Range: 850. Damage: 90/180/270/360 (112.5/225/337.5/450). Heal per Second: 15/25/35/45. Duration: 10. Ally Damage: 90/180/270/360. Mana Cost: 2.5."
     },
     {
       "name": "Rain of Destiny",
       "type": "active",
-      "description": "Bring forth rain that damage and applies an incoming heal reduction for all affected enemy units within an area-targeted location."
+      "description": "Bring forth rain that damage and applies an incoming heal reduction for all affected enemy units within an area-targeted location. Cast Range: 650. Radius: 650. Damage per Second: 30. Heal Reduction: 15%. Aura Linger Duration: 0.5. Duration: 10. Mana Cost: 40."
     },
     {
       "name": "False Promise",
       "type": "active",
-      "description": "When, applies one heal instance to the affected allied unit based on the remaining summed heal value. When, the remaining damage (or the negative heal value) is applied as one damage instance. Grants the kill credit to the damage instance that would have killed if they applied in order."
+      "description": "Applies a strong dispel on the affected allied hero upon cast. Delays certain health restoration sources and all incoming damage sources until the ability duration ends. Any healing that is delayed is doubled at the end of the duration. Grants invisibility with a fade delay, base attack time reduction, and bonus outgoing spell amplification for the duration. Cast Range: 700/850/1000. Health Regen Counter Factor: 2. Heal Counter Factor: 2. Damage Counter Factor: 1. Duration: 7/8.5/10 (8.5/10/11.5). Armor Bonus: (8). Cooldown: 110/85/60. Mana Cost: 100/150/200."
     }
   ]
 }

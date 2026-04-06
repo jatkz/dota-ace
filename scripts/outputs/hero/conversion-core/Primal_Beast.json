@@ -1,0 +1,70 @@
+{
+  "name": "Primal Beast",
+  "description": "RAAWR Primal Beast Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast.",
+  "attackType": "Melee",
+  "roles": [
+    "Initiator",
+    "Durable",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 26,
+    "agility": 15,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 4.3,
+    "agility": 1,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 94.6,
+    "healthRegen": 0.43,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "armor": 0.17,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 692,
+    "healthRegen": 2.85,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 4.5,
+    "magicResistance": 26.6,
+    "damageMin": 62,
+    "damageMax": 64,
+    "damageAverage": 63,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.8,
+    "animationPoint": 0.6,
+    "animationBackswing": 0.7,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+25% Trample Self Magic Resistance",
+      "right": "+30 Attack Damage"
+    },
+    "15": {
+      "left": "+6 Armor per Uproar Stack",
+      "right": "-5s Trample Cooldown"
+    },
+    "20": {
+      "left": "Active Uproar Basic Dispels",
+      "right": "+20% Trample Attack Factor"
+    },
+    "25": {
+      "left": "+67% Pulverize Duration",
+      "right": "Colossal 2x Bonuses During Trample"
+    }
+  }
+}

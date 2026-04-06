@@ -1,0 +1,71 @@
+{
+  "name": "Dawnbreaker",
+  "description": "Darkness fears the break of dawn!",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Durable"
+  ],
+  "attributes": {
+    "strength": 25,
+    "agility": 14,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 1.7,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 3,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 4.33,
+    "magicResistance": 27,
+    "damageMin": 56,
+    "damageMax": 60,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.46,
+    "animationBackswing": 1.02,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "Celestial Hammer Grants Allies Move Speed",
+      "right": "+25% Luminosity Critical Damage"
+    },
+    "15": {
+      "left": "-20s Solar Guardian Cooldown",
+      "right": "x1.4 Celestial Hammer Contact Damage/Damage per Second"
+    },
+    "20": {
+      "left": "-1 Luminosity Attacks Required",
+      "right": "+150 Solar Guardian Radius"
+    },
+    "25": {
+      "left": "x1.8 Celestial Hammer Max Distance/Speed",
+      "right": "-4s Starbreaker Cooldown"
+    }
+  }
+}

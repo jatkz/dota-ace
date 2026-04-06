@@ -1,0 +1,73 @@
+{
+  "name": "Disruptor",
+  "description": "By stormcraft, I shall lay my enemies low.",
+  "attackType": "Ranged",
+  "roles": [
+    "Support",
+    "Disabler",
+    "Nuker",
+    "Initiator"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 15,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1.4,
+    "intelligence": 2.9
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "armor": 0.23,
+    "attackSpeed": 1.4,
+    "mana": 34.8,
+    "manaRegen": 0.145,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.9
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 2.5,
+    "magicResistance": 27,
+    "damageMin": 47,
+    "damageMax": 51,
+    "damageAverage": 49,
+    "projectileSpeed": 1200,
+    "attackRange": 625,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.5,
+    "moveSpeed": 295,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+15 Thunder Strike Damage per Strike",
+      "right": "+20 Move Speed"
+    },
+    "15": {
+      "left": "+60 Static Storm Damage per Second",
+      "right": "+15% Glimpse Distance to Damage +300 Glimpse Max Damage"
+    },
+    "20": {
+      "left": "+75 Static Storm Radius",
+      "right": "+1s Kinetic Field Duration +1s Kinetic Fence Duration"
+    },
+    "25": {
+      "left": "+6 Thunder Strike Strikes x0.5 Thunder Strike Strike Interval",
+      "right": "2 Glimpse Charges"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "Beastmaster",
+  "description": "I run with the rabbit and hunt with the hounds.",
+  "attackType": "Melee",
+  "roles": [
+    "Initiator",
+    "Disabler",
+    "Durable",
+    "Nuker"
+  ],
+  "attributes": {
+    "strength": 25,
+    "agility": 19,
+    "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.9,
+    "agility": 2,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 63.8,
+    "healthRegen": 0.29,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.06
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 2.75,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 2.17,
+    "magicResistance": 26.6,
+    "damageMin": 50,
+    "damageMax": 54,
+    "damageAverage": 52,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 119,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+2% Wild Axes Damage Amp per Stack",
+      "right": "+5 Armor"
+    },
+    "15": {
+      "left": "+200 Primal Roar Cast Range",
+      "right": "+15 Move Speed to Beastmaster and His Units"
+    },
+    "20": {
+      "left": "+250 Max Health to Beastmaster and His Units",
+      "right": "+30 Damage to Beastmaster and His Units"
+    },
+    "25": {
+      "left": "-25s Primal Roar Cooldown",
+      "right": "No Wild Axes Cooldown"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "Kez",
+  "description": "Flightless fury! Heh, that's what they call me.",
+  "attackType": "Melee",
+  "roles": [
+    "Escape",
+    "Carry",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 27,
+    "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 3.5,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.58,
+    "attackSpeed": 3.5,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3.5,
+    "mana": 315,
+    "manaRegen": 1.25,
+    "armor": 5.5,
+    "magicResistance": 27,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": 0,
+    "attackRange": 225,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 127,
+    "bat": 1.9,
+    "animationPoint": 0.35,
+    "animationBackswing": 1.12,
+    "moveSpeed": 310,
+    "turnRate": 1,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+50 Raptor Dance Radius",
+      "right": "+12% Magic Resist"
+    },
+    "15": {
+      "left": "+1 Raptor Dance Strike",
+      "right": "+2s Falcon Rush Duration"
+    },
+    "20": {
+      "left": "+40 Attack Speed During Falcon Rush",
+      "right": "+4% Kazurai Katana Damage per Second"
+    },
+    "25": {
+      "left": "+1 Echo Slash Attack -0.6 Echo Slash Interval",
+      "right": "+80% Shodo Sai Critical Strike"
+    }
+  }
+}

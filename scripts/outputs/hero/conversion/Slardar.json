@@ -1,6 +1,6 @@
 {
   "name": "Slardar",
-  "description": "I guard what slumbers in the deeps. Slardar, the Slithereen Guard Slardar is a Slithereen, one of the Deep Ones, guardian of a vast network of sunken cities and the ancient riches buried within them.",
+  "description": "I guard what slumbers in the deeps.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -25,7 +25,6 @@
     "mana": 18,
     "manaRegen": 0.075,
     "armor": 0.35,
-    "attackSpeed": 2.1,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },
@@ -57,27 +56,27 @@
     {
       "name": "Seaborn Sentinel",
       "type": "passive",
-      "description": "Grants Slardar bonus health regeneration, bonus armor, bonus attack damage, and bonus movement speed in certain water-based terrains. Increases both the bonus health regeneration and the bonus armor granted. Slardar additionally has bonus status resistance in certain water-based terrains."
+      "description": "Grants Slardar bonus health regeneration, bonus armor, bonus attack damage, and bonus movement speed in certain water-based terrains. Increases both the bonus health regeneration and the bonus armor granted. Health Regen Bonus: 2.5/5/7.5/10 (24.5/27/29.5/32). Armor Bonus: 3/4/5/6 (13/14/15/16). Attack Damage Bonus: 8/16/24/32 (38/46/54/62). Move Speed Bonus: 18%. Bonus Linger Duration: 0.033. Status Resist Bonus: (40%)."
     },
     {
       "name": "Guardian Sprint",
       "type": "active",
-      "description": "Grants an additional short bonus movement speed and bonus slow resistance upon cast."
+      "description": "Move Speed Bonus: 10%/18%/26%/34%. Duration: 10 (12). Cooldown: 29/25/21/17. Mana Cost: 25."
     },
     {
       "name": "Slithereen Crush",
       "type": "active",
-      "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed. Creates a water-based terrain that grant bonuses to certain abilities of Slardar's."
+      "description": "Stuns and damages nearby enemy land units. After the stun, the affected units are slowed. Creates a water-based terrain that grant bonuses to certain abilities of Slardar's. Effect Radius: 325. Damage: 75/150/225/300 (200/275/350/425). Move Speed Slow: 20%/25%/30%/35%. Attack Speed Slow: 20/25/30/35. Slow Duration: 3/4/5/6. Stun Duration: 0.8. Mana Cost: 7."
     },
     {
       "name": "Bash of the Deep",
       "type": "passive",
-      "description": "Attack Damage / Physical."
+      "description": "Attack Damage / Physical Required Attacks: 4. Damage: 35/90/145/200 (38/93/148/203). Duration: 1."
     },
     {
       "name": "Corrosive Haze",
       "type": "active",
-      "description": "Reduces the affected enemy target's armor, provides True Sight and vision over it, revealing invisibility. Grants a self armor bonus depending on the total armor reduction applied to all enemy units. Each debuff applied on enemy units grants an independent buff stack."
+      "description": "Reduces the affected enemy target's armor, provides True Sight and vision over it, revealing invisibility. Cast Range: 900. Armor Reduction: 10/15/20 (26/31/36). Duration: 18. Puddle Radius: 100 (180). Puddle per Interval: 1. Puddle Duration: 7 (12). Mana Cost: 5."
     }
   ]
 }

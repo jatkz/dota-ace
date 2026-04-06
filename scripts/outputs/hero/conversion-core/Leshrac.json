@@ -1,0 +1,73 @@
+{
+  "name": "Leshrac",
+  "description": "Imbalance demands it.",
+  "attackType": "Ranged",
+  "roles": [
+    "Carry",
+    "Support",
+    "Nuker",
+    "Pusher",
+    "Disabler"
+  ],
+  "attributes": {
+    "strength": 20,
+    "agility": 17,
+    "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 2.5,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "armor": 0.42,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.5
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 3.83,
+    "magicResistance": 27.2,
+    "damageMin": 49,
+    "damageMax": 53,
+    "damageAverage": 51,
+    "projectileSpeed": 900,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.6,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+4 Armor",
+      "right": "+1.5 Mana Regen"
+    },
+    "15": {
+      "left": "+10% Pulse Nova Active Damage Reduction",
+      "right": "+80 Lightning Storm Damage"
+    },
+    "20": {
+      "left": "+30 Pulse Nova Damage",
+      "right": "+1 Diabolic Edict Max Target"
+    },
+    "25": {
+      "left": "Pulse Nova Procs Lightning Storm",
+      "right": "+20 Diabolic Edict Explosions"
+    }
+  }
+}

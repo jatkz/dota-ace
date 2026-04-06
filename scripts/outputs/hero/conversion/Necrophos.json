@@ -21,10 +21,10 @@
   "statGains": {
     "health": 50.6,
     "healthRegen": 0.23,
-    "armor": 0.22,
-    "attackSpeed": 1.3,
     "mana": 32.4,
     "manaRegen": 0.135,
+    "armor": 0.22,
+    "attackSpeed": 1.3,
     "magicResistance": 0.1,
     "mainAttackDamage": 2.7
   },
@@ -56,32 +56,32 @@
     {
       "name": "Sadist",
       "type": "passive",
-      "description": "Creep kills and denies grant a less effective stack."
+      "description": "Creep kills and denies grant a less effective stack. Health Regen Bonus: 3.7. Mana Regen Bonus: 3.7. Duration: 8 (10). Health Regen Bonus Increase: 0.3. Mana Regen Bonus Increase: 0.3."
     },
     {
       "name": "Death Pulse",
       "type": "active",
-      "description": "Releases a wave of death around Necrophos, dealing damage to enemy units and healing allied units."
+      "description": "Releases a wave of death around Necrophos, dealing damage to enemy units and healing allied units. Search Radius: 500 (575). Projectile Speed: 400. Damage: 100/160/220/280. Heal: 70/90/110/130 (130/150/170/190). Cooldown: 8/7/6/5. Mana Cost: 115/130/145/160."
     },
     {
       "name": "Ghost Shroud",
-      "type": "passive",
-      "description": "Turns Necrophos ethereal, and emits a movement speed slow aura that affects enemy units around him. Reduces Necrophos' magic resistance while turning ethereal. However, his health-related and mana-related restorative powers are all amplified."
+      "type": "active",
+      "description": "Turns Necrophos ethereal, and emits a movement speed slow aura that affects enemy units around him. Reduces Necrophos' magic resistance while turning ethereal. However, his health-related and mana-related restorative powers are all amplified. Slow Radius: 700 (775). Move Speed Slow: 16%/19%/22%/25% (31%/34%/37%/40%). Duration: 3/3.5/4/4.5. Aura Linger Duration: 0.5. Magic Resist Reduction: 20%. All Self Restoration Factor: 1.55/1.65/1.75/1.85. Cooldown: 28/24/20/16. Mana Cost: 75."
     },
     {
       "name": "Heartstopper Aura",
       "type": "passive",
-      "description": "Grants bonus enemy max health loss per second based on Necrophos' actual current health regeneration values."
+      "description": "Grants bonus enemy max health loss per second based on Necrophos' actual current health regeneration values. Aura Radius: 700 (775). Max Health Lost per Second: 0.8%/1.3%/1.8%/2.3% (1.1%/1.6%/2.1%/2.6%). Aura Linger Duration: 0.5. Health Regen Reduction: (20%). Self Health Regen to Health Loss Bonus Factor: (0.5)."
     },
     {
       "name": "Death Seeker",
       "type": "active",
-      "description": "Launches two simultaneously to both targets, Necrophos reappears next to the secondary target."
+      "description": "Necrophos rehabilitate himself upon arriving to the location. Then, the affected enemy unit spreads a wave of Death Pulse corresponding of its level, dealing damage to enemy units and healing allied units. Cast Range: 900. First Projectile Speed: 900. Search Radius: 500 (575). Damage Factor: 1. Heal Factor: 1. Mana Cost: 19."
     },
     {
       "name": "Reaper's Scythe",
       "type": "active",
-      "description": "Stuns the unit-targeted enemy hero, then deals damage based on per point of missing health of the affected unit. Any kills under this effect is credited to Necrophos. The amount of death and suffering in the air increases the power of Necrophos's plague magic."
+      "description": "Stuns the unit-targeted enemy hero, then deals damage based on per point of missing health of the affected unit. Any kills under this effect is credited to Necrophos. The amount of death and suffering in the air increases the power of Necrophos's plague magic. Cast Range: 600. Damage per Missing Health: 0.7/0.8/0.9 (1/1.1/1.2). Stun Duration: 1.5. Health Regen Bonus per Kill: 1/2/3. Mana Regen Bonus per Kill: 1/2/3. Cooldown: 250/375/500."
     }
   ]
 }

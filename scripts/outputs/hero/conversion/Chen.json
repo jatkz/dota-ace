@@ -51,11 +51,29 @@
     "visionDay": 1800,
     "visionNight": 800
   },
+  "talents": {
+    "10": {
+      "left": "+25% Zealot Health/Damage",
+      "right": "+75 Penitence Damage"
+    },
+    "15": {
+      "left": "+15% Penitence Slow",
+      "right": "+12% Persuaded Unit Attack Damage"
+    },
+    "20": {
+      "left": "+1300 Persuaded Unit Min Health",
+      "right": "+15% Divine Favor Heal Amp"
+    },
+    "25": {
+      "left": "Hand of God Full Health Restore for Chen and all of his Summons",
+      "right": "Hand of God Strong Dispels"
+    }
+  },
   "abilities": [
     {
       "name": "Zealot",
       "type": "passive",
-      "description": "Whenever Chen respawns, he is joined by a Zealot, a melee warrior creep with the ability to sacrifice itself to heal or deal damage to an enemy. The Zealot respawns next to Chen after 60s. Zealot may be activated to teleport a unit under your control to Chen after a 6 second delay. If Chen is targeted, it will teleport all units you control. Taking damage from enemy heroes or their units will cancel the teleport."
+      "description": "Whenever Chen respawns, he is joined by a Zealot, a melee warrior creep with the ability to sacrifice itself to heal or deal damage to an enemy. The Zealot respawns next to Chen after 60s. Zealot may be activated to teleport a unit under your control to Chen after a 6 second delay. If Chen is targeted, it will teleport all units you control. Taking damage from enemy heroes or their units will cancel the teleport. Respawn Time: 60. Bonus Base Damage per Level: 2. Cooldown: 10. Mana Cost: 50."
     },
     {
       "name": "Penitence",
@@ -75,7 +93,7 @@
     {
       "name": "Hand of God",
       "type": "active",
-      "description": "Heals all allied heroes and his player-controlled units globally. Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism. Radius: Global First. Heal: 200/300/400. Heal per Second: 20/30/40. Heal Duration: 10. Max Channel Time: (6). Radius: Global. Cooldown: 150/130/110 (110/90/70). Mana Cost: 200/300/400."
+      "description": "Heals all allied heroes and his player-controlled units globally. Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism. Heal per Second: 20/30/40. Heal Duration: 10. Max Channel Time: (6). Mana Cost: 200/300/400."
     }
   ]
 }

@@ -25,8 +25,8 @@
     "mana": 21.6,
     "manaRegen": 0.09,
     "armor": 0.25,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.3
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -71,12 +71,12 @@
     {
       "name": "Sun Ray",
       "type": "active",
-      "description": "Expels a light beam that damages enemy units at the cost of its own health. The longer the duration, the more the damage increases. Applies a movement speed slow. Casting Supernova no longer ends Sun Ray. Cast Range: 1200. Beam Distance: 1150. Beam Radius: 130. Damage per Second: 15/20/25/30. Max Health as Damage Bonus per Second: 1.5%/3%/4.5%/6% (3%/4.5%/6%/7.5%). Beam Duration: 6. Cooldown: 30. Mana Cost: 100/110/120/130."
+      "description": "Expels a light beam that damages enemy units at the cost of its own health. The longer the duration, the more the damage increases. Applies a movement speed slow. Casting Supernova no longer ends Sun Ray. Cast Range: 1200. Beam Distance: 1150. Beam Radius: 130. Damage per Second: 15/20/25/30. Max Health as Damage Bonus per Second: 1.5%/3%/4.5%/6% (3%/4.5%/6%/7.5%). Beam Duration: 6. Cooldown: 100/110/120/130."
     },
     {
       "name": "Supernova",
       "type": "active",
-      "description": "Enables allied hero targeting. Phoenix and the affected allied hero are brought into the sun to be reborn together. Increases the Phoenix Sun hit count. Increases the total hit count during the Phoenix's Sun Form. Radius: 1200. Hit Count: 6/8/10 (7/10/13). Damage per Second: 60/90/120. Aura Linger Duration: 0.5. Nova Duration: 6. Set Reborn Current Health: 100%. Cooldown: 120. Mana Cost: 150/200/250."
+      "description": "Enables allied hero targeting. Phoenix and the affected allied hero are brought into the sun to be reborn together. Increases the Phoenix Sun hit count. Increases the total hit count during the Phoenix's Sun Form. Radius: 1200. Hit Count: 6/8/10 (7/10/13). Damage per Second: 60/90/120. Aura Linger Duration: 0.5. Nova Duration: 6. Set Reborn Current Health: 100%. Cooldown: 150/200/250."
     }
   ]
 }

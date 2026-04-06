@@ -1,0 +1,70 @@
+{
+  "name": "Zeus",
+  "description": "Immortality was overrated. This is much more interesting.",
+  "attackType": "Ranged",
+  "roles": [
+    "Nuker",
+    "Carry"
+  ],
+  "attributes": {
+    "strength": 19,
+    "agility": 11,
+    "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.1,
+    "agility": 1.2,
+    "intelligence": 3.3
+  },
+  "statGains": {
+    "health": 46.2,
+    "healthRegen": 0.21,
+    "mana": 39.6,
+    "manaRegen": 0.165,
+    "armor": 0.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 3.83,
+    "magicResistance": 27.3,
+    "damageMin": 52,
+    "damageMax": 60,
+    "damageAverage": 56,
+    "projectileSpeed": 1100,
+    "attackRange": 380,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 111,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.55,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+200 Health",
+      "right": "+1 Heavenly Jump Target"
+    },
+    "15": {
+      "left": "-20% Arc Lightning Mana Cost/Cooldown",
+      "right": "+75 Thundergod's Wrath Damage"
+    },
+    "20": {
+      "left": "+0.5s Lightning Bolt Ministun",
+      "right": "+60 Arc Lightning Damage"
+    },
+    "25": {
+      "left": "3 Heavenly Jump Charges",
+      "right": "+325 Lightning Bolt Radius"
+    }
+  }
+}

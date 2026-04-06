@@ -1,0 +1,73 @@
+{
+  "name": "Slardar",
+  "description": "I guard what slumbers in the deeps.",
+  "attackType": "Melee",
+  "roles": [
+    "Carry",
+    "Durable",
+    "Initiator",
+    "Disabler",
+    "Escape"
+  ],
+  "attributes": {
+    "strength": 21,
+    "agility": 17,
+    "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 2.1,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.6,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 4.83,
+    "magicResistance": 26.5,
+    "damageMin": 51,
+    "damageMax": 59,
+    "damageAverage": 55,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.36,
+    "animationBackswing": 0.64,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
+  "talents": {
+    "10": {
+      "left": "+30 Bash of the Deep Damage",
+      "right": "+2s Guardian Sprint Duration"
+    },
+    "15": {
+      "left": "-3 Corrosive Haze Armor",
+      "right": "+250 Health"
+    },
+    "20": {
+      "left": "+16% Seaborn Sentinel Bonus Attack Damage",
+      "right": "+125 Slithereen Crush Damage"
+    },
+    "25": {
+      "left": "Corrosive Haze Cannot Be Dispelled",
+      "right": "-3s Slithereen Crush Cooldown"
+    }
+  }
+}
