@@ -1,6 +1,7 @@
 {
   "name": "Ursa",
   "description": "It is my spirit that keeps me safe, and not mere armor.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Durable",
@@ -10,6 +11,45 @@
     "strength": 25,
     "agility": 18,
     "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.8,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 3,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 4,
+    "magicResistance": 26.6,
+    "damageMin": 42,
+    "damageMax": 46,
+    "damageAverage": 44,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

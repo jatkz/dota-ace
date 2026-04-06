@@ -1,6 +1,7 @@
 {
   "name": "Treant Protector",
-  "description": "Life becomes death becomes new life. As it should be. Rooftrellen, the Treant Protector",
+  "description": "Life becomes death becomes new life. As it should be. Rooftrellen, the Treant Protector.",
+  "attackType": "Melee",
   "roles": [
     "Support",
     "Initiator",
@@ -12,6 +13,45 @@
     "strength": 25,
     "agility": 15,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 1.8,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4,
+    "attackSpeed": 1.8
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 2.75,
+    "mana": 315,
+    "manaRegen": 1.25,
+    "armor": 3.5,
+    "magicResistance": 27,
+    "damageMin": 85,
+    "damageMax": 93,
+    "damageAverage": 89,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.9,
+    "animationPoint": 0.6,
+    "animationBackswing": 0.4,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -26,12 +66,12 @@
     },
     {
       "name": "Leech Seed",
-      "type": "ability",
+      "type": "passive",
       "description": "A successful attack now deals spell damage bonus and binds the enemy unit. The heal component is less effective on allied creeps."
     },
     {
       "name": "Living Armor",
-      "type": "ability",
+      "type": "active",
       "description": "Applies a buff that negates all damage types from all player-controlled sources. The damage negation value reduces per damage instance negated, and removes the buff entirely once the damage negated value reaches nil. The roots and tendrils of the Treant Protectors are far-reaching, stimulating the growth and rejuvenation of all of nature."
     },
     {

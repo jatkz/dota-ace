@@ -1,13 +1,18 @@
 {
   "name": "Orb of Venom",
   "cost": 350,
-  "description": "Envenoms your weapon with the venom of a venomous viper.",
+  "description": "Envenoms your veapon with the venom of a venomous viper.",
   "abilities": [
     {
       "name": "Poison Attack",
       "type": "passive",
-      "description": ""
+      "description": "The next attack poisons the target, dealing damage over time. Cooldown: 9 seconds. Damage per Second: 10. Duration: 3 seconds."
     }
   ],
-  "stats": {}
+  "buildsInto": [
+    "Mage Slayer",
+    "Hydra's Breath",
+    "Witch Blade"
+  ],
+  "sellValue": 175
 }

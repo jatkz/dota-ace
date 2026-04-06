@@ -1,6 +1,7 @@
 {
   "name": "Sven",
   "description": "May my enemies share the fate of the Shattered Helm. Sven, the Rogue Knight Sven dashes to the primary unit-targeted enemy.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Disabler",
@@ -12,6 +13,45 @@
     "strength": 23,
     "agility": 18,
     "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 3.5,
+    "agility": 2.2,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 77,
+    "healthRegen": 0.35,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "armor": 0.37,
+    "attackSpeed": 2.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.5
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 3.05,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 3,
+    "magicResistance": 26.6,
+    "damageMin": 60,
+    "damageMax": 62,
+    "damageAverage": 61,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 128,
+    "bat": 1.9,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

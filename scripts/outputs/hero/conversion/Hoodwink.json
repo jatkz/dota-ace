@@ -1,6 +1,7 @@
 {
   "name": "Hoodwink",
   "description": "Who said you could stroll in my woods? Hoodwink Fires an acorn attack on the unit-targeted enemy. The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -11,6 +12,45 @@
     "strength": 17,
     "agility": 25,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 3.6,
+    "intelligence": 2.9
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.6,
+    "attackSpeed": 3.6,
+    "mainAttackDamage": 3.6,
+    "mana": 34.8,
+    "manaRegen": 0.145,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 1.95,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4.17,
+    "magicResistance": 27.1,
+    "damageMin": 47,
+    "damageMax": 54,
+    "damageAverage": 50.5,
+    "projectileSpeed": 1800,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 125,
+    "bat": 2,
+    "animationPoint": 0.4,
+    "animationBackswing": 1.5,
+    "moveSpeed": 315,
+    "turnRate": 0.9,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

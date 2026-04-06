@@ -14,6 +14,8 @@ const HERO_ROLE_MAP = new Map([
     ['jungler', 'Jungler']
 ]);
 
+const ITEM_STAT_METADATA_KEYS = new Set(['Cost', 'Sell Value', 'Recipe Cost', 'Active', 'Passive', 'Bonus']);
+
 function normalizeText(value) {
     if (typeof value !== 'string') {
         return value;
@@ -32,6 +34,308 @@ function normalizeText(value) {
 
 function unique(values) {
     return [...new Set(values)];
+}
+
+function ensureSentence(value) {
+    if (typeof value !== 'string') {
+        return value;
+    }
+
+    const text = normalizeText(value);
+    if (!text) {
+        return text;
+    }
+
+    if (/[.!?]$/.test(text)) {
+        return text;
+    }
+
+    return `${text}.`;
+}
+
+function toTitleCase(value) {
+    return normalizeText(value)
+        .split(' ')
+        .filter(Boolean)
+        .map(part => {
+            if (part === part.toUpperCase()) {
+                return part;
+            }
+
+            return part.charAt(0).toUpperCase() + part.slice(1);
+        })
+        .join(' ');
+}
+
+function normalizeSchemaKey(key) {
+    if (typeof key !== 'string') {
+        return key;
+    }
+
+    return toTitleCase(
+        key
+            .replace(/_/g, ' ')
+            .replace(/([a-z])([A-Z])/g, '$1 $2')
+    );
+}
+
+function parseNumberish(value) {
+    if (typeof value === 'number') {
+        return value;
+    }
+
+    if (typeof value === 'string' && /^-?\d+(\.\d+)?$/.test(value.trim())) {
+        return Number(value.trim());
+    }
+
+    return value;
+}
+
+function dedupeLeadingRepeatedName(text) {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return text.replace(/^((?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3}))\s+\1\b/, '$1');
+}
+
+function stripEffectLabelPrefix(text) {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return normalizeText(text)
+        .replace(/^[A-Za-z' -]+\s*\[(?:active|passive)\]:\s*/i, '')
+        .replace(/^(?:Active|Passive)\s*[-:]\s*/i, '')
+        .trim();
+}
+
+function splitBonusStats(text) {
+    if (typeof text !== 'string') {
+        return {};
+    }
+
+    const matches = [...normalizeText(text).matchAll(/([+-]\d+(?:\.\d+)?%?(?:\/[+-]?\d+(?:\.\d+)?%?)*)\s*([A-Za-z][A-Za-z' -]+?)(?=[+-]\d|$)/g)];
+    const stats = {};
+
+    for (const [, rawValue, rawLabel] of matches) {
+        const label = normalizeSchemaKey(rawLabel);
+        const value = normalizeText(rawValue);
+
+        if (label && value && !(label in stats)) {
+            stats[label] = value;
+        }
+    }
+
+    return stats;
+}
+
+function normalizeItemAbilities(abilities) {
+    if (!Array.isArray(abilities)) {
+        return abilities;
+    }
+
+    return abilities.map(ability => ({
+        ...ability,
+        name: normalizeText(ability.name),
+        type: normalizeAbilityType(ability.type),
+        description: ensureSentence(normalizeText(ability.description))
+    }));
+}
+
+function normalizeItemRecipe(recipe) {
+    if (!Array.isArray(recipe)) {
+        return recipe;
+    }
+
+    return unique(
+        recipe
+            .map(entry => normalizeText(entry))
+            .filter(entry => entry && !/^Recipe$/i.test(entry))
+    );
+}
+
+function normalizeItemBuildsInto(buildsInto) {
+    if (!Array.isArray(buildsInto)) {
+        return buildsInto;
+    }
+
+    return unique(
+        buildsInto
+            .map(entry => normalizeText(entry))
+            .filter(entry => entry && !/^Recipe$/i.test(entry))
+    );
+}
+
+function normalizeItemStats(stats = {}) {
+    if (!stats || typeof stats !== 'object' || Array.isArray(stats)) {
+        return {};
+    }
+
+    const normalizedStats = {};
+    const bonusStats = splitBonusStats(stats.Bonus);
+
+    for (const [rawKey, rawValue] of Object.entries(stats)) {
+        const key = normalizeSchemaKey(rawKey);
+
+        if (ITEM_STAT_METADATA_KEYS.has(key)) {
+            continue;
+        }
+
+        normalizedStats[key] = typeof rawValue === 'string' ? normalizeText(rawValue) : rawValue;
+    }
+
+    for (const [key, value] of Object.entries(bonusStats)) {
+        if (!(key in normalizedStats)) {
+            normalizedStats[key] = value;
+        }
+    }
+
+    return normalizedStats;
+}
+
+function normalizeItem(data) {
+    const normalized = { ...data };
+    const rawStats = normalized.stats && typeof normalized.stats === 'object' ? { ...normalized.stats } : {};
+
+    normalized.name = normalizeText(normalized.name);
+    normalized.description = normalizeText(normalized.description);
+    normalized.abilities = normalizeItemAbilities(normalized.abilities);
+    normalized.recipe = normalizeItemRecipe(normalized.recipe);
+    normalized.buildsInto = normalizeItemBuildsInto(normalized.buildsInto);
+
+    if ((normalized.cost === undefined || normalized.cost === null || normalized.cost === '') && rawStats.Cost !== undefined) {
+        normalized.cost = parseNumberish(rawStats.Cost);
+    }
+
+    if ((normalized.recipeCost === undefined || normalized.recipeCost === null || normalized.recipeCost === '') && rawStats['Recipe Cost'] !== undefined) {
+        normalized.recipeCost = parseNumberish(rawStats['Recipe Cost']);
+    }
+
+    if ((normalized.sellValue === undefined || normalized.sellValue === null || normalized.sellValue === '') && rawStats['Sell Value'] !== undefined) {
+        normalized.sellValue = parseNumberish(rawStats['Sell Value']);
+    }
+
+    if (normalized.recipeCost !== undefined && normalized.recipeCost !== null && normalized.recipeCost !== '') {
+        normalized.recipeCost = parseNumberish(normalized.recipeCost);
+    }
+
+    const itemStats = normalizeItemStats(rawStats);
+    if (Object.keys(itemStats).length > 0) {
+        normalized.stats = itemStats;
+    } else {
+        delete normalized.stats;
+    }
+
+    if (Array.isArray(normalized.recipe) && normalized.recipe.length === 0) {
+        delete normalized.recipe;
+    }
+
+    if (Array.isArray(normalized.buildsInto) && normalized.buildsInto.length === 0) {
+        delete normalized.buildsInto;
+    }
+
+    return normalized;
+}
+
+function isGenericNeutralDescription(text) {
+    if (typeof text !== 'string') {
+        return false;
+    }
+
+    return /^A Tier \d+ (?:neutral item(?: artifact)?|artifact)(?:\b| )/i.test(normalizeText(text));
+}
+
+function stripNeutralLeadIn(text) {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return normalizeText(text)
+        .replace(/^A Tier \d+ (?:neutral item(?: artifact)?|artifact)(?: that| which| with)?\s*/i, '')
+        .trim();
+}
+
+function looksWeakNeutralSummary(text) {
+    if (typeof text !== 'string') {
+        return true;
+    }
+
+    const normalized = normalizeText(text).toLowerCase();
+    return !normalized ||
+        /^(a|an)\s+(active ability|passive effect)\b/.test(normalized) ||
+        /^(provides|grants)\s+a\s+powerful\b/.test(normalized) ||
+        /^(cooldown|cast range|mana cost|duration)\b/.test(normalized);
+}
+
+function buildNeutralDescription(description, primaryEffect) {
+    const stripped = stripNeutralLeadIn(description);
+
+    if (stripped && stripped !== normalizeText(description) && !looksWeakNeutralSummary(stripped)) {
+        return ensureSentence(stripped.charAt(0).toUpperCase() + stripped.slice(1));
+    }
+
+    if (!description || isGenericNeutralDescription(description)) {
+        const derived = stripEffectLabelPrefix(primaryEffect);
+        if (derived) {
+            return ensureSentence(derived.charAt(0).toUpperCase() + derived.slice(1));
+        }
+    }
+
+    return ensureSentence(description);
+}
+
+function normalizeNotes(notes) {
+    if (Array.isArray(notes)) {
+        return unique(notes.map(note => ensureSentence(note)).filter(Boolean));
+    }
+
+    return notes;
+}
+
+function normalizeNeutral(data) {
+    const normalized = { ...data };
+    const primary = normalizeText(normalized.effects?.primary);
+
+    normalized.name = normalizeText(normalized.name);
+    normalized.tier = normalized.tier !== undefined && normalized.tier !== null ? String(normalized.tier).trim() : normalized.tier;
+    normalized.description = buildNeutralDescription(normalized.description, primary);
+    normalized.notes = normalizeNotes(normalized.notes);
+
+    if (normalized.effects && typeof normalized.effects === 'object' && !Array.isArray(normalized.effects)) {
+        normalized.effects = { ...normalized.effects };
+
+        if (normalized.effects.primary !== undefined) {
+            normalized.effects.primary = ensureSentence(stripEffectLabelPrefix(normalized.effects.primary));
+        }
+    }
+
+    return normalized;
+}
+
+function normalizeEnchantment(data) {
+    const normalized = { ...data };
+
+    normalized.name = normalizeText(normalized.name);
+    normalized.description = ensureSentence(normalized.description);
+    normalized.tier = normalized.tier !== undefined && normalized.tier !== null ? String(normalized.tier).trim() : normalized.tier;
+    normalized.notes = normalizeNotes(normalized.notes);
+
+    if (normalized.effects && typeof normalized.effects === 'object' && !Array.isArray(normalized.effects)) {
+        normalized.effects = { ...normalized.effects };
+
+        if (normalized.effects.primary_effect !== undefined && normalized.effects.primary === undefined) {
+            normalized.effects.primary = normalized.effects.primary_effect;
+        }
+
+        if (normalized.effects.primary !== undefined) {
+            normalized.effects.primary = ensureSentence(stripEffectLabelPrefix(normalized.effects.primary));
+        }
+
+        delete normalized.effects.primary_effect;
+    }
+
+    return normalized;
 }
 
 function normalizeAbilityType(type) {
@@ -75,28 +379,60 @@ function normalizeHeroRoles(roles) {
     return roles;
 }
 
+function normalizeHeroAttackType(attackType) {
+    if (typeof attackType !== 'string') {
+        return attackType;
+    }
+
+    const normalized = normalizeText(attackType).toLowerCase();
+    if (normalized === 'melee') {
+        return 'Melee';
+    }
+    if (normalized === 'ranged') {
+        return 'Ranged';
+    }
+
+    return normalizeText(attackType);
+}
+
+function normalizeNumericObject(objectValue) {
+    if (!objectValue || typeof objectValue !== 'object' || Array.isArray(objectValue)) {
+        return objectValue;
+    }
+
+    const normalized = { ...objectValue };
+
+    for (const [key, value] of Object.entries(normalized)) {
+        if (typeof value !== 'string') {
+            continue;
+        }
+
+        const cleaned = normalizeText(value).replace(/%$/, '');
+        normalized[key] = /^-?\d+(\.\d+)?$/.test(cleaned) ? Number(cleaned) : normalizeText(value);
+    }
+
+    return normalized;
+}
+
 function normalizeSimpleHero(data) {
     const normalized = { ...data };
 
     normalized.name = normalizeText(normalized.name);
-    normalized.description = normalizeText(normalized.description);
+    normalized.description = ensureSentence(dedupeLeadingRepeatedName(normalizeText(normalized.description)));
+    normalized.attackType = normalizeHeroAttackType(normalized.attackType);
     normalized.roles = normalizeHeroRoles(normalized.roles);
 
-    if (normalized.attributes && typeof normalized.attributes === 'object') {
-        normalized.attributes = { ...normalized.attributes };
-        for (const [key, value] of Object.entries(normalized.attributes)) {
-            if (typeof value === 'string' && /^-?\d+(\.\d+)?$/.test(value.trim())) {
-                normalized.attributes[key] = Number(value);
-            }
-        }
-    }
+    normalized.attributes = normalizeNumericObject(normalized.attributes);
+    normalized.attributeGains = normalizeNumericObject(normalized.attributeGains);
+    normalized.statGains = normalizeNumericObject(normalized.statGains);
+    normalized.stats = normalizeNumericObject(normalized.stats);
 
     if (Array.isArray(normalized.abilities)) {
         normalized.abilities = normalized.abilities.map(ability => ({
             ...ability,
             name: normalizeText(ability.name),
             type: normalizeAbilityType(ability.type),
-            description: normalizeText(ability.description)
+            description: ensureSentence(normalizeText(ability.description))
         }));
     }
 
@@ -144,14 +480,24 @@ function shouldNormalizeAsSimpleHero(data) {
 function normalizeData(category, data) {
     const normalized = normalizeRecursive(data);
 
-    if (category === 'hero') {
-        if (shouldNormalizeAsSimpleHero(normalized)) {
-            return normalizeSimpleHero(normalized);
-        }
+    switch (category) {
+        case 'item':
+            return normalizeItem(normalized);
+        case 'neutral':
+            return normalizeNeutral(normalized);
+        case 'enchantment':
+            return normalizeEnchantment(normalized);
+        case 'hero':
+            if (shouldNormalizeAsSimpleHero(normalized)) {
+                return normalizeSimpleHero(normalized);
+            }
 
-        if (normalized.converted?.sections?.general?.roles) {
-            normalized.converted.sections.general.roles = normalizeHeroRoles(normalized.converted.sections.general.roles);
-        }
+            if (normalized.converted?.sections?.general?.roles) {
+                normalized.converted.sections.general.roles = normalizeHeroRoles(normalized.converted.sections.general.roles);
+            }
+            break;
+        default:
+            break;
     }
 
     return normalized;

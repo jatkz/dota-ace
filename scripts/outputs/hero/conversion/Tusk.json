@@ -1,6 +1,7 @@
 {
   "name": "Tusk",
-  "description": "After a bar brawl it's customary, as a courtesy, to buy everyone who's still standing a round of drinks.",
+  "description": "After a bar brawl it's customary, as a courtesy, to buy everyone who's still standing a round of drinks. Ymir, the Tusk Reaches out to tag an allied unit and pulls them closer. Grants both Tusk and the tagged ally bonus movement speed and bonus armor once tagged.",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Disabler",
@@ -10,6 +11,44 @@
     "strength": 23,
     "agility": 23,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.9,
+    "agility": 1.9,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 85.8,
+    "healthRegen": 0.39,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.32,
+    "attackSpeed": 1.9,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 3.3,
+    "mana": 291,
+    "manaRegen": 1.4,
+    "armor": 4.83,
+    "magicResistance": 26.8,
+    "damageMin": 50,
+    "damageMax": 54,
+    "damageAverage": 52,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.7,
+    "animationPoint": 0.36,
+    "animationBackswing": 0.64,
+    "moveSpeed": 310,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

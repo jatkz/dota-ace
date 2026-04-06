@@ -1,6 +1,7 @@
 {
   "name": "Black King Bar",
   "cost": 4050,
+  "recipeCost": 1450,
   "description": "A powerful staff imbued with the strength of giants.",
   "abilities": [
     {
@@ -12,5 +13,9 @@
   "stats": {
     "Strength": "+10",
     "Attack Damage": "+24"
-  }
+  },
+  "recipe": [
+    "Ogre Axe",
+    "Mithril Hammer"
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "Null Talisman",
   "cost": 505,
+  "recipeCost": 210,
   "description": "A small gemstone attached to several chains.",
   "abilities": [],
   "stats": {
@@ -9,5 +10,9 @@
     "Intelligence": "+5",
     "Mana": "+3%",
     "Mana Regeneration": "+1"
-  }
+  },
+  "recipe": [
+    "Circlet",
+    "Mantle of Intelligence"
+  ]
 }

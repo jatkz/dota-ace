@@ -2,13 +2,20 @@
   "name": "Sentry Ward",
   "cost": 50,
   "description": "A form of plant originally grown in the garden of a fearful king.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Plant",
+      "type": "active",
+      "description": "Attacks against Sentry Wards cannot miss. Melee units have an increased attack range when attacking Sentry Wards. Cooldown: 1. Mana Cost: 0. Cast Range: 500. Vision Radius: 150. Vision Duration: 12. Ward Duration: 420. The player that placed the ward can always attack it with any of their units. However, all their attacks are treated as non-hero attacks, until the ward comes within the 50% deny range."
+    }
+  ],
   "stats": {
-    "Cost": 50,
-    "Sell Value": "25 / Count",
     "Stacks": "NO LIMIT / Inventory Slot",
     "Stock": "3 INIT / 8 MAX",
-    "Active": "Plant",
     "Charges": "1 INIT"
-  }
+  },
+  "buildsInto": [
+    "Observer and Sentry Wards"
+  ],
+  "sellValue": "25 / Count"
 }

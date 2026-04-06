@@ -2,9 +2,19 @@
   "name": "Perseverance",
   "cost": 1400,
   "description": "A gem that grants heart to the bearer.",
-  "abilities": [],
   "stats": {
     "Health Regeneration": "+5.5",
     "Mana Regeneration": "+2.25"
-  }
+  },
+  "recipe": [
+    "Ring of Health",
+    "Void Stone"
+  ],
+  "buildsInto": [
+    "Linken's Sphere",
+    "Lotus Orb",
+    "Battle Fury",
+    "Mage Slayer",
+    "Phylactery"
+  ]
 }

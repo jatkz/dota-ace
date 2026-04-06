@@ -5,11 +5,18 @@
   "abilities": [
     {
       "name": "Switch Attribute",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Meepo Clones cannot cast this ability. However, the Clones instantly update their switched attribute whenever the Prime switches the item's attributes. Cooldown: 0. Selected Attribute Bonus: 10."
     }
   ],
   "stats": {
-    "Bonus": "+55 Move Speed+45 Move Speed+25 Attack Speed"
-  }
+    "Move Speed": "+55",
+    "Attack Speed": "+25"
+  },
+  "recipe": [
+    "Boots of Speed",
+    "Gloves of Haste",
+    "Belt of Strength"
+  ],
+  "sellValue": 700
 }

@@ -4,16 +4,20 @@
   "description": "Said to be a tear from the lunar goddess Selemene.",
   "abilities": [
     {
+      "name": "Consume",
+      "type": "active",
+      "description": "Within a certain range, the wielder does not need to face the unit-targeted allied hero to grant them the permanent buff. Cooldown: 0. Cast Range: Global. Attack Speed Bonus: 60. Base Night Vision Bonus: 200. Ally Cast Range: 250."
+    },
+    {
       "name": "Shade Sight",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder bonus night vision. Night Vision Bonus: 400."
     }
   ],
   "stats": {
-    "Sell Value": 2000,
-    "Stacks": "1 MAX / Inventory Slot",
-    "Active": "Consume",
-    "Charges": "1 INIT",
-    "Bonus": "+140 Attack Speed"
-  }
+    "Attack Speed": "+140"
+  },
+  "recipe": [
+    "Hyperstone"
+  ]
 }

@@ -4,6 +4,11 @@
   "description": "An underground arcanist's update of a back-alley classic.",
   "abilities": [],
   "stats": {
-    "Bonus": "+35 Attack Speed"
-  }
+    "Attack Speed": "+35"
+  },
+  "buildsInto": [
+    "Oblivion Staff",
+    "Monkey King Bar",
+    "Shadow Blade"
+  ]
 }

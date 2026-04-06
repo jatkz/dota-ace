@@ -1,6 +1,7 @@
 {
   "name": "Tidehunter",
   "description": "You can't hide from the tide. Leviathan, the Tidehunter The Anchor is always created 50-distance next to Tidehunter, and travels to the unit-targeted enemy unit.",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Durable",
@@ -12,6 +13,44 @@
     "strength": 27,
     "agility": 15,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.5,
+    "agility": 1.5,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 77,
+    "healthRegen": 0.35,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 714,
+    "healthRegen": 2.95,
+    "mana": 315,
+    "manaRegen": 1.5,
+    "armor": 2.5,
+    "magicResistance": 27,
+    "damageMin": 52,
+    "damageMax": 58,
+    "damageAverage": 55,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.6,
+    "animationBackswing": 0.56,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

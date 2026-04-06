@@ -1,11 +1,21 @@
 {
   "name": "Sange",
   "cost": 2100,
+  "recipeCost": 650,
   "description": "Sange is an unusually accurate weapon, seeking weak points automatically.",
   "abilities": [],
   "stats": {
     "Strength": "+16",
     "Slow Resistance": "+25%",
     "Health Restore Amp": "+16%"
-  }
+  },
+  "recipe": [
+    "Ogre Axe",
+    "Belt of Strength"
+  ],
+  "buildsInto": [
+    "Abyssal Blade",
+    "Sange and Yasha",
+    "Kaya and Sange"
+  ]
 }

@@ -2,8 +2,12 @@
   "name": "Chasm Stone",
   "cost": 800,
   "description": "Chasm Stone is an item purchasable at the Base Shop, under Miscellaneous.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+40 Ao E Radius"
-  }
+    "Ao E Radius": "+40"
+  },
+  "buildsInto": [
+    "Shiva's Guard",
+    "Gleipnir"
+  ],
+  "sellValue": 400
 }

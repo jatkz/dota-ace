@@ -2,10 +2,15 @@
   "name": "Circlet",
   "cost": 155,
   "description": "An elegant circlet designed for human princesses.",
-  "abilities": [],
   "stats": {
     "Strength": "+2",
     "Agility": "+2",
     "Intelligence": "+2"
-  }
+  },
+  "buildsInto": [
+    "Bracer",
+    "Wraith Band",
+    "Null Talisman",
+    "Urn of Shadows"
+  ]
 }

@@ -1,16 +1,25 @@
 {
   "name": "Maelstrom",
   "cost": 2950,
+  "recipeCost": null,
   "description": "A hammer forged for the gods themselves, Maelstrom allows its user to harness the power of lightning.",
   "abilities": [
     {
       "name": "Chain Lightning",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attacks a chance to pierce through evasion, and to release a bolt of electricity on the target, that leaps between other nearby targets, dealing magical damage to all of them. Cooldown: 0.2. Proc Chance: 25%. Bounce Distance: 650. Number of Bounces: 4. Damage: 110."
     }
   ],
   "stats": {
     "Attack Damage": "+25",
     "Attack Speed": "+25"
-  }
+  },
+  "recipe": [
+    "Mithril Hammer",
+    "Javelin",
+    "Gloves of Haste"
+  ],
+  "buildsInto": [
+    "Mjollnir"
+  ]
 }

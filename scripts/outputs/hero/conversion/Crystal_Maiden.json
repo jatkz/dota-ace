@@ -1,6 +1,7 @@
 {
   "name": "Crystal Maiden",
   "description": "When Hell freezes over, I'll start calling it Heaven.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Disabler",
@@ -10,6 +11,44 @@
     "strength": 17,
     "agility": 16,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 1.8,
+    "intelligence": 3.3
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 39.6,
+    "manaRegen": 0.165,
+    "armor": 0.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 1.95,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 2.67,
+    "magicResistance": 27,
+    "damageMin": 48,
+    "damageMax": 54,
+    "damageAverage": 51,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.45,
+    "animationBackswing": 0,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

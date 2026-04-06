@@ -3,7 +3,10 @@
   "cost": 1000,
   "description": "A long blade imbued with time magic.",
   "abilities": [],
-  "stats": {
-    "Bonus": "+10 Agility"
-  }
+  "buildsInto": [
+    "Aghanim's Scepter",
+    "Yasha",
+    "Diffusal Blade",
+    "Dragon Lance"
+  ]
 }

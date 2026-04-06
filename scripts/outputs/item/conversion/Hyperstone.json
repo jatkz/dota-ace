@@ -2,8 +2,13 @@
   "name": "Hyperstone",
   "cost": 2000,
   "description": "A mystical, carved stone that boosts the fervor of the holder.",
-  "abilities": [],
   "stats": {
     "Attack Speed": "+60"
-  }
+  },
+  "buildsInto": [
+    "Assault Cuirass",
+    "Moon Shard",
+    "Mjollnir",
+    "Bloodthorn"
+  ]
 }

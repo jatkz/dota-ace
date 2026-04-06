@@ -2,10 +2,14 @@
   "name": "Ogre Axe",
   "cost": 1000,
   "description": "You grow stronger just by holding it.",
-  "abilities": [],
   "stats": {
-    "Cost": 1000,
-    "Sell Value": 500,
-    "Bonus": "+10 Strength"
-  }
+    "Strength": "+10"
+  },
+  "buildsInto": [
+    "Aghanim's Scepter",
+    "Black King Bar",
+    "Echo Sabre",
+    "Eternal Shroud",
+    "Sange"
+  ]
 }

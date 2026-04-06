@@ -1,21 +1,26 @@
 {
   "name": "Blade Mail",
   "cost": 2400,
+  "recipeCost": 450,
   "description": "A razor-sharp coat of mail, it is the choice of selfless martyrs in combat.",
   "abilities": [
     {
-      "name": "Damage Return",
-      "type": "active",
-      "description": ""
-    },
-    {
       "name": "Damage Return (Passive)",
       "type": "passive",
-      "description": ""
+      "description": "Any attack targeted at the wielder harms the attacker for a fixed amount, plus a percentage of the attack damage dealt. Base Damage: 10. Attack Damage as Damage: 15%."
+    },
+    {
+      "name": "Damage Return",
+      "type": "passive",
+      "description": "Cooldown: 25. Mana Cost: 25. Damage Reflected: 85%. Duration: 5.5."
     }
   ],
   "stats": {
-    "Armor": "+7",
-    "Attack Damage": "+15"
-  }
+    "Armor": 7,
+    "Attack Damage": 15
+  },
+  "recipe": [
+    "Broadsword",
+    "Splintmail"
+  ]
 }

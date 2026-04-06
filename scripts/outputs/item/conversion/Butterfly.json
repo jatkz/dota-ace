@@ -4,6 +4,15 @@
   "description": "Only the mightiest and most experienced of warriors can wield the Butterfly, but it provides incredible dexterity in combat.",
   "abilities": [],
   "stats": {
-    "Bonus": "+35 Agility+35% Evasion+25 Attack Damage+20% Base Attack Speed"
-  }
+    "Agility": "+35",
+    "Evasion": "+35%",
+    "Attack Damage": "+25",
+    "Base Attack Speed": "+20%"
+  },
+  "recipe": [
+    "Eaglesong",
+    "Talisman of Evasion",
+    "Claymore"
+  ],
+  "sellValue": 2725
 }

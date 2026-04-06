@@ -1,6 +1,7 @@
 {
   "name": "Void Spirit",
-  "description": "Friend or foe, in the wake of the confluence, you will follow where I lead.",
+  "description": "Friend or foe, in the wake of the confluence, you will follow where I lead. Inai, the Void Spirit Not even the other spirits claim to understand the mind and machinations of the eldest amongst them, Inai the Void Spirit.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Escape",
@@ -11,6 +12,44 @@
     "strength": 22,
     "agility": 21,
     "intelligence": 24
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 2.2,
+    "intelligence": 3.1
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 37.2,
+    "manaRegen": 0.155,
+    "armor": 0.37,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.56
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 363,
+    "manaRegen": 1.8,
+    "armor": 2.5,
+    "magicResistance": 27.4,
+    "damageMin": 52,
+    "damageMax": 56,
+    "damageAverage": 54.15,
+    "projectileSpeed": "Instant",
+    "attackRange": 200,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 121,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.78,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

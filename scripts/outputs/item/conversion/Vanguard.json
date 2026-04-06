@@ -1,16 +1,25 @@
 {
   "name": "Vanguard",
   "cost": 1700,
+  "recipeCost": null,
   "description": "A powerful shield that defends its wielder from even the most vicious of attacks.",
   "abilities": [
     {
       "name": "Damage Block",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage. Proc Chance: 60%. Blocked Damage: 50."
     }
   ],
   "stats": {
     "Health": "+250",
     "Health Regeneration": "+4.5"
-  }
+  },
+  "recipe": [
+    "Vitality Booster",
+    "Ring of Health"
+  ],
+  "buildsInto": [
+    "Crimson Guard"
+  ],
+  "sellValue": 850
 }

@@ -2,8 +2,11 @@
   "name": "Gauntlets of Strength",
   "cost": 140,
   "description": "Studded leather gloves that add brute strength.",
-  "abilities": [],
   "stats": {
-    "Strength": "+3"
-  }
+    "Bonus Strength": 3
+  },
+  "buildsInto": [
+    "Bracer",
+    "Soul Ring"
+  ]
 }

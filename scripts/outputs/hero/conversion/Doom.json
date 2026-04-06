@@ -1,6 +1,7 @@
 {
   "name": "Doom",
-  "description": "Hehm ehme meh heh heh, speak of me, and I shall appear. Face me and face the furnace! Lucifer, the Doom Doom's attacks curse enemy heroes. After 2.5s, the cursed heroe bursts with a pillar of fire, damaging itself and all units in a 66 Ao E for 10% of the damage taken from Doom during the curse.",
+  "description": "Hehm ehme meh heh heh, speak of me, and I shall appear. Face me and face the furnace!",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Disabler",
@@ -12,6 +13,44 @@
     "strength": 24,
     "agility": 15,
     "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 3.6,
+    "agility": 1.5,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 79.2,
+    "healthRegen": 0.36,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 3.06,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 3.5,
+    "magicResistance": 26.5,
+    "damageMin": 56,
+    "damageMax": 66,
+    "damageAverage": 61,
+    "projectileSpeed": "Instant",
+    "attackRange": 200,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.9,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.7,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

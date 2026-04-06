@@ -1,20 +1,31 @@
 {
   "name": "Arcane Boots",
   "cost": 1500,
+  "recipeCost": 325,
   "description": "Magi equipped with these boots are valued in battle.",
   "abilities": [
     {
-      "name": "Replenish Mana",
-      "type": "active",
-      "description": ""
+      "name": "Replenish",
+      "type": "passive",
+      "description": "Replenishes mana to nearby allies on cast. Cooldown: 55. Mana Cost: 0. Radius: 1200. Mana Replenished: 150."
     },
     {
       "name": "Basilius Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the mana regeneration of nearby allies. Radius: 1200. Mana Regeneration Bonus: 1. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
-    "Bonus": "+125 Mana+0.25 Mana Regeneration+45 Move Speed"
-  }
+    "Mana": "+125",
+    "Mana Regeneration": "+0.25",
+    "Move Speed": "+45"
+  },
+  "recipe": [
+    "Boots of Speed",
+    "Ring of Basilius",
+    "Wizard Hat"
+  ],
+  "buildsInto": [
+    "Guardian Greaves"
+  ]
 }

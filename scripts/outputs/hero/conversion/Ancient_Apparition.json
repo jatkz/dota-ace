@@ -1,6 +1,7 @@
 {
   "name": "Ancient Apparition",
-  "description": "Kaldr, the Ancient Apparition is an image projected from outside time, bringing an eternal grip of ice that slows and disables enemy units.",
+  "description": "Kaldr, the Ancient Apparition, is an image projected from outside time. He brings all matter to a stop with his grip of ice.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Disabler",
@@ -11,11 +12,50 @@
     "agility": 20,
     "intelligence": 23
   },
+  "attributeGains": {
+    "strength": 1.9,
+    "agility": 2,
+    "intelligence": 3.1
+  },
+  "statGains": {
+    "health": 41.8,
+    "healthRegen": 0.19,
+    "mana": 37.2,
+    "manaRegen": 0.155,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 2.33,
+    "magicResistance": 27.3,
+    "damageMin": 44,
+    "damageMax": 54,
+    "damageAverage": 49,
+    "projectileSpeed": 1250,
+    "attackRange": 675,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 120,
+    "bat": 1.7,
+    "animationPoint": 0.45,
+    "animationBackswing": 0.3,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Bone Chill",
       "type": "passive",
-      "description": "Applies a movement speed slow debuff to all enemy units affected by Kaldr's abilities. Additionally reduces the debuff-affected enemy hero's movement speed."
+      "description": "Applies a movement speed slow debuff to all enemy units affected by Kaldr's abilities. Additionally reduces the debuff-affected enemy hero's."
     },
     {
       "name": "Cold Feet",
@@ -35,7 +75,7 @@
     {
       "name": "Ice Blast",
       "type": "active",
-      "description": "Enemy units caught in the explosion, or came in contact of the ice projectile as it travels, take damage over time with heal and health regeneration sources no longer working for them. If an enemy hero's current health drops below a certain threshold, they instantly shatter."
+      "description": "Enemy units caught in the explosion, or came in contact of the ice projectile as it travels, take damage over time with heal and health regeneration sources no longer working for them. If an enemy hero's current health drops below a certain threshold, they instantly shatter. Applies of 's corresponding ability level when acquired."
     }
   ]
 }

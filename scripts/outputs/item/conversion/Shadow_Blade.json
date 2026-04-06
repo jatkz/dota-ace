@@ -1,16 +1,26 @@
 {
   "name": "Shadow Blade",
   "cost": 3250,
+  "recipeCost": null,
   "description": "The blade of a fallen king, it allows you to move unseen and strike from the shadows.",
   "abilities": [
     {
       "name": "Shadow Walk",
-      "type": "",
-      "description": ""
+      "type": "passive",
+      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible. Cooldown: 25. Mana Cost: 75. Move Speed Bonus: 20%. Duration: 17. Attack Damage Bonus: 175. The attack breaking invisibility deals physical attack damage bonus with the attack."
     }
   ],
   "stats": {
     "Attack Damage": "+25",
     "Attack Speed": "+35"
-  }
+  },
+  "recipe": [
+    "Shadow Amulet",
+    "Blitz Knuckles",
+    "Claymore"
+  ],
+  "buildsInto": [
+    "Silver Edge"
+  ],
+  "sellValue": 1625
 }

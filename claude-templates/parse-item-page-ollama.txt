@@ -2,11 +2,18 @@ From the HTML, extract:
 
 name: [item name]
 cost: [number]
+recipeCost: [number, if present]
 description: [text]
 abilities: [list of abilities with name, type, description]
 stats: [key-value pairs]
+recipe: [list of component item names, if present]
+buildsInto: [list of item names this item upgrades into, if present]
 
 Ignore placeholder values like `?`, and ignore metadata-only fields like `Usage Alert` unless they contain meaningful content.
+Only include `recipe` for items that actually have recipe components.
+Only include `buildsInto` for items that actually upgrade into other items.
+If the recipe row includes a generic `Recipe` component icon, do not include that literal `Recipe` entry in the `recipe` list; use `recipeCost` for that value instead.
+For each ability description, preserve meaningful quantitative gameplay details when present, such as damage, duration, cooldown, mana cost, chance, range, radius, pull distance, or crowd control values.
 If an ability description is unknown, prefer an empty string or omit that ability instead of returning `?`.
 
 Return as JSON only.

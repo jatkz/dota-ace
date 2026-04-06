@@ -1,6 +1,7 @@
 {
   "name": "Weaver",
-  "description": "Fate weaves the threads of our lives together. Fate also wields the blade that cuts them short. Skitskurr, the Weaver",
+  "description": "Fate weaves the threads of our lives together. Fate also wields the blade that cuts them short.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Escape"
@@ -9,6 +10,45 @@
     "strength": 16,
     "agility": 17,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 3.3,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.55,
+    "attackSpeed": 3.3,
+    "mainAttackDamage": 3.3,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 472,
+    "healthRegen": 2.85,
+    "mana": 315,
+    "manaRegen": 1.5,
+    "armor": 3.83,
+    "magicResistance": 27,
+    "damageMin": 54,
+    "damageMax": 60,
+    "damageAverage": 57,
+    "projectileSpeed": 900,
+    "attackRange": 425,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 120,
+    "totalAttackSpeed": 137,
+    "bat": 1.8,
+    "animationPoint": 0.55,
+    "animationBackswing": 0.36,
+    "moveSpeed": 275,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -23,12 +63,12 @@
     },
     {
       "name": "Geminate Attack",
-      "type": "active",
-      "description": "Utilizes the caster's current while is active, manual cast utilizes the ability's current. Procs for allied marks as well."
+      "type": "passive",
+      "description": "Utilizes the caster's current while is active, manual cast utilizes the ability's current. procs for allied marks as well."
     },
     {
       "name": "Time Lapse",
-      "type": "passive",
+      "type": "active",
       "description": "Enables casting on allied heroes, applying most Time Lapse effects on the unit-targeted allied hero. Reduces cooldown."
     }
   ]

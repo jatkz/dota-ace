@@ -1,6 +1,7 @@
 {
   "name": "Axe",
-  "description": "Mogul Khan, the Axe Enrages an enemy unit, causing it to take damage over time until it kills another unit or the duration ends. The debuff-affected enemy unit is slowed as long as it is facing away from Axe.",
+  "description": "Axe is all the reinforcement this army needs!",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Durable",
@@ -11,6 +12,43 @@
     "strength": 25,
     "agility": 20,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.7,
+    "agility": 1.7,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 59.4,
+    "healthRegen": 0.27,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "armor": 0.28,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 5,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 3.33,
+    "magicResistance": 26.8,
+    "damageMin": 56,
+    "damageMax": 60,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 120,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.5,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -36,7 +74,7 @@
     {
       "name": "Culling Blade",
       "type": "active",
-      "description": "Axe spots a weakness and strikes, dealing pure damage. Grants permanent bonus armor per hero kill credited to Culling Blade, resetting its cooldown at the same time."
+      "description": "Axe spots a weakness and strikes, dealing pure damage. Grants permanent bonus armor per hero kill credited to Culling Blade, reseting its cooldown at the same time."
     }
   ]
 }

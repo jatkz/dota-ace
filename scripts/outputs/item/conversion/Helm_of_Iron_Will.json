@@ -2,9 +2,14 @@
   "name": "Helm of Iron Will",
   "cost": 975,
   "description": "The helmet of a legendary warrior who fell in battle.",
-  "abilities": [],
   "stats": {
     "Health Regeneration": "+4",
     "Armor": "+4"
-  }
+  },
+  "buildsInto": [
+    "Crimson Guard",
+    "Armlet of Mordiggian",
+    "Helm of the Dominator"
+  ],
+  "sellValue": 487.5
 }

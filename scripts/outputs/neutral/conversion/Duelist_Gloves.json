@@ -1,9 +1,9 @@
 {
   "name": "Duelist Gloves",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Grants the wielder increased attack speed when there are enemy heroes within a 1200-unit radius.",
   "tier": "1",
   "effects": {
-    "primary": "Boldness"
+    "primary": "Increases attack speed by 20% as long as there are enemy heroes within a 1200-unit radius."
   },
   "notes": []
 }

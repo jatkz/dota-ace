@@ -2,10 +2,13 @@
   "name": "Wizard Hat",
   "cost": 250,
   "description": "Wizard Hat is an item purchasable at the Base Shop, under Miscellaneous.",
-  "abilities": [],
   "stats": {
-    "Cost": 250,
-    "Sell Value": 125,
-    "Bonus": "+125 Mana"
-  }
+    "Mana": "+125"
+  },
+  "buildsInto": [
+    "Dagon",
+    "Essence Distiller",
+    "Arcane Boots",
+    "Pavise"
+  ]
 }

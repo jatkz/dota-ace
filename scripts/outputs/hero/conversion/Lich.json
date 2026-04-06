@@ -1,6 +1,7 @@
 {
   "name": "Lich",
   "description": "And so the dead will bury the dead. Ethreain, the Lich Hypnotizes an enemy unit, causing it to move towards a point between the Lich and the enemy unit while draining a percentage of its current mana.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker"
@@ -9,6 +10,45 @@
     "strength": 20,
     "agility": 17,
     "intelligence": 28
+  },
+  "attributeGains": {
+    "strength": 2.1,
+    "agility": 1.7,
+    "intelligence": 3.4
+  },
+  "statGains": {
+    "health": 46.2,
+    "healthRegen": 0.21,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "mana": 40.8,
+    "manaRegen": 0.17,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.5,
+    "mana": 411,
+    "manaRegen": 0.4,
+    "armor": 1.83,
+    "magicResistance": 27.8,
+    "damageMin": 52,
+    "damageMax": 61,
+    "damageAverage": 56.5,
+    "projectileSpeed": 900,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.46,
+    "animationBackswing": 0.54,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -33,13 +73,13 @@
     },
     {
       "name": "Ice Spire",
-      "type": "passive",
+      "type": "active",
       "description": "The Frog grants the Lich a frozen, pointy, immobile permafrost to aid the Lich's rituals. Does this help the Lich? You be creative about it. This unit does not feel the effects from magical spell damage sources."
     },
     {
       "name": "Chain Frost",
-      "type": "passive",
-      "description": "Releases an orb of frost that bounces between nearby enemy units, slowing and subsequently increasing its damage each time it bounces. The projectile does not stop bouncing, and continues to increase in damage per projectile impact."
+      "type": "active",
+      "description": "Releases an orb of frost that bounces between nearby enemy units, slowing and subsequently increasing its damage each time it bounces. sources blocks the first damage instance upon impact, this blocked instance is still counted toward the number of bounces. The projectile does not stop bouncing, and continues to increase in damage per projectile impact."
     }
   ]
 }

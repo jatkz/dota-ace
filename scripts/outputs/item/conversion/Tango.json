@@ -5,14 +5,14 @@
   "abilities": [
     {
       "name": "Devour",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Consumes the target tree to gain health regeneration for some time. The tree is destroyed in the process. Number of Charges: 3. Cooldown: 0. Mana Cost: 0. Cast Range: 165. Health Regen Bonus: 7. Duration: 16."
     }
   ],
   "stats": {
-    "Sell Value": "15 / Count",
     "Stacks": "NO LIMIT / Inventory Slot",
     "Stock": "10 INIT / 10 MAX",
     "Charges": "3 INIT"
-  }
+  },
+  "sellValue": "15 / Count"
 }

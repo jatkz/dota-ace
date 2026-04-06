@@ -1,6 +1,7 @@
 {
   "name": "Muerta",
   "description": "What fable of Muerta were YOU told? Whatever cruelties you've heard... the truth is far worse.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Nuker",
@@ -10,6 +11,45 @@
     "strength": 19,
     "agility": 21,
     "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.7,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.45,
+    "attackSpeed": 2.7,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 3.5,
+    "magicResistance": 27.3,
+    "damageMin": 47,
+    "damageMax": 55,
+    "damageAverage": 51,
+    "projectileSpeed": 3000,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 136,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 1.1,
+    "moveSpeed": 295,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -39,8 +79,8 @@
     },
     {
       "name": "Pierce the Veil",
-      "type": "passive",
-      "description": "When either Muerta or the enemy unit she attacks is Ethereal, all her attack damage is now dealt as magical attack damage, and deals no damage to magic immune units. Additionally converts all her physical lifesteal values as spell lifesteal."
+      "type": "active",
+      "description": "When either Muerta or the enemy unit she attacks is Ethereal, all her attack damage is now dealt as magical attack damage, and deals no damage to magic immune units. Additionally converts all her physical lifesteal values as spell lifesteal. Does not have his a custom model for this ability. Turns into a miniature Muerta. Upon losing the ability, it is not canceled. However, Rubick's deals immediately."
     }
   ]
 }

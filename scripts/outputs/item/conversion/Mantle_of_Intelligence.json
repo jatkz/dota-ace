@@ -2,15 +2,11 @@
   "name": "Mantle of Intelligence",
   "cost": 140,
   "description": "A beautiful sapphire mantle worn by generations of queens.",
-  "abilities": [
-    {
-      "name": "",
-      "type": "",
-      "description": ""
-    }
-  ],
   "stats": {
-    "Sell Value": 70,
-    "Bonus": "+3 Intelligence"
-  }
+    "Intelligence": "+3"
+  },
+  "buildsInto": [
+    "Null Talisman"
+  ],
+  "sellValue": 70
 }

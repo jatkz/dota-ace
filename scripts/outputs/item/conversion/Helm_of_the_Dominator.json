@@ -1,12 +1,13 @@
 {
   "name": "Helm of the Dominator",
   "cost": 2550,
+  "recipeCost": 1125,
   "description": "The powerful headpiece of a dead necromancer.",
   "abilities": [
     {
       "name": "Dominate",
       "type": "active",
-      "description": ""
+      "description": "Takes control of an enemy non-hero unit, elevating its status to a Creep-Hero, and granting it various stat bonuses. Cooldown: 45. Mana Cost: 50. Cast Range: 700. Min Base Health: 1000. Base Attack Damage Bonus: 25. Health Regen Bonus: 12."
     }
   ],
   "stats": {
@@ -15,5 +16,12 @@
     "Intelligence": "+6",
     "Health Regeneration": "+6",
     "Armor": "+6"
-  }
+  },
+  "recipe": [
+    "Helm of Iron Will",
+    "Crown"
+  ],
+  "buildsInto": [
+    "Helm of the Overlord"
+  ]
 }

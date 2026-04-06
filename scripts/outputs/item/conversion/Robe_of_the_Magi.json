@@ -2,8 +2,14 @@
   "name": "Robe of the Magi",
   "cost": 450,
   "description": "This robe corrupts the soul of the user, but provides wisdom in return.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+6 Intelligence"
-  }
+    "Intelligence": "+6"
+  },
+  "buildsInto": [
+    "Power Treads",
+    "Oblivion Staff",
+    "Kaya",
+    "Diffusal Blade",
+    "Veil of Discord"
+  ]
 }

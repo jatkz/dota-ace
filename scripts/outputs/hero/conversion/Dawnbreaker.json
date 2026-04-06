@@ -1,6 +1,7 @@
 {
   "name": "Dawnbreaker",
-  "description": "Darkness fears the break of dawn! Valora, the Dawnbreaker.",
+  "description": "Darkness fears the break of dawn! Valora, the Dawnbreaker In the aeons after the Keeper's exodus birthed the age of light, some amongst the first sun's lineage began to align against the chaos their ancestor's maker left chasing in his wake. Calling themselves the Children of Light, they saw no one else as worthy of taking up the Keeper's abandoned mantle, and they yearned to beat back the onslaught of darkness, creating glorious armies built to purge the cosmos of all creatures of primordial night. Valora, the Dawnbreaker, most prized warrior amongst the Children's ancient creations, is the shining herald of the majesty of order and light. Molded from the heart of a young metallic star, and charged by golden breath with new life, Valora was called to spread the glow of the Children's wisdom to the darkest reaches of the universe — setting fire to the heavens with each swing of her celestial hammer amidst an endless battle to keep chaos at bay. In time, the Children also revealed another purpose for the Dawnbreaker. They had discovered a means of permeating the entirety of the cosmos with their inner light — to obliterate all aspects of darkness forever — and they sent Valora to seize a source of great power, the final piece of their ultimate plan. But for the first time, Valora and her hammer met with failure, and the price she and her masters paid was vast. The Children of Light's spark was utterly extinguished, and the Dawnbreaker was left adrift in a black expanse, lost for untold millennia before crashing on an unfamiliar world. There she rested, dormant, until the presence of a wandering young star gave fuel to an ancient energy forge — a relic of the Children's that, like her, lay buried for countless ages beneath a blowing red waste. Now, with a small measure of her former powers restored by the forge, Valora wakes to a land beset by war and the unrelenting forces of chaos. She knows her gods may be gone, but the heft of the Dawnbreaker's hammer remains — matched only by her will to wield it justly in the name of goodness and light.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Durable"
@@ -9,6 +10,44 @@
     "strength": 25,
     "agility": 14,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 1.7,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.28,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 3,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 4.33,
+    "magicResistance": 27,
+    "damageMin": 56,
+    "damageMax": 60,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.46,
+    "animationBackswing": 1.02,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

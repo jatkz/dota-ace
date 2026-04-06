@@ -5,5 +5,10 @@
   "abilities": [],
   "stats": {
     "Attack Damage": "+55"
-  }
+  },
+  "buildsInto": [
+    "Nullifier",
+    "Divine Rapier",
+    "Radiance"
+  ]
 }

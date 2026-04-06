@@ -1,6 +1,7 @@
 {
   "name": "Brewmaster",
-  "description": "Shall we call this off and have a friendly round? Mangix, the Brewmaster Deep in the Wailing Mountains, in a valley beneath the Ruined City, the ancient Order of the Oyo has for centuries practiced its rites of holy reverie, communing with the spirit realm in grand festivals of drink. Born to a mother's flesh by a Celestial father, the youth known as Mangix was the first to grow up with the talents of both lineages.",
+  "description": "Shall we call this off and have a friendly round? Mangix, the Brewmaster Deep in the Wailing Mountains, in a valley beneath the Ruined City, the ancient Order of the Oyo has for centuries practiced its rites of holy reverie, communing with the spirit realm in grand festivals of drink.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Initiator",
@@ -13,11 +14,50 @@
     "agility": 19,
     "intelligence": 17
   },
+  "attributeGains": {
+    "strength": 3.2,
+    "agility": 2,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 70.4,
+    "healthRegen": 0.32,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.2
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.9,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 4.17,
+    "magicResistance": 26.7,
+    "damageMin": 53,
+    "damageMax": 60,
+    "damageAverage": 56.5,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 119,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.65,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Liquid Courage",
       "type": "passive",
-      "description": "Grants self a status resistance buff whenever Brewmaster's max health falls below a certain threshold. The lower Brewmaster's health, the greater the status resistance."
+      "description": "Grants self a status resistance buff whenever Brewmaster's max health falls below a certain threshold. The lower Brewmaster's health, the greater the status resistance. Grants the unit-targeted ally max status resistance bonus correspondingly to Brewmaster's level, with a max health as health regeneration bonus. The movement speed alternating component fully apply."
     },
     {
       "name": "Thunder Clap",
@@ -26,13 +66,13 @@
     },
     {
       "name": "Cinder Brew",
-      "type": "passive",
+      "type": "active",
       "description": "The debuff applied causes enemy units to move slower, and they are ignited upon taking any spell damage instances."
     },
     {
       "name": "Drunken Brawler",
       "type": "active",
-      "description": "Grants bonus armor and bonus magic resistance. All ability values of this stance is multiplied when he is Brewed-up! Grants bonus attack speed. Additionally, Brewmaster's attacks has a chance to critical strike."
+      "description": "Grants bonus armor and bonus magic resistance. All ability values of this stance is multiplied when he is Brewed-up! Grants bonus attack speed. Additionally, Brewmaster's attacks has a chance to critical strike. All ability values of this stance is multiplied when he is Brewed-up!"
     },
     {
       "name": "Primal Split",

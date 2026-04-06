@@ -6,7 +6,7 @@
     {
       "name": "Mage Slayer",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks deal damage over time to the target, and reduce the target's spell damage output. Damage per Second: 40. Spell Damage Reduction: 40%. Duration: 3."
     }
   ],
   "stats": {
@@ -14,5 +14,11 @@
     "Mana Regeneration": "+2.5",
     "Magic Resistance": "+20%",
     "Attack Damage": "+15"
-  }
+  },
+  "recipe": [
+    "Perseverance",
+    "Cloak",
+    "Blades of Attack",
+    "Orb of Venom"
+  ]
 }

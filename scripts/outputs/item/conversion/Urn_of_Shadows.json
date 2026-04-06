@@ -1,12 +1,13 @@
 {
   "name": "Urn of Shadows",
   "cost": 825,
+  "recipeCost": 320,
   "description": "Contains the ashes of powerful demons.",
   "abilities": [
     {
       "name": "Soul Release",
       "type": "active",
-      "description": ""
+      "description": "When cast on an ally, consumes a charge to grant the target allied hero bonus health regeneration for a while. Number of Charges: ∞. Cooldown: 10. Mana Cost: 0. Cast Range: 750. Health Regen Bonus: 30. Duration: 8. When cast on an enemy, consumes a charge to deal damage over time to the target for a while."
     }
   ],
   "stats": {
@@ -15,5 +16,14 @@
     "Intelligence": "+2",
     "Mana Regeneration": "+1.25",
     "Armor": "+2"
-  }
+  },
+  "recipe": [
+    "Circlet",
+    "Sage's Mask",
+    "Ring of Protection"
+  ],
+  "buildsInto": [
+    "Spirit Vessel",
+    "Essence Distiller"
+  ]
 }

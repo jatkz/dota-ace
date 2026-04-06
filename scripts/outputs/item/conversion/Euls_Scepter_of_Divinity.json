@@ -1,17 +1,26 @@
 {
   "name": "Eul's Scepter of Divinity",
   "cost": 2600,
+  "recipeCost": 675,
   "description": "A mysterious scepter passed down through the ages, its disruptive winds can be used for good or evil.",
   "abilities": [
     {
       "name": "Cyclone",
       "type": "active",
-      "description": ""
+      "description": "Sweeps the caster up into a cyclone, applying a basic dispel, fully disabling them and turning them invulnerable for a short while. Cooldown: 23. Mana Cost: 175. Cast Range: 550. Duration: 2.5. Damage: 50. If the target is an enemy, they also take damage upon landing. Cannot lift up Roshan, instead, it instantly applies the damage."
     }
   ],
   "stats": {
     "Intelligence": "+10",
     "Mana Regeneration": "+2.5",
     "Move Speed": "+20"
-  }
+  },
+  "recipe": [
+    "Staff of Wizardry",
+    "Void Stone",
+    "Wind Lace"
+  ],
+  "buildsInto": [
+    "Wind Waker"
+  ]
 }

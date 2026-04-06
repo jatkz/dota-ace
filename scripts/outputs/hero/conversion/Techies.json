@@ -1,6 +1,7 @@
 {
   "name": "Techies",
-  "description": "Measures made. Bombs built. Powder's dry. Okay, let's blow something up! Squee, Spleen, and Spoon, the Techies.",
+  "description": "Measurements made. Bombs built. Powder's dry. Okay, let's blow something up! Squee, Spleen, and Spoon, the Techies.",
+  "attackType": "Ranged",
   "roles": [
     "Nuker",
     "Disabler"
@@ -9,6 +10,45 @@
     "strength": 19,
     "agility": 16,
     "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 1.8,
+    "intelligence": 3
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "armor": 0.3,
+    "attackSpeed": 1.8,
+    "mana": 36,
+    "manaRegen": 0.15,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.33
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.9,
+    "mana": 375,
+    "manaRegen": 2.25,
+    "armor": 4.67,
+    "magicResistance": 27.5,
+    "damageMin": 47,
+    "damageMax": 49,
+    "damageAverage": 48,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 106,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

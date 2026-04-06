@@ -1,6 +1,7 @@
 {
   "name": "Gyrocopter",
-  "description": "So much for being retired… Aurel, the Gyrocopter",
+  "description": "So much for being retired… Aurel, the Gyrocopter.",
+  "attackType": "Ranged",
   "roles": [
     "Escape",
     "Carry",
@@ -11,6 +12,45 @@
     "strength": 22,
     "agility": 25,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 3.4,
+    "intelligence": 2.4
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 28.8,
+    "manaRegen": 0.12,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 5.17,
+    "magicResistance": 27.1,
+    "damageMin": 43,
+    "damageMax": 49,
+    "damageAverage": 46,
+    "projectileSpeed": 3000,
+    "attackRange": 365,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 140,
+    "bat": 1.7,
+    "animationPoint": 0.2,
+    "animationBackswing": 0.1,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -27,6 +67,16 @@
       "name": "Homing Missile",
       "type": "active",
       "description": "Applies of Gyrocopter's corresponding ability level when acquired. Launches the second upon the first missile's impact, or upon the first missile being destroyed."
+    },
+    {
+      "name": "Flak Cannon",
+      "type": "passive",
+      "description": "Attack modifiers only affects the primary attacked target."
+    },
+    {
+      "name": "Call Down",
+      "type": "active",
+      "description": "Call down a series of aerial missile strikes that slow and damage enemy units in a target area."
     }
   ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "Faceless Void",
   "description": "From a place beyond time, and time beyond counting. Darkterror, the Faceless Void Darkterror the Faceless Void is a visitor from Claszureme, a realm outside of time. It remains a mystery why this being from another dimension believes the struggle for the Nemesis Stones is worth entering our physical plane, but apparently an upset in the balance of power in this world has repercussions in adjacent dimensions. Time means nothing to Darkterror, except as a way to thwart his foes and aid his allies. His long-view of the cosmos has given him a remote, disconnected quality, although in battle he is quite capable of making it personal.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Initiator",
@@ -12,6 +13,45 @@
     "strength": 20,
     "agility": 24,
     "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 3.3,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "armor": 0.55,
+    "attackSpeed": 3.3,
+    "mainAttackDamage": 3.3,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 4,
+    "magicResistance": 26.5,
+    "damageMin": 58,
+    "damageMax": 64,
+    "damageAverage": 61,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.56,
+    "moveSpeed": 300,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

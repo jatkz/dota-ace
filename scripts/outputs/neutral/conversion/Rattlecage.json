@@ -1,9 +1,9 @@
 {
   "name": "Rattlecage",
-  "description": "A Tier 4 neutral item artifact with a passive effect.",
+  "description": "Releases bone projectiles towards nearby enemies after taking cumulative damage, dealing damage and slowing their movement and attack speed.",
   "tier": "4",
   "effects": {
-    "primary": "Reverberate"
+    "primary": "After the wielder cumulatively takes 220 damage within 7 seconds, bone projectiles are released towards up to 2 nearby enemies, dealing 110 damage and slowing them."
   },
   "notes": []
 }

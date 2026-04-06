@@ -1,9 +1,12 @@
 {
   "name": "Possessed Mask",
-  "description": "A Tier 1 neutral item with lifesteal.",
-  "tier": "1",
+  "description": "Heals the attacker for a fixed amount on each attack.",
+  "tier": "Tier 1",
   "effects": {
-    "primary": "Lifesteal"
+    "primary": "Heals the attacker for 5 HP on each attack."
   },
-  "notes": []
+  "notes": [
+    "Lifesteal is not functional with illusions, but ability particles are visible.",
+    "Cannot lifesteal off of wards, buildings, and allied units."
+  ]
 }

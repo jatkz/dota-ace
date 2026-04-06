@@ -5,11 +5,51 @@ Extract the following information from the HTML and return as JSON:
 {
   "name": "hero name",
   "description": "one-line summary",
+  "attackType": "Melee",
   "roles": ["role1", "role2"],
   "attributes": {
     "strength": 0,
     "agility": 0,
     "intelligence": 0
+  },
+  "attributeGains": {
+    "strength": 0,
+    "agility": 0,
+    "intelligence": 0
+  },
+  "statGains": {
+    "health": 0,
+    "healthRegen": 0,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 0,
+    "attackSpeed": 0,
+    "magicResistance": 0,
+    "mainAttackDamage": 0
+  },
+  "stats": {
+    "health": 0,
+    "healthRegen": 0,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 0,
+    "magicResistance": 0,
+    "damageMin": 0,
+    "damageMax": 0,
+    "damageAverage": 0,
+    "projectileSpeed": 0,
+    "attackRange": 0,
+    "attackAcquisitionRange": 0,
+    "attackSpeed": 0,
+    "totalAttackSpeed": 0,
+    "bat": 0,
+    "animationPoint": 0,
+    "animationBackswing": 0,
+    "moveSpeed": 0,
+    "turnRate": 0,
+    "collisionSize": 0,
+    "visionDay": 0,
+    "visionNight": 0
   },
   "abilities": [
     {
@@ -21,7 +61,16 @@ Extract the following information from the HTML and return as JSON:
 }
 
 Use the base attribute values as plain numbers for `strength`, `agility`, and `intelligence`.
-Ignore attribute gain lines unless they help you identify the correct base values.
+For `attackType`, only use `Melee` or `Ranged`.
+Use the attribute gain values as plain numbers in `attributeGains`.
+Use the per-level derived stat bonuses in `statGains`.
+Use the hero stat card values in `stats`.
+For percentage fields like magic resistance, return plain numbers without `%`.
+For `projectileSpeed`, return a number when numeric, or a string like `\"Instant\"` if the page shows a non-numeric value.
+When damage is shown as a range plus average, split it into `damageMin`, `damageMax`, and `damageAverage`.
+When attack speed is shown as `95 (117)`, use the first number for `attackSpeed` and the number in parentheses for `totalAttackSpeed`.
+When animation is shown as `0.56 + 0.41`, use `animationPoint` and `animationBackswing`.
+When vision is shown as `1800 / 800`, use `visionDay` and `visionNight`.
 For `roles`, only use canonical Dota role names with this capitalization: `Carry`, `Support`, `Nuker`, `Disabler`, `Initiator`, `Durable`, `Escape`, `Pusher`, `Jungler`.
 For each ability `type`, use a single simple label such as `active` or `passive`. Do not return mixed labels like `active/passive`.
 If an ability line already includes a type hint like `[active]` or `[passive]`, trust that hint.

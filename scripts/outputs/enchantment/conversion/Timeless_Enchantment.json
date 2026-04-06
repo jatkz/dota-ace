@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 4–5 neutral item enchantment for all heroes.",
   "tier": "4",
   "effects": {
-    "primary_effect": "+8/15% Debuff Duration Amp, +6/16% Spell Damage Amp"
+    "primary": "+8/15% Debuff Duration Amp, +6/16% Spell Damage Amp."
   },
   "notes": []
 }

@@ -1,17 +1,24 @@
 {
   "name": "Headdress",
   "cost": 425,
+  "recipeCost": 250,
   "description": "Creates a soothing aura that restores allies in battle.",
   "abilities": [
     {
       "name": "Regeneration Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the health regeneration of nearby allies. Radius: 1200. Health Regeneration Bonus: 2. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
-    "Cost": 425,
-    "Sell Value": 212.5,
-    "Bonus": "+0.5 Health Regeneration"
-  }
+    "Health Regeneration": "+0.5"
+  },
+  "recipe": [
+    "Ring of Regen"
+  ],
+  "buildsInto": [
+    "Drum of Endurance",
+    "Mekansm"
+  ],
+  "sellValue": 212.5
 }

@@ -1,9 +1,11 @@
 {
   "name": "Conjurer's Catalyst",
-  "description": "A Tier 4 neutral item artifact.",
+  "description": "Deals spell damage to an enemy, causing them to overheat and damage nearby allies. Heroes take more damage.",
   "tier": "4",
   "effects": {
-    "primary": "Grants a mana regeneration aura to nearby allied units."
+    "primary": "Spellover: Dealing 100 spell damage overheats the target, dealing 40 damage to heroes and 15 damage to other targets within a 300 unit radius."
   },
-  "notes": []
+  "notes": [
+    "Damage increases with level: 40/15 at level 1, 52%/19.5% at max level."
+  ]
 }

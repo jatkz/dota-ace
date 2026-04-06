@@ -13,6 +13,7 @@ Extract the following information from the HTML and return as JSON:
 }
 
 Ignore placeholder values like `?`, and ignore metadata-only fields such as `Usage Alert` or `Shareable` unless they are genuinely important.
-Keep the primary effect concise and focused on what the neutral item itself does.
+Make the top-level description a gameplay summary of what the neutral item actually does, not a generic sentence like "A Tier 3 neutral item artifact."
+Keep the primary effect concise but preserve meaningful quantitative details when present, such as damage, duration, cooldown, mana cost, radius, thresholds, healing, regeneration, slow, stun, or other crowd-control values.
 
 IMPORTANT: Return ONLY valid JSON, no extra text or formatting.

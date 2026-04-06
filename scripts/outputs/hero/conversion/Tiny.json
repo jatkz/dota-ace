@@ -1,6 +1,7 @@
 {
   "name": "Tiny",
   "description": "My enemies break upon me like surf upon the stone.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Nuker",
@@ -13,6 +14,45 @@
     "strength": 30,
     "agility": 0,
     "intelligence": 17
+  },
+  "attributeGains": {
+    "strength": 4.2,
+    "agility": 0,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 92.4,
+    "healthRegen": 0.42,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0,
+    "attackSpeed": 0,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.2
+  },
+  "stats": {
+    "health": 780,
+    "healthRegen": 5,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 0,
+    "magicResistance": 26.7,
+    "damageMin": 61,
+    "damageMax": 67,
+    "damageAverage": 64,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 90,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.7,
+    "moveSpeed": 275,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -27,13 +67,13 @@
     },
     {
       "name": "Toss",
-      "type": "passive",
+      "type": "active",
       "description": "Grants flat bonus Toss spell damage per Grow level. The Toss bonus spell damage from is not affected by the landing damage factor."
     },
     {
       "name": "Tree Grab",
       "type": "active",
-      "description": "Wields a tree as a weapon for a limited number of attacks. Grants Tiny bonus attack range, and a psuedo-cleave attack effect until the tree is thrown. Wielding the tree grants a flat attack damage bonus while attacking enemy units."
+      "description": "Wields a tree as a weapon for a limited number of attacks. Grants Tiny bonus attack range, and a pseudo-cleave attack effect until the tree is thrown. Wielding the tree grants a flat attack damage bonus while attacking enemy units."
     },
     {
       "name": "Tree Volley",

@@ -1,6 +1,7 @@
 {
   "name": "Lycan",
   "description": "A wolf in man's clothing. Banehallow, the Lycan Bites and turns the affected allied hero into a ferocious Wolf Form of Shapeshift's corresponding level.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Pusher",
@@ -11,6 +12,44 @@
     "strength": 28,
     "agility": 18,
     "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 1.7,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 736,
+    "healthRegen": 3.05,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 3,
+    "magicResistance": 27.3,
+    "damageMin": 52,
+    "damageMax": 57,
+    "damageAverage": 54.5,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 128,
+    "bat": 1.7,
+    "animationPoint": 0.55,
+    "animationBackswing": 0.25,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -36,7 +75,7 @@
     {
       "name": "Wolf Bite",
       "type": "active",
-      "description": "Bites and turns the affected allied hero into a ferocious Wolf Form of Shapeshift's corresponding level. Grants Lycan's attack lifesteal upon cast."
+      "description": "Bites and turns the affected allied hero into a ferocious Wolf Form of Shapeshift's corresponding level."
     },
     {
       "name": "Shapeshift",

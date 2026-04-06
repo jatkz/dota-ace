@@ -1,14 +1,22 @@
 {
   "name": "Roshan's Banner",
   "cost": null,
+  "recipeCost": null,
   "description": "Roshan's Banner is a Kill Reward item dropped by Roshan on his second death and onwards.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Place Banner",
+      "type": "active",
+      "description": "Creeps' attacks are not effective on Roshan's Banner. Cooldown: 1. Cast Range: 1200. Effect Radius: 600/900/1200. Invulnerability Duration: 120. Banner Duration: 120. Aura Linger Duration: 0.1."
+    }
+  ],
   "stats": {
-    "Sell Value": "0 Unsellable",
     "Stacks": "1 MAX / Inventory Slot",
-    "Active": "Place Banner",
     "Charges": "1 INIT",
     "Droppable": "1",
     "Destroyable": "1"
-  }
+  },
+  "recipe": null,
+  "buildsInto": null,
+  "sellValue": "0 Unsellable"
 }

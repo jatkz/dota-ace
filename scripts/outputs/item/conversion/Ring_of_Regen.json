@@ -4,8 +4,10 @@
   "description": "This ring is considered a good luck charm among the Gnomes.",
   "abilities": [],
   "stats": {
-    "Cost": 175,
-    "Sell Value": 87.5,
-    "Bonus": "+1.25 Health Regeneration"
-  }
+    "Health Regeneration": 1.25
+  },
+  "buildsInto": [
+    "Headdress",
+    "Tranquil Boots"
+  ]
 }

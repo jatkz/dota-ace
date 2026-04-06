@@ -2,10 +2,16 @@
   "name": "Crown",
   "cost": 450,
   "description": "A stately crown created to ensure a well-meaning but ungifted heir could fend off usurpers and govern with a strong hand.",
-  "abilities": [],
   "stats": {
-    "Strength": 4,
-    "Agility": 4,
-    "Intelligence": 4
-  }
+    "Strength": "+4",
+    "Agility": "+4",
+    "Intelligence": "+4"
+  },
+  "buildsInto": [
+    "Holy Locket",
+    "Dagon",
+    "Consecrated Wraps",
+    "Helm of the Dominator",
+    "Meteor Hammer"
+  ]
 }

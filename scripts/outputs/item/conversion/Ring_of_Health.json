@@ -2,8 +2,12 @@
   "name": "Ring of Health",
   "cost": 700,
   "description": "A shiny ring found beneath a fat halfling’s corpse.",
-  "abilities": [],
   "stats": {
     "Health Regeneration": "+4.5"
-  }
+  },
+  "buildsInto": [
+    "Perseverance",
+    "Vanguard",
+    "Heaven's Halberd"
+  ]
 }

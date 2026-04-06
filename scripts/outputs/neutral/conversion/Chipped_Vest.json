@@ -1,9 +1,9 @@
 {
   "name": "Chipped Vest",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Provides passive damage return to both heroes and creeps when attacked.",
   "tier": "1",
   "effects": {
-    "primary": "Passive: Chipper"
+    "primary": "Returns 30 damage to heroes and 15 damage to creeps every time you are attacked."
   },
   "notes": []
 }

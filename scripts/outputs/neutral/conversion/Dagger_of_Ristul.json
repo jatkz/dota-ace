@@ -1,9 +1,9 @@
 {
   "name": "Dagger of Ristul",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Grants a temporary damage boost at the cost of health.",
   "tier": "1",
   "effects": {
-    "primary": "Imbrue (Active)"
+    "primary": "Consume 100 health to gain 25 attack damage bonus for 8 seconds. Cooldown: 30 seconds."
   },
   "notes": []
 }

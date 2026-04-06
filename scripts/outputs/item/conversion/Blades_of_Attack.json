@@ -5,5 +5,13 @@
   "abilities": [],
   "stats": {
     "Attack Damage": "+9"
-  }
+  },
+  "buildsInto": [
+    "Phase Boots",
+    "Crystalys",
+    "Armlet of Mordiggian",
+    "Falcon Blade",
+    "Mage Slayer",
+    "Vladmir's Offering"
+  ]
 }

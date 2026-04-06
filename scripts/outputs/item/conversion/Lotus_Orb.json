@@ -1,12 +1,24 @@
 {
   "name": "Lotus Orb",
   "cost": 3850,
+  "recipeCost": 250,
   "description": "The jewel at its center still reflects a pale image of its creator.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Echo Shell",
+      "type": "active",
+      "description": "Cooldown: 15. Mana Cost: 175. Cast Range: 900. Duration: 5."
+    }
+  ],
   "stats": {
-    "Cost": 3850,
-    "Sell Value": 1925,
-    "Active": "Echo Shell",
-    "Bonus": "+6.5 Health Regeneration+250 Mana+4 Mana Regeneration+10 Armor"
-  }
+    "Health Regeneration": 6.5,
+    "Mana": 250,
+    "Mana Regeneration": 4,
+    "Armor": 10
+  },
+  "recipe": [
+    "Perseverance",
+    "Platemail",
+    "Energy Booster"
+  ]
 }

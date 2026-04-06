@@ -1,6 +1,7 @@
 {
   "name": "Clockwerk",
   "description": "I've a mind like a steel trap, and the physique to go with it! Rattletrap, the Clockwerk Rattletrap descends from the same far-flung kindred as Sniper and Tinker, and like many of the Keen Folk, has offset his diminutive stature through the application of gadgetry and wit.",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Disabler",
@@ -11,6 +12,44 @@
     "strength": 26,
     "agility": 13,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.2,
+    "agility": 2.3,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 70.4,
+    "healthRegen": 0.32,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.38,
+    "attackSpeed": 2.3,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 692,
+    "healthRegen": 3.1,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 3.17,
+    "magicResistance": 26.8,
+    "damageMin": 50,
+    "damageMax": 52,
+    "damageAverage": 51,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 113,
+    "bat": 1.7,
+    "animationPoint": 0.33,
+    "animationBackswing": 0.64,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -40,7 +79,7 @@
     },
     {
       "name": "Jetpack",
-      "type": "passive",
+      "type": "active",
       "description": "Grants unobstructed movement, flying vision, and bonus movement speed. However, this self-disarms and severely limits his turn rate. While Overclocking, Jetpack grants additional movement speed and turn rate."
     },
     {

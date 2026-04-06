@@ -1,6 +1,7 @@
 {
   "name": "Ogre Magi",
-  "description": "Once is not enough! It's just as high as we can count. Aggron Stonebreak, the Ogre Magi The ordinary ogre is the creature for whom the phrase 'As dumb as a bag of rock hammers' was coined.",
+  "description": "Once is not enough!",
+  "attackType": "Melee",
   "roles": [
     "Support",
     "Nuker",
@@ -12,6 +13,44 @@
     "strength": 25,
     "agility": 14,
     "intelligence": 0
+  },
+  "attributeGains": {
+    "strength": 4.2,
+    "agility": 1.5,
+    "intelligence": 0
+  },
+  "statGains": {
+    "health": 92.4,
+    "healthRegen": 0.42,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 0.25,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.2
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 4,
+    "mana": 75,
+    "manaRegen": 0,
+    "armor": 6.33,
+    "magicResistance": 25,
+    "damageMin": 70,
+    "damageMax": 76,
+    "damageAverage": 73,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

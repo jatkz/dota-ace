@@ -5,16 +5,20 @@
   "abilities": [
     {
       "name": "Berserk",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "The caster goes berserk, gaining movement and attack speed, at the cost of armor and losing the ability to cast spells for a while. Cooldown: 16. Mana Cost: 25. Move Speed Bonus: 8%/12%. Attack Speed Bonus: 110. Armor Reduction: 7. Duration: 6."
     },
     {
       "name": "Lifesteal",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt."
     }
   ],
   "stats": {
     "Attack Damage": "+20"
-  }
+  },
+  "recipe": [
+    "Morbid Mask",
+    "Broadsword"
+  ]
 }

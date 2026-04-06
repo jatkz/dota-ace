@@ -1,6 +1,7 @@
 {
   "name": "Snapfire",
-  "description": "Beatrix Snapfire Beatrix Snapfire and her dragon toad Mortimer are a welcome sight to the ragged folk who scratch out lives along the desert routes and oases scattered throughout Nanarak, the rain-forsaken gateway to the Outlands.",
+  "description": "Beadie and Mortimer. We're kind of a package deal.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -11,6 +12,44 @@
     "strength": 21,
     "agility": 16,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 3.5,
+    "agility": 1.9,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 77,
+    "healthRegen": 0.35,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "armor": 0.32,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.42
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.85,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 3.67,
+    "magicResistance": 27.1,
+    "damageMin": 51,
+    "damageMax": 57,
+    "damageAverage": 54.1,
+    "projectileSpeed": 1800,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.8,
+    "animationPoint": 0.35,
+    "animationBackswing": 1.23,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

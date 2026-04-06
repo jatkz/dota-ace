@@ -1,16 +1,21 @@
 {
   "name": "Soul Ring",
   "cost": 805,
+  "recipeCost": 350,
   "description": "A ring that feeds on the souls of those who wear it.",
   "abilities": [
     {
       "name": "Sacrifice",
-      "type": "",
-      "description": ""
+      "type": "passive",
+      "description": "Temporarily grants the wielder mana, at the cost of health. Cooldown: 25. Mana Cost: 0. Health Cost: 170. Mana Bonus: 170. Duration: 10."
     }
   ],
   "stats": {
     "Strength": "+6",
     "Armor": "+2"
-  }
+  },
+  "recipe": [
+    "Ring of Protection",
+    "Gauntlets of Strength"
+  ]
 }

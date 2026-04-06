@@ -6,11 +6,11 @@
     {
       "name": "Fade",
       "type": "active",
-      "description": ""
+      "description": "Turns the target invisible after a fade time. The invisibility is broken upon casting an ability or item, or upon attacking. Cooldown: 18. Mana Cost: 0. Cast Range: 600. Duration: 3.5. Move Speed Slow: 35%. Reduces the target's movement speed for the whole duration."
     }
   ],
-  "stats": {
-    "Cost": 900,
-    "Sell Value": 450
-  }
+  "buildsInto": [
+    "Glimmer Cape",
+    "Shadow Blade"
+  ]
 }

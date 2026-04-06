@@ -1,16 +1,17 @@
 {
   "name": "Scythe of Vyse",
   "cost": 5200,
+  "recipeCost": 700,
   "description": "The most guarded relic among the cult of Vyse, it is the most coveted weapon among magi.",
   "abilities": [
     {
       "name": "Hex",
       "type": "active",
-      "description": ""
+      "description": "Applies a hex on the unit-targeted enemy upon cast and turns it into a harmless critter. Cooldown: 20. Mana Cost: 250. Cast Range: 800. Set Move Speed: 140. Hex Duration: 2.8. Current Health as Damage: 100%."
     }
   ],
-  "stats": {
-    "Intelligence": "+30",
-    "Mana Regeneration": "+8.5"
-  }
+  "recipe": [
+    "Mystic Staff",
+    "Tiara of Selemene"
+  ]
 }

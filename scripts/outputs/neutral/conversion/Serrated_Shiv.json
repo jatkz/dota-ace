@@ -1,9 +1,9 @@
 {
   "name": "Serrated Shiv",
-  "description": "A Tier 3 neutral item artifact.",
+  "description": "Deals bonus physical damage equal to a percentage of the target's current health and has a higher damage bonus against Roshan.",
   "tier": "3",
   "effects": {
-    "primary": "Gut 'Em"
+    "primary": "Attacks have a 20% chance to deal up to 18.4% (8% + 10.4%) of the target's current health as bonus physical damage, with an additional 260 attack damage bonus against Roshan."
   },
   "notes": []
 }

@@ -3,9 +3,9 @@
   "description": "A guaranteed Tier 2–4 neutral item enchantment for Intelligence heroes only.",
   "tier": "2",
   "effects": {
-    "primary_effect": "-10%/-12%/-14% Mana Regeneration +1/1.5/2 Mana Regeneration +125/135/145 Cast Range"
+    "primary": "-10%/-12%/-14% Mana Regeneration +1/1.5/2 Mana Regeneration +125/135/145 Cast Range."
   },
   "notes": [
-    "For Intelligence heroes only"
+    "For Intelligence heroes only."
   ]
 }

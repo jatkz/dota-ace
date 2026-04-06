@@ -1,15 +1,24 @@
 {
   "name": "Crystalys",
   "cost": 2000,
+  "recipeCost": 200,
   "description": "A blade forged from rare crystals, it seeks weak points in enemy armor.",
   "abilities": [
     {
       "name": "Critical Strike",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks have a chance to inflict critical damage. Proc Chance: 30%. Critical Damage: 160%."
     }
   ],
   "stats": {
     "Attack Damage": "+32"
-  }
+  },
+  "recipe": [
+    "Claymore",
+    "Blades of Attack"
+  ],
+  "buildsInto": [
+    "Revenant's Brooch",
+    "Daedalus"
+  ]
 }

@@ -1,17 +1,18 @@
 {
   "name": "Aether Lens",
   "cost": 2275,
+  "recipeCost": 775,
   "description": "Polished with the incantation of his final breath, the gift of a dying mage to his sickly son.",
   "abilities": [
     {
       "name": "Aethereal Focus",
       "type": "passive",
-      "description": ""
+      "description": "+300 Mana +2.5 Mana Regeneration +225 Cast Range."
     }
   ],
-  "stats": {
-    "Mana": "+300",
-    "Mana Regeneration": "+2.5",
-    "Cast Range": "+225"
-  }
+  "recipe": [
+    "Energy Booster",
+    "Void Stone"
+  ],
+  "sellValue": 1137.5
 }

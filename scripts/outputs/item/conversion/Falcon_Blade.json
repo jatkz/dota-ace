@@ -1,11 +1,17 @@
 {
   "name": "Falcon Blade",
   "cost": 1125,
+  "recipeCost": 250,
   "description": "An enchanted blade that long ago raised a hopeless urchin from pauper to king.",
   "abilities": [],
   "stats": {
-    "Cost": 1125,
-    "Sell Value": 562.5,
-    "Bonus": "+200 Health+1.8 Mana Regeneration+14 Attack Damage"
-  }
+    "Health": "+200",
+    "Mana Regeneration": "+1.8",
+    "Attack Damage": "+14"
+  },
+  "recipe": [
+    "Fluffy Hat",
+    "Sage's Mask",
+    "Blades of Attack"
+  ]
 }

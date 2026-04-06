@@ -2,8 +2,11 @@
   "name": "Cloak",
   "cost": 900,
   "description": "A cloak made of a magical material that works to dispel any magic cast on it.",
-  "abilities": [],
   "stats": {
     "Magic Resistance": "+18%"
-  }
+  },
+  "buildsInto": [
+    "Pipe of Insight",
+    "Mage Slayer"
+  ]
 }

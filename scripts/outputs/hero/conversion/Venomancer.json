@@ -1,6 +1,7 @@
 {
   "name": "Venomancer",
   "description": "No necromancer shall raise what the venomancer puts down.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -13,26 +14,65 @@
     "agility": 25,
     "intelligence": 19
   },
+  "attributeGains": {
+    "strength": 2.1,
+    "agility": 2.8,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 46.2,
+    "healthRegen": 0.21,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.02
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 4.17,
+    "magicResistance": 26.9,
+    "damageMin": 46,
+    "damageMax": 49,
+    "damageAverage": 47.85,
+    "projectileSpeed": 900,
+    "attackRange": 450,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 140,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.7,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Venomous Gale",
       "type": "active",
-      "description": "Launches a ball of venom in a line. The venom-spit deals an initial damage, then applies a damage over time poison with movement speed slow to all affected enemy units."
+      "description": "Launches a ball of venom in a line. The venom-spit deals an initial damage, then applies a damage over time poison with movement speed slow to all affected enemy units. Units affected regain their movement speed gradually. Creates per enemy hero hit along the projectile trajectory."
     },
     {
       "name": "Poison Sting",
       "type": "passive",
-      "description": "Imbues Venomancer's attack with poison damage and applies a movement speed slow. Plague Ward's attacks apply all ability effects, albeit with reduced damage."
+      "description": "Imbues Venomancer's attack with poison damage and applies a movement speed slow. Plague Ward's attacks apply all ability effects, albeit with reduced damage. Both Venomancer's and the Plague Ward's instances of Poison Sting are independent of each other."
     },
     {
       "name": "Plague Ward",
       "type": "active",
-      "description": "Creates a living embodiment of plague that deals physical damage and is not affected by damage block sources."
+      "description": "Although the ward's attacks are physical attack damage by nature, it is not affected by damage block sources. A mixture of his old herbalist talents and newfound toxic mastery creates a living embodiment of plague."
     },
     {
       "name": "Noxious Plague",
       "type": "active",
-      "description": "Infects an enemy unit with a deadly plague that applies impact damage and additional damage over time based on the unit's max health. When the affected enemy unit dies or the debuff expires, all other enemy units within the radius are infected with a non-contagious plague."
+      "description": "Infects an enemy unit with a deadly plague that applies impact damage and additional damage over time based on the unit's max health. When the affected enemy unit dies or the debuff expires, all other enemy units within the radius are infected with a non-contagious plague. The plague applies a movement speed slow aura centered on the affected unit, affecting all enemy units within the radius centered around the first affected enemy unit."
     }
   ]
 }

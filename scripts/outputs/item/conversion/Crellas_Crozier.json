@@ -1,24 +1,29 @@
 {
   "name": "Crella's Crozier",
   "cost": 4800,
+  "recipeCost": 300,
   "description": "Crella's Crozier is an item purchasable at the Base Shop, under Support.",
   "abilities": [
     {
       "name": "Rite of Rumusque",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Cooldown: 20. Duration: 4."
     },
     {
       "name": "Putrefaction Aura",
       "type": "passive",
-      "description": ""
+      "description": "Reduces nearby enemy heroes' Health Restoration by 30%. Radius: 900. Health Restore Reduction: 30%."
     }
   ],
   "stats": {
-    "Strength": 6,
-    "Agility": 6,
-    "Intelligence": 6,
-    "Health": 450,
-    "Mana": 450
-  }
+    "Strength": "+6",
+    "Agility": "+6",
+    "Intelligence": "+6",
+    "Health": "+450",
+    "Mana": "+450"
+  },
+  "recipe": [
+    "Ghost Scepter",
+    "Soul Booster"
+  ]
 }

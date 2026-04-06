@@ -1,6 +1,7 @@
 {
   "name": "Pangolier",
-  "description": "The honorable Donté Panlin, at your service.",
+  "description": "The honorable Donté Panlin, at your service. Donté Panlin, the Pangolier.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Nuker",
@@ -13,6 +14,45 @@
     "strength": 20,
     "agility": 18,
     "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.7,
+    "agility": 3.2,
+    "intelligence": 2.5
+  },
+  "statGains": {
+    "health": 59.4,
+    "healthRegen": 0.27,
+    "mana": 30,
+    "manaRegen": 0.125,
+    "armor": 0.53,
+    "attackSpeed": 3.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.78
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3.25,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 5,
+    "magicResistance": 26.6,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53.3,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.33,
+    "animationBackswing": 0.77,
+    "moveSpeed": 300,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

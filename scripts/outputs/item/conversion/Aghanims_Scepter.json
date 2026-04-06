@@ -1,12 +1,13 @@
 {
   "name": "Aghanim's Scepter",
   "cost": 4200,
+  "recipeCost": null,
   "description": "The scepter of a wizard with demigod-like powers.",
   "abilities": [
     {
       "name": "Ability Upgrade",
       "type": "passive",
-      "description": ""
+      "description": "Upgrades an existing ability or grants a new ability, unique to each hero."
     }
   ],
   "stats": {
@@ -15,5 +16,14 @@
     "Intelligence": "+10",
     "Health": "+175",
     "Mana": "+175"
-  }
+  },
+  "recipe": [
+    "Point Booster",
+    "Staff of Wizardry",
+    "Ogre Axe",
+    "Blade of Alacrity"
+  ],
+  "buildsInto": [
+    "Aghanim's Blessing"
+  ]
 }

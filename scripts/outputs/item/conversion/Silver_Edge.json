@@ -1,16 +1,21 @@
 {
   "name": "Silver Edge",
   "cost": 5700,
+  "recipeCost": 250,
   "description": "Once used to slay an unjust king, only to have the kingdom erupt into civil war in the aftermath.",
   "abilities": [
     {
       "name": "Shadow Walk",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "The wielder becomes invisible and gains a movement speed bonus. Grants phase movement while invisible. Cooldown: 20. Mana Cost: 75. Move Speed Bonus: 20%. Duration: 17. Attack Damage Bonus: 300. Movement Speed Cap: 200."
     }
   ],
   "stats": {
     "Attack Damage": "+70",
     "Attack Speed": "+35"
-  }
+  },
+  "recipe": [
+    "Shadow Blade",
+    "Demon Edge"
+  ]
 }

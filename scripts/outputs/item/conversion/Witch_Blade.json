@@ -1,12 +1,28 @@
 {
   "name": "Witch Blade",
   "cost": 2775,
+  "recipeCost": 300,
   "description": "A spiteful blade inadvertently possessed by the soul of its incautious creator.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Witch Blade",
+      "type": "passive",
+      "description": "The next attack poisons the target, slowing their movement speed and dealing damage over time, based on the wielder's intelligence. This attack cannot miss. Cooldown: 9 seconds. Intelligence as Damage per Second: 75%. Move Speed Slow: 25%. Duration: 4 seconds."
+    }
+  ],
   "stats": {
-    "Cost": 2775,
-    "Sell Value": 1387.5,
-    "Passive": "Witch Blade",
-    "Bonus": "+12 Intelligence+1.5 Mana Regeneration+5 Armor+40 Attack Speed+300 Projectile Speed"
-  }
+    "Intelligence": "+12",
+    "Mana Regeneration": "+1.5",
+    "Armor": "+5",
+    "Attack Speed": "+40%",
+    "Projectile Speed": "+300"
+  },
+  "recipe": [
+    "Oblivion Staff",
+    "Chainmail",
+    "Orb of Venom"
+  ],
+  "buildsInto": [
+    "Parasma"
+  ]
 }

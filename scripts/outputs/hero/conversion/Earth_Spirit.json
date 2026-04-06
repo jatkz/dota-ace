@@ -1,6 +1,7 @@
 {
   "name": "Earth Spirit",
   "description": "Through conflict, one's nature is revealed.",
+  "attackType": "Melee",
   "roles": [
     "Escape",
     "Nuker",
@@ -12,6 +13,45 @@
     "strength": 22,
     "agility": 17,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.8,
+    "agility": 2.4,
+    "intelligence": 2.1
+  },
+  "statGains": {
+    "health": 83.6,
+    "healthRegen": 0.38,
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "armor": 0.4,
+    "attackSpeed": 2.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.8
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 2.83,
+    "magicResistance": 26.8,
+    "damageMin": 47,
+    "damageMax": 51,
+    "damageAverage": 49,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.65,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

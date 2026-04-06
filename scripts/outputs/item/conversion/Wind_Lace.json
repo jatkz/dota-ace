@@ -2,8 +2,13 @@
   "name": "Wind Lace",
   "cost": 225,
   "description": "Hasten to battle on wind-touched heels.",
-  "abilities": [],
   "stats": {
-    "Move Speed": "+15"
-  }
+    "Bonus Move Speed": "+15"
+  },
+  "buildsInto": [
+    "Eul's Scepter of Divinity",
+    "Drum of Endurance",
+    "Tranquil Boots",
+    "Solar Crest"
+  ]
 }

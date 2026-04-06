@@ -1,16 +1,19 @@
 {
   "name": "Assault Cuirass",
   "cost": 5125,
+  "recipeCost": 1300,
   "description": "Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed.",
   "abilities": [
     {
       "name": "Assault Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the armor and attack speed of nearby allied units and buildings. Radius: 1200. Armor Bonus: 5. Attack Speed Bonus: 30. Aura Linger Duration: 0.5. Armor Reduction: 5. Also reduces the armor of nearby enemy units and buildings."
     }
   ],
-  "stats": {
-    "Armor": "+10",
-    "Attack Speed": "+30"
-  }
+  "recipe": [
+    "Platemail",
+    "Hyperstone",
+    "Buckler"
+  ],
+  "sellValue": 2562.5
 }

@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 5 neutral item enchantment for Intelligence heroes only.",
   "tier": "5",
   "effects": {
-    "primary_effect": "+15% Cooldown Reduction, -7% Mana Loss Reduction"
+    "primary": "+15% Cooldown Reduction, -7% Mana Loss Reduction."
   },
   "notes": []
 }

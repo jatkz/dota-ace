@@ -2,10 +2,15 @@
   "name": "Diadem",
   "cost": 1000,
   "description": "A crown that can never be removed.",
-  "abilities": [],
   "stats": {
     "Strength": "+6",
     "Agility": "+6",
     "Intelligence": "+6"
-  }
+  },
+  "buildsInto": [
+    "Spirit Vessel",
+    "Harpoon",
+    "Phylactery",
+    "Manta Style"
+  ]
 }

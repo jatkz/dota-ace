@@ -1,22 +1,27 @@
 {
   "name": "Holy Locket",
   "cost": 2250,
+  "recipeCost": 1340,
   "description": "A prized relic long thought lost forever in a failed crusade.",
   "abilities": [
     {
       "name": "Energy Charge",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Increases the target's incoming heal amplification, and uses up all charges to instantly heal and replenish the target's health and mana based on the number of charges. Number of Charges: 25. Cooldown: 13. Mana Cost: 0. Cast Range: 600. Heal per Charge: 17. Mana Restore per Charge: 15."
     },
     {
       "name": "Holy Blessing",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder outgoing heal amplification, boosting all healing they provide. Outgoing Heal Amplification: 15%."
     }
   ],
   "stats": {
     "Strength": "+7",
     "Agility": "+7",
     "Intelligence": "+7"
-  }
+  },
+  "recipe": [
+    "Magic Wand",
+    "Crown"
+  ]
 }

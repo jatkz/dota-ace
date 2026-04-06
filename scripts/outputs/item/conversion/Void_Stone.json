@@ -4,8 +4,12 @@
   "description": "Jewelry that was once used to channel nether realm magic, this ring pulses with energy.",
   "abilities": [],
   "stats": {
-    "Cost": 700,
-    "Sell Value": 350,
-    "Bonus": "+1.75 Mana Regeneration"
-  }
+    "Mana Regeneration": "+1.75"
+  },
+  "buildsInto": [
+    "Perseverance",
+    "Echo Sabre",
+    "Eul's Scepter of Divinity",
+    "Aether Lens"
+  ]
 }

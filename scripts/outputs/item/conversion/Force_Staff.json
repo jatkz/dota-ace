@@ -1,16 +1,25 @@
 {
   "name": "Force Staff",
   "cost": 2200,
+  "recipeCost": 950,
   "description": "Allows you to manipulate others, for good or evil.",
   "abilities": [
     {
       "name": "Force",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Pushes the target unit in the direction they are facing. Cooldown: 19. Mana Cost: 150. Cast Range: 550. Push Distance: 600. Push Duration: 0.5."
     }
   ],
   "stats": {
     "Intelligence": "+10",
     "Health": "+175"
-  }
+  },
+  "recipe": [
+    "Staff of Wizardry",
+    "Fluffy Hat"
+  ],
+  "buildsInto": [
+    "Hurricane Pike"
+  ],
+  "sellValue": 1100
 }

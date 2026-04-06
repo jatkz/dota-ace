@@ -2,15 +2,19 @@
   "name": "Radiance",
   "cost": 4700,
   "description": "A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies.",
-  "abilities": [
-    {
-      "name": "Burn",
-      "type": "passive",
-      "description": ""
-    }
-  ],
   "stats": {
     "Evasion": "+25%",
     "Attack Damage": "+55"
-  }
+  },
+  "abilities": [
+    {
+      "name": "Burn",
+      "type": "active",
+      "description": "When active, scorches nearby enemies, dealing magical damage over time. Cooldown: 0. Mana Cost: 0. Radius: 650. Damage per Second: 60. Aura Linger Duration: 0.5. Damage per Second: 35. Burn applied by illusions deals less damage."
+    }
+  ],
+  "recipe": [
+    "Sacred Relic",
+    "Talisman of Evasion"
+  ]
 }

@@ -1,9 +1,9 @@
 {
   "name": "Tumbler's Toy",
-  "description": "A Tier 2 neutral item artifact with an active ability.",
+  "description": "An artifact that propels the caster forward at a distance of 390 units with a cooldown of 15 seconds.",
   "tier": "2",
   "effects": {
-    "primary": "Active: Vault"
+    "primary": "Propels the caster a short distance forward. Cooldown: 15. Mana Cost: 0. Leap Distance: 390."
   },
   "notes": []
 }

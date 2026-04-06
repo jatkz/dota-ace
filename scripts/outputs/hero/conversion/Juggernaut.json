@@ -1,6 +1,7 @@
 {
   "name": "Juggernaut",
-  "description": "Yurnero, the Juggernaut No one has ever seen the face hidden beneath the mask of Yurnero the Juggernaut. It is only speculation that he even has one.",
+  "description": "By the Visage of Vengeance, which drowned in the Isle of Masks, I will carry on the rites of the Faceless Ones.",
+  "attackType": "Melee",
   "roles": [
     "Escape",
     "Carry",
@@ -10,6 +11,45 @@
     "strength": 20,
     "agility": 32,
     "intelligence": 14
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.8,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "mainAttackDamage": 2.8,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.5,
+    "mana": 243,
+    "manaRegen": 0.7,
+    "armor": 5.33,
+    "magicResistance": 26.4,
+    "damageMin": 54,
+    "damageMax": 56,
+    "damageAverage": 55,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 142,
+    "bat": 1.4,
+    "animationPoint": 0.33,
+    "animationBackswing": 0.84,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -24,7 +64,7 @@
     },
     {
       "name": "Healing Ward",
-      "type": "active",
+      "type": "passive",
       "description": "Summons a Healing Ward which heals nearby allied units a portion of their max health. Increases ward hit count and the max health as health regeneration bonus."
     },
     {

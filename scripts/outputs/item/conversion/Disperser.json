@@ -1,21 +1,26 @@
 {
   "name": "Disperser",
   "cost": 6100,
+  "recipeCost": 800,
   "description": "Once entrusted to an Apostle General of the Rumusque Faithful's expiditionary force.",
   "abilities": [
     {
       "name": "Suppress",
       "type": "active",
-      "description": ""
+      "description": "When cast on an enemy, dispels the target and greatly slows their movement speed, which decays over the duration. Cooldown: 15. Mana Cost: 75. Cast Range: 600. Move Speed Slow: 100%. Slow Decay Rate: 1. Duration: 5. When cast on an ally or self, dispels the target, grants them slow resistance, and greatly increases their movement speed, which decays over the duration. The wielder always gets the dispel and the allied buff, no matter whom Suppress is cast on."
     },
     {
       "name": "Manabreak",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks burn their target's mana and deal damage equal to a percentage of the mana burnt. Mana Burn per Hit: 40. Mana Burn to Damage Factor: 1. Does not stack with Diffusal Blade-based abilities. Stacks additively with other sources of Mana Break."
     }
   ],
   "stats": {
     "Agility": "+40",
     "Intelligence": "+10"
-  }
+  },
+  "recipe": [
+    "Diffusal Blade",
+    "Eaglesong"
+  ]
 }

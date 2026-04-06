@@ -1,17 +1,18 @@
 {
   "name": "Linken's Sphere",
   "cost": 4800,
+  "recipeCost": 600,
   "description": "This magical sphere once protected one of the most famous heroes in history.",
   "abilities": [
     {
-      "name": "Transfer Spellblock",
-      "type": "active",
-      "description": ""
-    },
-    {
       "name": "Spellblock",
       "type": "passive",
-      "description": ""
+      "description": "Blocks and completely negates most single-target abilities targeted at the wielder. Cooldown: 14. Mana Cost: 0."
+    },
+    {
+      "name": "Transfer Spellblock",
+      "type": "active",
+      "description": "Temporarily transfers the effects of Spellblock to the targeted allied hero. Cooldown: 14. Mana Cost: 0. Cast Range: 700. Duration: 14."
     }
   ],
   "stats": {
@@ -20,5 +21,9 @@
     "Intelligence": "+16",
     "Health Regeneration": "+6.5",
     "Mana Regeneration": "+4.25"
-  }
+  },
+  "recipe": [
+    "Ultimate Orb",
+    "Perseverance"
+  ]
 }

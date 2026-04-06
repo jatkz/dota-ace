@@ -1,9 +1,16 @@
 {
   "name": "Hand of Midas",
   "cost": 2200,
+  "recipeCost": 1750,
   "description": "Preserved through unknown magical means, the Hand of Midas is a weapon of greed, sacrificing animals to line the owner's pockets.",
-  "abilities": [],
-  "stats": {
-    "Attack Speed": "+35"
-  }
+  "abilities": [
+    {
+      "name": "Transmute",
+      "type": "active",
+      "description": "Instantly kills the target non-hero unit, transmuting it into gold. Sets the target's gold bounty to a fixed value, while granting the target's default experience value without sharing it with others nearby. Number of Charges: 2. Mana Cost: 0. Cast Range: 600. Number of Random Allies: 1. Number of Random Allies (Turbo Mode): 2. If cast on a neutral creep, also grants a few Madstone to the caster, and one to random allies. A newly acquired Hand of Midas starts with 1 charge."
+    }
+  ],
+  "recipe": [
+    "Gloves of Haste"
+  ]
 }

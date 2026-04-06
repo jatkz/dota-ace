@@ -1,12 +1,13 @@
 {
   "name": "Manta Style",
   "cost": 4650,
+  "recipeCost": 1550,
   "description": "An axe made of reflective materials that causes confusion amongst enemy ranks.",
   "abilities": [
     {
       "name": "Mirror Image",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Creates multiple mirrored illusions of the wielder that deals a portion of the wielder's damage and receives additional incoming damage. Cooldown: 34. Mana Cost: 125. Number of Illusions: 2. Duration: 18. Damage Dealt: 33%. Damage Taken: 300%."
     }
   ],
   "stats": {
@@ -15,5 +16,9 @@
     "Intelligence": "+10",
     "Move Speed": "+10%",
     "Attack Speed": "+15"
-  }
+  },
+  "recipe": [
+    "Yasha",
+    "Diadem"
+  ]
 }

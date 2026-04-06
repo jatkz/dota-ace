@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 2-4 neutral item enchantment for Universal heroes only.",
   "tier": "2",
   "effects": {
-    "primary_effect": "+10/12/14% Status Resistance, +8/12/16% Main Attack Damage, -10%/-12%/-14% Attack Speed"
+    "primary": "+10/12/14% Status Resistance, +8/12/16% Main Attack Damage, -10%/-12%/-14% Attack Speed."
   },
   "notes": []
 }

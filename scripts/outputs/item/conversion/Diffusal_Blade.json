@@ -1,21 +1,30 @@
 {
   "name": "Diffusal Blade",
   "cost": 2500,
+  "recipeCost": 1050,
   "description": "An enchanted blade that allows the user to cut straight into the enemy's soul.",
   "abilities": [
     {
       "name": "Inhibit",
       "type": "active",
-      "description": ""
+      "description": "Greatly slows the target enemy's movement speed, which decays over the duration. Cooldown: 15. Mana Cost: 25. Cast Range: 600. Move Speed Slow: 100%. Slow Decay Rate: 0.8. Duration: 4."
     },
     {
       "name": "Manabreak",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks burn their target's mana and deal damage equal to a percentage of the mana burnt. Mana Burn per Hit: 40. Mana Burn to Damage Factor: 1. Does not stack with Diffusal Blade-based abilities. Stacks additively with other sources of Mana Break."
     }
   ],
   "stats": {
     "Agility": "+15",
     "Intelligence": "+10"
-  }
+  },
+  "recipe": [
+    "Blade of Alacrity",
+    "Robe of the Magi"
+  ],
+  "buildsInto": [
+    "Disperser"
+  ],
+  "sellValue": 1250
 }

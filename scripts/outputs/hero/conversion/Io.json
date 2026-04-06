@@ -1,6 +1,7 @@
 {
   "name": "Io",
-  "description": "Beep Boop Link Io, the Wisp Io is everywhere, and in all things.",
+  "description": "Beep Boop Link Io, the Wisp Io is everywhere, and in all things. Denounced by enemies as the great unmaker, worshiped by scholars as the twinkling of a divine eye, this strange Wisp of life-force occupies all planes at once, the merest fraction of its being crossing into physical existence at any one moment. Like the great twin riders Dark and Light, and yet another ancient traveler whose true history is lost to the ages, Io the Wisp is a Fundamental of the universe, a force older than time, a wanderer from realms far beyond mortal understanding. Io is nothing less than the sum of all attractive and repulsive forces within the material field, a sentient manifestation of the charge that bind existence together. It is only in the controlled warping of these electrical waylines that Io's presence can be experienced on the physical plane. A benevolent, cooperative force, Io bonds its strange magnetism to others so that the power of allies might be enhanced. Its motives inscrutable, its strength unimaginable, Io moves through the physical plane, the perfect expression of the mysteries of the universe.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Escape",
@@ -10,6 +11,45 @@
     "strength": 19,
     "agility": 14,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 3,
+    "agility": 1.6,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 66,
+    "healthRegen": 0.3,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.84
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 3.33,
+    "magicResistance": 27.1,
+    "damageMin": 45,
+    "damageMax": 51,
+    "damageAverage": 48.3,
+    "projectileSpeed": 1200,
+    "attackRange": 500,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.4,
+    "moveSpeed": 320,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

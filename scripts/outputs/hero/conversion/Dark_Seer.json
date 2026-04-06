@@ -1,6 +1,7 @@
 {
   "name": "Dark Seer",
-  "description": "If your enemy is equal, prepare for him. If greater, elude him. If weaker, crush him.",
+  "description": "If your enemy is equal, prepare for him. If greater, elude him. If weaker, crush him. Ish'Kafel, the Dark Seer Raises a wall of light that slows and creates replicas of any enemy hero who crosses it. These replicas serve at the Dark Seer's will, they last until destroyed or until the wall duration ends.",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Escape",
@@ -10,6 +11,45 @@
     "strength": 20,
     "agility": 19,
     "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 1.5,
+    "intelligence": 2.7
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 32.4,
+    "manaRegen": 0.135,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.7
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 5.17,
+    "magicResistance": 27.2,
+    "damageMin": 53,
+    "damageMax": 59,
+    "damageAverage": 56,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 119,
+    "bat": 1.7,
+    "animationPoint": 0.59,
+    "animationBackswing": 0.58,
+    "moveSpeed": 295,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -29,7 +69,7 @@
     },
     {
       "name": "Surge",
-      "type": "passive",
+      "type": "active",
       "description": "The charged-up allied unit leave behind a trail that damages and slows enemy units around it. Does not create the Surge trail with Alt-Cast toggled on."
     },
     {

@@ -1,9 +1,11 @@
 {
   "name": "Flayer's Bota",
-  "description": "A Tier 4 neutral item artifact.",
+  "description": "Grants bonus attack damage and attack speed for a short duration when cast. Resets cooldown when an enemy hero dies within range.",
   "tier": "4",
   "effects": {
-    "primary": "Active: Bloodthirst, Passive: Bloodrush"
+    "primary": "Increases attack damage by 15% and attack speed by 30% for 6 seconds on cast."
   },
-  "notes": []
+  "notes": [
+    "Cooldown resets when an enemy hero dies within a 1200 radius."
+  ]
 }

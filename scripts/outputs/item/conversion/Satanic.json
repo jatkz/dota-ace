@@ -4,18 +4,23 @@
   "description": "Immense power at the cost of your soul.",
   "abilities": [
     {
-      "name": "Unholy Rage",
-      "type": "active",
-      "description": ""
-    },
-    {
       "name": "Lifesteal",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt."
+    },
+    {
+      "name": "Unholy Rage",
+      "type": "passive",
+      "description": "Applies a basic dispel on the caster and greatly increases the lifesteal value for a short duration. Cooldown: 30. Mana Cost: 0. Duration: 6."
     }
   ],
   "stats": {
-    "Strength": "+25",
-    "Attack Damage": "+25"
-  }
+    "Strength": 25,
+    "Attack Damage": 25
+  },
+  "recipe": [
+    "Morbid Mask",
+    "Claymore",
+    "Reaver"
+  ]
 }

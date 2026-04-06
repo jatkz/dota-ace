@@ -1,20 +1,29 @@
 {
   "name": "Mekansm",
   "cost": 1775,
+  "recipeCost": 850,
   "description": "A glowing jewel formed out of assorted parts that somehow fit together perfectly.",
   "abilities": [
     {
       "name": "Restore",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Restores health to nearby allies on cast. Cooldown: 50. Mana Cost: 100. Radius: 1200. Heal: 250. Stack Limit Duration: 49."
     },
     {
       "name": "Mekansm Aura",
       "type": "passive",
-      "description": ""
+      "description": "Grants an aura that increases the health regeneration of nearby ally units. Radius: 1200. Health Regeneration Bonus: 2.5. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
-    "Bonus Armor": "+5"
-  }
+    "Armor": "+5"
+  },
+  "recipe": [
+    "Headdress",
+    "Chainmail"
+  ],
+  "buildsInto": [
+    "Guardian Greaves"
+  ],
+  "sellValue": 887.5
 }

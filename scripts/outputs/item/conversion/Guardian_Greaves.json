@@ -1,17 +1,18 @@
 {
   "name": "Guardian Greaves",
   "cost": 4450,
+  "recipeCost": 1175,
   "description": "One of many holy instruments constructed to honor the Omniscience.",
   "abilities": [
     {
       "name": "Mend",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Applies a basic dispel on the caster and restores health and replenishes mana to nearby allies on cast. Cooldown: 45. Radius: 1200. Heal: 325. Mana Replenished: 200. Stack Limit Duration: 44."
     },
     {
       "name": "Guardian Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the health regeneration and mana regeneration of nearby allies. Radius: 1200. Health Regeneration Bonus: 2.5. Mana Regeneration Bonus: 1.5. Aura Linger Duration: 0.5. Health Threshold: 25%. Health Regeneration Bonus: 14.5."
     }
   ],
   "stats": {
@@ -19,5 +20,9 @@
     "Mana Regeneration": "+1",
     "Armor": "+5",
     "Move Speed": "+50"
-  }
+  },
+  "recipe": [
+    "Mekansm",
+    "Arcane Boots"
+  ]
 }

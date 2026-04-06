@@ -1,6 +1,7 @@
 {
   "name": "Broodmother",
-  "description": "Black Arachnia, the Broodmother lurked in the dark lava tubes beneath Mount Pyrotheos, raising millions of spiderlings in safety before sending them to find prey above.",
+  "description": "I've promised you to my children. Black Arachnia, the Broodmother For centuries, Black Arachnia the Broodmother lurked in the dark lava tubes beneath the smoldering caldera of Mount Pyrotheos, raising millions of spiderlings in safety before sending them to find prey in the wide world above.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Pusher",
@@ -13,6 +14,45 @@
     "strength": 18,
     "agility": 18,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.9,
+    "agility": 3.4,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 63.8,
+    "healthRegen": 0.29,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 2,
+    "magicResistance": 26.8,
+    "damageMin": 45,
+    "damageMax": 51,
+    "damageAverage": 48,
+    "projectileSpeed": "Instant",
+    "attackRange": 175,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 125,
+    "totalAttackSpeed": 143,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.5,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -27,7 +67,7 @@
     },
     {
       "name": "Spin Web",
-      "type": "active",
+      "type": "passive",
       "description": "This unit does not feel the effects from any damage sources. It cannot be targeted by attacks or abilities and have its health bar temporarily hidden."
     },
     {
@@ -43,7 +83,7 @@
     {
       "name": "Spawn Spiderlings",
       "type": "active",
-      "description": "Broodmother injects her young into an enemy unit and deals damage. Upon the affected unit's death, her babies mature, hatching young Spiderlings to aid her in the battlefield. Multiple debuff instances on the affected enemy unit work independently of each other. The ability no longer applies its ability effect on the affected enemy upon exceeding the max debuff stack."
+      "description": "Broodmother injects her young into an enemy unit and dealing damage. Upon the affected unit's death, her babies mature, hatching young Spiderlings to aid her in the battlefield. Multiple debuff instances on the affected enemy unit work independently of each other. The ability no longer applies its ability effect on the affected enemy upon exceeding the max debuff stack."
     }
   ]
 }

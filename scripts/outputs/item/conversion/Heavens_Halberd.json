@@ -1,17 +1,23 @@
 {
   "name": "Heaven's Halberd",
   "cost": 3400,
+  "recipeCost": 450,
   "description": "This halberd moves with the speed of a smaller weapon, allowing the bearer to win duels that a heavy edge would not.",
   "abilities": [
     {
       "name": "Disarm",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Disarms the targeted enemy unit, preventing them from attacking. Cooldown: 16 seconds. Mana Cost: 25. Cast Range: 750. Duration: 3.5 seconds."
     }
   ],
   "stats": {
     "Health Regeneration": "+6",
     "Armor": "+9",
     "Evasion": "+25%"
-  }
+  },
+  "recipe": [
+    "Talisman of Evasion",
+    "Splintmail",
+    "Ring of Health"
+  ]
 }

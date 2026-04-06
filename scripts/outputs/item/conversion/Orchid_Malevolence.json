@@ -1,12 +1,13 @@
 {
   "name": "Orchid Malevolence",
   "cost": 3275,
+  "recipeCost": 300,
   "description": "A garnet rod constructed from the essence of a fire demon.",
   "abilities": [
     {
       "name": "Soul Burn",
       "type": "active",
-      "description": ""
+      "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage. Cooldown: 18. Mana Cost: 125. Cast Range: 900. Accumulated Damage: 30%. Duration: 5."
     }
   ],
   "stats": {
@@ -14,5 +15,12 @@
     "Mana Regeneration": "+2.5",
     "Attack Damage": "+20",
     "Attack Speed": "+35"
-  }
+  },
+  "recipe": [
+    "Oblivion Staff",
+    "Claymore"
+  ],
+  "buildsInto": [
+    "Bloodthorn"
+  ]
 }

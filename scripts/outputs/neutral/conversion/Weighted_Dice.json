@@ -1,9 +1,9 @@
 {
   "name": "Weighted Dice",
-  "description": "A Tier 1 neutral item artifact with a passive effect.",
+  "description": "Enhances the wielder's base attack damage and creep gold bounty calculations by selecting the highest value from multiple computations.",
   "tier": "1",
   "effects": {
-    "primary": "Loaded"
+    "primary": "Whenever the wielder's base attack damage or a creep gold bounty is calculated, the value is computed twice and the highest value is selected. Base Damage Maximum Bonus: 6."
   },
   "notes": []
 }

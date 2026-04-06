@@ -1,9 +1,12 @@
 {
   "name": "Jidi Pollen Bag",
-  "description": "A Tier 3 neutral item artifact.",
+  "description": "Spreads pollen on nearby enemies, reducing their health restoration effectiveness by 50% and dealing damage over time equal to 9% of their maximum health every second for 9 seconds.",
   "tier": "3",
   "effects": {
-    "primary": "Pollinate"
+    "primary": "Reduces health restoration effectiveness by 50% and deals 9% max health as damage per second over 9 seconds to nearby enemies within a 700 radius."
   },
-  "notes": []
+  "notes": [
+    "Cooldown: 25.",
+    "Mana Cost: 0."
+  ]
 }

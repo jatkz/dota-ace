@@ -10,7 +10,7 @@
     }
   ],
   "stats": {
-    "Sell Value": "0 Unsellable",
     "Stock": "0 INIT / 1 MAX"
-  }
+  },
+  "sellValue": 0
 }

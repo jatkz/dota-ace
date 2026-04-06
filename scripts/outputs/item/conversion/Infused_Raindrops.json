@@ -5,14 +5,14 @@
   "abilities": [
     {
       "name": "Magical Damage Block",
-      "type": "passive"
+      "type": "passive",
+      "description": "Consumes a charge to block a fixed portion of magical damage from damage instances over a certain value. Number of Charges: 6. Cooldown: 7 seconds. Min Damage Threshold: 75. Magical Damage Blocked: 120."
     }
   ],
   "stats": {
-    "Sell Value": "18.8 / Count",
     "Stacks": "1 MAX / Inventory Slot",
     "Stock": "0 INIT / 1 MAX",
-    "Charges": "6 INIT",
-    "Bonus": "+0.8 Mana Regeneration"
-  }
+    "Charges": "6 INIT"
+  },
+  "sellValue": "18.8 / Count"
 }

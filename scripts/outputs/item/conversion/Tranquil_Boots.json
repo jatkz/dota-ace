@@ -1,12 +1,26 @@
 {
   "name": "Tranquil Boots",
   "cost": 900,
+  "recipeCost": null,
   "description": "While they increase the longevity of the wearer, this boot is not particularly reliable.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Break",
+      "type": "passive",
+      "description": "Whenever the wielder attacks a hero or is attacked by a any unit, the boots' passive health regeneration bonus is lost, and the movement speed bonus is reduced for a while. Cooldown: 13. Move Speed Loss: 25. Health Regen Loss: 14. Duration: 13."
+    }
+  ],
   "stats": {
-    "Cost": 900,
-    "Sell Value": 450,
-    "Passive": "Break",
-    "Bonus": "+14 Health Regeneration+65 Move Speed"
-  }
+    "Health Regeneration": "+14",
+    "Move Speed": "+65"
+  },
+  "recipe": [
+    "Boots of Speed",
+    "Wind Lace",
+    "Ring of Regen"
+  ],
+  "buildsInto": [
+    "Boots of Bearing"
+  ],
+  "sellValue": 450
 }

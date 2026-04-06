@@ -1,9 +1,9 @@
 {
   "name": "Ash Legion Shield",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Creates a physical damage barrier around nearby units that slows their movement speed.",
   "tier": "1",
   "effects": {
-    "primary": "Active: Shield Wall"
+    "primary": "Applies a 160 physical damage barrier to all nearby player controlled units for 6 seconds, reducing their move speed by 20%."
   },
   "notes": []
 }

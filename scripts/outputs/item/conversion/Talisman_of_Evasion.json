@@ -4,6 +4,11 @@
   "description": "A necklace that allows you to anticipate enemy attacks.",
   "abilities": [],
   "stats": {
-    "Bonus": "+15% Evasion"
-  }
+    "Evasion": "+15%"
+  },
+  "buildsInto": [
+    "Radiance",
+    "Butterfly",
+    "Heaven's Halberd"
+  ]
 }

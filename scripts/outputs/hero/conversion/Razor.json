@@ -1,6 +1,7 @@
 {
   "name": "Razor",
   "description": "I bring my lightning whip not to punish souls, but only to hasten them toward the inevitable exit.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Durable",
@@ -11,6 +12,45 @@
     "strength": 22,
     "agility": 24,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 2.8,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "mainAttackDamage": 2.8,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4,
+    "magicResistance": 27.1,
+    "damageMin": 47,
+    "damageMax": 49,
+    "damageAverage": 48,
+    "projectileSpeed": 2000,
+    "attackRange": 475,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.4,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

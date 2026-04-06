@@ -1,9 +1,9 @@
 {
   "name": "Stygian Desolator",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Reduces the armor of enemy units attacked by the wielder.",
   "tier": "5",
   "effects": {
-    "primary": "Greater Corruption"
+    "primary": "Applies an armor reducing debuff on enemy units. Armor Reduction: 13 for 7 seconds, then increases to 16.9."
   },
   "notes": []
 }

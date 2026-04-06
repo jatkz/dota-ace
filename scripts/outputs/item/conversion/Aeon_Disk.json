@@ -1,16 +1,22 @@
 {
   "name": "Aeon Disk",
   "cost": 3000,
+  "recipeCost": 1200,
   "description": "A powerful artifact long ago smuggled out of the Ivory Incubarium. Or so many believe.",
   "abilities": [
     {
       "name": "Combo Breaker",
       "type": "passive",
-      "description": ""
+      "description": "When the wielder's health is below the threshold and they take player-based damage, applies a strong dispel and a buff on the wielder that provides status resistance and negates all damage the wielder takes, but also negates any damage they deal while active. Cooldown: 105/125/145/165. Mana Cost: 0. Health Threshold: 70%. Incoming Damage Reduction: 100%. Outgoing Damage Reduction: 100%. The ability cooldown increases per trigger and is bound to the wielder. Rebuying the item does not reset the ability cooldown."
     }
   ],
   "stats": {
     "Health": "+250",
     "Mana": "+300"
-  }
+  },
+  "recipe": [
+    "Vitality Booster",
+    "Energy Booster"
+  ],
+  "sellValue": 1500
 }

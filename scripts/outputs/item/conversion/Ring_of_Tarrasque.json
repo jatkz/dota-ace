@@ -5,5 +5,11 @@
   "abilities": [],
   "stats": {
     "Health Regeneration": "+12"
-  }
+  },
+  "buildsInto": [
+    "Refresher Orb",
+    "Heart of Tarrasque",
+    "Pipe of Insight",
+    "Boots of Bearing"
+  ]
 }

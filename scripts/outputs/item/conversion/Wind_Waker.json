@@ -1,17 +1,23 @@
 {
   "name": "Wind Waker",
   "cost": 6800,
+  "recipeCost": 1400,
   "description": "Proof enough to some that unseen forces manipulate the happenings of the material plane.",
   "abilities": [
     {
       "name": "Cyclone",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Sweeps the target up into a cyclone, applying a basic dispel, turning them invulnerable for a short while. Cooldown: 19. Mana Cost: 175. Cast Range: 550. Duration: 2.5. Damage: 50. Set Speed: 300. If the target is an enemy, they also take damage upon landing. Cannot lift up Roshan, instead, it instantly applies the damage."
     }
   ],
   "stats": {
     "Intelligence": "+35",
     "Mana Regeneration": "+3",
     "Move Speed": "+30"
-  }
+  },
+  "recipe": [
+    "Eul's Scepter of Divinity",
+    "Mystic Staff"
+  ],
+  "sellValue": 3400
 }

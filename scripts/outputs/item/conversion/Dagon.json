@@ -1,20 +1,30 @@
 {
   "name": "Dagon",
   "cost": 3050,
+  "recipeCost": 1150,
   "description": "A lesser wand that grows in power the longer it is used, it brings magic to the fingertips of the user.",
   "abilities": [
     {
       "name": "Energy Burst",
       "type": "active",
-      "description": ""
+      "description": "Emits a powerful burst of magical damage upon a targeted enemy unit, dealing great damage. Cooldown: 27/24/21/18/15. Mana Cost: 120/140/160/180/200. Cast Range: 640. Damage: 400/500/600/700/800."
     }
   ],
   "stats": {
     "Strength": "+6/7/8/9/10",
     "Agility": "+6/7/8/9/10",
-    "Intelligence": "+200/210/220/230/240",
-    "Health": "+350/375/400/425/450",
-    "Mana": "+60/90/120/150/180",
-    "Cast Range": ""
-  }
+    "Intelligence": "+6/7/8/9/10",
+    "Health": "+200/210/220/230/240",
+    "Mana": "+350/375/400/425/450",
+    "Cast Range": "+60/90/120/150/180"
+  },
+  "recipe": [
+    "Point Booster",
+    "Crown",
+    "Wizard Hat"
+  ],
+  "buildsInto": [
+    "Dagon 2"
+  ],
+  "sellValue": 1525
 }

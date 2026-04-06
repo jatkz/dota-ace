@@ -1,6 +1,7 @@
 {
   "name": "Drow Ranger",
-  "description": "The epitome of archery prowess.",
+  "description": "The Drow Ranger is the epitome of archery prowess.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Disabler",
@@ -10,6 +11,45 @@
     "strength": 16,
     "agility": 22,
     "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 1.9,
+    "agility": 2.8,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 41.8,
+    "healthRegen": 0.19,
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "mainAttackDamage": 2.8,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 472,
+    "healthRegen": 1.85,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 3.67,
+    "magicResistance": 26.5,
+    "damageMin": 49,
+    "damageMax": 56,
+    "damageAverage": 52.5,
+    "projectileSpeed": 1250,
+    "attackRange": 625,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.3,
+    "moveSpeed": 310,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -30,7 +70,7 @@
     {
       "name": "Multishot",
       "type": "active",
-      "description": "Applies of's corresponding ability level when acquired."
+      "description": "Applies of 's corresponding ability level when acquired."
     },
     {
       "name": "Glacier",
@@ -40,7 +80,7 @@
     {
       "name": "Marksmanship",
       "type": "passive",
-      "description": "Drow's attacks have a chance to ignore the enemy unit's base armor. Enemy heroes too close to Drow automatically disable this effect."
+      "description": "Drow's attacks have a chance to ignore the enemy unit's base armor. Enemy heroes too close to Drow automatically disables this effect."
     }
   ]
 }

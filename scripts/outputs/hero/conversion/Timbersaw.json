@@ -1,6 +1,7 @@
 {
   "name": "Timbersaw",
-  "description": "I'm not a lumberjack. This. This is personal.",
+  "description": "I'm not a lumberjack. This. This is personal. Rizzrack, the Timbersaw The shatters the tree it latched upon Timbersaw reaching it. The tree splinters in all directions, damaging and applying a movement speed slow to affected enemy units.",
+  "attackType": "Melee",
   "roles": [
     "Nuker",
     "Durable",
@@ -11,6 +12,44 @@
     "agility": 16,
     "intelligence": 23
   },
+  "attributeGains": {
+    "strength": 3.6,
+    "agility": 1.6,
+    "intelligence": 2.7
+  },
+  "statGains": {
+    "health": 79.2,
+    "healthRegen": 0.36,
+    "mana": 32.4,
+    "manaRegen": 0.135,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 351,
+    "manaRegen": 1.65,
+    "armor": 2.67,
+    "magicResistance": 27.3,
+    "damageMin": 46,
+    "damageMax": 50,
+    "damageAverage": 48,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.36,
+    "animationBackswing": 0.64,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Exposure Therapy",
@@ -20,7 +59,7 @@
     {
       "name": "Whirling Death",
       "type": "active",
-      "description": "For Universal enemy heroes, the ability reduces a lesser portion of all of their attributes."
+      "description": "For Universal enemy heroes, the ability reduces a lesser portion of all of their attributes. Although Sven's has an actual 20.01, the health bar the to health value for the health bar.20 × 22 + 120= 560Hence, Sven now has the aforementioned max health, then Whirling Death applies the."
     },
     {
       "name": "Timber Chain",
@@ -30,7 +69,7 @@
     {
       "name": "Reactive Armor",
       "type": "passive",
-      "description": "Grants bonus armor and bonus health regeneration whenever an enemy hero attacks Timbersaw. The damage barrier explodes when it expires, damaging nearby enemy units corresponding to its current barrier value."
+      "description": "Grants bonus armor and bonus health regeneration whenever an enemy hero attacks Timbersaw. The damage barrier explodes when it expires, damaging nearby enemy units corrspondingly to its current barrier value."
     },
     {
       "name": "Twisted Chakram",

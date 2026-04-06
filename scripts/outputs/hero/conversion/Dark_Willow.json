@@ -1,6 +1,7 @@
 {
   "name": "Dark Willow",
   "description": "Let's have some fun, shall we? Mireska Sunbreeze, the Dark Willow Attacking no longer takes Dark Willow out of Shadow Realm. Each attack now applies the bonus spell damage corresponding to the buff duration.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -11,6 +12,45 @@
     "strength": 20,
     "agility": 18,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 1.6,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.5
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.75,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 3,
+    "magicResistance": 27.1,
+    "damageMin": 48,
+    "damageMax": 56,
+    "damageAverage": 52,
+    "projectileSpeed": 1200,
+    "attackRange": 475,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 133,
+    "bat": 1.5,
+    "animationPoint": 0.3,
+    "animationBackswing": 1,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

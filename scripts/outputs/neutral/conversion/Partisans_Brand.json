@@ -1,9 +1,9 @@
 {
   "name": "Partisan's Brand",
-  "description": "A Tier 3 neutral item artifact.",
+  "description": "Increases spell damage dealt to player-controlled units by 9%.",
   "tier": "3",
   "effects": {
-    "primary": "Passive: Brand"
+    "primary": "Spell Damage Amp: 9%."
   },
   "notes": []
 }

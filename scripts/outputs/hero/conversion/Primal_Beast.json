@@ -1,6 +1,7 @@
 {
   "name": "Primal Beast",
-  "description": "RAAAWR Primal Beast Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast. A creature hatched into an existence devoid of all feeling but hunger and pain, aeons of carnage shaped the Primal Beast into the apex predator on a planet filled with violent terrors.",
+  "description": "RAAWR Primal Beast Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast. A creature hatched into an existence devoid of all feeling but hunger and pain, aeons of carnage shaped the Primal Beast into the apex predator on a planet filled with violent terrors.",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Durable",
@@ -11,6 +12,44 @@
     "agility": 15,
     "intelligence": 16
   },
+  "attributeGains": {
+    "strength": 4.3,
+    "agility": 1,
+    "intelligence": 1.4
+  },
+  "statGains": {
+    "health": 94.6,
+    "healthRegen": 0.43,
+    "mana": 16.8,
+    "manaRegen": 0.07,
+    "armor": 0.17,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.3
+  },
+  "stats": {
+    "health": 692,
+    "healthRegen": 2.85,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 4.5,
+    "magicResistance": 26.6,
+    "damageMin": 62,
+    "damageMax": 64,
+    "damageAverage": 63,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.8,
+    "animationPoint": 0.6,
+    "animationBackswing": 0.7,
+    "moveSpeed": 305,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Colossal",
@@ -20,7 +59,7 @@
     {
       "name": "Onslaught",
       "type": "active",
-      "description": "The Beast charges through in chosen the direction with a limited turn rate. Knocking both allies and enemies alike."
+      "description": "The Beast charges through in chosen direction with a limited turn rate. Knocking both allies and enemies alike."
     },
     {
       "name": "Trample",
@@ -30,7 +69,7 @@
     {
       "name": "Uproar",
       "type": "passive",
-      "description": "The Beast accumulate Uproar stacks for every offensive damage instance it takes. When activated, the Beast releases a roar that slows enemy units within the radius, while granting self additional bonus attack damage and bonus armor based on the current stack amount."
+      "description": "The Beast accumulates Uproar stacks for every offensive damage instance it takes. When activated, the Beast releases a roar that slows enemy units within the radius, while granting self additional bonus attack damage and bonus armor based on the current stack amount."
     },
     {
       "name": "Rock Throw",

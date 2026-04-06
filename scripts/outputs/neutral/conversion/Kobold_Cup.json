@@ -1,9 +1,9 @@
 {
   "name": "Kobold Cup",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Grants movement speed to nearby allies for a short while on cast.",
   "tier": "1",
   "effects": {
-    "primary": "Active: One for the Road"
+    "primary": "Grants 10% move speed bonus to nearby allies (Radius: 1000) for 6 seconds. Cooldown: 40. Mana Cost: 40."
   },
   "notes": []
 }

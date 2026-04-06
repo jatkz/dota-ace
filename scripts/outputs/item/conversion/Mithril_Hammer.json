@@ -5,5 +5,11 @@
   "abilities": [],
   "stats": {
     "Attack Damage": "+24"
-  }
+  },
+  "buildsInto": [
+    "Black King Bar",
+    "Skull Basher",
+    "Maelstrom",
+    "Desolator"
+  ]
 }

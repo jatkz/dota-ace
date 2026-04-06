@@ -1,21 +1,26 @@
 {
   "name": "Mjollnir",
   "cost": 5500,
+  "recipeCost": 550,
   "description": "Thor's magical hammer, made for him by the dwarves Brok and Eitri.",
   "abilities": [
     {
       "name": "Static Charge",
       "type": "active",
-      "description": ""
+      "description": "Places a charged shield on the target ally that has a chance to release electric bolts upon the ally taking damage. The bolts hit the source of the damage, as well as additional nearby enemies around the ally, dealing magical damage. Cooldown: 35 seconds. Mana Cost: 50. Cast Range: 800. Proc Chance: 20%. Effect Radius: 900. Damage: 225."
     },
     {
       "name": "Chain Lightning",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attacks a chance to pierce through evasion, and to release a bolt of electricity on the target that leaps between other nearby targets, dealing magical damage to all of them. Cooldown: 0.2 seconds. Proc Chance: 25%. Bounce Distance: 650. Number of Bounces: 12. Damage: 180."
     }
   ],
   "stats": {
     "Attack Damage": "+25",
     "Attack Speed": "+90"
-  }
+  },
+  "recipe": [
+    "Maelstrom",
+    "Hyperstone"
+  ]
 }

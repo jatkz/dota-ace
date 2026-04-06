@@ -1,9 +1,9 @@
 {
   "name": "Enchanter's Bauble",
-  "description": "A Tier 4 neutral item artifact.",
+  "description": "Increases the bonuses of its Neutral Enchantment by a percentage that grows with each craft.",
   "tier": "4",
   "effects": {
-    "primary": ""
+    "primary": "Increases the bonuses of the item's Neutral Enchantment by 15%. Every time this item is crafted again, the bonus is increased by 40%."
   },
   "notes": []
 }

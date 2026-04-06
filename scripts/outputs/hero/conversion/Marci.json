@@ -1,6 +1,7 @@
 {
   "name": "Marci",
-  "description": "Whistle Link Marci Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it. Grants the targeted ally a short duration movement speed bonus.",
+  "description": "Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it, granting the targeted ally a short duration movement speed bonus.",
+  "attackType": "Melee",
   "roles": [
     "Support",
     "Carry",
@@ -12,6 +13,45 @@
     "strength": 23,
     "agility": 20,
     "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 3.2,
+    "agility": 2.2,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 70.4,
+    "healthRegen": 0.32,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.37,
+    "attackSpeed": 2.2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.29
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 3.33,
+    "magicResistance": 26.9,
+    "damageMin": 56,
+    "damageMax": 60,
+    "damageAverage": 58.9,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 120,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.5,
+    "moveSpeed": 315,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -26,7 +66,7 @@
     },
     {
       "name": "Rebound",
-      "type": "passive",
+      "type": "active",
       "description": "Adds enemy targeting functionality, and Marci applies the movement speed boost on herself upon cast. Increases damage. Cannot cast ability while being affected by sources. However, the Root source application does not nullify the ability once it is cast."
     },
     {

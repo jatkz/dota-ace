@@ -1,11 +1,21 @@
 {
   "name": "Yasha",
   "cost": 2100,
+  "recipeCost": 650,
   "description": "Yasha is regarded as the swiftest weapon ever created.",
   "abilities": [],
   "stats": {
     "Agility": "+16",
     "Move Speed": "+10%",
     "Attack Speed": "+15"
-  }
+  },
+  "recipe": [
+    "Blade of Alacrity",
+    "Band of Elvenskin"
+  ],
+  "buildsInto": [
+    "Manta Style",
+    "Sange and Yasha",
+    "Yasha and Kaya"
+  ]
 }

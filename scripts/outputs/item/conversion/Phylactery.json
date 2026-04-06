@@ -1,12 +1,13 @@
 {
   "name": "Phylactery",
   "cost": 2600,
+  "recipeCost": 200,
   "description": "An amulet overflowing with powerful magics.",
   "abilities": [
     {
       "name": "Empower Spell",
       "type": "passive",
-      "description": ""
+      "description": "The next unit targeted ability the wielder casts deals additional magical damage in a separate instance, and debuffs the target, slowing their movement speed. Cooldown: 9. Damage: 150. Move Speed Slow: 30%. Duration: 3."
     }
   ],
   "stats": {
@@ -15,5 +16,13 @@
     "Intelligence": "+6",
     "Health Regeneration": "+5.5",
     "Mana Regeneration": "+2.25"
-  }
+  },
+  "recipe": [
+    "Diadem",
+    "Perseverance"
+  ],
+  "buildsInto": [
+    "Khanda"
+  ],
+  "sellValue": 1300
 }

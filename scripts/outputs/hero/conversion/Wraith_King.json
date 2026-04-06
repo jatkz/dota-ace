@@ -1,6 +1,7 @@
 {
   "name": "Wraith King",
-  "description": "Purer than flesh, stronger than bone, imperishable is the essence of the wraith.",
+  "description": "Purer than flesh, stronger than bone, imperishable is the essence of the wraith. Ostarion, the Wraith King For untold years, King Ostarion built a kingdom from the remains of his enemies. It was an obsessive's errand, done to pass the long eternities of a monarchy that seemed fated never to end. He believed that as long as he built up the towers of his palace, he could not die. But eventually he learned that he had been deluded... that bone itself could perish.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Support",
@@ -12,6 +13,45 @@
     "strength": 22,
     "agility": 16,
     "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 1.7,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "mainAttackDamage": 2.8,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.7,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 3.67,
+    "magicResistance": 26.6,
+    "damageMin": 60,
+    "damageMax": 62,
+    "damageAverage": 61,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 116,
+    "bat": 1.7,
+    "animationPoint": 0.56,
+    "animationBackswing": 0.44,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

@@ -1,6 +1,7 @@
 {
   "name": "Wraith Band",
   "cost": 505,
+  "recipeCost": 210,
   "description": "A circlet with faint whispers echoing about it.",
   "abilities": [],
   "stats": {
@@ -9,5 +10,9 @@
     "Intelligence": "+2",
     "Armor": "+1.75",
     "Attack Speed": "+6"
-  }
+  },
+  "recipe": [
+    "Circlet",
+    "Slippers of Agility"
+  ]
 }

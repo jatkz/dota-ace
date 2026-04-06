@@ -1,17 +1,25 @@
 {
   "name": "Skull Basher",
   "cost": 2875,
+  "recipeCost": 825,
   "description": "A feared weapon in the right hands, this maul's ability to shatter the defenses of its opponents should not be underestimated.",
   "abilities": [
     {
       "name": "Bash",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage. Cooldown: 2.3. Mana Cost: 0. Proc Chance: 25%. Damage: 100. Stun Duration: 1.2. Proc Chance: 10%."
     }
   ],
   "stats": {
-    "Cost": 2875,
-    "Sell Value": 1437.5,
-    "Bonus": "+10 Strength+30 Attack Damage"
-  }
+    "Strength": "+10",
+    "Attack Damage": "+30"
+  },
+  "recipe": [
+    "Mithril Hammer",
+    "Belt of Strength"
+  ],
+  "buildsInto": [
+    "Abyssal Blade"
+  ],
+  "sellValue": 1437.5
 }

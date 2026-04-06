@@ -1,16 +1,23 @@
 {
-  "name": "Vladimir's Offering",
+  "name": "Vladmir's Offering",
   "cost": 2200,
   "description": "An eerie mask that is haunted with the malice of a fallen vampire.",
   "abilities": [
     {
       "name": "Vladmir's Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the attack damage, mana regen, and armor of nearby allies, and grants them lifesteal. Radius: 1200. Attack Damage Bonus: 18%. Mana Regeneration Bonus: 1. Armor Bonus: 2. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
     "Mana Regeneration": "+0.75",
     "Armor": "+1"
-  }
+  },
+  "recipe": [
+    "Buckler",
+    "Ring of Basilius",
+    "Morbid Mask",
+    "Blades of Attack"
+  ],
+  "sellValue": 1100
 }

@@ -4,6 +4,11 @@
   "description": "A tensile fabric often used for its light weight and ease of movement.",
   "abilities": [],
   "stats": {
-    "Bonus": "+6 Agility"
-  }
+    "Bonus Agility": 6
+  },
+  "buildsInto": [
+    "Power Treads",
+    "Yasha",
+    "Orb of Corrosion"
+  ]
 }

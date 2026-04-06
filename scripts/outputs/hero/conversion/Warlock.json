@@ -1,6 +1,7 @@
 {
   "name": "Warlock",
-  "description": "Chaos comes at my command! Demnok Lannik, the Warlock As Chief Curator and Head of Acquisitions for the Arcane Archives of the Ultimyr Academy, Demnok Lannik was tireless in his pursuit of lost, rare and forbidden tomes. No cursed temple was so foreboding, no cavern path so treacherous, that any concern for his own survival could dissuade him from entering if rumors hinted that some pamphlet of primordial lore might still survive in its depths. However, so often did his investigations trigger the wrath of protector entities, that he finally found it necessary to master the arts of magic. He bent himself to learning sorcery with the same thorough obsessiveness that marked his quest for incunabula, becoming the most powerful Warlock of the Academy in less time than most practitioners required to complete a course of undergraduate work. Almost as an afterthought, he carved a staff of Dreadwood and summoned into it a captive spirit from the Outer Hells. And anticipating the day when he will have recovered every last lost spellbook, he has commenced writing his own Black Grimoire. It will undoubtedly be instructive.",
+  "description": "Chaos comes at my command!",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Initiator",
@@ -11,11 +12,50 @@
     "agility": 10,
     "intelligence": 25
   },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1,
+    "intelligence": 3.1
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 37.2,
+    "manaRegen": 0.155,
+    "armor": 0.17,
+    "attackSpeed": 1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 2.67,
+    "magicResistance": 27.5,
+    "damageMin": 52,
+    "damageMax": 62,
+    "damageAverage": 57,
+    "projectileSpeed": 1200,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 90,
+    "totalAttackSpeed": 100,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Eldritch Summoning",
       "type": "passive",
-      "description": "Shortly after dying, a burst of magic damage is dealt to all enemies in a small area. This ability is less effective on creeps. The unit instant kills itself when it reaches its chased target. Eldritch Explosion procs cannot further spawn Minor Imps. Increases Eldritch Explosion's current and max ability level."
+      "description": "Shortly after dying, a burst of magic damage is dealth to all enemies in a small area. This ability is less effective on creeps. The unit instant kills itself when it reaches its chased target. Eldritch Explosion procs cannot further spawn Minor Imps. Increases Eldritch Explosion's current and max ability level."
     },
     {
       "name": "Fatal Bonds",
@@ -34,7 +74,7 @@
     },
     {
       "name": "Chaotic Offering",
-      "type": "active",
+      "type": "passive",
       "description": "The conjured Golem is partially immune to movement speed slow sources. Passively summons a Golem of its corresponding level on Warlock's death location, excluding Reincarnation sources."
     }
   ]

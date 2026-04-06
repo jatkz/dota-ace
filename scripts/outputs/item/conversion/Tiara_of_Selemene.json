@@ -4,6 +4,11 @@
   "description": "A symbol of favor bestowed upon the high priestess of Selemene.",
   "abilities": [],
   "stats": {
-    "Bonus": "+6 Mana Regeneration"
-  }
+    "Mana Regeneration": "+6"
+  },
+  "buildsInto": [
+    "Scythe of Vyse",
+    "Refresher Orb",
+    "Octarine Core"
+  ]
 }

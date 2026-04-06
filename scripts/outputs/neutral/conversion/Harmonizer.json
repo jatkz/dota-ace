@@ -1,9 +1,9 @@
 {
   "name": "Harmonizer",
-  "description": "A Tier 4 artifact that balances team composition.",
+  "description": "Provides spell manacost reduction and spell amplification based on the cooldown status of spells.",
   "tier": "4",
   "effects": {
-    "primary": "Balance"
+    "primary": "Gain 5% spell manacost reduction for every spell off cooldown and 5% spell amplification for every spell on cooldown. Manacost Reduction per Spell Off Cooldown: 6.5%. Spell Amplification per Spell On Cooldown: 7.8%."
   },
   "notes": []
 }

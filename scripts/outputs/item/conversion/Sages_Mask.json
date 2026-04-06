@@ -2,8 +2,13 @@
   "name": "Sage's Mask",
   "cost": 175,
   "description": "A mask commonly used by mages and warlocks for various rituals.",
-  "abilities": [],
   "stats": {
-    "Bonus Mana Regeneration": 0.7
-  }
+    "Mana Regeneration": "+0.7"
+  },
+  "buildsInto": [
+    "Oblivion Staff",
+    "Ring of Basilius",
+    "Urn of Shadows",
+    "Falcon Blade"
+  ]
 }

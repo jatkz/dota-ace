@@ -1,6 +1,7 @@
 {
   "name": "Earthshaker",
-  "description": "There may be many earths, but there's only one Earthshaker. Raigor Stonehoof, the Earthshaker.",
+  "description": "There may be many earths, but there's only one Earthshaker.",
+  "attackType": "Melee",
   "roles": [
     "Support",
     "Initiator",
@@ -12,11 +13,49 @@
     "agility": 12,
     "intelligence": 18
   },
+  "attributeGains": {
+    "strength": 3.7,
+    "agility": 1.4,
+    "intelligence": 2.1
+  },
+  "statGains": {
+    "health": 81.4,
+    "healthRegen": 0.37,
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "armor": 0.23,
+    "attackSpeed": 1.4,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 4,
+    "magicResistance": 26.8,
+    "damageMin": 49,
+    "damageMax": 59,
+    "damageAverage": 54,
+    "projectileSpeed": 0,
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 112,
+    "bat": 1.7,
+    "animationPoint": 0.467,
+    "animationBackswing": 0.863,
+    "moveSpeed": 315,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Slugger",
       "type": "passive",
-      "description": "Turns enemy heroes killed into projectiles that travel in a straight line from its origin position, and deals damage to all enemy units it passes through. The higher Earthshaker's level, the greater the damage value per unit death."
+      "description": "Turns enemy heroes killed into projectiles that that travel in a straight line from its origin position, and deals damage to all enemy units it passes through."
     },
     {
       "name": "Fissure",

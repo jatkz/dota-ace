@@ -1,22 +1,27 @@
 {
   "name": "Gem of True Sight",
   "cost": 900,
-  "description": "Not one thrall creature of the depths,Nor spirit bound in drowning's keep,Nor Maelrawn the Tentacular,Shall rest till seas, gem comes to sleep.",
+  "description": "Not one thrall creature of the depths, Nor spirit bound in drowning's keep, Nor Maelrawn the Tentacular, Shall rest till seas, gem comes to sleep.",
   "abilities": [
     {
       "name": "Reveal",
       "type": "active",
-      "description": ""
+      "description": "Reveals and exposes enemy units and wards within the target area for a while. Cooldown: 12. Mana Cost: 0. Cast Range: 300. Radius: 300. Duration: 4. Aura Linger Duration: 0.5."
     },
     {
-      "name": "True Sight Everlasting",
+      "name": "True Sight",
       "type": "passive",
-      "description": ""
+      "description": "Reveals nearby invisible enemy units and wards, rendering them visible to the owner and their team. Reveal Radius: 900. Aura Linger Duration: 0.5."
+    },
+    {
+      "name": "Everlasting",
+      "type": "passive",
+      "description": "While on the ground, the gem provides flying vision around itself to the last team that dropped it. Vision Radius: 300."
     }
   ],
   "stats": {
-    "Sell Value": "0 Unsellable",
     "Stock": "1 INIT / 1 MAX",
-    "Destroyable": "0"
-  }
+    "Destroyable": 0
+  },
+  "sellValue": 0
 }

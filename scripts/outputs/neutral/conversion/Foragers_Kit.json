@@ -1,9 +1,9 @@
 {
   "name": "Forager's Kit",
-  "description": "A Tier 1 neutral item artifact that allows the user to forage.",
+  "description": "Unlocks the ability to forage nearby trees, yielding resources like flora, fungi, or gold.",
   "tier": "1",
   "effects": {
-    "primary": "Passive: Forage"
+    "primary": "Forages nearby trees for 1 second to obtain resources such as flora, fungi, or a bag of gold. Cooldown: 30 seconds."
   },
   "notes": []
 }

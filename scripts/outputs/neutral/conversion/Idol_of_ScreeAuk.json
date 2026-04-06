@@ -1,9 +1,9 @@
 {
   "name": "Idol of Scree'Auk",
-  "description": "A Tier 4 neutral item artifact.",
+  "description": "Grants slow resistance, evasion, and phased movement for a short duration.",
   "tier": "4",
   "effects": {
-    "primary": "False Flight"
+    "primary": "Grants the wielder slow resistance (50%), evasion, and phased movement for 6.5 seconds with a cooldown of 30 seconds."
   },
   "notes": []
 }

@@ -5,5 +5,10 @@
   "abilities": [],
   "stats": {
     "Armor": "+10"
-  }
+  },
+  "buildsInto": [
+    "Assault Cuirass",
+    "Shiva's Guard",
+    "Lotus Orb"
+  ]
 }

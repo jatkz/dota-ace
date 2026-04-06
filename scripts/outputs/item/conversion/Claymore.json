@@ -2,10 +2,13 @@
   "name": "Claymore",
   "cost": 1350,
   "description": "A sword that can cut through armor, it's a commonly chosen first weapon for budding swordsmen.",
-  "abilities": [],
   "stats": {
-    "Cost": 1350,
-    "Sell Value": 675,
-    "Bonus": "+20 Attack Damage"
-  }
+    "Bonus Attack Damage": 20
+  },
+  "buildsInto": [
+    "Butterfly",
+    "Crystalys",
+    "Satanic",
+    "Shadow Blade"
+  ]
 }

@@ -1,19 +1,18 @@
 {
   "name": "Aegis of the Immortal",
-  "cost": null,
   "description": "The Immortal was said to own a shield that protected him from death itself.",
-  "abilities": [
-    {
-      "name": "Reincarnation",
-      "type": "passive",
-      "description": ""
-    }
-  ],
   "stats": {
-    "Sell Value": "0 Unsellable",
     "Stacks": "1 MAX / Inventory Slot",
     "Charges": "1 INIT",
     "Droppable": "0",
     "Destroyable": "1"
-  }
+  },
+  "abilities": [
+    {
+      "name": "Reincarnation",
+      "type": "passive",
+      "description": "Brings its wielder to life at its death location with full health and mana after its effect delay. Max Health Restore on Death: 100%. Max Mana Restore on Death: 100%. Ground Vision Bonus: 1800. Ground Vision Bonus: 800. Aegis Duration: 300. Turbo Aegis Duration: 240."
+    }
+  ],
+  "sellValue": "0 Unsellable"
 }

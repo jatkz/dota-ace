@@ -6,7 +6,7 @@
     {
       "name": "Empower Spell",
       "type": "passive",
-      "description": ""
+      "description": "The next unit targeted ability the wielder casts deals additional magical damage in a separate instance, and debuffs the target, applying Break and slowing their movement speed. Cooldown: 9. Damage: 250. Move Speed Slow: 30%. Duration: 4."
     }
   ],
   "stats": {
@@ -17,5 +17,9 @@
     "Health Regeneration": "+7",
     "Mana": "+450",
     "Mana Regeneration": "+3"
-  }
+  },
+  "recipe": [
+    "Phylactery",
+    "Soul Booster"
+  ]
 }

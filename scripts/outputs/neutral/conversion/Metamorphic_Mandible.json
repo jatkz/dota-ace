@@ -1,9 +1,9 @@
 {
   "name": "Metamorphic Mandible",
-  "description": "A Tier 4 neutral item artifact.",
+  "description": "Transforms into an insect form for a short while, increasing magic resistance and movement speed but reducing armor.",
   "tier": "4",
   "effects": {
-    "primary": "Pupate"
+    "primary": "Enter insect form for 5 seconds with +15% move speed, +50% magic resistance, and -45% armor. Cooldown: 30 seconds."
   },
   "notes": []
 }

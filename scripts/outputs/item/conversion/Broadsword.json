@@ -2,8 +2,13 @@
   "name": "Broadsword",
   "cost": 1000,
   "description": "The classic weapon of choice for knights, this blade is sturdy and reliable for slaying enemies.",
-  "abilities": [],
   "stats": {
     "Bonus Attack Damage": 15
-  }
+  },
+  "buildsInto": [
+    "Echo Sabre",
+    "Blade Mail",
+    "Battle Fury",
+    "Mask of Madness"
+  ]
 }

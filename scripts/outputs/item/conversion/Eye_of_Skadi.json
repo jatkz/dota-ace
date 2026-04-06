@@ -6,12 +6,16 @@
     {
       "name": "Cold Attack",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks apply a movement speed and attack speed slow on enemy units. Move Speed Slow: 25%. Attack Speed Slow: 20%. Duration: 3. Health Restore Reduction: 50%. Move Speed Slow: 50%. The frigid attacks also reduce the effectiveness of healing and health restoration on the targets."
     }
   ],
   "stats": {
     "Strength": "+35",
     "Agility": "+35",
     "Intelligence": "+35"
-  }
+  },
+  "recipe": [
+    "Ultimate Orb",
+    "Orb of Frost"
+  ]
 }

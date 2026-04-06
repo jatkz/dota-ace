@@ -4,6 +4,13 @@
   "description": "A staff of magical powers passed down from the eldest mages.",
   "abilities": [],
   "stats": {
-    "Bonus": "+10 Intelligence"
-  }
+    "Bonus Intelligence": "+10"
+  },
+  "buildsInto": [
+    "Aghanim's Scepter",
+    "Eul's Scepter of Divinity",
+    "Force Staff",
+    "Kaya",
+    "Rod of Atos"
+  ]
 }

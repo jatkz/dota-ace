@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 1–4 neutral item enchantment for all heroes.",
   "tier": "1",
   "effects": {
-    "primary_effect": "+0/100/160/220 Mana, +0/0/0/15% Evasion, +15/20/25/30 Move Speed"
+    "primary": "+0/100/160/220 Mana, +0/0/0/15% Evasion, +15/20/25/30 Move Speed."
   },
   "notes": []
 }

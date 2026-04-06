@@ -5,17 +5,17 @@
   "abilities": [
     {
       "name": "Regenerate",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Restores health and replenishes mana for a while, by increasing health and mana regeneration. Number of Charges: 3. Cooldown: 0.5. Cast Range: 350. Total Heal: 110. Total Mana Restore: 60. Regen Duration: 2.7. Restores all charges while within the Fountain area. Restores all charges when respawning on the Ofrenda."
     },
     {
       "name": "Store Rune",
       "type": "passive",
-      "description": ""
+      "description": "Couriers can neither activate nor store runes. Cast Range: 150. Max Store Rune Duration: 90."
     }
   ],
   "stats": {
-    "Sell Value": 337.5,
     "Stacks": "1 MAX / Inventory Slot"
-  }
+  },
+  "sellValue": 337.5
 }

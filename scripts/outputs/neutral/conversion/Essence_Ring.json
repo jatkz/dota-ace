@@ -1,9 +1,9 @@
 {
   "name": "Essence Ring",
-  "description": "A Tier 2 neutral item artifact.",
+  "description": "Increases the caster's current and maximum health for a short time.",
   "tier": "2",
   "effects": {
-    "primary": "Active: Life Essence"
+    "primary": "Increases the caster's current and maximum health by 312 for 10 seconds with a cooldown of 25 seconds and a mana cost of 160."
   },
   "notes": []
 }

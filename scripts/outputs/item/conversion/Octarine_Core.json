@@ -1,17 +1,22 @@
 {
   "name": "Octarine Core",
   "cost": 4900,
+  "recipeCost": 200,
   "description": "At the core of spellcraft are spectrums only the very gifted can sense.",
   "abilities": [
     {
       "name": "Cooldown Reduction",
       "type": "passive",
-      "description": ""
+      "description": "Reduces the wielder's cooldowns for all abilities and items. Cooldown Reduction: 25%."
     }
   ],
   "stats": {
     "Health": "+450",
     "Mana": "+450",
     "Mana Regeneration": "+6"
-  }
+  },
+  "recipe": [
+    "Tiara of Selemene",
+    "Soul Booster"
+  ]
 }

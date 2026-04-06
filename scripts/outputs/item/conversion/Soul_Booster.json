@@ -2,9 +2,19 @@
   "name": "Soul Booster",
   "cost": 3000,
   "description": "Regain lost courage.",
-  "abilities": [],
   "stats": {
-    "Health": 425,
-    "Mana": 425
-  }
+    "Health": "+425",
+    "Mana": "+425"
+  },
+  "recipe": [
+    "Vitality Booster",
+    "Energy Booster",
+    "Point Booster"
+  ],
+  "buildsInto": [
+    "Crella's Crozier",
+    "Octarine Core",
+    "Khanda",
+    "Bloodstone"
+  ]
 }

@@ -1,23 +1,28 @@
 {
   "name": "Abyssal Blade",
   "cost": 6250,
+  "recipeCost": 1275,
   "description": "The lost blade of the Commander of the Abyss, this edge cuts into an enemy's soul.",
   "abilities": [
     {
       "name": "Overwhelm",
       "type": "active",
-      "description": ""
+      "description": "Instantly stuns the target enemy unit. Pierces debuff immunity. Cooldown: 35. Mana Cost: 75. Cast Range: 150. Duration: 1.6."
     },
     {
       "name": "Bash",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attacks a chance to stun the target and deal bonus physical damage. Cooldown: 2.3. Mana Cost: 0. Proc Chance: 25%. Damage: 120. Stun Duration: 1.2."
     }
   ],
   "stats": {
-    "Strength": "+26",
-    "Slow Resistance": "+30%",
-    "Attack Damage": "+35",
-    "Health Restore Amp": "+20%"
-  }
+    "+Strength": 26,
+    "+Slow Resistance": 30,
+    "+Attack Damage": 35,
+    "+Health Restore Amp": 20
+  },
+  "recipe": [
+    "Skull Basher",
+    "Sange"
+  ]
 }

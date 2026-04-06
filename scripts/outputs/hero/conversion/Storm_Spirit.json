@@ -1,6 +1,7 @@
 {
   "name": "Storm Spirit",
-  "description": "Everyone complains about the weather…well, I'm doing something about it! Raijin Thunderkeg, the Storm Spirit",
+  "description": "Everyone complains about the weather…well, I'm doing something about it! Raijin Thunderkeg, the Storm Spirit.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Escape",
@@ -12,6 +13,44 @@
     "strength": 21,
     "agility": 22,
     "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.6,
+    "intelligence": 3.7
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "mana": 44.4,
+    "manaRegen": 0.185,
+    "armor": 0.43,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.7
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.6,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 4.67,
+    "magicResistance": 27.3,
+    "damageMin": 47,
+    "damageMax": 57,
+    "damageAverage": 52,
+    "projectileSpeed": 1100,
+    "attackRange": 480,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 137,
+    "bat": 1.6,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.3,
+    "moveSpeed": 285,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

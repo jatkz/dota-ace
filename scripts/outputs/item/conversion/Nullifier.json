@@ -5,12 +5,17 @@
   "abilities": [
     {
       "name": "Nullify",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Launches a projectile at the target enemy, that applies a debuff which continuously dispels them and slows their movement speed. Cooldown: 10. Mana Cost: 0. Cast Range: 900. Move Speed Slow: 10%. Duration: 4."
     }
   ],
   "stats": {
     "Armor": "+10",
     "Attack Damage": "+75"
-  }
+  },
+  "recipe": [
+    "Sacred Relic",
+    "Splintmail"
+  ],
+  "sellValue": 2175
 }

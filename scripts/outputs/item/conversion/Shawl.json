@@ -2,10 +2,13 @@
   "name": "Shawl",
   "cost": 450,
   "description": "The page has not been checked",
-  "abilities": [],
   "stats": {
-    "Cost": 450,
-    "Sell Value": 225,
-    "Bonus": "+10% Magic Resistance"
-  }
+    "Magic Resistance": "+10%"
+  },
+  "buildsInto": [
+    "Pipe of Insight",
+    "Consecrated Wraps",
+    "Glimmer Cape"
+  ],
+  "sellValue": 225
 }

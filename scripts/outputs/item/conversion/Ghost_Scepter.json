@@ -5,13 +5,17 @@
   "abilities": [
     {
       "name": "Ghost Form",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Turns the wielder ethereal, rendering them immune to physical damage and not attackable, but more vulnerable to magical damage, as well as disarming them. Cooldown: 22. Duration: 4."
     }
   ],
   "stats": {
     "Strength": "+5",
     "Agility": "+5",
     "Intelligence": "+5"
-  }
+  },
+  "buildsInto": [
+    "Crella's Crozier",
+    "Ethereal Blade"
+  ]
 }

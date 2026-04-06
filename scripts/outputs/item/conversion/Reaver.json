@@ -2,8 +2,12 @@
   "name": "Reaver",
   "cost": 2800,
   "description": "A massive axe capable of tearing whole mountains down.",
-  "abilities": [],
   "stats": {
     "Strength": "+25"
-  }
+  },
+  "buildsInto": [
+    "Heart of Tarrasque",
+    "Satanic",
+    "Overwhelming Blink"
+  ]
 }

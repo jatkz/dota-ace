@@ -1,6 +1,7 @@
 {
   "name": "Grimstroke",
-  "description": "I'll paint this world as I see fit.",
+  "description": "I'll paint this world as I see fit. Grimstroke Yaovhi is uncontrollable at all times. She travels forth to the enemy unit and back to Grimstroke at the same speed, and can be attacked upon spawned.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -12,11 +13,50 @@
     "agility": 18,
     "intelligence": 25
   },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1.9,
+    "intelligence": 3.8
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "armor": 0.32,
+    "attackSpeed": 1.9,
+    "mana": 45.6,
+    "manaRegen": 0.19,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.8
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3,
+    "magicResistance": 27.5,
+    "damageMin": 47,
+    "damageMax": 51,
+    "damageAverage": 49,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.85,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Ink Trail",
       "type": "passive",
-      "description": "Both attack damage and spell damage sourced to Grimstroke applies a debuff on enemy heroes that exposes them. The debuff causes affected enemy units to deal less damage to Grimstroke."
+      "description": "Both attack damage and spell damage sourced to Grimstroke applies a debuff on enemy heroes that exposes them. The debuff causes affected enemy units to deal less damage to Grimstroke. The higher Grimstroke's level, the greater the incoming damage reduction value."
     },
     {
       "name": "Stroke of Fate",
@@ -31,7 +71,7 @@
     {
       "name": "Ink Swell",
       "type": "active",
-      "description": "Applies a basic dispel on the target upon cast. Ink Swell tendrils now heal the affected allied unit based on the damage dealt, and spell lifesteals from the ink explosion damage. Increases damage."
+      "description": "Applies a basic dispel on the target upon cast. Ink Swell tendrils now heal the affected allied unit based on the damage dealt, and spell lifesteals from the ink explosion damage. Increases damage. The heal and spell lifesteal component is less effective when affecting creeps."
     },
     {
       "name": "Dark Portrait",

@@ -1,6 +1,7 @@
 {
   "name": "Pudge",
   "description": "When I'm through with these vermin, they'll be fit for a pie! Pudge, the Butcher Disables the unit-targeted enemy, and deals damage over time based on Pudge's current.",
+  "attackType": "Melee",
   "roles": [
     "Disabler",
     "Initiator",
@@ -12,6 +13,43 @@
     "strength": 25,
     "agility": 11,
     "intelligence": 16
+  },
+  "attributeGains": {
+    "strength": 3,
+    "agility": 1.4,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 66,
+    "healthRegen": 0.3,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.23,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 5,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 1.83,
+    "magicResistance": 26.6,
+    "damageMin": 70,
+    "damageMax": 76,
+    "damageAverage": 73,
+    "projectileSpeed": "Instant",
+    "attackRange": 175,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 111,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 1.17,
+    "moveSpeed": 280,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

@@ -6,10 +6,12 @@
     {
       "name": "Corrosion",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks apply armor reduction and movement speed slow on enemy units. Armor Reduction: 2. Move Speed Slow: 8%. Duration: 2. Health Restore Reduction: 16%. Move Speed Slow: 16%. The corrosive attacks also reduce the effectiveness of health restoration on the targets."
     }
   ],
-  "stats": {
-    "Bonus Agility": "+7"
-  }
+  "recipe": [
+    "Orb of Frost",
+    "Orb of Blight",
+    "Band of Elvenskin"
+  ]
 }

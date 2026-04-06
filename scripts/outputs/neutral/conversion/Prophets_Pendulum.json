@@ -1,9 +1,9 @@
 {
   "name": "Prophet's Pendulum",
-  "description": "A Tier 4 artifact.",
+  "description": "Reduces incoming damage by 30% and delays the remaining 70% over 5 seconds.",
   "tier": "4",
   "effects": {
-    "primary": "None"
+    "primary": "30% of incoming damage is delayed over 5 seconds, with a total damage reduction of 30%."
   },
   "notes": []
 }

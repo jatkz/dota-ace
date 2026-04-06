@@ -4,6 +4,12 @@
   "description": "One of the oldest weapons forged by the Demon-Smith Abzidian, it killed its maker when he tested its edge.",
   "abilities": [],
   "stats": {
-    "Bonus": "+40 Attack Damage"
-  }
+    "Attack Damage": "+40"
+  },
+  "buildsInto": [
+    "Divine Rapier",
+    "Monkey King Bar",
+    "Daedalus",
+    "Silver Edge"
+  ]
 }

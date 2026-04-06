@@ -2,8 +2,15 @@
   "name": "Magic Stick",
   "cost": 200,
   "description": "A simple wand used to channel magic energies, it is favored by apprentice wizards and great warlocks alike.",
-  "abilities": [],
-  "stats": {
-    "Active": "Energy Charge"
-  }
+  "abilities": [
+    {
+      "name": "Energy Charge",
+      "type": "passive",
+      "description": "Uses up all charges to instantly heal and replenish the caster's health and mana based on the number of charges. Number of Charges: 10. Cooldown: 17. Mana Cost: 0. Heal per Charge: 15. Mana Restore per Charge: 15. Radius: 1200."
+    }
+  ],
+  "buildsInto": [
+    "Magic Wand"
+  ],
+  "sellValue": 100
 }

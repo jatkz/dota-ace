@@ -1,6 +1,7 @@
 {
   "name": "Kez",
   "description": "Flightless fury! Heh, that's what they call me.",
+  "attackType": "Melee",
   "roles": [
     "Escape",
     "Carry",
@@ -11,16 +12,55 @@
     "agility": 27,
     "intelligence": 20
   },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 3.5,
+    "intelligence": 1.7
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "armor": 0.58,
+    "attackSpeed": 3.5,
+    "mainAttackDamage": 3.5,
+    "mana": 20.4,
+    "manaRegen": 0.085,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 3.5,
+    "mana": 315,
+    "manaRegen": 1.25,
+    "armor": 5.5,
+    "magicResistance": 27,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": 0,
+    "attackRange": 225,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 127,
+    "bat": 1.9,
+    "animationPoint": 0.35,
+    "animationBackswing": 1.12,
+    "moveSpeed": 310,
+    "turnRate": 1,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Switch Discipline",
       "type": "passive",
-      "description": "Switches between his weapons — the Kazurai Katana and the Shodo Sai. The higher Kez's level, the lower the cooldown. Has a greater attack range and sets base attack time while equipping the Kazurai Katana. Increases total attack damage."
+      "description": "Switches between his weapons — the Kazurai Katana and the Shodo Sai."
     },
     {
       "name": "Echo Slash",
       "type": "active",
-      "description": "All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact. Cannot dash forward while being affected by sources. However, the Root source application does not prevent usage of ability."
+      "description": "is an ability of the. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact. Cannot and dash forward while being affected by sources. However, the Root source application does not prevent usage of ability."
     },
     {
       "name": "Falcon Rush",
@@ -30,7 +70,7 @@
     {
       "name": "Grappling Claw",
       "type": "active",
-      "description": "Swings on a grappling hook toward the unit-targeted tree or enemy. Applies movement speed slow on the affected enemy until Kez reaches it. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact."
+      "description": "Swings on a grappling hook toward the unit-targeted tree or enemy. Applies movement speed slow on the affected enemy until Kez reaches it. is an ability of the. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact."
     },
     {
       "name": "Talon Toss",
@@ -50,7 +90,7 @@
     {
       "name": "Raptor Dance",
       "type": "active",
-      "description": "After its cast time completion, Kez performs a series of radial slashes centered around him, dealing the enemy unit's max health as damage, and spell lifesteals from the damage dealt. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact."
+      "description": "After its cast time completion, Kez performs a series of radial slashes centered around him, dealing the enemy unit's max health as damage, and spell lifesteals from the damage dealt. is an ability of the. All Katana Discipline abilities applies the Kazurai Katana debuff of its corresponding level upon impact."
     },
     {
       "name": "Raven's Veil",

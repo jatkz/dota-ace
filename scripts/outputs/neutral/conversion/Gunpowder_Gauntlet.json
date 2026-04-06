@@ -1,9 +1,9 @@
 {
   "name": "Gunpowder Gauntlet",
-  "description": "A Tier 3 neutral item artifact.",
+  "description": "Deals additional magical damage on the next attack with a cooldown of 10 seconds, and has a splash effect that deals 50% of the primary target's damage within a radius of 250 units.",
   "tier": "3",
   "effects": {
-    "primary": "Beat the Crowd"
+    "primary": "The next attack deals 156 magical attack damage bonus to the primary target and additional 50% splash damage within 250 units. Cooldown: 10 seconds."
   },
   "notes": []
 }

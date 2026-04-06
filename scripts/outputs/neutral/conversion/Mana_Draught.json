@@ -1,9 +1,11 @@
 {
   "name": "Mana Draught",
-  "description": "A Tier 2 neutral item artifact that provides mana regeneration benefits.",
+  "description": "Restores mana over time through increased regeneration and provides a cooldown reduction near water sources.",
   "tier": "2",
   "effects": {
-    "primary": "Provides active and passive mana regeneration effects."
+    "primary": "Restores 70 mana plus 3% of max mana over 6 seconds, with a 60-second cooldown."
   },
-  "notes": []
+  "notes": [
+    "Cooldown is reduced to 42 seconds when standing in waters."
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "Bristleback",
   "description": "It was a barkeep that got me into this mess. Yeah, I think I'll pay em a visit when this is done.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Durable",
@@ -11,6 +12,45 @@
     "strength": 22,
     "agility": 17,
     "intelligence": 14
+  },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 1.8,
+    "intelligence": 2.8
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "mana": 33.6,
+    "manaRegen": 0.14,
+    "armor": 0.3,
+    "attackSpeed": 1.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 3.2,
+    "mana": 243,
+    "manaRegen": 1.1,
+    "armor": 3.83,
+    "magicResistance": 26.4,
+    "damageMin": 53,
+    "damageMax": 59,
+    "damageAverage": 56,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.8,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 295,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -41,7 +81,7 @@
     {
       "name": "Warpath",
       "type": "passive",
-      "description": "Grants self flat bonus attack damage and bonus movement speed every time Rigwarl casts a spell. Does not bestow current stacks."
+      "description": "Grants self flat bonus attack damage and bonus movement speed every time Rigwarl casts a spell. Does not bestow current stacks. However, the ability grants all created whenever gains one. Other ability components are fully functional with all illusion-mechanic notes apply."
     }
   ]
 }

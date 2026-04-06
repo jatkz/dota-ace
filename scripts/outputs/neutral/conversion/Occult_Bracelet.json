@@ -1,9 +1,9 @@
 {
   "name": "Occult Bracelet",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Provides mana regeneration upon being attacked.",
   "tier": "1",
   "effects": {
-    "primary": "Passive: Rites of Eloshar"
+    "primary": "Gains up to 5 stacks of 0.4 mana regen when attacked, lasting 5 seconds per stack."
   },
   "notes": []
 }

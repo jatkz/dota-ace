@@ -2,14 +2,18 @@
   "name": "Blood Grenade",
   "cost": 50,
   "description": "Both the hunter and the hunted must pay the blood price.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Throw Grenade",
+      "type": "passive",
+      "description": "Throws a grenade at an area-targeted location that damages upon impact. Cooldown: 10. Mana Cost: 0. Health Cost: 75. Cast Range: 900. Effect Radius: 300. First Damage: 50. Additionally applies a movement speed slow and damage per second debuff on all affected enemy units."
+    }
+  ],
   "stats": {
-    "Cost": 50,
-    "Sell Value": "25 / Count",
     "Stacks": "2 MAX / Inventory Slot",
     "Stock": "1 INIT / 2 MAX",
-    "Active": "Throw Grenade",
     "Charges": "1 INIT",
-    "Bonus": "+50 Health"
-  }
+    "Health": "+50"
+  },
+  "sellValue": "25 / Count"
 }

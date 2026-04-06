@@ -1,9 +1,11 @@
 {
   "name": "Riftshadow Prism",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Creates an illusion at the cost of some health. The illusion has reduced damage dealt and increased damage taken.",
   "tier": "5",
   "effects": {
-    "primary": "Active: Refract"
+    "primary": "Refract: Creates an illusion with full health, takes 8% of current HP as cost, deals 50% of damage, takes 200% of damage, lasts for 20 seconds."
   },
-  "notes": []
+  "notes": [
+    "Cooldown: 30 seconds."
+  ]
 }

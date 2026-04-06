@@ -2,13 +2,17 @@
   "name": "Healing Salve",
   "cost": 100,
   "description": "A magical salve that can quickly mend even the deepest of wounds.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Salve",
+      "type": "active",
+      "description": "Increases the target's health regeneration for a while. Cooldown: 0 seconds. Cast Range: 250. Health Regen Bonus: 30 over 13 seconds."
+    }
+  ],
   "stats": {
-    "Cost": 100,
-    "Sell Value": "50 / Count",
     "Stacks": "NO LIMIT / Inventory Slot",
     "Stock": "5 INIT / 5 MAX",
-    "Active": "Salve",
     "Charges": "1 INIT"
-  }
+  },
+  "sellValue": "50 / Count"
 }

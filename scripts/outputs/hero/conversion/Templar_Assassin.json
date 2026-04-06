@@ -1,6 +1,7 @@
 {
   "name": "Templar Assassin",
-  "description": "Where the Hidden Ones send me, I go without question.",
+  "description": "Where the Hidden Ones send me, I go without question. I do not even question why I question not.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Escape"
@@ -10,11 +11,50 @@
     "agility": 23,
     "intelligence": 20
   },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 3.2,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "armor": 0.53,
+    "attackSpeed": 3.2,
+    "mainAttackDamage": 3.2,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.1,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 3.83,
+    "magicResistance": 27,
+    "damageMin": 51,
+    "damageMax": 56,
+    "damageAverage": 53.5,
+    "projectileSpeed": 1000,
+    "attackRange": 250,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.6,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.5,
+    "moveSpeed": 310,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Refraction",
       "type": "active",
-      "description": "Grants all damage barrier instances that negates damage. Both the damage negation component and the bonus attack damage component have a limited number of instances and are independent of each other. gains an additional bonus attack damage charge every time a barrier instance is depleted."
+      "description": "Grants all damage barrier instances that negates damage. Both the damage negation component and the bonus attack damage component have a limited number of instances and are independent of each other. Gains an additional bonus attack damage charge every time a barrier instance is depleted."
     },
     {
       "name": "Meld",
@@ -29,12 +69,12 @@
     {
       "name": "Psionic Projection",
       "type": "active",
-      "description": "Teleports Lanaya to the nearest Psionic Trap after channeling and detonates it upon arrival, damaging and slowing enemy units around it."
+      "description": "Teleports Lanaya to the nearest Psionic Trap after channeling and detonates it upon arrival, damaging and slowing enemy units around it. Sources does not prevent the ability cast. However, it immediately stops the ability while the debuff is active. The ability neither goes into nor consumes. Does not interrupt while already, but prevents the component from being applied to Lanaya once the channel completes."
     },
     {
       "name": "Psionic Trap",
       "type": "active",
-      "description": "The Psionic Trap can only be denied by Lanaya anytime, and applies all Psi Blades ability effects of its corresponding level if applicable."
+      "description": "The Psionic Trap can only be denied by Lanaya anytime, and applies all Psi Blades ability effects of its corresponding level if applicable. Destroys this unit in one punch. Specifically does not grant vision within Roshan's pit."
     }
   ]
 }

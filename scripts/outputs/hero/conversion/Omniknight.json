@@ -1,6 +1,7 @@
 {
   "name": "Omniknight",
-  "description": "A hard-fighting knight sworn to the Omniscience, now a divine being with powerful healing and protective abilities.",
+  "description": "I have gazed into the Omniscience, and it has gazed into me.",
+  "attackType": "Melee",
   "roles": [
     "Support",
     "Durable",
@@ -11,16 +12,55 @@
     "agility": 15,
     "intelligence": 16
   },
+  "attributeGains": {
+    "strength": 3.1,
+    "agility": 2,
+    "intelligence": 2.1
+  },
+  "statGains": {
+    "health": 68.2,
+    "healthRegen": 0.31,
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.45,
+    "mana": 267,
+    "manaRegen": 0.8,
+    "armor": 5.5,
+    "magicResistance": 26.6,
+    "damageMin": 53,
+    "damageMax": 63,
+    "damageAverage": 58,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.433,
+    "animationBackswing": 0.567,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Degen Aura",
       "type": "passive",
-      "description": "Applies an enemy unique incoming damage amplification on affected enemy units."
+      "description": "Additionally applies an enemy unique incoming damage amplification on affected enemy units. This affects all enemy incoming damage sourced to Omniknight."
     },
     {
       "name": "Healing Hammer",
       "type": "passive",
-      "description": "Converts all spell damage dealt into self heal per second."
+      "description": "The All Seeing One converts all spell damage dealt into self heal per second."
     },
     {
       "name": "Purification",
@@ -30,7 +70,7 @@
     {
       "name": "Repel",
       "type": "active",
-      "description": "Grants debuff immunity to the targeted allied hero and additional health regeneration based on active debuffs."
+      "description": "Grants debuff immunity to the targeted allied hero. The buff additionally grants bonus and health regeneration corresponding to the amount of current active debuffs on them."
     },
     {
       "name": "Hammer of Purity",

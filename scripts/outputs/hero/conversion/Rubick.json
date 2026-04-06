@@ -1,6 +1,7 @@
 {
   "name": "Rubick",
-  "description": "No sorcery lies beyond my grasp. Rubick, the Grand Magus Rubick is a melee hero upon Battle Stance toggle on. Reverts to his original attack range type regardless of the toggled state upon losing the ability.",
+  "description": "No sorcery lies beyond my grasp.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Disabler",
@@ -11,26 +12,65 @@
     "agility": 23,
     "intelligence": 24
   },
+  "attributeGains": {
+    "strength": 2,
+    "agility": 2.5,
+    "intelligence": 3.7
+  },
+  "statGains": {
+    "health": 44,
+    "healthRegen": 0.2,
+    "armor": 0.42,
+    "attackSpeed": 2.5,
+    "mana": 44.4,
+    "manaRegen": 0.185,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.7
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 363,
+    "manaRegen": 1.7,
+    "armor": 4.83,
+    "magicResistance": 27.4,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": 1125,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.77,
+    "moveSpeed": 290,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Telekinesis",
       "type": "active",
-      "description": "Utilizes his telekinetic powers to lift the enemy unit into the air briefly, then hurls them back at the ground. The affected unit lands on the ground with such force that it stuns other enemy units within the radius."
+      "description": "Utilizes his telekinetic powers to lift the enemy unit into the air briefly, then hurls them back at the ground. The affected unit lands on the ground with such force that it stuns other enemy units within the radius. Both and the cannot be lifted. However, the ability applies stun during the lift duration, then applies the landing ability effects within the radius afterward."
     },
     {
       "name": "Fade Bolt",
       "type": "active",
-      "description": "A powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack damage. Each bolt bounce instance deals lesser damage."
+      "description": "A powerful stream of arcane energy that travels between enemy units, dealing damage and reducing their attack damage. Each bolt bounce instance deal lesser damage."
     },
     {
       "name": "Arcane Supremacy",
       "type": "passive",
-      "description": "Grants a flat area-of-effect stack bonus per ability cast."
+      "description": "grants a flat area-of-effect stack bonus per ability cast."
     },
     {
       "name": "Spell Steal",
       "type": "active",
-      "description": "Increases cast range and the number of acquirable abilities. Reduces the target's mana cost."
+      "description": "Increases cast range and the number of acquirable abilities. Reduces the 's mana cost."
     }
   ]
 }

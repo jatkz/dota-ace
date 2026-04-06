@@ -1,18 +1,21 @@
 {
   "name": "Smoke of Deceit",
   "cost": 50,
+  "recipeCost": null,
   "description": "The charlatan wizard Myrddin's only true contribution to the arcane arts.",
   "abilities": [
     {
       "name": "Disguise",
-      "type": "",
-      "description": ""
+      "type": "passive",
+      "description": "While still disguised, any allied unit that comes within proximity of the caster also gets the buff applied to them. Cooldown: 1. Application Radius: 1200. Dispel Radius: 1025. Move Speed Bonus: 15%. Duration: 45. Proximity Radius: 300. Can be used directly from the backpack, and the 6-second penalty cooldown does not apply to Smoke of Deceit."
     }
   ],
   "stats": {
-    "Sell Value": "25 / Count",
     "Stacks": "NO LIMIT / Inventory Slot",
     "Stock": "2 INIT / 3 MAX",
     "Charges": "1 INIT"
-  }
+  },
+  "recipe": null,
+  "buildsInto": null,
+  "sellValue": "25 / Count"
 }

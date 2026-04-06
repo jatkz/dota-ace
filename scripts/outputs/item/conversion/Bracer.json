@@ -1,11 +1,18 @@
 {
   "name": "Bracer",
   "cost": 505,
+  "recipeCost": 210,
   "description": "The bracer is a common choice to toughen up defenses and increase longevity.",
   "abilities": [],
   "stats": {
-    "Cost": 505,
-    "Sell Value": 252.5,
-    "Bonus": "+5 Strength+2 Agility+2 Intelligence+50 Health+0.75 Health Regeneration"
-  }
+    "Strength": "+5",
+    "Agility": "+2",
+    "Intelligence": "+2",
+    "Health": "+50",
+    "Health Regeneration": "+0.75"
+  },
+  "recipe": [
+    "Circlet",
+    "Gauntlets of Strength"
+  ]
 }

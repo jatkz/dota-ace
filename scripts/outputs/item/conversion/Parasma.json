@@ -1,13 +1,29 @@
 {
   "name": "Parasma",
   "cost": 5975,
+  "recipeCost": 400,
   "description": "Warning: There is no antidote if picked up by the wrong end.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Witch Blade",
+      "type": "passive",
+      "description": "The next attack poisons the target, slowing their movement speed and dealing damage over time, based on the wielder's intelligence. This attack cannot miss. Cooldown: 9 seconds. Intelligence as Damage per Second: 75%. Move Speed Slow: 25%. Duration: 4 seconds."
+    },
+    {
+      "name": "Magic Corruption",
+      "type": "passive",
+      "description": "The wielder's attacks apply a magic resistance reducing debuff on enemy units. Duration: 4 seconds."
+    }
+  ],
   "stats": {
     "Intelligence": "+40",
     "Mana Regeneration": "+1.5",
     "Armor": "+7",
     "Attack Speed": "+40",
     "Projectile Speed": "+300"
-  }
+  },
+  "recipe": [
+    "Witch Blade",
+    "Mystic Staff"
+  ]
 }

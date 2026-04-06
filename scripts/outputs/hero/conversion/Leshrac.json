@@ -1,6 +1,7 @@
 {
   "name": "Leshrac",
-  "description": "Imbalance demands it. Leshrac, the Tormented Soul, is an entity torn from the heart of nature, a liminal being that exists half in one plane of existence, half in another.",
+  "description": "Imbalance demands it. Leshrac, the Tormented Soul Leshrac, Tormented Soul, is an entity torn from the heart of nature, a liminal being that exists half in one plane of existence, half in another. His penetrating intelligence is such that he can never ignore for a moment the agonizing horror at the heart of all creation.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Support",
@@ -12,6 +13,45 @@
     "strength": 20,
     "agility": 17,
     "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 2.5,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "armor": 0.42,
+    "attackSpeed": 2.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.5
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 3.83,
+    "magicResistance": 27.2,
+    "damageMin": 49,
+    "damageMax": 53,
+    "damageAverage": 51,
+    "projectileSpeed": 900,
+    "attackRange": 575,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.6,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -32,7 +72,7 @@
     {
       "name": "Lightning Storm",
       "type": "active",
-      "description": "Summons a lightning storm that damages the unit-targeted enemy, then jumps to nearby enemy units. Applies a movement speed slow to all affected enemy units."
+      "description": "Summons a lightning storm that damages the unit-targeted enemy, then jumps to nearby enemy units. Applies a movement speed slow to all affected enemy units. Lightning Storm Slow."
     },
     {
       "name": "Nihilism",

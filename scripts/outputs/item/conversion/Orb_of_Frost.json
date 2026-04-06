@@ -6,8 +6,12 @@
     {
       "name": "Frost",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks apply a movement speed slow on enemy units. Move Speed Slow: 6%. Duration: 3. Health Restore Reduction: 13%. Move Speed Slow: 13%. The frigid attacks also reduce the effectiveness of health restoration on the targets."
     }
   ],
-  "stats": {}
+  "buildsInto": [
+    "Eye of Skadi",
+    "Orb of Corrosion"
+  ],
+  "sellValue": 150
 }

@@ -1,24 +1,29 @@
 {
   "name": "Bloodstone",
   "cost": 4700,
+  "recipeCost": null,
   "description": "The Bloodstone's bright ruby color is unmistakable on the battlefield, as the owner seems to have infinite vitality and spirit.",
   "abilities": [
     {
       "name": "Bloodpact",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Greatly increases the passive spell lifesteal for a while. Cooldown: 30. Duration: 5."
     },
     {
       "name": "Spell Weakness Aura",
       "type": "passive",
-      "description": ""
+      "description": "Weakens nearby enemies by applying a debuff that amplifies any spell damage they take. Radius: 1200. Spell Damage Amp: 12%."
     }
   ],
   "stats": {
     "Intelligence": "+15",
     "Health": "+650",
-    "Mana": "+450",
-    "Spell Lifesteal (Hero)": "+20%",
-    "Spell Lifesteal (Creep)": "+4%"
-  }
+    "Mana": "+450"
+  },
+  "recipe": [
+    "Veil of Discord",
+    "Soul Booster"
+  ],
+  "buildsInto": null,
+  "sellValue": 2350
 }

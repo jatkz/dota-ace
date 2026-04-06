@@ -1,21 +1,28 @@
 {
   "name": "Shiva's Guard",
   "cost": 4500,
+  "recipeCost": 1350,
   "description": "Said to have belonged to a goddess, today it retains much of its former power.",
   "abilities": [
     {
       "name": "Arctic Blast",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Emits an expanding freezing wave that follows and covers an area around the caster, dealing damage and slowing movement speed of enemies as it reaches them. Cooldown: 27. Mana Cost: 75. Radius: 825. Damage: 260. Move Speed Slow: 40%. Slow Duration: 4. Also weakens enemies hit by the wave, applying a debuff that amplifies any spell damage they take. The debuff is applied before the ability's damage is applied."
     },
     {
       "name": "Freezing Aura",
       "type": "passive",
-      "description": ""
+      "description": "Reduces the attack speed of nearby enemies. Radius: 1200. Attack Speed Slow: 45. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
     "Armor": "+17",
-    "AoE Radius": "+75"
-  }
+    "Ao E Radius": "+75"
+  },
+  "recipe": [
+    "Platemail",
+    "Splintmail",
+    "Chasm Stone"
+  ],
+  "sellValue": 2250
 }

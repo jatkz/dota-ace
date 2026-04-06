@@ -1,6 +1,7 @@
 {
   "name": "Troll Warlord",
-  "description": "I suffer the innocents and guilty alike. There are no innocents. Jah'rakal, the Troll Warlord",
+  "description": "I suffer the innocents and guilty alike. There are no innocents. Jah'rakal, the Troll Warlord.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Pusher",
@@ -11,6 +12,45 @@
     "strength": 21,
     "agility": 23,
     "intelligence": 13
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 3.3,
+    "intelligence": 1
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "armor": 0.55,
+    "attackSpeed": 3.3,
+    "mainAttackDamage": 3.3,
+    "mana": 12,
+    "manaRegen": 0.05,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 231,
+    "manaRegen": 0.65,
+    "armor": 2.83,
+    "magicResistance": 26.3,
+    "damageMin": 50,
+    "damageMax": 58,
+    "damageAverage": 54,
+    "projectileSpeed": 1200,
+    "attackRange": 500,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.3,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

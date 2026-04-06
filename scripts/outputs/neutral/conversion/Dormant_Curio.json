@@ -1,9 +1,9 @@
 {
   "name": "Dormant Curio",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Increases the potency of neutral items crafted while holding it.",
   "tier": "1",
   "effects": {
-    "primary": "Hidden Potential"
+    "primary": "Neutral items crafted while holding the Dormant Curio have their potency increased considerably."
   },
   "notes": []
 }

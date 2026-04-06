@@ -1,15 +1,22 @@
 {
   "name": "Boots of Travel",
   "cost": 2500,
+  "recipeCost": 2000,
   "description": "Winged boots that grant omnipresence.",
   "abilities": [
     {
-      "name": "Upgrade: Town Portal Scroll",
+      "name": "Upgrade Town Portal Scroll",
       "type": "passive",
-      "description": ""
+      "description": "Refunds all Town Portal Scrolls the hero currently has equipped, using the regular sellback value. After that, grants the hero a new Town Portal Scroll for free. Teleport Cooldown: 40."
     }
   ],
   "stats": {
-    "Bonus Move Speed": "+90/110"
-  }
+    "Move Speed": "+90/110"
+  },
+  "recipe": [
+    "Boots of Speed"
+  ],
+  "buildsInto": [
+    "Boots of Travel 2"
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "Medusa",
   "description": "The only real beauty is power.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Disabler",
@@ -10,6 +11,45 @@
     "strength": 0,
     "agility": 22,
     "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 0,
+    "agility": 3.6,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 0,
+    "healthRegen": 0,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "armor": 0.6,
+    "attackSpeed": 3.6,
+    "mainAttackDamage": 3.6,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 120,
+    "healthRegen": 0.25,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 2.67,
+    "magicResistance": 27.5,
+    "damageMin": 48,
+    "damageMax": 54,
+    "damageAverage": 51,
+    "projectileSpeed": 1200,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.6,
+    "moveSpeed": 275,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

@@ -1,6 +1,7 @@
 {
   "name": "Queen of Pain",
-  "description": "Akasha, the Queen of Pain The Ecclesiast-King of Elze nursed a desire for pain — forbidden pain.",
+  "description": "They say pain is all in the mind, but they're wrong: It's all in my hands.",
+  "attackType": "Ranged",
   "roles": [
     "Escape",
     "Carry",
@@ -10,6 +11,45 @@
     "strength": 20,
     "agility": 22,
     "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.5,
+    "intelligence": 3.4
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "armor": 0.42,
+    "attackSpeed": 2.5,
+    "mana": 40.8,
+    "manaRegen": 0.17,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3.67,
+    "magicResistance": 27.5,
+    "damageMin": 51,
+    "damageMax": 57,
+    "damageAverage": 54,
+    "projectileSpeed": 1500,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.5,
+    "animationPoint": 0.56,
+    "animationBackswing": 0.41,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

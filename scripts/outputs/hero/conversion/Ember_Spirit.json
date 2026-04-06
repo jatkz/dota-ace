@@ -1,6 +1,7 @@
 {
   "name": "Ember Spirit",
   "description": "Balance in all things. Xin, the Ember Spirit This page is about the hero Ember Spirit.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Escape",
@@ -12,6 +13,45 @@
     "strength": 22,
     "agility": 22,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 3.2,
+    "intelligence": 2.2
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "armor": 0.53,
+    "attackSpeed": 3.2,
+    "mainAttackDamage": 3.2,
+    "mana": 26.4,
+    "manaRegen": 0.11,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 604,
+    "healthRegen": 2.7,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 3.67,
+    "magicResistance": 27,
+    "damageMin": 55,
+    "damageMax": 59,
+    "damageAverage": 57,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 300,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

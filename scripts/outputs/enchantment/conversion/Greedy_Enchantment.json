@@ -3,9 +3,9 @@
   "description": "A guaranteed Tier 2–3 neutral item enchantment for all heroes.",
   "tier": "2",
   "effects": {
-    "primary_effect": "+200/250 Mana, +30/60 Attack Damage, +75/100 Gold /min"
+    "primary": "+200/250 Mana, +30/60 Attack Damage, +75/100 Gold /min."
   },
   "notes": [
-    "Tier 2–3"
+    "Tier 2–3."
   ]
 }

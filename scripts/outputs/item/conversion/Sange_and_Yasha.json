@@ -2,7 +2,6 @@
   "name": "Sange and Yasha",
   "cost": 4200,
   "description": "Sange and Yasha, when attuned by the moonlight and used together, become a very powerful combination.",
-  "abilities": [],
   "stats": {
     "Strength": "+16",
     "Agility": "+16",
@@ -11,5 +10,9 @@
     "Move Speed": "+12%",
     "Attack Speed": "+20",
     "Health Restore Amp": "+20%"
-  }
+  },
+  "recipe": [
+    "Yasha",
+    "Sange"
+  ]
 }

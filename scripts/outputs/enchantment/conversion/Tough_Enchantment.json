@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 1–4 neutral item enchantment for Strength and Intelligence heroes.",
   "tier": "1",
   "effects": {
-    "primary_effect": "+0/4/6/8 Armor, +0/0/0/40% Knockback Resistance, +7/10/13/16 Attack Damage"
+    "primary": "+0/4/6/8 Armor, +0/0/0/40% Knockback Resistance, +7/10/13/16 Attack Damage."
   },
   "notes": []
 }

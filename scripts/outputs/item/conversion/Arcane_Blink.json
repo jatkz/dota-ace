@@ -1,11 +1,21 @@
 {
   "name": "Arcane Blink",
   "cost": 6800,
+  "recipeCost": 1750,
   "description": "A revitalizing tool to help bear the weight of arcane expenditure.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Arcane Blink",
+      "type": "active",
+      "description": "Instantly teleports the wielder towards the targeted point. Cooldown: 9. Mana Cost: 0. Cast Range: Global. Max Blink Distance: 1400. Heal: 250. After the teleportation, heals and replenishes the caster's health and mana."
+    }
+  ],
   "stats": {
-    "Sell Value": 3400,
-    "Active": "Arcane Blink",
-    "Bonus": "+25 Intelligence"
-  }
+    "Intelligence": "+25"
+  },
+  "recipe": [
+    "Blink Dagger",
+    "Mystic Staff"
+  ],
+  "sellValue": 3400
 }

@@ -1,17 +1,22 @@
 {
   "name": "Revenant's Brooch",
   "cost": 3300,
+  "recipeCost": 650,
   "description": "The cursed brooch of a fallen guardian who stalks forever between the veil of life and death.",
   "abilities": [
     {
       "name": "Phantom Critical",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks have a chance to inflict critical magical damage. Proc Chance: 30%. Critical Damage: 80%."
     }
   ],
   "stats": {
-    "+Attack Damage": 35,
-    "+Spell Lifesteal (Hero)": 15,
-    "+Spell Lifesteal (Creep)": 3
-  }
+    "Attack Damage": "+35",
+    "Spell Lifesteal (Hero)": "+15%",
+    "Spell Lifesteal (Creep)": "+3%"
+  },
+  "recipe": [
+    "Crystalys",
+    "Voodoo Mask"
+  ]
 }

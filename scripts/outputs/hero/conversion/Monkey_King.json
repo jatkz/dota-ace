@@ -1,6 +1,7 @@
 {
   "name": "Monkey King",
   "description": "There's a lot of stories about the Monkey King. Some of 'em are even true.",
+  "attackType": "Melee",
   "roles": [
     "Escape",
     "Carry",
@@ -12,11 +13,49 @@
     "agility": 24,
     "intelligence": 20
   },
+  "attributeGains": {
+    "strength": 2.8,
+    "agility": 3.7,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 61.6,
+    "healthRegen": 0.28,
+    "armor": 0.62,
+    "attackSpeed": 3.7,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.9,
+    "mana": 315,
+    "manaRegen": 1,
+    "armor": 5,
+    "magicResistance": 27,
+    "damageMin": 53,
+    "damageMax": 57,
+    "damageAverage": 55,
+    "projectileSpeed": "Instant",
+    "attackRange": 300,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 95,
+    "totalAttackSpeed": 119,
+    "bat": 1.6,
+    "animationPoint": 0.45,
+    "animationBackswing": 0.2,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Mischief",
       "type": "active",
-      "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming."
+      "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming. Within Roshan's pit and while it is dead, Mischief disguises the Monkey King as himself."
     },
     {
       "name": "Boundless Strike",
@@ -37,6 +76,16 @@
       "name": "Jingu Mastery",
       "type": "passive",
       "description": "Grants bonus attack damage and lifesteal for a number of subsequent attacks to its master."
+    },
+    {
+      "name": "Wukong’s Command",
+      "type": "active",
+      "description": "Creates a circular formation of soldiers that spread out from his position. Grants Monkey King bonus armor for its duration."
+    },
+    {
+      "name": "Clone Inventory",
+      "type": "passive",
+      "description": "These unselectable and uncontrollable Clones cannot use the items' active abilities. However, the items' passive effects are applied conditionally."
     }
   ]
 }

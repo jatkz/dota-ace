@@ -1,6 +1,7 @@
 {
   "name": "Nyx Assassin",
-  "description": "The blessing of Nyx gives me all the purpose I require. Nyx Assassin",
+  "description": "The blessing of Nyx gives me all the purpose I require.",
+  "attackType": "Melee",
   "roles": [
     "Disabler",
     "Nuker",
@@ -11,6 +12,45 @@
     "strength": 17,
     "agility": 18,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2.7,
+    "agility": 2.9,
+    "intelligence": 2.6
+  },
+  "statGains": {
+    "health": 59.4,
+    "healthRegen": 0.27,
+    "mana": 31.2,
+    "manaRegen": 0.13,
+    "armor": 0.48,
+    "attackSpeed": 2.9,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.69
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 3.7,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4,
+    "magicResistance": 27.1,
+    "damageMin": 51,
+    "damageMax": 55,
+    "damageAverage": 53.2,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.46,
+    "animationBackswing": 0.54,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

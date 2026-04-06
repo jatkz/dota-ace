@@ -6,10 +6,13 @@
     {
       "name": "Blink",
       "type": "active",
-      "description": ""
+      "description": "Instantly teleports the wielder towards the targeted point. Cooldown: 15. Mana Cost: 0. Cast Range: Global. Max Blink Distance: 1200."
     }
   ],
-  "stats": {
-    "Sell Value": 1125
-  }
+  "buildsInto": [
+    "Overwhelming Blink",
+    "Swift Blink",
+    "Arcane Blink"
+  ],
+  "sellValue": 1125
 }

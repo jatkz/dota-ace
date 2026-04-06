@@ -1,6 +1,7 @@
 {
   "name": "Morphling",
   "description": "You only miss the water when the well runs dry. Morphling The morphed illusion is a strong illusion that deals as much damage as Morphling and receives additional incoming damage.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Escape",
@@ -12,6 +13,44 @@
     "strength": 23,
     "agility": 24,
     "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 3.9,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.65,
+    "attackSpeed": 3.9,
+    "mainAttackDamage": 3.9
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.8,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 3,
+    "magicResistance": 26.9,
+    "damageMin": 33,
+    "damageMax": 42,
+    "damageAverage": 37.5,
+    "projectileSpeed": 1300,
+    "attackRange": 350,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.5,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 285,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

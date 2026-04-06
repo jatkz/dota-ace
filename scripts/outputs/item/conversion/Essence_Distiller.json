@@ -1,12 +1,13 @@
 {
   "name": "Essence Distiller",
   "cost": 1775,
+  "recipeCost": 200,
   "description": "Essence Distiller is an item purchasable at the Base Shop, under Support.",
   "abilities": [
     {
       "name": "Soul Release",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "When cast on an ally, consumes a charge to grant the target allied hero bonus health regeneration for a while. Number of Charges: ∞. Cooldown: 10. Mana Cost: 0. Cast Range: 1000. Health Regen Bonus: 40. Duration: 8. When cast on an enemy, consumes a charge to deal damage over time and provide True Sight to the target for a while. Can be ground targeted to lie dormant and attach to the first enemy that comes within range."
     }
   ],
   "stats": {
@@ -16,5 +17,10 @@
     "Mana": "+150",
     "Mana Regeneration": "+1.75",
     "Armor": "+5"
-  }
+  },
+  "recipe": [
+    "Urn of Shadows",
+    "Chainmail",
+    "Wizard Hat"
+  ]
 }

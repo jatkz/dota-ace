@@ -1,6 +1,7 @@
 {
   "name": "Luna",
   "description": "I was once the scourge of the plains, a terror on the wind. What hope do our enemies think they have? Luna, the Moon Rider Increases total beams and the Eclipse duration. Removes the limit on beams per unit, with the beams appearing twice as fast. Luna may now cast Eclipse on an area, an allied unit, or herself, and have the ability effects follow them.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Nuker",
@@ -10,6 +11,44 @@
     "strength": 21,
     "agility": 24,
     "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 3.4,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.6,
+    "mana": 351,
+    "manaRegen": 1.15,
+    "armor": 6,
+    "magicResistance": 27.3,
+    "damageMin": 50,
+    "damageMax": 56,
+    "damageAverage": 53,
+    "projectileSpeed": 900,
+    "attackRange": 330,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.54,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

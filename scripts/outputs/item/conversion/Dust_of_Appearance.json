@@ -5,13 +5,13 @@
   "abilities": [
     {
       "name": "Reveal",
-      "type": null,
-      "description": ""
+      "type": "passive",
+      "description": "The debuff applied on affected enemy units lingers after leaving the effect radius. Cooldown: 30. Effect Radius: 1050. Damage: 25. Move Speed Slow: 20%. Duration: 12. Aura Linger Duration: 8."
     }
   ],
   "stats": {
-    "Sell Value": "40 / Count",
     "Stacks": "NO LIMIT / Inventory Slot",
     "Charges": "1 INIT"
-  }
+  },
+  "sellValue": "40 / Count"
 }

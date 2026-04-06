@@ -1,17 +1,18 @@
 {
   "name": "Bloodthorn",
   "cost": 6400,
+  "recipeCost": 600,
   "description": "A reviled blade that bites deeper with each wriggle of its victim's final throes.",
   "abilities": [
     {
       "name": "Soul Rend",
       "type": "active",
-      "description": ""
+      "description": "Silences a target enemy for a while. At the end of the duration, a portion of all damage they took during the silence is dealt to them again, as magical damage. Cooldown: 15. Mana Cost: 150. Cast Range: 900. Accumulated Damage: 60%. Duration: 5. Bonus Magical Damage: 50. The caster's units gain full accuracy against the target. Additionally, whenever the target gets attacked by any unit, they take additional magical damage."
     },
     {
       "name": "Pierce",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage. Proc Chance: 40%. Bonus Magical Damage: 60."
     }
   ],
   "stats": {
@@ -19,5 +20,10 @@
     "Mana Regeneration": "+4",
     "Attack Damage": "+20",
     "Attack Speed": "+70"
-  }
+  },
+  "recipe": [
+    "Orchid Malevolence",
+    "Oblivion Staff",
+    "Javelin"
+  ]
 }

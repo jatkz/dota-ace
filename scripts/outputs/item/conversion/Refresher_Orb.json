@@ -1,16 +1,22 @@
 {
   "name": "Refresher Orb",
   "cost": 5000,
+  "recipeCost": 1600,
   "description": "A powerful artifact created for wizards.",
   "abilities": [
     {
       "name": "Reset Cooldowns",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Resets the cooldowns of all abilities of the wielder. Cooldown: 180. Mana Cost: 325. On the first three uses, the item's cooldown increases."
     }
   ],
   "stats": {
     "Health Regeneration": "+14",
     "Mana Regeneration": "+7"
-  }
+  },
+  "recipe": [
+    "Ring of Tarrasque",
+    "Tiara of Selemene"
+  ],
+  "sellValue": 2500
 }

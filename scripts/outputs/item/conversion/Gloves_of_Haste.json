@@ -2,8 +2,13 @@
   "name": "Gloves of Haste",
   "cost": 450,
   "description": "A pair of magical gloves that seems to render weapons weightless.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+20 Attack Speed"
-  }
+    "Attack Speed": "+20"
+  },
+  "buildsInto": [
+    "Power Treads",
+    "Hand of Midas",
+    "Armlet of Mordiggian",
+    "Maelstrom"
+  ]
 }

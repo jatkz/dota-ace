@@ -1,9 +1,21 @@
 {
   "name": "Kaya",
   "cost": 2100,
+  "recipeCost": 650,
   "description": "The staff of a renowned sorceress, lost for countless millennia.",
   "abilities": [],
   "stats": {
-    "Bonus": "+16 Intelligence+10% Spell Damage Amp+30% Mana Regen Amp"
-  }
+    "Intelligence": "+16",
+    "Spell Damage Amp": "+10%",
+    "Mana Regen Amp": "+30%"
+  },
+  "recipe": [
+    "Staff of Wizardry",
+    "Robe of the Magi"
+  ],
+  "buildsInto": [
+    "Yasha and Kaya",
+    "Meteor Hammer",
+    "Kaya and Sange"
+  ]
 }

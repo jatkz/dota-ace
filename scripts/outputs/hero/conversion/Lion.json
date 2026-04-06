@@ -1,6 +1,7 @@
 {
   "name": "Lion",
-  "description": "All hells broken loose, and I hold the pieces. Lion, the Demon Witch",
+  "description": "All hells broken loose, and I hold the pieces. Lion, the Demon Witch.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Disabler",
@@ -11,6 +12,45 @@
     "strength": 18,
     "agility": 15,
     "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 1.7,
+    "intelligence": 3.5
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 42,
+    "manaRegen": 0.175,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.5
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.3,
+    "mana": 303,
+    "manaRegen": 0.95,
+    "armor": 2.5,
+    "magicResistance": 26.9,
+    "damageMin": 48,
+    "damageMax": 54,
+    "damageAverage": 51,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 115,
+    "totalAttackSpeed": 130,
+    "bat": 1.7,
+    "animationPoint": 0.43,
+    "animationBackswing": 0.74,
+    "moveSpeed": 290,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

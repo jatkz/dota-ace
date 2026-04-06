@@ -1,6 +1,7 @@
 {
   "name": "Night Stalker",
-  "description": "I feed the darkness and the darkness feeds me.",
+  "description": "I feed the darkness and the darkness feeds me. Balanar, the Night Stalker Of the Night Stalker, there is no history, only stories.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Initiator",
@@ -13,6 +14,44 @@
     "strength": 23,
     "agility": 18,
     "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 3,
+    "agility": 2.2,
+    "intelligence": 1.6
+  },
+  "statGains": {
+    "health": 66,
+    "healthRegen": 0.3,
+    "mana": 19.2,
+    "manaRegen": 0.08,
+    "armor": 0.37,
+    "attackSpeed": 2.2,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 3.8,
+    "mana": 255,
+    "manaRegen": 1,
+    "armor": 5,
+    "magicResistance": 26.5,
+    "damageMin": 63,
+    "damageMax": 67,
+    "damageAverage": 65,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 118,
+    "bat": 1.7,
+    "animationPoint": 0.55,
+    "animationBackswing": 0.55,
+    "moveSpeed": 295,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 800,
+    "visionNight": 1800
   },
   "abilities": [
     {

@@ -1,9 +1,9 @@
 {
   "name": "Dezun Bloodrite",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Grants an Ao E bonus to all spells of the wielder, including items. Mana Cost is treated as Health Cost with a 35% conversion rate.",
   "tier": "5",
   "effects": {
-    "primary": "Blood Invocation"
+    "primary": "Ao E Bonus: 19.5%, Mana Cost as Health Cost: 35%."
   },
   "notes": []
 }

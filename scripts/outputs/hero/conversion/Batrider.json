@@ -1,6 +1,7 @@
 {
   "name": "Batrider",
-  "description": "It's not the bat you gotta worry about. She eats fruit.",
+  "description": "It's not the bat you gotta worry about. She eats fruit. Batrider is considered a ground unit, despite its hero model showing otherwise.",
+  "attackType": "Ranged",
   "roles": [
     "Initiator",
     "Disabler",
@@ -11,6 +12,45 @@
     "agility": 13,
     "intelligence": 22
   },
+  "attributeGains": {
+    "strength": 2.9,
+    "agility": 2,
+    "intelligence": 2.9
+  },
+  "statGains": {
+    "health": 63.8,
+    "healthRegen": 0.29,
+    "mana": 34.8,
+    "manaRegen": 0.145,
+    "armor": 0.33,
+    "attackSpeed": 2,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.51
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 3.55,
+    "mana": 339,
+    "manaRegen": 1.1,
+    "armor": 4.17,
+    "magicResistance": 27.2,
+    "damageMin": 38,
+    "damageMax": 42,
+    "damageAverage": 40.1,
+    "projectileSpeed": 900,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 113,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.54,
+    "moveSpeed": 320,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Smoldering Resin",
@@ -20,7 +60,7 @@
     {
       "name": "Sticky Napalm",
       "type": "active",
-      "description": "Damage instances sourced from the Batrider procs additional damage corresponding to the amount of applied stacks."
+      "description": "Damage instances sourced from the Batrider procs additional damage corresponding to the amount of applied stacks. It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents."
     },
     {
       "name": "Flamebreak",
@@ -30,12 +70,12 @@
     {
       "name": "Firefly",
       "type": "active",
-      "description": "Creates a fire trail that damages any enemy units upon contact and destroys trees below Batrider."
+      "description": "Creates a fire trail that damages any enemy units upon contact and destroys trees below Batrider. is immune this ability's damage component."
     },
     {
       "name": "Flaming Lasso",
       "type": "active",
-      "description": "Lassoes an enemy unit, disables and drags them in Batrider's wake. Successful teleport sources applied to either Batrider or the debuff-affected enemy unit break the lasso."
+      "description": "Lassoes an enemy unit, disables and drags them in Batrider's wake. Successful teleport sources applied to either Batrider or the debuff-affected enemy unit break the lasso. Roshan is innately immune to all forced movement sources. However, the damage component still applies to him."
     }
   ]
 }

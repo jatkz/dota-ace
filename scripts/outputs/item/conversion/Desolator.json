@@ -1,15 +1,26 @@
 {
   "name": "Desolator",
   "cost": 3500,
+  "recipeCost": null,
   "description": "A wicked weapon, used in torturing political criminals.",
   "abilities": [
     {
-      "name": "Corruption Soul Stealer",
+      "name": "Corruption",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's successful attack applies an armor reduction debuff on the affected enemy unit. Armor Reduction: 6. Duration: 7."
+    },
+    {
+      "name": "Soul Stealer",
+      "type": "passive",
+      "description": "Increases the item's bonus attack damage per debuff-affected enemy hero killed by Corruption. Attack Damage Bonus per Stack: 1."
     }
   ],
   "stats": {
     "Attack Damage": "+55"
-  }
+  },
+  "recipe": [
+    "Mithril Hammer",
+    "Orb of Blight"
+  ],
+  "buildsInto": null
 }

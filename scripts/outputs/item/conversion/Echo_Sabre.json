@@ -6,12 +6,20 @@
     {
       "name": "Echo Strike",
       "type": "passive",
-      "description": ""
+      "description": "The next attack grants the wielder a buff that greatly increases attack speed for one attack. Cooldown: 5. Mana Cost: 0. Attack Speed Bonus: 490. Number of Attacks: 1. Move Speed Slow: 100%. Duration: 0.8. The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow."
     }
   ],
   "stats": {
     "Strength": "+15",
     "Mana Regeneration": "+1.75",
     "Attack Damage": "+20"
-  }
+  },
+  "recipe": [
+    "Ogre Axe",
+    "Broadsword",
+    "Void Stone"
+  ],
+  "buildsInto": [
+    "Harpoon"
+  ]
 }

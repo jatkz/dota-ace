@@ -4,6 +4,12 @@
   "description": "Fine and functional foppery for the fashion-forward fighter.",
   "abilities": [],
   "stats": {
-    "Bonus": "+125 Health"
-  }
+    "Health": "+125"
+  },
+  "buildsInto": [
+    "Force Staff",
+    "Falcon Blade",
+    "Pavise",
+    "Veil of Discord"
+  ]
 }

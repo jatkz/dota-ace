@@ -1,6 +1,7 @@
 {
   "name": "Slardar",
-  "description": "I guard what slumbers in the deeps.",
+  "description": "I guard what slumbers in the deeps. Slardar, the Slithereen Guard Slardar is a Slithereen, one of the Deep Ones, guardian of a vast network of sunken cities and the ancient riches buried within them.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Durable",
@@ -12,6 +13,45 @@
     "strength": 21,
     "agility": 17,
     "intelligence": 15
+  },
+  "attributeGains": {
+    "strength": 3.4,
+    "agility": 2.1,
+    "intelligence": 1.5
+  },
+  "statGains": {
+    "health": 74.8,
+    "healthRegen": 0.34,
+    "mana": 18,
+    "manaRegen": 0.075,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.6,
+    "mana": 255,
+    "manaRegen": 0.75,
+    "armor": 4.83,
+    "magicResistance": 26.5,
+    "damageMin": 51,
+    "damageMax": 59,
+    "damageAverage": 55,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.36,
+    "animationBackswing": 0.64,
+    "moveSpeed": 300,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -27,12 +67,12 @@
     {
       "name": "Slithereen Crush",
       "type": "active",
-      "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed. Creates a water-based terrain that grants bonuses to certain abilities of Slardar's."
+      "description": "Slams the ground, stunning and damaging nearby enemy land units. After the stun, the affected units are slowed. Creates a water-based terrain that grant bonuses to certain abilities of Slardar's."
     },
     {
       "name": "Bash of the Deep",
       "type": "passive",
-      "description": "Attack Damage / Physical"
+      "description": "Attack Damage / Physical."
     },
     {
       "name": "Corrosive Haze",

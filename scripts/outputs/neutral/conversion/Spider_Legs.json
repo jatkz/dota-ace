@@ -1,9 +1,9 @@
 {
   "name": "Spider Legs",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Grants increased movement speed and turn rate to the caster, allowing for faster navigation and evasion.",
   "tier": "5",
   "effects": {
-    "primary": "Active: Skitter"
+    "primary": "Increases movement speed by 20% and turn rate by 50%. Duration: 14 seconds. Cooldown: 20 seconds."
   },
   "notes": []
 }

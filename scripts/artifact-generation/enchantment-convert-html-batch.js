@@ -1,23 +1,42 @@
 import { createParserClient } from '../ParserClient.js';
-import { normalizeFile } from './normalize-conversion-outputs.js';
+import { normalizeFile, processDirectory } from './normalize-conversion-outputs.js';
 import fs from 'fs';
 
 const itemsListPath = './scripts/outputs/neutral-item-gridLinks.json';
 
 const DOTA2_ITEMS = JSON.parse(fs.readFileSync(itemsListPath, 'utf8'));
+const NORMALIZE_ONLY = process.env.NORMALIZE_ONLY === '1';
+const SKIP_NORMALIZATION = process.env.SKIP_NORMALIZATION === '1';
 
 const API_KEY = process.env.CLAUDE_API_KEY;
 
 // Main execution
 async function main() {
     try {
-        const parser = createParserClient('./claude-templates/parse-enchantment-page.txt');
         const backend = process.env.PARSER_BACKEND || 'claude';
+        const conversionDir = './scripts/outputs/enchantment/conversion';
 
         console.log(`\n🎮 Dota 2 Enchantment Conversion`);
         console.log(`📊 Total enchantments: ${DOTA2_ITEMS.activeEnchantments.length}`);
         console.log(`🔧 Backend: ${backend}`);
+        console.log(`🧪 Mode: ${NORMALIZE_ONLY ? 'normalize-only' : SKIP_NORMALIZATION ? 'convert-only (skip normalization)' : 'convert + normalize'}`);
+
+        if (NORMALIZE_ONLY) {
+            if (!fs.existsSync(conversionDir)) {
+                throw new Error(`Conversion directory not found: ${conversionDir}`);
+            }
+
+            console.log(`⏳ Running normalization only...\n`);
+            const summary = processDirectory('enchantment', conversionDir);
+            console.log(`\n✨ Normalization complete!`);
+            console.log(`   ✅ Total: ${summary.total}`);
+            console.log(`   ✏️ Changed: ${summary.changed}\n`);
+            return;
+        }
+
         console.log(`⏳ Starting conversion...\n`);
+
+        const parser = createParserClient('./claude-templates/parse-enchantment-page.txt');
 
         const items = DOTA2_ITEMS.activeEnchantments;
         const batchConfig = items.map(x => {
@@ -34,7 +53,6 @@ async function main() {
 
         // Save results
         if (response.success && response.content) {
-            const conversionDir = './scripts/outputs/enchantment/conversion';
             if (!fs.existsSync(conversionDir)) {
                 fs.mkdirSync(conversionDir, { recursive: true });
             }
@@ -57,7 +75,9 @@ async function main() {
                     }
                     
                     fs.writeFileSync(outputPath, content);
-                    normalizeFile('enchantment', outputPath);
+                    if (!SKIP_NORMALIZATION) {
+                        normalizeFile('enchantment', outputPath);
+                    }
                     successCount++;
                     console.log(`    ✅ Saved`);
                 } catch (saveError) {

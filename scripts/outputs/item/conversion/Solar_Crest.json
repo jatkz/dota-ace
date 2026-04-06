@@ -1,12 +1,13 @@
 {
   "name": "Solar Crest",
   "cost": 2575,
+  "recipeCost": 500,
   "description": "A talisman forged to honor the daytime sky.",
   "abilities": [
     {
       "name": "Shine",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Grants the target ally a physical damage barrier for a while. Cooldown: 16. Mana Cost: 100. Cast Range: 1000. Duration: 7. Armor Bonus: 5. Move Speed Bonus: 15%. If not cast on self, also increases the target's armor, movement speed, and attack speed for the duration."
     }
   ],
   "stats": {
@@ -14,5 +15,11 @@
     "Mana": "+200",
     "Armor": "+7",
     "Move Speed": "+25"
-  }
+  },
+  "recipe": [
+    "Pavise",
+    "Chainmail",
+    "Wind Lace"
+  ],
+  "sellValue": 1287.5
 }

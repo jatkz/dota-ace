@@ -4,8 +4,12 @@
   "description": "Enigmatic staff made of only the most expensive crystals.",
   "abilities": [],
   "stats": {
-    "Cost": 2800,
-    "Sell Value": 1400,
-    "Bonus": "+25 Intelligence"
-  }
+    "Intelligence": "+25"
+  },
+  "buildsInto": [
+    "Scythe of Vyse",
+    "Wind Waker",
+    "Parasma",
+    "Arcane Blink"
+  ]
 }

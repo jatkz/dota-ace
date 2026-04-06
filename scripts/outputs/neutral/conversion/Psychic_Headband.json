@@ -1,11 +1,9 @@
 {
   "name": "Psychic Headband",
-  "description": "A Tier 3 neutral item artifact.",
+  "description": "Psychic Push: Cooldown 15, Cast Range 600, Push Distance 400/520, Push Duration 0.3.",
   "tier": "3",
   "effects": {
-    "primary": "Psychic Push"
+    "primary": "Psychic Push: Cooldown 15, Cast Range 600, Push Distance 400/520, Push Duration 0.3."
   },
-  "notes": [
-    "Passive effect is the same as the name"
-  ]
+  "notes": []
 }

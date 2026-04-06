@@ -1,6 +1,7 @@
 {
   "name": "Death Prophet",
-  "description": "What I've seen goes far beyond death. Krobelus, the Death Prophet Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+  "description": "Krobelus, the Death Prophet Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Pusher",
@@ -11,6 +12,44 @@
     "strength": 21,
     "agility": 17,
     "intelligence": 24
+  },
+  "attributeGains": {
+    "strength": 2.9,
+    "agility": 2,
+    "intelligence": 3
+  },
+  "statGains": {
+    "health": 63.8,
+    "healthRegen": 0.29,
+    "mana": 36,
+    "manaRegen": 0.15,
+    "armor": 0.33,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.56
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 363,
+    "manaRegen": 1.7,
+    "armor": 3.83,
+    "magicResistance": 27.4,
+    "damageMin": 49,
+    "damageMax": 59,
+    "damageAverage": 54.9,
+    "projectileSpeed": 1000,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.51,
+    "moveSpeed": 290,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

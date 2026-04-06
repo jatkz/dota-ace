@@ -2,13 +2,17 @@
   "name": "Enchanted Mango",
   "cost": 65,
   "description": "The bittersweet flavors of Jidi Isle are irresistible to amphibians.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Eat Mango",
+      "type": "passive",
+      "description": "Consumes the mango and instantly mana restores. Cooldown: 0. Cast Range: 400. Mana Restored: 100. Total Pick-up Range: 300."
+    }
+  ],
   "stats": {
-    "Sell Value": 32.5,
     "Stacks": "3 MAX / Inventory Slot",
     "Stock": "4 INIT / 4 MAX",
-    "Active": "Eat Mango",
     "Charges": "1 INIT",
-    "Bonus": "+0.4 Health Regeneration"
+    "Health Regeneration": "+0.4"
   }
 }

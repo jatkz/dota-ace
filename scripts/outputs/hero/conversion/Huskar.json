@@ -1,6 +1,7 @@
 {
   "name": "Huskar",
   "description": "Those who are given more in life must not cling to it but risk it all at every moment.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Durable",
@@ -10,6 +11,45 @@
     "strength": 23,
     "agility": 10,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.3,
+    "agility": 1.5,
+    "intelligence": 0
+  },
+  "statGains": {
+    "health": 72.6,
+    "healthRegen": 0.33,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.55,
+    "mana": 0,
+    "manaRegen": 0,
+    "armor": 1.67,
+    "magicResistance": 26.8,
+    "damageMin": 44,
+    "damageMax": 49,
+    "damageAverage": 46.5,
+    "projectileSpeed": 1400,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 110,
+    "bat": 1.6,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.5,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -24,13 +64,13 @@
     },
     {
       "name": "Burning Spear",
-      "type": "passive",
+      "type": "active",
       "description": "Ignites his spears aflame with his health, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Grants additional range when manually casting the ability."
     },
     {
       "name": "Berserker's Blood",
       "type": "passive",
-      "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's missing health. Applies a Basic Dispel on Huskar. After a short delay, the ability health cost is applied as a heal, along with a bonus for each debuff dispelled this way."
+      "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's health. Applies a Basic Dispel on Huskar. After a short delay, the ability health cost is applied as a heal, along with a bonus for each debuff dispelled this way."
     },
     {
       "name": "Life Break",

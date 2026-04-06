@@ -1,11 +1,9 @@
 {
   "name": "Fallen Sky",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Transforms into a meteor, stunning enemies and dealing initial impact damage followed by continuous damage over time.",
   "tier": "5",
   "effects": {
-    "primary": "None specified."
+    "primary": "Transforms into a meteor after a delay, stunning enemies and dealing 150 impact damage with an additional 60 damage per second for a short duration. Affects buildings as well, stunning and burning them."
   },
-  "notes": [
-    "Active: Fallen Sky"
-  ]
+  "notes": []
 }

@@ -1,15 +1,20 @@
 {
   "name": "Overwhelming Blink",
   "cost": 6800,
+  "recipeCost": 1750,
   "description": "A horrifying dagger forged in the chaos maw and nigh untouchable by mortal hands.",
   "abilities": [
     {
       "name": "Overwhelming Blink",
       "type": "active",
-      "description": ""
+      "description": "Instantly teleports the wielder towards the targeted point. Cooldown: 15. Mana Cost: 0. Cast Range: Global. Max Blink Distance: 1200. Radius: 800. Base Impact Damage: 100. After the teleportation, creates a huge shockwave that instantly deals damage to nearby enemies, based on the caster's strength, plus a base amount. Enemies also have their movement and attack speed slowed, and take additional damage over time based on the caster's strength."
     }
   ],
   "stats": {
-    "Strength": "+25"
-  }
+    "Bonus Strength": 25
+  },
+  "recipe": [
+    "Blink Dagger",
+    "Reaver"
+  ]
 }

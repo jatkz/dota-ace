@@ -6,13 +6,17 @@
     {
       "name": "Plant Tree",
       "type": "active",
-      "description": ""
+      "description": "Tangoes are more effective when consuming a happy Iron Branch planted tree. Cooldown: 0. Cast Range: 400. Duration: 20."
     }
   ],
   "stats": {
-    "Sell Value": 27.5,
     "Stacks": "1 MAX / Inventory Slot",
     "Charges": "1 INIT",
-    "Bonus": "+1 Strength+1 Agility+1 Intelligence"
-  }
+    "Strength": "+1",
+    "Agility": "+1",
+    "Intelligence": "+1"
+  },
+  "buildsInto": [
+    "Magic Wand"
+  ]
 }

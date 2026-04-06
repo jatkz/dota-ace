@@ -1,9 +1,9 @@
 {
   "name": "Searing Signet",
-  "description": "A Tier 2 neutral item artifact.",
+  "description": "An item that ignites enemies within range when they receive magic damage over a threshold, causing them to take additional damage over time.",
   "tier": "2",
   "effects": {
-    "primary": "Burn Through"
+    "primary": "Burn Through: Enemies taking magic damage above 60 deal an additional 104 damage over 6 seconds if within 2000 units. Creeps receive half the damage."
   },
   "notes": []
 }

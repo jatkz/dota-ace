@@ -1,9 +1,9 @@
 {
   "name": "Defiant Shell",
-  "description": "A Tier 2 neutral item artifact.",
+  "description": "Grants the hero the ability to instantly counter-attack with 80% of their attack damage when attacked, with a cooldown of 5 seconds.",
   "tier": "2",
   "effects": {
-    "primary": "Reciprocity"
+    "primary": "When attacked, the hero instantly counter-attacks a target within their attack range. Cooldown: 5. Attack Damage as Damage: 80%. Attack Damage as Damage: 104%."
   },
   "notes": []
 }

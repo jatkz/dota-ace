@@ -2,17 +2,17 @@
   "name": "Faerie Fire",
   "cost": 65,
   "description": "The ethereal flames from the ever-burning ruins of Kindertree ignite across realities.",
+  "stats": {
+    "Stacks": "1 MAX / Inventory Slot",
+    "Charges": "1 INIT",
+    "Attack Damage": "+2"
+  },
   "abilities": [
     {
       "name": "Imbue",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Consumes the Faerie Fire and instantly health restores. Cooldown: 5. Heal: 85."
     }
   ],
-  "stats": {
-    "Sell Value": 32.5,
-    "Stacks": "1 MAX / Inventory Slot",
-    "Charges": "1 INIT",
-    "Bonus": "+2 Attack Damage"
-  }
+  "sellValue": 32.5
 }

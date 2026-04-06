@@ -1,6 +1,7 @@
 {
   "name": "Tinker",
   "description": "Victory is 10% inspiration, 90% decapitation! Boush, the Tinker Boush the Tinker's diminutive race is known for its intelligence, its cunning, and its prickly relationship with magic. As a matter of pride, they survive by their wits, and use only those powers of nature that may be unlocked through rational methodologies.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Nuker",
@@ -10,6 +11,44 @@
     "strength": 19,
     "agility": 17,
     "intelligence": 30
+  },
+  "attributeGains": {
+    "strength": 2.3,
+    "agility": 1.4,
+    "intelligence": 3.3
+  },
+  "statGains": {
+    "health": 50.6,
+    "healthRegen": 0.23,
+    "mana": 39.6,
+    "manaRegen": 0.165,
+    "armor": 0.23,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 538,
+    "healthRegen": 2.15,
+    "mana": 435,
+    "manaRegen": 2,
+    "armor": 4.83,
+    "magicResistance": 28,
+    "damageMin": 52,
+    "damageMax": 58,
+    "damageAverage": 55,
+    "projectileSpeed": 900,
+    "attackRange": 500,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.65,
+    "moveSpeed": 310,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

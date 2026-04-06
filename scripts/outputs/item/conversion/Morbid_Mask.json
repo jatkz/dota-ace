@@ -6,11 +6,16 @@
     {
       "name": "Lifesteal",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks steal their target's life, healing the wielder for a portion of physical attack damage dealt."
     }
   ],
   "stats": {
-    "Sell Value": 450,
-    "Bonus": "+18% Lifesteal (Hero) +10.8% Lifesteal (Creep)"
-  }
+    "Lifesteal (Hero)": "+18%",
+    "Lifesteal (Creep)": "+10.8%"
+  },
+  "buildsInto": [
+    "Satanic",
+    "Mask of Madness",
+    "Vladmir's Offering"
+  ]
 }

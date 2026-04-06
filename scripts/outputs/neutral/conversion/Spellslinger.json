@@ -1,9 +1,9 @@
 {
   "name": "Spellslinger",
-  "description": "A Tier 3 neutral item artifact.",
+  "description": "Recovers 20% of the mana used to cast abilities over 10 seconds, refunding an additional 26% of mana cost.",
   "tier": "3",
   "effects": {
-    "primary": "Passive: Brand"
+    "primary": "20% of the mana used to cast abilities is recovered over 10 seconds, refunding an additional 26% of mana cost."
   },
   "notes": []
 }

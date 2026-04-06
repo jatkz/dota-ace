@@ -2,8 +2,14 @@
   "name": "Point Booster",
   "cost": 1200,
   "description": "A perfectly formed amethyst that nourishes body and mind when held.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+175 Health+175 Mana"
-  }
+    "Health": "+175",
+    "Mana": "+175"
+  },
+  "buildsInto": [
+    "Dagon",
+    "Aghanim's Scepter",
+    "Soul Booster",
+    "Gleipnir"
+  ]
 }

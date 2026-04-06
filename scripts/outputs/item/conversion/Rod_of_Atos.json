@@ -1,16 +1,24 @@
 {
   "name": "Rod of Atos",
   "cost": 2250,
+  "recipeCost": 250,
   "description": "Atos, the Lord of Blight, has his essence stored in this deceptively simple wand.",
   "abilities": [
     {
       "name": "Cripple",
       "type": "active",
-      "description": ""
+      "description": "Launches a projectile at the target enemy, rooting them in place and revealing them. Cooldown: 18. Mana Cost: 100. Cast Range: 1100. Duration: 2."
     }
   ],
   "stats": {
-    "Intelligence": "+12",
-    "Health": "+275"
-  }
+    "Bonus Intelligence": 12,
+    "Bonus Health": 275
+  },
+  "recipe": [
+    "Staff of Wizardry",
+    "Vitality Booster"
+  ],
+  "buildsInto": [
+    "Gleipnir"
+  ]
 }

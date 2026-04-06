@@ -1,9 +1,9 @@
 {
   "name": "Pollywog Charm",
-  "description": "A Tier 1 neutral item artifact.",
+  "description": "Increases the health regeneration of a target ally for 14 seconds with a cooldown of 45 seconds and a cast range of 1000 units.",
   "tier": "1",
   "effects": {
-    "primary": "Active: Ribbit"
+    "primary": "Increases the health regeneration of a target ally by 8 per second for 14 seconds."
   },
   "notes": []
 }

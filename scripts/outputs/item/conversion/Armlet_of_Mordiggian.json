@@ -1,12 +1,13 @@
 {
   "name": "Armlet of Mordiggian",
   "cost": 2500,
+  "recipeCost": 625,
   "description": "Weapon of choice among brutes, the bearer sacrifices his life energy to gain immense strength and power.",
   "abilities": [
     {
       "name": "Unholy Strength",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "The strength also increases the wielder's current health by 22 per point. This is not considered a heal. Cooldown: 0. Mana Cost: 0. Strength Bonus: 25. Attack Damage Bonus: 35. Armor Bonus: 4. Drains 45 health in 0.11-second intervals while active."
     }
   ],
   "stats": {
@@ -14,5 +15,10 @@
     "Armor": "+6",
     "Attack Damage": "+15",
     "Attack Speed": "+25"
-  }
+  },
+  "recipe": [
+    "Helm of Iron Will",
+    "Gloves of Haste",
+    "Blades of Attack"
+  ]
 }

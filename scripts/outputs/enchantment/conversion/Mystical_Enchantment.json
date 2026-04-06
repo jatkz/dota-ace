@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 1–4 neutral item enchantment for Intelligence and Universal heroes.",
   "tier": "1",
   "effects": {
-    "primary_effect": "+0.8/1.6/2.4/3.2 Mana Regeneration, +0/10/13/16% Magic Resistance, +0/0/0/15% Mana Loss Reduction"
+    "primary": "+0.8/1.6/2.4/3.2 Mana Regeneration, +0/10/13/16% Magic Resistance, +0/0/0/15% Mana Loss Reduction."
   },
   "notes": []
 }

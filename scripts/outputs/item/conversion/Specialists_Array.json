@@ -1,16 +1,24 @@
 {
   "name": "Specialist's Array",
   "cost": 2550,
+  "recipeCost": 550,
   "description": "An impressive kit of trigger enhancements born in an aging assassin's idle mind.",
   "abilities": [
     {
       "name": "Splitshot",
       "type": "passive",
-      "description": ""
+      "description": "Ranged Only. Attacks have a chance to fire projectiles at 2 additional targets within a cone in front of the attacker. Does not trigger attack modifiers. Proc Chance: 30%. Search Range Buffer: 150. Bonus Attack Targets: 3. Additional Projectile Damage: 20 + 75% attack damage. Primary Attack Damage Bonus: 20."
     }
   ],
   "stats": {
     "Agility": "+12",
     "Attack Damage": "+20"
-  }
+  },
+  "recipe": [
+    "Blade of Alacrity",
+    "Broadsword"
+  ],
+  "buildsInto": [
+    "Hydra's Breath"
+  ]
 }

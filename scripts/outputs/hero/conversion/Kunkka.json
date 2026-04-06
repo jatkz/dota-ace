@@ -1,6 +1,7 @@
 {
   "name": "Kunkka",
   "description": "Step lively now, your Admiral is on board! Kunkka, the Admiral As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Support",
@@ -13,6 +14,45 @@
     "strength": 24,
     "agility": 14,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 3.6,
+    "agility": 1.6,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 79.2,
+    "healthRegen": 0.36,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "armor": 0.27,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6,
+    "attackSpeed": 1.6
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 3.15,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 4.33,
+    "magicResistance": 26.8,
+    "damageMin": 54,
+    "damageMax": 60,
+    "damageAverage": 57,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

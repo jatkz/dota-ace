@@ -1,12 +1,18 @@
 {
   "name": "Hydra's Breath",
   "cost": 5900,
+  "recipeCost": 1100,
   "description": "Hydra's Breath is an item purchasable at the Base Shop, under Armaments.",
   "abilities": [
     {
-      "name": "Miasma Polycephaly",
+      "name": "Miasma",
       "type": "passive",
-      "description": ""
+      "description": "Attacks poison the target, dealing damage over time. Damage per Second: 2.5% of target's Max HP. Duration: 3."
+    },
+    {
+      "name": "Polycephaly",
+      "type": "passive",
+      "description": "Ranged Only. Attacks have a chance to fire projectiles at 2 additional targets within a cone in front of the attacker. Does not trigger attack modifiers. Proc Chance: 30%. Search Range Buffer: 150. Bonus Attack Targets: 3. Additional Projectile Damage: 20 + 75% attack damage. Primary Attack Damage Bonus: 20."
     }
   ],
   "stats": {
@@ -14,5 +20,10 @@
     "Agility": "+30",
     "Attack Damage": "+25",
     "Attack Range": "+150"
-  }
+  },
+  "recipe": [
+    "Specialist's Array",
+    "Dragon Lance",
+    "Orb of Venom"
+  ]
 }

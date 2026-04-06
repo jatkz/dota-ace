@@ -1,9 +1,12 @@
 {
   "name": "Book of the Dead",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Summons Necronomicon Warriors and Archers with strong attacks, mana-burn effects, and dispel abilities.",
   "tier": "5",
   "effects": {
-    "primary": "Greater Demonic Summoning"
+    "primary": "Summons 2 Necronomicon Warriors and 2 Necronomicon Archers for 65 seconds. Each attack deals damage equal to 0.75 times the base attack damage plus 50% of the mana burnt from enemies, with a cooldown of 80 seconds."
   },
-  "notes": []
+  "notes": [
+    "Demonic Warrior burns 50 mana per hit and deals 50% of that as additional damage.",
+    "Demonic Archer applies a basic dispel on target enemy and slows their movement speed by 100%, which decays to 20% over 4 seconds, with a cooldown of 15 seconds."
+  ]
 }

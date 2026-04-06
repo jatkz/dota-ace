@@ -6,10 +6,11 @@
     {
       "name": "Lesser Corruption",
       "type": "passive",
-      "description": ""
+      "description": "The wielder's attacks apply an armor reducing debuff on enemy units. Armor Reduction: 2. Duration: 3."
     }
   ],
-  "stats": {
-    "Sell Value": 150
-  }
+  "buildsInto": [
+    "Desolator",
+    "Orb of Corrosion"
+  ]
 }

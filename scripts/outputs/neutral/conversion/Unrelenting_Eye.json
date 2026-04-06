@@ -1,9 +1,12 @@
 {
   "name": "Unrelenting Eye",
-  "description": "A Tier 3 neutral item artifact with a passive effect.",
+  "description": "Increases slow resistance but decreases it for every enemy hero within attack range.",
   "tier": "3",
   "effects": {
-    "primary": "Relentless"
+    "primary": "Increases slow resistance to a maximum of 65%, decreasing by 10% for each enemy hero within attack range."
   },
-  "notes": []
+  "notes": [
+    "Slow Resistance Loss per Enemy: 10%.",
+    "Max Slow Resistance: 65%."
+  ]
 }

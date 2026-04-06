@@ -1,6 +1,7 @@
 {
   "name": "Phantom Lancer",
-  "description": "Azwraith, the Phantom Lancer",
+  "description": "We outnumbered you. We outnumber them all! Azwraith, the Phantom Lancer.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Escape",
@@ -11,6 +12,45 @@
     "strength": 21,
     "agility": 26,
     "intelligence": 21
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 3.4,
+    "intelligence": 1.8
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "armor": 0.57,
+    "attackSpeed": 3.4,
+    "mainAttackDamage": 3.4,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 4.1,
+    "mana": 327,
+    "manaRegen": 1.05,
+    "armor": 4.33,
+    "magicResistance": 27.1,
+    "damageMin": 52,
+    "damageMax": 62,
+    "damageAverage": 57,
+    "projectileSpeed": "Instant",
+    "attackRange": 225,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 110,
+    "totalAttackSpeed": 136,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.5,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -31,7 +71,7 @@
     {
       "name": "Phantom Rush",
       "type": "active",
-      "description": "Grants Azwraith and his illusions both haste and phase movement upon proc. Creates Juxtapose-based illusions that automatically attacks the enemy units Azwraith rushes through. Additionally creates an illusions after a certain distance is rushed."
+      "description": "Grants Azwraith and his illusions both haste and phase movement upon proc. Creates Juxtapose-based illusions that automatically attacks the enemy units Azwraith rushes through. Additionally creates an illusion after a certain distance is rushed."
     },
     {
       "name": "Juxtapose",

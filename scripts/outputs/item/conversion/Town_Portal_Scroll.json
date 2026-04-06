@@ -6,12 +6,21 @@
     {
       "name": "Teleport",
       "type": "active",
-      "description": ""
+      "description": "For most buildings, the channel time increases linearly. Cooldown: 80/40/40. Mana Cost: 75. Cast Range: Global. Teleport Check Radius: 1150. Teleport Check Timer: 25. Min Target Distance: 70."
+    },
+    {
+      "name": "Properties",
+      "type": "passive",
+      "description": "All heroes start the game with an unsellable Town Portal Scroll. Initial Cooldown: 100."
+    },
+    {
+      "name": "Boots of Travel",
+      "type": "passive",
+      "description": "Automatically and passively refunds all Town Portal Scrolls at full cost in the dedicated slot. Town Portal Scroll Cooldown: 40/40."
     }
   ],
   "stats": {
-    "Sell Value": "50 / Count",
-    "Stacks": "NO LIMIT / Inventory Slot",
-    "Charges": "1 INIT"
-  }
+    "Stacks": "NO LIMIT / Inventory Slot"
+  },
+  "sellValue": "50 / Count"
 }

@@ -1,6 +1,7 @@
 {
   "name": "Jakiro",
-  "description": "Two sides of the same coin. Jakiro, the Twin Head Dragon Even among magical beasts, a twin-headed dragon is a freak. Equal parts ice and fire, cunning and rage, the creature known as Jakiro glides over charred and ice-bound battlefields, laying waste to any who would bear arms against it. Pyrexae dragon clutches always contain two fledglings. Famous for their viciousness even from the first moments of life, newly hatched dragons of this species will try to kill their sibling while still in the nest. Only the strongest survive. In this way is the strength of the Pyrexae line ensured. By some accident of nature, the freak Jakiro hatches from a single egg, combining in a single individual the full range of abilities found within the diverse Pyrexae species. Trapped within the armature of its monstrous body, the powers of ice and fire combine, and now no enemy is safe.",
+  "description": "Two sides of the same coin. Jakiro, the Twin Head Dragon Even among magical beasts, a twin-headed dragon is a freak. Equal parts ice and fire, cunning and rage, the creature known as Jakiro glides over charred and ice-bound battlefields, laying waste to any who would bear arms against it.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -11,6 +12,45 @@
     "strength": 25,
     "agility": 15,
     "intelligence": 25
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 1.2,
+    "intelligence": 3
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 36,
+    "manaRegen": 0.15,
+    "armor": 0.2,
+    "magicResistance": 0.1,
+    "attackSpeed": 1.2,
+    "mainAttackDamage": 3
+  },
+  "stats": {
+    "health": 670,
+    "healthRegen": 2.75,
+    "mana": 375,
+    "manaRegen": 1.25,
+    "armor": 3.5,
+    "magicResistance": 27.5,
+    "damageMin": 52,
+    "damageMax": 60,
+    "damageAverage": 56,
+    "projectileSpeed": 1100,
+    "attackRange": 400,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.3,
+    "moveSpeed": 290,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -27,6 +67,16 @@
       "name": "Ice Path",
       "type": "active",
       "description": "Creates a path of ice that stuns and damages enemy units that touch it."
+    },
+    {
+      "name": "Liquid Fire",
+      "type": "passive",
+      "description": "Grants additional range when manually casting the ability."
+    },
+    {
+      "name": "Liquid Frost",
+      "type": "passive",
+      "description": "Grants additional range when manually casting the ability."
     },
     {
       "name": "Macropyre",

@@ -1,9 +1,9 @@
 {
   "name": "Giant's Maul",
-  "description": "A Tier 4 neutral item artifact with a passive ability.",
+  "description": "Empowers the next attack with a critical hit and slows the target's movement, attack, and cast speed.",
   "tier": "4",
   "effects": {
-    "primary": "Crushing Blow"
+    "primary": "Critical Damage: 140%, Move Speed Slow: 10%, Attack Speed Slow: 15%, Cast Speed Slow: 20%, Duration: 3 seconds."
   },
   "notes": []
 }

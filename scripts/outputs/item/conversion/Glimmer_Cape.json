@@ -1,15 +1,21 @@
 {
   "name": "Glimmer Cape",
   "cost": 2150,
+  "recipeCost": 800,
   "description": "The stolen cape of a master illusionist.",
   "abilities": [
     {
       "name": "Glimmer",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Applies a buff that periodically turns the target invisible and phased over the duration, even if the invisibility gets broken. Cooldown: 15. Mana Cost: 125. Cast Range: 600. Duration: 5. Magical Damage Barrier: 375. Move Speed Bonus: 20. Grants the target a magical damage barrier for the whole duration. Depleting the barrier does not prematurely end the ability."
     }
   ],
   "stats": {
-    "Magic Resistance": "+20%"
-  }
+    "Bonus Magic Resistance": 20
+  },
+  "recipe": [
+    "Shadow Amulet",
+    "Shawl"
+  ],
+  "sellValue": 1075
 }

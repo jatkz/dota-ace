@@ -1,12 +1,25 @@
 {
   "name": "Meteor Hammer",
   "cost": 2850,
+  "recipeCost": 300,
   "description": "An enchanted hammer forged of metals discovered in the ruins of a village destroyed by a great star storm.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Meteor Hammer",
+      "type": "active",
+      "description": "After a successful channel, summons a meteor that strikes down at the target area after a delay, stunning enemies and dealing impact damage. Slows movement speed and continues to deal damage over time to enemy units for a while. Cooldown: 24. Mana Cost: 75. Cast Range: 600. Impact Radius: 400. Impact Damage: 130. Damage per Second: 50. The meteor impact affects buildings as well, stunning and burning them. Buildings take less impact damage."
+    }
+  ],
   "stats": {
-    "Cost": 2850,
-    "Sell Value": 1425,
-    "Active": "Meteor Hammer",
-    "Bonus": "+6 Strength+6 Agility+24 Intelligence+10% Spell Damage Amp+35% Mana Regen Amp"
-  }
+    "Strength": "+6",
+    "Agility": "+6",
+    "Intelligence": "+24",
+    "Spell Damage Amp": "+10%",
+    "Mana Regen Amp": "+35%"
+  },
+  "recipe": [
+    "Kaya",
+    "Crown"
+  ],
+  "sellValue": 1425
 }

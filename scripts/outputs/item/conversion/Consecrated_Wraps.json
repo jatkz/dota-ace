@@ -1,12 +1,13 @@
 {
   "name": "Consecrated Wraps",
   "cost": 2600,
+  "recipeCost": 700,
   "description": "Consecrated Wraps is an item purchasable at the Base Shop, under Support.",
   "abilities": [
     {
       "name": "Hallowed",
       "type": "passive",
-      "description": ""
+      "description": "Number of Charges: 3. Move Speed Bonus: 15%. Move Speed Duration: 5. Barrier Duration: 5. Duration: 3."
     }
   ],
   "stats": {
@@ -15,5 +16,10 @@
     "Intelligence": 6,
     "Health": 250,
     "Magic Resistance": "12%"
-  }
+  },
+  "recipe": [
+    "Vitality Booster",
+    "Shawl",
+    "Crown"
+  ]
 }

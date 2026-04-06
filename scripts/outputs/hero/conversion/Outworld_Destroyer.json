@@ -1,6 +1,7 @@
 {
   "name": "Outworld Destroyer",
   "description": "Their sanity I'll shatter; their dreams of conquest I'll destroy.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Nuker",
@@ -12,10 +13,49 @@
     "agility": 22,
     "intelligence": 30
   },
+  "attributeGains": {
+    "strength": 2.9,
+    "agility": 1.6,
+    "intelligence": 4.2
+  },
+  "statGains": {
+    "health": 63.8,
+    "healthRegen": 0.29,
+    "mana": 50.4,
+    "manaRegen": 0.21,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4.2
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.1,
+    "mana": 435,
+    "manaRegen": 1.5,
+    "armor": 4.67,
+    "magicResistance": 28,
+    "damageMin": 49,
+    "damageMax": 61,
+    "damageAverage": 55,
+    "projectileSpeed": 900,
+    "attackRange": 450,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 122,
+    "bat": 1.9,
+    "animationPoint": 0.46,
+    "animationBackswing": 0.54,
+    "moveSpeed": 315,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Arcane Orb",
-      "type": "active",
+      "type": "passive",
       "description": "Adds pure damage to attacks based on the current mana pool."
     },
     {

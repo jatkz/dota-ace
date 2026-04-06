@@ -1,12 +1,26 @@
 {
   "name": "Veil of Discord",
   "cost": 1700,
+  "recipeCost": 350,
   "description": "The headwear of corrupt magi.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Spell Weakness",
+      "type": "passive",
+      "description": "Weakens nearby enemies by applying a debuff that amplifies any spell damage they take. Cooldown: 16. Mana Cost: 50. Radius: 900. Spell Damage Amp: 10%. Duration: 16."
+    }
+  ],
   "stats": {
-    "Cost": 1700,
-    "Sell Value": 850,
-    "Active": "Spell Weakness",
-    "Bonus": "+10 Intelligence+175 Health+18% Spell Lifesteal (Hero)+3.6% Spell Lifesteal (Creep)"
-  }
+    "Intelligence": "+10",
+    "Health": "+175"
+  },
+  "recipe": [
+    "Voodoo Mask",
+    "Robe of the Magi",
+    "Fluffy Hat"
+  ],
+  "buildsInto": [
+    "Bloodstone"
+  ],
+  "sellValue": 850
 }

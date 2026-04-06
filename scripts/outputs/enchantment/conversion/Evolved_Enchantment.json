@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 5 neutral item enchantment for all heroes.",
   "tier": "5",
   "effects": {
-    "primary_effect": "+40 Primary Attribute OR +24 All Attributes"
+    "primary": "+40 Primary Attribute OR +24 All Attributes."
   },
   "notes": []
 }

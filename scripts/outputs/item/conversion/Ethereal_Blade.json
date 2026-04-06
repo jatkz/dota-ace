@@ -1,17 +1,23 @@
 {
   "name": "Ethereal Blade",
   "cost": 5200,
+  "recipeCost": 900,
   "description": "A flickering blade of a ghastly nature, it is capable of dealing damage in both magical and physical planes.",
   "abilities": [
     {
       "name": "Ether Blast",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Blasts the target with an projectile that turns them ethereal, rendering them immune to physical damage and not attackable, but more vulnerable to magical damage, as well as disarming them. Cooldown: 22. Mana Cost: 100. Cast Range: 800. Duration: 4. Base Damage: 50. Summed Attributes as Damage: 100%. If the target is an enemy, they also have their movement speed slowed, and take damage based on the sum of the caster's attributes."
     }
   ],
   "stats": {
     "Strength": "+24",
     "Agility": "+24",
     "Intelligence": "+24"
-  }
+  },
+  "recipe": [
+    "Ultimate Orb",
+    "Ghost Scepter"
+  ],
+  "sellValue": 2600
 }

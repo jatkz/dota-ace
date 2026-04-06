@@ -2,8 +2,14 @@
   "name": "Boots of Speed",
   "cost": 500,
   "description": "Fleet footwear, increasing movement.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+45 Move Speed"
-  }
+    "Bonus Move Speed": "+45"
+  },
+  "buildsInto": [
+    "Boots of Travel",
+    "Phase Boots",
+    "Power Treads",
+    "Arcane Boots",
+    "Tranquil Boots"
+  ]
 }

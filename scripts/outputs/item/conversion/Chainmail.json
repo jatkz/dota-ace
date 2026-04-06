@@ -4,6 +4,13 @@
   "description": "A medium weave of metal chains.",
   "abilities": [],
   "stats": {
-    "Bonus": "+4 Armor"
-  }
+    "Armor": "+4"
+  },
+  "buildsInto": [
+    "Phase Boots",
+    "Witch Blade",
+    "Essence Distiller",
+    "Mekansm",
+    "Solar Crest"
+  ]
 }

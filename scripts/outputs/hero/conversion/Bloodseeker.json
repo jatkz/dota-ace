@@ -1,6 +1,7 @@
 {
   "name": "Bloodseeker",
-  "description": "A ritually sanctioned hunter sent to provide blood for the Flayed Ones.",
+  "description": "You should be honored to bleed so that the Flayed Ones may live.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Disabler",
@@ -12,11 +13,50 @@
     "agility": 24,
     "intelligence": 17
   },
+  "attributeGains": {
+    "strength": 2.7,
+    "agility": 3.1,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 59.4,
+    "healthRegen": 0.27,
+    "armor": 0.52,
+    "attackSpeed": 3.1,
+    "mainAttackDamage": 3.1,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.65,
+    "mana": 279,
+    "manaRegen": 0.85,
+    "armor": 6,
+    "magicResistance": 26.7,
+    "damageMin": 59,
+    "damageMax": 65,
+    "damageAverage": 62,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 124,
+    "bat": 1.7,
+    "animationPoint": 0.43,
+    "animationBackswing": 0.74,
+    "moveSpeed": 285,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Sanguivore",
       "type": "passive",
-      "description": "Applies a lifesteal-based heal on itself corresponding to the max health of the killed unit. Denying allied heroes heal for the same amount. The self-heal is even less effective when killing creeps."
+      "description": "The seeker applies a lifesteal-based heal on itself corresponding to the max health of the killed unit. Denying allied heroes heal for the same amount. The self-heal is even less effective when killing creeps."
     },
     {
       "name": "Bloodrage",
@@ -31,7 +71,7 @@
     {
       "name": "Thirst",
       "type": "passive",
-      "description": "Gains bonus movement speed when an enemy hero's health falls below a certain threshold, with the bonuses increasing as their health falls further. These insatiable bonuses stack per hero."
+      "description": "Sensing blood of the mortally wounded, Bloodseeker gains bonus movement speed when an enemy hero's health falls below a certain threshold, with the bonuses increasing as their health falls further. These insatiable bonuses stack per hero."
     },
     {
       "name": "Rupture",

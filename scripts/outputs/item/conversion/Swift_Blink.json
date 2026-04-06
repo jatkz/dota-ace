@@ -1,17 +1,17 @@
 {
   "name": "Swift Blink",
   "cost": 6800,
+  "recipeCost": 1750,
   "description": "A cunning blade able to anticipate and enable its bearer's movements.",
   "abilities": [
     {
       "name": "Swift Blink",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Instantly teleports the wielder towards the targeted point. Cooldown: 15. Mana Cost: 0. Cast Range: Global. Max Blink Distance: 1200. Move Speed Bonus: 40%. Agility Bonus: 35. After the teleportation, grants the caster phased movement, increased movement speed, and bonus agility for a while."
     }
   ],
-  "stats": {
-    "Cost": 6800,
-    "Sell Value": 3400,
-    "Bonus Agility": 25
-  }
+  "recipe": [
+    "Blink Dagger",
+    "Eaglesong"
+  ]
 }

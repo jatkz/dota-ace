@@ -1,17 +1,23 @@
 {
   "name": "Monkey King Bar",
   "cost": 5000,
+  "recipeCost": 900,
   "description": "A powerful staff used by a master warrior.",
   "abilities": [
     {
       "name": "Pierce",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage. Proc Chance: 80%. Bonus Magical Damage: 70."
     }
   ],
   "stats": {
-    "Attack Damage": 50,
-    "Attack Speed": 50,
-    "Attack Range": 50
-  }
+    "Attack Damage": "+50",
+    "Attack Speed": "+50",
+    "Attack Range": "+50"
+  },
+  "recipe": [
+    "Demon Edge",
+    "Javelin",
+    "Blitz Knuckles"
+  ]
 }

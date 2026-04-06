@@ -1,21 +1,28 @@
 {
   "name": "Pipe of Insight",
   "cost": 3725,
+  "recipeCost": 675,
   "description": "A powerful artifact of mysterious origin, it creates barriers against magical forces.",
   "abilities": [
     {
       "name": "Barrier",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Grants nearby allied units and buildings a magical damage barrier for a while. Cooldown: 60. Mana Cost: 150. Radius: 1200. Duration: 8. Stack Limit Duration: 59."
     },
     {
       "name": "Insight Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the health regeneration and magic resistance of nearby allies. Radius: 1200. Magic Resistance Bonus: 8%. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
     "Health Regeneration": "+14",
     "Magic Resistance": "+20%"
-  }
+  },
+  "recipe": [
+    "Ring of Tarrasque",
+    "Cloak",
+    "Shawl"
+  ],
+  "sellValue": 1862.5
 }

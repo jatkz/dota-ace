@@ -1,13 +1,23 @@
 {
   "name": "Refresher Shard",
   "cost": "-",
+  "recipeCost": null,
   "description": "Across an epoch of endless battle, the Immortal's will to triumph never faltered.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Reset Cooldowns",
+      "type": "passive",
+      "description": "Resets the cooldowns of all abilities of the wielder. Cooldown: 180. Mana Cost: 200."
+    }
+  ],
   "stats": {
-    "Sell Value": 500,
     "Stacks": "1 MAX / Inventory Slot",
-    "Active": "Reset Cooldowns",
     "Charges": "1 INIT",
-    "Bonus": "+12 Health Regeneration+6 Mana Regeneration+20 Attack Damage"
-  }
+    "Health Regeneration": "+12",
+    "Mana Regeneration": "+6",
+    "Attack Damage": "+20"
+  },
+  "recipe": null,
+  "buildsInto": null,
+  "sellValue": 500
 }

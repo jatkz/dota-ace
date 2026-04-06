@@ -1,17 +1,18 @@
 {
   "name": "Harpoon",
   "cost": 4700,
+  "recipeCost": 1000,
   "description": "A perfect solution for the flight of foes.",
   "abilities": [
     {
       "name": "Draw Forth",
       "type": "active",
-      "description": ""
+      "description": "Launches a harpoon that latches onto the target, pulling the caster and the target towards each other, meeting in the middle. Targeting a tree always pulls you all the way to the tree. Has a maximum pull distance. Cooldown: 19. Mana Cost: 50. Cast Range: 700. Min Pull Distance: 100. Max Pull Distance: 1000. Pull Duration: 0.3. When the caster is ranged, pulls the target and the caster for a percentage of the distance instead, but still respecting the max pull distance."
     },
     {
       "name": "Echo Strike",
       "type": "passive",
-      "description": ""
+      "description": "The next attack grants the wielder a buff that greatly increases attack speed for one attack. Cooldown: 5. Attack Speed Bonus: 490. Number of Attacks: 1. Move Speed Slow: 100%. Duration: 1. The triggering attack also briefly slows the enemy's movement speed. The second attack does not slow."
     }
   ],
   "stats": {
@@ -20,5 +21,9 @@
     "Intelligence": "+10",
     "Mana Regeneration": "+2",
     "Attack Damage": "+25"
-  }
+  },
+  "recipe": [
+    "Echo Sabre",
+    "Diadem"
+  ]
 }

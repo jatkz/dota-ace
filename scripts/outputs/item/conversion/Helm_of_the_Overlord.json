@@ -1,12 +1,13 @@
 {
   "name": "Helm of the Overlord",
   "cost": 5650,
+  "recipeCost": 300,
   "description": "The powerful headpiece of an undead necromancer.",
   "abilities": [
     {
       "name": "Dominate",
-      "type": "",
-      "description": ""
+      "type": "active",
+      "description": "Takes control of an enemy non-hero unit, elevating its status to a Creep-Hero, and granting it various stat bonuses. Can dominate ancient creeps. Cooldown: 45. Mana Cost: 50. Cast Range: 700. Min Base Health: 1800. Base Attack Damage Bonus: 70. Health Regen Bonus: 12. If a target neutral creep has a scaling ability, its level gets increased and has its 4th level unlocked."
     }
   ],
   "stats": {
@@ -15,5 +16,10 @@
     "Intelligence": "+21",
     "Health Regeneration": "+7",
     "Armor": "+7"
-  }
+  },
+  "recipe": [
+    "Helm of the Dominator",
+    "Ultimate Orb"
+  ],
+  "sellValue": 2825
 }

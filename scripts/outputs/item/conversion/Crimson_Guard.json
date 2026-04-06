@@ -1,22 +1,27 @@
 {
   "name": "Crimson Guard",
   "cost": 3725,
+  "recipeCost": 1050,
   "description": "A cuirass originally built to protect against the dreaded Year Beast.",
   "abilities": [
     {
       "name": "Guard",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Grants nearby allied heroes and buildings a guaranteed chance to block a fixed portion of physical attack damage, plus a portion based on the caster's max health. Cooldown: 40. Mana Cost: 75. Radius: 1200. Proc Chance: 100%. Base Blocked Damage: 70/45. Max Health as Blocked Damage: 2%."
     },
     {
       "name": "Damage Block",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder a chance to block a fixed portion of physical attack damage. Proc Chance: 60%. Blocked Damage: 75. Blocked Damage: 50."
     }
   ],
   "stats": {
     "Health": "+250",
     "Health Regeneration": "+12",
     "Armor": "+6"
-  }
+  },
+  "recipe": [
+    "Vanguard",
+    "Helm of Iron Will"
+  ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "Mirana",
-  "description": "Mirana, the Princess of the Moon, prowls the sacred Nightsilver Woods searching for any who would dare poach the sacred luminous lotus from the silvery pools of the goddess's preserve.",
+  "description": "Princess of the Moon, Mirana dedicates herself to the service of Selemene, Goddess of the Moon. She prowls the Nightsilver Woods searching for poachers and uses her celestial powers to protect the luminous lotus.",
+  "attackType": "Ranged",
   "roles": [
     "Carry",
     "Support",
@@ -12,6 +13,45 @@
     "strength": 20,
     "agility": 26,
     "intelligence": 22
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 3.1,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "armor": 0.52,
+    "attackSpeed": 3.1,
+    "mainAttackDamage": 3.1,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 339,
+    "manaRegen": 1.5,
+    "armor": 2.33,
+    "magicResistance": 27.2,
+    "damageMin": 48,
+    "damageMax": 54,
+    "damageAverage": 51,
+    "projectileSpeed": 900,
+    "attackRange": 630,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 126,
+    "bat": 1.7,
+    "animationPoint": 0.35,
+    "animationBackswing": 0.7,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -31,7 +71,7 @@
     },
     {
       "name": "Leap",
-      "type": "active",
+      "type": "passive",
       "description": "None can fail to recognize Mirana's iconic white beast in the heat of battle."
     },
     {

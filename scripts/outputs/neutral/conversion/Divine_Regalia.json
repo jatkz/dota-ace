@@ -1,9 +1,9 @@
 {
   "name": "Divine Regalia",
-  "description": "A Tier 5 neutral item artifact that grants the 'Exalted' passive ability.",
+  "description": "Increases the wielder's outgoing damage by 20% and then an additional 26%, providing a total damage amplification of 46%.",
   "tier": "5",
   "effects": {
-    "primary": "Grants the 'Exalted' passive ability."
+    "primary": "Increases outgoing damage by 20% and then an additional 26%."
   },
   "notes": []
 }

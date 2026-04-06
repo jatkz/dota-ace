@@ -1,16 +1,22 @@
 {
   "name": "Heart of Tarrasque",
   "cost": 5100,
+  "recipeCost": 600,
   "description": "Preserved heart of an extinct monster, it bolsters the bearer's fortitude.",
   "abilities": [
     {
       "name": "Behemoth's Blood",
       "type": "passive",
-      "description": ""
+      "description": "Increases the wielder's health regeneration based on missing health. Missing Health as Health Regen Bonus: 1.5%."
     }
   ],
   "stats": {
     "Strength": "+40",
     "Max HP Health Regen": "+1%"
-  }
+  },
+  "recipe": [
+    "Ring of Tarrasque",
+    "Reaver"
+  ],
+  "sellValue": 2550
 }

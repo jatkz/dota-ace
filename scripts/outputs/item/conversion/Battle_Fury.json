@@ -1,22 +1,34 @@
 {
   "name": "Battle Fury",
   "cost": 3900,
+  "recipeCost": 400,
   "description": "The bearer of this mighty axe gains the ability to cut down swaths of enemies at once.",
   "abilities": [
     {
       "name": "Chop Tree",
       "type": "active",
-      "description": ""
+      "description": "Instantly destroys the targeted tree. Cooldown: 4. Cast Range: 350."
     },
     {
-      "name": "Quell Cleave",
+      "name": "Quell",
       "type": "passive",
-      "description": ""
+      "description": "Grants bonus attack damage against non-hero units. Attack Damage Bonus: 8. Attack Damage Bonus: 4."
+    },
+    {
+      "name": "Cleave",
+      "type": "passive",
+      "description": "Deals a percentage of the wielder's attack damage as physical damage in a cone in front of the wielder on each attack. Starting Radius: 150. Distance: 650. End Radius: 360. Cleave Damage: 60%. Cleave Damage: 40%. Deals less damage against non-hero units."
     }
   ],
   "stats": {
     "Health Regeneration": "+7.5",
     "Mana Regeneration": "+2.75",
     "Attack Damage": "+50"
-  }
+  },
+  "recipe": [
+    "Perseverance",
+    "Broadsword",
+    "Quelling Blade"
+  ],
+  "sellValue": 1950
 }

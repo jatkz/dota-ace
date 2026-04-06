@@ -2,8 +2,14 @@
   "name": "Belt of Strength",
   "cost": 450,
   "description": "A valued accessory for improving vitality.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+6 Strength"
-  }
+    "Strength": "+6"
+  },
+  "buildsInto": [
+    "Power Treads",
+    "Skull Basher",
+    "Sange",
+    "Drum of Endurance",
+    "Dragon Lance"
+  ]
 }

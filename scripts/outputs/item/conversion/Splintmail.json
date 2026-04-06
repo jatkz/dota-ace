@@ -5,5 +5,11 @@
   "abilities": [],
   "stats": {
     "Armor": "+7"
-  }
+  },
+  "buildsInto": [
+    "Shiva's Guard",
+    "Nullifier",
+    "Blade Mail",
+    "Heaven's Halberd"
+  ]
 }

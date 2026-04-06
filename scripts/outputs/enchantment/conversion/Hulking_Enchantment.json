@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 5 neutral item enchantment for Strength heroes only.",
   "tier": "5",
   "effects": {
-    "primary_effect": "+5% Health, +1.5% Max HP Health Regen, -30% Attack Speed"
+    "primary": "+5% Health, +1.5% Max HP Health Regen, -30% Attack Speed."
   },
   "notes": []
 }

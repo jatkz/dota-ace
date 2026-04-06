@@ -1,6 +1,7 @@
 {
   "name": "Enigma",
   "description": "Chaos hunts the spark of endless suns, whose light will die in my crushing grasp.",
+  "attackType": "Ranged",
   "roles": [
     "Disabler",
     "Initiator",
@@ -11,6 +12,45 @@
     "strength": 21,
     "agility": 14,
     "intelligence": 19
+  },
+  "attributeGains": {
+    "strength": 2.5,
+    "agility": 1,
+    "intelligence": 3.6
+  },
+  "statGains": {
+    "health": 55,
+    "healthRegen": 0.25,
+    "mana": 43.2,
+    "manaRegen": 0.18,
+    "armor": 0.17,
+    "attackSpeed": 1,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.2
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 2.35,
+    "mana": 303,
+    "manaRegen": 1.45,
+    "armor": 3.33,
+    "magicResistance": 26.9,
+    "damageMin": 43,
+    "damageMax": 49,
+    "damageAverage": 46.3,
+    "projectileSpeed": 900,
+    "attackRange": 500,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.4,
+    "animationBackswing": 0.77,
+    "moveSpeed": 280,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -35,7 +75,7 @@
     },
     {
       "name": "Black Hole",
-      "type": "ultimate",
+      "type": "active",
       "description": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds."
     }
   ]

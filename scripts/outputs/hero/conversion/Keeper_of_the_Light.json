@@ -1,6 +1,7 @@
 {
   "name": "Keeper of the Light",
-  "description": "Ezalor, the Keeper of the Light Upon a pale horse he rides, this spark of endless suns, this Keeper of the Light.",
+  "description": "They say twas I who carried the first light into the universe. They might be right, I can't quite recall. Ezalor, the Keeper of the Light Upon a pale horse he rides, this spark of endless suns, this Keeper of the Light.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Nuker",
@@ -10,6 +11,45 @@
     "strength": 18,
     "agility": 15,
     "intelligence": 24
+  },
+  "attributeGains": {
+    "strength": 2.3,
+    "agility": 1.6,
+    "intelligence": 3.3
+  },
+  "statGains": {
+    "health": 50.6,
+    "healthRegen": 0.23,
+    "mana": 39.6,
+    "manaRegen": 0.165,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
+  },
+  "stats": {
+    "health": 516,
+    "healthRegen": 2.05,
+    "mana": 363,
+    "manaRegen": 1.2,
+    "armor": 2.5,
+    "magicResistance": 27.4,
+    "damageMin": 44,
+    "damageMax": 51,
+    "damageAverage": 47.5,
+    "projectileSpeed": 900,
+    "attackRange": 600,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 115,
+    "bat": 1.7,
+    "animationPoint": 0.3,
+    "animationBackswing": 0.85,
+    "moveSpeed": 315,
+    "turnRate": 0.7,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

@@ -1,6 +1,7 @@
 {
   "name": "Puck",
-  "description": "I find myself strangely drawn to this odd configuration of activity. Puck, the Faerie Dragon While Puck seems at first glance a mischievous, childish character, this quality masks an alien personality. The juvenile form of a Faerie Dragon, a creature that lives for eons, Puck spends countless millennia in its childish form.",
+  "description": "I find myself strangely drawn to this odd configuration of activity.",
+  "attackType": "Ranged",
   "roles": [
     "Initiator",
     "Disabler",
@@ -11,6 +12,45 @@
     "strength": 17,
     "agility": 14,
     "intelligence": 23
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.3,
+    "intelligence": 3.8
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "armor": 0.38,
+    "attackSpeed": 2.3,
+    "mana": 45.6,
+    "manaRegen": 0.19,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.8
+  },
+  "stats": {
+    "health": 494,
+    "healthRegen": 2.2,
+    "mana": 351,
+    "manaRegen": 1.65,
+    "armor": 2.33,
+    "magicResistance": 27.3,
+    "damageMin": 45,
+    "damageMax": 53,
+    "damageAverage": 49,
+    "projectileSpeed": 900,
+    "attackRange": 550,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.7,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.8,
+    "moveSpeed": 290,
+    "turnRate": 0.9,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

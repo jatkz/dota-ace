@@ -1,6 +1,7 @@
 {
   "name": "Lina",
-  "description": "Fire makes a fine servant, but a harsh mistress.",
+  "description": "Fire makes a fine servant, but a harsh mistress. Lina, the Slayer.",
+  "attackType": "Ranged",
   "roles": [
     "Support",
     "Carry",
@@ -11,6 +12,45 @@
     "strength": 20,
     "agility": 23,
     "intelligence": 30
+  },
+  "attributeGains": {
+    "strength": 2.4,
+    "agility": 2.4,
+    "intelligence": 4
+  },
+  "statGains": {
+    "health": 52.8,
+    "healthRegen": 0.24,
+    "mana": 48,
+    "manaRegen": 0.2,
+    "armor": 0.4,
+    "attackSpeed": 2.4,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 4
+  },
+  "stats": {
+    "health": 560,
+    "healthRegen": 2.25,
+    "mana": 435,
+    "manaRegen": 1.5,
+    "armor": 3.83,
+    "magicResistance": 28,
+    "damageMin": 51,
+    "damageMax": 59,
+    "damageAverage": 55,
+    "projectileSpeed": 1000,
+    "attackRange": 670,
+    "attackAcquisitionRange": 800,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 123,
+    "bat": 1.6,
+    "animationPoint": 0.65,
+    "animationBackswing": 0.6,
+    "moveSpeed": 290,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

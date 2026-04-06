@@ -2,12 +2,20 @@
   "name": "Observer Ward",
   "cost": 0,
   "description": "A form of half-sentient plant, often cultivated by apprentice wizards.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Plant",
+      "type": "active",
+      "description": "Plants an invisible and phased Observer Ward at the target location, which grants ground vision around it. Cooldown: 1. Mana Cost: 0. Cast Range: 500. Vision Radius: 1600. Ward Duration: 360. Hero Hit Count: 2. The player that placed the ward can always attack it with any of their units. However, all their attacks are treated as non-hero attacks, until the ward comes within the 50% deny range."
+    }
+  ],
   "stats": {
-    "Sell Value": "- / Count",
     "Stacks": "NO LIMIT / Inventory Slot",
     "Stock": "2 INIT / 4 MAX",
-    "Active": "Plant",
     "Charges": "1 INIT"
-  }
+  },
+  "buildsInto": [
+    "Observer and Sentry Wards"
+  ],
+  "sellValue": "- / Count"
 }

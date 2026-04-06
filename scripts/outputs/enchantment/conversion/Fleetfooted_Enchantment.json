@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 5 neutral item enchantment for all heroes.",
   "tier": "5",
   "effects": {
-    "primary_effect": "+115 Move Speed"
+    "primary": "+115 Move Speed."
   },
   "notes": []
 }

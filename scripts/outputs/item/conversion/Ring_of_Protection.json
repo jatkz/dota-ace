@@ -2,8 +2,13 @@
   "name": "Ring of Protection",
   "cost": 175,
   "description": "A glimmering ring that defends its bearer.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+2 Armor"
-  }
+    "Armor": "+2"
+  },
+  "buildsInto": [
+    "Buckler",
+    "Urn of Shadows",
+    "Soul Ring",
+    "Pavise"
+  ]
 }

@@ -1,18 +1,23 @@
 {
   "name": "Quelling Blade",
   "cost": 100,
+  "recipeCost": null,
   "description": "The axe of a fallen gnome, it allows you to effectively maneuver the forest.",
   "abilities": [
     {
       "name": "Chop Tree",
       "type": "active",
-      "description": ""
+      "description": "Instantly destroys the targeted tree. Cooldown: 4. Mana Cost: 0. Cast Range: 350."
     },
     {
       "name": "Quell",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder bonus attack damage against non-hero units. Attack Damage Bonus: 8. Attack Damage Bonus: 4."
     }
   ],
-  "stats": {}
+  "recipe": null,
+  "buildsInto": [
+    "Battle Fury"
+  ],
+  "sellValue": 50
 }

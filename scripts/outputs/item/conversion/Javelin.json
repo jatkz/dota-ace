@@ -6,11 +6,13 @@
     {
       "name": "Pierce",
       "type": "passive",
-      "description": ""
+      "description": "Grants the wielder's attack a chance to pierce through evasion and deal bonus magical damage. Proc Chance: 25%. Bonus Magical Damage: 60."
     }
   ],
-  "stats": {
-    "Cost": 900,
-    "Sell Value": 450
-  }
+  "buildsInto": [
+    "Monkey King Bar",
+    "Maelstrom",
+    "Bloodthorn"
+  ],
+  "sellValue": 450
 }

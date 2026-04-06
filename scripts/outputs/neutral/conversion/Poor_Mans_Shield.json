@@ -1,9 +1,9 @@
 {
   "name": "Poor Man's Shield",
-  "description": "A Tier 2 neutral item artifact.",
+  "description": "Grants the wielder a chance to block a fixed portion of physical attack damage. Blocks melee attacks for 39 and ranged attacks for 26.",
   "tier": "2",
   "effects": {
-    "primary": "Damage Block"
+    "primary": "Reduces incoming physical damage by blocking melee attacks for 39 and ranged attacks for 26."
   },
   "notes": []
 }

@@ -2,8 +2,13 @@
   "name": "Energy Booster",
   "cost": 800,
   "description": "This lapis gemstone is commonly added to the collection of wizards seeking to improve their presence in combat.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+250 Mana"
-  }
+    "Mana": "+250"
+  },
+  "buildsInto": [
+    "Aether Lens",
+    "Lotus Orb",
+    "Aeon Disk",
+    "Soul Booster"
+  ]
 }

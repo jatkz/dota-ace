@@ -1,11 +1,24 @@
 {
   "name": "Divine Rapier",
   "cost": 5600,
+  "recipe": [
+    "Sacred Relic",
+    "Demon Edge"
+  ],
   "description": "So powerful, it cannot have a single owner.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Transmute",
+      "type": "active",
+      "description": "Toggle on to gain bonus spell damage amplification. Cooldown: 6. Mana Cost: 0. Spell Damage Amplification Bonus: 25%. Attack Damage Bonus: 250."
+    },
+    {
+      "name": "Everlasting",
+      "type": "passive",
+      "description": "The rapier belongs to the player that purchased it, and is muted when held by allies. The purchasing player can manually drop or stash the Rapier freely at any time."
+    }
+  ],
   "stats": {
-    "Attack Damage": "+100",
-    "Droppable": "Partially",
-    "Destroyable": "0"
+    "Attack Damage": "+100"
   }
 }

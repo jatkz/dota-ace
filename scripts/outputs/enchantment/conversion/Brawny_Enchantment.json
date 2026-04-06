@@ -3,7 +3,7 @@
   "description": "A guaranteed Tier 1–4 neutral item enchantment for Strength and Agility heroes.",
   "tier": "1",
   "effects": {
-    "primary_effect": "+110/150/190/230 Health+0/3/6/9 Health Regeneration+0/0/0/25% Slow Resistance"
+    "primary": "+110/150/190/230 Health+0/3/6/9 Health Regeneration+0/0/0/25% Slow Resistance."
   },
   "notes": []
 }

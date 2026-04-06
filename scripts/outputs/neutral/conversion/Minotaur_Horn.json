@@ -1,9 +1,12 @@
 {
   "name": "Minotaur Horn",
-  "description": "A Tier 5 neutral item artifact.",
+  "description": "Grants magic resistance and immunity to pure and reflected damage. Any negative effect from enemy spells has no effect for a duration of 2.6 seconds.",
   "tier": "5",
   "effects": {
-    "primary": "Active: Lesser Avatar"
+    "primary": "Applies a basic dispel. Grants magic resistance (50%) and immunity to pure and reflected damage. Any negative effect from enemy spells has no effect for a duration of 2.6 seconds."
   },
-  "notes": []
+  "notes": [
+    "Cooldown: 40.",
+    "Mana Cost: 0."
+  ]
 }

@@ -4,6 +4,17 @@
   "description": "Deceptively hidden as an ordinary quarterstaff, it is actually very powerful, much like the Eldritch who originally possessed it.",
   "abilities": [],
   "stats": {
-    "Bonus": "+10 Intelligence+1.25 Mana Regeneration+35 Attack Speed"
-  }
+    "Intelligence": "+10",
+    "Mana Regeneration": "+1.25",
+    "Attack Speed": "+35"
+  },
+  "recipe": [
+    "Blitz Knuckles",
+    "Sage's Mask",
+    "Robe of the Magi"
+  ],
+  "buildsInto": [
+    "Witch Blade",
+    "Orchid Malevolence"
+  ]
 }

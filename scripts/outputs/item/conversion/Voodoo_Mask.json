@@ -6,8 +6,12 @@
     {
       "name": "Magic Lifesteal",
       "type": "passive",
-      "description": ""
+      "description": "Restores the wielder's health for a portion of damage dealt by magical and physical spell damage. The lifesteal value is reduced by a factor of 0.2 against creeps."
     }
   ],
-  "stats": {}
+  "buildsInto": [
+    "Veil of Discord",
+    "Revenant's Brooch"
+  ],
+  "sellValue": 325
 }

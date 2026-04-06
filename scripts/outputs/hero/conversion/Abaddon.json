@@ -1,6 +1,7 @@
 {
   "name": "Abaddon",
   "description": "The fog of war is no match for the mist of fate.",
+  "attackType": "Melee",
   "roles": [
     "Support",
     "Carry",
@@ -11,11 +12,50 @@
     "agility": 22,
     "intelligence": 18
   },
+  "attributeGains": {
+    "strength": 2.6,
+    "agility": 1.5,
+    "intelligence": 2
+  },
+  "statGains": {
+    "health": 57.2,
+    "healthRegen": 0.26,
+    "mana": 24,
+    "manaRegen": 0.1,
+    "armor": 0.25,
+    "attackSpeed": 1.5,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.75
+  },
+  "stats": {
+    "health": 582,
+    "healthRegen": 3.1,
+    "mana": 291,
+    "manaRegen": 0.9,
+    "armor": 2.67,
+    "magicResistance": 26.8,
+    "damageMin": 49,
+    "damageMax": 59,
+    "damageAverage": 54.45,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 95,
+    "totalAttackSpeed": 117,
+    "bat": 1.5,
+    "animationPoint": 0.56,
+    "animationBackswing": 0.41,
+    "moveSpeed": 325,
+    "turnRate": 0.6,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
+  },
   "abilities": [
     {
       "name": "Withering Mist",
       "type": "passive",
-      "description": "Damage instances applied by Abaddon applies a dormant debuff that activates when the affected enemy unit is below the max health threshold. The higher the Abaddon's level, the greater the applied health restore reduction value."
+      "description": "Damage instances applied by Abaddon applies a dormant debuff that activates when the affected enemy unit is below the max health threshold."
     },
     {
       "name": "Mist Coil",
@@ -31,6 +71,11 @@
       "name": "Curse of Avernus",
       "type": "passive",
       "description": "Applies a debuff that damages over time and slows the movement speed slow of the affected enemy unit. Grants all allied units bonus attack speed upon attacking the affected enemy unit."
+    },
+    {
+      "name": "Borrowed Time",
+      "type": "active",
+      "description": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding. What should hurt, instead heals; and what should kill gives strength anew. Applies of Abaddon's corresponding ability level when acquired."
     }
   ]
 }

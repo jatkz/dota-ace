@@ -1,6 +1,7 @@
 {
   "name": "Meepo",
   "description": "All these fancy knights and scary monsters. Pff! What do they got that I ain't got? Nothing, that's what.",
+  "attackType": "Melee",
   "roles": [
     "Carry",
     "Escape",
@@ -13,6 +14,45 @@
     "strength": 24,
     "agility": 17,
     "intelligence": 18
+  },
+  "attributeGains": {
+    "strength": 2.2,
+    "agility": 2.1,
+    "intelligence": 1.9
+  },
+  "statGains": {
+    "health": 48.4,
+    "healthRegen": 0.22,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
+    "mainAttackDamage": 2.1,
+    "mana": 22.8,
+    "manaRegen": 0.095,
+    "magicResistance": 0.1
+  },
+  "stats": {
+    "health": 648,
+    "healthRegen": 2.65,
+    "mana": 291,
+    "manaRegen": 1.15,
+    "armor": 5.83,
+    "magicResistance": 26.8,
+    "damageMin": 46,
+    "damageMax": 52,
+    "damageAverage": 49,
+    "projectileSpeed": "Instant",
+    "attackRange": 150,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 117,
+    "bat": 1.7,
+    "animationPoint": 0.38,
+    "animationBackswing": 0.6,
+    "moveSpeed": 320,
+    "turnRate": 0.9,
+    "collisionSize": 18,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {
@@ -43,12 +83,17 @@
     {
       "name": "Divided We Stand",
       "type": "passive",
-      "description": "Summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does"
+      "description": "Summons an imperfect, semi-autonomous duplicate of himself, which can gain gold and experience as he does."
     },
     {
       "name": "Clone Model",
       "type": "passive",
       "description": "The Meepo Clones are treated as heroes in most cases with certain exceptions."
+    },
+    {
+      "name": "Clone Inventory",
+      "type": "passive",
+      "description": "The Clones recognizes and copy Boots of Speed-based items with a certain priority. However, they still cannot utilize active item abilities by design."
     }
   ]
 }

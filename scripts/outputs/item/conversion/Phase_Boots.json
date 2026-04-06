@@ -2,10 +2,22 @@
   "name": "Phase Boots",
   "cost": 1450,
   "description": "Boots that allow the wearer to travel between the ether.",
-  "abilities": [],
+  "abilities": [
+    {
+      "name": "Phase",
+      "type": "passive",
+      "description": "Increases the wielder's movement speed, and grants them phased movement for a while. Cooldown: 8. Mana Cost: 0. Move Speed Bonus: 10%. Duration: 3. Move Speed Bonus: 20%. Grants even more movement speed, and greatly improves the turn rate if the wielder is melee."
+    }
+  ],
   "stats": {
     "Armor": "+4",
     "Move Speed": "+50",
     "Attack Damage": "+18"
-  }
+  },
+  "recipe": [
+    "Boots of Speed",
+    "Chainmail",
+    "Blades of Attack"
+  ],
+  "sellValue": 725
 }

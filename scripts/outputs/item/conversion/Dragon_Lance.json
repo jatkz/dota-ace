@@ -1,17 +1,27 @@
 {
   "name": "Dragon Lance",
   "cost": 1900,
+  "recipeCost": 450,
   "description": "The forward charge of the wyvern host grants no quarter.",
   "abilities": [
     {
       "name": "Dragon's Reach",
       "type": "passive",
-      "description": ""
+      "description": "Grants flat attack range bonus to ranged wielders. Attack Range Bonus: 130."
     }
   ],
   "stats": {
-    "Bonus Strength": "+10",
-    "Bonus Agility": "+15",
+    "Strength": "+10",
+    "Agility": "+15",
     "Attack Range": "+130"
-  }
+  },
+  "recipe": [
+    "Blade of Alacrity",
+    "Belt of Strength"
+  ],
+  "buildsInto": [
+    "Hydra's Breath",
+    "Hurricane Pike"
+  ],
+  "sellValue": 950
 }

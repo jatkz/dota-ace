@@ -2,8 +2,14 @@
   "name": "Vitality Booster",
   "cost": 1000,
   "description": "A ruby gemstone that has been passed down through generations of warrior kin.",
-  "abilities": [],
   "stats": {
-    "Bonus": "+250 Health"
-  }
+    "Bonus Health": 250
+  },
+  "buildsInto": [
+    "Aeon Disk",
+    "Vanguard",
+    "Soul Booster",
+    "Consecrated Wraps",
+    "Rod of Atos"
+  ]
 }

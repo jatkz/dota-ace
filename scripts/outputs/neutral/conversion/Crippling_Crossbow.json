@@ -1,9 +1,9 @@
 {
   "name": "Crippling Crossbow",
-  "description": "A Tier 2 neutral item that hobbles the target.",
+  "description": "An item that deals damage to an enemy and applies a slowing effect with reduced health restoration for a duration.",
   "tier": "2",
   "effects": {
-    "primary": "Hobble"
+    "primary": "Hits an enemy for 25 damage, slows their movement speed by 50%, and reduces the effectiveness of health restoration by 40%. The slow decays over time."
   },
   "notes": []
 }

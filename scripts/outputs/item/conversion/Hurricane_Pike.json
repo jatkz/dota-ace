@@ -1,17 +1,18 @@
 {
   "name": "Hurricane Pike",
   "cost": 4450,
+  "recipeCost": 350,
   "description": "A legendary pike once held as royal sigil of the ancient wyvern riders.",
   "abilities": [
     {
       "name": "Hurricane Thrust",
       "type": "active",
-      "description": ""
+      "description": "Pushes the caster and the enemy target away from each other. Cooldown: 19. Mana Cost: 150. Cast Range: 425. Push Distance: 425. Push Duration: 0.2. Attack Speed Bonus: 100. If the caster is ranged and the target is an enemy, greatly increases the caster's attack speed and grants them infinite attack range against the target for a few attacks, or until the buff expires. When cast on an ally or on self, pushes the target in the direction they are facing."
     },
     {
       "name": "Dragon's Reach",
       "type": "passive",
-      "description": ""
+      "description": "Grants flat attack range bonus to ranged wielders. Attack Range Bonus: 130."
     }
   ],
   "stats": {
@@ -20,5 +21,9 @@
     "Intelligence": "+15",
     "Health": "+200",
     "Attack Range": "+130"
-  }
+  },
+  "recipe": [
+    "Force Staff",
+    "Dragon Lance"
+  ]
 }

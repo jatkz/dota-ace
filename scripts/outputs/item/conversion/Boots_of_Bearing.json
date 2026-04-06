@@ -2,19 +2,26 @@
   "name": "Boots of Bearing",
   "cost": 4225,
   "description": "Resplendent footwear fashioned for the ancient herald that first dared spread the glory of Stonehall beyond the original borders of its nascent claim.",
+  "stats": {
+    "Strength": "+8",
+    "Health Regeneration": "+18",
+    "Move Speed": "+65"
+  },
   "abilities": [
     {
       "name": "Endurance",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Grants movement and attack speed to all nearby allies for a short while on cast. Cooldown: 30. Radius: 1200. Move Speed Bonus: 15%. Attack Speed Bonus: 50. Duration: 6. Slow Resistance: 100%. Briefly turns allies immune to slows as well."
     },
     {
       "name": "Swiftness Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the movement speed of nearby allies by a flat amount. Radius: 1200. Move Speed Bonus: 20. Health Regeneration Bonus: 2.5. Aura Linger Duration: 0.5."
     }
   ],
-  "stats": {
-    "Bonus": "+8 Strength+18 Health Regeneration+65 Move Speed"
-  }
+  "recipe": [
+    "Tranquil Boots",
+    "Drum of Endurance",
+    "Ring of Tarrasque"
+  ]
 }

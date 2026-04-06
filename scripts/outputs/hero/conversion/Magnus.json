@@ -1,6 +1,7 @@
 {
   "name": "Magnus",
-  "description": "No, I blame no one who covets my horn. But to desire more than sight of it is a guarantee of death. Magnus, the Magnoceros.",
+  "description": "No, I blame no one who covets my horn. But to desire more than sight of it is a guarantee of death.",
+  "attackType": "Melee",
   "roles": [
     "Initiator",
     "Disabler",
@@ -11,6 +12,44 @@
     "strength": 23,
     "agility": 14,
     "intelligence": 20
+  },
+  "attributeGains": {
+    "strength": 3.1,
+    "agility": 2,
+    "intelligence": 2.1
+  },
+  "statGains": {
+    "health": 68.2,
+    "healthRegen": 0.31,
+    "mana": 25.2,
+    "manaRegen": 0.105,
+    "armor": 0.33,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.24
+  },
+  "stats": {
+    "health": 626,
+    "healthRegen": 2.8,
+    "mana": 315,
+    "manaRegen": 1.5,
+    "armor": 3.33,
+    "magicResistance": 27,
+    "damageMin": 56,
+    "damageMax": 64,
+    "damageAverage": 60.65,
+    "projectileSpeed": "Instant",
+    "attackRange": 200,
+    "attackAcquisitionRange": 600,
+    "attackSpeed": 100,
+    "totalAttackSpeed": 114,
+    "bat": 1.8,
+    "animationPoint": 0.5,
+    "animationBackswing": 0.84,
+    "moveSpeed": 305,
+    "turnRate": 0.8,
+    "collisionSize": 27,
+    "visionDay": 1800,
+    "visionNight": 800
   },
   "abilities": [
     {

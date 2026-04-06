@@ -1,20 +1,29 @@
 {
   "name": "Drum of Endurance",
   "cost": 1625,
+  "recipeCost": 525,
   "description": "A relic that enchants the bodies of those around it for swifter movement in times of crisis.",
   "abilities": [
     {
       "name": "Endurance",
-      "type": "active",
-      "description": ""
+      "type": "passive",
+      "description": "Grants movement and attack speed to all nearby allies for a short while on cast. Cooldown: 45. Radius: 1200. Move Speed Bonus: 13%. Attack Speed Bonus: 35. Duration: 6."
     },
     {
       "name": "Swiftness Aura",
       "type": "passive",
-      "description": ""
+      "description": "Increases the movement speed of nearby allies by a flat amount. Radius: 1200. Move Speed Bonus: 15. Health Regeneration Bonus: 2.5. Aura Linger Duration: 0.5."
     }
   ],
   "stats": {
     "Bonus Strength": "+8"
-  }
+  },
+  "recipe": [
+    "Headdress",
+    "Belt of Strength",
+    "Wind Lace"
+  ],
+  "buildsInto": [
+    "Boots of Bearing"
+  ]
 }
