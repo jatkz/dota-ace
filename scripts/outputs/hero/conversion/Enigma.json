@@ -24,7 +24,6 @@
     "mana": 43.2,
     "manaRegen": 0.18,
     "armor": 0.17,
-    "attackSpeed": 1,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.2
   },
@@ -56,27 +55,27 @@
     {
       "name": "Event Horizon",
       "type": "passive",
-      "description": "The higher Enigma's level, the greater the applied movement speed slow."
+      "description": "The higher Enigma's level, the greater the applied movement speed slow. Radius: 600 (700). Move Speed Slow: 4%. Aura Linger Duration: 0.5. Facing Timer: 0.5. Move Speed Slow Increase: 1%."
     },
     {
       "name": "Malefice",
       "type": "active",
-      "description": "Focus his will on an enemy unit, damaging it and repeatedly stuns it. Strange gravities pull at the core of those who would oppose you, holding them in place."
+      "description": "Focus his will on an enemy unit, damaging it and repeatedly stuns it. Strange gravities pull at the core of those who would oppose you, holding them in place. Cast Range: 450/500/550/600. Number of Instances: 3 (7). Instance Interval: 2. Damage per Instance: 55/70/85/100 (155/170/185/200). Stun Duration per Instance: 0.3/0.5/0.7/0.9 (0.6/0.8/1/1.2). Malefice Duration: 4 (12). Cooldown: 20/18/16/14. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Demonic Summoning",
       "type": "active",
-      "description": "Summons fragments of the Enigma himself. Grants the summoned Eidolons max health bonus corresponding to Enigma's current health."
+      "description": "Summons fragments of the Enigma himself. Grants the summoned Eidolons max health bonus corresponding to Enigma's current health. Cast Range: 400. Number of Eidolons: 3 (7). Duration: 40. Current Health as Max Health Bonus: 3%. Attacks to Multiply: 7. Set Current Health: 100%. Cooldown: 40/38/36/34. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Midnight Pulse",
       "type": "active",
-      "description": "Steeps an area in dark resonance, damaging enemy units based on their current health."
+      "description": "Steeps an area in dark resonance, damaging enemy units based on their current health. Cast Range: 700. Effect Radius: 600 (800). Damage per Second: 5/10/15/20. Current Health as Damage per Second: 4%/6%/8%/10%. Duration: 9/10/11/12. Aura Linger Duration: 0.5. Cooldown: 40/35/30/25. Mana Cost: 65/90/115/140."
     },
     {
       "name": "Black Hole",
       "type": "active",
-      "description": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds."
+      "description": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds. Cast Range: 275. Max Channel Time: 4. Inner Effect Radius: 420. Inner Pull Speed: 30. Damage per Second: 100/150/200 (150/200/250). Max Silence Duration: 4. Cooldown: 180/170/160. Mana Cost: 300/400/500."
     }
   ]
 }

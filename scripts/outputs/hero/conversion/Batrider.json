@@ -1,6 +1,6 @@
 {
   "name": "Batrider",
-  "description": "It's not the bat you gotta worry about. She eats fruit. Batrider is considered a ground unit, despite its hero model showing otherwise.",
+  "description": "It's not the bat you gotta worry about. She eats fruit.",
   "attackType": "Ranged",
   "roles": [
     "Initiator",
@@ -20,10 +20,10 @@
   "statGains": {
     "health": 63.8,
     "healthRegen": 0.29,
-    "mana": 34.8,
-    "manaRegen": 0.145,
     "armor": 0.33,
     "attackSpeed": 2,
+    "mana": 34.8,
+    "manaRegen": 0.145,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.51
   },
@@ -55,27 +55,27 @@
     {
       "name": "Smoldering Resin",
       "type": "passive",
-      "description": "Attacks apply a resin that deals a portion of Batrider's attack damage as damage per second."
+      "description": "Attacks apply a resin that deals a portion of Batrider's attack damage as damage per second. Attack Damage to Damage per Second: 0.2. Duration: 2 (7)."
     },
     {
       "name": "Sticky Napalm",
       "type": "active",
-      "description": "Damage instances sourced from the Batrider procs additional damage corresponding to the amount of applied stacks. It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents."
+      "description": "Damage instances sourced from the Batrider procs additional damage corresponding to the amount of applied stacks. It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents. Cast Range: 600. Effect Radius: 375. First Damage: 5/10/15/20. Turn Rate Slow: 10%/30%/50%/70%. Stack Duration: 6. Proc Damage per Stack: 2.5/5/7.5/10. Cooldown: 3. Mana Cost: 22."
     },
     {
       "name": "Flamebreak",
       "type": "active",
-      "description": "Hurls an explosive cocktail that explodes when it reaches the target location and deals damage over time to enemy units in the area. Applies Sticky Napalm to its corresponding level upon Flamebreak impact."
+      "description": "Hurls an explosive cocktail that explodes when it reaches the target location and deals damage over time to enemy units in the area. Applies Sticky Napalm to its corresponding level upon Flamebreak impact. Cast Range: 1300. Effect Radius: 400. First Damage: 25/50/75/100. Damage per Second: 25/30/35/40. Move Speed Slow: 6%/12%/18%/24%. Debuff Duration: 2/3/4/5. Cooldown: 22/19/16/13 (16/13/10/7). Mana Cost: 110."
     },
     {
       "name": "Firefly",
       "type": "active",
-      "description": "Creates a fire trail that damages any enemy units upon contact and destroys trees below Batrider. is immune this ability's damage component."
+      "description": "Creates a fire trail that damages any enemy units upon contact and destroys trees below Batrider. is immune this ability's damage component. Damage Radius: 250. Damage per Second: 25/50/75/100 (55/80/105/130). Duration: 15. Max Move Speed Bonus: 12%/18%/24%/30% (13%/19%/25%/31%). Cooldown: 45/40/35/30. Mana Cost: 100."
     },
     {
       "name": "Flaming Lasso",
       "type": "active",
-      "description": "Lassoes an enemy unit, disables and drags them in Batrider's wake. Successful teleport sources applied to either Batrider or the debuff-affected enemy unit break the lasso. Roshan is innately immune to all forced movement sources. However, the damage component still applies to him."
+      "description": "Lassoes an enemy unit, disables and drags them in Batrider's wake. Sucessful teleport sources applied to either Batrider or the debuff-affected enemy unit break the lasso. Roshan is innately immune to all forced movement sources. However, the damage component still applies to him. Cast Range: 200. Break Distance: 425. Enemy Drag Distance: 300. Damage Interval: 0.5. Max Duration: 2.25/2.75/3.25 (3/3.5/4). Damage per Instance: 50/70/83 (33/50/63). Cooldown: 90/75/60. Mana Cost: 125/150/175."
     }
   ]
 }

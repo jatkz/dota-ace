@@ -56,27 +56,27 @@
     {
       "name": "Puckish",
       "type": "passive",
-      "description": "Restores a portion of both its max health and max mana per incoming attack projectile disjointed. The restoration is more effective when disjointing incoming spell-based projectiles."
+      "description": "Restores a portion of both its max health and max mana per incoming attack projectile disjointed. The restoration is more effective when disjointing incoming spell-based projectiles. Base Heal: 10. Max Health as Heal: 2%. Base Mana Restore: 10. Max Mana as Mana Restore: 2%. Spell Projectile Restore Factor: 3.5."
     },
     {
       "name": "Illusory Orb",
       "type": "active",
-      "description": "Sends out an illusory orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the current location of the orb using Ethereal Jaunt. Adds a vector-targeting functionality to that causes the launched projectile to curve. Has a faster projectile speed, a longer travel distance, and deals a portion of the spell damage as damage over time within the radius."
+      "description": "Sends out an illusory orb that floats in a straight path, damaging enemy units along the way. At any point, Puck may teleport to the current location of the orb using Ethereal Jaunt. Cast Range: 3000. Projectile Speed: 550. Travel Distance: 1950. Damage Radius: 225. Damage: 75/150/225/300 (115/190/265/340). Cooldown: 11/10/9/8. Mana Cost: 90/100/110/120."
     },
     {
       "name": "Waning Rift",
       "type": "active",
-      "description": "Teleports to the area-targeted location, deals damage, and silences enemy units within the radius. Additionally applies a knockback on enemy units within the radius, centered around Puck."
+      "description": "Teleports to the area-targeted location, deals damage, and silences enemy units within the radius. Cast Range: Global. Max Distance: 350 (700). Effect Radius: 400 (750). Damage: 60/120/180/240 (120/180/240/300). Silence Duration: 2/2.5/3/3.5 (3.25/3.75/4.25/4.75). Cooldown: 16/15/14/13 (13.5/12.5/11.5/10.5). Mana Cost: 100/110/120/130."
     },
     {
       "name": "Phase Shift",
       "type": "active",
-      "description": "Imbues Puck's attacks with magical attack damage bonus."
+      "description": "Imbues Puck's attacks with magical attack damage bonus. Max Channel Time: 1/1.75/2.5/3.25. Buff Linger Duration: 0.033. Instant Attack Radius: (550). Magical Attack Damage Bonus: (25). Cooldown: 8/7.5/7/6.5."
     },
     {
       "name": "Dream Coil",
       "type": "active",
-      "description": "Creates a coil of volatile magic that latches, damages and leashes onto enemy heroes. The coil snaps if any of the affected enemy heroes stretch the link by moving too far away, stunning and dealing additional damage."
+      "description": "Creates a coil of volatile magic that latches, damages and leashes onto enemy heroes. The coil snaps if any of the affected enemy heroes stretch the link by moving too far away, stunning and dealing additional damage. Cast Range: 750. Latch Radius: 375. First Damage: 175/250/325 (375/450/525). Coil Duration: 5/5.5/6. Break Distance: 600. Break Damage: 200/300/400 (400/500/600). Cooldown: 75 (60). Mana Cost: 125/175/225."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Void Spirit",
-  "description": "Friend or foe, in the wake of the confluence, you will follow where I lead. Inai, the Void Spirit Not even the other spirits claim to understand the mind and machinations of the eldest amongst them, Inai the Void Spirit.",
+  "description": "Friend or foe, in the wake of the confluence, you will follow where I lead.",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -24,6 +24,7 @@
     "mana": 37.2,
     "manaRegen": 0.155,
     "armor": 0.37,
+    "attackSpeed": 2.2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.56
   },
@@ -55,27 +56,27 @@
     {
       "name": "Intrinsic Edge",
       "type": "passive",
-      "description": "Grants Inai additional secondary bonuses from all attributes."
+      "description": "Grants Inai additional secondary bonuses from all attributes. Health Regen Bonus per Str: 0.125. Armor Bonus per Agi: 0.208. Mana Regen Bonus per Int: 0.063. Base Magic Resist Bonus per Int: 0.125%."
     },
     {
       "name": "Aether Remnant",
       "type": "active",
-      "description": "Grants True Sight centered around the Remnant, and creates an additional watcher path that rotates around the remnant. Enemy creeps within the Remnant's path no longer destroys the remnant, but deals damage per second to them corresponding to the total damage value."
+      "description": "Grants True Sight centered around the Remnant, and creates an additional watcher path that rotates around the remnant. Enemy creeps within the Remnant's path no longer destroys the remnant, but deals damage per second to them corresponding to the total damage value. Cast Range: 850. Remnant Speed: 900. Remnant Watch Width: 130. Watch Path Vision Radius: 200. True Sight Radius: (475). Remnant Search Range: 450. Cooldown: 17/15/13/11. Mana Cost: 75/80/85/90."
     },
     {
       "name": "Dissimilate",
       "type": "active",
-      "description": "Temporarily fades into the aether, creating a number of portals through which Inai can reassemble himself. Deals damage to all enemy units within the portal radius upon exit. Creates additional portals with the same radius behind the first ring portals."
+      "description": "Temporarily fades into the aether, creating a number of portals through which Inai can reassemble himself. Deals damage to all enemy units within the portal radius upon exit. Creates additional portals with the same radius behind the first ring portals. Portal Radius: 275. First Ring Radius: 520. Number of First Ring Portals: 6. Damage: 100/180/260/340. Hidden Duration: 1.1. Second Ring Radius: (1040). Cooldown: 20/17/14/11. Mana Cost: 130."
     },
     {
       "name": "Resonant Pulse",
       "type": "active",
-      "description": "Swiftly creates a physical damage barrier and emits a single damaging pulse around Inai. Now applies silences to all affected enemy units, and is now a charged-based ability with a replenish time."
+      "description": "Swiftly creates a physical damage barrier and emits a single damaging pulse around Inai. Now applies silences to all affected enemy units, and is now a charged-based ability with a replenish time. Effect Radius: 500. Damage: 60/110/160/210 (100/150/200/250). Base Damage Barrier: 25/50/75/100 (30/60/90/120). Barrier Duration: 10. Barrier Bonus per Enemy Hero Hit: 35/50/65/80. Silence Duration: (1.75). Cooldown: 18 (0.25). Mana Cost: 115/120/125/130."
     },
     {
       "name": "Astral Step",
       "type": "active",
-      "description": "Tears a rift through the astral plane to appear at the target location, slicing all enemy units along the path. This attack inflicts a void debuff that applies a movement speed slow, and then detonates. A small step for Inai creates great devastation on the mortal plane."
+      "description": "Tears a rift through the astral plane to appear at the target location, slicing all enemy units along the path. This attack inflicts a void debuff that applies a movement speed slow, and then detonates. A small step for Inai creates great devastation on the mortal plane. Cast Range: Global. Min Distance: 200. Max Distance: 800/900/1000. Path Width: 170. Instant Attack Factor: 1. Move Speed Slow: 40%/60%/80%. Cooldown: 0. Mana Cost: 90."
     }
   ]
 }

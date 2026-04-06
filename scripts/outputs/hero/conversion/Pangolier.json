@@ -58,32 +58,32 @@
     {
       "name": "Fortune Favors the Bold",
       "type": "passive",
-      "description": "Offensive proc chance-based on-attack effects have a chance to do nothing on Pangolier within the radius."
+      "description": "Offensive proc chance-based on-attack effects have a chance to do nothing on Pangolier within the radius. Radius: 1200. Proc Chance Reduction: 50%. Aura Linger Duration: 0.5."
     },
     {
       "name": "Swashbuckle",
       "type": "active",
-      "description": "Dashes along to the point-targeted location, then slashes all enemy units in the vector-targeted direction. Sneakly applies an additional instant attack instance to all enemy units Donté dashes through."
+      "description": "Dashes along to the point-targeted location, then slashes all enemy units in the vector-targeted direction. Sneakily applies an additional instant attack instance to all enemy units Donté dashes through. Cast Range: 575/650/725/800. Slash Range: 850 (1050). Slash Width: 155. Number of Slashes: 3. Slash Interval: 0.1. Set Attack Damage: 35/65/95/125. Cooldown: 19/16/13/10 (17/14/11/8). Mana Cost: 75/80/85/90."
     },
     {
       "name": "Shield Crash",
       "type": "active",
-      "description": "Jumps in the air and slams back to the ground in front of his current position, damaging and applying a movement speed slow within the radius. Applies a lesser Swashbuckle slashes 90° around himself upon a Shield Crash cast."
+      "description": "Jumps in the air and slams back to the ground in front of his current position, damaging and applying a movement speed slow within the radius. Applies a lesser Swashbuckle slashes 90° around himself upon a Shield Crash cast. Effect Radius: 500. Jump Distance: 225. Damage: 50/100/150/200. Jump Duration: 0.4. Barrier Duration: 6. Jump Height: 350. Cooldown: 15/12/9/6. Mana Cost: 75."
     },
     {
       "name": "Lucky Shot",
       "type": "passive",
-      "description": "Donté's attacks have a chance to applies a movement speed slow while reducing the affected enemy units' armor. Pangolier's abilities has an ensured chance to apply Lucky Shot of its corresponding level per spell damage instance."
+      "description": "Donté's attacks have a chance to apply a movement speed slow while reducing the affected enemy units' armor. Pangolier's abilities have an ensured chance to apply Lucky Shot of its corresponding level per spell damage instance. Attack Proc Chance: 17%. Min Damage Threshold: 0. Armor Reduction: 3/5/7/9 (6/8/10/12). Attack Speed Slow: 40/80/120/160. Duration: 3.5/4/4.5/5. Spell Proc Chance: 100%."
     },
     {
       "name": "Roll Up",
       "type": "active",
-      "description": "Curls into Donté's Gyroshell form. Grants debuff immunity and the ability to turn. If Donté is attacked by enemy units while Rolled Up, he rolls away from the attacking unit, while damaging and applying stuns corresponding to Rolling Thunder's level if there are enemy units in his way."
+      "description": "Curls into Donté's Gyroshell form. Grants debuff immunity and the ability to turn. If Donté is attacked by enemy units while Rolled Up, he rolls away from the attacking unit, while damaging and applying stuns corresponding to Rolling Thunder's level if there are enemy units in his way. Magic Resist Bonus: 80%. Roll Up Duration: 2.25. Roll Duration Upon Attacked: 0.75. Roll Speed: 600. Jump Height: 350. Jump Duration: 0.75. Cooldown: 40. Mana Cost: 50."
     },
     {
       "name": "Rolling Thunder",
       "type": "active",
-      "description": "Curls into a ball and rolls out. Donté has increased magic resistance and is debuff immune. While rolling, he moves at an increased speed and can move through trees. Applies a knockback, stuns enemy units within the collision radius, and deals bonus spell damage based on his current total attack damage. While rolling, Donté has some difficulties turning. However, Rolling Thunder boosts and increases his turn rate in three conditions: Upon cast, upon landing with Shield Crash, or upon hitting an impassable terrain."
+      "description": "Curls into a ball and rolls out. Donté has increased magic resistance and is debuff immune. While rolling, he moves at an increased speed and can move through trees. Applies a knockback, stuns enemy units within the collision radius, and deals bonus spell damage based on his current total attack damage. While rolling, Donté has some difficulties turning. However, Rolling Thunder boosts and increases his turn rate in three conditions: Upon cast, upon landing with Shield Crash, or upon hitting an impassable terrain. Collision Radius: 150. Magic Resist Bonus: 80%. Set Move Speed: 0. Base Damage: 100/200/300. Attack Damage to Spell Damage Bonus Factor: 1. Knock Distance: 150. Cooldown: 90/85/80 (75/70/65). Mana Cost: 100/125/150."
     }
   ]
 }

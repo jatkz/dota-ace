@@ -24,10 +24,11 @@
   "statGains": {
     "health": 59.4,
     "healthRegen": 0.27,
-    "mana": 21.6,
-    "manaRegen": 0.09,
+    "mainAttackDamage": 2.7,
     "armor": 0.25,
     "attackSpeed": 1.5,
+    "mana": 21.6,
+    "manaRegen": 0.09,
     "magicResistance": 0.1
   },
   "stats": {
@@ -58,32 +59,32 @@
     {
       "name": "Greevil's Greed",
       "type": "passive",
-      "description": "Synthesizes additional gold from killed enemy units. Alchemist earns base bonus gold and extra bonus gold per last hit. If Alchemist kills another unit which grants gold within a short duration, an additional instance of bonus gold is added to the total. Increases the base gold bonus and max gold bonus per granted Aghanim's Scepter to Alchemist's allied heroes."
+      "description": "Synthesizes additional gold from killed enemy units. Alchemist earns base bonus gold and extra bonus gold per last hit. If Alchemist kills another unit which grants gold within a short duration, an additional instance of bonus gold is added to the total. Increases the base gold bonus and max gold bonus per granted Aghanim's Scepter to Alchemist's allied heroes. Base Gold Bonus: 2. Gold Bonus per Stack: 2. Max Gold Bonus: 16. Buff Duration: 40. Attack Damage Bonus per Stack: (6). Self Gold Bonus Multiplier: 2."
     },
     {
       "name": "Acid Spray",
       "type": "active",
-      "description": "Enemy units who step across the contaminated terrain take damage per second and have their armor reduced. Continuously applies Corrosive Weaponry stacks on enemy units affected by Acid Spray."
+      "description": "Enemy units who step across the contaminated terrain take damage per second and have their armor reduced. Continuously applies Corrosive Weaponry stacks on enemy units affected by Acid Spray. Cast Range: 900. Radius: 350/400/450/500. Damage per Second: 25/30/35/40. Armor Reduction: 3/4/5/6 (4/5/6/7). Aura Linger Duration: 0.5. Duration: 15. Cooldown: 22/21/20/19. Mana Cost: 120."
     },
     {
       "name": "Unstable Concoction",
       "type": "active",
-      "description": "Applies Corrosive Weaponry stacks correspondingly to its brew time on affected enemy units upon the Unstable Concoction projectile impact."
+      "description": "Applies Corrosive Weaponry stacks correspondingly to its brew time on affected enemy units upon the Unstable Concoction projectile impact. Radius: 250 (400). Max Brew Time: 5. Max Throw Time: 5.5. Move Speed Bonus: 4%/8%/12%/16%. Min Damage: 0. Max Damage: 150/220/290/360 (550/620/690/760). Cooldown: 17. Mana Cost: 100."
     },
     {
       "name": "Corrosive Weaponry",
       "type": "passive",
-      "description": "Each successful attack applies a stacking slow and base attack damage reduction. Applies Corrosive Weaponry stacks correspondingly to its brew time on affected enemy units upon the Unstable Concoction projectile impact."
+      "description": "Each successful attack applies a stacking slow and base attack damage reduction. Applies Corrosive Weaponry stacks correspondingly to its brew time on affected enemy units upon the Unstable Concoction projectile impact. Stack per Attack: 2. Move Speed Slow per Stack: 2.5%/3%/3.5%/4% (3.5%/4%/4.5%/5%). Base Attack Damage Reduction per Stack: 2.5%/3%/3.5%/4% (3.5%/4%/4.5%/5%). Duration: 4. Stack per Damage Interval: 1. Stack per Second Brew Time: 1."
     },
     {
       "name": "Berserk Potion",
       "type": "active",
-      "description": "Throws a potion at an allied unit, applying a basic dispel and granting them bonus attack speed, movement speed and health regeneration."
+      "description": "Throws a potion at an allied unit, applying a basic dispel and granting them bonus attack speed, movement speed and health regeneration. Cast Range: 800. Move Speed Bonus: 30. Attack Speed Bonus: 50. Health Regen Bonus: 40. Duration: 15. Cooldown: 35. Mana Cost: 100."
     },
     {
       "name": "Chemical Rage",
       "type": "active",
-      "description": "Reduces the ogre's base attack time while granting bonus movement speed and health regeneration."
+      "description": "Reduces the ogre's base attack time while granting bonus movement speed and health regeneration. Transform Time: 0.35. Set Base Attack Time: 1.2/1.1/1 (1.1/1/0.9). Health Regen Bonus: 60/90/120 (110/140/170). Move Speed Bonus: 20/30/40 (70/80/90). Duration: 30. Cooldown: 60. Mana Cost: 50/75/100."
     }
   ]
 }

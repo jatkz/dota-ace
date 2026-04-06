@@ -20,10 +20,10 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
-    "armor": 0.45,
-    "attackSpeed": 2.7,
     "mana": 31.2,
     "manaRegen": 0.13,
+    "armor": 0.45,
+    "attackSpeed": 2.7,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.38
   },
@@ -55,32 +55,32 @@
     {
       "name": "Runic Infusion",
       "type": "passive",
-      "description": "Grants permanent,, and per Power Rune activated by The Self and The Double."
+      "description": "Grants permanent bonuses per Power Rune activated by Arc Warden and the Double."
     },
     {
       "name": "Flux",
       "type": "active",
-      "description": "Deals damage over time on the unit-targeted enemy. The damage is not applied if another enemy unit is near the debuff-affected enemy unit."
+      "description": "Deals damage over time on the unit-targeted enemy. The damage is not applied if another enemy unit is near the debuff-affected enemy unit. Cast Range: 500/600/700/800 (700/800/900/1000). Search Radius: 225. Damage per Second: 15/30/45/60 (22.5/45/67.5/90). Move Speed Slow: 14%/21%/28%/35% (34%/41%/48%/55%). Duration: 6 (8). Silence Duration: (8). Cooldown: 16. Mana Cost: 75."
     },
     {
       "name": "Magnetic Field",
       "type": "active",
-      "description": "Grants allied units absolute evasion and attack speed bonus within the area-targeted location."
+      "description": "Grants allied units absolute evasion and attack speed bonus within the area-targeted location. Cast Range: 900. Effect Radius: 300. Attack Speed Bonus: 30/60/90/120 (55/85/115/145). Aura Duration: 4/5/6/7. Aura Linger Duration: 0.1. Rune Pull Radius: 1200/1800/2400/3000. Cooldown: 20/19/18/17 (15/14/13/12). Mana Cost: 60/70/80/90."
     },
     {
       "name": "Spark Wraith",
       "type": "active",
-      "description": "Summons a Spark Wraith that activates after an effect delay. Once an enemy is within its search radius, the wraith fuses itself with the target."
+      "description": "Summons a Spark Wraith that activates after an effect delay. Once an enemy is within its search radius, the wraith fuses itself with the target. Cast Range: 2000. Search Radius: 375. Damage: 100/170/240/310 (300/370/440/510). Move Speed Slow: 100%. Slow Duration: 0.7/0.8/0.9/1. Dormant Duration: 16 (46). Cooldown: 4. Mana Cost: 80."
     },
     {
       "name": "Tempest Double",
       "type": "active",
-      "description": "The Self creates a perfect duplication of itself which is considered a hero by most abilities. The Double can use all of The Self's current items and non-ultimate spells, except most consumables and items that would drop on death. The Double has a separate and independent item and ability cooldowns. Creates a Double with all of his basic abilities, without other and inactive. Losing and reacquiring the ability allows Rubick to summon another Double from the previous ability acquisition."
+      "description": "Arc Warden creates a perfect duplication of itself which is considered a hero by most abilities. The Double can use all of Arc Warden's current items and non-ultimate spells, except most consumables and items that would drop on death. The Double has a separate and independent item and ability cooldowns. Increases the Double's gold and experience bounty value per Arc Warden's level. Cast Range: 700. Number of Clones: 1. Duration: 18/21/24. Max Move Speed Slow: 35%. Max Miss Chance: 35%. Buff Duration: 12. Cooldown: 60/55/50."
     },
     {
       "name": "Clone Inventory",
-      "type": "active",
-      "description": "'s ability cooldown increases per proc and is bound independently to The Double."
+      "type": "passive",
+      "description": "'s ability cooldown increases per proc and is bound independently to the Double."
     }
   ]
 }

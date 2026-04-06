@@ -1,6 +1,6 @@
 {
   "name": "Timbersaw",
-  "description": "I'm not a lumberjack. This. This is personal. Rizzrack, the Timbersaw The shatters the tree it latched upon Timbersaw reaching it. The tree splinters in all directions, damaging and applying a movement speed slow to affected enemy units.",
+  "description": "I'm not a lumberjack. This. This is personal.",
   "attackType": "Melee",
   "roles": [
     "Nuker",
@@ -23,8 +23,8 @@
     "mana": 32.4,
     "manaRegen": 0.135,
     "armor": 0.27,
-    "attackSpeed": 1.6,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
   },
   "stats": {
     "health": 626,
@@ -54,37 +54,37 @@
     {
       "name": "Exposure Therapy",
       "type": "passive",
-      "description": "Timbersaw restores a flat amount of mana per tree destroyed. Now additionally restores a flat amount of health per tree destroyed."
+      "description": "Timbersaw restores a flat amount of mana per tree destroyed. Now additionally restores a flat amount of health per tree destroyed. Mana Restore per Destroyed Tree: 4/6/8/10. Heal per Destroyed Tree: 10."
     },
     {
       "name": "Whirling Death",
       "type": "active",
-      "description": "For Universal enemy heroes, the ability reduces a lesser portion of all of their attributes. Although Sven's has an actual 20.01, the health bar the to health value for the health bar.20 × 22 + 120= 560Hence, Sven now has the aforementioned max health, then Whirling Death applies the."
+      "description": "For Universal enemy heroes, the ability reduces a lesser portion of all of their attributes. Radius: 325. Base Damage: 75/120/165/210. Damage Bonus per Tree: 9/16/23/30 (84/91/98/105). Attribute Reduction: 13% (15%). Debuff Duration: 11/12/13/14. All Attributes Reduction: 5% (7%). Cooldown: 7.5/7/6.5/6. Mana Cost: 100."
     },
     {
       "name": "Timber Chain",
       "type": "active",
-      "description": "Fires a chain that embeds itself in the first tree it hits, pulling Timbersaw towards it. Deals damage to enemy units within Timbersaw's travel path. The shatters the tree it latched upon Timbersaw reaching it. The tree splinters in all directions, damaging and applying a movement speed slow to affected enemy units."
+      "description": "Fires a chain that embeds itself in the first tree it hits, pulling Timbersaw towards it. Deals damage to enemy units within Timbersaw's travel path. Cast Range: 750/900/1050/1200. Max Travel Distance: 750/900/1050/1200. Travel Speed: 2200/2400/2600/2800. Tree Search Radius: 90. Damage Radius: 225. Damage: 45/100/155/210. Cooldown: 4. Mana Cost: 60/70/80/90."
     },
     {
       "name": "Reactive Armor",
       "type": "passive",
-      "description": "Grants bonus armor and bonus health regeneration whenever an enemy hero attacks Timbersaw. The damage barrier explodes when it expires, damaging nearby enemy units corrspondingly to its current barrier value."
+      "description": "Grants bonus armor and bonus health regeneration whenever an enemy hero attacks Timbersaw. The damage barrier explodes when it expires, damaging nearby enemy units corresponding to its current barrier value. Stack per Incoming Attack: 4 (5). Armor Bonus per Stack: 0.4/0.5/0.6/0.7. Health Regen Bonus per Stack: 0.4/0.5/0.6/0.7 (0.65/0.75/0.85/0.95). Stack Duration: 10/12/14/16. Stack per Creep Attack: 1. Effect Radius: (450)."
     },
     {
       "name": "Twisted Chakram",
       "type": "active",
-      "description": "Launches a secondary saw-blade that deals damage and applies movement speed slow on affected enemy units based on their current health it passes through, then returns to Timbersaw."
+      "description": "Launches a secondary saw-blade that deals damage and applies movement speed slow on affected enemy units based on their current health it passes through, then returns to Timbersaw. Cast Range: 1200. Effect Radius: 125. Contact Damage: 100/150/200. Min Move Speed Slow Health Threshold: 5%. Min Move Speed Slow: 5% (10%). Max Move Speed Slow: 100%. Cooldown: 20/16/12. Mana Cost: 100/140/180."
     },
     {
       "name": "Flamethrower",
       "type": "active",
-      "description": "Releases a destructive flame in the direction Timbersaw is facing. Deals damage per second, applies a movement speed slow and destroys trees within an area."
+      "description": "Releases a destructive flame in the direction Timbersaw is facing. Deals damage per second, applies a movement speed slow and destroys trees within an area. First Radius: 0. Flame Length: 400. End Radius: 275. Damage per Second: 70. Move Speed Slow: 30%. Debuff Duration: 2. Cooldown: 20. Mana Cost: 100."
     },
     {
       "name": "Chakram",
       "type": "active",
-      "description": "Launches a saw-blade that deals damage, applies a movement speed slow, and cuts down trees in its path when launched and retracted. The saw-blade spins in place, deals damage over time, and applies a movement speed slow to enemy units based on their current health within its proximity once it reaches its area-targeted location."
+      "description": "Launches a saw-blade that deals damage, applies a movement speed slow, and cuts down trees in its path when launched and retracted. The saw-blade spins in place, deals damage over time, and applies a movement speed slow to enemy units based on their current health within its proximity once it reaches its area-targeted location. Cast Range: 1200. Effect Radius: 200. Max Distance: 2000. Contact Damage: 100/150/200. Contact Slow Duration: 0.5. Aura Linger Duration: 0.5. Cooldown: 8. Mana Cost: 100/140/180."
     }
   ]
 }

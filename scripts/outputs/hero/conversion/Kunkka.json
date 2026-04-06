@@ -1,6 +1,6 @@
 {
   "name": "Kunkka",
-  "description": "Step lively now, your Admiral is on board! Kunkka, the Admiral As The Admiral of the mighty Claddish Navy, Kunkka was charged with protecting the isles of his homeland when the demons of the Cataract made a concerted grab at the lands of men.",
+  "description": "Step lively now, your Admiral is on board!",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -26,9 +26,9 @@
     "mana": 21.6,
     "manaRegen": 0.09,
     "armor": 0.27,
+    "attackSpeed": 1.6,
     "magicResistance": 0.1,
-    "mainAttackDamage": 3.6,
-    "attackSpeed": 1.6
+    "mainAttackDamage": 3.6
   },
   "stats": {
     "health": 648,
@@ -58,32 +58,32 @@
     {
       "name": "Admiral's Rum",
       "type": "passive",
-      "description": "Douses himself with the Admiral's signature rum upon taking additional player-based damage instances when reaching a certain health threshold. The Rum buff grants bonus movement speed and damage reduction for a period of time."
+      "description": "Douses himself with the Admiral's signature rum upon taking additional player-based damage instances when reaching a certain health threshold. The Rum buff grants bonus movement speed and damage reduction for a period of time. Health Threshold: 65%. Move Speed Bonus: 7.75%. Damage Reduction: 18%. Damage Timer: 6. Rum Buff Duration: 6 (7). Move Speed Bonus Increase: 0.25%. Cooldown: 60.5."
     },
     {
       "name": "Torrent",
       "type": "active",
-      "description": "Summons a rising torrent that, after a short delay, stuns and hurls enemy units into the sky."
+      "description": "Summons a rising torrent that, after a short delay, stuns and hurls enemy units into the sky. Cast Range: 1300. Radius: 250 (350). Stun Duration: 1.4 (1.75). Knock-Up Duration: 1.33 (1.66). Total Damage: 110/180/250/320 (137.5/225/312.5/400). Move Speed Slow: 40%. Cooldown: 16/14/12/10. Mana Cost: 90."
     },
     {
       "name": "Tidebringer",
       "type": "active",
-      "description": "Grants increased damage and cleaves a large area of effect in front of Kunkka for a single strike. The slow does not affect enemy units."
+      "description": "Grants increased damage and cleaves a large area of effect in front of Kunkka for a single strike. The Tidebringer attack now ignores a certain amount of the armor damage factor. Only affects the Tidebringer damage instance. Cast Range: 150. First Width: 150 (250). Distance: 650/775/900/1025 (750/875/1000/1125). End Width: 500/550/600/650 (600/650/700/750). Cleave Damage: 150% (230%). Attack Damage Bonus: 35/70/105/140 (110/145/180/215). Cooldown: 13/10/7/4."
     },
     {
       "name": "X Marks the Spot",
       "type": "active",
-      "description": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment."
+      "description": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment. Cast Range: 550/700/850/1000. Enemy Duration: 3. Ally Duration: 6. Cooldown: 24/20/16/12. Mana Cost: 50."
     },
     {
       "name": "Tidal Wave",
       "type": "active",
-      "description": "Calls upon a tidal wave from behind Kunkka that deals damage, disarms, and drags enemy units along it."
+      "description": "Calls upon a tidal wave from behind Kunkka that deals damage, disarms, and drags enemy units along it. Cast Range: 1050. Travel Distance: 1800. Radius: 750 (850). Damage: 180. Knock Distance: 600. Knock Duration: 1. Cooldown: 12. Mana Cost: 75."
     },
     {
       "name": "Ghostship",
       "type": "active",
-      "description": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Summons a fleet of Ghost ships on a 2.5 second interval. Each ship now also fires waves of cannonballs from the port and starboard side dealing part of Ghostship's damage as they pass through enemies."
+      "description": "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Summons a fleet of Ghost ships on a 2.5 second interval. Each ship now also fires waves of cannonballs from the port and starboard side dealing part of Ghostship's damage as they pass through enemies. Cast Range: 1000. Number of Ships: 1 (2). Ship Radius: 450 (550). Travel Distance: 2000. Ship Spawn Interval: 3.5. Impact Damage: 350/475/600. Cooldown: 90/80/70. Mana Cost: 125/175/225."
     }
   ]
 }

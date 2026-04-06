@@ -55,27 +55,27 @@
     {
       "name": "Scatterblast",
       "type": "active",
-      "description": "Unloads a blast that damages and applies a movement speed slow to enemy units within a cone. The blast is more effective at point-blank distance. Snapfire unloads with a wide blast, the point-blank distance is applied to enemy units closest to her."
+      "description": "Unloads a blast that damages and applies a movement speed slow to enemy units within a cone. The blast is more effective at point-blank distance. Snapfire unloads with a wide blast, the point-blank distance is applied to enemy units closest to her. Cast Range: 800. Damage: 100/160/220/280 (170/230/290/350). Point-Blank Damage Factor: 1.5. Move Speed Slow: 100%. Attack Speed Slow: 100. Slow Duration: 1. Cooldown: 16/14/12/10. Mana Cost: 85/90/95/100."
     },
     {
       "name": "Firesnap Cookie",
       "type": "active",
-      "description": "Beatrix feeds a potent cookie to an allied unit, causing it to hop a short distance. The affected unit stuns and damages enemy units within the landing radius. The Firesnap Cookie now heals the affected allied unit while launching a singular, less potent Mortimer Kisses firespit to the landing destination."
+      "description": "Beatrix feeds a potent cookie to an allied unit, causing it to hop a short distance. The affected unit stuns and damages enemy units within the landing radius. The Firesnap Cookie now heals the affected allied unit while launching a singular, less potent Mortimer Kisses firespit to the landing destination. Cast Range: 650. Landing Radius: 300. Jump Distance: 425. Jump Duration: 0.484. Landing Damage: 75/150/225/300. Stun Duration: 1/1.4/1.8/2.2. Cooldown: 18/17/16/15. Mana Cost: 105."
     },
     {
       "name": "Lil' Shredder",
       "type": "active",
-      "description": "Heats up her mounted turret to rapidly fire a number of fixed-damage attacks while applying an armor reduction to the affected enemy unit. Grants self bonus attack range for the duration."
+      "description": "Heats up her mounted turret to rapidly fire a number of fixed-damage attacks while applying an armor reduction to the affected enemy unit. Grants self bonus attack range for the duration. Number of Attacks: 5 (7). Attack Range Bonus: 160/240/320/400. Attack Speed Bonus: 300. Set Base Attack Time: 1. Set Attack Damage: 20/35/50/65. Base Attack Damage Factor: 0.35 (0.95). Cooldown: 24/20/16/12. Mana Cost: 70/80/90/100."
     },
     {
       "name": "Gobble Up",
       "type": "active",
-      "description": "Mortimer gobbles up an allied unit, which he can then spit toward enemy units. The unit stays in his belly for a fixed duration, and is released after the max duration if Spit Out is not cast."
+      "description": "Mortimer gobbles up an allied unit, which he can then spit toward enemy units. The unit stays in his belly for a fixed duration, and is released after the max duration if Spit Out is not cast. Cast Range: 150. Max Duration: 3. Mana Cost: 40."
     },
     {
       "name": "Mortimer Kisses",
       "type": "active",
-      "description": "These globs cause impact damage and create pools of firespit that applies a movement speed slow and damage over time. Each glob's landing location can be targeted with an attack order."
+      "description": "These globs cause impact damage and create pools of firespit that applies a movement speed slow and damage over time. Each glob's landing location can be targeted with an attack order. Cast Range: 3000. Min Distance: 300. Max Distance: 3000. Impact Radius: 275. Set Move Speed: 0.001. Turn Rate Factor: 0.25. Cooldown: 120/110/100. Mana Cost: 125/150/175."
     }
   ]
 }

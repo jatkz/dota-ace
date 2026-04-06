@@ -701,10 +701,308 @@ function scoreAbilityText(text, abilityName = '') {
     return score;
 }
 
+function getHeroAbilityBlock($, header) {
+    let current = $(header).parent().next();
+
+    if (!current.length) {
+        current = getHeadingBlock($, header).next();
+    }
+
+    while (current.length > 0) {
+        if (current.is('div[id]')) {
+            return current;
+        }
+
+        if (current.is('.mw-heading, h2, h3, h4, h5, h6') || current.find('h2, h3, h4').length > 0) {
+            break;
+        }
+
+        current = current.next();
+    }
+
+    return cheerio.load('<div></div>')('div').first();
+}
+
+function getHeroAbilityMainCard($, header) {
+    const block = getHeroAbilityBlock($, header);
+    if (!block.length) {
+        return block;
+    }
+
+    const mainCard = block.children('div').first();
+    return mainCard.length ? mainCard : block;
+}
+
+function normalizeHeroAbilityMetricValue(value = '') {
+    return simplifyHeroAbilityMetricSeries(
+        sanitizeNarrativeText(value)
+        .replace(/\)(?=[A-Z])/g, ') ')
+        .replace(/(\d)([A-Z][A-Za-z'()/% -]{1,40}:)/g, '$1 $2')
+        .replace(/\(\s*\)/g, '')
+        .replace(/\(\s+/g, '(')
+        .replace(/\s+\)/g, ')')
+        .replace(/\s+/g, ' ')
+        .trim()
+    );
+}
+
+function parseHeroNumericSeries(text = '') {
+    const cleaned = String(text || '')
+        .replace(/[%°]/g, '')
+        .replace(/\s+/g, '')
+        .trim();
+
+    if (!cleaned || !/^[-\d./]+$/.test(cleaned)) {
+        return null;
+    }
+
+    const parts = cleaned.split('/').map(part => parseFloat(part));
+    if (parts.length === 0 || parts.some(value => !Number.isFinite(value))) {
+        return null;
+    }
+
+    return parts;
+}
+
+function simplifyHeroAbilityMetricSeries(value = '') {
+    return String(value || '').replace(/(\d[\d./%°\s-]*)\s*\(([\d./%°\s-]+)\)/g, (match, base, alt) => {
+        const baseSeries = parseHeroNumericSeries(base);
+        const altSeries = parseHeroNumericSeries(alt);
+
+        if (!baseSeries || !altSeries || baseSeries.length !== altSeries.length) {
+            return match;
+        }
+
+        const ratios = altSeries.map((valueItem, index) => {
+            const baseItem = baseSeries[index];
+            if (baseItem === 0) {
+                return valueItem === 0 ? 1 : Number.POSITIVE_INFINITY;
+            }
+
+            return valueItem / baseItem;
+        });
+
+        const identical = ratios.every(ratio => Math.abs(ratio - 1) < 0.0001);
+        const absurd = ratios.every(ratio => ratio >= 10);
+
+        return identical || absurd ? base.trim() : `${base.trim()} (${alt.trim()})`;
+    });
+}
+
+function splitHeroAbilityTraits(text = '') {
+    const cleaned = normalizeHeroAbilityMetricValue(text);
+    if (!cleaned || !cleaned.includes(':')) {
+        return [];
+    }
+
+    const matches = [...cleaned.matchAll(/([A-Z][A-Za-z0-9'()+/% -]{1,60}?):\s*(.*?)(?=(?:\s+[A-Z][A-Za-z0-9'()+/% -]{1,60}:\s)|$)/g)];
+
+    return matches
+        .map(match => ({
+            label: sanitizeNarrativeText(match[1] || ''),
+            value: normalizeHeroAbilityMetricValue(match[2] || '')
+        }))
+        .filter(part => part.label && part.value);
+}
+
+function isImportantHeroAbilityTrait(label = '') {
+    if (!label) {
+        return false;
+    }
+
+    if (/^(cast animation|downtime)$/i.test(label)) {
+        return false;
+    }
+
+    return /(damage|heal|duration|cooldown|mana|range|radius|chance|speed|slow|stun|root|silence|break|distance|pull|push|jump|travel|impact|count|number|charges|bonus|factor|threshold|search|projectile|armor|resist|reduction|regen|interval|attack|time|spread|width|length|cleave|leash|lifesteal|amp)/i.test(label);
+}
+
+function getHeroAbilityTraits($, card) {
+    if (!card || card.length === 0) {
+        return [];
+    }
+
+    const traits = [];
+
+    card.find('div').each((_, el) => {
+        const text = normalizeHeroAbilityMetricValue($(el).text());
+        if (!text || text.length > 180 || !text.includes(':')) {
+            return;
+        }
+
+        for (const part of splitHeroAbilityTraits(text)) {
+            if (isImportantHeroAbilityTrait(part.label)) {
+                traits.push(`${part.label}: ${part.value}`);
+            }
+        }
+    });
+
+    const uniqueTraits = uniqueTexts(traits);
+    const castRangeValue = uniqueTraits
+        .find(trait => /^Cast Range:/i.test(trait))
+        ?.replace(/^Cast Range:\s*/i, '')
+        .trim();
+
+    return uniqueTraits.filter(trait => {
+        if (!castRangeValue) {
+            return true;
+        }
+
+        return !/^Range:/i.test(trait) || trait.replace(/^Range:\s*/i, '').trim() !== castRangeValue;
+    });
+}
+
+function isSimpleSlashNumber(text = '') {
+    return /^\d+(?:\.\d+)?(?:\/\d+(?:\.\d+)?)+$/.test(text);
+}
+
+function isSimpleNumber(text = '') {
+    return /^\d+(?:\.\d+)?$/.test(text);
+}
+
+function isHeroCostValue(text = '') {
+    return /^\d/.test(text) && !/[A-Za-z]/.test(text);
+}
+
+function getHeroAbilityCostRow($, card) {
+    if (!card || card.length === 0) {
+        return cheerio.load('<div></div>')('div').first();
+    }
+
+    const rows = card.find('div').filter((_, el) => {
+        const row = $(el);
+        const children = row.children('div');
+
+        if (children.length < 2) {
+            return false;
+        }
+
+        const text = normalizeHeroAbilityMetricValue(row.text());
+        if (!text || text.length > 80) {
+            return false;
+        }
+
+        const firstValue = normalizeHeroAbilityMetricValue(children.eq(1).text());
+        const secondValue = normalizeHeroAbilityMetricValue(children.eq(3).text());
+
+        return isHeroCostValue(firstValue) && (!secondValue || isHeroCostValue(secondValue));
+    });
+
+    return rows.last();
+}
+
+function getHeroAbilityCostTraits($, card) {
+    if (!card || card.length === 0) {
+        return [];
+    }
+
+    const costRow = getHeroAbilityCostRow($, card);
+    if (costRow.length > 0) {
+        const children = costRow.children('div');
+        const cooldown = normalizeHeroAbilityMetricValue(children.eq(1).text());
+        const mana = normalizeHeroAbilityMetricValue(children.eq(3).text());
+        const traits = [];
+
+        if (isHeroCostValue(cooldown)) {
+            traits.push(`Cooldown: ${cooldown}`);
+        }
+
+        if (isHeroCostValue(mana)) {
+            traits.push(`Mana Cost: ${mana}`);
+        }
+
+        if (traits.length > 0) {
+            return traits;
+        }
+    }
+
+    const candidates = uniqueTexts(
+        card
+            .find('div')
+            .map((_, el) => normalizeHeroAbilityMetricValue($(el).clone().children().remove().end().text()))
+            .get()
+            .filter(text => {
+                if (!text || /[A-Za-z:]/.test(text) || !/\d/.test(text)) {
+                    return false;
+                }
+
+                return text.length <= 40;
+            })
+    );
+
+    if (candidates.length === 0) {
+        return [];
+    }
+
+    let cooldown = '';
+    let mana = '';
+
+    if (candidates.length >= 2) {
+        const first = normalizeHeroAbilityMetricValue(candidates[0]);
+        const second = normalizeHeroAbilityMetricValue(candidates[1]);
+        if (isHeroCostValue(first)) {
+            cooldown = first;
+        }
+        if (isHeroCostValue(second)) {
+            mana = second;
+        }
+    } else {
+        const onlyValue = normalizeHeroAbilityMetricValue(candidates[0]);
+        if (isSimpleSlashNumber(onlyValue) || isSimpleNumber(onlyValue)) {
+            cooldown = onlyValue;
+        }
+    }
+
+    const traits = [];
+
+    if (cooldown) {
+        traits.push(`Cooldown: ${cooldown}`);
+    }
+
+    if (mana) {
+        traits.push(`Mana Cost: ${mana}`);
+    }
+
+    return traits;
+}
+
+function getHeroAbilityNarrativeTexts($, scope, abilityName = '') {
+    if (!scope || scope.length === 0) {
+        return [];
+    }
+
+    return uniqueTexts(
+        getOwnTexts($, scope, 20).filter(text => {
+            if (!/[A-Za-z]/.test(text)) {
+                return false;
+            }
+
+            if (/^[\d\s./+%-]+$/.test(text)) {
+                return false;
+            }
+
+            if (/^(Unit|Self|Point|Area|Passive|Ability|Affects|Damage)$/i.test(text)) {
+                return false;
+            }
+
+            if (/^[A-Za-z'()/% -]+:\s*$/.test(text)) {
+                return false;
+            }
+
+            if (abilityName && text.toLowerCase() === abilityName.toLowerCase()) {
+                return false;
+            }
+
+            return true;
+        })
+    );
+}
+
 function getAbilityDescription($, header) {
     const name = cleanUnknownMarkers($(header).text());
-    const block = getAbilityContentScope($, header);
-    const candidates = getOwnTexts($, block, 20)
+    const mainCard = getHeroAbilityMainCard($, header);
+    const block = mainCard.length ? mainCard : getAbilityContentScope($, header);
+    const candidates = getHeroAbilityNarrativeTexts($, block, name)
         .map((text, index) => ({ text, index, score: scoreAbilityText(text, name) }))
         .filter(candidate => candidate.score > -2)
         .sort((a, b) => b.score - a.score || b.text.length - a.text.length);
@@ -715,7 +1013,21 @@ function getAbilityDescription($, header) {
         .sort((a, b) => a.index - b.index)
         .map(candidate => candidate.text);
 
-    return sanitizeNarrativeText(selected.join(' '));
+    const traits = uniqueTexts([
+        ...getHeroAbilityTraits($, mainCard).slice(0, 6),
+        ...getHeroAbilityCostTraits($, mainCard)
+    ]);
+    const parts = [];
+
+    if (selected.length > 0) {
+        parts.push(selected.join(' '));
+    }
+
+    if (traits.length > 0) {
+        parts.push(`${traits.join('. ')}.`);
+    }
+
+    return sanitizeNarrativeText(parts.join(' ').replace(/\.\s*\./g, '.'));
 }
 
 function getHeroAbilityType($, header) {

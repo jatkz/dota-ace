@@ -1,6 +1,6 @@
 {
   "name": "Morphling",
-  "description": "You only miss the water when the well runs dry. Morphling The morphed illusion is a strong illusion that deals as much damage as Morphling and receives additional incoming damage.",
+  "description": "You only miss the water when the well runs dry.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -26,7 +26,8 @@
     "manaRegen": 0.09,
     "armor": 0.65,
     "attackSpeed": 3.9,
-    "mainAttackDamage": 3.9
+    "mainAttackDamage": 3.9,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -56,22 +57,22 @@
     {
       "name": "Waveform",
       "type": "active",
-      "description": "Spell / Magical / Attack Damage / Physical attacks all enemy units within its damage radius while traveling. Neither applies on-hit effects nor attack modifiers."
+      "description": "Spell / Magical / Attack Damage / Physical Cast Range: 700/775/850/925 (950/1025/1100/1175). Max Travel Distance: 700/775/850/925 (950/1025/1100/1175). Effect Radius: 200. Damage: 75/150/225/300. Cooldown: 21/18/15/12 (12.6/10.8/9/7.2). Mana Cost: 115."
     },
     {
       "name": "Adaptive Strike",
       "type": "active",
-      "description": "The damage component is based on Morphling's. If Morphling's agility is much higher than strength, the max agility damage factor is used. The knockback and stun component is based on Morphling's. If Morphling's strength is much higher than agility, the max knockback distance is used."
+      "description": "The damage component is based on Morphling's agility. If Morphling's agility is much higher than strength, the max agility damage factor is used. The knockback and stun component is based on Morphling's strength. If Morphling's strength is much higher than agility, the max knockback distance is used. Cast Range: 600/675/750/825. Base Damage: 50/70/90/110. Min Damage Factor: 0.5. Max Damage Factor: 1/1.5/2/2.5. Min Knock Distance: 50. Max Knock Distance: 350. Cooldown: 16/14/12/10 (13/11/9/7). Mana Cost: 40/50/60/70."
     },
     {
       "name": "Attribute Shift",
       "type": "active",
-      "description": "Morphling to gain. Grants 22 and max health per shifted. Morphling has the aforementioned values, and to gain while being affected by. = 0.3 + = + = + = In this example, not accounting for other sources, grants Morphling 14.3 current health per gain, with the following values."
+      "description": "Enables Attribute Shift casting while being affected by most disable sources. Reduces mana cost. Shift Interval: 0.25/0.12/0.08/0.06. Cooldown: 0."
     },
     {
       "name": "Morph",
       "type": "active",
-      "description": "Creates a strong illusion of the targeted enemy hero that can cast all of the affected enemy's basic abilities with Alt-Cast toggled on. The morphed illusion is a strong illusion that deals as much damage as Morphling and receives additional incoming damage."
+      "description": "Creates a strong illusion of the targeted enemy hero that can cast all of the affected enemy's basic abilities with Alt-Cast toggled on. The morphed illusion is a strong illusion that deals as much damage as Morphling and receives additional incoming damage. Cast Range: 700/850/1000. Base Attributes Conversion Factor: 1. Duration: 24 (36). Number of Illusions: 1. Damage Dealt: 100%. Damage Taken: 300%. Cooldown: 140/100/60. Mana Cost: 50."
     }
   ]
 }

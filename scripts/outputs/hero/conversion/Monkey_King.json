@@ -23,6 +23,7 @@
     "healthRegen": 0.28,
     "armor": 0.62,
     "attackSpeed": 3.7,
+    "mainAttackDamage": 3.7,
     "mana": 21.6,
     "manaRegen": 0.09,
     "magicResistance": 0.1
@@ -55,32 +56,32 @@
     {
       "name": "Mischief",
       "type": "active",
-      "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming. Within Roshan's pit and while it is dead, Mischief disguises the Monkey King as himself."
+      "description": "Changes Monkey King's shape using the environment nearby to deceive opponents. Taking damage, attacking, or using any item or ability breaks the disguise. Negates damage for a brief moment upon transforming. Within Roshan's pit and while it is dead, Mischief disguises the Monkey King as himself. The same applies to the. Damage Negation Duration: 0.1. Damage Threshold: 0. Move Speed Bonus: 8%. Rune Search Radius: 300. Creep Search Radius: 200. Tree Search Radius: 350. Cooldown: 24.5."
     },
     {
       "name": "Boundless Strike",
       "type": "active",
-      "description": "Applies a portion of Primal Spring max channeling duration of its corresponding level upon at the end location."
+      "description": "Applies a portion of Primal Spring max channeling duration of its corresponding level upon at the end location. Cast Range: 1100. Effect Length: 1100. Effect Width: 150. Crit Damage: 135%/165%/195%/225% (195%/225%/255%/285%). Stun Duration: 0.7/0.9/1.1/1.3 (0.9/1.1/1.3/1.5). Attack Charge Cost per Cast: 1. Cooldown: 28/26/24/22. Mana Cost: 85/90/95/100."
     },
     {
       "name": "Tree Dance",
       "type": "active",
-      "description": "While perched, he is hidden in plain sight. Grants Monkey King flying vision and the Primal Spring ability — a channeled leap attack."
+      "description": "While perched, he is hidden in plain sight. Grants Monkey King flying vision and the Primal Spring ability — a channeled leap attack. Cast Range: 900 (1250). Max Tree Dance Distance: 1850. Unperch Self Stun Duration: 3. Set Vision Radius: 700. Set Vision Radius: 500. Cooldown: 0.9/0.6/0.3/0."
     },
     {
       "name": "Primal Spring",
       "type": "active",
-      "description": "Springs out from his tree perch, damaging and slowing enemy units in proportion to the channel duration toward the landing area."
+      "description": "Springs out from his tree perch, damaging and slowing enemy units in proportion to the channel duration toward the landing area. Cast Range: Global. Max Leap Distance: 800. Radius: 375. Max Channel Time: 1.75. Max Damage: 110/200/290/380 (460/550/640/730). Max Move Speed Slow: 20%/40%/60%/80%. Cooldown: 18/16/14/12 (0). Mana Cost: 100."
     },
     {
       "name": "Jingu Mastery",
       "type": "passive",
-      "description": "Grants bonus attack damage and lifesteal for a number of subsequent attacks to its master."
+      "description": "Grants bonus attack damage and lifesteal for a number of subsequent attacks to its master. Counter Duration: 5.5/7/8.5/10. Max Attack Charges: 4. Attack Damage Bonus: 30/80/130/180 (140/190/240/290). Lifesteal: 20%/40%/60%/80%. Buff Duration: 35. Creep Lifesteal Factor: 0.6."
     },
     {
-      "name": "Wukong’s Command",
+      "name": "Wukong's Command",
       "type": "active",
-      "description": "Creates a circular formation of soldiers that spread out from his position. Grants Monkey King bonus armor for its duration."
+      "description": "Creates a circular formation of soldiers that spread out from his position. Grants Monkey King bonus armor for its duration. Cast Range: 625 (975). Ring Radius: 300 2nd. Ring Radius: 750 3rd. Ring Radius: (1100). Soldier Attack Interval: 1.1. Self Armor Bonus: 15/20/25. Cooldown: 100/90/80. Mana Cost: 100."
     },
     {
       "name": "Clone Inventory",

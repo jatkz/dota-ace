@@ -1,6 +1,6 @@
 {
   "name": "Lone Druid",
-  "description": "Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps. However, the ability cast instantly applies all ability effects on enemy creeps.",
+  "description": "I wonder what awaits me at the end of everything… Sylla, the Lone Druid Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps.",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -20,12 +20,12 @@
   "statGains": {
     "health": 55,
     "healthRegen": 0.25,
-    "armor": 0.47,
-    "attackSpeed": 2.8,
-    "mainAttackDamage": 2.8,
     "mana": 16.8,
     "manaRegen": 0.07,
-    "magicResistance": 0.1
+    "armor": 0.47,
+    "attackSpeed": 2.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.8
   },
   "stats": {
     "health": 516,
@@ -53,34 +53,24 @@
   },
   "abilities": [
     {
-      "name": "Lone Druid Aghanim's",
-      "type": "active",
-      "description": "Entangle applies 5 stacks to enemy heroes in the area and has increased radius. Enemies no longer have protection from gaining stacks while Entangled. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled."
-    },
-    {
-      "name": "Spirit Bear Aghanim's",
-      "type": "active",
-      "description": "Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled."
-    },
-    {
       "name": "Entangle",
       "type": "active",
-      "description": "Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps. However, the ability cast instantly applies all ability effects on enemy creeps. The debuff applies a root and damage over time after a number of attacks on the same enemy unit. Already debuff-affected enemy units do not increase the Entangle counter."
+      "description": "Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps. However, the ability cast instantly applies all ability effects on enemy creeps. The debuff applies a root and damage over time after a number of attacks on the same enemy unit. Already debuff-affected enemy units do not increase the Entangle counter. Cast Range: 750. Effect Radius: 350 (450). Counter Duration: 10. Stack per Attack: 1. Damage Per Second: 90 (110). Root Duration: 1.2/1.6/2/2.4 (1.8/2.2/2.6/3). Cooldown: 20/19/18/17. Mana Cost: 60."
     },
     {
       "name": "Spirit Link",
       "type": "passive",
-      "description": "Both the Lone Druid and the Spirit Bear shares a percentage of their lifesteal with each other. Grants the Spirit Bear a greater movement speed bonus. Requires its owner to have Savage Roar for this ability to be unlocked."
+      "description": "Both the Lone Druid and the Spirit Bear shares a percentage of their lifesteal with each other. Grants the Spirit Bear a greater movement speed bonus. Requires its owner to have Savage Roar for this ability to be unlocked. Shared Lifesteal: 15%/30%/45%/60%. Move Speed Bonus: 10/20/30/40. Move Speed Bonus: 20/40/60/80."
     },
     {
       "name": "Savage Roar",
       "type": "active",
-      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled."
+      "description": "Both Lone Druid and the Spirit Bear roar fiercely and applies a fountain-fear to enemy units within the radius. Grants affected enemy units bonus movement speed while fleeing toward their fountain. Grants bonus movement speed and bonus attack speed to allied units within the radius. Additionally applies a basic dispel to both Lone Druid and the Spirit Bear upon cast, and removes the simultaneous cast restriction while disabled. Enemy Radius: 350. Fear Move Speed Bonus: 20%. Debuff Duration: 1.1/1.4/1.7/2.2. Ally Radius: (700). Move Speed Bonus: (15%). Attack Speed Bonus: (40). Cooldown: 29/26/23/20 (24/21/18/15). Mana Cost: 50."
     },
     {
       "name": "True Form",
       "type": "active",
-      "description": "Morphs into a melee raging bear. Grants bonus armor, health, and attack damage. Certain abilities now utilize a different cast animation while in True Form."
+      "description": "Morphs into a melee raging bear. Grants bonus armor, health, and attack damage. Certain abilities now utilize a different cast animation while in True Form. Transformation Time: 1.933. Armor Bonus: 10/15/20. Health Bonus: 500/1000/1500. Attack Range Loss: 325. Attack Damage Bonus: 50/90/130. Duration: 25. Cooldown: 60/55/50. Mana Cost: 80."
     }
   ]
 }

@@ -20,10 +20,10 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "armor": 0.42,
-    "attackSpeed": 2.5,
     "mana": 40.8,
     "manaRegen": 0.17,
+    "armor": 0.42,
+    "attackSpeed": 2.5,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },
@@ -55,27 +55,27 @@
     {
       "name": "Succubus",
       "type": "passive",
-      "description": "The closer the enemy units, the stronger the Akasha's spell lifesteal for herself is. Spell Lifesteal also works with Pure damage sourced to Akasha."
+      "description": "The closer the enemy units, the stronger the Akasha's spell lifesteal for herself is. Spell Lifesteal also works with Pure damage sourced to Akasha. Min Bonus Radius: 800. Proximity Radius: 150. Min Spell Lifesteal Bonus: 2%. Proximity Spell Lifesteal Bonus: 14%. Aura Linger Duration: 0.5. Spell Lifesteal Factor: 0.2."
     },
     {
       "name": "Shadow Strike",
       "type": "active",
-      "description": "Hurls a poisoned dagger that deals first damage to the unit-targeted enemy, then applies damage over time with a movement speed slow. The damage over time is inflicted again in fixed intervals after the first damage."
+      "description": "Hurls a poisoned dagger that deals first damage to the unit-targeted enemy, then applies damage over time with a movement speed slow. The damage over time is inflicted again in fixed intervals after the first damage. Cast Range: 450/500/550/600. First Damage: 50/80/110/140. Move Speed Slow: 25%/35%/45%/55%. Duration: 16. Instance Interval: 3 (2). Damage per Instance: 20/40/60/80. Cooldown: 13/10/7/4. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Blink",
       "type": "active",
-      "description": "Releases a sonic boom, deals damage and silences affected enemy units within the radius when Akasha blinks, at both her starting and ending locations."
+      "description": "Releases a sonic boom, deals damage and silences affected enemy units within the radius when Akasha blinks, at both her starting and ending locations. Cast Range: Global. Min Distance: 200. Max Distance: 1075/1150/1225/1300. Radius: (300). Damage: (125). Silence Duration: (1.75). Cooldown: 12/10/8/6. Mana Cost: 65."
     },
     {
       "name": "Scream of Pain",
       "type": "active",
-      "description": "The sultry voice of Akasha beckons her opponents while stealing their souls."
+      "description": "The sultry voice of Akasha beckons her opponents while stealing their souls. Search Radius: 600. Damage: 90/175/260/345 (205/290/375/460). Cooldown: 7.5/7/6.5/6. Mana Cost: 120."
     },
     {
       "name": "Sonic Wave",
       "type": "active",
-      "description": "Creates a gigantic wave of sound in front of Akasha, dealing heavy damage to all enemy units in its wake and pushing them back."
+      "description": "Creates a gigantic wave of sound in front of Akasha, dealing heavy damage to all enemy units in its wake and pushing them back. Cast Range: 700. First Radius: 100. Travel Distance: 900. End Radius: 450. Knock Distance: 350. Total Damage: 325/475/625 (575/725/875). Cooldown: 100/95/80. Mana Cost: 250/400/550."
     }
   ]
 }

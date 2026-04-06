@@ -25,8 +25,8 @@
     "mana": 21.6,
     "manaRegen": 0.09,
     "armor": 0.25,
-    "attackSpeed": 1.5,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
   },
   "stats": {
     "health": 626,
@@ -56,27 +56,27 @@
     {
       "name": "Dying Light",
       "type": "passive",
-      "description": "Deals damage per second to all enemy units centered around Phoenix based on its current health loss."
+      "description": "Deals damage per second to all enemy units centered around Phoenix based on its current health loss. Radius: 400. Current Health Aura Disable Threshold: 100%. Health Loss as Damage per Second: 4.5%. Aura Linger Duration: 0.5."
     },
     {
       "name": "Icarus Dive",
       "type": "active",
-      "description": "Dives forward to the point-targeted direction in an arc with a fixed distance, then orbiting back to its original position. Deals damage over time and applies a movement speed slow to all enemy units Phoenix come in contact with."
+      "description": "Dives forward to the point-targeted direction in an arc with a fixed distance, then orbiting back to its original position. Deals damage over time and applies a movement speed slow to all enemy units Phoenix come in contact with. Cast Range: Global. Dive Distance: 1100/1200/1300/1400 (2100/2200/2300/2400). Effect Radius: 200. Dive Width: 500. Dive Duration: 2 (3). Damage per Second: 15/35/55/75. Cooldown: 36/34/32/30. Mana Cost: 0."
     },
     {
       "name": "Fire Spirits",
       "type": "active",
-      "description": "Summons a number of fire spirits orbiting around Phoenix at the cost of its health."
+      "description": "Summons a number of fire spirits orbiting around Phoenix at the cost of its health. Max Spirit Charges: 4. Spirits Duration: 20. Cooldown: 50/40/30/20. Mana Cost: 100."
     },
     {
       "name": "Sun Ray",
       "type": "active",
-      "description": "Expels a light beam that damages enemy units at the cost of its own health. The longer the duration, the more the damage increases. Applies a movement speed slow. Casting Supernova no longer ends Sun Ray."
+      "description": "Expels a light beam that damages enemy units at the cost of its own health. The longer the duration, the more the damage increases. Applies a movement speed slow. Casting Supernova no longer ends Sun Ray. Cast Range: 1200. Beam Distance: 1150. Beam Radius: 130. Damage per Second: 15/20/25/30. Max Health as Damage Bonus per Second: 1.5%/3%/4.5%/6% (3%/4.5%/6%/7.5%). Beam Duration: 6. Cooldown: 30. Mana Cost: 100/110/120/130."
     },
     {
       "name": "Supernova",
       "type": "active",
-      "description": "Enables allied hero targeting. Phoenix and the affected allied hero are brought into the sun to be reborn together. Increases the Phoenix Sun hit count. This unit does not feel the effects from magical spell damage sources."
+      "description": "Enables allied hero targeting. Phoenix and the affected allied hero are brought into the sun to be reborn together. Increases the Phoenix Sun hit count. Increases the total hit count during the Phoenix's Sun Form. Radius: 1200. Hit Count: 6/8/10 (7/10/13). Damage per Second: 60/90/120. Aura Linger Duration: 0.5. Nova Duration: 6. Set Reborn Current Health: 100%. Cooldown: 120. Mana Cost: 150/200/250."
     }
   ]
 }

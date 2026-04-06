@@ -60,22 +60,22 @@
     {
       "name": "Inner Fire",
       "type": "active",
-      "description": "In a fiery rage, Huskar pushes all nearby enemy units away to a fixed distance, silences and damages them."
+      "description": "In a fiery rage, Huskar pushes all nearby enemy units away to a fixed distance, silences and damages them. Radius: 500. Damage: 110/180/250/320. Silence Duration: 1.5/2/2.5/3 (2.25/2.75/3.25/3.75). Max Knockback Distance: 400. Min Knockback Duration: 0.4. Cooldown: 17/15/13/11."
     },
     {
       "name": "Burning Spear",
       "type": "active",
-      "description": "Ignites his spears aflame with his health, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Grants additional range when manually casting the ability."
+      "description": "Ignites his spears aflame with his health, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Grants additional range when manually casting the ability. Cast Range: 400. Damage per Second: 5/10/15/20 (10/15/20/25). Max Health as Damage per Second: 0.5%. Duration: 9 (31). Active Cast Range: 450. Cooldown: 0."
     },
     {
       "name": "Berserker's Blood",
       "type": "passive",
-      "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's health. Applies a Basic Dispel on Huskar. After a short delay, the ability health cost is applied as a heal, along with a bonus for each debuff dispelled this way."
+      "description": "Huskar's injuries feed his power, giving increased attack speed, magic resistance and health regeneration based on missing health. Grants health regeneration bonus based on a percentage of Huskar's strength. Applies a Basic Dispel on Huskar. After a short delay, the ability health cost is applied as a heal, along with a bonus for each debuff dispelled this way."
     },
     {
       "name": "Life Break",
       "type": "active",
-      "description": "Taunts the affected enemy unit to attack Huskar. Increases cast range. Ends at the secondary target's location. Deals 53.76%/61.56%/68.64% of as self-damage."
+      "description": "Applies all ability effects on target, but does not damage it. Taunts the affected enemy unit to attack Huskar. Increases cast range. Cast Range: 550 (800). Current Health as Damage: 32%/38%/44% (38%/44%/50%). Move Speed Slow: 60%. Attack Speed Slow: 60/100/140. Slow Duration: 3/4/5 (5/6/7). Taunt Duration: (3). Cooldown: 16/14/12 (11/9/7)."
     }
   ]
 }

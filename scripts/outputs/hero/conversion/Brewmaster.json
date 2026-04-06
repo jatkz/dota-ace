@@ -1,6 +1,6 @@
 {
   "name": "Brewmaster",
-  "description": "Shall we call this off and have a friendly round? Mangix, the Brewmaster Deep in the Wailing Mountains, in a valley beneath the Ruined City, the ancient Order of the Oyo has for centuries practiced its rites of holy reverie, communing with the spirit realm in grand festivals of drink.",
+  "description": "Shall we call this off and have a friendly round?",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -57,27 +57,27 @@
     {
       "name": "Liquid Courage",
       "type": "passive",
-      "description": "Grants self a status resistance buff whenever Brewmaster's max health falls below a certain threshold. The lower Brewmaster's health, the greater the status resistance. Grants the unit-targeted ally max status resistance bonus correspondingly to Brewmaster's level, with a max health as health regeneration bonus. The movement speed alternating component fully apply."
+      "description": "Grants self a status resistance buff whenever Brewmaster's max health falls below a certain threshold. The lower Brewmaster's health, the greater the status resistance. Grants the unit-targeted ally max status resistance bonus correspondingly to Brewmaster's level, with a max health as health regeneration bonus. The movement speed component applies fully. Min Bonus Health Threshold: 50%. Max Bonus Health Threshold: 20%. Min Status Resist Bonus: 0%. Max Status Resist Bonus: 10.5%. Max Move Speed Slow: 10%. Max Move Speed Bonus: 30%."
     },
     {
       "name": "Thunder Clap",
       "type": "active",
-      "description": "Slams the ground, dealing damage and applies a movement speed slow and attack speed slow within the radius."
+      "description": "Slams the ground, dealing damage and applies a movement speed slow and attack speed slow within the radius. Effect Radius: 400. Damage: 80/160/240/320. Move Speed Slow: 15%/30%/45%/60%. Attack Speed Slow: 15/30/45/60. Duration: 4 (6). Cooldown: 18/16/14/12. Mana Cost: 100."
     },
     {
       "name": "Cinder Brew",
       "type": "active",
-      "description": "The debuff applied causes enemy units to move slower, and they are ignited upon taking any spell damage instances."
+      "description": "The debuff applied causes enemy units to move slower, and they are ignited upon taking any spell damage instances. Cast Range: 950. Barrel Collision Radius: 75. Travel Distance: 950. Barrel Debuff Width: 350. Final Explosion Radius: 400. Move Speed Slow: 24%/28%/32%/36%. Cooldown: 19/17/15/13. Mana Cost: 50/60/70/80."
     },
     {
       "name": "Drunken Brawler",
       "type": "active",
-      "description": "Grants bonus armor and bonus magic resistance. All ability values of this stance is multiplied when he is Brewed-up! Grants bonus attack speed. Additionally, Brewmaster's attacks has a chance to critical strike. All ability values of this stance is multiplied when he is Brewed-up!"
+      "description": "Grants bonus armor and bonus magic resistance. All ability values of this stance is multiplied when he is Brewed-up! Grants bonus attack speed. Additionally, Brewmaster's attacks have a chance to critical strike. Brawler Effects Factor: 1.5 (3). First Buff Duration: 5 (6). Buff Duration Increase: 2 (4). Armor Bonus: 3/5/7/9. Magic Resist Bonus: 8%/12%/16%/20%. Move Speed Bonus: 4%/6%/8%/10%. Cooldown: 0."
     },
     {
       "name": "Primal Split",
       "type": "active",
-      "description": "Earth has increased magic resistance, status resistance, and slow resistance. This unit ignores collision size and may pass through other units. Grants Fire bonus status resistance."
+      "description": "Grants certain stat bonuses tailored for the elements. Increases both the current and max level of all Primal Split-based abilities. Split Time: 0.6. Spawn Distance: 100. Duration: 16/18/20/20. Base Attack Damage Bonus: (14). Health Bonus: (600). Cooldown: 140/130/120/120 (125/115/105/105). Mana Cost: 150/200/250/250."
     }
   ]
 }

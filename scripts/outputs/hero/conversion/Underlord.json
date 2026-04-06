@@ -26,8 +26,7 @@
     "manaRegen": 0.115,
     "armor": 0.27,
     "attackSpeed": 1.6,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.2
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 670,
@@ -57,32 +56,32 @@
     {
       "name": "Invading Force",
       "type": "passive",
-      "description": "Grants his allied heroes movement speed bonus and incoming damage reduction once their teleportation completes. Grants allied heroes a greater bonus upon warping through the Fiend's Gate."
+      "description": "Grants his allied heroes movement speed bonus and incoming damage reduction once their teleportation completes. Damage Reduction: 4%/6%/8%/10% (9%/11%/13%/15%). Duration: 5. Effect Radius: Global."
     },
     {
       "name": "Abyssal Horde",
       "type": "passive",
-      "description": "The Fiend's Gate additionally summons uncontrollable demonic minions on the portal that Underlord teleports to. Burns an enemy's mana on each attack and deals damage equal to a percentage of the mana burnt."
+      "description": "The Fiend's Gate additionally summons uncontrollable demonic minions on the portal that Underlord teleports to. The summoned warriors and archers deal less damage to structures. Enemy Search Radius: 1200. Spawn Interval: 2. Max Duration: 16.5. Damage Factor: 0.5."
     },
     {
       "name": "Firestorm",
       "type": "active",
-      "description": "Applies a debuff per interval that deals additional damage over time corresponding to the debuff-affected units' max health. Both and the are immune to the max health as damage component. However, other ability effects still apply."
+      "description": "Applies a debuff per interval that deals additional damage over time corresponding to the debuff-affected units' max health. However, other ability effects still apply. Cast Range: 675. Effect Radius: 425. Number of Instances: 6 (9). Instance Interval: 1 (0.75). Damage per Instance: 30/50/70/90. Burn Interval: 1 (0.75). Cooldown: 16/15/14/13 (11/10/9/8). Mana Cost: 110/125/140/155."
     },
     {
       "name": "Pit of Malice",
       "type": "active",
-      "description": "Increases effect radius."
+      "description": "Increases effect radius. Cast Range: 675. Effect Radius: 400 (500). Damage: 20/30/40/50. Root Interval: 3.6. Root Duration: 1.5/1.6/1.7/1.8 (1.9/2/2.1/2.2). Pit Duration: 12. Cooldown: 30/25/20/15. Mana Cost: 110/120/130/140."
     },
     {
       "name": "Atrophy Aura",
       "type": "passive",
-      "description": "The bonus attack damage granted is less effective per creep death. grants Underlord's attack cleave damage with increased range per stack."
+      "description": "The bonus attack damage granted is less effective per creep death. Radius: 900. Attack Damage Reduction: 6%/14%/22%/30% (16%/24%/32%/40%). Attack Damage Bonus per Enemy Hero: 30/35/40/45. Buff Duration: 30/40/50/60 (45/55/65/75). Aura Linger Duration: 0.5. Attack Damage Bonus per Enemy Creep: 2/4/6/8."
     },
     {
       "name": "Fiend's Gate",
       "type": "active",
-      "description": "Opens one portal next to Underlord and another portal in the target location. Both portals have to be at least a certain distance away from each other. Heroes can channel a portal to teleport to the other side. This unit is completely immune to all status effects and damage sources. It neither can be unit-targeted by attacks nor abilities and has its health bar hidden."
+      "description": "Opens one portal next to Underlord and another portal in the target location. Both portals have to be at least a certain distance away from each other. Heroes can channel a portal to teleport to the other side. Gate Min Distance: 1500. Duration: 20. Fountain to Gate Distance: 1425. Effect Radius: 700. Cooldown: 110/105/100 (100/95/90). Mana Cost: 175."
     }
   ]
 }

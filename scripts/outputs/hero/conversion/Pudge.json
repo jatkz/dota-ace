@@ -1,6 +1,6 @@
 {
   "name": "Pudge",
-  "description": "When I'm through with these vermin, they'll be fit for a pie! Pudge, the Butcher Disables the unit-targeted enemy, and deals damage over time based on Pudge's current.",
+  "description": "When I'm through with these vermin, they'll be fit for a pie!",
   "attackType": "Melee",
   "roles": [
     "Disabler",
@@ -22,9 +22,11 @@
   "statGains": {
     "health": 66,
     "healthRegen": 0.3,
+    "mainAttackDamage": 3,
+    "armor": 0.23,
+    "attackSpeed": 1.4,
     "mana": 21.6,
     "manaRegen": 0.09,
-    "armor": 0.23,
     "magicResistance": 0.1
   },
   "stats": {
@@ -55,27 +57,27 @@
     {
       "name": "Flesh Heap",
       "type": "passive",
-      "description": "Grants bonus whenever Pudge kills an enemy hero or when an enemy hero dies within his vicinity. Grants Pudge a stack if the enemy hero kill is credited to him, regardless of distance."
+      "description": "Grants bonus whenever Pudge kills an enemy hero or when an enemy hero dies within his vicinity. Grants Pudge a stack if the enemy hero kill is credited to him, regardless of distance. Enemy Death Radius: 450. Kill Radius: 450. Str Bonus per Stack: 1.6 (2.4). Effect Radius: Global."
     },
     {
       "name": "Meat Hook",
       "type": "active",
-      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage. Deals additional damage to the hooked enemy unit corresponding to the dragged distance."
+      "description": "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage. Deals additional damage to the hooked enemy unit corresponding to the dragged distance. Cast Range: 1300. Max Travel Distance: 1300. Hook Search Radius: 100. Damage: 150/220/290/360 (300/370/440/510). Followthrough Duration: 0.53. Current Health as Damage: 100%. Cooldown: 18/16/14/12 (14/12/10/8). Mana Cost: 120."
     },
     {
       "name": "Rot",
       "type": "active",
-      "description": "A toxic cloud that deals intense damage and slows movement — harming not only enemy units but Pudge himself."
+      "description": "A toxic cloud that deals intense damage and slows movement — harming not only enemy units but Pudge himself. Radius: 250 (450). Damage per Second: 30/60/90/120 (120/150/180/210). Move Speed Slow: 14%/20%/26%/32% (24%/30%/36%/42%). Aura Linger Duration: 0.5. Health Restore Reduction: (20%). Cooldown: 0."
     },
     {
       "name": "Meat Shield",
       "type": "active",
-      "description": "Negates all damage types from all sources while active."
+      "description": "Negates all damage types from all sources while active. Damage Negated: 8/14/20/26 (12/21/30/39). Duration: 4/5/6/7. Cooldown: 20/19/18/17. Mana Cost: 65/70/75/80."
     },
     {
       "name": "Dismember",
       "type": "active",
-      "description": "Chows down and pulls the unit-targeted enemy up to a certain minimum distance. Disables the unit-targeted enemy, and deals damage over time based on Pudge's current."
+      "description": "Chows down and pulls the unit-targeted enemy up to a certain minimum distance. Disables the unit-targeted enemy, and deals damage over time based on Pudge's current. Cast Range: 200. Pull Distance per Second: 75. Pull Distance Threshold: 125. Max Channel Time: 2.75 (3.5). Number of Intervals: 6 (8). Base Damage per Second: 80/100/120 (120/150/180). Cooldown: 30/25/20. Mana Cost: 100/130/170."
     }
   ]
 }

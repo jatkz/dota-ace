@@ -1,6 +1,6 @@
 {
   "name": "Tinker",
-  "description": "Victory is 10% inspiration, 90% decapitation! Boush, the Tinker Boush the Tinker's diminutive race is known for its intelligence, its cunning, and its prickly relationship with magic. As a matter of pride, they survive by their wits, and use only those powers of nature that may be unlocked through rational methodologies.",
+  "description": "Victory is 10% inspiration, 90% decapitation!",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -20,9 +20,10 @@
   "statGains": {
     "health": 50.6,
     "healthRegen": 0.23,
+    "armor": 0.23,
+    "attackSpeed": 1.4,
     "mana": 39.6,
     "manaRegen": 0.165,
-    "armor": 0.23,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.3
   },
@@ -54,37 +55,37 @@
     {
       "name": "Eureka!",
       "type": "passive",
-      "description": "Grants Tinker an item-based cooldown reduction per, with a cap."
+      "description": "Grants Tinker an item-based cooldown reduction, up to a cap. Item Cooldown Reduction Cap: 60%. Item Cooldown Factor Threshold: 1%. Cooldown Factor per Int Threshold: 3."
     },
     {
       "name": "Laser",
       "type": "active",
-      "description": "Blinds and damages the unit-targeted enemy. Laser is now an area-targeted ability and applies all ability effects to enemy units centered around the primary enemy unit."
+      "description": "Blinds and damages the unit-targeted enemy. Laser is now an area-targeted ability and applies all ability effects to enemy units centered around the primary enemy unit. Cast Range: 600. Damage: 75/150/225/300 (125/200/275/350). Miss Chance: 100%. Blind Duration: 3/3.5/4/4.5. Current Health Reduction: (13%). Max Health Reduction: (13%). Cooldown: 19/18/17/16. Mana Cost: 95/105/115/125 (85/94/103/112)."
     },
     {
       "name": "March of the Machines",
       "type": "active",
-      "description": "applies a non-stacking heal over time while passing through allied heroes."
+      "description": "Even though the laboratory has since been sealed off, the ability to radio in robotic drones is still in working order. Cast Range: 300. Max Travel Distance: 1800. Robot Collision Radius: 50. Detonate Radius: 150. Detonate Damage: 13/22/31/40. Duration: 6 (7). Cooldown: 35/33/31/29. Mana Cost: 100/120/140/160 (90/108/126/144)."
     },
     {
       "name": "Defense Matrix",
       "type": "active",
-      "description": "Applies an all damage barrier and grants bonus status resistance to the affected allied unit. When is active on Tinker, the barrier dispels Tinker and then relocates him to a random point within a certain distance upon the all damage barrier depletion."
+      "description": "Applies an all damage barrier and grants bonus status resistance to the affected allied unit. Cast Range: 700. Status Resist Bonus: 15%/20%/25%/30% (75%/80%/85%/90%). Duration: 15. Cooldown: 20. Mana Cost: 90/105/120/135 (81/94/108/121)."
     },
     {
       "name": "Warp Flare",
       "type": "active",
-      "description": "Fires a damaging flare towards an enemy unit and applies a debuff that reduces both the affected enemy unit's cast range and attack range. Launches the toward the primary after the, then the second projectile is launched immediately to the secondary target."
+      "description": "Fires a damaging flare towards an enemy unit and applies a debuff that reduces both the affected enemy unit's cast range and attack range. Cast Range: 700. Damage: 150. Attack Range Factor: 0.6. Cast Range Factor: 0.6. Debuff Duration: 2. Max Teleport Distance: 2000. Cooldown: 15. Mana Cost: 80 (72)."
     },
     {
       "name": "Keen Conveyance",
       "type": "active",
-      "description": "Can teleport himself directly to an allied hero's current location."
+      "description": "Can teleport himself directly to an allied hero's current location. Fountain Target Distance: 1500. Initial Cooldown: 20. Min Target Distance: 70. Max Target Distance: 800. Cooldown: 50. Mana Cost: 75 (67)."
     },
     {
       "name": "Rearm",
       "type": "active",
-      "description": "A new battery here, another set of rockets there, Boush continually improves on existing technology."
+      "description": "A new battery here, another set of rockets there, Boush continually improves on existing technology. Channel Time: 2.75/2/1.25. Ability Cooldown Factor: 0. Cooldown: 7/6/5. Mana Cost: 100/150/200 (90/135/180)."
     }
   ]
 }

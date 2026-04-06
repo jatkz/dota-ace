@@ -57,82 +57,52 @@
     {
       "name": "Invoke",
       "type": "active",
-      "description": "Combines the properties of all current element instances into a new spell. Reduces cooldown by a flat amount per orb level."
+      "description": "Combines the properties of all current element instances into a new spell. Reduces cooldown by a flat amount per orb level. Invoke Cooldown Reduction per Orb Level: 0.3. Orb Ability Level Bonus: (1). Cooldown: 7."
     },
     {
       "name": "Quas",
       "type": "active",
-      "description": "Passively grants bonus per ability level. Increases health regeneration bonus per active instance. Increases both the current and max ability level."
+      "description": "Passively grants bonus per ability level. Increases health regeneration bonus per active instance. Increases both the current and max ability level. Health Regen Base Bonus per Instance: 1 (2). Str Bonus per Level: 1. Health Regen Bonus per Level: 1 (2). Cooldown: 0."
     },
     {
       "name": "Wex",
       "type": "active",
-      "description": "Manipulates the storm element of Invoker's abilities. Each active orb instance grants Invoker passive traits according to the orb's ability level. Passively grants bonus per ability level. Increases movement speed bonus per active instance."
-    },
-    {
-      "name": "Exort",
-      "type": "active",
-      "description": "Manipulates the fire element of Invoker's abilities. Each active orb instance grants Invoker passive traits according to the orb's ability level. Passively grants bonus per ability level. Increases attack damage bonus per active instance."
-    },
-    {
-      "name": "Invoked Spell 1",
-      "type": "passive",
-      "description": "New invoked abilities are always placed in the fourth ability slot."
-    },
-    {
-      "name": "Invoked Spell 2",
-      "type": "passive",
-      "description": "The previous invoked ability is moved to the fifth slot in the process, while the previous ability in the fifth slot is lost."
-    },
-    {
-      "name": "Cold Snap",
-      "type": "active",
-      "description": "Freezes the affected enemy for a duration while dealing damage. Further damage taken within the duration will freeze and deals additional damage instance to the affected enemy unit again."
-    },
-    {
-      "name": "Ghost Walk",
-      "type": "active",
-      "description": "Slows Invoker at lower levels, but grants movement speed bonus at higher levels. Additionally grants self mana regeneration bonus while active. This ability component levels up with. Player-based damage instance regardless of factions disables both the health regeneration bonus and mana regeneration bonus for a fixed duration. Cannot be reset with cooldown reset sources."
-    },
-    {
-      "name": "Ice Wall",
-      "type": "active",
-      "description": "The bitter cold emanating from the wall applies a potent movement speed slow. This ability component levels up with. Ice Wall becomes Ice Floe, Vector Targeted. After a delay, Ice Floe appears as a 150 width Ice Wall. Enemy Heroes in its area for longer than 2.5 seconds become rooted and take magic damage based on Quas."
+      "description": "Manipulates the storm element of Invoker's abilities. Each active orb instance grants Invoker passive traits according to the orb's ability level. Passively grants bonus per ability level. Increases movement speed bonus per active instance. Move Speed Base Bonus per Instance: 0.6% (1.2%). Attack Damage Bonus per Level: 35/47/59/71/83/95/107/119/131/143. Cooldown: 0."
     },
     {
       "name": "E. M. P.",
       "type": "active",
-      "description": "Increases damage for each point of mana drained by EMP and pulls enemy units into the EMP's center at 125 units per second."
+      "description": "Increases damage for each point of mana drained by EMP and pulls enemy units into the EMP's center at 125 units per second. Cast Range: 950. Effect Radius: 675. Mana Burn to Damage Factor: 0.6. Total Mana Burn to Self Mana Restore Factor: 0.25. Mana Burn: 100/175/250/325/400/475/550/625/700/775. Pull Speed: (125). Cooldown: 27. Mana Cost: 125."
     },
     {
       "name": "Tornado",
       "type": "active",
-      "description": "Twisters deal less damage to creeps. Cyclone sources do not lift Roshan, but damages and interrupts his attack orders."
+      "description": "Twisters deal less damage to creeps. Cyclone sources do not lift Roshan, but damages and interrupts his attack orders. Cast Range: Global. Effect Radius: 200. Tornado Speed: 1000. Travel Distance: 1500/1800/2100/2400/2700/3000/3300/3600/3900/4200. Damage: 95/140/185/230/275/320/365/410/455/500. Twister Interval: (300). Cooldown: 27 (22). Mana Cost: 140."
     },
     {
       "name": "Alacrity",
       "type": "active",
-      "description": "Grants flat attack speed bonus. This ability component levels up with. Grants flat attack damage bonus. This ability component levels up with."
+      "description": "Grants flat attack speed bonus. This ability component levels up with Attack Speed Bonus per Level: 35/47/59/71/83/95/107/119/131/143. Grants flat attack damage bonus. This ability component levels up with Attack Damage Bonus per Level: 35/47/59/71/83/95/107/119/131/143. Cast Range: 700. Duration: 9. Cooldown: 15. Mana Cost: 75."
     },
     {
       "name": "Sun Strike",
       "type": "active",
-      "description": "Increases total spell damage bonus per ability level. Creates a Cataclysm when Sun Strike is double tapped. Puts it on a 90 second cooldown. Creates 2 visible 75% damage Sun Strikes within 90-180 range of each enemy hero."
+      "description": "Increases total spell damage bonus per ability level. Creates a Cataclysm when Sun Strike is double tapped. Puts it on a 90 second cooldown. Creates 2 visible 75% damage Sun Strikes within 90-180 range of each enemy hero. Cast Range: Global. Effect Radius: 175. Base Damage: 175. Damage Bonus per Level: 50. Min Distance: (90). Max Distance: (180). Cooldown: 23. Mana Cost: 175."
     },
     {
       "name": "Forge Spirit",
       "type": "active",
-      "description": "Increases the forged units' max health, attack range, and duration. This ability component levels up with. Increases the forged units' max mana, attack damage, and armor. This ability component levels up with."
+      "description": "Increases the forged units' max health, attack range, and duration. This ability component levels up with Number of Spirits: 1/1/1/2/2/2/2/3/3/3. Current Health as Damage: 100%. Max Health: 300/400/500/600/700/800/900/1000/1100/1200. Attack Range: 305/360/415/470/525/580/635/690/745/800. Duration: 10/20/30/40/50/60/70/80/90/100. Max Mana: 100/150/200/250/300/350/400/450/500/550. Cooldown: 27. Mana Cost: 75."
     },
     {
       "name": "Chaos Meteor",
       "type": "active",
-      "description": "Pulls a flaming meteor from space onto the point-targeted location. With the accumulated experience, the Arsenal Magus launches additional meteors angled from the center to his left and right."
+      "description": "Pulls a flaming meteor from space onto the point-targeted location. With the accumulated experience, the Arsenal Magus launches additional meteors angled from the center to his left and right. Cast Range: 700. Effect Radius: 275. Number of Meteors: 1 (3). Main Damage Interval: 0.5. Burn Damage Interval: 1. Burn Duration: 3. Cooldown: 50. Mana Cost: 200."
     },
     {
       "name": "Deafening Blast",
       "type": "active",
-      "description": "Roshan is innately immune to all forced movement sources. However, other ability components still applies to him."
+      "description": "Roshan is innately immune to all forced movement sources. However, other ability components still applies to him. Cast Range: 1000. First Radius: 175. Travel Distance: 1000. End Radius: 225. Number of Blasts: 1. Knockback Duration: 1.1/1.2/1.3/1.4/1.5/1.6/1.7/1.8/1.9/2. Cooldown: 36. Mana Cost: 250."
     }
   ]
 }

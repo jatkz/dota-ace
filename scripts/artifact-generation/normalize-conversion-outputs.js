@@ -32,6 +32,10 @@ function normalizeText(value) {
         .trim();
 }
 
+function escapeRegExp(value) {
+    return String(value || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function unique(values) {
     return [...new Set(values)];
 }
@@ -108,6 +112,261 @@ function stripEffectLabelPrefix(text) {
         .replace(/^[A-Za-z' -]+\s*\[(?:active|passive)\]:\s*/i, '')
         .replace(/^(?:Active|Passive)\s*[-:]\s*/i, '')
         .trim();
+}
+
+function splitSentences(text) {
+    if (typeof text !== 'string') {
+        return [];
+    }
+
+    return normalizeText(text)
+        .split(/(?<=[.!?])\s+/)
+        .map(part => normalizeText(part))
+        .filter(Boolean);
+}
+
+function firstSentence(text) {
+    return splitSentences(text)[0] || normalizeText(text);
+}
+
+function parseMetricSeries(value = '') {
+    const cleaned = normalizeText(value)
+        .replace(/[%°]/g, '')
+        .replace(/\s+/g, '')
+        .trim();
+
+    if (!cleaned || !/^[-\d./]+$/.test(cleaned)) {
+        return null;
+    }
+
+    const parts = cleaned.split('/').map(part => Number(part));
+    if (parts.length === 0 || parts.some(part => !Number.isFinite(part))) {
+        return null;
+    }
+
+    return parts;
+}
+
+function hasBogusNegativeSeries(label = '', altText = '') {
+    if (!/cooldown|mana cost|cast range|duration|radius|distance|range/i.test(label)) {
+        return false;
+    }
+
+    const series = parseMetricSeries(altText);
+    return Array.isArray(series) && series.some(value => value < 0);
+}
+
+function shouldDropAltSeries(baseText = '', altText = '', label = '') {
+    if (hasBogusNegativeSeries(label, altText)) {
+        return true;
+    }
+
+    const baseSeries = parseMetricSeries(baseText);
+    const altSeries = parseMetricSeries(altText);
+
+    if (!baseSeries || !altSeries || baseSeries.length !== altSeries.length) {
+        return false;
+    }
+
+    if (altSeries.some(value => Math.abs(value) >= 10000)) {
+        return true;
+    }
+
+    const ratios = altSeries.map((value, index) => {
+        const baseValue = baseSeries[index];
+        if (baseValue === 0) {
+            return value === 0 ? 1 : Number.POSITIVE_INFINITY;
+        }
+
+        return value / baseValue;
+    });
+
+    const identical = ratios.every(ratio => Math.abs(ratio - 1) < 0.0001);
+    const absurd = ratios.every(ratio => ratio >= 10);
+
+    return identical || absurd;
+}
+
+function simplifyMetricParentheticals(text = '') {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return normalizeText(text).replace(/([A-Za-z][A-Za-z' /-]+:\s*[^.()]+?)\s*\(([^()]+)\)/g, (match, prefix, altText) => {
+        const labelMatch = prefix.match(/^([A-Za-z][A-Za-z' /-]+):\s*(.+)$/);
+        if (!labelMatch) {
+            return match;
+        }
+
+        const label = normalizeText(labelMatch[1]);
+        const baseText = normalizeText(labelMatch[2]);
+        const alt = normalizeText(altText);
+
+        if (!alt) {
+            return `${prefix}`;
+        }
+
+        if (shouldDropAltSeries(baseText, alt, label)) {
+            return `${label}: ${baseText}`;
+        }
+
+        return `${label}: ${baseText} (${alt})`;
+    });
+}
+
+function repairDottedMetricLabels(text = '') {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return normalizeText(text).replace(
+        /\b((?:(?:[A-Z][A-Za-z'/-]*|of|per|to|as)(?:\.\s+|\s+)){1,6}(?:[A-Z][A-Za-z'/-]*|of|per|to|as):)/g,
+        match => match.replace(/\.\s+/g, ' ').replace(/\s+/g, ' ')
+    );
+}
+
+function repairBrokenMetricBoundaries(text = '') {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    return normalizeText(text)
+        .replace(/\b(Global)\s+(Damage:)/g, '$1. $2')
+        .replace(/\b(does|itself|himself|herself|them|themselves|Meepo)\s+(Number of [A-Z][A-Za-z' /-]*:)/g, '$1. $2')
+        .replace(/(\([^)]+\)|\d+(?:\.\d+)?%?)\s+(?=Spawn Interval:)/g, '$1. ');
+}
+
+function repairHeroAbilityText(text = '', hero = {}) {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    let normalized = normalizeText(text);
+
+    if (hero?.name === 'Arc Warden') {
+        normalized = normalized
+            .replace(/\bThe Self\b/g, 'Arc Warden')
+            .replace(/\bThe Double\b/g, 'the Double')
+            .replace(
+                /\bGrants permanent,, and per Power Rune activated by Arc Warden and the Double\./gi,
+                'Grants permanent bonuses per Power Rune activated by Arc Warden and the Double.'
+            );
+    }
+
+    return normalized
+        .replace(/\bSneakly\b/g, 'Sneakily')
+        .replace(/\bhas a chance to applies\b/gi, 'has a chance to apply')
+        .replace(/\bhave a chance to applies\b/gi, 'have a chance to apply')
+        .replace(/\babilities has\b/gi, 'abilities have')
+        .replace(/\battacks has\b/gi, 'attacks have')
+        .replace(/\bThe Clones recognizes and copy\b/gi, 'The Clones recognize and copy')
+        .replace(/\bThe movement speed alternating component fully apply\./gi, 'The movement speed component applies fully.')
+        .replace(/\bwhich can gain gold and experience as he does\b/gi, 'which can gain gold and experience like Meepo')
+        .replace(/like Meepo Number of Clones:/g, 'like Meepo. Number of Clones:')
+        .replace(/\blike Meepo\s+(?=Number of [A-Z][A-Za-z' /-]*:)/g, 'like Meepo. ')
+        .replace(/\blike Meepo\s+(Number of [A-Z][A-Za-z' /-]*:)/g, 'like Meepo. $1')
+        .replace(/\bper,\s+with a cap\./gi, ', up to a cap.')
+        .replace(/\bBoth and the cannot be lifted\.\s*/gi, '')
+        .replace(/\bBoth and the are immune to the max health as damage component\.\s*/gi, '')
+        .replace(/(^|[.!?]\s+)grants Underlord's\b/g, "$1Grants Underlord's")
+        .replace(/(^|[.!?]\s+)the Double\b/g, '$1The Double');
+}
+
+function isBrokenHeroSentence(text = '') {
+    if (typeof text !== 'string') {
+        return false;
+    }
+
+    const normalized = normalizeText(text);
+    if (!normalized) {
+        return true;
+    }
+
+    return /^Both and the\b/i.test(normalized) ||
+        /^[A-Z][A-Za-z' /-]+:\s*[A-Z][A-Za-z' /-]+:\s*/.test(normalized);
+}
+
+function dedupeSentences(text = '') {
+    const sentences = splitSentences(text);
+    const seen = new Set();
+    const deduped = [];
+
+    for (const sentence of sentences) {
+        if (isBrokenHeroSentence(sentence)) {
+            continue;
+        }
+
+        const key = sentence.toLowerCase();
+        if (seen.has(key)) {
+            continue;
+        }
+
+        seen.add(key);
+        deduped.push(sentence);
+    }
+
+    return deduped.join(' ').trim();
+}
+
+function cleanupHeroAbilityDescription(text = '', hero = {}) {
+    if (typeof text !== 'string') {
+        return text;
+    }
+
+    let normalized = normalizeText(text)
+        .replace(/:\./g, ':')
+        .replace(/\.\.(?=\s+[A-Z]|$)/g, '.')
+        .replace(/\b([A-Za-z][A-Za-z' /-]+):\s*\.\s*/g, '$1: ')
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+
+    normalized = repairHeroAbilityText(normalized, hero);
+    normalized = repairDottedMetricLabels(normalized);
+    normalized = repairBrokenMetricBoundaries(normalized);
+    normalized = simplifyMetricParentheticals(normalized);
+    normalized = repairDottedMetricLabels(normalized);
+    normalized = dedupeSentences(normalized);
+
+    const zeroManaHero = hero?.stats?.mana === 0 || /does not have mana/i.test(normalizeText(hero?.description || ''));
+    if (zeroManaHero) {
+        normalized = normalized
+            .replace(/\s*Mana Cost:\s*0(?:\.0+)?\.\s*/gi, ' ')
+            .replace(/\s*Mana Cost:\s*0(?:\.0+)?$/gi, '')
+            .trim();
+    }
+
+    normalized = normalized.replace(/like Meepo Number of Clones:/g, 'like Meepo. Number of Clones:');
+
+    return ensureSentence(normalized);
+}
+
+function normalizeHeroDescription(description, heroName = '') {
+    if (typeof description !== 'string') {
+        return description;
+    }
+
+    let normalized = dedupeLeadingRepeatedName(normalizeText(description));
+    if (!normalized) {
+        return normalized;
+    }
+
+    const first = firstSentence(normalized);
+    const remaining = normalizeText(normalized.slice(first.length));
+    const heroNamePattern = heroName ? new RegExp(`^${escapeRegExp(heroName)}(?:,|\\b)`, 'i') : null;
+
+    if (normalized.length > 220) {
+        return ensureSentence(first);
+    }
+
+    if (remaining && (
+        /^(?:[A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,3}),\s+the\b/.test(remaining) ||
+        /(?:Cast Range|Cooldown|Mana Cost|Damage|Duration|Radius):/i.test(remaining) ||
+        (heroNamePattern && heroNamePattern.test(remaining))
+    )) {
+        return ensureSentence(first);
+    }
+
+    return ensureSentence(normalized);
 }
 
 function splitBonusStats(text) {
@@ -418,7 +677,7 @@ function normalizeSimpleHero(data) {
     const normalized = { ...data };
 
     normalized.name = normalizeText(normalized.name);
-    normalized.description = ensureSentence(dedupeLeadingRepeatedName(normalizeText(normalized.description)));
+    normalized.description = normalizeHeroDescription(normalized.description, normalized.name);
     normalized.attackType = normalizeHeroAttackType(normalized.attackType);
     normalized.roles = normalizeHeroRoles(normalized.roles);
 
@@ -432,7 +691,7 @@ function normalizeSimpleHero(data) {
             ...ability,
             name: normalizeText(ability.name),
             type: normalizeAbilityType(ability.type),
-            description: ensureSentence(normalizeText(ability.description))
+            description: cleanupHeroAbilityDescription(ability.description, normalized)
         }));
     }
 

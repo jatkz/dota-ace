@@ -1,6 +1,6 @@
 {
   "name": "Dark Willow",
-  "description": "Let's have some fun, shall we? Mireska Sunbreeze, the Dark Willow Attacking no longer takes Dark Willow out of Shadow Realm. Each attack now applies the bonus spell damage corresponding to the buff duration.",
+  "description": "Mireska Sunbreeze, the Dark Willow Attacking no longer takes Dark Willow out of Shadow Realm. Each attack now applies the bonus spell damage corresponding to the buff duration.",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -56,32 +56,32 @@
     {
       "name": "Pixie Dust",
       "type": "passive",
-      "description": "Grants a bonus factor to all health regeneration and mana regeneration sources applied to Mireska. The bonus factor increases while Mireska is being affected by untargetable and hidden sources."
+      "description": "Grants a bonus factor to all health regeneration and mana regeneration sources applied to Mireska. The bonus factor increases while Mireska is being affected by untargetable and hidden sources. Health Regen Factor: 1.2. Mana Regen Factor: 1.2. Health Regen Factor: 2. Mana Regen Factor: 2."
     },
     {
       "name": "Bramble Maze",
       "type": "active",
-      "description": "Creates a maze of brambles that grow in the area-targeted location after a short delay. Enemy units coming in contact with a matured bramble are rooted and take damage over time."
+      "description": "Creates a maze of brambles that grow in the area-targeted location after a short delay. Enemy units coming in contact with a matured bramble are rooted and take damage over time. Cast Range: 1000/1100/1200/1300. Spawn Radius: 500. Inner Radius: 200. Spawn Interval: 0.075. Number of Brambles: 8. Bramble Duration: 12. Cooldown: 22 (15). Mana Cost: 100/120/140/160."
     },
     {
       "name": "Shadow Realm",
       "type": "active",
-      "description": "Grants Mireska an enemy incoming damage amplification aura centered around her. The longer the, the potent the amplification."
+      "description": "Recedes into the shadows and becomes untargetable. Mireska's next attack has increased attack range imbued with magical spell damage corresponding to the duration within the Shadow Realm. Attacking breaks the incantation and brings her back to the physical plane. Number of Attacks: 1. Attack Range Bonus: 600. Max Damage: 120/200/280/360. Max Power Duration: 3. Duration: 5 (6.5). Projectile Buff Duration: 3. Cooldown: 21/19/17/15. Mana Cost: 80/90/100/110."
     },
     {
       "name": "Cursed Crown",
       "type": "active",
-      "description": "Creates brambles around the affected enemy unit when the effect delay ends. Additionally, the full ability effect is applied even if the debuff is dispelled before the delay ends. Reduces cooldown. Also accumulates a portion of Mireska's allied heroes' attack damage dealt to the cursed enemy unit."
+      "description": "Casts an ancient fae curse that stuns the affected enemy unit after a delay. Creates brambles around the affected enemy unit when the effect delay ends. Additionally, the full ability effect is applied even if the debuff is dispelled before the delay ends. Reduces cooldown. Cast Range: 600/625/650/675. Stun Radius: 360. Stun Duration: 1.5/1.8/2.1/2.4. Bramble Spawn Radius: (175). Number of Brambles: (4). Cooldown: 17/15/13/11 (15.5/13.5/11.5/9.5). Mana Cost: 80/90/100/110."
     },
     {
       "name": "Bedlam",
       "type": "active",
-      "description": "Although visually Jex damages its target, the spell damage applied is sourced to Mireska. The wisp starts at Mireska's west side, and orbits clockwise. This unit does not feel the effects from any damage sources. It cannot be targeted by attacks or abilities and have its health bar temporarily hidden."
+      "description": "Although visually Jex damages its target, the spell damage applied is sourced to Mireska. The wisp starts at Mireska's west side, and orbits clockwise. Cast Range: 900. Duration: 5.5 (6.5). Roam Radius: 200. Attack Search Radius: 300. Damage Interval: 0.25. Damage per Instance: 70/120/170 (100/150/200). Cooldown: 30. Mana Cost: 100/150/200."
     },
     {
       "name": "Terrorize",
       "type": "active",
-      "description": "This unit is uncontrollable. Mireska's Jex-based abilities itself do not grant vision. However, Jex does as a unit. This unit does not feel the effects from any damage sources. It cannot be targeted by attacks or abilities and have its health bar temporarily hidden."
+      "description": "You think you know the first thing about fear? Jex'll show you what that word truly means. Cast Range: 1200. Effect Radius: 400/450/500. Fear Duration: 3.5/3.75/4. Damage: (2). Cooldown: 100/90/80 (80/70/60). Mana Cost: 150."
     }
   ]
 }
