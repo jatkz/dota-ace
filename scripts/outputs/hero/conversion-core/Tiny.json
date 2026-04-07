@@ -1,6 +1,6 @@
 {
   "name": "Tiny",
-  "description": "My enemies break upon me like surf upon the stone.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 64,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 90,
     "totalAttackSpeed": 90,
     "bat": 1.7,

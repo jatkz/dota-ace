@@ -1,6 +1,6 @@
 {
   "name": "Chaos Knight",
-  "description": "The light shall be blackened, and chaos shall reign.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -26,6 +26,7 @@
     "mana": 14.4,
     "manaRegen": 0.06,
     "armor": 0.3,
+    "attackSpeed": 1.8,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.1
   },
@@ -41,7 +42,6 @@
     "damageAverage": 66,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

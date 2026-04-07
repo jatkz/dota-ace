@@ -1,6 +1,6 @@
 {
   "name": "Dark Seer",
-  "description": "If your enemy is equal, prepare for him.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -23,7 +23,6 @@
     "mana": 32.4,
     "manaRegen": 0.135,
     "armor": 0.25,
-    "attackSpeed": 1.5,
     "magicResistance": 0.1,
     "mainAttackDamage": 2.7
   },
@@ -39,7 +38,6 @@
     "damageAverage": 56,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 119,
     "bat": 1.7,

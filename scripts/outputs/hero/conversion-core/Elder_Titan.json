@@ -1,6 +1,6 @@
 {
   "name": "Elder Titan",
-  "description": "It is only right that I am cast into this world, for I had a hand in breaking it.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -39,7 +39,6 @@
     "damageAverage": 54,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.7,

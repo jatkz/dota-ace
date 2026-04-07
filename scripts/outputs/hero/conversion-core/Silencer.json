@@ -1,6 +1,6 @@
 {
   "name": "Silencer",
-  "description": "Enemies should be seen and not heard.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 50,
     "projectileSpeed": 900,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 110,
     "totalAttackSpeed": 132,
     "bat": 1.6,
@@ -55,20 +54,20 @@
   },
   "talents": {
     "10": {
-      "left": "+300 mana.",
-      "right": "+15 Magic Resistance to enemies Silencer has silenced."
+      "left": "Talent text for level 10 left",
+      "right": "Talent text for level 10 right"
     },
     "15": {
-      "left": "+20 Mana Regen",
-      "right": "-40% Physical Resistance to enemies in Silence."
+      "left": "Talent text for level 15 left",
+      "right": "Talent text for level 15 right"
     },
     "20": {
-      "left": "Gives enemies affected by Silencer an additional -10% Magic Resistance for 3 seconds when he uses Global Silence.",
-      "right": "Reduces the cooldown of Lockdown and Global Silence by 8 seconds."
+      "left": "Talent text for level 20 left",
+      "right": "Talent text for level 20 right"
     },
     "25": {
-      "left": "Increased the duration of Silencer's silence by +4 seconds.",
-      "right": "Increases the damage reduction from Silence by 25%."
+      "left": "Talent text for level 25 left",
+      "right": "Talent text for level 25 right"
     }
   }
 }

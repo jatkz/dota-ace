@@ -1,6 +1,6 @@
 {
   "name": "Warlock",
-  "description": "Chaos comes at my command!",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -20,10 +20,10 @@
   "statGains": {
     "health": 52.8,
     "healthRegen": 0.24,
-    "armor": 0.17,
-    "attackSpeed": 1,
     "mana": 37.2,
     "manaRegen": 0.155,
+    "armor": 0.17,
+    "attackSpeed": 1,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.1
   },
@@ -39,7 +39,6 @@
     "damageAverage": 57,
     "projectileSpeed": 1200,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 90,
     "totalAttackSpeed": 100,
     "bat": 1.7,

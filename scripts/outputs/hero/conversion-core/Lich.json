@@ -1,6 +1,6 @@
 {
   "name": "Lich",
-  "description": "And so the dead will bury the dead.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -22,6 +22,7 @@
     "mana": 40.8,
     "manaRegen": 0.17,
     "armor": 0.28,
+    "attackSpeed": 1.7,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.4
   },
@@ -37,7 +38,6 @@
     "damageAverage": 56.5,
     "projectileSpeed": 900,
     "attackRange": 550,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Necrophos",
-  "description": "Behold the Pope of Pestilence.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 51,
     "projectileSpeed": 1200,
     "attackRange": 500,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 112,
     "bat": 1.7,

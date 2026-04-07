@@ -1,6 +1,6 @@
 {
   "name": "Primal Beast",
-  "description": "RAAWR Primal Beast Though the deterioration of the Mistwood and its evolution from idyllic expanse to death-filled tanglewild was a slow, wizard-fueled process, most scholars agree the true beginning of the end was marked by the interdimensional arrival of the Primal Beast.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -23,6 +23,7 @@
     "mana": 16.8,
     "manaRegen": 0.07,
     "armor": 0.17,
+    "attackSpeed": 1,
     "magicResistance": 0.1
   },
   "stats": {
@@ -37,7 +38,6 @@
     "damageAverage": 63,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.8,

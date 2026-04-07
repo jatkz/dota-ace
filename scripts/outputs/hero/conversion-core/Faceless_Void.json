@@ -1,6 +1,6 @@
 {
   "name": "Faceless Void",
-  "description": "From a place beyond time, and time beyond counting.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 61,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 124,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Mirana",
-  "description": "How long must we ride before we're summoned again to the Nightsilver Woods?",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 51,
     "projectileSpeed": 900,
     "attackRange": 630,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 126,
     "bat": 1.7,

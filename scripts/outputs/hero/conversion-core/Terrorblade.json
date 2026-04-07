@@ -1,6 +1,6 @@
 {
   "name": "Terrorblade",
-  "description": "The self-righteous shall choke on their sanctimony.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -39,7 +39,6 @@
     "damageAverage": 52,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 133,
     "bat": 1.5,

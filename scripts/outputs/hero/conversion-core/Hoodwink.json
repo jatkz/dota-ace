@@ -1,6 +1,6 @@
 {
   "name": "Hoodwink",
-  "description": "Who said you could stroll in my woods?",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -25,8 +25,7 @@
     "manaRegen": 0.145,
     "armor": 0.6,
     "attackSpeed": 3.6,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.6
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 494,
@@ -40,7 +39,6 @@
     "damageAverage": 50.5,
     "projectileSpeed": 1800,
     "attackRange": 575,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 125,
     "bat": 2,
@@ -66,8 +64,8 @@
       "right": "Sharpshooter Grants Vision and True Sight During Wind-up"
     },
     "25": {
-      "left": "2 Acorn Shot Charges",
-      "right": "+400 Sharpshooter Max Damage"
+      "left": "+400 Sharpshooter Max Damage",
+      "right": "2 Acorn Shot Charges"
     }
   }
 }

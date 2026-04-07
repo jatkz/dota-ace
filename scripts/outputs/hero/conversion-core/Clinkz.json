@@ -1,6 +1,6 @@
 {
   "name": "Clinkz",
-  "description": "Better to run than curse the road.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -24,7 +24,8 @@
     "manaRegen": 0.11,
     "armor": 0.45,
     "attackSpeed": 2.7,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.7
   },
   "stats": {
     "health": 494,
@@ -38,7 +39,6 @@
     "damageAverage": 47,
     "projectileSpeed": 900,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 125,
     "bat": 1.7,

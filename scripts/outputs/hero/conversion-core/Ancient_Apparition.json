@@ -1,6 +1,6 @@
 {
   "name": "Ancient Apparition",
-  "description": "One day, ice will cover these lands, and it will be as if this war never happened.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -23,6 +23,7 @@
     "mana": 37.2,
     "manaRegen": 0.155,
     "armor": 0.33,
+    "attackSpeed": 2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.1
   },
@@ -38,7 +39,6 @@
     "damageAverage": 49,
     "projectileSpeed": 1250,
     "attackRange": 675,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 120,
     "bat": 1.7,

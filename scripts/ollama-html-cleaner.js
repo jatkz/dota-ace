@@ -1314,10 +1314,6 @@ function extractHeroDetailedStats($) {
     if (attackRange) {
         stats.push(`Attack Range: ${attackRange}`);
     }
-    const attackAcquisitionRange = extractFirstNumber(getHeroCardSecondaryText(attackRangeRow, $));
-    if (attackAcquisitionRange) {
-        stats.push(`Attack Acquisition Range: ${attackAcquisitionRange}`);
-    }
 
     const attackSpeedPrimary = getHeroCardPrimaryText(attackSpeedRow, $);
     const attackSpeedMatch = attackSpeedPrimary.match(/^(\d+(?:\.\d+)?)\s*\((\d+(?:\.\d+)?)\)$/);
@@ -1468,6 +1464,11 @@ function buildHeroCoreLines($) {
         appendSection(lines, 'ATTACK TYPE', attackTypeMatch[1].charAt(0).toUpperCase() + attackTypeMatch[1].slice(1).toLowerCase());
     }
 
+    const primaryAttributeMatch = categories.find(tag => /^(Strength|Agility|Intelligence|Universal)\s+heroes?$/i.test(tag))?.match(/^(Strength|Agility|Intelligence|Universal)\s+heroes?$/i);
+    if (primaryAttributeMatch) {
+        appendSection(lines, 'PRIMARY ATTRIBUTE', primaryAttributeMatch[1].charAt(0).toUpperCase() + primaryAttributeMatch[1].slice(1).toLowerCase());
+    }
+
     const roles = [...new Set((contentText.match(/\bCarry\b|\bSupport\b|\bNuker\b|\bInitiator\b|\bDurable\b|\bDisabler\b|\bEscape\b|\bPusher\b|\bJungler\b/gi) || []).map(role => role.charAt(0).toUpperCase() + role.slice(1).toLowerCase()))];
     appendSection(lines, 'ROLES', roles);
 
@@ -1507,22 +1508,6 @@ function buildHeroCoreLines($) {
     appendSection(lines, 'STAT GAINS', extractHeroLevelBonuses($));
     appendSection(lines, 'HERO STATS', extractHeroDetailedStats($));
 
-    const quoteText = sanitizeNarrativeText(getContentRoot($).find('blockquote').first().text());
-    const descriptionCandidates = [...new Set([
-        ...getOwnTexts($, getContentRoot($), 40),
-        ...getDescriptiveLeafTexts($, getContentRoot($), 40)
-    ])]
-        .map(text => ({ text, score: scoreHeroDescriptionText(text, title) }))
-        .filter(candidate => candidate.score > -2)
-        .sort((a, b) => b.score - a.score || b.text.length - a.text.length);
-    const fallbackDescription = descriptionCandidates[0]?.text || '';
-    const descriptionParts = [quoteText];
-    if (!quoteText) {
-        descriptionParts.push(fallbackDescription);
-    } else if ((descriptionCandidates[0]?.score ?? -100) >= 6 && isLikelyBioText(fallbackDescription, title)) {
-        descriptionParts.push(fallbackDescription);
-    }
-    appendSection(lines, 'DESCRIPTION', sanitizeNarrativeText(descriptionParts.filter(Boolean).join(' ')));
     appendSection(lines, 'TALENTS', extractHeroTalents($));
 
     return lines;

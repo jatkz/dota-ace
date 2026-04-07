@@ -1,6 +1,6 @@
 {
   "name": "Tusk",
-  "description": "After a bar brawl it's customary, as a courtesy, to buy everyone who's still standing a round of drinks.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -24,8 +24,7 @@
     "manaRegen": 0.085,
     "armor": 0.32,
     "attackSpeed": 1.9,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.9
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -39,7 +38,6 @@
     "damageAverage": 52,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 123,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Largo",
-  "description": "You hear that?",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -23,7 +23,9 @@
     "mana": 31.2,
     "manaRegen": 0.13,
     "armor": 0.22,
-    "magicResistance": 0.1
+    "attackSpeed": 1.3,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.6
   },
   "stats": {
     "health": 648,
@@ -37,7 +39,6 @@
     "damageAverage": 66,
     "projectileSpeed": 0,
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.7,

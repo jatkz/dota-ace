@@ -1,6 +1,6 @@
 {
   "name": "Invoker",
-  "description": "I am a beacon of knowledge blazing out across a black sea of ignorance.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,10 +22,9 @@
   "statGains": {
     "health": 55,
     "healthRegen": 0.25,
-    "armor": 0.33,
-    "attackSpeed": 2,
     "mana": 48,
     "manaRegen": 0.2,
+    "armor": 0.33,
     "magicResistance": 0.1,
     "mainAttackDamage": 4
   },
@@ -41,7 +40,6 @@
     "damageAverage": 44,
     "projectileSpeed": 900,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.7,

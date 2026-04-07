@@ -1,6 +1,6 @@
 {
   "name": "Tidehunter",
-  "description": "You can't hide from the tide.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -41,7 +41,6 @@
     "damageAverage": 55,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.7,

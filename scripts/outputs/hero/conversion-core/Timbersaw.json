@@ -1,6 +1,6 @@
 {
   "name": "Timbersaw",
-  "description": "I'm not a lumberjack. This. This is personal.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Nuker",
@@ -37,7 +37,6 @@
     "damageAverage": 48,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.7,

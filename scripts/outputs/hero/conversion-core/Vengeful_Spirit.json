@@ -1,6 +1,6 @@
 {
   "name": "Vengeful Spirit",
-  "description": "The road of revenge is long, but what awaits me at the end makes it worthwhile.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -40,7 +40,6 @@
     "damageAverage": 54,
     "projectileSpeed": 1500,
     "attackRange": 400,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 123,
     "bat": 1.7,

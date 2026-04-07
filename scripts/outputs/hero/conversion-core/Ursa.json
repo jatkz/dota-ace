@@ -1,6 +1,6 @@
 {
   "name": "Ursa",
-  "description": "It is my spirit that keeps me safe, and not mere armor.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -39,7 +39,6 @@
     "damageAverage": 44,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

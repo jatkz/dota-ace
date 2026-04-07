@@ -1,6 +1,6 @@
 {
   "name": "Tinker",
-  "description": "Victory is 10% inspiration, 90% decapitation!",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -23,6 +23,7 @@
     "mana": 39.6,
     "manaRegen": 0.165,
     "armor": 0.23,
+    "attackSpeed": 1.4,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.3
   },
@@ -38,7 +39,6 @@
     "damageAverage": 55,
     "projectileSpeed": 900,
     "attackRange": 500,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.7,

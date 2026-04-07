@@ -1,6 +1,6 @@
 {
   "name": "Monkey King",
-  "description": "There's a lot of stories about the Monkey King. Some of 'em are even true.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -25,7 +25,6 @@
     "manaRegen": 0.09,
     "armor": 0.62,
     "attackSpeed": 3.7,
-    "mainAttackDamage": 3.7,
     "magicResistance": 0.1
   },
   "stats": {
@@ -40,7 +39,6 @@
     "damageAverage": 55,
     "projectileSpeed": "Instant",
     "attackRange": 300,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 95,
     "totalAttackSpeed": 119,
     "bat": 1.6,

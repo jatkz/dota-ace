@@ -1,6 +1,6 @@
 {
   "name": "Bounty Hunter",
-  "description": "No job is too big; no fee is too big.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -23,8 +23,7 @@
     "manaRegen": 0.095,
     "armor": 0.43,
     "attackSpeed": 2.6,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.6
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 538,
@@ -38,7 +37,6 @@
     "damageAverage": 58,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 121,
     "bat": 1.5,

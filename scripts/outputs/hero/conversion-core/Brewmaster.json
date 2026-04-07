@@ -1,6 +1,6 @@
 {
   "name": "Brewmaster",
-  "description": "Shall we call this off and have a friendly round?",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 56.5,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 119,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Gyrocopter",
-  "description": "So much for being retired… Aurel, the Gyrocopter.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Escape",
@@ -24,7 +24,6 @@
     "mana": 28.8,
     "manaRegen": 0.12,
     "armor": 0.57,
-    "attackSpeed": 3.4,
     "magicResistance": 0.1
   },
   "stats": {
@@ -39,7 +38,6 @@
     "damageAverage": 46,
     "projectileSpeed": 3000,
     "attackRange": 365,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 115,
     "totalAttackSpeed": 140,
     "bat": 1.7,

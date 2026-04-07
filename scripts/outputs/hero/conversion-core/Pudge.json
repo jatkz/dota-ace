@@ -1,6 +1,6 @@
 {
   "name": "Pudge",
-  "description": "When I'm through with these vermin, they'll be fit for a pie!",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Disabler",
@@ -25,6 +25,7 @@
     "mana": 21.6,
     "manaRegen": 0.09,
     "armor": 0.23,
+    "attackSpeed": 1.4,
     "magicResistance": 0.1
   },
   "stats": {
@@ -39,7 +40,6 @@
     "damageAverage": 73,
     "projectileSpeed": "Instant",
     "attackRange": 175,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 111,
     "bat": 1.7,

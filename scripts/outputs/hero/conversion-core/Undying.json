@@ -1,6 +1,6 @@
 {
   "name": "Undying",
-  "description": "Where go the living, the dead soon follow.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -25,7 +25,8 @@
     "manaRegen": 0.14,
     "armor": 0.2,
     "attackSpeed": 1.2,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.4
   },
   "stats": {
     "health": 604,
@@ -39,7 +40,6 @@
     "damageAverage": 59,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 110,
     "bat": 1.7,

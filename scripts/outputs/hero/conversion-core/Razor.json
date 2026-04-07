@@ -1,6 +1,6 @@
 {
   "name": "Razor",
-  "description": "I bring my lightning whip not to punish souls, but only to hasten them toward the inevitable exit.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 48,
     "projectileSpeed": 2000,
     "attackRange": 475,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 124,
     "bat": 1.7,

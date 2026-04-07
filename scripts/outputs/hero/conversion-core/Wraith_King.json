@@ -1,6 +1,6 @@
 {
   "name": "Wraith King",
-  "description": "Purer than flesh, stronger than bone, imperishable is the essence of the wraith.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -25,6 +25,7 @@
     "mana": 19.2,
     "manaRegen": 0.08,
     "armor": 0.28,
+    "attackSpeed": 1.7,
     "magicResistance": 0.1,
     "mainAttackDamage": 2.8
   },
@@ -40,7 +41,6 @@
     "damageAverage": 61,
     "projectileSpeed": 0,
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Visage",
-  "description": "It is one thing to animate a corpse from beneath the ground.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Escape",
@@ -41,7 +41,6 @@
     "damageAverage": 50.75,
     "projectileSpeed": 1400,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 110,
     "totalAttackSpeed": 121,
     "bat": 1.7,

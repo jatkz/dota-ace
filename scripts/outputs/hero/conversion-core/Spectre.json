@@ -1,6 +1,6 @@
 {
   "name": "Spectre",
-  "description": "Among the Transcendencies, you would be thought ignoble.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -24,8 +24,8 @@
     "manaRegen": 0.085,
     "armor": 0.4,
     "attackSpeed": 2.4,
-    "mainAttackDamage": 2.4,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 2.4
   },
   "stats": {
     "health": 582,
@@ -39,7 +39,6 @@
     "damageAverage": 51,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 136,
     "bat": 1.8,

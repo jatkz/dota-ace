@@ -1,6 +1,6 @@
 {
   "name": "Skywrath Mage",
-  "description": "A highly placed mage in the court of the Ghastly Eyrie who serves as the sworn protector of the Skywrath scion.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -20,10 +20,9 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "armor": 0.13,
-    "attackSpeed": 0.8,
     "mana": 49.2,
     "manaRegen": 0.205,
+    "armor": 0.13,
     "magicResistance": 0.1,
     "mainAttackDamage": 4.1
   },
@@ -39,7 +38,6 @@
     "damageAverage": 46,
     "projectileSpeed": 1000,
     "attackRange": 625,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 90,
     "totalAttackSpeed": 103,
     "bat": 1.7,

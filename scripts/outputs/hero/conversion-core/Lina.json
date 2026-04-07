@@ -1,6 +1,6 @@
 {
   "name": "Lina",
-  "description": "Fire makes a fine servant, but a harsh mistress.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -40,7 +40,6 @@
     "damageAverage": 55,
     "projectileSpeed": 1000,
     "attackRange": 670,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 123,
     "bat": 1.6,

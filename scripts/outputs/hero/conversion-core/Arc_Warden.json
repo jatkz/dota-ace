@@ -1,6 +1,6 @@
 {
   "name": "Arc Warden",
-  "description": "It is not to aid the Ancients that this war is joined, but to destroy them both. This disunity must end.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -24,7 +24,8 @@
     "manaRegen": 0.13,
     "armor": 0.45,
     "attackSpeed": 2.7,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.38
   },
   "stats": {
     "health": 560,
@@ -38,7 +39,6 @@
     "damageAverage": 54.8,
     "projectileSpeed": 900,
     "attackRange": 625,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 110,
     "totalAttackSpeed": 130,
     "bat": 1.7,

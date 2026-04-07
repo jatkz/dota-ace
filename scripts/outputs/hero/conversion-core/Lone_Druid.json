@@ -1,6 +1,6 @@
 {
   "name": "Lone Druid",
-  "description": "I wonder what awaits me at the end of everything… Sylla, the Lone Druid Both Lone Druid and the Spirit Bear's attacks do not apply the counter on enemy creeps.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -24,6 +24,7 @@
     "manaRegen": 0.07,
     "armor": 0.47,
     "attackSpeed": 2.8,
+    "magicResistance": 0.1,
     "mainAttackDamage": 2.8
   },
   "stats": {
@@ -38,7 +39,6 @@
     "damageAverage": 46,
     "projectileSpeed": 1125,
     "attackRange": 550,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 122,
     "bat": 1.6,

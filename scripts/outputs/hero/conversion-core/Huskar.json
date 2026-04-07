@@ -1,6 +1,6 @@
 {
   "name": "Huskar",
-  "description": "Those who are given more in life must not cling to it but risk it all at every moment.",
+  "primaryAttribute": "Strength",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -38,7 +38,6 @@
     "damageAverage": 46.5,
     "projectileSpeed": 1400,
     "attackRange": 400,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 110,
     "bat": 1.6,

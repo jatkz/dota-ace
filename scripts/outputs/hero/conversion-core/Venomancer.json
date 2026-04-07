@@ -1,6 +1,6 @@
 {
   "name": "Venomancer",
-  "description": "No necromancer shall raise what the venomancer puts down.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -41,7 +41,6 @@
     "damageAverage": 47.85,
     "projectileSpeed": 900,
     "attackRange": 450,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 115,
     "totalAttackSpeed": 140,
     "bat": 1.7,
@@ -64,11 +63,11 @@
     },
     "20": {
       "left": "-2s Plague Ward Cooldown",
-      "right": "+40% Could not find Lpdb data for \"Snake Bite\" on \"Venomancer\" (stack trace logged) Damage"
+      "right": "+40% Module: Ability_ID:31: Could not find Lpdb data for \"Snake Bite\" on \"Venomancer\" (stack trace logged) Damage"
     },
     "25": {
       "left": "2.5x Plague Ward Health/Damage",
-      "right": "Could not find Lpdb data for \"Snake Bite\" on \"Venomancer\" (stack trace logged) Undispellable"
+      "right": "Module: Ability_ID:31: Could not find Lpdb data for \"Snake Bite\" on \"Venomancer\" (stack trace logged) Undispellable"
     }
   }
 }

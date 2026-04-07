@@ -1,6 +1,6 @@
 {
   "name": "Io",
-  "description": "Beep Boop Link Io, the Wisp Io is everywhere, and in all things.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -39,7 +39,6 @@
     "damageAverage": 48.3,
     "projectileSpeed": 1200,
     "attackRange": 500,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.7,

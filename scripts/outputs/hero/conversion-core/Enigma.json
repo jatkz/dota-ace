@@ -1,6 +1,6 @@
 {
   "name": "Enigma",
-  "description": "Chaos hunts the spark of endless suns, whose light will die in my crushing grasp.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Disabler",
@@ -39,7 +39,6 @@
     "damageAverage": 46.3,
     "projectileSpeed": 900,
     "attackRange": 500,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.7,

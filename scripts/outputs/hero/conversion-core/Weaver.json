@@ -1,6 +1,6 @@
 {
   "name": "Weaver",
-  "description": "Fate weaves the threads of our lives together. Fate also wields the blade that cuts them short. Skitskurr, the Weaver.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,6 +22,7 @@
     "mana": 24,
     "manaRegen": 0.1,
     "armor": 0.55,
+    "attackSpeed": 3.3,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.3
   },
@@ -37,7 +38,6 @@
     "damageAverage": 57,
     "projectileSpeed": 900,
     "attackRange": 425,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 120,
     "totalAttackSpeed": 137,
     "bat": 1.8,

@@ -1,6 +1,6 @@
 {
   "name": "Enchantress",
-  "description": "You know what I love? Everything!",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -24,8 +24,8 @@
     "mana": 48,
     "manaRegen": 0.2,
     "armor": 0.35,
-    "attackSpeed": 2.1,
     "magicResistance": 0.1,
+    "attackSpeed": 2.1,
     "mainAttackDamage": 4
   },
   "stats": {
@@ -40,7 +40,6 @@
     "damageAverage": 48,
     "projectileSpeed": 900,
     "attackRange": 575,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 119,
     "bat": 1.7,

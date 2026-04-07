@@ -1,6 +1,6 @@
 {
   "name": "Lifestealer",
-  "description": "Oh Master, behold all these lives for the taking! N'aix, the Lifestealer.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -25,8 +25,7 @@
     "manaRegen": 0.09,
     "armor": 0.32,
     "attackSpeed": 1.9,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.4
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -40,7 +39,6 @@
     "damageAverage": 49,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 120,
     "totalAttackSpeed": 135,
     "bat": 1.7,

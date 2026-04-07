@@ -1,6 +1,6 @@
 {
   "name": "Techies",
-  "description": "Measurements made.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Nuker",
@@ -37,7 +37,6 @@
     "damageAverage": 48,
     "projectileSpeed": 900,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 90,
     "totalAttackSpeed": 106,
     "bat": 1.7,

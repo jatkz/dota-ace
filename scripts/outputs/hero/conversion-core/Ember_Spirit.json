@@ -1,6 +1,6 @@
 {
   "name": "Ember Spirit",
-  "description": "Balance in all things.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 57,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 122,
     "bat": 1.7,

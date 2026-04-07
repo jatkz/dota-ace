@@ -1,6 +1,6 @@
 {
   "name": "Alchemist",
-  "description": "Failure is just another kind of success.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -28,8 +28,7 @@
     "manaRegen": 0.09,
     "armor": 0.25,
     "attackSpeed": 1.5,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.7
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -43,7 +42,6 @@
     "damageAverage": 53,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 132,
     "bat": 1.7,

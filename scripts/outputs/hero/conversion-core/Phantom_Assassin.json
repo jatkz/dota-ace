@@ -1,6 +1,6 @@
 {
   "name": "Phantom Assassin",
-  "description": "I'm here to blur the line between life and death.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -37,7 +37,6 @@
     "damageAverage": 57,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 131,
     "bat": 1.7,

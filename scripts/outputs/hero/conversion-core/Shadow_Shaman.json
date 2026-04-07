@@ -1,6 +1,6 @@
 {
   "name": "Shadow Shaman",
-  "description": "I am the intermediary between life and death.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -22,12 +22,11 @@
   "statGains": {
     "health": 50.6,
     "healthRegen": 0.23,
-    "armor": 0.27,
-    "attackSpeed": 1.6,
     "mana": 42,
     "manaRegen": 0.175,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.5
+    "armor": 0.27,
+    "attackSpeed": 1.6,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 626,
@@ -41,7 +40,6 @@
     "damageAverage": 66.5,
     "projectileSpeed": 900,
     "attackRange": 400,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.7,

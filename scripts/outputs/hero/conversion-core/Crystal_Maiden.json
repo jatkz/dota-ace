@@ -1,6 +1,6 @@
 {
   "name": "Crystal Maiden",
-  "description": "When Hell freezes over, I'll start calling it Heaven.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -23,7 +23,6 @@
     "mana": 39.6,
     "manaRegen": 0.165,
     "armor": 0.3,
-    "attackSpeed": 1.8,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.3
   },
@@ -39,7 +38,6 @@
     "damageAverage": 51,
     "projectileSpeed": 900,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.7,

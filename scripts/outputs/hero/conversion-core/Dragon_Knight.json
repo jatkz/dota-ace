@@ -1,6 +1,6 @@
 {
   "name": "Dragon Knight",
-  "description": "The Dragon Slyrak sleeps within this armor, and the knight within the Dragon waits. Beware you do not wake them both.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 58,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.6,

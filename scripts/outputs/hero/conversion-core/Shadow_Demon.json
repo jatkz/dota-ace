@@ -1,6 +1,6 @@
 {
   "name": "Shadow Demon",
-  "description": "Who toys with demons will find himself toyed with.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -41,7 +41,6 @@
     "damageAverage": 53,
     "projectileSpeed": 900,
     "attackRange": 500,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

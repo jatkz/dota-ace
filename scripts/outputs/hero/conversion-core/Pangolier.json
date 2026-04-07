@@ -1,6 +1,6 @@
 {
   "name": "Pangolier",
-  "description": "The honorable Donté Panlin, at your service. Donté Panlin, the Pangolier.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -26,7 +26,6 @@
     "mana": 30,
     "manaRegen": 0.125,
     "armor": 0.53,
-    "attackSpeed": 3.2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.78
   },
@@ -42,7 +41,6 @@
     "damageAverage": 53.3,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

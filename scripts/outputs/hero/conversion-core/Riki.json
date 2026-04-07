@@ -1,6 +1,6 @@
 {
   "name": "Riki",
-  "description": "There are none so stabbed as those who will not see.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -24,6 +24,7 @@
     "manaRegen": 0.065,
     "armor": 0.4,
     "attackSpeed": 2.4,
+    "mainAttackDamage": 2.4,
     "magicResistance": 0.1
   },
   "stats": {
@@ -38,7 +39,6 @@
     "damageAverage": 54,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 90,
     "totalAttackSpeed": 120,
     "bat": 1.7,

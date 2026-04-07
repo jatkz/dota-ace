@@ -1,6 +1,6 @@
 {
   "name": "Spirit Breaker",
-  "description": "I'm the beast of many parts; I part enemies from their lives.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -26,7 +26,8 @@
     "manaRegen": 0.09,
     "armor": 0.28,
     "attackSpeed": 1.7,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.3
   },
   "stats": {
     "health": 736,
@@ -40,7 +41,6 @@
     "damageAverage": 67,
     "projectileSpeed": "Instant",
     "attackRange": 170,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.9,

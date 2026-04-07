@@ -1,6 +1,6 @@
 {
   "name": "Treant Protector",
-  "description": "Life becomes death becomes new life. As it should be. Rooftrellen, the Treant Protector.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -25,7 +25,9 @@
     "mana": 21.6,
     "manaRegen": 0.09,
     "armor": 0.3,
-    "magicResistance": 0.1
+    "attackSpeed": 1.8,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
   },
   "stats": {
     "health": 670,
@@ -39,7 +41,6 @@
     "damageAverage": 89,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.9,

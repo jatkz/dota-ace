@@ -1,6 +1,6 @@
 {
   "name": "Spirit Bear",
-  "description": "The Spirit Bear will level up alongside Lone Druid, with its Gold & EXP Bounty scaling as it levels up. Most spells and units interact with the Spirit Bear as if it was a Melee Hero.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -39,7 +39,6 @@
     "damageAverage": 28,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 500,
     "attackSpeed": 110,
     "totalAttackSpeed": 110,
     "bat": 1.5,
@@ -65,7 +64,7 @@
       "right": "+30 Attack Damage"
     },
     "25": {
-      "left": "Entangling Claws grants +15% Damage Amp against Entangled units",
+      "left": "+15% Damage Amp against Entangled units",
       "right": "+20% Demolish Bonus Building Damage"
     }
   }

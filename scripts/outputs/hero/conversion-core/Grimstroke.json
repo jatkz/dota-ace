@@ -1,6 +1,6 @@
 {
   "name": "Grimstroke",
-  "description": "I'll paint this world as I see fit.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -24,7 +24,9 @@
     "mana": 45.6,
     "manaRegen": 0.19,
     "armor": 0.32,
-    "magicResistance": 0.1
+    "attackSpeed": 1.9,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.8
   },
   "stats": {
     "health": 582,
@@ -38,7 +40,6 @@
     "damageAverage": 49,
     "projectileSpeed": 900,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Templar Assassin",
-  "description": "Where the Hidden Ones send me, I go without question. I do not even question why I question not.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -38,7 +38,6 @@
     "damageAverage": 53.5,
     "projectileSpeed": 1000,
     "attackRange": 250,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 123,
     "bat": 1.6,

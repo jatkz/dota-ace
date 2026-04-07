@@ -1,6 +1,6 @@
 {
   "name": "Death Prophet",
-  "description": "Krobelus, the Death Prophet Creates a spirit link between Death Prophet and an enemy unit, draining health from the enemy.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 54.9,
     "projectileSpeed": 1000,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.7,

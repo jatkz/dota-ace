@@ -1,6 +1,6 @@
 {
   "name": "Bristleback",
-  "description": "It was a barkeep that got me into this mess. Yeah, I think I'll pay em a visit when this is done.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -24,8 +24,8 @@
     "mana": 33.6,
     "manaRegen": 0.14,
     "armor": 0.3,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.8
+    "attackSpeed": 1.8,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -39,7 +39,6 @@
     "damageAverage": 56,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.8,

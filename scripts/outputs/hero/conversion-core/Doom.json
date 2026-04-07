@@ -1,6 +1,6 @@
 {
   "name": "Doom",
-  "description": "Hehm ehme meh heh heh, speak of me, and I shall appear. Face me and face the furnace!",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -26,8 +26,7 @@
     "manaRegen": 0.085,
     "armor": 0.25,
     "attackSpeed": 1.5,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.6
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 648,
@@ -41,7 +40,6 @@
     "damageAverage": 61,
     "projectileSpeed": "Instant",
     "attackRange": 200,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.9,

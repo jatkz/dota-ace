@@ -1,6 +1,6 @@
 {
   "name": "Luna",
-  "description": "I was once the scourge of the plains, a terror on the wind.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -24,7 +24,8 @@
     "manaRegen": 0.095,
     "armor": 0.57,
     "attackSpeed": 3.4,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
   },
   "stats": {
     "health": 582,
@@ -38,7 +39,6 @@
     "damageAverage": 53,
     "projectileSpeed": 900,
     "attackRange": 330,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 124,
     "bat": 1.7,

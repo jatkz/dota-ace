@@ -1,6 +1,6 @@
 {
   "name": "Nature's Prophet",
-  "description": "I woke within the seed and saw my destiny, and many were its branches.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 47.75,
     "projectileSpeed": 1125,
     "attackRange": 620,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.5,

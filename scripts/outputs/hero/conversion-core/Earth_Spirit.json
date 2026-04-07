@@ -1,6 +1,6 @@
 {
   "name": "Earth Spirit",
-  "description": "Through conflict, one's nature is revealed.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -40,7 +40,6 @@
     "damageAverage": 49,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.7,
@@ -67,7 +66,7 @@
     },
     "25": {
       "left": "+250 Geomagnetic Grip Remnant Damage",
-      "right": "Earth Spririt Magnetizes Himself"
+      "right": "Earth Spirit Magnetizes Himself"
     }
   }
 }

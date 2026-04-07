@@ -1,6 +1,6 @@
 {
   "name": "Bloodseeker",
-  "description": "You should be honored to bleed so that the Flayed Ones may live.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -25,7 +25,8 @@
     "manaRegen": 0.1,
     "armor": 0.52,
     "attackSpeed": 3.1,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.1
   },
   "stats": {
     "health": 648,
@@ -39,7 +40,6 @@
     "damageAverage": 62,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 124,
     "bat": 1.7,

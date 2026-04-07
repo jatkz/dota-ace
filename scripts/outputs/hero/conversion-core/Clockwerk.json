@@ -1,6 +1,6 @@
 {
   "name": "Clockwerk",
-  "description": "I've a mind like a steel trap, and the physique to go with it!",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -24,8 +24,7 @@
     "mana": 20.4,
     "manaRegen": 0.085,
     "armor": 0.38,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.2
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 692,
@@ -39,7 +38,6 @@
     "damageAverage": 51,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 113,
     "bat": 1.7,

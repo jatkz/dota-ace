@@ -1,6 +1,6 @@
 {
   "name": "Leshrac",
-  "description": "Imbalance demands it.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -25,6 +25,7 @@
     "mana": 42,
     "manaRegen": 0.175,
     "armor": 0.42,
+    "attackSpeed": 2.5,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.5
   },
@@ -40,7 +41,6 @@
     "damageAverage": 51,
     "projectileSpeed": 900,
     "attackRange": 575,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 117,
     "bat": 1.7,

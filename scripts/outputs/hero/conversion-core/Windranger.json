@@ -1,6 +1,6 @@
 {
   "name": "Windranger",
-  "description": "If at first you don't succeed, stand closer, shoot again.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 53.85,
     "projectileSpeed": 1250,
     "attackRange": 600,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 90,
     "totalAttackSpeed": 107,
     "bat": 1.5,

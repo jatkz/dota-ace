@@ -1,6 +1,6 @@
 {
   "name": "Drow Ranger",
-  "description": "I walk alone, but the shadows are company enough.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -39,7 +39,6 @@
     "damageAverage": 52.5,
     "projectileSpeed": 1250,
     "attackRange": 625,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 122,
     "bat": 1.7,

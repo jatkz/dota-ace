@@ -1,6 +1,6 @@
 {
   "name": "Anti-Mage",
-  "description": "They who live by the wand shall die by my blade.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -39,7 +39,6 @@
     "damageAverage": 55,
     "projectileSpeed": 0,
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 124,
     "bat": 1.4,

@@ -1,6 +1,6 @@
 {
   "name": "Puck",
-  "description": "I find myself strangely drawn to this odd configuration of activity.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Initiator",
@@ -25,7 +25,8 @@
     "manaRegen": 0.19,
     "armor": 0.38,
     "attackSpeed": 2.3,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.8
   },
   "stats": {
     "health": 494,
@@ -39,7 +40,6 @@
     "damageAverage": 49,
     "projectileSpeed": 900,
     "attackRange": 550,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.7,

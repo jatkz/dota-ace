@@ -1,6 +1,6 @@
 {
   "name": "Naga Siren",
-  "description": "I sing the Siren song of war.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -42,7 +42,6 @@
     "damageAverage": 46,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 132,
     "bat": 1.7,

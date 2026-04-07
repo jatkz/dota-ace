@@ -1,6 +1,6 @@
 {
   "name": "Winter Wyvern",
-  "description": "Some breathe fire. I breathe ice. Auroth, the Winter Wyvern.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -23,8 +23,8 @@
     "mana": 43.2,
     "manaRegen": 0.18,
     "armor": 0.28,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.6
+    "attackSpeed": 1.7,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -38,7 +38,6 @@
     "damageAverage": 45.5,
     "projectileSpeed": 700,
     "attackRange": 450,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.7,

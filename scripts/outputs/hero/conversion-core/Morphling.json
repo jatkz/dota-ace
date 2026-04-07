@@ -1,6 +1,6 @@
 {
   "name": "Morphling",
-  "description": "You only miss the water when the well runs dry.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,12 +22,12 @@
   "statGains": {
     "health": 57.2,
     "healthRegen": 0.26,
-    "armor": 0.65,
-    "attackSpeed": 3.9,
-    "mainAttackDamage": 3.9,
     "mana": 21.6,
     "manaRegen": 0.09,
-    "magicResistance": 0.1
+    "armor": 0.65,
+    "attackSpeed": 3.9,
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.9
   },
   "stats": {
     "health": 626,
@@ -41,7 +41,6 @@
     "damageAverage": 37.5,
     "projectileSpeed": 1300,
     "attackRange": 350,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 124,
     "bat": 1.5,

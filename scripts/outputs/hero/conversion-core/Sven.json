@@ -1,6 +1,6 @@
 {
   "name": "Sven",
-  "description": "May my enemies share the fate of the Shattered Helm.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -25,7 +25,6 @@
     "mana": 18,
     "manaRegen": 0.075,
     "armor": 0.37,
-    "attackSpeed": 2.2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.5
   },
@@ -41,7 +40,6 @@
     "damageAverage": 61,
     "projectileSpeed": 0,
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 128,
     "bat": 1.9,

@@ -1,6 +1,6 @@
 {
   "name": "Sniper",
-  "description": "Now that's what I call stopping power.",
+  "primaryAttribute": "Agility",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -23,7 +23,6 @@
     "manaRegen": 0.13,
     "armor": 0.53,
     "attackSpeed": 3.2,
-    "mainAttackDamage": 3.2,
     "magicResistance": 0.1
   },
   "stats": {
@@ -38,7 +37,6 @@
     "damageAverage": 43,
     "projectileSpeed": 3000,
     "attackRange": 550,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 127,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Witch Doctor",
-  "description": "Malpractice makes perfect.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -20,10 +20,10 @@
   "statGains": {
     "health": 46.2,
     "healthRegen": 0.21,
-    "mana": 37.2,
-    "manaRegen": 0.155,
     "armor": 0.23,
     "attackSpeed": 1.4,
+    "mana": 37.2,
+    "manaRegen": 0.155,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.1
   },
@@ -39,7 +39,6 @@
     "damageAverage": 53,
     "projectileSpeed": 1200,
     "attackRange": 550,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 113,
     "bat": 1.7,

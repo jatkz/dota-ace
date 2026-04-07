@@ -1,6 +1,6 @@
 {
   "name": "Juggernaut",
-  "description": "By the Visage of Vengeance, which drowned in the Isle of Masks, I will carry on the rites of the Faceless Ones.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -38,7 +38,6 @@
     "damageAverage": 55,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 142,
     "bat": 1.4,
@@ -52,20 +51,20 @@
   },
   "talents": {
     "10": {
-      "left": "Left talent description",
-      "right": "Right talent description"
+      "left": "Left talent text",
+      "right": "Right talent text"
     },
     "15": {
-      "left": "Left talent description",
-      "right": "Right talent description"
+      "left": "Left talent text",
+      "right": "Right talent text"
     },
     "20": {
-      "left": "Left talent description",
-      "right": "Right talent description"
+      "left": "Left talent text",
+      "right": "Right talent text"
     },
     "25": {
-      "left": "Left talent description",
-      "right": "Right talent description"
+      "left": "Left talent text",
+      "right": "Right talent text"
     }
   }
 }

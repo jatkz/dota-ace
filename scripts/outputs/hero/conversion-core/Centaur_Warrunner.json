@@ -1,6 +1,6 @@
 {
   "name": "Centaur Warrunner",
-  "description": "It is not pride I take in my own power, it is passion.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Durable",
@@ -40,7 +40,6 @@
     "damageAverage": 64,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 90,
     "totalAttackSpeed": 105,
     "bat": 1.7,

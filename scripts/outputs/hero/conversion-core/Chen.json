@@ -1,6 +1,6 @@
 {
   "name": "Chen",
-  "description": "You can learn faith at the end of a sword.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -20,10 +20,10 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "armor": 0.35,
-    "attackSpeed": 2.1,
     "mana": 38.4,
     "manaRegen": 0.16,
+    "armor": 0.35,
+    "attackSpeed": 2.1,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.2
   },
@@ -39,7 +39,6 @@
     "damageAverage": 53,
     "projectileSpeed": 1100,
     "attackRange": 650,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.7,

@@ -654,6 +654,28 @@ function normalizeHeroAttackType(attackType) {
     return normalizeText(attackType);
 }
 
+function normalizeHeroPrimaryAttribute(primaryAttribute) {
+    if (typeof primaryAttribute !== 'string') {
+        return primaryAttribute;
+    }
+
+    const normalized = normalizeText(primaryAttribute).toLowerCase();
+    if (normalized === 'strength') {
+        return 'Strength';
+    }
+    if (normalized === 'agility') {
+        return 'Agility';
+    }
+    if (normalized === 'intelligence') {
+        return 'Intelligence';
+    }
+    if (normalized === 'universal') {
+        return 'Universal';
+    }
+
+    return normalizeText(primaryAttribute);
+}
+
 function normalizeHeroTalents(talents) {
     if (!talents || typeof talents !== 'object' || Array.isArray(talents)) {
         return talents;
@@ -739,7 +761,7 @@ function normalizeHeroCore(data) {
     const normalized = { ...data };
 
     normalized.name = normalizeText(normalized.name);
-    normalized.description = normalizeHeroDescription(normalized.description, normalized.name);
+    normalized.primaryAttribute = normalizeHeroPrimaryAttribute(normalized.primaryAttribute);
     normalized.attackType = normalizeHeroAttackType(normalized.attackType);
     normalized.roles = normalizeHeroRoles(normalized.roles);
 
@@ -748,6 +770,11 @@ function normalizeHeroCore(data) {
     normalized.statGains = normalizeNumericObject(normalized.statGains);
     normalized.stats = normalizeNumericObject(normalized.stats);
     normalized.talents = normalizeHeroTalents(normalized.talents);
+
+    delete normalized.description;
+    if (normalized.stats && typeof normalized.stats === 'object' && !Array.isArray(normalized.stats)) {
+        delete normalized.stats.attackAcquisitionRange;
+    }
 
     return normalized;
 }

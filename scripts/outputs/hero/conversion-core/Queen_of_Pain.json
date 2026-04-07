@@ -1,6 +1,6 @@
 {
   "name": "Queen of Pain",
-  "description": "They say pain is all in the mind, but they're wrong: It's all in my hands.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Escape",
@@ -39,7 +39,6 @@
     "damageAverage": 54,
     "projectileSpeed": 1500,
     "attackRange": 550,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 122,
     "bat": 1.5,

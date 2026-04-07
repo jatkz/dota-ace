@@ -1,6 +1,6 @@
 {
   "name": "Lycan",
-  "description": "A wolf in man's clothing.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -25,7 +25,8 @@
     "manaRegen": 0.085,
     "armor": 0.28,
     "attackSpeed": 1.7,
-    "magicResistance": 0.1
+    "magicResistance": 0.1,
+    "mainAttackDamage": 3.4
   },
   "stats": {
     "health": 736,
@@ -39,7 +40,6 @@
     "damageAverage": 54.5,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 128,
     "bat": 1.7,

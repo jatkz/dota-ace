@@ -1,6 +1,6 @@
 {
   "name": "Earthshaker",
-  "description": "There may be many earths, but there's only one Earthshaker.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -25,8 +25,7 @@
     "manaRegen": 0.105,
     "armor": 0.23,
     "attackSpeed": 1.4,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.7
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -40,7 +39,6 @@
     "damageAverage": 54,
     "projectileSpeed": 0,
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 112,
     "bat": 1.7,

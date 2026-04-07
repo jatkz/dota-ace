@@ -1,6 +1,6 @@
 {
   "name": "Broodmother",
-  "description": "I've promised you to my children.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -42,7 +42,6 @@
     "damageAverage": 48,
     "projectileSpeed": "Instant",
     "attackRange": 175,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 125,
     "totalAttackSpeed": 143,
     "bat": 1.7,

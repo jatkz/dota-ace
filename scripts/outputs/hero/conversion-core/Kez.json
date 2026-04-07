@@ -1,6 +1,6 @@
 {
   "name": "Kez",
-  "description": "Flightless fury! Heh, that's what they call me.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Escape",
@@ -38,7 +38,6 @@
     "damageAverage": 53,
     "projectileSpeed": 0,
     "attackRange": 225,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 127,
     "bat": 1.9,

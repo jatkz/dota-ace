@@ -1,6 +1,6 @@
 {
   "name": "Night Stalker",
-  "description": "I feed the darkness and the darkness feeds me.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -41,7 +41,6 @@
     "damageAverage": 65,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

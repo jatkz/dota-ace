@@ -1,6 +1,6 @@
 {
   "name": "Void Spirit",
-  "description": "Friend or foe, in the wake of the confluence, you will follow where I lead.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -24,9 +24,7 @@
     "mana": 37.2,
     "manaRegen": 0.155,
     "armor": 0.37,
-    "attackSpeed": 2.2,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.56
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 604,
@@ -40,7 +38,6 @@
     "damageAverage": 54.15,
     "projectileSpeed": "Instant",
     "attackRange": 200,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 121,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Abaddon",
-  "description": "The fog of war is no match for the mist of fate.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -24,8 +24,7 @@
     "manaRegen": 0.1,
     "armor": 0.25,
     "attackSpeed": 1.5,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 2.75
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 582,
@@ -39,7 +38,6 @@
     "damageAverage": 54.45,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 95,
     "totalAttackSpeed": 117,
     "bat": 1.5,

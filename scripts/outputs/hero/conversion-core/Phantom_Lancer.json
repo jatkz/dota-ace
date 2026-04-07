@@ -1,6 +1,6 @@
 {
   "name": "Phantom Lancer",
-  "description": "We outnumbered you. We outnumber them all! Azwraith, the Phantom Lancer.",
+  "primaryAttribute": "Agility",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -21,12 +21,12 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
-    "mana": 21.6,
-    "manaRegen": 0.09,
     "armor": 0.57,
     "attackSpeed": 3.4,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 3.4
+    "mainAttackDamage": 3.4,
+    "mana": 21.6,
+    "manaRegen": 0.09,
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 582,
@@ -40,7 +40,6 @@
     "damageAverage": 57,
     "projectileSpeed": "Instant",
     "attackRange": 225,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 136,
     "bat": 1.7,

@@ -1,6 +1,6 @@
 {
   "name": "Outworld Destroyer",
-  "description": "Their sanity I'll shatter; their dreams of conquest I'll destroy.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -21,9 +21,10 @@
   "statGains": {
     "health": 63.8,
     "healthRegen": 0.29,
+    "armor": 0.27,
+    "attackSpeed": 1.6,
     "mana": 50.4,
     "manaRegen": 0.21,
-    "armor": 0.27,
     "magicResistance": 0.1,
     "mainAttackDamage": 4.2
   },
@@ -39,7 +40,6 @@
     "damageAverage": 55,
     "projectileSpeed": 900,
     "attackRange": 450,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 122,
     "bat": 1.9,

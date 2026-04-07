@@ -1,6 +1,6 @@
 {
   "name": "Nyx Assassin",
-  "description": "The blessing of Nyx gives me all the purpose I require.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Disabler",
@@ -40,7 +40,6 @@
     "damageAverage": 53.2,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.7,

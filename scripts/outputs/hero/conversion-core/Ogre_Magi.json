@@ -1,6 +1,6 @@
 {
   "name": "Ogre Magi",
-  "description": "Once is not enough!",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -40,7 +40,6 @@
     "damageAverage": 73,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 114,
     "bat": 1.7,

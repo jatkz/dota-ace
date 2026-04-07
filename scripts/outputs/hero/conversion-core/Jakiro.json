@@ -1,6 +1,6 @@
 {
   "name": "Jakiro",
-  "description": "Two sides of the same coin.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -24,6 +24,7 @@
     "mana": 36,
     "manaRegen": 0.15,
     "armor": 0.2,
+    "attackSpeed": 1.2,
     "magicResistance": 0.1,
     "mainAttackDamage": 3
   },
@@ -39,7 +40,6 @@
     "damageAverage": 56,
     "projectileSpeed": 1100,
     "attackRange": 400,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.7,

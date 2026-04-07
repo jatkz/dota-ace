@@ -1,6 +1,6 @@
 {
   "name": "Dark Willow",
-  "description": "Let's have some fun, shall we?",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -40,7 +40,6 @@
     "damageAverage": 52,
     "projectileSpeed": 1200,
     "attackRange": 475,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 115,
     "totalAttackSpeed": 133,
     "bat": 1.5,

@@ -1,6 +1,6 @@
 {
   "name": "Mars",
-  "description": "To those behind, rally! To those ahead, kneel.",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": [
     "Carry",
@@ -40,7 +40,6 @@
     "damageAverage": 53,
     "projectileSpeed": "Instant",
     "attackRange": 250,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 118,
     "bat": 1.8,

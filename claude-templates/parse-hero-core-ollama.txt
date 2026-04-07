@@ -4,7 +4,7 @@ Extract the following hero-level information and return as JSON:
 
 {
   "name": "hero name",
-  "description": "one-line summary",
+  "primaryAttribute": "Strength",
   "attackType": "Melee",
   "roles": ["role1", "role2"],
   "attributes": {
@@ -39,7 +39,6 @@ Extract the following hero-level information and return as JSON:
     "damageAverage": 0,
     "projectileSpeed": 0,
     "attackRange": 0,
-    "attackAcquisitionRange": 0,
     "attackSpeed": 0,
     "totalAttackSpeed": 0,
     "bat": 0,
@@ -74,6 +73,7 @@ Extract the following hero-level information and return as JSON:
 Rules:
 - Return only hero-level data. Do not include an `abilities` field.
 - Use plain numbers for numeric fields.
+- For `primaryAttribute`, only use `Strength`, `Agility`, `Intelligence`, or `Universal`.
 - For `attackType`, only use `Melee` or `Ranged`.
 - For `roles`, only use canonical Dota role names with this capitalization: `Carry`, `Support`, `Nuker`, `Disabler`, `Initiator`, `Durable`, `Escape`, `Pusher`, `Jungler`.
 - For percentage fields like magic resistance, return plain numbers without `%`.

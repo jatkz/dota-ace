@@ -1,6 +1,6 @@
 {
   "name": "Sand King",
-  "description": "I will show you fear in a handful of sand… Crixalis, the Sand King The sands of the Scintillant Waste are alive and sentient — the whole vast desert speaks to itself, thinking thoughts only such a vastness can conceive.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Initiator",
@@ -22,10 +22,10 @@
   "statGains": {
     "health": 50.6,
     "healthRegen": 0.23,
-    "armor": 0.33,
-    "attackSpeed": 2,
     "mana": 24,
     "manaRegen": 0.1,
+    "armor": 0.33,
+    "attackSpeed": 2,
     "magicResistance": 0.1,
     "mainAttackDamage": 2.84
   },
@@ -41,7 +41,6 @@
     "damageAverage": 50.55,
     "projectileSpeed": "Instant",
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 110,
     "totalAttackSpeed": 129,
     "bat": 1.7,

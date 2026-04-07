@@ -1,6 +1,6 @@
 {
   "name": "Snapfire",
-  "description": "Beadie and Mortimer. We're kind of a package deal.",
+  "primaryAttribute": "Universal",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -21,10 +21,9 @@
   "statGains": {
     "health": 77,
     "healthRegen": 0.35,
-    "armor": 0.32,
-    "attackSpeed": 1.9,
     "mana": 26.4,
     "manaRegen": 0.11,
+    "armor": 0.32,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.42
   },
@@ -40,7 +39,6 @@
     "damageAverage": 54.1,
     "projectileSpeed": 1800,
     "attackRange": 400,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 116,
     "bat": 1.8,

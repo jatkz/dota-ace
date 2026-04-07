@@ -1,6 +1,6 @@
 {
   "name": "Marci",
-  "description": "Whistle Link Marci Marci bounds to the targeted unit, choosing a direction and distance she will spring away from it.",
+  "primaryAttribute": "Universal",
   "attackType": "Melee",
   "roles": [
     "Support",
@@ -41,7 +41,6 @@
     "damageAverage": 58.9,
     "projectileSpeed": 0,
     "attackRange": 150,
-    "attackAcquisitionRange": 600,
     "attackSpeed": 100,
     "totalAttackSpeed": 120,
     "bat": 1.7,

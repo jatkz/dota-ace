@@ -1,6 +1,6 @@
 {
   "name": "Pugna",
-  "description": "Who needs a blade when you have oblivion?",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Nuker",
@@ -22,9 +22,7 @@
     "mana": 62.4,
     "manaRegen": 0.26,
     "armor": 0.22,
-    "attackSpeed": 1.3,
-    "magicResistance": 0.1,
-    "mainAttackDamage": 5.2
+    "magicResistance": 0.1
   },
   "stats": {
     "health": 538,
@@ -38,7 +36,6 @@
     "damageAverage": 50.5,
     "projectileSpeed": 900,
     "attackRange": 630,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 121,
     "bat": 1.7,

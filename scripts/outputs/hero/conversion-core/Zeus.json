@@ -1,6 +1,6 @@
 {
   "name": "Zeus",
-  "description": "Immortality was overrated. This is much more interesting.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Nuker",
@@ -37,7 +37,6 @@
     "damageAverage": 56,
     "projectileSpeed": 1100,
     "attackRange": 380,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 111,
     "bat": 1.7,

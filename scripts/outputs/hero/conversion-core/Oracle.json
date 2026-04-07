@@ -1,6 +1,6 @@
 {
   "name": "Oracle",
-  "description": "I have an end in mind for you.",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Support",
@@ -21,10 +21,10 @@
   "statGains": {
     "health": 48.4,
     "healthRegen": 0.22,
-    "armor": 0.28,
-    "attackSpeed": 1.7,
     "mana": 43.2,
     "manaRegen": 0.18,
+    "armor": 0.28,
+    "attackSpeed": 1.7,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.6
   },
@@ -40,7 +40,6 @@
     "damageAverage": 42,
     "projectileSpeed": 900,
     "attackRange": 625,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 100,
     "totalAttackSpeed": 115,
     "bat": 1.7,

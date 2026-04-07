@@ -1,6 +1,6 @@
 {
   "name": "Storm Spirit",
-  "description": "Everyone complains about the weather…well, I'm doing something about it!",
+  "primaryAttribute": "Intelligence",
   "attackType": "Ranged",
   "roles": [
     "Carry",
@@ -22,10 +22,10 @@
   "statGains": {
     "health": 44,
     "healthRegen": 0.2,
-    "armor": 0.43,
-    "attackSpeed": 2.6,
     "mana": 44.4,
     "manaRegen": 0.185,
+    "armor": 0.43,
+    "attackSpeed": 2.6,
     "magicResistance": 0.1,
     "mainAttackDamage": 3.7
   },
@@ -41,7 +41,6 @@
     "damageAverage": 52,
     "projectileSpeed": 1100,
     "attackRange": 480,
-    "attackAcquisitionRange": 800,
     "attackSpeed": 115,
     "totalAttackSpeed": 137,
     "bat": 1.6,
